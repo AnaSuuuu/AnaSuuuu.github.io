@@ -380,6 +380,7 @@
 <p>  负矩阵：$-A $ 是 $A$ 的负矩阵</p>
 <p>  对称矩阵：元素关于对角线对称</p>
 <p>  反对称矩阵：元素关于对角线称相反数且对角线上元素全为 $0$</p>
+<p>  | Tables       |   Are    |          Cool |<br>  | —————— | :———: | ——————: |<br>  | left-aligned | centered | right-aligned |<br>  | Hexo         | support  |        Tables |</p>
 </li>
 </ul>
 </li>
@@ -495,10 +496,9 @@
 <p>  若对实对称矩阵$A, B$ 特征值相同，则 $A \simeq B$，且$A \sim B$</p>
 <p>  若 $A \simeq B$，则 $R(A) = R(B)$</p>
 <p>  若 $A \simeq B$，且 $A$ 为对称矩阵则 $B$ 也为对称矩阵（特殊的若 $A \simeq \Lambda$，则 $A$ 必为对称阵）</p>
-<p>  | :—- | :——: | ——: |<br>  | —— | ——— | ——- |<br>  |      |        |       |</p>
 </li>
 </ul>
-<h3 id="S-6-2-二次型的标准型"><a href="#S-6-2-二次型的标准型" class="headerlink" title="$\S 6,2$ 二次型的标准型"></a>$\S 6,2$ 二次型的标准型</h3><ul>
+<h3 id="S-6-2-二次型的标准型"><a href="#S-6-2-二次型的标准型" class="headerlink" title="$\S 6.2$ 二次型的标准型"></a>$\S 6.2$ 二次型的标准型</h3><ul>
 <li><p>标准型</p>
 <p>  标准型各项系数均是特征值</p>
 </li>
