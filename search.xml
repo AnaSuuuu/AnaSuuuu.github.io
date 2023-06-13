@@ -1024,15 +1024,72 @@
 </ul>
 <h3 id="S-8-6-磁介质-磁化过程"><a href="#S-8-6-磁介质-磁化过程" class="headerlink" title="$\S 8.6$ 磁介质 磁化过程"></a>$\S 8.6$ 磁介质 磁化过程</h3><ul>
 <li><p>磁介质</p>
-<p>  $\vec B = \vec B_0 + \vec B’$ 右式两项同向时，是顺磁质，反之为抗磁质，若未顺磁质且 $\vec B’ &gt;&gt; \vec B_0$ 称为铁磁质</p>
+<p>  $\vec B = \vec B_0 + \vec B’$ 右式两项同向时，是顺磁质（磁化后使空间磁场变强），反之为抗磁质（磁化后使空间磁场变弱），若未顺磁质且 $\vec B’ &gt;&gt; \vec B_0$ 称为铁磁质</p>
+</li>
+<li><p>分子磁矩</p>
+<p>  物质分子中，每个电子参与两种运动——绕核的轨道运动（轨道磁矩）和自身旋转运动（自旋磁矩）</p>
+<p>  两种磁矩矢量和是分子磁矩，可以用一个圆电流表示，称为分子电流</p>
+</li>
+<li><p>磁化强度</p>
+<p>  $\vec M = \frac{\sum \vec P_m}{\Delta V}$ 单位体积内分子磁矩矢量和</p>
+</li>
+<li><p>磁场强度</p>
+<p>  磁介质存在时，介质中磁感应强度 $\vec B = \vec B_0 + \mu_0 \vec M$</p>
+<p>  引入磁场强度 $\vec H = \frac{\vec B}{\mu_0} - \vec M$</p>
+<p>  研究表明对于各向同性非铁磁介质，磁化强度和磁场强度满足 $\vec M = \chi_m \vec H$，$\chi_m$ 称为介质的磁化率</p>
+<p>  则有 $\vec B = \mu_0(1 + \chi_m)\vec H = \mu_0\mu_r \vec H = \mu \vec H$，其中 $\mu_r = 1 + \chi_m$ $\mu, \mu_r$ 分别被称为磁导率和相对磁导率，$\vec H = \frac{\vec B}{\mu}$</p>
+<p>  <img src="E:\Blog\Ana_Su\source\_posts\Physics-I\磁介质数值.png" alt="磁介质数值"></p>
+</li>
+<li><p>铁磁质</p>
+<p>  磁导率大，磁饱和现象，磁滞回线</p>
 </li>
 </ul>
 <h3 id="S-8-7-安培环路定理"><a href="#S-8-7-安培环路定理" class="headerlink" title="$\S 8.7$ 安培环路定理"></a>$\S 8.7$ 安培环路定理</h3><ul>
 <li>安培环路定理</li>
 </ul>
-<p>​        $\oint \vec B \cdot d\vec l = \mu_0 \sum I_内$ 电流方向有正有负，和 $B$ 成右手螺旋关系则为正，反之为负 </p>
+<p>​        $\oint \vec B \cdot d\vec l = \mu_0 \sum I_内$ 或 $\oint \vec H \cdot d\vec l = \sum I_内$ 电流方向有正有负，和 $B$ 成右手螺旋关系则为正，反之为负 </p>
+<p>​        积分回路是 $N$ 圈时，$\oint \vec H \cdot d\vec l = N\sum I_内$</p>
 <p>​        无限长线圈场内 $B = \mu_0 n I$ </p>
 <p>​        无限大平面（线密度 $I$） $B = \frac{\mu_0 I}{2}$</p>
+<h2 id="第九章-电磁感应与麦克斯韦方程组"><a href="#第九章-电磁感应与麦克斯韦方程组" class="headerlink" title="第九章 电磁感应与麦克斯韦方程组"></a>第九章 电磁感应与麦克斯韦方程组</h2><h3 id="S-9-1-电磁感应的基本规律"><a href="#S-9-1-电磁感应的基本规律" class="headerlink" title="$\S 9.1$ 电磁感应的基本规律"></a>$\S 9.1$ 电磁感应的基本规律</h3><ul>
+<li><p>法拉第电磁感应定律</p>
+<p>  $\varepsilon = -N\frac{d\phi}{dt} \rightarrow q = \frac{\phi_1 - \phi_2}{R}$</p>
+</li>
+<li><p>楞次定律</p>
+<p>  感应电流总是反抗磁场引起的变化</p>
+</li>
+</ul>
+<h3 id="S-9-2-动生电动势与感生电动势"><a href="#S-9-2-动生电动势与感生电动势" class="headerlink" title="$\S 9.2$ 动生电动势与感生电动势"></a>$\S 9.2$ 动生电动势与感生电动势</h3><ul>
+<li><p>动手电动势</p>
+<p>  $\varepsilon = Bvl$，方向：右手法 / 楞次定律 </p>
+</li>
+<li><p>感生电动势</p>
+<p>  $\varepsilon = -\frac{d\phi_m}{dt} = \frac{\partial\vec B}{\partial t}\cdot dS$</p>
+</li>
+<li><p>涡流与趋肤效应</p>
+</li>
+</ul>
+<h3 id="S-9-3-自感与互感"><a href="#S-9-3-自感与互感" class="headerlink" title="$\S 9.3$ 自感与互感"></a>$\S 9.3$ 自感与互感</h3><ul>
+<li><p>自感</p>
+<p>  $N\phi_m = LI  \rightarrow L = N\frac{\phi}{I} \rightarrow \varepsilon = -N\frac{d\phi_m}{dt} = -NL\frac{dI}{dt}$</p>
+</li>
+<li><p>互感</p>
+<p>  $\varepsilon_1 = -M\frac{dI_2}{dt},\varepsilon_2 = -M\frac{dI_1}{dt}$ ，$M$ 只与线圈各属性和磁介质情况有关 </p>
+</li>
+</ul>
+<h3 id="S-9-4-磁场的能量"><a href="#S-9-4-磁场的能量" class="headerlink" title="$\S 9.4$ 磁场的能量"></a>$\S 9.4$ 磁场的能量</h3><p>磁场能量密度 $w_m = \frac{B^2}{2\mu} = \frac{1}{2}\mu H^2 = \frac{1}{2}BH \rightarrow W_m = \int w_mdV$</p>
+<h3 id="S-9-5-位移电流"><a href="#S-9-5-位移电流" class="headerlink" title="$\S 9.5$ 位移电流"></a>$\S 9.5$ 位移电流</h3><ul>
+<li><p>位移电流</p>
+<p>  由于变化的磁场也可以产生电流，故麦克斯韦提出可以假设变化的磁场之间（如两个电极板之间）也看作是有电流存在，这个电流被称为位移电流，$I_d = \frac{d\phi}{dt}$ 位移电流密度 $\vec J_d = \frac{d\vec D}{dt}$</p>
+<p>  位移电流的实质其实就是变化的电场，只要有变化的电场，或有磁场使电场变化，则有位移电流</p>
+<p>  值得一提的是，两种电流在产生磁场方面是等效的，但是位移电流不产生焦耳热</p>
+</li>
+<li><p>全电流</p>
+<p>  $I_全 = I + I_d$ </p>
+<p>  安培环路定理完善为 $\oint \vec H\cdot d\vec l = \sum I_全 = \sum I + \sum I_d$</p>
+</li>
+</ul>
+<h3 id="S-9-6-麦克斯韦方程组"><a href="#S-9-6-麦克斯韦方程组" class="headerlink" title="$\S 9.6$ 麦克斯韦方程组"></a>$\S 9.6$ 麦克斯韦方程组</h3><p><img src="E:\Blog\Ana_Su\source\_posts\Physics-I\麦克斯韦方程组.png" alt="麦克斯韦方程组"></p>
 ]]></content>
       <tags>
         <tag>大学课程</tag>
