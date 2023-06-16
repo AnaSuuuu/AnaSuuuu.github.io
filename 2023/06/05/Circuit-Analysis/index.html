@@ -86,6 +86,14 @@
 <meta property="og:site_name" content="Ana_Su&#39;s Blog">
 <meta property="og:description" content="从入门到进门">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://anasuuuu.github.io/2023/06/05/Circuit-Analysis/%E5%8D%95%E5%8F%A3%E7%BD%91%E7%BB%9C%E7%AD%89%E6%95%88%E5%8F%98%E6%8D%A2.png">
+<meta property="og:image" content="http://anasuuuu.github.io/2023/06/05/Circuit-Analysis/Y-%CE%94%E5%8F%98%E6%8D%A21.png">
+<meta property="og:image" content="http://anasuuuu.github.io/2023/06/05/Circuit-Analysis/Y-%CE%94%E5%8F%98%E6%8D%A22.png">
+<meta property="og:image" content="http://anasuuuu.github.io/2023/06/05/Circuit-Analysis/Y-%CE%94%E5%8F%98%E6%8D%A23.png">
+<meta property="og:image" content="http://anasuuuu.github.io/2023/06/05/Circuit-Analysis/%E8%8A%82%E7%82%B9%E5%88%86%E6%9E%90%E6%B3%95.png">
+<meta property="og:image" content="http://anasuuuu.github.io/2023/06/05/Circuit-Analysis/%E4%BE%8B2.1.png">
+<meta property="og:image" content="http://anasuuuu.github.io/2023/06/05/Circuit-Analysis/%E4%BE%8B3.1.png">
+<meta property="og:image" content="http://anasuuuu.github.io/2023/06/05/Circuit-Analysis/%E4%BE%8B3.2.png">
 <meta property="og:image" content="http://anasuuuu.github.io/2023/06/05/Circuit-Analysis/%E4%BE%8B5.1.jpg">
 <meta property="og:image" content="http://anasuuuu.github.io/2023/06/05/Circuit-Analysis/%E8%80%A6%E5%90%88%E7%94%B5%E6%84%9F%E4%BC%8F%E5%AE%89%E5%85%B3%E7%B3%BB.png">
 <meta property="og:image" content="http://anasuuuu.github.io/2023/06/05/Circuit-Analysis/%E5%8E%BB%E8%80%A6%E7%AD%89%E6%95%88%E7%BA%BF%E5%9C%88.png">
@@ -108,12 +116,12 @@
 <meta property="og:image" content="e:\Blog\Ana_Su\source\_posts\Circuit-Analysis\%E4%B8%89%E8%A7%92%E9%93%BE%E6%8E%A5.png">
 <meta property="og:image" content="e:\Blog\Ana_Su\source\_posts\Circuit-Analysis\YY%E8%81%94%E6%8E%A5.png">
 <meta property="article:published_time" content="2023-06-05T15:31:44.000Z">
-<meta property="article:modified_time" content="2023-06-14T11:08:26.291Z">
+<meta property="article:modified_time" content="2023-06-16T09:03:45.664Z">
 <meta property="article:author" content="Ana Su">
 <meta property="article:tag" content="大学课程">
 <meta property="article:tag" content="电路">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://anasuuuu.github.io/2023/06/05/Circuit-Analysis/%E4%BE%8B5.1.jpg">
+<meta name="twitter:image" content="http://anasuuuu.github.io/2023/06/05/Circuit-Analysis/%E5%8D%95%E5%8F%A3%E7%BD%91%E7%BB%9C%E7%AD%89%E6%95%88%E5%8F%98%E6%8D%A2.png">
 
 
 
@@ -384,7 +392,60 @@
       
         <p>从入门到进门</p>
 <span id="more"></span>
-<h2 id="第一章-电路模型和电路定律"><a href="#第一章-电路模型和电路定律" class="headerlink" title="第一章 电路模型和电路定律"></a>第一章 电路模型和电路定律</h2><h2 id="第二章-直流电阻电路的等效变换分析"><a href="#第二章-直流电阻电路的等效变换分析" class="headerlink" title="第二章 直流电阻电路的等效变换分析"></a>第二章 直流电阻电路的等效变换分析</h2><h2 id="第三章-直流电阻电路的一般分析"><a href="#第三章-直流电阻电路的一般分析" class="headerlink" title="第三章 直流电阻电路的一般分析"></a>第三章 直流电阻电路的一般分析</h2><h2 id="第四章-电路定理"><a href="#第四章-电路定理" class="headerlink" title="第四章 电路定理"></a>第四章 电路定理</h2><h2 id="第五章-一阶直流动态电路时域分析"><a href="#第五章-一阶直流动态电路时域分析" class="headerlink" title="第五章 一阶直流动态电路时域分析"></a>第五章 一阶直流动态电路时域分析</h2><h3 id="S-5-1-一阶电路的零输入响应-amp-零状态响应"><a href="#S-5-1-一阶电路的零输入响应-amp-零状态响应" class="headerlink" title="$\S 5.1$ 一阶电路的零输入响应 &amp; 零状态响应"></a>$\S 5.1$ 一阶电路的零输入响应 &amp; 零状态响应</h3><ul>
+<h2 id="第一章-电路模型和电路定律"><a href="#第一章-电路模型和电路定律" class="headerlink" title="第一章 电路模型和电路定律"></a>第一章 电路模型和电路定律</h2><h4 id="第一章总结"><a href="#第一章总结" class="headerlink" title="第一章总结"></a>第一章总结</h4><ol>
+<li>研究的电路都满足集总假设条件，默认电路都是集总电路</li>
+<li>激励称为输入，响应称为输出</li>
+<li>关联参考方向：电流与压降方向一致，非关联参考方向：电流与压降方向相反</li>
+<li>支路，节点，回路，网孔，网络</li>
+<li>KCL，KVL</li>
+<li>电阻有负电阻</li>
+<li>受控电压源（?CVS），受控电流源（?CCS）</li>
+</ol>
+<h2 id="第二章-直流电阻电路的等效变换分析"><a href="#第二章-直流电阻电路的等效变换分析" class="headerlink" title="第二章 直流电阻电路的等效变换分析"></a>第二章 直流电阻电路的等效变换分析</h2><h4 id="第二章总结"><a href="#第二章总结" class="headerlink" title="第二章总结"></a>第二章总结</h4><ol>
+<li><p>电流源并联时叠加，串联时要求两个电流源相等且就是这两个电流源大小，电压源串联时叠加，并联要求电压源相等</p>
+</li>
+<li><p>单口网络等效变换</p>
+<p> <img src="单口网络等效变换.png" alt="单口网络等效变换"></p>
+</li>
+<li><p>Y-Δ变换</p>
+<p> <img src="Y-Δ变换1.png" alt="Y-Δ变换1"></p>
+<p> <img src="Y-Δ变换2.png" alt="Y-Δ变换2"></p>
+<p> <img src="Y-Δ变换3.png" alt="Y-Δ变换3"></p>
+</li>
+<li><p>网孔分析法 ：每个网孔各设一个电流，利用回路中总电压代数和为 $0$ 列方程，方程左右两边满足 <code>压升 = 压降</code> ，<strong>注意设的电流方向</strong> （本质是 KVL）</p>
+</li>
+<li><p>节点分析法（本质是 KCL）</p>
+<p> <img src="节点分析法.png" alt="节点分析法"></p>
+<p> 注意右式是以流<strong>进</strong>的电流为正，并且如果某一个支路上要是有电流源了，那么和这个电流源串联的电阻在算自感，互感时都可以忽略不计</p>
+</li>
+<li><p>回路分析法和网孔分析法本质一样，只是网孔是特殊的回路</p>
+</li>
+</ol>
+<p>例题：</p>
+<p><img src="例2.1.png" alt="例2.1"></p>
+<blockquote>
+<p>解：左图可以化简为右图，易得 $I = \frac{2}{3}$</p>
+</blockquote>
+<h2 id="第三章-直流电阻电路的一般分析"><a href="#第三章-直流电阻电路的一般分析" class="headerlink" title="第三章 直流电阻电路的一般分析"></a>第三章 直流电阻电路的一般分析</h2><h4 id="第三章总结"><a href="#第三章总结" class="headerlink" title="第三章总结"></a>第三章总结</h4><ol>
+<li>叠加定理和齐次定理只对线性电路适用</li>
+<li>注意的是叠加定理每次都是只考虑一个<strong>独立源</strong>，受控源每次都是放在电路中的</li>
+<li><p>置换定理：利用电压源 / 电流源替换（例题1， 2）</p>
+</li>
+<li><p>戴维南定理：单口网络可以等效为电压源串电阻，电压源大小为开路电压，电阻为独立源置0后的阻值（注意受控源有阻值） </p>
+</li>
+<li><p>诺顿定理：单口网络等效为电流源（大小为短路电流）并电阻，与戴维南类似（是戴维南定理的对偶形式）</p>
+</li>
+<li><p>求输出电阻常用的方法有：等效电阻法（这里是从端口方向看的），外加电压法（独立源要置0），开短路法（注意后面两个方法适合含受控源的情况）</p>
+</li>
+<li>$R_L = R_0$ 时满足最大功率条件</li>
+</ol>
+<p>例题：</p>
+<p><img src="例3.1.png" alt="例3.1"></p>
+<p><img src="例3.2.png" alt="例3.2"></p>
+<blockquote>
+<p>当我们知道某支路上的电流 / 电压时，我们可以用<strong>电压源 / 电流源来替换该支路上的其他元件</strong>，这样的话并不改变整个电路结构，研究某一复杂电路时，我们要清楚自己到底想求什么，然后对于<strong>和电流源串联的元件，思考能否舍弃，和电压源并联的元件，思考能否舍弃</strong></p>
+</blockquote>
+<h2 id="第四章-电路定理"><a href="#第四章-电路定理" class="headerlink" title="第四章 电路定理"></a>第四章 电路定理</h2><h4 id="第四章总结"><a href="#第四章总结" class="headerlink" title="第四章总结"></a>第四章总结</h4><h2 id="第五章-一阶直流动态电路时域分析"><a href="#第五章-一阶直流动态电路时域分析" class="headerlink" title="第五章 一阶直流动态电路时域分析"></a>第五章 一阶直流动态电路时域分析</h2><h3 id="S-5-1-一阶电路的零输入响应-amp-零状态响应"><a href="#S-5-1-一阶电路的零输入响应-amp-零状态响应" class="headerlink" title="$\S 5.1$ 一阶电路的零输入响应 &amp; 零状态响应"></a>$\S 5.1$ 一阶电路的零输入响应 &amp; 零状态响应</h3><ul>
 <li>换路定则</li>
 </ul>
 <p>​        换路前后电容电流和电感电压为有限制的情况下， 换路前后瞬间电容电压和电感电流不能跃变。 </p>
@@ -417,7 +478,16 @@
 <li>电路的单位跃阶响应为 $s(t) = (1 - e^{-\frac{t}{\tau}})\varepsilon(t)$ </li>
 </ul>
 <p><img src="例5.1.jpg" alt="例5.1"></p>
-<h2 id="第六章-相量法"><a href="#第六章-相量法" class="headerlink" title="第六章 相量法"></a>第六章 相量法</h2><ul>
+<h2 id="第六章-相量法"><a href="#第六章-相量法" class="headerlink" title="第六章 相量法"></a>第六章 相量法</h2><h4 id="第六章总结"><a href="#第六章总结" class="headerlink" title="第六章总结"></a>第六章总结</h4><ol>
+<li>我们要建立概念就是复数，三角函数，$e$ 指数之间是可以相互转化的，所以往往可以把他们看作等价的，<strong>都可以表示二维平面上的向量</strong></li>
+<li>算相量加减法时转化为复数形式，算相量乘除法时转化为 $e$ 指数形式</li>
+<li>对于相量而言，我们在计算上时可以把它看作和相量相同计算，<strong>但是相量不是向量，向量是真实存在物理量，相量不真实存在</strong></li>
+<li><p>当电源电流是三角函数形式，即不断变化时要用相量来表示，$U$ 和 $I$ 上要记得打点，相量是可以用来表征正弦波的，<strong>但不等同</strong></p>
+</li>
+<li><p>对于接下来的正弦稳态电路和之前学的电路<strong>没什么不同</strong>，区别就是电流电压用相量表示，并且电感电容都可以用阻抗来表示，$Z_C= -j\frac{1}{\omega C},Z_L = jL\omega $</p>
+</li>
+</ol>
+<ul>
 <li><p>复数</p>
 <script type="math/tex; mode=display">
   F = a + jb\\
@@ -440,15 +510,6 @@
 <p>  将一般的电路定理全部改成相量形式</p>
 </li>
 </ul>
-<h4 id="第六章总结"><a href="#第六章总结" class="headerlink" title="第六章总结"></a>第六章总结</h4><ol>
-<li>我们要建立概念就是复数，三角函数，$e$ 指数之间是可以相互转化的，所以往往可以把他们看作等价的，<strong>都可以表示二维平面上的向量</strong></li>
-<li>算相量加减法时转化为复数形式，算相量乘除法时转化为 $e$ 指数形式</li>
-<li>对于相量而言，我们在计算上时可以把它看作和相量相同计算，<strong>但是相量不是向量，向量是真实存在物理量，相量不真实存在</strong></li>
-<li><p>当电源电流是三角函数形式，即不断变化时要用相量来表示，$U$ 和 $I$ 上要记得打点，相量是可以用来表征正弦波的，<strong>但不等同</strong></p>
-</li>
-<li><p>对于接下来的正弦稳态电路和之前学的电路<strong>没什么不同</strong>，区别就是电流电压用相量表示，并且电感电容都可以用阻抗来表示，$Z_C= -j\frac{1}{\omega C},Z_L = jL\omega $</p>
-</li>
-</ol>
 <h2 id="第七章-正弦稳态电路的分析"><a href="#第七章-正弦稳态电路的分析" class="headerlink" title="第七章 正弦稳态电路的分析"></a>第七章 正弦稳态电路的分析</h2><h3 id="S-7-1-阻抗和导纳"><a href="#S-7-1-阻抗和导纳" class="headerlink" title="$\S 7.1$ 阻抗和导纳"></a>$\S 7.1$ 阻抗和导纳</h3><ul>
 <li><p>阻抗</p>
 <p>  $|Z| = \frac{U}{I},Z = R + jX,\theta_z = \varphi_u - \varphi_i$ </p>
@@ -495,9 +556,12 @@
 <p>  $e.g 8.1$</p>
 <p>  <img src="例8.1.png" alt="例8.1"></p>
 <p>  值得一提的是，这里之所以可以把两个线圈下端相连是因为只连一端不影响回路</p>
-<h3 id="S-8-3-空心变压器电路的分析"><a href="#S-8-3-空心变压器电路的分析" class="headerlink" title="$\S 8.3$ 空心变压器电路的分析"></a>$\S 8.3$ 空心变压器电路的分析</h3></li>
+</li>
 </ul>
 </li>
+</ul>
+<pre><code>    $\S 8.3$ 空心变压器电路的分析
+</code></pre><ul>
 <li><p>互感化除法</p>
 <p>  是不是很眼熟，嗯互感化除法其实就是 $T$ 型等效法的一个应用，这两个没什么区别qwq</p>
 <p>  <img src="互感化除法.png" alt="互感化除法"></p>
@@ -737,7 +801,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E7%94%B5%E8%B7%AF%E6%A8%A1%E5%9E%8B%E5%92%8C%E7%94%B5%E8%B7%AF%E5%AE%9A%E5%BE%8B"><span class="nav-number">1.</span> <span class="nav-text">第一章 电路模型和电路定律</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%9B%B4%E6%B5%81%E7%94%B5%E9%98%BB%E7%94%B5%E8%B7%AF%E7%9A%84%E7%AD%89%E6%95%88%E5%8F%98%E6%8D%A2%E5%88%86%E6%9E%90"><span class="nav-number">2.</span> <span class="nav-text">第二章 直流电阻电路的等效变换分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E7%9B%B4%E6%B5%81%E7%94%B5%E9%98%BB%E7%94%B5%E8%B7%AF%E7%9A%84%E4%B8%80%E8%88%AC%E5%88%86%E6%9E%90"><span class="nav-number">3.</span> <span class="nav-text">第三章 直流电阻电路的一般分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E7%94%B5%E8%B7%AF%E5%AE%9A%E7%90%86"><span class="nav-number">4.</span> <span class="nav-text">第四章 电路定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E4%B8%80%E9%98%B6%E7%9B%B4%E6%B5%81%E5%8A%A8%E6%80%81%E7%94%B5%E8%B7%AF%E6%97%B6%E5%9F%9F%E5%88%86%E6%9E%90"><span class="nav-number">5.</span> <span class="nav-text">第五章 一阶直流动态电路时域分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#S-5-1-%E4%B8%80%E9%98%B6%E7%94%B5%E8%B7%AF%E7%9A%84%E9%9B%B6%E8%BE%93%E5%85%A5%E5%93%8D%E5%BA%94-amp-%E9%9B%B6%E7%8A%B6%E6%80%81%E5%93%8D%E5%BA%94"><span class="nav-number">5.1.</span> <span class="nav-text">$\S 5.1$ 一阶电路的零输入响应 &amp; 零状态响应</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-5-2-%E4%B8%80%E9%98%B6%E7%94%B5%E8%B7%AF%E7%9A%84%E5%85%A8%E5%93%8D%E5%BA%94"><span class="nav-number">5.2.</span> <span class="nav-text">$\S 5.2$ 一阶电路的全响应</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-5-3-%E4%B8%80%E9%98%B6%E7%94%B5%E8%B7%AF%E7%9A%84%E8%B7%83%E9%98%B6%E5%93%8D%E5%BA%94"><span class="nav-number">5.3.</span> <span class="nav-text">$\S 5.3$ 一阶电路的跃阶响应</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E7%9B%B8%E9%87%8F%E6%B3%95"><span class="nav-number">6.</span> <span class="nav-text">第六章 相量法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="nav-number">6.0.1.</span> <span class="nav-text">第六章总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-%E6%AD%A3%E5%BC%A6%E7%A8%B3%E6%80%81%E7%94%B5%E8%B7%AF%E7%9A%84%E5%88%86%E6%9E%90"><span class="nav-number">7.</span> <span class="nav-text">第七章 正弦稳态电路的分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#S-7-1-%E9%98%BB%E6%8A%97%E5%92%8C%E5%AF%BC%E7%BA%B3"><span class="nav-number">7.1.</span> <span class="nav-text">$\S 7.1$ 阻抗和导纳</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0-%E5%90%AB%E6%9C%89%E8%80%A6%E5%90%88%E7%94%B5%E6%84%9F%E7%9A%84%E7%94%B5%E8%B7%AF"><span class="nav-number">8.</span> <span class="nav-text">第八章 含有耦合电感的电路</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#S-8-1-%E8%80%A6%E5%90%88%E7%94%B5%E6%84%9F%E7%9A%84%E4%BC%8F%E5%AE%89%E5%85%B3%E7%B3%BB"><span class="nav-number">8.1.</span> <span class="nav-text">$\S 8.1$ 耦合电感的伏安关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-8-2-%E8%80%A6%E5%90%88%E7%94%B5%E6%84%9F%E7%9A%84%E5%8E%BB%E8%80%A6%E7%AD%89%E6%95%88%E6%A8%A1%E5%9E%8B"><span class="nav-number">8.2.</span> <span class="nav-text">$\S 8.2$ 耦合电感的去耦等效模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-8-3-%E7%A9%BA%E5%BF%83%E5%8F%98%E5%8E%8B%E5%99%A8%E7%94%B5%E8%B7%AF%E7%9A%84%E5%88%86%E6%9E%90"><span class="nav-number">8.3.</span> <span class="nav-text">$\S 8.3$ 空心变压器电路的分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-8-4-%E7%90%86%E6%83%B3%E5%8F%98%E5%8E%8B%E5%99%A8%E7%94%B5%E8%B7%AF%E7%9A%84%E5%88%86%E6%9E%90"><span class="nav-number">8.4.</span> <span class="nav-text">$\S 8.4$ 理想变压器电路的分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="nav-number">8.4.1.</span> <span class="nav-text">第八章总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B9%9D%E7%AB%A0-%E4%B8%89%E7%9B%B8%E7%94%B5%E8%B7%AF"><span class="nav-number">9.</span> <span class="nav-text">第九章 三相电路</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#S-9-1-%E4%B8%89%E7%9B%B8%E7%94%B5%E8%B7%AF"><span class="nav-number">9.1.</span> <span class="nav-text">$\S 9.1$ 三相电路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-9-2-%E5%AF%B9%E7%A7%B0%E4%B8%89%E7%9B%B8%E7%94%B5%E8%B7%AF%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="nav-number">9.2.</span> <span class="nav-text">$\S 9.2$ 对称三相电路的计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-9-3-%E4%B8%89%E7%9B%B8%E7%94%B5%E8%B7%AF%E7%9A%84%E5%8A%9F%E7%8E%87"><span class="nav-number">9.3.</span> <span class="nav-text">$\S 9.3$ 三相电路的功率</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E7%94%B5%E8%B7%AF%E6%A8%A1%E5%9E%8B%E5%92%8C%E7%94%B5%E8%B7%AF%E5%AE%9A%E5%BE%8B"><span class="nav-number">1.</span> <span class="nav-text">第一章 电路模型和电路定律</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="nav-number">1.0.1.</span> <span class="nav-text">第一章总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%9B%B4%E6%B5%81%E7%94%B5%E9%98%BB%E7%94%B5%E8%B7%AF%E7%9A%84%E7%AD%89%E6%95%88%E5%8F%98%E6%8D%A2%E5%88%86%E6%9E%90"><span class="nav-number">2.</span> <span class="nav-text">第二章 直流电阻电路的等效变换分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="nav-number">2.0.1.</span> <span class="nav-text">第二章总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E7%9B%B4%E6%B5%81%E7%94%B5%E9%98%BB%E7%94%B5%E8%B7%AF%E7%9A%84%E4%B8%80%E8%88%AC%E5%88%86%E6%9E%90"><span class="nav-number">3.</span> <span class="nav-text">第三章 直流电阻电路的一般分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="nav-number">3.0.1.</span> <span class="nav-text">第三章总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E7%94%B5%E8%B7%AF%E5%AE%9A%E7%90%86"><span class="nav-number">4.</span> <span class="nav-text">第四章 电路定理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="nav-number">4.0.1.</span> <span class="nav-text">第四章总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E4%B8%80%E9%98%B6%E7%9B%B4%E6%B5%81%E5%8A%A8%E6%80%81%E7%94%B5%E8%B7%AF%E6%97%B6%E5%9F%9F%E5%88%86%E6%9E%90"><span class="nav-number">5.</span> <span class="nav-text">第五章 一阶直流动态电路时域分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#S-5-1-%E4%B8%80%E9%98%B6%E7%94%B5%E8%B7%AF%E7%9A%84%E9%9B%B6%E8%BE%93%E5%85%A5%E5%93%8D%E5%BA%94-amp-%E9%9B%B6%E7%8A%B6%E6%80%81%E5%93%8D%E5%BA%94"><span class="nav-number">5.1.</span> <span class="nav-text">$\S 5.1$ 一阶电路的零输入响应 &amp; 零状态响应</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-5-2-%E4%B8%80%E9%98%B6%E7%94%B5%E8%B7%AF%E7%9A%84%E5%85%A8%E5%93%8D%E5%BA%94"><span class="nav-number">5.2.</span> <span class="nav-text">$\S 5.2$ 一阶电路的全响应</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-5-3-%E4%B8%80%E9%98%B6%E7%94%B5%E8%B7%AF%E7%9A%84%E8%B7%83%E9%98%B6%E5%93%8D%E5%BA%94"><span class="nav-number">5.3.</span> <span class="nav-text">$\S 5.3$ 一阶电路的跃阶响应</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E7%9B%B8%E9%87%8F%E6%B3%95"><span class="nav-number">6.</span> <span class="nav-text">第六章 相量法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="nav-number">6.0.1.</span> <span class="nav-text">第六章总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-%E6%AD%A3%E5%BC%A6%E7%A8%B3%E6%80%81%E7%94%B5%E8%B7%AF%E7%9A%84%E5%88%86%E6%9E%90"><span class="nav-number">7.</span> <span class="nav-text">第七章 正弦稳态电路的分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#S-7-1-%E9%98%BB%E6%8A%97%E5%92%8C%E5%AF%BC%E7%BA%B3"><span class="nav-number">7.1.</span> <span class="nav-text">$\S 7.1$ 阻抗和导纳</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0-%E5%90%AB%E6%9C%89%E8%80%A6%E5%90%88%E7%94%B5%E6%84%9F%E7%9A%84%E7%94%B5%E8%B7%AF"><span class="nav-number">8.</span> <span class="nav-text">第八章 含有耦合电感的电路</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#S-8-1-%E8%80%A6%E5%90%88%E7%94%B5%E6%84%9F%E7%9A%84%E4%BC%8F%E5%AE%89%E5%85%B3%E7%B3%BB"><span class="nav-number">8.1.</span> <span class="nav-text">$\S 8.1$ 耦合电感的伏安关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-8-2-%E8%80%A6%E5%90%88%E7%94%B5%E6%84%9F%E7%9A%84%E5%8E%BB%E8%80%A6%E7%AD%89%E6%95%88%E6%A8%A1%E5%9E%8B"><span class="nav-number">8.2.</span> <span class="nav-text">$\S 8.2$ 耦合电感的去耦等效模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-8-4-%E7%90%86%E6%83%B3%E5%8F%98%E5%8E%8B%E5%99%A8%E7%94%B5%E8%B7%AF%E7%9A%84%E5%88%86%E6%9E%90"><span class="nav-number">8.3.</span> <span class="nav-text">$\S 8.4$ 理想变压器电路的分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="nav-number">8.3.1.</span> <span class="nav-text">第八章总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B9%9D%E7%AB%A0-%E4%B8%89%E7%9B%B8%E7%94%B5%E8%B7%AF"><span class="nav-number">9.</span> <span class="nav-text">第九章 三相电路</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#S-9-1-%E4%B8%89%E7%9B%B8%E7%94%B5%E8%B7%AF"><span class="nav-number">9.1.</span> <span class="nav-text">$\S 9.1$ 三相电路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-9-2-%E5%AF%B9%E7%A7%B0%E4%B8%89%E7%9B%B8%E7%94%B5%E8%B7%AF%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="nav-number">9.2.</span> <span class="nav-text">$\S 9.2$ 对称三相电路的计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-9-3-%E4%B8%89%E7%9B%B8%E7%94%B5%E8%B7%AF%E7%9A%84%E5%8A%9F%E7%8E%87"><span class="nav-number">9.3.</span> <span class="nav-text">$\S 9.3$ 三相电路的功率</span></a></li></ol></li></ol></div>
             
 
           </div>
