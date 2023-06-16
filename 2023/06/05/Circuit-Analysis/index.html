@@ -116,7 +116,7 @@
 <meta property="og:image" content="e:\Blog\Ana_Su\source\_posts\Circuit-Analysis\%E4%B8%89%E8%A7%92%E9%93%BE%E6%8E%A5.png">
 <meta property="og:image" content="e:\Blog\Ana_Su\source\_posts\Circuit-Analysis\YY%E8%81%94%E6%8E%A5.png">
 <meta property="article:published_time" content="2023-06-05T15:31:44.000Z">
-<meta property="article:modified_time" content="2023-06-16T09:03:45.664Z">
+<meta property="article:modified_time" content="2023-06-16T11:31:54.000Z">
 <meta property="article:author" content="Ana Su">
 <meta property="article:tag" content="大学课程">
 <meta property="article:tag" content="电路">
@@ -417,6 +417,7 @@
 <li><p>节点分析法（本质是 KCL）</p>
 <p> <img src="节点分析法.png" alt="节点分析法"></p>
 <p> 注意右式是以流<strong>进</strong>的电流为正，并且如果某一个支路上要是有电流源了，那么和这个电流源串联的电阻在算自感，互感时都可以忽略不计</p>
+<p> 还要注意的是，如果网络含独立电压源，最好一段接地，另一端直接求出电压</p>
 </li>
 <li><p>回路分析法和网孔分析法本质一样，只是网孔是特殊的回路</p>
 </li>
@@ -437,7 +438,7 @@
 </li>
 <li><p>求输出电阻常用的方法有：等效电阻法（这里是从端口方向看的），外加电压法（独立源要置0），开短路法（注意后面两个方法适合含受控源的情况）</p>
 </li>
-<li>$R_L = R_0$ 时满足最大功率条件</li>
+<li>$R_L = R_0$ 时满足最大功率条件，$\eta = \frac{负载产生功率}{总产生功率}$ 注意多个电源存在时有的电源会吸收功率，这个功率不能算在分母里，分母中只能算产生功率，而且算 $\eta$ 时要带回原电路来算，不能盲目认为 $R_L$ 和端口等效电阻相等就认为 $\eta$ 是 $50%$</li>
 </ol>
 <p>例题：</p>
 <p><img src="例3.1.png" alt="例3.1"></p>
