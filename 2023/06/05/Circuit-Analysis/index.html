@@ -99,6 +99,8 @@
 <meta property="og:image" content="http://anasuuuu.github.io/2023/06/05/Circuit-Analysis/%E6%8D%A2%E8%B7%AF%E5%AE%9A%E5%88%99.png">
 <meta property="og:image" content="http://anasuuuu.github.io/2023/06/05/Circuit-Analysis/%E7%89%B9%E4%BE%8B.png">
 <meta property="og:image" content="http://anasuuuu.github.io/2023/06/05/Circuit-Analysis/%E4%BE%8B5.1.jpg">
+<meta property="og:image" content="http://anasuuuu.github.io/2023/06/05/Circuit-Analysis/%E4%BE%8B5.2.png">
+<meta property="og:image" content="http://anasuuuu.github.io/2023/06/05/Circuit-Analysis/%E4%BE%8B5.3.png">
 <meta property="og:image" content="http://anasuuuu.github.io/2023/06/05/Circuit-Analysis/%E8%80%A6%E5%90%88%E7%94%B5%E6%84%9F%E4%BC%8F%E5%AE%89%E5%85%B3%E7%B3%BB.png">
 <meta property="og:image" content="http://anasuuuu.github.io/2023/06/05/Circuit-Analysis/%E5%8E%BB%E8%80%A6%E7%AD%89%E6%95%88%E7%BA%BF%E5%9C%88.png">
 <meta property="og:image" content="http://anasuuuu.github.io/2023/06/05/Circuit-Analysis/T%E5%9E%8B%E7%AD%89%E6%95%881.png">
@@ -120,7 +122,7 @@
 <meta property="og:image" content="e:\Blog\Ana_Su\source\_posts\Circuit-Analysis\%E4%B8%89%E8%A7%92%E9%93%BE%E6%8E%A5.png">
 <meta property="og:image" content="e:\Blog\Ana_Su\source\_posts\Circuit-Analysis\YY%E8%81%94%E6%8E%A5.png">
 <meta property="article:published_time" content="2023-06-05T15:31:44.000Z">
-<meta property="article:modified_time" content="2023-06-16T13:12:08.879Z">
+<meta property="article:modified_time" content="2023-06-17T09:42:44.013Z">
 <meta property="article:author" content="Ana Su">
 <meta property="article:tag" content="大学课程">
 <meta property="article:tag" content="电路">
@@ -462,6 +464,7 @@
 <li><p>完全响应 = 零输入响应 + 零状态响应</p>
 <p> = 固有响应 + 强迫响应</p>
 <p> = 暂态响应 + 稳态响应</p>
+<p> 其实暂态可以粗浅理解为 $e^{-kt}$ 的量</p>
 <p> <img src="几个概念.png" alt="几个概念"></p>
 </li>
 <li><p>$f(t) = f(\infty) + [f(0_+) - f(\infty)]e^{\frac{t}{\tau}}$</p>
@@ -503,10 +506,17 @@
 <li>电路的单位跃阶响应为 $s(t) = (1 - e^{-\frac{t}{\tau}})\varepsilon(t)$ </li>
 </ul>
 <p><img src="例5.1.jpg" alt="例5.1"></p>
+<p>（有坑）</p>
+<p><img src="例5.2.png" alt="例5.2"></p>
+<blockquote>
+<p>首先从状态量入手，算 $0_-$ 时候的<strong>状态量</strong>，研究 $0_+$ 状态时可以把电容变为电压源，电感变为电流源，然后用三要素法分析。但是这题有个坑。无论是状态量还是非状态量，分解成暂态响应和固态响应时都可以直接按 <code>常数</code> + <code>按e指数衰减部分</code> ，但是分解成零输入和零状态时，状态量比较好分解就按照一般方法来，非状态量不可以按照状态量的方法，要列关于 i / u 的方程，然后把 i / u 转化为零输入 / 零状态时的量来求 </p>
+</blockquote>
+<p><img src="例5.3.png" alt="例5.3"></p>
 <h2 id="第六章-相量法"><a href="#第六章-相量法" class="headerlink" title="第六章 相量法"></a>第六章 相量法</h2><h4 id="第六章总结"><a href="#第六章总结" class="headerlink" title="第六章总结"></a>第六章总结</h4><ol>
 <li>我们要建立概念就是复数，三角函数，$e$ 指数之间是可以相互转化的，所以往往可以把他们看作等价的，<strong>都可以表示二维平面上的向量</strong></li>
 <li>算相量加减法时转化为复数形式，算相量乘除法时转化为 $e$ 指数形式</li>
-<li>对于相量而言，我们在计算上时可以把它看作和相量相同计算，<strong>但是相量不是向量，向量是真实存在物理量，相量不真实存在</strong></li>
+<li>三角函数转化为相量时，除非特殊说明，不然默认相量前面的都是有效值，即峰值的 $\frac{1}{\sqrt 2}$</li>
+<li>对于相量而言，我们在计算上时可以把它看作和相量相同计算，<strong>但是相量不是向量，向量是真实存在物理量，相量不真实存在，是表示正弦信号的工具</strong></li>
 <li><p>当电源电流是三角函数形式，即不断变化时要用相量来表示，$U$ 和 $I$ 上要记得打点，相量是可以用来表征正弦波的，<strong>但不等同</strong></p>
 </li>
 <li><p>对于接下来的正弦稳态电路和之前学的电路<strong>没什么不同</strong>，区别就是电流电压用相量表示，并且电感电容都可以用阻抗来表示，$Z_C= -j\frac{1}{\omega C},Z_L = jL\omega $</p>
