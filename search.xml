@@ -209,8 +209,8 @@
   \\\ e^x = \sum_{n = 0}^{\infty}\frac{x^n}{n!}\ (-\infty < x < \infty)
   \\\ sinx = \sum_{n = 0}^{\infty}(-1)^n\frac{x^{2n+1}}{(2n+1)!}\ (-\infty < x < \infty)
   \\\ cosx = \sum_{n = 0}^{\infty}(-1)^n\frac{x^{2n}}{(2n)!}\ (-\infty < x < \infty)
-  \\\ln(1 + x) = \sum_{n = 0}^{\infty} (-1)^n\frac{x^{n + 1}}{n + 1}\ (-1 < x \le 1)
-  \\\arctanx = \sum_{n = 0}^{\infty} (-1)^n\frac{x^{2n + 1}}{2n + 1}\ (-1 \le x \le 1)</script><p>  值得注意的是，若 $f(x)$ 能展开成幂级数，那么展开方式必定是唯一的，而且一定是泰勒级数</p>
+  \\ln(1 + x) = \sum_{n = 0}^{\infty} (-1)^n\frac{x^{n + 1}}{n + 1}\ (-1 < x \le 1)
+  \\\ arctanx = \sum_{n = 0}^{\infty} (-1)^n\frac{x^{2n + 1}}{2n + 1}\ (-1 \le x \le 1)</script><p>  值得注意的是，若 $f(x)$ 能展开成幂级数，那么展开方式必定是唯一的，而且一定是泰勒级数</p>
 </li>
 </ul>
 </li>
