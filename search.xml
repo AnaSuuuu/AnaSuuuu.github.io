@@ -1,6 +1,426 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>大学笔记 | 微积分</title>
+    <url>/2023/06/05/Calculus/</url>
+    <content><![CDATA[<p>从入门到。。。欸？！俺滴门捏 இ௰இ</p>
+<span id="more"></span>
+<h2 id="第一章-多元函数的极限和连续性"><a href="#第一章-多元函数的极限和连续性" class="headerlink" title="第一章 多元函数的极限和连续性"></a>第一章 多元函数的极限和连续性</h2><h4 id="第一章总结"><a href="#第一章总结" class="headerlink" title="第一章总结"></a>第一章总结</h4><ol>
+<li>算多元函数极限时往往不能用洛必达，可以用一元函数求极限方法对原函数进行变换然后再求，或者也可以变换为一元函数后再用洛必达</li>
+<li>算极限不存在时，选择不同路径求出不同极限然后可以证出来</li>
+</ol>
+<h2 id="第二章-多元函数的微分学及其应用"><a href="#第二章-多元函数的微分学及其应用" class="headerlink" title="第二章 多元函数的微分学及其应用"></a>第二章 多元函数的微分学及其应用</h2><h4 id="第二章总结"><a href="#第二章总结" class="headerlink" title="第二章总结"></a>第二章总结</h4><ol>
+<li><p>可偏导不一定连续，连续不一定可偏导</p>
+<p> 可微可推出函数连续且可偏导，但推不出偏导数连续（即可偏导不能确定偏导连续）</p>
+<p> 可偏导且偏导连续才可以推出可微</p>
+<p> 任何方向的方向倒数均存在也未必可偏导</p>
+<p> 可微不是方向导数存在的必要条件，但是是其存在的充分条件</p>
+</li>
+<li><p>证明可微即证 $\frac{\Delta Z - F_X\Delta X - F_Y\Delta Y}{\sqrt{(\Delta X)^2 + (\Delta Y)^2}}$ 是否趋向于 $0$</p>
+<p> 证明连续就是证左右极限相等且存在，证明偏导数存在就是证明函数关于每个变量的偏导数均存在</p>
+</li>
+<li><p>复合函数求导法则</p>
+</li>
+<li><p>隐函数求导 $\frac{\partial z}{\partial x} = - \frac{F’_x(x, y, z)}{F’_z(x, y)}$</p>
+</li>
+<li><p>方向导数 $\frac{\partial f}{\partial l} = \frac{\partial f}{\partial x}cos \alpha + \frac{\partial f}{\partial y}cos \beta$，梯度 $grad f(x, y) = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j$，且二者关系 $\frac{\partial f}{\partial l} | _{max} = |grad f(x, y)| = \sqrt{(\frac{\partial f}{\partial x})^2 + (\frac{\partial f}{\partial y})^2}$</p>
+</li>
+<li><p>空间曲线的切线和法平面，曲面的切平面和法线</p>
+</li>
+<li><p>二元函数取得极值的充分，必要条件 和 条件极值</p>
+</li>
+<li><p>拉格朗日乘数法</p>
+</li>
+</ol>
+<h2 id="第三章-重积分"><a href="#第三章-重积分" class="headerlink" title="第三章 重积分"></a>第三章 重积分</h2><h4 id="第三章总结"><a href="#第三章总结" class="headerlink" title="第三章总结"></a>第三章总结</h4><ol>
+<li><p>二重积分：直角坐标系下分别积分即可，若利用极坐标，$dxdy = rdrd\theta$</p>
+</li>
+<li><p>三重积分：先一后二 / 先二后一     </p>
+<p> ​                    利用柱面坐标：$dxdydz = r d\theta drdz$</p>
+<p> ​                    利用球面坐标：$dxdydz = r^2sin\phi d\theta d\phi dr$</p>
+</li>
+</ol>
+<h2 id="第四章-第一型曲线积分与曲面积分"><a href="#第四章-第一型曲线积分与曲面积分" class="headerlink" title="第四章 第一型曲线积分与曲面积分"></a>第四章 第一型曲线积分与曲面积分</h2><h4 id="第四章总结"><a href="#第四章总结" class="headerlink" title="第四章总结"></a>第四章总结</h4><ol>
+<li>$\int_Lf(x, y)ds = \int_\alpha^\beta f(x(t), y(t))\sqrt{[x’(t)]^2 + [y’(t)]^2}dt$</li>
+<li><p>$\int_Lf(x, y)ds = \int_a^b f(x, y(x))\sqrt{1 + [y’(x)]^2}dx$</p>
+</li>
+<li><p>$\int_Lf(x, y)ds = \int_\alpha^\beta f(r(\theta)cos\theta, r(\theta)sin\theta)\sqrt{r^2(\theta) + [r’(\theta)]^2}d\theta$</p>
+</li>
+<li><p>$\iint_\Sigma f(x, y, z)ds = \iint_{D_{xy}} f(x, y, z(x, y))\sqrt{1 + {z’_x}^2 + {z’_y}^2}dxdy$</p>
+</li>
+</ol>
+<h2 id="第五章-第二型曲线积分和曲面积分"><a href="#第五章-第二型曲线积分和曲面积分" class="headerlink" title="第五章 第二型曲线积分和曲面积分"></a>第五章 第二型曲线积分和曲面积分</h2><h3 id="S-5-1-第二型曲线积分"><a href="#S-5-1-第二型曲线积分" class="headerlink" title="$\S 5.1$ 第二型曲线积分"></a>$\S 5.1$ 第二型曲线积分</h3><ul>
+<li><p>概念 </p>
+<p>  形如 $\int_LP(x, y)dx + Q(x, y)dy$ 的积分（注意第二型曲线是有方向的）</p>
+</li>
+<li><p>计算</p>
+<p>  $\int_LP(x, y)dx + Q(x, y)dy = \int_L[P(x(t), y(y))x’(t)+Q(x(t), y(t))y’(t)]dt$</p>
+<p>  第一二型曲线的关系 $\int_LP(x, y)dx + Q(x, y)dy = \int_L(Pcos\alpha + Qcos\beta)ds $</p>
+</li>
+</ul>
+<h3 id="S-5-2-格林公式"><a href="#S-5-2-格林公式" class="headerlink" title="$\S 5.2$ 格林公式"></a>$\S 5.2$ 格林公式</h3><ul>
+<li><p>单连通域与复连通域（没洞和有洞的区别）</p>
+</li>
+<li><p>区域的正向边界</p>
+<p>  外边界顺时针为正向，内边界逆时针为正向（若沿着边界正向方向走，则该边界始终在此人左侧）</p>
+</li>
+<li><p>格林公式</p>
+<p>  $\oint_LPdx + Qdy = \iint_D(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y})dxdy$ （仅针对 $D$ 既是 $X$ 型域又是 $Y$ 型域）</p>
+<p>  特殊的，利用格林公式算面积 $\iint_Ddxdy = \frac{1}{2}\oint_Lxdy - ydx$</p>
+</li>
+<li><p>路径无关</p>
+<p>  若 $G$ 是一个单连通域且 $\frac{\partial Q}{\partial x} = \frac{\partial P}{\partial y}$ 在 $G$ 内恒成立（充要条件），则路径无关</p>
+</li>
+<li><p>全微分求原函数</p>
+<p>  若 $\frac{\partial Q}{\partial x} = \frac{\partial P}{\partial y}$ 在单连通域 $G$ 内恒成立， 则存在 $du = Pdx + Qdy$</p>
+<p>  $u(x, y) = \int_{(x_0, y_0)}^{(x, y)}P(x, y)dx + Q(x, y)dy$</p>
+</li>
+</ul>
+<h3 id="S-5-3-第二型曲面积分"><a href="#S-5-3-第二型曲面积分" class="headerlink" title="$\S 5.3$ 第二型曲面积分"></a>$\S 5.3$ 第二型曲面积分</h3><ul>
+<li><p>本节讨论均是光滑有向双侧曲面</p>
+</li>
+<li><p>概念</p>
+<p>  形如 $\iint_{\sum}P(x, y, z)dydz + Q(x, y, z)dzdx + R(x, y, z)dxdy$</p>
+</li>
+<li><p>计算</p>
+<ol>
+<li>$\iint_{\sum}R(x, y, z)dxdy = \pm\iint_{D_{xy}}R(x, y, z(x, y))dxdy$</li>
+<li>$\iint_{\sum}Pdydz + Qdzdx + Rdxdy = \iint_{\sum}[P(-z_x) + Q(-z_y) + R]dxdy$</li>
+<li>$\oiint_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$</li>
+</ol>
+</li>
+</ul>
+<h3 id="S-5-4-高斯公式"><a href="#S-5-4-高斯公式" class="headerlink" title="$\S 5.4$ 高斯公式"></a>$\S 5.4$ 高斯公式</h3><ul>
+<li><p>高斯公式</p>
+<p>  设 $\sum$ 是空间闭区域 $\Omega$ 的边界曲面，取外侧且 $P,Q,R$ 在 $\Omega$ 内有连续偏导数</p>
+<p>  则 $ \iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV = \oiint_{\sum}Pdydz + Qdzdx + Rdxdy $</p>
+</li>
+<li><p>通量与散度</p>
+<p>  $\vec A(x, y, z) = P(x, y, z)\vec i + Q(x, y, z)\vec j + R(x, y, z)\vec k$</p>
+<p>  $d\vec S = \vec e_ndS = (cos \alpha, cos\beta, cos\gamma)dS$</p>
+<ul>
+<li><p>通量</p>
+<p>  $\phi = \iint_{\sum}\vec A d\vec S = \iint_{\sum} Pdydz + Qdzdx + Rdxdy$</p>
+</li>
+<li><p>散度</p>
+<p>  $div \vec A = \frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z}$</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="S-5-5-斯托克斯公式"><a href="#S-5-5-斯托克斯公式" class="headerlink" title="$\S 5.5$ 斯托克斯公式"></a>$\S 5.5$ 斯托克斯公式</h3><ul>
+<li><p>斯托克斯公式</p>
+<p>  设有向闭曲线 $\tau$ 是有向曲面 $\sum$ 的边界，且满足</p>
+<ol>
+<li>$\tau$ 和 $\sum$ 的方向符合右手规则</li>
+<li><p>$P(x, y, z), Q(x, y, z), R(x, y, z)$ 在包含 $\sum$ 的区域内有连续偏导数</p>
+<p>那么    </p>
+<script type="math/tex; mode=display">\oint_{\tau}Pdx + Qdy + Rdz = \iint_{\sum}( \frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z})dydz + ( \frac{\partial P}{\partial z} - \frac{\partial R}{\partial x})dxdz + ( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y})dydx \\ = \iint_{\sum}\begin{vmatrix}dydz & dzdx & dxdy \\ \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\ P & Q & R \end{vmatrix}</script></li>
+</ol>
+</li>
+<li><p>环流量与旋度</p>
+<p>  $\vec A(x, y, z) = P(x, y, z)\vec i + Q(x, y, z)\vec j + R(x, y, z)\vec k$</p>
+<ul>
+<li><p>环流量</p>
+<p>  $\oint_{\tau}\vec A d\vec S = \oint_{\tau} Pdx + Qdy + Rdz$</p>
+</li>
+<li><p>旋度</p>
+<p>  $rot \vec A = (\frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z})\vec i + ( \frac{\partial P}{\partial z} - \frac{\partial R}{\partial x})\vec j + ( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y})\vec k$</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="第六章-无穷级数"><a href="#第六章-无穷级数" class="headerlink" title="第六章 无穷级数"></a>第六章 无穷级数</h2><h4 id="第六章总结"><a href="#第六章总结" class="headerlink" title="第六章总结"></a>第六章总结</h4><h3 id="S-6-1-数项级数的概念和性质"><a href="#S-6-1-数项级数的概念和性质" class="headerlink" title="$\S 6.1$ 数项级数的概念和性质"></a>$\S 6.1$ 数项级数的概念和性质</h3><ul>
+<li><p>数项级数， 一般项， 部分和， 部分和数列， 敛散性</p>
+</li>
+<li><p>原级数加括号后所得新级数发散， 则原级数也发散， 但若所得新级数收敛， 原级数未必收敛</p>
+</li>
+<li><p>级数收敛的必要条件是 $\lim_{n \to \infty} u_n = 0$</p>
+</li>
+<li><p>级数乘以非零数敛散性不变， 级数前面去掉有限非零项数敛散性也不变</p>
+</li>
+<li><p>几何级数 $\sum_{n = 0}^{\infty} aq^n = a + aq + aq^2 +\cdots + aq^n + \cdots$ </p>
+<p>  调和级数 $\sum_{n = 1}^{\infty} \frac{1}{n} = 1 + \frac{1}{2} + \cdots + \frac{1}{n} + \cdots$</p>
+<p>  $p$ 级数 $\sum_{n = 1}^{\infty} \frac{1}{n^p} = 1 + \frac{1}{2^p} + \cdots + \frac{1}{n^p} + \cdots$ (并且 $p \le 1$ 时收敛， $p &gt; 1$ 时发散)</p>
+<p>  交错级数 $\sum_{n = 1}^{\infty} (-1)^nu_n$</p>
+</li>
+</ul>
+<h3 id="S-6-2-正项级数的敛散性"><a href="#S-6-2-正项级数的敛散性" class="headerlink" title="$\S 6.2 $ 正项级数的敛散性"></a>$\S 6.2 $ 正项级数的敛散性</h3><ul>
+<li><p>比较判别法</p>
+<p>  正项级数 $\sum_{n = 1}^{\infty}u_n$ ,$\sum_{n = 1}^{\infty} v_n$ ,且当 $n &gt; N$ 时， $u_n \le kv_n$</p>
+<ul>
+<li>若 $u_n$ 发散，则 $v_n$ 发散</li>
+<li><p>若 $v_n$ 收敛，则 $u_n$ 收敛</p>
+<p>使用该方法时常用适当放缩或借助几何级数，调和级数，p级数作为参考</p>
+<p>比较判别法的极限形式</p>
+<p>正项级数 $\sum_{n = 1}^{\infty}u_n$ ,$\sum_{n = 1}^{\infty} v_n$ ,且 $\lim_{n \to \infty} \frac{u_n}{v_n} = l$</p>
+</li>
+<li><p>若 $l = \infty$ , 且 $v_n$ 发散， $u_n$ 发散，</p>
+</li>
+<li>若 $l = 0$ , 且 $v_n$ 收敛，则 $u_n$ 收敛</li>
+<li>若 $0 &lt; l &lt; \infty$ , 则 $u_n$，$v_n$ 敛散性相同</li>
+</ul>
+</li>
+<li><p>比值判别法（d’Alembert 判别法）</p>
+<p>  正项级数 $\sum_{n = 1}^{\infty}u_n$  ,且 $\lim_{n \to \infty} \frac{u_{n + 1}}{u_n} = \rho$</p>
+<ul>
+<li>若 $\rho &lt; 1$ ,则 $u_n$ 收敛，</li>
+<li>若 $\rho &gt; 1$ 或 $\rho = \infty$ , 则 $u_n$ 发散</li>
+<li>若$\rho = 1$ , 则$u_n$ 敛散性不确定</li>
+</ul>
+</li>
+<li><p>根植判别法（Cauchy 判别法）</p>
+<p>  正项级数 $\sum_{n = 1}^{\infty}u_n$  ,且 $\lim_{n \to \infty} \sqrt[n]{u_n} = \rho$</p>
+<ul>
+<li>若 $\rho &lt; 1$ ,则 $u_n$ 收敛，</li>
+<li>若 $\rho &gt; 1$ 或 $\rho = \infty$ , 则 $u_n$ 发散</li>
+<li>若$\rho = 1$ , 则$u_n$ 敛散性不确定</li>
+</ul>
+</li>
+</ul>
+<h3 id="S-6-3-任意项级数"><a href="#S-6-3-任意项级数" class="headerlink" title="$\S 6.3$ 任意项级数"></a>$\S 6.3$ 任意项级数</h3><ul>
+<li><p>Cauchy 收敛准则</p>
+<p>  数项级数 $\sum_{n = 1}^{\infty} u_n$ 收敛的充要条件时$\forall \varepsilon &gt; 0, \exists$ 正整数 $N$， 当 $n &gt; N$ 时， 对一切正整数 $p$ 有 $|u_{n + 1} + \cdots + u_{n + p}| &lt; \varepsilon$  </p>
+</li>
+<li><p>Leibniz 判别法 </p>
+<p>  若交错级数满足 $\sum_{n = 1}^{\infty} (-1)^{n + 1}u_n(u_n &gt; 0)$ 满足：</p>
+<ul>
+<li>$u_n \ge u_{n + 1}(n = 1, 2, 3, \cdots)$</li>
+<li><p>$lim_{n \to \infty} u_n = 0$</p>
+<p>则交错级数 $\sum_{n = 1}^{\infty} (-1)^{n + 1}u_n$ 收敛（注：这是充分条件，即使不满足也不能证明级数发散）</p>
+<p>常用结论：$\sum_{n = 1}^{\infty} (-1)^{n + 1}\frac{1}{n}$ 收敛         </p>
+</li>
+</ul>
+</li>
+<li><p>绝对收敛与条件收敛</p>
+<p>  各项符号无规律级数（如 $\sum_{n = 1} ^{\infty} \frac{sinn\alpha}{n^2}$）称为任意项级数</p>
+<p>  若$\sum_{n = 1}^{\infty} |u_n|$ 收敛，则称级数 $\sum_{n = 1}^{\infty} u_n$ 绝对收敛</p>
+<p>  若 $\sum_{n = 1}^{\infty} u_n$ 收敛， $\sum_{n = 1}^{\infty} |u_n|$ 发散，则称级数 $\sum_{n = 1}^{\infty} u_n$ 条件收敛</p>
+<p>  绝对收敛则必收敛</p>
+</li>
+</ul>
+<h3 id="S-6-4-函数项级数"><a href="#S-6-4-函数项级数" class="headerlink" title="$\S 6.4$ 函数项级数"></a>$\S 6.4$ 函数项级数</h3><ul>
+<li>函数项级数 $\sum_{n = 1}^{\infty} u_n(x)$， 定义区间 $I$<ul>
+<li>对 $x_0 \in I$， 若 $\sum_{n = 1}^{\infty} u_n(x)$ 收敛，则称 $x_0$ 为收敛点，反之称为发散点</li>
+<li>发散点组成的全体称为发散域，收敛点组成的全体称为收敛域</li>
+<li>求收敛域可以用比值或根式判别法来求</li>
+<li>和函数 $s(x) = \sum_{n = 1}^{\infty}u_n(x), x \in$ 收敛域</li>
+<li>余项 $R_n(x) = s(x) - s_n(x), x \in$ 收敛域</li>
+</ul>
+</li>
+</ul>
+<h3 id="S-6-5-幂级数"><a href="#S-6-5-幂级数" class="headerlink" title="$\S 6.5$ 幂级数"></a>$\S 6.5$ 幂级数</h3><ul>
+<li><p>$\sum_{n = 0}^{\infty} a_n(x-x_0)^n$ 称为在点 $x_0$ 的幂级数 （一下研究均是 $x_0 = 0$ 的情况）</p>
+</li>
+<li><p>$Abel$ 定理</p>
+<ul>
+<li><p>若 $\sum_{n = 0}^{\infty} a_nx^n$ 在 $x = x_0$ 点收敛，则满足 $|x| &lt; |x_0|$ 的一切 $x$，$\sum_{n = 1}^{\infty}a_nx^n$ 绝对收敛</p>
+</li>
+<li><p>若 $\sum_{n = 0}^{\infty} a_nx^n$ 在 $x = x_0$ 点发散，则满足 $|x| &gt; |x_0|$ 的一切 $x$，$\sum_{n = 1}^{\infty}a_nx^n$ 发散</p>
+<p>  由 $Abel$ 定理可知，幂级数 $\sum_{n = 1}^{\infty}a_nx^n$ 的收敛域是以原点为中心的区间，收敛半径 $R$ 记为收敛域长度的一半，$(-R, R)$ 记为收敛区间，不是收敛域，该收敛区间加上收敛的端点才是收敛域</p>
+</li>
+</ul>
+</li>
+<li><p>计算收敛半径 $R$ （仅在不缺项的时候可以用，缺项情况要用比值判别法或根式判别法来求）</p>
+<p>  若 $lim_{n \to \infty}|\frac{a_{n+1}}{a_n}| = \rho$ 或 $\lim_{n \to \infty} \sqrt[n]{|a_n|} = \rho$ 则收敛半径 $R = \frac{1}{\rho}$ 特别的，$\rho = 0$ 时 $ R = \infty$ $\rho = \infty$ 时 $R = 0$</p>
+</li>
+<li><p>幂级数代数运算</p>
+<ul>
+<li>幂级数相加可逐项分别相加，且新级数的收敛半径 $R \ge min\{R_1, R_2\}$ （但 $R_1 \ne R_2$ 时，必有 $R = min\{R_1, R_2\}$）</li>
+<li>幂级数相乘，新级数的收敛半径 $R \ge min\{R_1, R_2\}$ </li>
+</ul>
+</li>
+<li><p>幂级数的和函数 $s( x )$</p>
+<ul>
+<li>$s(x)$ 在收敛域内连续</li>
+<li>收敛域内 $s(x)$ 可微， 且对 $s(x)$ 求导可以先对各项求导再相加</li>
+<li>收敛域内 $s(x)$ 可积， 且对 $s(x)$ 积分可以先对各项积分再相加</li>
+</ul>
+</li>
+<li><p>泰勒级数</p>
+<ul>
+<li><p>$f(x)$ 在 $x_0$ 处的泰勒级数为 $\sum_{n = 0}^{\infty} \frac{f^{(n)}(x_0)}{n!}(x-x_0)^n$</p>
+</li>
+<li><p>函数能展开成幂级数的必要条件是在区间 $I$ 内有任意阶导数， 但此时写出的泰勒级数未必收敛于 $f(x)$</p>
+</li>
+<li><p>只有满足 $f(x)$ 在 $x_0$ 某一邻域内有任意阶导数，并且存在 $R &gt; 0$，使 $|x - x_0| &lt; R$ 时，$\lim_{n \to \infty} R_n(x) = \lim_{n \to \infty} \frac{f^{(n + 1)}(\xi)}{(n + 1)!}(x-x_0)^{n + 1} = 0$ ，这时 $f(x)$ 才能在邻域 $U(x_0, R)$ 内展开成泰勒级数</p>
+</li>
+<li><p>特殊的，当 $x_0 = 0$ 时，$f(x)$ 的泰勒级数为 $\sum_{n = 0}^{\infty} \frac{f^{(n)}(0)}{n!}x^n$ 称为 $f(x)$ 的麦克劳林级数或 $x$ 的幂级数</p>
+</li>
+<li><p>常用幂级数展开式</p>
+<script type="math/tex; mode=display">
+  \frac{1}{1-x} = \sum_{n = 0}^{\infty}x^{n},\ \frac{1}{1+x} = \sum_{n = 0}^{\infty}(-1)^nx^{n}\ (-1 < x < 1)
+  \\\ e^x = \sum_{n = 0}^{\infty}\frac{x^n}{n!}\ (-\infty < x < \infty)
+  \\\ sinx = \sum_{n = 0}^{\infty}(-1)^n\frac{x^{2n+1}}{(2n+1)!}\ (-\infty < x < \infty)
+  \\\ cosx = \sum_{n = 0}^{\infty}(-1)^n\frac{x^{2n}}{(2n)!}\ (-\infty < x < \infty)
+  \\ln(1 + x) = \sum_{n = 0}^{\infty} (-1)^n\frac{x^{n + 1}}{n + 1}\ (-1 < x \le 1)
+  \\\ arctanx = \sum_{n = 0}^{\infty} (-1)^n\frac{x^{2n + 1}}{2n + 1}\ (-1 \le x \le 1)</script><p>  值得注意的是，若 $f(x)$ 能展开成幂级数，那么展开方式必定是唯一的，而且一定是泰勒级数</p>
+</li>
+</ul>
+</li>
+<li><p>欧拉公式</p>
+<ul>
+<li>$e^{ix} = cosx + isinx$ </li>
+<li>$cos x = \frac{e^{ix} + e^{-ix}}{2}$，$sin x = \frac{e^{ix} - e^{-ix}}{2i}$</li>
+<li>$e^{i\pi} + 1 = 0$  <strong>上帝创造的公式！！！</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="S-6-6-傅里叶级数"><a href="#S-6-6-傅里叶级数" class="headerlink" title="$\S 6.6$ 傅里叶级数"></a>$\S 6.6$ 傅里叶级数</h3><ul>
+<li><p>三角函数系 </p>
+<p>  $1, sinx, cosx, cos2x, sin2x, \cdots, cosnx, sinnx, \cdots$ 其中任意两个相异函数在区间$[-\pi, pi]$ 上的积分等于 $0$，称为三角函数系的正交性</p>
+</li>
+<li><p>函数展开成傅里叶级数</p>
+<p>  设 $f(x)$ 为周期为 $2\pi$ 的可积函数，若 $f(x)$ 能展开成三角级数，即$f(x) = \frac{1}{2}a_0+\sum_{n = 1}^{\infty}(a_ncosnx + b_nsinnx)$</p>
+<p>  则 $a_k = \frac{1}{\pi}\int_{-\pi}^{\pi}f(x)coskxdx$，$b_k = \frac{1}{\pi}\int_{-\pi}^{\pi}f(x)sinkxdx$</p>
+<p>  $f(x)$ 的傅里叶级数记为 $f(x) \sim \frac{a_0}{2} + \sum_{n = 1}^{\infty}(a_ncosnx+b_nsinnx)$，其中 $a_n$，$b_n$ 称为傅里叶系数，注意这里的 $\sim$ 表示 $f(x)$ 和它的傅里叶系数有某种联系关系，这个级数本身可能收敛，可能不收敛，收敛也未必收敛于 $f(x)$</p>
+</li>
+<li><p>狄利克雷收敛定理</p>
+<p>  设 $f(x)$ 为周期为 $2\pi$ 的可积函数，若 $f(x)$ 在 $[-\pi,\pi]$ 上满足狄利克雷条件</p>
+<ul>
+<li>连续或只有有限个第一类间断点</li>
+<li><p>只有有限个极值点</p>
+<p><strong>直观来说就是函数图像在周期内，连续或分段连续且不作无限次振动</strong>，则 $f(x)$ 的傅里叶级数收敛，在 $f(x)$ 的<strong>连续点</strong>，级数收敛于 $f(x)$，而对于 $f(x)$ 的间断点 $x$，级数收敛于间断点处左右极限的中点（注意在满足狄利克雷收敛定理条件下是一定会收敛的，只是收敛会不会收敛于 $f(x)$ 不确定）</p>
+</li>
+</ul>
+</li>
+<li><p>周期延拓</p>
+</li>
+<li><p>奇函数的傅里叶级数只有正弦项，又称为正弦级数</p>
+<p>  偶函数的傅里叶级数只有余弦项，又称为余弦级数</p>
+</li>
+<li><p>周期为 $2l$ 的函数展成傅里叶级数</p>
+<p>  $f(x) \sim \frac{a_0}{2} + \sum_{n = 1}^{\infty}(a_ncosn\frac{\pi}{l}x + b_nsinn\frac{\pi}{l}x)$</p>
+<ul>
+<li>$a_n = \frac{1}{l}\int^{l}_{-l}f(x)cosn\frac{\pi}{l}xdx    $</li>
+<li><p>$b_n = \frac{1}{l}\int^{l}_{-l}f(x)sinn\frac{\pi}{l}xdx    $</p>
+<p>只在 $[0, l]$ 上有定义的函数，展开成正弦级数或余弦级数，需做奇延拓或偶延拓</p>
+<p>和差化积公式参考如下</p>
+<script type="math/tex; mode=display">
+{\displaystyle \sin \alpha +\sin \beta =2\sin { \alpha +\beta \over 2}\cos { \alpha -\beta \over 2}} \\ {\displaystyle \sin \alpha -\sin \beta =2\cos {\alpha +\beta \over 2}\sin {\alpha -\beta \over 2}} \\ {\displaystyle \cos \alpha +\cos \beta =2\cos {\alpha +\beta \over 2}\cos {\alpha -\beta \over 2}} \\ {\displaystyle \cos \alpha -\cos \beta =-2\sin {\alpha +\beta \over 2}\sin {\alpha -\beta \over 2}}
+\\ \\ \\ {\displaystyle \sin \alpha \cos \beta ={\sin(\alpha +\beta )+\sin(\alpha -\beta ) \over 2}} \\ {\displaystyle \cos \alpha \sin \beta ={\sin(\alpha +\beta )-\sin(\alpha -\beta ) \over 2}} \\ {\displaystyle \cos \alpha \cos \beta ={\cos(\alpha +\beta )+\cos(\alpha -\beta ) \over 2}} \\ {\displaystyle \sin \alpha \sin \beta =-{\cos(\alpha +\beta )-\cos(\alpha -\beta ) \over 2}}</script></li>
+</ul>
+</li>
+</ul>
+<h2 id="第七章-常微分方程"><a href="#第七章-常微分方程" class="headerlink" title="第七章 常微分方程"></a>第七章 常微分方程</h2><h4 id="第七章总结"><a href="#第七章总结" class="headerlink" title="第七章总结"></a>第七章总结</h4><ol>
+<li>本章研究的方程主要有两种：一阶线性微分方程 和 高阶微分方程</li>
+<li><p>对于一阶线性微分方程</p>
+<ul>
+<li>首先考虑是不是全微分方程，若满足 $\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial y}$，则化为 $u(x, y) = 0$ 的形式</li>
+<li>不是全微分方程就化为 $\frac{dy}{dx} = \cdots$ 的形式，然后几种情况无非是$\frac{dy}{dx} = f(x)g(x),\frac{dy}{dx} = \varphi(\frac{dy}{dx}),\frac{dy}{dx} = p(x)y,\frac{dy}{dx} = p(x)y + q(x),\frac{dy}{dx} = p(x)y + q(x)y^n$ 这五种形式，其中只有第四，五种要稍微记一下，伯努利方程（第五种）稍微转化一下就是第四种</li>
+<li>化成 $\frac{dy}{dx} = \cdots$ 比较复杂的话就化为 $\frac{dx}{dy} = \cdots$形式</li>
+</ul>
+</li>
+<li><p>对于高阶方程</p>
+<ul>
+<li>可降阶方程本质就是不断积分</li>
+<li>高阶齐次方程记一下特征根的形式，掌握二阶齐次即可，高阶只需了解</li>
+<li>高阶非齐次方程也是主要记一下两种特征根形式，欧拉方程单独记一下</li>
+</ul>
+</li>
+</ol>
+<h3 id="S-7-1-常微分方程的概念"><a href="#S-7-1-常微分方程的概念" class="headerlink" title="$\S 7.1$ 常微分方程的概念"></a>$\S 7.1$ 常微分方程的概念</h3><ul>
+<li><p>微分方程，常微分方程，偏微分方程，方程的阶，线性微分方程，非线性微分方程，显式通解，隐式通解，特解，初始条件，初值问题（Cauchy问题）</p>
+</li>
+<li><p>方程通解的特征是含有任意常数，任意常数个数与方程阶数相同</p>
+<p>  值得注意的是，<strong>通解未必是方程的全部解</strong></p>
+</li>
+</ul>
+<h3 id="S-7-2-可分离变量的方程"><a href="#S-7-2-可分离变量的方程" class="headerlink" title="$\S 7.2$ 可分离变量的方程"></a>$\S 7.2$ 可分离变量的方程</h3><ul>
+<li><p>可分离变量的方程</p>
+<p>  形如 $\frac{dy}{dx} = f(x)g(x)$ ，方法是 $y$ ，$x$ 分别放在等式两边分别积分运算</p>
+<p>  方程特征是化为一般式后，方程右端可分解为只含 $x$ 和只含 $y$ 的两个函数乘积</p>
+</li>
+<li><p>齐次方程</p>
+<p>  形如 $\frac{dy}{dx} = \varphi(\frac{dy}{dx})$ ，方法是令 $u = \frac{y}{x}$，再化为可分离变量方程求解</p>
+<p>  方程特征是各项次数均相同</p>
+</li>
+</ul>
+<h3 id="S-7-3-一阶线性微分方程"><a href="#S-7-3-一阶线性微分方程" class="headerlink" title="$\S 7.3$ 一阶线性微分方程"></a>$\S 7.3$ 一阶线性微分方程</h3><p>一阶线性微分方程的标准形式为 $\frac{dy}{dx} = p(x)y + q(x)$，若 $q(x) \equiv 0$，称为齐次线性方程，若 $q(x) \not\equiv 0$，则称为非齐次方程</p>
+<ul>
+<li><p>一阶齐次线性方程</p>
+<p>  形如 $\frac{dy}{dx} = p(x)y$ ，通解为 $y = Ce^{\int p(x)dx}$</p>
+</li>
+<li><p>一阶非齐次线性方程</p>
+<p>  形如 $\frac{dy}{dx} = p(x)y + q(x)$ ，通解为 $y = e^{\int p(x)dx}(\int q(x)e^{-\int p(x)dx}dx + C)$</p>
+</li>
+<li><p>伯努利（Bernoulli）方程</p>
+<p>  形如 $\frac{dy}{dx} = p(x)y + q(x)y^n$ ，解法是方程两边除以 $y^n$，再凑微分化为一阶非齐次线性方程</p>
+</li>
+</ul>
+<h3 id="S-7-4-全微分方程"><a href="#S-7-4-全微分方程" class="headerlink" title="$\S 7.4$ 全微分方程"></a>$\S 7.4$ 全微分方程</h3><ul>
+<li><p>全微分方程</p>
+<ul>
+<li><p>若 $P(x, y),Q(x, y)$ 在单连通区域 $D$ 内有连续的一阶偏导数，且 $\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x}$ 则方程， $P(x, y)dx + Q(x, y)dy = 0$ 称为全微分方程</p>
+</li>
+<li><p>对于全微分方程必有 $u(x, y)$ 使 $du(x, y) = P(x, y)dx + Q(x, y)dy = 0$ 从而 $u(x, y) = C$</p>
+</li>
+<li>求法 $u(x, y) = \int^x_{x_0}P(x, y_0)dx + \int^y_{y_0}Q(x, y)dy = \int^y_{y_0}Q(x_0, y)dy + \int^x_{x_0}P(x, y)dx$ ，通解 $u(x, y) = C$</li>
+</ul>
+</li>
+</ul>
+<h3 id="S-7-5-可降阶的高阶方程"><a href="#S-7-5-可降阶的高阶方程" class="headerlink" title="$\S 7.5$ 可降阶的高阶方程"></a>$\S 7.5$ 可降阶的高阶方程</h3><ul>
+<li><p>$y^{(n)} = f(x)$ 型方程</p>
+<p>  不断积分，方程求特解时，任意常数出现一个确定一个</p>
+</li>
+<li><p>$y’’ = f(x, y’)$ 型方程</p>
+<p>  设 $y’ = p(x)$ 原方程可化为 $\frac{dp}{dx} = f(x, p)$ 再用一阶方程的解法求出通解，最后积分得出 $y$ 的值</p>
+</li>
+<li><p>$y’’ = f(y,y’)$</p>
+<p>  设 $y’ = p(y)$，则原方程可化为 $p\frac{dp}{dy} = f(y, p)$，再用一阶方程解法求通解</p>
+</li>
+</ul>
+<h3 id="S-7-6-高阶齐次线性方程"><a href="#S-7-6-高阶齐次线性方程" class="headerlink" title="$\S 7.6 $ 高阶齐次线性方程"></a>$\S 7.6 $ 高阶齐次线性方程</h3><ul>
+<li><p>方程的线性无（相）关以及判定</p>
+</li>
+<li><p>线性齐次方程组解的结构</p>
+</li>
+<li><p>二阶常系数齐次线性方程 $y’’+py’+qy=0$</p>
+<ul>
+<li>特征方程，特征根</li>
+<li>特征方程有两个不同实根的情况，$y = C_1e^{r_1x} + C_2e^{r_2x}$</li>
+<li>特征方程有两个相同实根的情况，$y = (C_1 + C_2x)e^{r_1x}$</li>
+<li>若特征方程有一对共轭复根 $r = \alpha \pm i \beta$ 的情况，$y = e^{\alpha x}(C_1cos\beta x + C_2 sin \beta x)$</li>
+</ul>
+</li>
+<li><p>$n$ 阶常系数齐次线性方程</p>
+<p>  大致同二阶情况，每一个根都对应一个特解，$k$ 重根算 $k$ 个根</p>
+<ul>
+<li><p>$k$ 重实根 $r$ 对应 $k$ 个特解：$x^0e^{rx},\cdots,x^{k - 1}e^{rx}$</p>
+</li>
+<li><p>$k$ 重复数根 $r = \alpha \pm i \beta$ 对应的 $2k$ 个特解：</p>
+<p>  ​    $x^0e^{\alpha x}cos\beta x,\cdots,x^{k - 1}e^{\alpha x}cos\beta x$ </p>
+<p>  ​    $x^0e^{\alpha x}sin\beta x,\cdots,x^{k - 1}e^{\alpha x}sin\beta x$ </p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="S-7-7-高阶非齐次线性方程"><a href="#S-7-7-高阶非齐次线性方程" class="headerlink" title="$\S 7.7$ 高阶非齐次线性方程"></a>$\S 7.7$ 高阶非齐次线性方程</h3><p> $y’’ + py’ + qy = f(x)$</p>
+<ul>
+<li><p>非线性齐次方程组解的结构</p>
+</li>
+<li><p>$f(x) = P_m(x)e^{\lambda x}$</p>
+<p>  设特解 $y^*=Q(x)e^{\lambda x}$，$Q(x)$ 为多项式，化简得 $Q’’(x)+(2\lambda + p)Q’(x) + (\lambda ^ 2 + p \lambda + q)Q(x) = P_m(x)$，再分析出 $Q(x)$ 的阶数之后用待定系数法求解</p>
+<p>  $y^*=x^lQ_m(x)e^{\lambda x}$，$\lambda$ 是特征方程的 $l$ 重根 </p>
+</li>
+<li><p>$f(x)=e^{\lambda x}[P_l(x)cos\omega x +P_n(x)sin\omega x])$</p>
+<p>  特解 $y^*=x^ke^{\lambda x}[Q_m^{(1)}(x)cos\omega x + Q_m^{(2)}(x)sin\omega x],m = \max\{l, n\}$      </p>
+<p>  其中 $k = 0,1$（$\lambda + i\omega$ 不是特征根时 $k$ 是 $0$，反之 $k$ 是 $1$)，这里 $Q_m^{(1)}$ 和 $Q_m^{(2)}$ 是待定的，只用知道他们是 $m$ 次多项式即可，剩下的用待定系数法求解</p>
+</li>
+<li><p>欧拉方程</p>
+<ul>
+<li>形如 $x^ny^{(n)} + p_1x^{n - 1}y^{(n - 1)} + \cdots + p_{n - 1}xy’ + p_ny = f(x)$ 的方程叫欧拉方程，特点是 $x^ky^{(k)}$ 配对出现</li>
+<li>解法是设 $x = e^t,\frac{dy}{dt}=Dy, \cdots, \frac{d^ky}{dt^k} = D^ky$，则 $x^ky^{(k)} = D(D - 1)\cdots(D - k + 1)y$，最后方程化为只与 $t$ 有关的线性方程</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>数学</tag>
+        <tag>大学课程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>大学笔记 | 电路原理</title>
     <url>/2023/06/05/Circuit-Analysis/</url>
     <content><![CDATA[<p>从入门到进门</p>
@@ -319,409 +739,208 @@ t = \begin{cases} 20e^{-\frac{t}{\tau}} + (1 - e^{-\frac{t}{\tau}}) \ , 0 \le t 
 </script></blockquote>
 ]]></content>
       <tags>
-        <tag>电路</tag>
         <tag>大学课程</tag>
+        <tag>电路</tag>
       </tags>
   </entry>
   <entry>
-    <title>大学笔记 | 微积分</title>
-    <url>/2023/06/05/Calculus/</url>
-    <content><![CDATA[<p>从入门到。。。欸？！俺滴门捏 இ௰இ</p>
+    <title>大学笔记 | 线性代数</title>
+    <url>/2023/06/06/Linear-Algebra/</url>
+    <content><![CDATA[<p>从入门到入土</p>
 <span id="more"></span>
-<h2 id="第一章-多元函数的极限和连续性"><a href="#第一章-多元函数的极限和连续性" class="headerlink" title="第一章 多元函数的极限和连续性"></a>第一章 多元函数的极限和连续性</h2><h4 id="第一章总结"><a href="#第一章总结" class="headerlink" title="第一章总结"></a>第一章总结</h4><ol>
-<li>算多元函数极限时往往不能用洛必达，可以用一元函数求极限方法对原函数进行变换然后再求，或者也可以变换为一元函数后再用洛必达</li>
-<li>算极限不存在时，选择不同路径求出不同极限然后可以证出来</li>
-</ol>
-<h2 id="第二章-多元函数的微分学及其应用"><a href="#第二章-多元函数的微分学及其应用" class="headerlink" title="第二章 多元函数的微分学及其应用"></a>第二章 多元函数的微分学及其应用</h2><h4 id="第二章总结"><a href="#第二章总结" class="headerlink" title="第二章总结"></a>第二章总结</h4><ol>
-<li><p>可偏导不一定连续，连续不一定可偏导</p>
-<p> 可微可推出函数连续且可偏导，但推不出偏导数连续（即可偏导不能确定偏导连续）</p>
-<p> 可偏导且偏导连续才可以推出可微</p>
-<p> 任何方向的方向倒数均存在也未必可偏导</p>
-<p> 可微不是方向导数存在的必要条件，但是是其存在的充分条件</p>
-</li>
-<li><p>证明可微即证 $\frac{\Delta Z - F_X\Delta X - F_Y\Delta Y}{\sqrt{(\Delta X)^2 + (\Delta Y)^2}}$ 是否趋向于 $0$</p>
-</li>
-<li><p>复合函数求导法则</p>
-</li>
-<li><p>隐函数求导 $\frac{\partial z}{\partial x} = - \frac{F’_x(x, y, z)}{F’_z(x, y)}$</p>
-</li>
-<li><p>方向导数 $\frac{\partial f}{\partial l} = \frac{\partial f}{\partial x}cos \alpha + \frac{\partial f}{\partial y}cos \beta$，梯度 $grad f(x, y) = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j$，且二者关系 $\frac{\partial f}{\partial l} | _{max} = |grad f(x, y)| = \sqrt{(\frac{\partial f}{\partial x})^2 + (\frac{\partial f}{\partial y})^2}$</p>
-</li>
-<li><p>空间曲线的切线和法平面，曲面的切平面和法线</p>
-</li>
-<li><p>二元函数取得极值的充分，必要条件 和 条件极值</p>
-</li>
-<li></li>
-</ol>
-<h2 id="第三章-重积分"><a href="#第三章-重积分" class="headerlink" title="第三章 重积分"></a>第三章 重积分</h2><h2 id="第四章-第一型曲线积分与曲面积分"><a href="#第四章-第一型曲线积分与曲面积分" class="headerlink" title="第四章 第一型曲线积分与曲面积分"></a>第四章 第一型曲线积分与曲面积分</h2><h2 id="第五章-第二型曲线积分和曲面积分"><a href="#第五章-第二型曲线积分和曲面积分" class="headerlink" title="第五章 第二型曲线积分和曲面积分"></a>第五章 第二型曲线积分和曲面积分</h2><h3 id="S-5-1-第二型曲线积分"><a href="#S-5-1-第二型曲线积分" class="headerlink" title="$\S 5.1$ 第二型曲线积分"></a>$\S 5.1$ 第二型曲线积分</h3><ul>
-<li><p>概念 </p>
-<p>  形如 $\int_LP(x, y)dx + Q(x, y)dy$ 的积分（注意第二型曲线是有方向的）</p>
-</li>
-<li><p>计算</p>
-<p>  $\int_LP(x, y)dx + Q(x, y)dy = \int_L[P(x(t), y(y))x’(t)+Q(x(t), y(t))y’(t)]dt$</p>
-<p>  第一二型曲线的关系 $\int_LP(x, y)dx + Q(x, y)dy = \int_L(Pcos\alpha + Qcos\beta)ds $</p>
+<h2 id="第一章-矩阵的运算与初等变换"><a href="#第一章-矩阵的运算与初等变换" class="headerlink" title="第一章 矩阵的运算与初等变换"></a>第一章 矩阵的运算与初等变换</h2><h3 id="S-1-1-矩阵和向量的概念"><a href="#S-1-1-矩阵和向量的概念" class="headerlink" title="$\S 1.1$ 矩阵和向量的概念"></a>$\S 1.1$ 矩阵和向量的概念</h3><ul>
+<li><p>矩阵</p>
+<p>  $m \times n$ 的数表构成 $m$ 行 $n$ 列矩阵，这 $m \times n$ 个数是 $A$ 的元素，简称元</p>
+<p>  实矩阵就是全是实数元素的矩阵</p>
+<p>  复矩阵就是全是复数元素的矩阵</p>
+<ul>
+<li><p>特殊矩阵</p>
+<p>  同型矩阵：行数和列数都分别相等的矩阵（指的是两个矩阵之间的关系）</p>
+<p>  相等矩阵：同型矩阵、对应元素相等<br>  方阵：行数列数相等（就单个矩阵而言）</p>
+<p>  上（下）三角矩阵：主对角线下（上）元素全为 $0$ 的矩阵</p>
+<p>  对角矩阵：只有对角线上元素不为 $0$</p>
+<p>  列矩阵，行矩阵：$1 \times n$，$n \times 1$ 的矩阵</p>
+<p>  单位矩阵：特殊的对角阵，对角线上全为 $1$</p>
+<p>  零矩阵：全为 $0$</p>
+<p>  负矩阵：$-A $ 是 $A$ 的负矩阵</p>
+<p>  对称矩阵：元素关于对角线对称</p>
+<p>  反对称矩阵：元素关于对角线称相反数且对角线上元素全为 $0$</p>
 </li>
 </ul>
-<h3 id="S-5-2-格林公式"><a href="#S-5-2-格林公式" class="headerlink" title="$\S 5.2$ 格林公式"></a>$\S 5.2$ 格林公式</h3><ul>
-<li><p>单连通域与复连通域（没洞和有洞的区别）</p>
-</li>
-<li><p>区域的正向边界</p>
-<p>  外边界顺时针为正向，内边界逆时针为正向（若沿着边界正向方向走，则该边界始终在此人左侧）</p>
-</li>
-<li><p>格林公式</p>
-<p>  $\oint_LPdx + Qdy = \iint_D(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y})dxdy$ （仅针对 $D$ 既是 $X$ 型域又是 $Y$ 型域）</p>
-<p>  特殊的，利用格林公式算面积 $\iint_Ddxdy = \frac{1}{2}\oint_Lxdy - ydx$</p>
-</li>
-<li><p>路径无关</p>
-<p>  若 $G$ 是一个单连通域且 $\frac{\partial Q}{\partial x} = \frac{\partial P}{\partial y}$ 在 $G$ 内恒成立（充要条件），则路径无关</p>
-</li>
-<li><p>全微分求原函数</p>
-<p>  若 $\frac{\partial Q}{\partial x} = \frac{\partial P}{\partial y}$ 在单连通域 $G$ 内恒成立， 则存在 $du = Pdx + Qdy$</p>
-<p>  $u(x, y) = \int_{(x_0, y_0)}^{(x, y)}P(x, y)dx + Q(x, y)dy$</p>
 </li>
 </ul>
-<h3 id="S-5-3-第二型曲面积分"><a href="#S-5-3-第二型曲面积分" class="headerlink" title="$\S 5.3$ 第二型曲面积分"></a>$\S 5.3$ 第二型曲面积分</h3><ul>
-<li><p>本节讨论均是光滑有向双侧曲面</p>
-</li>
-<li><p>概念</p>
-<p>  形如 $\iint_{\sum}P(x, y, z)dydz + Q(x, y, z)dzdx + R(x, y, z)dxdy$</p>
-</li>
-<li><p>计算</p>
+<h2 id="第五章-方阵的特征值，特征向量与相似化简"><a href="#第五章-方阵的特征值，特征向量与相似化简" class="headerlink" title="第五章 方阵的特征值，特征向量与相似化简"></a>第五章 方阵的特征值，特征向量与相似化简</h2><h3 id="S-5-1-数域-多项式的根"><a href="#S-5-1-数域-多项式的根" class="headerlink" title="$\S 5.1$ 数域 多项式的根"></a>$\S 5.1$ 数域 多项式的根</h3><ul>
+<li><p>数域</p>
+<p>  设 $\mathbb{Q} \subseteq K \subseteq \mathbb{C}$，称 $K$ 为一个数域，当：</p>
 <ol>
-<li>$\iint_{\sum}R(x, y, z)dxdy = \pm\iint_{D_{xy}}R(x, y, z(x, y))dxdy$</li>
-<li>$\iint_{\sum}Pdydz + Qdzdx + Rdxdy = \iint_{\sum}[P(-z_x) + Q(-z_y) + R]dxdy$</li>
-<li>$\oiint_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$</li>
+<li>$0, 1 \in K$</li>
+<li>$\forall a, b \in K. a \pm b, ab \in K$， 且对 $b \not= 0, b^{-1} \in K$</li>
+</ol>
+</li>
+<li><p>多项式，根，零点，标准分解式</p>
+</li>
+</ul>
+<h3 id="S-5-2-方阵的特征值与特征向量"><a href="#S-5-2-方阵的特征值与特征向量" class="headerlink" title="$\S 5.2$ 方阵的特征值与特征向量"></a>$\S 5.2$ 方阵的特征值与特征向量</h3><ul>
+<li><p>$n$ 阶 $A$ 矩阵对角线上元素的和称为 $A$ 的迹，记为 $trA$</p>
+</li>
+<li><p>$\lambda E - A$ 称为 $A$ 的特征矩阵，$|\lambda E - A|$ 的值表达式 $\psi(\lambda)$ 是一</p>
+<p>  个多项式，称为 $A$ 的特征多项式，特征多项式的根称为 $A$ 的特征值，亦称为特征根 </p>
+<ul>
+<li>$\psi(\lambda) = \lambda^n+c_{n-1}\lambda^{n-1}+ \cdots + c_1\lambda + c_0$ 则有 $c_{n - 1} = -trA,c_0 = (-1)^n|A|$</li>
+<li>设 $n$ 阶矩阵 $A$ 的全部特征值 $\lambda_1,\lambda_2,\cdots,\lambda_n$，则有<ol>
+<li>$|A| = \lambda_1\cdots\lambda_n$</li>
+<li>$tr(A) = \lambda_1 + \cdots + \lambda_n$</li>
+<li>由 $(1)$ 可知方阵可逆的充要条件是所有特征值均不为0</li>
 </ol>
 </li>
 </ul>
-<h3 id="S-5-4-高斯公式"><a href="#S-5-4-高斯公式" class="headerlink" title="$\S 5.4$ 高斯公式"></a>$\S 5.4$ 高斯公式</h3><ul>
-<li><p>高斯公式</p>
-<p>  设 $\sum$ 是空间闭区域 $\Omega$ 的边界曲面，取外侧且 $P,Q,R$ 在 $\Omega$ 内有连续偏导数</p>
-<p>  则 $ \iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV = \oiint_{\sum}Pdydz + Qdzdx + Rdxdy $</p>
 </li>
-<li><p>通量与散度</p>
-<p>  $\vec A(x, y, z) = P(x, y, z)\vec i + Q(x, y, z)\vec j + R(x, y, z)\vec k$</p>
-<p>  $d\vec S = \vec e_ndS = (cos \alpha, cos\beta, cos\gamma)dS$</p>
+<li><p>非零特征向量 $a$ 满足对于特征值 $\lambda_0$，有 $Aa = \lambda_0a$ </p>
 <ul>
-<li><p>通量</p>
-<p>  $\phi = \iint_{\sum}\vec A d\vec S = \iint_{\sum} Pdydz + Qdzdx + Rdxdy$</p>
+<li>若存在数 $\lambda_0$ 以及非零向量 $a$ 使 $Aa = \lambda_0a$ ，则必有 $\lambda_0$ 是 $A$ 的特征值，$a$ 是 $A$ 关于 $\lambda_0$ 的特征向量</li>
+<li>属于不同特征值的特征向量是线性无关的</li>
+<li>对于矩阵 $A$ 的 $r$ 重特征值 $\lambda$ ，属于他的线性无关特征向量个数 $k \le r$</li>
+</ul>
 </li>
-<li><p>散度</p>
-<p>  $div \vec A = \frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z}$</p>
+<li><p>一些结论和补充</p>
+<ul>
+<li>设 $R(A) = n - 1$ ，则 $A^*$ 的特征值为 $0$ （$n-1$重）和 $\sum_{i = 1}^{n}A_{ii}$ （$A_{ii}$ 为 $A$ 的元素 $a_{ii}$  对应的代数余子式）</li>
+<li>设 $R(A) &lt; n-1$ 则 $A^*$ 有 $n$ 重零特征值</li>
+<li><p>若 $\lambda$ 是 $A$ 的特征值，则 $\varphi(\lambda)$ 是 $\varphi(A)$ 的特征值</p>
+</li>
+<li><p>|          | $A$       | $\varphi(A)$       | $A^{-1}$            | $A^*$                 | $B=P^{-1}AP$   |<br>  | :———- | ————- | ————————— | —————————- | ——————————- | ——————— |<br>  | 特征值   | $\lambda$ | $\varphi(\lambda)$ | $\frac{1}{\lambda}$ | $\frac{|A|}{\lambda}$ | $\lambda$      |<br>  | 特征向量 | $\alpha$  | $\alpha$           | $\alpha$            | $\alpha$              | $p^{-1}\alpha$ |</p>
+</li>
+<li><p>$A^T$ 与 $A$ 的特征值相同，但特征向量未必相同</p>
+</li>
+<li><p>.幂等矩阵 $A$ （$A^2 = A$）特征值为 $0$ 或 $1$</p>
+<p>  对合矩阵 $A$ （$A^2 = E$）特征值为 $-1$ 或 $1$</p>
+<p>  幂零矩阵 $A$ （$A^2 = 0$）特征值为 $0$</p>
+<p>  正交矩阵 $A$ （$AA^T = E$）特征值不一定为实数，但模长一定为 $1$ </p>
+<p>  $n$ 阶实矩阵 $A$ 满足 $R(A) = 1$，特征值 $\lambda_1 = \sum_{i = 1}^na_{ii}$，$\lambda_2=\cdots=\lambda_n = 0$（其实就是方阵秩为 $n-1$ ，其伴随矩阵的特征值）</p>
 </li>
 </ul>
 </li>
 </ul>
-<h3 id="S-5-5-斯托克斯公式"><a href="#S-5-5-斯托克斯公式" class="headerlink" title="$\S 5.5$ 斯托克斯公式"></a>$\S 5.5$ 斯托克斯公式</h3><ul>
-<li><p>斯托克斯公式</p>
-<p>  设有向闭曲线 $\tau$ 是有向曲面 $\sum$ 的边界，且满足</p>
+<h3 id="S-5-3-方阵相似于对角矩阵的条件"><a href="#S-5-3-方阵相似于对角矩阵的条件" class="headerlink" title="$\S 5.3$ 方阵相似于对角矩阵的条件"></a>$\S 5.3$ 方阵相似于对角矩阵的条件</h3><ul>
+<li><p>相似矩阵 $P^{-1}AP=B$</p>
+<p>  相似变换，反身性，对称性，传递性</p>
+<ul>
+<li>$A\sim B$，则 $R(A) = R(B)$</li>
+<li>$A\sim B$，则 $|A| = |B|$，即 $A,B$ 同时可逆或不可逆</li>
+<li>$A\sim B$，则 $A^T \sim B^T$，更进一步，$f(A) \sim f(B)$</li>
+<li>$A$ 可逆 $A\sim B$，则 $A^{-1} \sim B^{-1}$</li>
+<li>$A\sim B$，则 $A$ 与 $B$ 特征多项式相同，<strong>从而 $A$ 与 $B$ 的特征值相同，但特征向量未必相同</strong>（BTW，特征多项式相同的矩阵未必相似）</li>
+<li>$A$ 与对角矩阵相似，则对角矩阵上的元素是 $A$ 的 $n$ 个特征值</li>
+</ul>
+</li>
+<li><p>$n$ 阶方阵 $A$ 可以相似对角化的充要条件是 $A$ 有 $n$ 个线性无关的特征向量</p>
+</li>
+<li><p>设 $\lambda_i$ 是方阵 $A$ 的 $n_i$ 重特征值，那么 $A$ 对应于 $\lambda_i$ 的特征向量中线性无关组的向量个数最多为 $n_i$ 个</p>
+</li>
+<li><p>$A$ 的全部特征向量的一个极大无关组，称为 $A$ 的一个特征向量系，其向量个数 $q=\sum_{i=1}^tm_i \le \sum_{t=1}^{t}n_i=n$，$q$ 为 $n$ 时，$A$ 的特征向量时完全的，否则是不完全的，值得注意的是，对于 $A$ 的任一单特征值$\lambda_i$，必有 $m_i=n_i=1$（$n_i$ 表示第 $i$ 个特征根重数，$m_i$ 表示第 $i$ 个特征根对应方程解的个数）</p>
+</li>
+</ul>
+<h3 id="S-5-4-正交矩阵"><a href="#S-5-4-正交矩阵" class="headerlink" title="$\S 5.4$ 正交矩阵"></a>$\S 5.4$ 正交矩阵</h3><ul>
+<li>内积，向量长度，单位向量</li>
+<li>正交向量组（对于只含一个向量 $a$ 的向量组，当 $a \ne 0$ 时，该向量组也是正交组）<ul>
+<li>正交向量组也线性无关</li>
+</ul>
+</li>
+<li>将一个全是单位向量的且两两正交的向量组称为单位正交向量组</li>
+<li>$Schmidt$ 逐步正交化</li>
+<li>正交矩阵（$AA^T = E$）<ul>
+<li>$n$ 阶实矩阵 $A$ 为正交矩阵的充要条件是 $A$ 的行（列）向量都是两两正交的单位向量</li>
+<li>若 $A$ 是正交矩阵，则 $|A| = 1$ 或 $|A| = -1$ </li>
+<li>若 $A$，$B$ 均是正交矩阵，则 $AB$ 也是正交矩阵，但 $A+B$ 不是</li>
+<li>若 $A$ 是正交矩阵，则 $A^*$，$A^{-k}$ ，$A^k$ 亦为正交矩阵</li>
+<li>若 $A$ 是正交矩阵，且 $\lambda$ 是 $A$ 的特征值，则 $|\lambda| = 1$，且 $\frac{1}{\lambda}$ 也是 $A$ 的特征值</li>
+</ul>
+</li>
+<li>设 $P$ 为正交矩阵， $y = Px$ 为正交变换，正交变换不改变模长</li>
+</ul>
+<h3 id="S-5-5-实对称矩阵的相似对角化"><a href="#S-5-5-实对称矩阵的相似对角化" class="headerlink" title="$\S 5.5$ 实对称矩阵的相似对角化"></a>$\S 5.5$ 实对称矩阵的相似对角化</h3><ul>
+<li>实对称矩阵的特征值<strong>必为实数</strong></li>
+<li>实对称阵 $A$    <strong>不同特征值对应的特征向量正交</strong>，且二者互为充要条件</li>
+<li>实对称阵<strong>一定能相似对角化</strong></li>
+<li>实对称矩阵<strong>非零特征值个数等于它的秩</strong></li>
+<li>若$A$，$B$ 均为实对称阵，且 $A$ 和 $B$ 特征值完全相同，则必有 $A \sim B$</li>
+</ul>
+<h2 id="第六章-二次型与对称矩阵"><a href="#第六章-二次型与对称矩阵" class="headerlink" title="第六章 二次型与对称矩阵"></a>第六章 二次型与对称矩阵</h2><h3 id="S-6-1-二次型及其矩阵"><a href="#S-6-1-二次型及其矩阵" class="headerlink" title="$\S 6.1$ 二次型及其矩阵"></a>$\S 6.1$ 二次型及其矩阵</h3><ul>
+<li><p>二次型，二次型矩阵，二次型的秩，线性变换（可逆变换，不可逆变换）</p>
+</li>
+<li><p>合同变换</p>
+<p>  $P^TAP = B$，则 $A, B$ 合同，记为 $A \simeq B$，$P$ 为合同因子</p>
+<p>  合同必等价，反之不真</p>
+<p>  合同和相似是两个独立概念，合同未必相似，相似未必等价</p>
+</li>
+<li><p>相关结论</p>
+<p>  对实对称矩阵 $A, B$ 若 $A \sim B$，则 $A \simeq B$，但是合同未必相似 如 $diag\{3,3,3\}$ 和 $E$ 合同，但不相似</p>
+<p>  若对实对称矩阵$A, B$ 特征值相同，则 $A \simeq B$，且$A \sim B$</p>
+<p>  若 $A \simeq B$，则 $R(A) = R(B)$</p>
+<p>  若 $A \simeq B$，且 $A$ 为对称矩阵则 $B$ 也为对称矩阵（特殊的若 $A \simeq \Lambda$，则 $A$ 必为对称阵）</p>
+</li>
+</ul>
+<h3 id="S-6-2-二次型的标准型"><a href="#S-6-2-二次型的标准型" class="headerlink" title="$\S 6.2$ 二次型的标准型"></a>$\S 6.2$ 二次型的标准型</h3><ul>
+<li><p>标准型</p>
+<p>  标准型各项系数均是特征值</p>
+</li>
+<li><p>正交变换法</p>
+</li>
+<li><p>拉格朗日配方法</p>
+<p>  如果只有交叉项利用平方差公式凑出平方项</p>
+</li>
+<li><p>相关结论</p>
+<p>  任何二次型必可经过可逆线性变换为标准型</p>
+<p>  任何对称矩阵必可合同于对角矩阵</p>
+</li>
+</ul>
+<h3 id="S-6-3-合同变换与二次型的规范形"><a href="#S-6-3-合同变换与二次型的规范形" class="headerlink" title="$\S 6.3$ 合同变换与二次型的规范形"></a>$\S 6.3$ 合同变换与二次型的规范形</h3><ul>
+<li><p>合同变换法</p>
+<p>  三种初等合同变换</p>
+<p>  合同变换法 $(A|E) \to (\Lambda|P^T)$</p>
+</li>
+<li><p>实二次型的规范形</p>
+<p>  任何实对称矩阵必可经过实数域上变换得到如下矩阵</p>
+<script type="math/tex; mode=display">\begin{bmatrix}
+    1&  &  &  &  &  &  &  & \\\
+    & \ddots  &  &  &  &  &  &  & \\\
+    &  & 1 &  &  &  &  &  & \\\
+    &  &  & -1 &  &  &  &  & \\\
+    &  &  &  & \ddots &  &  &  & \\\
+    &  &  &  &  & -1 &  &  & \\\
+    &  &  &  &  &  & 0 &  & \\\
+    &  &  &  &  &  &  & \ddots & \\\
+    &  &  &  &  &  &  &  &0
+  \end{bmatrix}</script><p>  其中 $1$ 的个数 $p$ 称为正惯性指数，$-1$ 个数称为负惯性指数，$p-q$ 称为 $A$ 的符号差，正负惯性指数之和是 $A$ 的秩</p>
+<p>  两个 $n$ 阶实对称阵合同的充要条件是它们秩相同且正惯性指数也相同。</p>
+<p>  特别地，若两个 $n$ 阶实对称阵的特征值相同，则它们必相似，从而必合同。</p>
+</li>
+</ul>
+<h3 id="S-6-4-实二次型的分类-正定二次型"><a href="#S-6-4-实二次型的分类-正定二次型" class="headerlink" title="$\S 6.4$ 实二次型的分类 正定二次型"></a>$\S 6.4$ 实二次型的分类 正定二次型</h3><ul>
+<li><p>实二次型的分类</p>
+<p>  对于实二次型 $f(x) = x^TAx$，若对任何非零实向量 $x$ 都有 $f(x)$，则称 $f$ 为正定二次型</p>
+<p>  可逆线性变化不改变实二次型的正定性</p>
+</li>
+<li><p>正定二次型与正定矩阵<br>  $n$ 元实二次型正定的充分必要条件是其标准形中 $n$ 个平方项的系数全大于零<br>  实二次型 $f(x) = x^TAx$ 正定的充分必要条件是 $A$ 的特征值全大于零<br>  $n$ 元实二次型 $f(x) = x^TAx$ 正定的充分必要条件是它的正惯性指数为 $n$</p>
+<p>  实二次型 $f(x) = x^TAx$ 正定的充分必要条件是 $A$ 的所有顺次主子式全大于零</p>
+<p>  对于实对称矩阵$A$，如果实二次$f(x)=x^TAx$ 正定，则称 $A$ 是正定矩阵.</p>
+<p>  实对称矩阵 $A$ 正定的充分必要条件是 $A \simeq E$.</p>
+<p>  实对称矩阵 $A$ 正定的充分必要条件是：有可逆 $P$，使得 $A=P^TP$</p>
+</li>
+<li><p>正定矩阵的一些简单性质：</p>
 <ol>
-<li>$\tau$ 和 $\sum$ 的方向符合右手规则</li>
-<li><p>$P(x, y, z), Q(x, y, z), R(x, y, z)$ 在包含 $\sum$ 的区域内有连续偏导数</p>
-<p>那么    </p>
-<script type="math/tex; mode=display">\oint_{\tau}Pdx + Qdy + Rdz = \iint_{\sum}( \frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z})dydz + ( \frac{\partial P}{\partial z} - \frac{\partial R}{\partial x})dxdz + ( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y})dydx \\ = \iint_{\sum}\begin{vmatrix}dydz & dzdx & dxdy \\ \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\ P & Q & R \end{vmatrix}</script></li>
+<li>若 $A$ 是正定矩阵，则 $A^T, A^{-1}, A^*, A^k,kA$（ $k$ 为任意正实数）均为正定矩阵。</li>
+<li>若A正定，则有|A|&gt;0,从而A必可逆。</li>
+<li>设 $A$ 与 $B$ 是正定矩阵，则 $AB$ 是正定矩阵的充要条件是 $A$ 和 $B$ 可交换</li>
+<li>设 $A、B$ 都是 $n$ 阶正定矩阵，则 $A+B$ 也是正定矩阵.</li>
+<li>设 $A$ 是 $n$ 阶正定矩阵，则对 $\forall \alpha &gt; 0, |A + \alpha E| &gt; \alpha^n$</li>
 </ol>
-</li>
-<li><p>环流量与旋度</p>
-<p>  $\vec A(x, y, z) = P(x, y, z)\vec i + Q(x, y, z)\vec j + R(x, y, z)\vec k$</p>
-<ul>
-<li><p>环流量</p>
-<p>  $\oint_{\tau}\vec A d\vec S = \oint_{\tau} Pdx + Qdy + Rdz$</p>
-</li>
-<li><p>旋度</p>
-<p>  $rot \vec A = (\frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z})\vec i + ( \frac{\partial P}{\partial z} - \frac{\partial R}{\partial x})\vec j + ( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y})\vec k$</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="第六章-无穷级数"><a href="#第六章-无穷级数" class="headerlink" title="第六章 无穷级数"></a>第六章 无穷级数</h2><h3 id="S-6-1-数项级数的概念和性质"><a href="#S-6-1-数项级数的概念和性质" class="headerlink" title="$\S 6.1$ 数项级数的概念和性质"></a>$\S 6.1$ 数项级数的概念和性质</h3><ul>
-<li><p>数项级数， 一般项， 部分和， 部分和数列， 敛散性</p>
-</li>
-<li><p>原级数加括号后所得新级数发散， 则原级数也发散， 但若所得新级数收敛， 原级数未必收敛</p>
-</li>
-<li><p>级数收敛的必要条件是 $\lim_{n \to \infty} u_n = 0$</p>
-</li>
-<li><p>级数乘以非零数敛散性不变， 级数前面去掉有限非零项数敛散性也不变</p>
-</li>
-<li><p>几何级数 $\sum_{n = 0}^{\infty} aq^n = a + aq + aq^2 +\cdots + aq^n + \cdots$ </p>
-<p>  调和级数 $\sum_{n = 1}^{\infty} \frac{1}{n} = 1 + \frac{1}{2} + \cdots + \frac{1}{n} + \cdots$</p>
-<p>  $p$ 级数 $\sum_{n = 1}^{\infty} \frac{1}{n^p} = 1 + \frac{1}{2^p} + \cdots + \frac{1}{n^p} + \cdots$ (并且 $p \le 1$ 时收敛， $p &gt; 1$ 时发散)</p>
-<p>  交错级数 $\sum_{n = 1}^{\infty} (-1)^nu_n$</p>
-</li>
-</ul>
-<h3 id="S-6-2-正项级数的敛散性"><a href="#S-6-2-正项级数的敛散性" class="headerlink" title="$\S 6.2 $ 正项级数的敛散性"></a>$\S 6.2 $ 正项级数的敛散性</h3><ul>
-<li><p>比较判别法</p>
-<p>  正项级数 $\sum_{n = 1}^{\infty}u_n$ ,$\sum_{n = 1}^{\infty} v_n$ ,且当 $n &gt; N$ 时， $u_n \le kv_n$</p>
-<ul>
-<li>若 $u_n$ 发散，则 $v_n$ 发散</li>
-<li><p>若 $v_n$ 收敛，则 $u_n$ 收敛</p>
-<p>使用该方法时常用适当放缩或借助几何级数，调和级数，p级数作为参考</p>
-<p>比较判别法的极限形式</p>
-<p>正项级数 $\sum_{n = 1}^{\infty}u_n$ ,$\sum_{n = 1}^{\infty} v_n$ ,且 $\lim_{n \to \infty} \frac{u_n}{v_n} = l$</p>
-</li>
-<li><p>若 $l = \infty$ , 且 $v_n$ 发散， $u_n$ 发散，</p>
-</li>
-<li>若 $l = 0$ , 且 $v_n$ 收敛，则 $u_n$ 收敛</li>
-<li>若 $0 &lt; l &lt; \infty$ , 则 $u_n$，$v_n$ 敛散性相同</li>
-</ul>
-</li>
-<li><p>比值判别法（d’Alembert 判别法）</p>
-<p>  正项级数 $\sum_{n = 1}^{\infty}u_n$  ,且 $\lim_{n \to \infty} \frac{u_{n + 1}}{u_n} = \rho$</p>
-<ul>
-<li>若 $\rho &lt; 1$ ,则 $u_n$ 收敛，</li>
-<li>若 $\rho &gt; 1$ 或 $\rho = \infty$ , 则 $u_n$ 发散</li>
-<li>若$\rho = 1$ , 则$u_n$ 敛散性不确定</li>
-</ul>
-</li>
-<li><p>根植判别法（Cauchy 判别法）</p>
-<p>  正项级数 $\sum_{n = 1}^{\infty}u_n$  ,且 $\lim_{n \to \infty} \sqrt[n]{u_n} = \rho$</p>
-<ul>
-<li>若 $\rho &lt; 1$ ,则 $u_n$ 收敛，</li>
-<li>若 $\rho &gt; 1$ 或 $\rho = \infty$ , 则 $u_n$ 发散</li>
-<li>若$\rho = 1$ , 则$u_n$ 敛散性不确定</li>
-</ul>
-</li>
-</ul>
-<h3 id="S-6-3-任意项级数"><a href="#S-6-3-任意项级数" class="headerlink" title="$\S 6.3$ 任意项级数"></a>$\S 6.3$ 任意项级数</h3><ul>
-<li><p>Cauchy 收敛准则</p>
-<p>  数项级数 $\sum_{n = 1}^{\infty} u_n$ 收敛的充要条件时$\forall \varepsilon &gt; 0, \exists$ 正整数 $N$， 当 $n &gt; N$ 时， 对一切正整数 $p$ 有 $|u_{n + 1} + \cdots + u_{n + p}| &lt; \varepsilon$  </p>
-</li>
-<li><p>Leibniz 判别法 </p>
-<p>  若交错级数满足 $\sum_{n = 1}^{\infty} (-1)^{n + 1}u_n(u_n &gt; 0)$ 满足：</p>
-<ul>
-<li>$u_n \ge u_{n + 1}(n = 1, 2, 3, \cdots)$</li>
-<li><p>$lim_{n \to \infty} u_n = 0$</p>
-<p>则交错级数 $\sum_{n = 1}^{\infty} (-1)^{n + 1}u_n$ 收敛（注：这是充分条件，即使不满足也不能证明级数发散）</p>
-<p>常用结论：$\sum_{n = 1}^{\infty} (-1)^{n + 1}\frac{1}{n}$ 收敛         </p>
-</li>
-</ul>
-</li>
-<li><p>绝对收敛与条件收敛</p>
-<p>  各项符号无规律级数（如 $\sum_{n = 1} ^{\infty} \frac{sinn\alpha}{n^2}$）称为任意项级数</p>
-<p>  若$\sum_{n = 1}^{\infty} |u_n|$ 收敛，则称级数 $\sum_{n = 1}^{\infty} u_n$ 绝对收敛</p>
-<p>  若 $\sum_{n = 1}^{\infty} u_n$ 收敛， $\sum_{n = 1}^{\infty} |u_n|$ 发散，则称级数 $\sum_{n = 1}^{\infty} u_n$ 条件收敛</p>
-<p>  绝对收敛则必收敛</p>
-</li>
-</ul>
-<h3 id="S-6-4-函数项级数"><a href="#S-6-4-函数项级数" class="headerlink" title="$\S 6.4$ 函数项级数"></a>$\S 6.4$ 函数项级数</h3><ul>
-<li>函数项级数 $\sum_{n = 1}^{\infty} u_n(x)$， 定义区间 $I$<ul>
-<li>对 $x_0 \in I$， 若 $\sum_{n = 1}^{\infty} u_n(x)$ 收敛，则称 $x_0$ 为收敛点，反之称为发散点</li>
-<li>发散点组成的全体称为发散域，收敛点组成的全体称为收敛域</li>
-<li>求收敛域可以用比值或根式判别法来求</li>
-<li>和函数 $s(x) = \sum_{n = 1}^{\infty}u_n(x), x \in$ 收敛域</li>
-<li>余项 $R_n(x) = s(x) - s_n(x), x \in$ 收敛域</li>
-</ul>
-</li>
-</ul>
-<h3 id="S-6-5-幂级数"><a href="#S-6-5-幂级数" class="headerlink" title="$\S 6.5$ 幂级数"></a>$\S 6.5$ 幂级数</h3><ul>
-<li><p>$\sum_{n = 0}^{\infty} a_n(x-x_0)^n$ 称为在点 $x_0$ 的幂级数 （一下研究均是 $x_0 = 0$ 的情况）</p>
-</li>
-<li><p>$Abel$ 定理</p>
-<ul>
-<li><p>若 $\sum_{n = 0}^{\infty} a_nx^n$ 在 $x = x_0$ 点收敛，则满足 $|x| &lt; |x_0|$ 的一切 $x$，$\sum_{n = 1}^{\infty}a_nx^n$ 绝对收敛</p>
-</li>
-<li><p>若 $\sum_{n = 0}^{\infty} a_nx^n$ 在 $x = x_0$ 点发散，则满足 $|x| &gt; |x_0|$ 的一切 $x$，$\sum_{n = 1}^{\infty}a_nx^n$ 发散</p>
-<p>  由 $Abel$ 定理可知，幂级数 $\sum_{n = 1}^{\infty}a_nx^n$ 的收敛域是以原点为中心的区间，收敛半径 $R$ 记为收敛域长度的一半，$(-R, R)$ 记为收敛区间，不是收敛域，该收敛区间加上收敛的端点才是收敛域</p>
-</li>
-</ul>
-</li>
-<li><p>计算收敛半径 $R$ （仅在不缺项的时候可以用，缺项情况要用比值判别法或根式判别法来求）</p>
-<p>  若 $lim_{n \to \infty}|\frac{a_{n+1}}{a_n}| = \rho$ 或 $\lim_{n \to \infty} \sqrt[n]{|a_n|} = \rho$ 则收敛半径 $R = \frac{1}{\rho}$ 特别的，$\rho = 0$ 时 $ R = \infty$ $\rho = \infty$ 时 $R = 0$</p>
-</li>
-<li><p>幂级数代数运算</p>
-<ul>
-<li>幂级数相加可逐项分别相加，且新级数的收敛半径 $R \ge min\{R_1, R_2\}$ （但 $R_1 \ne R_2$ 时，必有 $R = min\{R_1, R_2\}$）</li>
-<li>幂级数相乘，新级数的收敛半径 $R \ge min\{R_1, R_2\}$ </li>
-</ul>
-</li>
-<li><p>幂级数的和函数 $s( x )$</p>
-<ul>
-<li>$s(x)$ 在收敛域内连续</li>
-<li>收敛域内 $s(x)$ 可微， 且对 $s(x)$ 求导可以先对各项求导再相加</li>
-<li>收敛域内 $s(x)$ 可积， 且对 $s(x)$ 积分可以先对各项积分再相加</li>
-</ul>
-</li>
-<li><p>泰勒级数</p>
-<ul>
-<li><p>$f(x)$ 在 $x_0$ 处的泰勒级数为 $\sum_{n = 0}^{\infty} \frac{f^{(n)}(x_0)}{n!}(x-x_0)^n$</p>
-</li>
-<li><p>函数能展开成幂级数的必要条件是在区间 $I$ 内有任意阶导数， 但此时写出的泰勒级数未必收敛于 $f(x)$</p>
-</li>
-<li><p>只有满足 $f(x)$ 在 $x_0$ 某一邻域内有任意阶导数，并且存在 $R &gt; 0$，使 $|x - x_0| &lt; R$ 时，$\lim_{n \to \infty} R_n(x) = \lim_{n \to \infty} \frac{f^{(n + 1)}(\xi)}{(n + 1)!}(x-x_0)^{n + 1} = 0$ ，这时 $f(x)$ 才能在邻域 $U(x_0, R)$ 内展开成泰勒级数</p>
-</li>
-<li><p>特殊的，当 $x_0 = 0$ 时，$f(x)$ 的泰勒级数为 $\sum_{n = 0}^{\infty} \frac{f^{(n)}(0)}{n!}x^n$ 称为 $f(x)$ 的麦克劳林级数或 $x$ 的幂级数</p>
-</li>
-<li><p>常用幂级数展开式</p>
-<script type="math/tex; mode=display">
-  \frac{1}{1-x} = \sum_{n = 0}^{\infty}x^{n},\ \frac{1}{1+x} = \sum_{n = 0}^{\infty}(-1)^nx^{n}\ (-1 < x < 1)
-  \\\ e^x = \sum_{n = 0}^{\infty}\frac{x^n}{n!}\ (-\infty < x < \infty)
-  \\\ sinx = \sum_{n = 0}^{\infty}(-1)^n\frac{x^{2n+1}}{(2n+1)!}\ (-\infty < x < \infty)
-  \\\ cosx = \sum_{n = 0}^{\infty}(-1)^n\frac{x^{2n}}{(2n)!}\ (-\infty < x < \infty)
-  \\ln(1 + x) = \sum_{n = 0}^{\infty} (-1)^n\frac{x^{n + 1}}{n + 1}\ (-1 < x \le 1)
-  \\\ arctanx = \sum_{n = 0}^{\infty} (-1)^n\frac{x^{2n + 1}}{2n + 1}\ (-1 \le x \le 1)</script><p>  值得注意的是，若 $f(x)$ 能展开成幂级数，那么展开方式必定是唯一的，而且一定是泰勒级数</p>
-</li>
-</ul>
-</li>
-<li><p>欧拉公式</p>
-<ul>
-<li>$e^{ix} = cosx + isinx$ </li>
-<li>$cos x = \frac{e^{ix} + e^{-ix}}{2}$，$sin x = \frac{e^{ix} - e^{-ix}}{2i}$</li>
-<li>$e^{i\pi} + 1 = 0$  <strong>上帝创造的公式！！！</strong></li>
-</ul>
-</li>
-</ul>
-<h3 id="S-6-6-傅里叶级数"><a href="#S-6-6-傅里叶级数" class="headerlink" title="$\S 6.6$ 傅里叶级数"></a>$\S 6.6$ 傅里叶级数</h3><ul>
-<li><p>三角函数系 </p>
-<p>  $1, sinx, cosx, cos2x, sin2x, \cdots, cosnx, sinnx, \cdots$ 其中任意两个相异函数在区间$[-\pi, pi]$ 上的积分等于 $0$，称为三角函数系的正交性</p>
-</li>
-<li><p>函数展开成傅里叶级数</p>
-<p>  设 $f(x)$ 为周期为 $2\pi$ 的可积函数，若 $f(x)$ 能展开成三角级数，即$f(x) = \frac{1}{2}a_0+\sum_{n = 1}^{\infty}(a_ncosnx + b_nsinnx)$</p>
-<p>  则 $a_k = \frac{1}{\pi}\int_{-\pi}^{\pi}f(x)coskxdx$，$b_k = \frac{1}{\pi}\int_{-\pi}^{\pi}f(x)sinkxdx$</p>
-<p>  $f(x)$ 的傅里叶级数记为 $f(x) \sim \frac{a_0}{2} + \sum_{n = 1}^{\infty}(a_ncosnx+b_nsinnx)$，其中 $a_n$，$b_n$ 称为傅里叶系数，注意这里的 $\sim$ 表示 $f(x)$ 和它的傅里叶系数有某种联系关系，这个级数本身可能收敛，可能不收敛，收敛也未必收敛于 $f(x)$</p>
-</li>
-<li><p>狄利克雷收敛定理</p>
-<p>  设 $f(x)$ 为周期为 $2\pi$ 的可积函数，若 $f(x)$ 在 $[-\pi,\pi]$ 上满足狄利克雷条件</p>
-<ul>
-<li>连续或只有有限个第一类间断点</li>
-<li><p>只有有限个极值点</p>
-<p><strong>直观来说就是函数图像在周期内，连续或分段连续且不作无限次振动</strong>，则 $f(x)$ 的傅里叶级数收敛，在 $f(x)$ 的<strong>连续点</strong>，级数收敛于 $f(x)$，而对于 $f(x)$ 的间断点 $x$，级数收敛于间断点处左右极限的中点（注意在满足狄利克雷收敛定理条件下是一定会收敛的，只是收敛会不会收敛于 $f(x)$ 不确定）</p>
-</li>
-</ul>
-</li>
-<li><p>周期延拓</p>
-</li>
-<li><p>奇函数的傅里叶级数只有正弦项，又称为正弦级数</p>
-<p>  偶函数的傅里叶级数只有余弦项，又称为余弦级数</p>
-</li>
-<li><p>周期为 $2l$ 的函数展成傅里叶级数</p>
-<p>  $f(x) \sim \frac{a_0}{2} + \sum_{n = 1}^{\infty}(a_ncosn\frac{\pi}{l}x + b_nsinn\frac{\pi}{l}x)$</p>
-<ul>
-<li>$a_n = \frac{1}{l}\int^{l}_{-l}f(x)cosn\frac{\pi}{l}xdx    $</li>
-<li><p>$b_n = \frac{1}{l}\int^{l}_{-l}f(x)sinn\frac{\pi}{l}xdx    $</p>
-<p>只在 $[0, l]$ 上有定义的函数，展开成正弦级数或余弦级数，需做奇延拓或偶延拓</p>
-<p>和差化积公式参考如下</p>
-<script type="math/tex; mode=display">
-{\displaystyle \sin \alpha +\sin \beta =2\sin { \alpha +\beta \over 2}\cos { \alpha -\beta \over 2}} \\ {\displaystyle \sin \alpha -\sin \beta =2\cos {\alpha +\beta \over 2}\sin {\alpha -\beta \over 2}} \\ {\displaystyle \cos \alpha +\cos \beta =2\cos {\alpha +\beta \over 2}\cos {\alpha -\beta \over 2}} \\ {\displaystyle \cos \alpha -\cos \beta =-2\sin {\alpha +\beta \over 2}\sin {\alpha -\beta \over 2}}
-\\ \\ \\ {\displaystyle \sin \alpha \cos \beta ={\sin(\alpha +\beta )+\sin(\alpha -\beta ) \over 2}} \\ {\displaystyle \cos \alpha \sin \beta ={\sin(\alpha +\beta )-\sin(\alpha -\beta ) \over 2}} \\ {\displaystyle \cos \alpha \cos \beta ={\cos(\alpha +\beta )+\cos(\alpha -\beta ) \over 2}} \\ {\displaystyle \sin \alpha \sin \beta =-{\cos(\alpha +\beta )-\cos(\alpha -\beta ) \over 2}}</script></li>
-</ul>
-</li>
-</ul>
-<h2 id="第七章-常微分方程"><a href="#第七章-常微分方程" class="headerlink" title="第七章 常微分方程"></a>第七章 常微分方程</h2><h4 id="第七章总结"><a href="#第七章总结" class="headerlink" title="第七章总结"></a>第七章总结</h4><ol>
-<li>本章研究的方程主要有两种：一阶线性微分方程 和 高阶微分方程</li>
-<li><p>对于一阶线性微分方程</p>
-<ul>
-<li>首先考虑是不是全微分方程，若满足 $\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial y}$，则化为 $u(x, y) = 0$ 的形式</li>
-<li>不是全微分方程就化为 $\frac{dy}{dx} = \cdots$ 的形式，然后几种情况无非是$\frac{dy}{dx} = f(x)g(x),\frac{dy}{dx} = \varphi(\frac{dy}{dx}),\frac{dy}{dx} = p(x)y,\frac{dy}{dx} = p(x)y + q(x),\frac{dy}{dx} = p(x)y + q(x)y^n$ 这五种形式，其中只有第四，五种要稍微记一下，伯努利方程（第五种）稍微转化一下就是第四种</li>
-<li>化成 $\frac{dy}{dx} = \cdots$ 比较复杂的话就化为 $\frac{dx}{dy} = \cdots$形式</li>
-</ul>
-</li>
-<li><p>对于高阶方程</p>
-<ul>
-<li>可降阶方程本质就是不断积分</li>
-<li>高阶齐次方程记一下特征根的形式，掌握二阶齐次即可，高阶只需了解</li>
-<li>高阶非齐次方程也是主要记一下两种特征根形式，欧拉方程单独记一下</li>
-</ul>
-</li>
-</ol>
-<h3 id="S-7-1-常微分方程的概念"><a href="#S-7-1-常微分方程的概念" class="headerlink" title="$\S 7.1$ 常微分方程的概念"></a>$\S 7.1$ 常微分方程的概念</h3><ul>
-<li><p>微分方程，常微分方程，偏微分方程，方程的阶，线性微分方程，非线性微分方程，显式通解，隐式通解，特解，初始条件，初值问题（Cauchy问题）</p>
-</li>
-<li><p>方程通解的特征是含有任意常数，任意常数个数与方程阶数相同</p>
-<p>  值得注意的是，<strong>通解未必是方程的全部解</strong></p>
-</li>
-</ul>
-<h3 id="S-7-2-可分离变量的方程"><a href="#S-7-2-可分离变量的方程" class="headerlink" title="$\S 7.2$ 可分离变量的方程"></a>$\S 7.2$ 可分离变量的方程</h3><ul>
-<li><p>可分离变量的方程</p>
-<p>  形如 $\frac{dy}{dx} = f(x)g(x)$ ，方法是 $y$ ，$x$ 分别放在等式两边分别积分运算</p>
-<p>  方程特征是化为一般式后，方程右端可分解为只含 $x$ 和只含 $y$ 的两个函数乘积</p>
-</li>
-<li><p>齐次方程</p>
-<p>  形如 $\frac{dy}{dx} = \varphi(\frac{dy}{dx})$ ，方法是令 $u = \frac{y}{x}$，再化为可分离变量方程求解</p>
-<p>  方程特征是各项次数均相同</p>
-</li>
-</ul>
-<h3 id="S-7-3-一阶线性微分方程"><a href="#S-7-3-一阶线性微分方程" class="headerlink" title="$\S 7.3$ 一阶线性微分方程"></a>$\S 7.3$ 一阶线性微分方程</h3><p>一阶线性微分方程的标准形式为 $\frac{dy}{dx} = p(x)y + q(x)$，若 $q(x) \equiv 0$，称为齐次线性方程，若 $q(x) \not\equiv 0$，则称为非齐次方程</p>
-<ul>
-<li><p>一阶齐次线性方程</p>
-<p>  形如 $\frac{dy}{dx} = p(x)y$ ，通解为 $y = Ce^{\int p(x)dx}$</p>
-</li>
-<li><p>一阶非齐次线性方程</p>
-<p>  形如 $\frac{dy}{dx} = p(x)y + q(x)$ ，通解为 $y = e^{\int p(x)dx}(\int q(x)e^{-\int p(x)dx}dx + C)$</p>
-</li>
-<li><p>伯努利（Bernoulli）方程</p>
-<p>  形如 $\frac{dy}{dx} = p(x)y + q(x)y^n$ ，解法是方程两边除以 $y^n$，再凑微分化为一阶非齐次线性方程</p>
-</li>
-</ul>
-<h3 id="S-7-4-全微分方程"><a href="#S-7-4-全微分方程" class="headerlink" title="$\S 7.4$ 全微分方程"></a>$\S 7.4$ 全微分方程</h3><ul>
-<li><p>全微分方程</p>
-<ul>
-<li><p>若 $P(x, y),Q(x, y)$ 在单连通区域 $D$ 内有连续的一阶偏导数，且 $\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x}$ 则方程， $P(x, y)dx + Q(x, y)dy = 0$ 称为全微分方程</p>
-</li>
-<li><p>对于全微分方程必有 $u(x, y)$ 使 $du(x, y) = P(x, y)dx + Q(x, y)dy = 0$ 从而 $u(x, y) = C$</p>
-</li>
-<li>求法 $u(x, y) = \int^x_{x_0}P(x, y_0)dx + \int^y_{y_0}Q(x, y)dy = \int^y_{y_0}Q(x_0, y)dy + \int^x_{x_0}P(x, y)dx$ ，通解 $u(x, y) = C$</li>
-</ul>
-</li>
-</ul>
-<h3 id="S-7-5-可降阶的高阶方程"><a href="#S-7-5-可降阶的高阶方程" class="headerlink" title="$\S 7.5$ 可降阶的高阶方程"></a>$\S 7.5$ 可降阶的高阶方程</h3><ul>
-<li><p>$y^{(n)} = f(x)$ 型方程</p>
-<p>  不断积分，方程求特解时，任意常数出现一个确定一个</p>
-</li>
-<li><p>$y’’ = f(x, y’)$ 型方程</p>
-<p>  设 $y’ = p(x)$ 原方程可化为 $\frac{dp}{dx} = f(x, p)$ 再用一阶方程的解法求出通解，最后积分得出 $y$ 的值</p>
-</li>
-<li><p>$y’’ = f(y,y’)$</p>
-<p>  设 $y’ = p(y)$，则原方程可化为 $p\frac{dp}{dy} = f(y, p)$，再用一阶方程解法求通解</p>
-</li>
-</ul>
-<h3 id="S-7-6-高阶齐次线性方程"><a href="#S-7-6-高阶齐次线性方程" class="headerlink" title="$\S 7.6 $ 高阶齐次线性方程"></a>$\S 7.6 $ 高阶齐次线性方程</h3><ul>
-<li><p>方程的线性无（相）关以及判定</p>
-</li>
-<li><p>线性齐次方程组解的结构</p>
-</li>
-<li><p>二阶常系数齐次线性方程 $y’’+py’+qy=0$</p>
-<ul>
-<li>特征方程，特征根</li>
-<li>特征方程有两个不同实根的情况，$y = C_1e^{r_1x} + C_2e^{r_2x}$</li>
-<li>特征方程有两个相同实根的情况，$y = (C_1 + C_2x)e^{r_1x}$</li>
-<li>若特征方程有一对共轭复根 $r = \alpha \pm i \beta$ 的情况，$y = e^{\alpha x}(C_1cos\beta x + C_2 sin \beta x)$</li>
-</ul>
-</li>
-<li><p>$n$ 阶常系数齐次线性方程</p>
-<p>  大致同二阶情况，每一个根都对应一个特解，$k$ 重根算 $k$ 个根</p>
-<ul>
-<li><p>$k$ 重实根 $r$ 对应 $k$ 个特解：$x^0e^{rx},\cdots,x^{k - 1}e^{rx}$</p>
-</li>
-<li><p>$k$ 重复数根 $r = \alpha \pm i \beta$ 对应的 $2k$ 个特解：</p>
-<p>  ​    $x^0e^{\alpha x}cos\beta x,\cdots,x^{k - 1}e^{\alpha x}cos\beta x$ </p>
-<p>  ​    $x^0e^{\alpha x}sin\beta x,\cdots,x^{k - 1}e^{\alpha x}sin\beta x$ </p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="S-7-7-高阶非齐次线性方程"><a href="#S-7-7-高阶非齐次线性方程" class="headerlink" title="$\S 7.7$ 高阶非齐次线性方程"></a>$\S 7.7$ 高阶非齐次线性方程</h3><p> $y’’ + py’ + qy = f(x)$</p>
-<ul>
-<li><p>非线性齐次方程组解的结构</p>
-</li>
-<li><p>$f(x) = P_m(x)e^{\lambda x}$</p>
-<p>  设特解 $y^*=Q(x)e^{\lambda x}$，$Q(x)$ 为多项式，化简得 $Q’’(x)+(2\lambda + p)Q’(x) + (\lambda ^ 2 + p \lambda + q)Q(x) = P_m(x)$，再分析出 $Q(x)$ 的阶数之后用待定系数法求解</p>
-<p>  $y^*=x^lQ_m(x)e^{\lambda x}$，$\lambda$ 是特征方程的 $l$ 重根 </p>
-</li>
-<li><p>$f(x)=e^{\lambda x}[P_l(x)cos\omega x +P_n(x)sin\omega x])$</p>
-<p>  特解 $y^*=x^ke^{\lambda x}[Q_m^{(1)}(x)cos\omega x + Q_m^{(2)}(x)sin\omega x],m = \max\{l, n\}$      </p>
-<p>  其中 $k = 0,1$（$\lambda + i\omega$ 不是特征根时 $k$ 是 $0$，反之 $k$ 是 $1$)，这里 $Q_m^{(1)}$ 和 $Q_m^{(2)}$ 是待定的，只用知道他们是 $m$ 次多项式即可，剩下的用待定系数法求解</p>
-</li>
-<li><p>欧拉方程</p>
-<ul>
-<li>形如 $x^ny^{(n)} + p_1x^{n - 1}y^{(n - 1)} + \cdots + p_{n - 1}xy’ + p_ny = f(x)$ 的方程叫欧拉方程，特点是 $x^ky^{(k)}$ 配对出现</li>
-<li>解法是设 $x = e^t,\frac{dy}{dt}=Dy, \cdots, \frac{d^ky}{dt^k} = D^ky$，则 $x^ky^{(k)} = D(D - 1)\cdots(D - k + 1)y$，最后方程化为只与 $t$ 有关的线性方程</li>
-</ul>
 </li>
 </ul>
 ]]></content>
       <tags>
-        <tag>大学课程</tag>
         <tag>数学</tag>
+        <tag>大学课程</tag>
       </tags>
   </entry>
   <entry>
@@ -1086,206 +1305,6 @@ p = nkT(微观形式)\\
       <tags>
         <tag>大学课程</tag>
         <tag>物理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大学笔记 | 线性代数</title>
-    <url>/2023/06/06/Linear-Algebra/</url>
-    <content><![CDATA[<p>从入门到入土</p>
-<span id="more"></span>
-<h2 id="第一章-矩阵的运算与初等变换"><a href="#第一章-矩阵的运算与初等变换" class="headerlink" title="第一章 矩阵的运算与初等变换"></a>第一章 矩阵的运算与初等变换</h2><h3 id="S-1-1-矩阵和向量的概念"><a href="#S-1-1-矩阵和向量的概念" class="headerlink" title="$\S 1.1$ 矩阵和向量的概念"></a>$\S 1.1$ 矩阵和向量的概念</h3><ul>
-<li><p>矩阵</p>
-<p>  $m \times n$ 的数表构成 $m$ 行 $n$ 列矩阵，这 $m \times n$ 个数是 $A$ 的元素，简称元</p>
-<p>  实矩阵就是全是实数元素的矩阵</p>
-<p>  复矩阵就是全是复数元素的矩阵</p>
-<ul>
-<li><p>特殊矩阵</p>
-<p>  同型矩阵：行数和列数都分别相等的矩阵（指的是两个矩阵之间的关系）</p>
-<p>  相等矩阵：同型矩阵、对应元素相等<br>  方阵：行数列数相等（就单个矩阵而言）</p>
-<p>  上（下）三角矩阵：主对角线下（上）元素全为 $0$ 的矩阵</p>
-<p>  对角矩阵：只有对角线上元素不为 $0$</p>
-<p>  列矩阵，行矩阵：$1 \times n$，$n \times 1$ 的矩阵</p>
-<p>  单位矩阵：特殊的对角阵，对角线上全为 $1$</p>
-<p>  零矩阵：全为 $0$</p>
-<p>  负矩阵：$-A $ 是 $A$ 的负矩阵</p>
-<p>  对称矩阵：元素关于对角线对称</p>
-<p>  反对称矩阵：元素关于对角线称相反数且对角线上元素全为 $0$</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="第五章-方阵的特征值，特征向量与相似化简"><a href="#第五章-方阵的特征值，特征向量与相似化简" class="headerlink" title="第五章 方阵的特征值，特征向量与相似化简"></a>第五章 方阵的特征值，特征向量与相似化简</h2><h3 id="S-5-1-数域-多项式的根"><a href="#S-5-1-数域-多项式的根" class="headerlink" title="$\S 5.1$ 数域 多项式的根"></a>$\S 5.1$ 数域 多项式的根</h3><ul>
-<li><p>数域</p>
-<p>  设 $\mathbb{Q} \subseteq K \subseteq \mathbb{C}$，称 $K$ 为一个数域，当：</p>
-<ol>
-<li>$0, 1 \in K$</li>
-<li>$\forall a, b \in K. a \pm b, ab \in K$， 且对 $b \not= 0, b^{-1} \in K$</li>
-</ol>
-</li>
-<li><p>多项式，根，零点，标准分解式</p>
-</li>
-</ul>
-<h3 id="S-5-2-方阵的特征值与特征向量"><a href="#S-5-2-方阵的特征值与特征向量" class="headerlink" title="$\S 5.2$ 方阵的特征值与特征向量"></a>$\S 5.2$ 方阵的特征值与特征向量</h3><ul>
-<li><p>$n$ 阶 $A$ 矩阵对角线上元素的和称为 $A$ 的迹，记为 $trA$</p>
-</li>
-<li><p>$\lambda E - A$ 称为 $A$ 的特征矩阵，$|\lambda E - A|$ 的值表达式 $\psi(\lambda)$ 是一</p>
-<p>  个多项式，称为 $A$ 的特征多项式，特征多项式的根称为 $A$ 的特征值，亦称为特征根 </p>
-<ul>
-<li>$\psi(\lambda) = \lambda^n+c_{n-1}\lambda^{n-1}+ \cdots + c_1\lambda + c_0$ 则有 $c_{n - 1} = -trA,c_0 = (-1)^n|A|$</li>
-<li>设 $n$ 阶矩阵 $A$ 的全部特征值 $\lambda_1,\lambda_2,\cdots,\lambda_n$，则有<ol>
-<li>$|A| = \lambda_1\cdots\lambda_n$</li>
-<li>$tr(A) = \lambda_1 + \cdots + \lambda_n$</li>
-<li>由 $(1)$ 可知方阵可逆的充要条件是所有特征值均不为0</li>
-</ol>
-</li>
-</ul>
-</li>
-<li><p>非零特征向量 $a$ 满足对于特征值 $\lambda_0$，有 $Aa = \lambda_0a$ </p>
-<ul>
-<li>若存在数 $\lambda_0$ 以及非零向量 $a$ 使 $Aa = \lambda_0a$ ，则必有 $\lambda_0$ 是 $A$ 的特征值，$a$ 是 $A$ 关于 $\lambda_0$ 的特征向量</li>
-<li>属于不同特征值的特征向量是线性无关的</li>
-<li>对于矩阵 $A$ 的 $r$ 重特征值 $\lambda$ ，属于他的线性无关特征向量个数 $k \le r$</li>
-</ul>
-</li>
-<li><p>一些结论和补充</p>
-<ul>
-<li>设 $R(A) = n - 1$ ，则 $A^*$ 的特征值为 $0$ （$n-1$重）和 $\sum_{i = 1}^{n}A_{ii}$ （$A_{ii}$ 为 $A$ 的元素 $a_{ii}$  对应的代数余子式）</li>
-<li>设 $R(A) &lt; n-1$ 则 $A^*$ 有 $n$ 重零特征值</li>
-<li><p>若 $\lambda$ 是 $A$ 的特征值，则 $\varphi(\lambda)$ 是 $\varphi(A)$ 的特征值</p>
-</li>
-<li><p>|          | $A$       | $\varphi(A)$       | $A^{-1}$            | $A^*$                 | $B=P^{-1}AP$   |<br>  | :———- | ————- | ————————— | —————————- | ——————————- | ——————— |<br>  | 特征值   | $\lambda$ | $\varphi(\lambda)$ | $\frac{1}{\lambda}$ | $\frac{|A|}{\lambda}$ | $\lambda$      |<br>  | 特征向量 | $\alpha$  | $\alpha$           | $\alpha$            | $\alpha$              | $p^{-1}\alpha$ |</p>
-</li>
-<li><p>$A^T$ 与 $A$ 的特征值相同，但特征向量未必相同</p>
-</li>
-<li><p>.幂等矩阵 $A$ （$A^2 = A$）特征值为 $0$ 或 $1$</p>
-<p>  对合矩阵 $A$ （$A^2 = E$）特征值为 $-1$ 或 $1$</p>
-<p>  幂零矩阵 $A$ （$A^2 = 0$）特征值为 $0$</p>
-<p>  正交矩阵 $A$ （$AA^T = E$）特征值不一定为实数，但模长一定为 $1$ </p>
-<p>  $n$ 阶实矩阵 $A$ 满足 $R(A) = 1$，特征值 $\lambda_1 = \sum_{i = 1}^na_{ii}$，$\lambda_2=\cdots=\lambda_n = 0$（其实就是方阵秩为 $n-1$ ，其伴随矩阵的特征值）</p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="S-5-3-方阵相似于对角矩阵的条件"><a href="#S-5-3-方阵相似于对角矩阵的条件" class="headerlink" title="$\S 5.3$ 方阵相似于对角矩阵的条件"></a>$\S 5.3$ 方阵相似于对角矩阵的条件</h3><ul>
-<li><p>相似矩阵 $P^{-1}AP=B$</p>
-<p>  相似变换，反身性，对称性，传递性</p>
-<ul>
-<li>$A\sim B$，则 $R(A) = R(B)$</li>
-<li>$A\sim B$，则 $|A| = |B|$，即 $A,B$ 同时可逆或不可逆</li>
-<li>$A\sim B$，则 $A^T \sim B^T$，更进一步，$f(A) \sim f(B)$</li>
-<li>$A$ 可逆 $A\sim B$，则 $A^{-1} \sim B^{-1}$</li>
-<li>$A\sim B$，则 $A$ 与 $B$ 特征多项式相同，<strong>从而 $A$ 与 $B$ 的特征值相同，但特征向量未必相同</strong>（BTW，特征多项式相同的矩阵未必相似）</li>
-<li>$A$ 与对角矩阵相似，则对角矩阵上的元素是 $A$ 的 $n$ 个特征值</li>
-</ul>
-</li>
-<li><p>$n$ 阶方阵 $A$ 可以相似对角化的充要条件是 $A$ 有 $n$ 个线性无关的特征向量</p>
-</li>
-<li><p>设 $\lambda_i$ 是方阵 $A$ 的 $n_i$ 重特征值，那么 $A$ 对应于 $\lambda_i$ 的特征向量中线性无关组的向量个数最多为 $n_i$ 个</p>
-</li>
-<li><p>$A$ 的全部特征向量的一个极大无关组，称为 $A$ 的一个特征向量系，其向量个数 $q=\sum_{i=1}^tm_i \le \sum_{t=1}^{t}n_i=n$，$q$ 为 $n$ 时，$A$ 的特征向量时完全的，否则是不完全的，值得注意的是，对于 $A$ 的任一单特征值$\lambda_i$，必有 $m_i=n_i=1$（$n_i$ 表示第 $i$ 个特征根重数，$m_i$ 表示第 $i$ 个特征根对应方程解的个数）</p>
-</li>
-</ul>
-<h3 id="S-5-4-正交矩阵"><a href="#S-5-4-正交矩阵" class="headerlink" title="$\S 5.4$ 正交矩阵"></a>$\S 5.4$ 正交矩阵</h3><ul>
-<li>内积，向量长度，单位向量</li>
-<li>正交向量组（对于只含一个向量 $a$ 的向量组，当 $a \ne 0$ 时，该向量组也是正交组）<ul>
-<li>正交向量组也线性无关</li>
-</ul>
-</li>
-<li>将一个全是单位向量的且两两正交的向量组称为单位正交向量组</li>
-<li>$Schmidt$ 逐步正交化</li>
-<li>正交矩阵（$AA^T = E$）<ul>
-<li>$n$ 阶实矩阵 $A$ 为正交矩阵的充要条件是 $A$ 的行（列）向量都是两两正交的单位向量</li>
-<li>若 $A$ 是正交矩阵，则 $|A| = 1$ 或 $|A| = -1$ </li>
-<li>若 $A$，$B$ 均是正交矩阵，则 $AB$ 也是正交矩阵，但 $A+B$ 不是</li>
-<li>若 $A$ 是正交矩阵，则 $A^*$，$A^{-k}$ ，$A^k$ 亦为正交矩阵</li>
-<li>若 $A$ 是正交矩阵，且 $\lambda$ 是 $A$ 的特征值，则 $|\lambda| = 1$，且 $\frac{1}{\lambda}$ 也是 $A$ 的特征值</li>
-</ul>
-</li>
-<li>设 $P$ 为正交矩阵， $y = Px$ 为正交变换，正交变换不改变模长</li>
-</ul>
-<h3 id="S-5-5-实对称矩阵的相似对角化"><a href="#S-5-5-实对称矩阵的相似对角化" class="headerlink" title="$\S 5.5$ 实对称矩阵的相似对角化"></a>$\S 5.5$ 实对称矩阵的相似对角化</h3><ul>
-<li>实对称矩阵的特征值<strong>必为实数</strong></li>
-<li>实对称阵 $A$    <strong>不同特征值对应的特征向量正交</strong>，且二者互为充要条件</li>
-<li>实对称阵<strong>一定能相似对角化</strong></li>
-<li>实对称矩阵<strong>非零特征值个数等于它的秩</strong></li>
-<li>若$A$，$B$ 均为实对称阵，且 $A$ 和 $B$ 特征值完全相同，则必有 $A \sim B$</li>
-</ul>
-<h2 id="第六章-二次型与对称矩阵"><a href="#第六章-二次型与对称矩阵" class="headerlink" title="第六章 二次型与对称矩阵"></a>第六章 二次型与对称矩阵</h2><h3 id="S-6-1-二次型及其矩阵"><a href="#S-6-1-二次型及其矩阵" class="headerlink" title="$\S 6.1$ 二次型及其矩阵"></a>$\S 6.1$ 二次型及其矩阵</h3><ul>
-<li><p>二次型，二次型矩阵，二次型的秩，线性变换（可逆变换，不可逆变换）</p>
-</li>
-<li><p>合同变换</p>
-<p>  $P^TAP = B$，则 $A, B$ 合同，记为 $A \simeq B$，$P$ 为合同因子</p>
-<p>  合同必等价，反之不真</p>
-<p>  合同和相似是两个独立概念，合同未必相似，相似未必等价</p>
-</li>
-<li><p>相关结论</p>
-<p>  对实对称矩阵 $A, B$ 若 $A \sim B$，则 $A \simeq B$，但是合同未必相似 如 $diag\{3,3,3\}$ 和 $E$ 合同，但不相似</p>
-<p>  若对实对称矩阵$A, B$ 特征值相同，则 $A \simeq B$，且$A \sim B$</p>
-<p>  若 $A \simeq B$，则 $R(A) = R(B)$</p>
-<p>  若 $A \simeq B$，且 $A$ 为对称矩阵则 $B$ 也为对称矩阵（特殊的若 $A \simeq \Lambda$，则 $A$ 必为对称阵）</p>
-</li>
-</ul>
-<h3 id="S-6-2-二次型的标准型"><a href="#S-6-2-二次型的标准型" class="headerlink" title="$\S 6.2$ 二次型的标准型"></a>$\S 6.2$ 二次型的标准型</h3><ul>
-<li><p>标准型</p>
-<p>  标准型各项系数均是特征值</p>
-</li>
-<li><p>正交变换法</p>
-</li>
-<li><p>拉格朗日配方法</p>
-<p>  如果只有交叉项利用平方差公式凑出平方项</p>
-</li>
-<li><p>相关结论</p>
-<p>  任何二次型必可经过可逆线性变换为标准型</p>
-<p>  任何对称矩阵必可合同于对角矩阵</p>
-</li>
-</ul>
-<h3 id="S-6-3-合同变换与二次型的规范形"><a href="#S-6-3-合同变换与二次型的规范形" class="headerlink" title="$\S 6.3$ 合同变换与二次型的规范形"></a>$\S 6.3$ 合同变换与二次型的规范形</h3><ul>
-<li><p>合同变换法</p>
-<p>  三种初等合同变换</p>
-<p>  合同变换法 $(A|E) \to (\Lambda|P^T)$</p>
-</li>
-<li><p>实二次型的规范形</p>
-<p>  任何实对称矩阵必可经过实数域上变换得到如下矩阵</p>
-<script type="math/tex; mode=display">\begin{bmatrix}
-    1&  &  &  &  &  &  &  & \\\
-    & \ddots  &  &  &  &  &  &  & \\\
-    &  & 1 &  &  &  &  &  & \\\
-    &  &  & -1 &  &  &  &  & \\\
-    &  &  &  & \ddots &  &  &  & \\\
-    &  &  &  &  & -1 &  &  & \\\
-    &  &  &  &  &  & 0 &  & \\\
-    &  &  &  &  &  &  & \ddots & \\\
-    &  &  &  &  &  &  &  &0
-  \end{bmatrix}</script><p>  其中 $1$ 的个数 $p$ 称为正惯性指数，$-1$ 个数称为负惯性指数，$p-q$ 称为 $A$ 的符号差，正负惯性指数之和是 $A$ 的秩</p>
-<p>  两个 $n$ 阶实对称阵合同的充要条件是它们秩相同且正惯性指数也相同。</p>
-<p>  特别地，若两个 $n$ 阶实对称阵的特征值相同，则它们必相似，从而必合同。</p>
-</li>
-</ul>
-<h3 id="S-6-4-实二次型的分类-正定二次型"><a href="#S-6-4-实二次型的分类-正定二次型" class="headerlink" title="$\S 6.4$ 实二次型的分类 正定二次型"></a>$\S 6.4$ 实二次型的分类 正定二次型</h3><ul>
-<li><p>实二次型的分类</p>
-<p>  对于实二次型 $f(x) = x^TAx$，若对任何非零实向量 $x$ 都有 $f(x)$，则称 $f$ 为正定二次型</p>
-<p>  可逆线性变化不改变实二次型的正定性</p>
-</li>
-<li><p>正定二次型与正定矩阵<br>  $n$ 元实二次型正定的充分必要条件是其标准形中 $n$ 个平方项的系数全大于零<br>  实二次型 $f(x) = x^TAx$ 正定的充分必要条件是 $A$ 的特征值全大于零<br>  $n$ 元实二次型 $f(x) = x^TAx$ 正定的充分必要条件是它的正惯性指数为 $n$</p>
-<p>  实二次型 $f(x) = x^TAx$ 正定的充分必要条件是 $A$ 的所有顺次主子式全大于零</p>
-<p>  对于实对称矩阵$A$，如果实二次$f(x)=x^TAx$ 正定，则称 $A$ 是正定矩阵.</p>
-<p>  实对称矩阵 $A$ 正定的充分必要条件是 $A \simeq E$.</p>
-<p>  实对称矩阵 $A$ 正定的充分必要条件是：有可逆 $P$，使得 $A=P^TP$</p>
-</li>
-<li><p>正定矩阵的一些简单性质：</p>
-<ol>
-<li>若 $A$ 是正定矩阵，则 $A^T, A^{-1}, A^*, A^k,kA$（ $k$ 为任意正实数）均为正定矩阵。</li>
-<li>若A正定，则有|A|&gt;0,从而A必可逆。</li>
-<li>设 $A$ 与 $B$ 是正定矩阵，则 $AB$ 是正定矩阵的充要条件是 $A$ 和 $B$ 可交换</li>
-<li>设 $A、B$ 都是 $n$ 阶正定矩阵，则 $A+B$ 也是正定矩阵.</li>
-<li>设 $A$ 是 $n$ 阶正定矩阵，则对 $\forall \alpha &gt; 0, |A + \alpha E| &gt; \alpha^n$</li>
-</ol>
-</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>大学课程</tag>
-        <tag>数学</tag>
       </tags>
   </entry>
 </search>
