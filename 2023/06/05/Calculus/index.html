@@ -254,7 +254,6 @@
       
         <p>从入门到。。。欸？！俺滴门捏 இ௰இ</p>
 <span id="more"></span>
-
 <h2 id="第一章-多元函数的极限和连续性"><a href="#第一章-多元函数的极限和连续性" class="headerlink" title="第一章 多元函数的极限和连续性"></a>第一章 多元函数的极限和连续性</h2><h4 id="第一章总结"><a href="#第一章总结" class="headerlink" title="第一章总结"></a>第一章总结</h4><ol>
 <li>算多元函数极限时往往不能用洛必达，可以用一元函数求极限方法对原函数进行变换然后再求，或者也可以变换为一元函数后再用洛必达</li>
 <li>算极限不存在时，选择不同路径求出不同极限然后可以证出来</li>
@@ -273,7 +272,7 @@
 </li>
 <li><p>隐函数求导 $\frac{\partial z}{\partial x} = - \frac{F’_x(x, y, z)}{F’_z(x, y)}$</p>
 </li>
-<li><p>方向导数 $\frac{\partial f}{\partial l} = \frac{\partial f}{\partial x}cos \alpha + \frac{\partial f}{\partial y}cos \beta$，梯度 $grad\ f(x, y) = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j$，且二者关系 $\frac{\partial f}{\partial l} | _{max} = |grad\ f(x, y)| = \sqrt{(\frac{\partial f}{\partial x})^2 + (\frac{\partial f}{\partial y})^2}$</p>
+<li><p>方向导数 $\frac{\partial f}{\partial l} = \frac{\partial f}{\partial x}cos \alpha + \frac{\partial f}{\partial y}cos \beta$，梯度 $grad f(x, y) = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j$，且二者关系 $\frac{\partial f}{\partial l} | _{max} = |grad f(x, y)| = \sqrt{(\frac{\partial f}{\partial x})^2 + (\frac{\partial f}{\partial y})^2}$</p>
 </li>
 <li><p>空间曲线的切线和法平面，曲面的切平面和法线</p>
 </li>
@@ -286,13 +285,12 @@
 <li><p>二重积分：直角坐标系下分别积分即可，若利用极坐标，$dxdy = rdrd\theta$</p>
 </li>
 <li><p>三重积分：先一后二 / 先二后一     </p>
-<p> ​                    利用柱面坐标：$dxdydz = r\ d\theta drdz$</p>
-<p> ​                    利用球面坐标：$dxdydz = r^2sin\phi\ d\theta d\phi dr$</p>
+<p> ​                    利用柱面坐标：$dxdydz = r d\theta drdz$</p>
+<p> ​                    利用球面坐标：$dxdydz = r^2sin\phi d\theta d\phi dr$</p>
 </li>
 </ol>
 <h2 id="第四章-第一型曲线积分与曲面积分"><a href="#第四章-第一型曲线积分与曲面积分" class="headerlink" title="第四章 第一型曲线积分与曲面积分"></a>第四章 第一型曲线积分与曲面积分</h2><h4 id="第四章总结"><a href="#第四章总结" class="headerlink" title="第四章总结"></a>第四章总结</h4><ol>
-<li><p>$\int_Lf(x, y)ds = \int_\alpha^\beta f(x(t), y(t))\sqrt{[x’(t)]^2 + [y’(t)]^2}dt$</p>
-</li>
+<li>$\int_Lf(x, y)ds = \int_\alpha^\beta f(x(t), y(t))\sqrt{[x’(t)]^2 + [y’(t)]^2}dt$</li>
 <li><p>$\int_Lf(x, y)ds = \int_a^b f(x, y(x))\sqrt{1 + [y’(x)]^2}dx$</p>
 </li>
 <li><p>$\int_Lf(x, y)ds = \int_\alpha^\beta f(r(\theta)cos\theta, r(\theta)sin\theta)\sqrt{r^2(\theta) + [r’(\theta)]^2}d\theta$</p>
@@ -337,7 +335,7 @@
 <ol>
 <li>$\iint_{\sum}R(x, y, z)dxdy = \pm\iint_{D_{xy}}R(x, y, z(x, y))dxdy$</li>
 <li>$\iint_{\sum}Pdydz + Qdzdx + Rdxdy = \iint_{\sum}[P(-z_x) + Q(-z_y) + R]dxdy$</li>
-<li>$\unicode{8751}<em>{\sum}Pdydz + Qdzdx + Rdxdy = \iiint</em>{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$</li>
+<li>$\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$</li>
 </ol>
 </li>
 </ul>
@@ -363,11 +361,11 @@
 <li><p>斯托克斯公式</p>
 <p>  设有向闭曲线 $\tau$ 是有向曲面 $\sum$ 的边界，且满足</p>
 <ol>
-<li><p>$\tau$ 和 $\sum$ 的方向符合右手规则</p>
-</li>
+<li>$\tau$ 和 $\sum$ 的方向符合右手规则</li>
 <li><p>$P(x, y, z), Q(x, y, z), R(x, y, z)$ 在包含 $\sum$ 的区域内有连续偏导数</p>
-<p>那么<br>$$<br>\begin{aligned} \oint_{\tau}Pdx + Qdy + Rdz = \iint_{\sum}( \frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z})dydz + ( \frac{\partial P}{\partial z} - \frac{\partial R}{\partial x})dxdz + ( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y})dydx \\ = \iint_{\sum}\begin{vmatrix}dydz &amp; dzdx &amp; dxdy \newline \frac{\partial}{\partial x} &amp; \frac{\partial}{\partial y} &amp; \frac{\partial}{\partial z} \\ P &amp; Q &amp; R \end{vmatrix} \end{aligned}<br>$$</p>
-</li>
+<p>那么    </p>
+<script type="math/tex; mode=display">
+\begin{aligned} \oint_{\tau}Pdx + Qdy + Rdz = \iint_{\sum}( \frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z})dydz + ( \frac{\partial P}{\partial z} - \frac{\partial R}{\partial x})dxdz + ( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y})dydx \\ = \iint_{\sum}\begin{vmatrix}dydz & dzdx & dxdy \newline \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\ P & Q & R \end{vmatrix} \end{aligned}</script></li>
 </ol>
 </li>
 <li><p>环流量与旋度</p>
@@ -401,8 +399,7 @@
 <li><p>比较判别法</p>
 <p>  正项级数 $\sum_{n = 1}^{\infty}u_n$ ,$\sum_{n = 1}^{\infty} v_n$ ,且当 $n &gt; N$ 时， $u_n \le kv_n$</p>
 <ul>
-<li><p>若 $u_n$ 发散，则 $v_n$ 发散</p>
-</li>
+<li>若 $u_n$ 发散，则 $v_n$ 发散</li>
 <li><p>若 $v_n$ 收敛，则 $u_n$ 收敛</p>
 <p>使用该方法时常用适当放缩或借助几何级数，调和级数，p级数作为参考</p>
 <p>比较判别法的极限形式</p>
@@ -410,10 +407,8 @@
 </li>
 <li><p>若 $l = \infty$ , 且 $v_n$ 发散， $u_n$ 发散，</p>
 </li>
-<li><p>若 $l = 0$ , 且 $v_n$ 收敛，则 $u_n$ 收敛</p>
-</li>
-<li><p>若 $0 &lt; l &lt; \infty$ , 则 $u_n$，$v_n$ 敛散性相同</p>
-</li>
+<li>若 $l = 0$ , 且 $v_n$ 收敛，则 $u_n$ 收敛</li>
+<li>若 $0 &lt; l &lt; \infty$ , 则 $u_n$，$v_n$ 敛散性相同</li>
 </ul>
 </li>
 <li><p>比值判别法（d’Alembert 判别法）</p>
@@ -440,8 +435,7 @@
 <li><p>Leibniz 判别法 </p>
 <p>  若交错级数满足 $\sum_{n = 1}^{\infty} (-1)^{n + 1}u_n(u_n &gt; 0)$ 满足：</p>
 <ul>
-<li><p>$u_n \ge u_{n + 1}(n = 1, 2, 3, \cdots)$</p>
-</li>
+<li>$u_n \ge u_{n + 1}(n = 1, 2, 3, \cdots)$</li>
 <li><p>$lim_{n \to \infty} u_n = 0$</p>
 <p>则交错级数 $\sum_{n = 1}^{\infty} (-1)^{n + 1}u_n$ 收敛（注：这是充分条件，即使不满足也不能证明级数发散）</p>
 <p>常用结论：$\sum_{n = 1}^{\infty} (-1)^{n + 1}\frac{1}{n}$ 收敛         </p>
@@ -503,7 +497,16 @@
 </li>
 <li><p>特殊的，当 $x_0 = 0$ 时，$f(x)$ 的泰勒级数为 $\sum_{n = 0}^{\infty} \frac{f^{(n)}(0)}{n!}x^n$ 称为 $f(x)$ 的麦克劳林级数或 $x$ 的幂级数</p>
 </li>
-<li><p>常用幂级数展开式<br>  $$<br>  \begin{aligned}<br>  \frac{1}{1-x} = \sum_{n = 0}^{\infty}x^{n},\ \frac{1}{1+x} = \sum_{n = 0}^{\infty}(-1)^nx^{n}\ (-1 &lt; x &lt; 1)<br>  \newline e^x = \sum_{n = 0}^{\infty}\frac{x^n}{n!}\ (-\infty &lt; x &lt; \infty)<br>  \newline \sin x = \sum_{n = 0}^{\infty}(-1)^n\frac{x^{2n+1}}{(2n+1)!}\ (-\infty &lt; x &lt; \infty)<br>  \newline \cos x = \sum_{n = 0}^{\infty}(-1)^n\frac{x^{2n}}{(2n)!}\ (-\infty &lt; x &lt; \infty)<br>  \newline \ln(1 + x) = \sum_{n = 0}^{\infty} (-1)^n\frac{x^{n + 1}}{n + 1}\ (-1 &lt; x \le 1)<br>  \newline \arctan x = \sum_{n = 0}^{\infty} (-1)^n\frac{x^{2n + 1}}{2n + 1}\ (-1 \le x \le 1)<br>  \end{aligned}<br>  $$<br>  值得注意的是，若 $f(x)$ 能展开成幂级数，那么展开方式必定是唯一的，而且一定是泰勒级数</p>
+<li><p>常用幂级数展开式</p>
+<script type="math/tex; mode=display">
+  \begin{aligned}
+  \frac{1}{1-x} = \sum_{n = 0}^{\infty}x^{n},\ \frac{1}{1+x} = \sum_{n = 0}^{\infty}(-1)^nx^{n}\ (-1 < x < 1)
+  \newline e^x = \sum_{n = 0}^{\infty}\frac{x^n}{n!}\ (-\infty < x < \infty)
+  \newline \sin x = \sum_{n = 0}^{\infty}(-1)^n\frac{x^{2n+1}}{(2n+1)!}\ (-\infty < x < \infty)
+  \newline \cos x = \sum_{n = 0}^{\infty}(-1)^n\frac{x^{2n}}{(2n)!}\ (-\infty < x < \infty)
+  \newline \ln(1 + x) = \sum_{n = 0}^{\infty} (-1)^n\frac{x^{n + 1}}{n + 1}\ (-1 < x \le 1)
+  \newline \arctan x = \sum_{n = 0}^{\infty} (-1)^n\frac{x^{2n + 1}}{2n + 1}\ (-1 \le x \le 1)
+  \end{aligned}</script><p>  值得注意的是，若 $f(x)$ 能展开成幂级数，那么展开方式必定是唯一的，而且一定是泰勒级数</p>
 </li>
 </ul>
 </li>
@@ -528,9 +531,10 @@
 <p>  设 $f(x)$ 为周期为 $2\pi$ 的可积函数，若 $f(x)$ 在 $[-\pi,\pi]$ 上满足狄利克雷条件</p>
 <ul>
 <li>连续或只有有限个第一类间断点</li>
-<li>只有有限个极值点</li>
+<li><p>只有有限个极值点</p>
+<p><strong>直观来说就是函数图像在周期内，连续或分段连续且不作无限次振动</strong>，则 $f(x)$ 的傅里叶级数收敛，在 $f(x)$ 的<strong>连续点</strong>，级数收敛于 $f(x)$，而对于 $f(x)$ 的间断点 $x$，级数收敛于间断点处左右极限的中点（注意在满足狄利克雷收敛定理条件下是一定会收敛的，只是收敛会不会收敛于 $f(x)$ 不确定）</p>
+</li>
 </ul>
-<p>  <strong>直观来说就是函数图像在周期内，连续或分段连续且不作无限次振动</strong>，则 $f(x)$ 的傅里叶级数收敛，在 $f(x)$ 的<strong>连续点</strong>，级数收敛于 $f(x)$，而对于 $f(x)$ 的间断点 $x$，级数收敛于间断点处左右极限的中点（注意在满足狄利克雷收敛定理条件下是一定会收敛的，只是收敛会不会收敛于 $f(x)$ 不确定）</p>
 </li>
 <li><p>周期延拓</p>
 </li>
@@ -540,18 +544,20 @@
 <li><p>周期为 $2l$ 的函数展成傅里叶级数</p>
 <p>  $f(x) \sim \frac{a_0}{2} + \sum_{n = 1}^{\infty}(a_ncosn\frac{\pi}{l}x + b_nsinn\frac{\pi}{l}x)$</p>
 <ul>
-<li><p>$a_n = \frac{1}{l}\int^{l}_{-l}f(x)cosn\frac{\pi}{l}xdx    $</p>
-</li>
+<li>$a_n = \frac{1}{l}\int^{l}_{-l}f(x)cosn\frac{\pi}{l}xdx    $</li>
 <li><p>$b_n = \frac{1}{l}\int^{l}_{-l}f(x)sinn\frac{\pi}{l}xdx    $</p>
 <p>只在 $[0, l]$ 上有定义的函数，展开成正弦级数或余弦级数，需做奇延拓或偶延拓</p>
-<p>和差化积公式参考如下<br>$$<br>\begin{aligned}<br>{\displaystyle \sin \alpha +\sin \beta =2\sin { \alpha +\beta \over 2}\cos { \alpha -\beta \over 2}} \\ {\displaystyle \sin \alpha -\sin \beta =2\cos {\alpha +\beta \over 2}\sin {\alpha -\beta \over 2}} \\ {\displaystyle \cos \alpha +\cos \beta =2\cos {\alpha +\beta \over 2}\cos {\alpha -\beta \over 2}} \\ {\displaystyle \cos \alpha -\cos \beta =-2\sin {\alpha +\beta \over 2}\sin {\alpha -\beta \over 2}}<br>\\ \newline \newline {\displaystyle \sin \alpha \cos \beta ={\sin(\alpha +\beta )+\sin(\alpha -\beta ) \over 2}} \\ {\displaystyle \cos \alpha \sin \beta ={\sin(\alpha +\beta )-\sin(\alpha -\beta ) \over 2}} \\ {\displaystyle \cos \alpha \cos \beta ={\cos(\alpha +\beta )+\cos(\alpha -\beta ) \over 2}} \\ {\displaystyle \sin \alpha \sin \beta =-{\cos(\alpha +\beta )-\cos(\alpha -\beta ) \over 2}}<br>\end{aligned}<br>$$</p>
-</li>
+<p>和差化积公式参考如下</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+{\displaystyle \sin \alpha +\sin \beta =2\sin { \alpha +\beta \over 2}\cos { \alpha -\beta \over 2}} \\ {\displaystyle \sin \alpha -\sin \beta =2\cos {\alpha +\beta \over 2}\sin {\alpha -\beta \over 2}} \\ {\displaystyle \cos \alpha +\cos \beta =2\cos {\alpha +\beta \over 2}\cos {\alpha -\beta \over 2}} \\ {\displaystyle \cos \alpha -\cos \beta =-2\sin {\alpha +\beta \over 2}\sin {\alpha -\beta \over 2}}
+\\ \newline \newline {\displaystyle \sin \alpha \cos \beta ={\sin(\alpha +\beta )+\sin(\alpha -\beta ) \over 2}} \\ {\displaystyle \cos \alpha \sin \beta ={\sin(\alpha +\beta )-\sin(\alpha -\beta ) \over 2}} \\ {\displaystyle \cos \alpha \cos \beta ={\cos(\alpha +\beta )+\cos(\alpha -\beta ) \over 2}} \\ {\displaystyle \sin \alpha \sin \beta =-{\cos(\alpha +\beta )-\cos(\alpha -\beta ) \over 2}}
+\end{aligned}</script></li>
 </ul>
 </li>
 </ul>
 <h2 id="第七章-常微分方程"><a href="#第七章-常微分方程" class="headerlink" title="第七章 常微分方程"></a>第七章 常微分方程</h2><h4 id="第七章总结"><a href="#第七章总结" class="headerlink" title="第七章总结"></a>第七章总结</h4><ol>
-<li><p>本章研究的方程主要有两种：一阶线性微分方程 和 高阶微分方程</p>
-</li>
+<li>本章研究的方程主要有两种：一阶线性微分方程 和 高阶微分方程</li>
 <li><p>对于一阶线性微分方程</p>
 <ul>
 <li>首先考虑是不是全微分方程，若满足 $\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial y}$，则化为 $u(x, y) = 0$ 的形式</li>
@@ -603,8 +609,7 @@
 </li>
 <li><p>对于全微分方程必有 $u(x, y)$ 使 $du(x, y) = P(x, y)dx + Q(x, y)dy = 0$ 从而 $u(x, y) = C$</p>
 </li>
-<li><p>求法 $u(x, y) = \int^x_{x_0}P(x, y_0)dx + \int^y_{y_0}Q(x, y)dy = \int^y_{y_0}Q(x_0, y)dy + \int^x_{x_0}P(x, y)dx$ ，通解 $u(x, y) = C$</p>
-</li>
+<li>求法 $u(x, y) = \int^x_{x_0}P(x, y_0)dx + \int^y_{y_0}Q(x, y)dy = \int^y_{y_0}Q(x_0, y)dy + \int^x_{x_0}P(x, y)dx$ ，通解 $u(x, y) = C$</li>
 </ul>
 </li>
 </ul>
@@ -815,7 +820,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">37k</span>
+    <span title="站点总字数">36k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>

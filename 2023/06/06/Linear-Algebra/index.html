@@ -233,7 +233,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>4.5k</span>
+              <span>4.3k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -254,7 +254,6 @@
       
         <p>从入门到入土</p>
 <span id="more"></span>
-
 <h2 id="第一章-矩阵的运算与初等变换"><a href="#第一章-矩阵的运算与初等变换" class="headerlink" title="第一章 矩阵的运算与初等变换"></a>第一章 矩阵的运算与初等变换</h2><h3 id="S-1-1-矩阵和向量的概念"><a href="#S-1-1-矩阵和向量的概念" class="headerlink" title="$\S 1.1$ 矩阵和向量的概念"></a>$\S 1.1$ 矩阵和向量的概念</h3><ul>
 <li><p>矩阵</p>
 <p>  $m \times n$ 的数表构成 $m$ 行 $n$ 列矩阵，这 $m \times n$ 个数是 $A$ 的元素，简称元</p>
@@ -311,40 +310,11 @@
 </li>
 <li><p>一些结论和补充</p>
 <ul>
-<li><p>设 $R(A) = n - 1$ ，则 $A^*$ 的特征值为 $0$ （$n-1$重）和 $\sum_{i = 1}^{n}A_{ii}$ （$A_{ii}$ 为 $A$ 的元素 $a_{ii}$  对应的代数余子式）</p>
-</li>
-<li><p>设 $R(A) &lt; n-1$ 则 $A^*$ 有 $n$ 重零特征值</p>
-</li>
+<li>设 $R(A) = n - 1$ ，则 $A^*$ 的特征值为 $0$ （$n-1$重）和 $\sum_{i = 1}^{n}A_{ii}$ （$A_{ii}$ 为 $A$ 的元素 $a_{ii}$  对应的代数余子式）</li>
+<li>设 $R(A) &lt; n-1$ 则 $A^*$ 有 $n$ 重零特征值</li>
 <li><p>若 $\lambda$ 是 $A$ 的特征值，则 $\varphi(\lambda)$ 是 $\varphi(A)$ 的特征值</p>
 </li>
-<li><table>
-<thead>
-<tr>
-<th align="left"></th>
-<th>$A$</th>
-<th>$\varphi(A)$</th>
-<th>$A^{-1}$</th>
-<th>$A^*$</th>
-<th>$B=P^{-1}AP$</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">特征值</td>
-<td>$\lambda$</td>
-<td>$\varphi(\lambda)$</td>
-<td>$\frac{1}{\lambda}$</td>
-<td>$\frac{</td>
-<td>A</td>
-</tr>
-<tr>
-<td align="left">特征向量</td>
-<td>$\alpha$</td>
-<td>$\alpha$</td>
-<td>$\alpha$</td>
-<td>$\alpha$</td>
-<td>$p^{-1}\alpha$</td>
-</tr>
-</tbody></table>
+<li><p>|          | $A$       | $\varphi(A)$       | $A^{-1}$            | $A^*$                 | $B=P^{-1}AP$   |<br>  | :———- | ————- | ————————— | —————————- | ——————————- | ——————— |<br>  | 特征值   | $\lambda$ | $\varphi(\lambda)$ | $\frac{1}{\lambda}$ | $\frac{|A|}{\lambda}$ | $\lambda$      |<br>  | 特征向量 | $\alpha$  | $\alpha$           | $\alpha$            | $\alpha$              | $p^{-1}\alpha$ |</p>
 </li>
 <li><p>$A^T$ 与 $A$ 的特征值相同，但特征向量未必相同</p>
 </li>
@@ -437,17 +407,17 @@
 </li>
 <li><p>实二次型的规范形</p>
 <p>  任何实对称矩阵必可经过实数域上变换得到如下矩阵</p>
-<p>  $$\begin{bmatrix}</p>
-<pre><code>1&amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \\\
-&amp; \ddots  &amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \\\
-&amp;  &amp; 1 &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \\\
-&amp;  &amp;  &amp; -1 &amp;  &amp;  &amp;  &amp;  &amp; \\\
-&amp;  &amp;  &amp;  &amp; \ddots &amp;  &amp;  &amp;  &amp; \\\
-&amp;  &amp;  &amp;  &amp;  &amp; -1 &amp;  &amp;  &amp; \\\
-&amp;  &amp;  &amp;  &amp;  &amp;  &amp; 0 &amp;  &amp; \\\
-&amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \ddots &amp; \\\
-&amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp;0</code></pre><p>  \end{bmatrix}$$</p>
-<p>  其中 $1$ 的个数 $p$ 称为正惯性指数，$-1$ 个数称为负惯性指数，$p-q$ 称为 $A$ 的符号差，正负惯性指数之和是 $A$ 的秩</p>
+<script type="math/tex; mode=display">\begin{bmatrix}
+    1&  &  &  &  &  &  &  & \\\
+    & \ddots  &  &  &  &  &  &  & \\\
+    &  & 1 &  &  &  &  &  & \\\
+    &  &  & -1 &  &  &  &  & \\\
+    &  &  &  & \ddots &  &  &  & \\\
+    &  &  &  &  & -1 &  &  & \\\
+    &  &  &  &  &  & 0 &  & \\\
+    &  &  &  &  &  &  & \ddots & \\\
+    &  &  &  &  &  &  &  &0
+  \end{bmatrix}</script><p>  其中 $1$ 的个数 $p$ 称为正惯性指数，$-1$ 个数称为负惯性指数，$p-q$ 称为 $A$ 的符号差，正负惯性指数之和是 $A$ 的秩</p>
 <p>  两个 $n$ 阶实对称阵合同的充要条件是它们秩相同且正惯性指数也相同。</p>
 <p>  特别地，若两个 $n$ 阶实对称阵的特征值相同，则它们必相似，从而必合同。</p>
 </li>
@@ -628,7 +598,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">37k</span>
+    <span title="站点总字数">36k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
