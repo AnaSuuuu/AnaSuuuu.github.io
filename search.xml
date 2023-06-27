@@ -1,6 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>CodeForces 补全计划（其一）</title>
+    <url>/2023/06/26/CF-Instrumentality-Project-I/</url>
+    <content><![CDATA[<p>记录一下 2023 上半年 CodeForces Contest 的补题情况</p>
+<span id="more"></span>
+
+<h2 id="Codeforces-Round-871-Div-4"><a href="#Codeforces-Round-871-Div-4" class="headerlink" title="Codeforces Round 871 (Div. 4)"></a><a href="https://codeforces.com/contest/1829">Codeforces Round 871 (Div. 4)</a></h2><h3 id="G-Hits-Different"><a href="#G-Hits-Different" class="headerlink" title="G. Hits Different"></a><a href="https://codeforces.com/contest/1829/problem/G">G. Hits Different</a></h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p><img src="1829G.png" alt="1829G"></p>
+<p>若干块以金字塔状摆放，用球击倒下方的，上方也会倒下，第 $n$ 块分数 $n^2$，问用球打第 $n$ 块能得多少分</p>
+<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>方法一：</p>
+<p>​    动态规划， $f[i]$ 表示击打第 $i$ 块能得的分数，$f[i] = f[左上] + f[右上] - f[公共]$，因为左上和右上是有公共部分会多算，所以简单容斥一下</p>
+<p>方法二：</p>
+<p>​    还是动态规划，先把图倾斜 $45°$</p>
+<p>​    <img src="1829G-sol1.png" alt="1829G-sol1"></p>
+<p>​    感觉变好看了一点（？）</p>
+<p>​    再转45°</p>
+<p><img src="1829G-sol2.png" alt="1829G-sol2"></p>
+<p>​    嗯，变成一个简单二维DP就能解决的问题了</p>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><p>方法一</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">2e6</span> + <span class="number">5</span>;</span><br><span class="line">ll f[N], num[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  std::ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">  std::cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line">  </span><br><span class="line">  num[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(ll i = <span class="number">1</span>; i &lt;= <span class="number">2000</span>; i++) num[i] = <span class="number">1ll</span> * i * (i + <span class="number">1</span>) / <span class="number">2</span>;</span><br><span class="line">  f[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">for</span>(ll i = <span class="number">2</span>; i &lt;= <span class="number">2e6</span>; i++) &#123;</span><br><span class="line">    ll sta = <span class="built_in">sqrt</span>(i * <span class="number">2</span>), kdl;</span><br><span class="line">    <span class="keyword">if</span>(num[sta] &lt; i) kdl = sta + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span> kdl = sta;</span><br><span class="line">    <span class="comment">//if(i == 2) cout &lt;&lt; kdl &lt;&lt; endl;</span></span><br><span class="line">    f[i] = f[num[kdl - <span class="number">2</span>] + (i - num[kdl - <span class="number">1</span>]) - <span class="number">1</span>] * (i != num[kdl - <span class="number">1</span>] + <span class="number">1</span>) + f[num[kdl - <span class="number">2</span>] + (i - num[kdl - <span class="number">1</span>])] * (i != num[kdl]) + <span class="number">1ll</span> * i * i;</span><br><span class="line">    <span class="keyword">if</span>(i != num[kdl - <span class="number">1</span>] + <span class="number">1</span> &amp;&amp; i != num[kdl]) &#123;</span><br><span class="line">      ll x = num[kdl - <span class="number">2</span>] + (i - num[kdl - <span class="number">1</span>]) - <span class="number">1</span>;</span><br><span class="line">      f[i] -= f[num[kdl - <span class="number">3</span>] + (x - num[kdl - <span class="number">2</span>])];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="type">int</span> t;</span><br><span class="line">  cin &gt;&gt; t;</span><br><span class="line">  <span class="keyword">while</span>(t--) &#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    cout &lt;&lt; f[n] &lt;&lt; endl;  </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>方法二</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">3e6</span> + <span class="number">5</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> M = <span class="number">1505</span>;</span><br><span class="line">ll f[M][M], num[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  std::ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">  std::cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line">  </span><br><span class="line">  f[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">  ll cnt = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">1500</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> j = i; j &gt;= <span class="number">1</span>; j--) &#123;</span><br><span class="line">      f[j][i - j + <span class="number">1</span>] = f[j][i - j] + f[j - <span class="number">1</span>][i - j + <span class="number">1</span>] - f[j - <span class="number">1</span>][i - j] + (cnt + <span class="number">1</span>) * (cnt + <span class="number">1</span>);</span><br><span class="line">      num[++cnt] = f[j][i - j + <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="type">int</span> t;</span><br><span class="line">  cin &gt;&gt; t;</span><br><span class="line">  <span class="keyword">while</span>(t--) &#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    cout &lt;&lt; num[n] &lt;&lt; endl;  </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Educational-Codeforces-Round-149-Rated-for-Div-2"><a href="#Educational-Codeforces-Round-149-Rated-for-Div-2" class="headerlink" title="Educational Codeforces Round 149 (Rated for Div. 2)"></a><a href="https://codeforces.com/contest/1837">Educational Codeforces Round 149 (Rated for Div. 2)</a></h2><h3 id="E-Playoff-Fixing"><a href="#E-Playoff-Fixing" class="headerlink" title="E. Playoff Fixing"></a><a href="https://codeforces.com/contest/1837/problem/E">E. Playoff Fixing</a></h3><h4 id="Description-1"><a href="#Description-1" class="headerlink" title="Description"></a>Description</h4><p>给定数 $k$，一共有 $2^k$ 个人参加比赛，序号越小的实力越强。每轮第 $2i$ 和 $2i-1$ 进行比赛，一共进行 $k$ 轮，最后要求序号为 $1$ 的一直留到最后一轮，序号为 $2$ 的留到倒数第二轮，序号为 $3 \sim 4$ 的留到倒数第三轮，以此类推，序号 $2^{k - 1} + 1$ 到 $2^k$ 的人要求第一轮淘汰，给定部分人当前位置，如果这个位置上还没确定选手就用 $-1$ 表示，问一共又有多少种表示合法方案</p>
+<h4 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h4><p>第一轮中，我们可以知道序号 $2^{k - 1} + 1$ 到 $2^k$ 的人可以安排在哪里，一定是在 $\{1,2\}$，$\{3,4\},\cdots, \{2^k - 1,2^k\}$ 中各选一个，如果两个都没选则两个位置都可以放，记一下这种情况的个数是 $cnt1$，如果一个位置放了小于 $2^{k-1}$ 的序号，那么只能选另一个位置放，如果两个位置都被选了且不合法，那么就返回 $0$，设一共有 $cnt2$ 个可以放的位置，那么这轮方案数是 $2^{cnt1} \times cnt1 !$ 而且这一轮放置的人下一轮都被淘汰了，所以无后效性，然后下一轮其实就变为规模折半的子问题，不断迭代计算即可</p>
+<h4 id="Code-1"><a href="#Code-1" class="headerlink" title="Code"></a>Code</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">19</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> mod = <span class="number">998244353</span>;</span><br><span class="line">ll a[(<span class="number">1</span> &lt;&lt; N) + <span class="number">5</span>], n;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">cal1</span><span class="params">(ll x)</span> </span>&#123;</span><br><span class="line">  ll num = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">while</span>(x) &#123;</span><br><span class="line">    num *= x;</span><br><span class="line">    num %= mod;</span><br><span class="line">    x--;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> num % mod;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">cal2</span><span class="params">(ll x)</span> </span>&#123;</span><br><span class="line">  ll num = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">while</span>(x) &#123;</span><br><span class="line">    num *= <span class="number">2</span>;</span><br><span class="line">    num %= mod;</span><br><span class="line">    x--;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> num % mod;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">solve</span><span class="params">(vector &lt;<span class="type">int</span>&gt; q)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(n == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">  vector &lt;<span class="type">int</span>&gt; p;</span><br><span class="line">  <span class="type">int</span> cnt1 = <span class="number">0</span>, cnt2 = <span class="number">0</span>;</span><br><span class="line">  <span class="comment">//cout &lt;&lt; n &lt;&lt; &quot;BBB&quot; &lt;&lt; endl;</span></span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i += <span class="number">2</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(q[i] != <span class="number">-1</span> &amp;&amp; q[i + <span class="number">1</span>] != <span class="number">-1</span>) &#123;</span><br><span class="line">      <span class="keyword">if</span>((q[i] &gt; n / <span class="number">2</span>) == (q[i + <span class="number">1</span>] &gt; n / <span class="number">2</span>)) &#123;</span><br><span class="line">        <span class="comment">//cout &lt;&lt; &quot;AAA&quot; &lt;&lt; endl;</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">else</span> p.<span class="built_in">push_back</span>(<span class="built_in">min</span>(q[i], q[i + <span class="number">1</span>]));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">if</span>(q[i] == <span class="number">-1</span> &amp;&amp; q[i + <span class="number">1</span>] == <span class="number">-1</span>) cnt1++, cnt2++, p.<span class="built_in">push_back</span>(<span class="number">-1</span>);</span><br><span class="line">      <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(q[i] &gt; n / <span class="number">2</span> || q[i + <span class="number">1</span>] &gt; n / <span class="number">2</span>) p.<span class="built_in">push_back</span>(<span class="number">-1</span>);</span><br><span class="line">        <span class="keyword">else</span> p.<span class="built_in">push_back</span>(<span class="built_in">max</span>(q[i], q[i + <span class="number">1</span>])), cnt2++;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;  </span><br><span class="line">  n /= <span class="number">2</span>;</span><br><span class="line">  <span class="comment">//cout &lt;&lt; n &lt;&lt; endl;</span></span><br><span class="line">  <span class="comment">//cout &lt;&lt;  cnt1 &lt;&lt; &#x27; &#x27; &lt;&lt; cnt2 &lt;&lt; endl;</span></span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">cal2</span>(cnt1) * <span class="built_in">cal1</span>(cnt2) % mod * <span class="built_in">solve</span>(p) % mod;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  std::ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);</span><br><span class="line">  std::cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line">  vector &lt;<span class="type">int</span>&gt; q;</span><br><span class="line">  <span class="type">int</span> k;</span><br><span class="line">  cin &gt;&gt; k;</span><br><span class="line">  n = (<span class="number">1</span> &lt;&lt; k);</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">    <span class="type">int</span> x;</span><br><span class="line">    cin &gt;&gt; x;</span><br><span class="line">    q.<span class="built_in">push_back</span>(x);</span><br><span class="line">  &#125;</span><br><span class="line">  cout &lt;&lt; <span class="built_in">solve</span>(q) &lt;&lt; endl;;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="F-Editorial-for-Two"><a href="#F-Editorial-for-Two" class="headerlink" title="F. Editorial for Two"></a><a href="https://codeforces.com/contest/1837/problem/F">F. Editorial for Two</a></h3><h4 id="Description-2"><a href="#Description-2" class="headerlink" title="Description"></a>Description</h4><p>$n$ 个数中选 $k$ 个数（不改变在原序列中顺序），要求这 $k$ 个数分为前后两半后，这前后两部分和的最大值尽可能小</p>
+<h4 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h4><p>这道题可以用二分来做，对于二分值 $lim$，先正着扫一遍，再倒着扫一遍，扫到第 $i$ 位置时，我们只要算一下前 $i - 1$ 位置中 和不超过 $lim$ 的最多可以选的数的个数 + 后 $i$ 到 $n$ 位置中 和不超过 $k$ 的最多可以选的数的个数  之和是不是大于 $k$ 即可</p>
+<h4 id="Code-2"><a href="#Code-2" class="headerlink" title="Code"></a>Code</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">3e5</span> + <span class="number">5</span>;</span><br><span class="line">ll a[N], n, k, num[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">check</span><span class="params">(ll lim)</span> </span>&#123;</span><br><span class="line">  priority_queue&lt;ll&gt; q;</span><br><span class="line">  ll s = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">    s += a[i];</span><br><span class="line">    q.<span class="built_in">push</span>(a[i]);</span><br><span class="line">    <span class="keyword">while</span>(s &gt; lim) s -= q.<span class="built_in">top</span>(), q.<span class="built_in">pop</span>(); </span><br><span class="line">    num[i] = q.<span class="built_in">size</span>();</span><br><span class="line">  &#125;</span><br><span class="line">  s = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span>(q.<span class="built_in">size</span>()) q.<span class="built_in">pop</span>();</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = n; i &gt;= <span class="number">1</span>; i--) &#123;</span><br><span class="line">    s += a[i];</span><br><span class="line">    q.<span class="built_in">push</span>(a[i]);</span><br><span class="line">    <span class="keyword">while</span>(s &gt; lim) s -= q.<span class="built_in">top</span>(), q.<span class="built_in">pop</span>(); </span><br><span class="line">    <span class="keyword">if</span>(num[i - <span class="number">1</span>] + q.<span class="built_in">size</span>() &gt;= k) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  ll l = <span class="number">0</span>, r = <span class="number">0</span>, ans;</span><br><span class="line">  std::cin &gt;&gt; n &gt;&gt; k;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) std::cin &gt;&gt; a[i], r += a[i];</span><br><span class="line">  <span class="comment">//cout &lt;&lt; l &lt;&lt; &#x27; &#x27; &lt;&lt; r &lt;&lt; endl;</span></span><br><span class="line">  <span class="keyword">while</span>(r &gt;= l) &#123;</span><br><span class="line">    ll mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">check</span>(mid)) &#123;</span><br><span class="line">      ans = mid;</span><br><span class="line">      r = mid - <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> l = mid + <span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  cout &lt;&lt; ans &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  std::ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);</span><br><span class="line">  std::cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line"></span><br><span class="line">  <span class="type">int</span> t;</span><br><span class="line">  std::cin &gt;&gt; t;</span><br><span class="line">  <span class="keyword">while</span>(t--) &#123;</span><br><span class="line">    <span class="built_in">solve</span>();</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>算法竞赛</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>博客搭建踩坑指北</title>
+    <url>/2023/06/27/Cross-The-Hole/</url>
+    <content><![CDATA[<p>从踩坑到掉坑里</p>
+<span id="more"></span>
+
+<p>本博客采用 Hexo + GitHub 搭建，具体教程网上很多不再赘述</p>
+<p>下面分享一些自己踩过的坑</p>
+<h3 id="公式块中公式无法正常换行"><a href="#公式块中公式无法正常换行" class="headerlink" title="公式块中公式无法正常换行"></a>公式块中公式无法正常换行</h3><h4 id="问题简述"><a href="#问题简述" class="headerlink" title="问题简述"></a>问题简述</h4><p>用 $$ 插入公式块时，本地上用 typora 显示公式换行，但网页上未显示出来</p>
+<p><code>\\</code> 无法正常换行</p>
+<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>在公式块前面加上 <code>\begin&#123;aligned&#125;</code> 末尾加上 <code>\end&#123;aligned&#125;</code> 即可</p>
+<h3 id="Majax-渲染"><a href="#Majax-渲染" class="headerlink" title="Majax 渲染"></a>Majax 渲染</h3><h4 id="问题简述-1"><a href="#问题简述-1" class="headerlink" title="问题简述"></a>问题简述</h4><ol>
+<li><p>无法正常渲染二重闭曲面积分</p>
+</li>
+<li>  <figure class="highlight latex"><table><tr><td class="code"><pre><span class="line"><span class="built_in">$</span><span class="keyword">\iiint</span><span class="built_in">_</span>&#123;<span class="keyword">\Omega</span>&#125;(<span class="keyword">\frac</span>&#123;<span class="keyword">\partial</span> P&#125;&#123;<span class="keyword">\partial</span> x&#125; + <span class="keyword">\frac</span>&#123;<span class="keyword">\partial</span> Q&#125;&#123;<span class="keyword">\partial</span> y&#125; + <span class="keyword">\frac</span>&#123;<span class="keyword">\partial</span> R&#125;&#123;<span class="keyword">\partial</span> z&#125;)dV = <span class="keyword">\unicode</span>&#123;8751&#125;<span class="built_in">_</span>&#123;<span class="keyword">\sum</span>&#125;Pdydz + Qdzdx + Rdxdy <span class="built_in">$</span></span><br></pre></td></tr></table></figure>
+
+<p> 可以正常渲染出来</p>
+<p> $\iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV = \unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy $</p>
+ <figure class="highlight latex"><table><tr><td class="code"><pre><span class="line"><span class="built_in">$</span><span class="keyword">\unicode</span>&#123;8751&#125;<span class="built_in">_</span>&#123;<span class="keyword">\sum</span>&#125;Pdydz + Qdzdx + Rdxdy = <span class="keyword">\iiint</span><span class="built_in">_</span>&#123;<span class="keyword">\Omega</span>&#125;(<span class="keyword">\frac</span>&#123;<span class="keyword">\partial</span> P&#125;&#123;<span class="keyword">\partial</span> x&#125; + <span class="keyword">\frac</span>&#123;<span class="keyword">\partial</span> Q&#125;&#123;<span class="keyword">\partial</span> y&#125; + <span class="keyword">\frac</span>&#123;<span class="keyword">\partial</span> R&#125;&#123;<span class="keyword">\partial</span> z&#125;)dV<span class="built_in">$</span></span><br></pre></td></tr></table></figure>
+
+<p> 渲染异常</p>
+<p> $\unicode{8751}<em>{\sum}Pdydz + Qdzdx + Rdxdy = \iiint</em>{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$</p>
+</li>
+</ol>
+<h4 id="解决方案-1"><a href="#解决方案-1" class="headerlink" title="解决方案"></a>解决方案</h4><ol>
+<li><p>用 <code>\unicode&#123;8751&#125;</code> 表示即可</p>
+</li>
+<li><p>很神奇的问题，解决方法也很玄学，将</p>
+ <figure class="highlight latex"><table><tr><td class="code"><pre><span class="line"><span class="keyword">\unicode</span>&#123;8751&#125;<span class="built_in">_</span>&#123;<span class="keyword">\sum</span>&#125;Pdydz + Qdzdx + Rdxdy = <span class="keyword">\iiint</span><span class="built_in">_</span>&#123;<span class="keyword">\Omega</span>&#125;(<span class="keyword">\frac</span>&#123;<span class="keyword">\partial</span> P&#125;&#123;<span class="keyword">\partial</span> x&#125; + <span class="keyword">\frac</span>&#123;<span class="keyword">\partial</span> Q&#125;&#123;<span class="keyword">\partial</span> y&#125; + <span class="keyword">\frac</span>&#123;<span class="keyword">\partial</span> R&#125;&#123;<span class="keyword">\partial</span> z&#125;)dV</span><br></pre></td></tr></table></figure>
+
+<p> 改为</p>
+ <figure class="highlight latex"><table><tr><td class="code"><pre><span class="line"><span class="keyword">\unicode</span>&#123;8751&#125;<span class="built_in">_</span>&#123;<span class="keyword">\sum</span>&#125; Pdydz + Qdzdx + Rdxdy = <span class="keyword">\iiint</span><span class="built_in">_</span><span class="keyword">\Omega</span>(<span class="keyword">\frac</span>&#123;<span class="keyword">\partial</span> P&#125;&#123;<span class="keyword">\partial</span> x&#125; + <span class="keyword">\frac</span>&#123;<span class="keyword">\partial</span> Q&#125;&#123;<span class="keyword">\partial</span> y&#125; + <span class="keyword">\frac</span>&#123;<span class="keyword">\partial</span> R&#125;&#123;<span class="keyword">\partial</span> z&#125;)dV</span><br></pre></td></tr></table></figure>
+
+<p> 即可</p>
+<p> $\unicode{8751}_\sum Pdydz + Qdzdx + Rdxdy = \iiint_\Omega(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$</p>
+<p> 感觉可能是 <code>&#123;&#125;</code> 和 mathjax 渲染有一些冲突，具体原因还不完全清楚（？）</p>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>博客搭建</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>大学笔记 | 微积分</title>
     <url>/2023/06/05/Calculus/</url>
     <content><![CDATA[<p>从入门到挂科 🤦‍♀️🤦‍♂️</p>
@@ -298,7 +383,7 @@
 </li>
 <li><p>$b_n = \frac{1}{l}\int^{l}_{-l}f(x)sinn\frac{\pi}{l}xdx    $</p>
 <p>只在 $[0, l]$ 上有定义的函数，展开成正弦级数或余弦级数，需做奇延拓或偶延拓</p>
-<p>和差化积公式参考如下<br>$$<br>\begin{gather<em>}<br>{\displaystyle \sin \alpha +\sin \beta =2\sin { \alpha +\beta \over 2}\cos { \alpha -\beta \over 2}} \\ {\displaystyle \sin \alpha -\sin \beta =2\cos {\alpha +\beta \over 2}\sin {\alpha -\beta \over 2}} \\ {\displaystyle \cos \alpha +\cos \beta =2\cos {\alpha +\beta \over 2}\cos {\alpha -\beta \over 2}} \\ {\displaystyle \cos \alpha -\cos \beta =-2\sin {\alpha +\beta \over 2}\sin {\alpha -\beta \over 2}}<br>\\ \newline \newline {\displaystyle \sin \alpha \cos \beta ={\sin(\alpha +\beta )+\sin(\alpha -\beta ) \over 2}} \\ {\displaystyle \cos \alpha \sin \beta ={\sin(\alpha +\beta )-\sin(\alpha -\beta ) \over 2}} \\ {\displaystyle \cos \alpha \cos \beta ={\cos(\alpha +\beta )+\cos(\alpha -\beta ) \over 2}} \\ {\displaystyle \sin \alpha \sin \beta =-{\cos(\alpha +\beta )-\cos(\alpha -\beta ) \over 2}}<br>\end{gather</em>}<br>$$</p>
+<p>和差化积公式参考如下<br>$$<br>\begin{gather}<br>{\displaystyle \sin \alpha +\sin \beta =2\sin { \alpha +\beta \over 2}\cos { \alpha -\beta \over 2}} \\ {\displaystyle \sin \alpha -\sin \beta =2\cos {\alpha +\beta \over 2}\sin {\alpha -\beta \over 2}} \\ {\displaystyle \cos \alpha +\cos \beta =2\cos {\alpha +\beta \over 2}\cos {\alpha -\beta \over 2}} \\ {\displaystyle \cos \alpha -\cos \beta =-2\sin {\alpha +\beta \over 2}\sin {\alpha -\beta \over 2}}<br>\\ \newline \newline {\displaystyle \sin \alpha \cos \beta ={\sin(\alpha +\beta )+\sin(\alpha -\beta ) \over 2}} \\ {\displaystyle \cos \alpha \sin \beta ={\sin(\alpha +\beta )-\sin(\alpha -\beta ) \over 2}} \\ {\displaystyle \cos \alpha \cos \beta ={\cos(\alpha +\beta )+\cos(\alpha -\beta ) \over 2}} \\ {\displaystyle \sin \alpha \sin \beta =-{\cos(\alpha +\beta )-\cos(\alpha -\beta ) \over 2}}<br>\end{gather}<br>$$</p>
 </li>
 </ul>
 </li>
@@ -421,48 +506,6 @@
       <tags>
         <tag>数学</tag>
         <tag>大学课程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CodeForces 补全计划（其一）</title>
-    <url>/2023/06/26/CF-Instrumentality-Project-I/</url>
-    <content><![CDATA[<p>记录一下 2023 上半年 CodeForces Contest 的补题情况</p>
-<span id="more"></span>
-
-<h2 id="Codeforces-Round-871-Div-4"><a href="#Codeforces-Round-871-Div-4" class="headerlink" title="Codeforces Round 871 (Div. 4)"></a><a href="https://codeforces.com/contest/1829">Codeforces Round 871 (Div. 4)</a></h2><h3 id="G-Hits-Different"><a href="#G-Hits-Different" class="headerlink" title="G. Hits Different"></a><a href="https://codeforces.com/contest/1829/problem/G">G. Hits Different</a></h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p><img src="1829G.png" alt="1829G"></p>
-<p>若干块以金字塔状摆放，用球击倒下方的，上方也会倒下，第 $n$ 块分数 $n^2$，问用球打第 $n$ 块能得多少分</p>
-<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>方法一：</p>
-<p>​    动态规划， $f[i]$ 表示击打第 $i$ 块能得的分数，$f[i] = f[左上] + f[右上] - f[公共]$，因为左上和右上是有公共部分会多算，所以简单容斥一下</p>
-<p>方法二：</p>
-<p>​    还是动态规划，先把图倾斜 $45°$</p>
-<p>​    <img src="1829G-sol1.png" alt="1829G-sol1"></p>
-<p>​    感觉变好看了一点（？）</p>
-<p>​    再转45°</p>
-<p><img src="1829G-sol2.png" alt="1829G-sol2"></p>
-<p>​    嗯，变成一个简单二维DP就能解决的问题了</p>
-<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><p>方法一</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">2e6</span> + <span class="number">5</span>;</span><br><span class="line">ll f[N], num[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  std::ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">  std::cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line">  </span><br><span class="line">  num[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(ll i = <span class="number">1</span>; i &lt;= <span class="number">2000</span>; i++) num[i] = <span class="number">1ll</span> * i * (i + <span class="number">1</span>) / <span class="number">2</span>;</span><br><span class="line">  f[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">for</span>(ll i = <span class="number">2</span>; i &lt;= <span class="number">2e6</span>; i++) &#123;</span><br><span class="line">    ll sta = <span class="built_in">sqrt</span>(i * <span class="number">2</span>), kdl;</span><br><span class="line">    <span class="keyword">if</span>(num[sta] &lt; i) kdl = sta + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span> kdl = sta;</span><br><span class="line">    <span class="comment">//if(i == 2) cout &lt;&lt; kdl &lt;&lt; endl;</span></span><br><span class="line">    f[i] = f[num[kdl - <span class="number">2</span>] + (i - num[kdl - <span class="number">1</span>]) - <span class="number">1</span>] * (i != num[kdl - <span class="number">1</span>] + <span class="number">1</span>) + f[num[kdl - <span class="number">2</span>] + (i - num[kdl - <span class="number">1</span>])] * (i != num[kdl]) + <span class="number">1ll</span> * i * i;</span><br><span class="line">    <span class="keyword">if</span>(i != num[kdl - <span class="number">1</span>] + <span class="number">1</span> &amp;&amp; i != num[kdl]) &#123;</span><br><span class="line">      ll x = num[kdl - <span class="number">2</span>] + (i - num[kdl - <span class="number">1</span>]) - <span class="number">1</span>;</span><br><span class="line">      f[i] -= f[num[kdl - <span class="number">3</span>] + (x - num[kdl - <span class="number">2</span>])];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="type">int</span> t;</span><br><span class="line">  cin &gt;&gt; t;</span><br><span class="line">  <span class="keyword">while</span>(t--) &#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    cout &lt;&lt; f[n] &lt;&lt; endl;  </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>方法二</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">3e6</span> + <span class="number">5</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> M = <span class="number">1505</span>;</span><br><span class="line">ll f[M][M], num[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  std::ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">  std::cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line">  </span><br><span class="line">  f[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">  ll cnt = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">1500</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> j = i; j &gt;= <span class="number">1</span>; j--) &#123;</span><br><span class="line">      f[j][i - j + <span class="number">1</span>] = f[j][i - j] + f[j - <span class="number">1</span>][i - j + <span class="number">1</span>] - f[j - <span class="number">1</span>][i - j] + (cnt + <span class="number">1</span>) * (cnt + <span class="number">1</span>);</span><br><span class="line">      num[++cnt] = f[j][i - j + <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="type">int</span> t;</span><br><span class="line">  cin &gt;&gt; t;</span><br><span class="line">  <span class="keyword">while</span>(t--) &#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    cout &lt;&lt; num[n] &lt;&lt; endl;  </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="Educational-Codeforces-Round-149-Rated-for-Div-2"><a href="#Educational-Codeforces-Round-149-Rated-for-Div-2" class="headerlink" title="Educational Codeforces Round 149 (Rated for Div. 2)"></a><a href="https://codeforces.com/contest/1837">Educational Codeforces Round 149 (Rated for Div. 2)</a></h2><h3 id="E-Playoff-Fixing"><a href="#E-Playoff-Fixing" class="headerlink" title="E. Playoff Fixing"></a><a href="https://codeforces.com/contest/1837/problem/E">E. Playoff Fixing</a></h3><h4 id="Description-1"><a href="#Description-1" class="headerlink" title="Description"></a>Description</h4><p>给定数 $k$，一共有 $2^k$ 个人参加比赛，序号越小的实力越强。每轮第 $2i$ 和 $2i-1$ 进行比赛，一共进行 $k$ 轮，最后要求序号为 $1$ 的一直留到最后一轮，序号为 $2$ 的留到倒数第二轮，序号为 $3 \sim 4$ 的留到倒数第三轮，以此类推，序号 $2^{k - 1} + 1$ 到 $2^k$ 的人要求第一轮淘汰，给定部分人当前位置，如果这个位置上还没确定选手就用 $-1$ 表示，问一共又有多少种表示合法方案</p>
-<h4 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h4><p>第一轮中，我们可以知道序号 $2^{k - 1} + 1$ 到 $2^k$ 的人可以安排在哪里，一定是在 $\{1,2\}$，$\{3,4\},\cdots, \{2^k - 1,2^k\}$ 中各选一个，如果两个都没选则两个位置都可以放，记一下这种情况的个数是 $cnt1$，如果一个位置放了小于 $2^{k-1}$ 的序号，那么只能选另一个位置放，如果两个位置都被选了且不合法，那么就返回 $0$，设一共有 $cnt2$ 个可以放的位置，那么这轮方案数是 $2^{cnt1} \times cnt1 !$ 而且这一轮放置的人下一轮都被淘汰了，所以无后效性，然后下一轮其实就变为规模折半的子问题，不断迭代计算即可</p>
-<h4 id="Code-1"><a href="#Code-1" class="headerlink" title="Code"></a>Code</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">19</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> mod = <span class="number">998244353</span>;</span><br><span class="line">ll a[(<span class="number">1</span> &lt;&lt; N) + <span class="number">5</span>], n;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">cal1</span><span class="params">(ll x)</span> </span>&#123;</span><br><span class="line">  ll num = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">while</span>(x) &#123;</span><br><span class="line">    num *= x;</span><br><span class="line">    num %= mod;</span><br><span class="line">    x--;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> num % mod;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">cal2</span><span class="params">(ll x)</span> </span>&#123;</span><br><span class="line">  ll num = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">while</span>(x) &#123;</span><br><span class="line">    num *= <span class="number">2</span>;</span><br><span class="line">    num %= mod;</span><br><span class="line">    x--;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> num % mod;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">solve</span><span class="params">(vector &lt;<span class="type">int</span>&gt; q)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(n == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">  vector &lt;<span class="type">int</span>&gt; p;</span><br><span class="line">  <span class="type">int</span> cnt1 = <span class="number">0</span>, cnt2 = <span class="number">0</span>;</span><br><span class="line">  <span class="comment">//cout &lt;&lt; n &lt;&lt; &quot;BBB&quot; &lt;&lt; endl;</span></span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i += <span class="number">2</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(q[i] != <span class="number">-1</span> &amp;&amp; q[i + <span class="number">1</span>] != <span class="number">-1</span>) &#123;</span><br><span class="line">      <span class="keyword">if</span>((q[i] &gt; n / <span class="number">2</span>) == (q[i + <span class="number">1</span>] &gt; n / <span class="number">2</span>)) &#123;</span><br><span class="line">        <span class="comment">//cout &lt;&lt; &quot;AAA&quot; &lt;&lt; endl;</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">else</span> p.<span class="built_in">push_back</span>(<span class="built_in">min</span>(q[i], q[i + <span class="number">1</span>]));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">if</span>(q[i] == <span class="number">-1</span> &amp;&amp; q[i + <span class="number">1</span>] == <span class="number">-1</span>) cnt1++, cnt2++, p.<span class="built_in">push_back</span>(<span class="number">-1</span>);</span><br><span class="line">      <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(q[i] &gt; n / <span class="number">2</span> || q[i + <span class="number">1</span>] &gt; n / <span class="number">2</span>) p.<span class="built_in">push_back</span>(<span class="number">-1</span>);</span><br><span class="line">        <span class="keyword">else</span> p.<span class="built_in">push_back</span>(<span class="built_in">max</span>(q[i], q[i + <span class="number">1</span>])), cnt2++;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;  </span><br><span class="line">  n /= <span class="number">2</span>;</span><br><span class="line">  <span class="comment">//cout &lt;&lt; n &lt;&lt; endl;</span></span><br><span class="line">  <span class="comment">//cout &lt;&lt;  cnt1 &lt;&lt; &#x27; &#x27; &lt;&lt; cnt2 &lt;&lt; endl;</span></span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">cal2</span>(cnt1) * <span class="built_in">cal1</span>(cnt2) % mod * <span class="built_in">solve</span>(p) % mod;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  std::ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);</span><br><span class="line">  std::cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line">  vector &lt;<span class="type">int</span>&gt; q;</span><br><span class="line">  <span class="type">int</span> k;</span><br><span class="line">  cin &gt;&gt; k;</span><br><span class="line">  n = (<span class="number">1</span> &lt;&lt; k);</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">    <span class="type">int</span> x;</span><br><span class="line">    cin &gt;&gt; x;</span><br><span class="line">    q.<span class="built_in">push_back</span>(x);</span><br><span class="line">  &#125;</span><br><span class="line">  cout &lt;&lt; <span class="built_in">solve</span>(q) &lt;&lt; endl;;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="F-Editorial-for-Two"><a href="#F-Editorial-for-Two" class="headerlink" title="F. Editorial for Two"></a><a href="https://codeforces.com/contest/1837/problem/F">F. Editorial for Two</a></h3><h4 id="Description-2"><a href="#Description-2" class="headerlink" title="Description"></a>Description</h4><p>$n$ 个数中选 $k$ 个数（不改变在原序列中顺序），要求这 $k$ 个数分为前后两半后，这前后两部分和的最大值尽可能小</p>
-<h4 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h4><p>这道题可以用二分来做，对于二分值 $lim$，先正着扫一遍，再倒着扫一遍，扫到第 $i$ 位置时，我们只要算一下前 $i - 1$ 位置中 和不超过 $lim$ 的最多可以选的数的个数 + 后 $i$ 到 $n$ 位置中 和不超过 $k$ 的最多可以选的数的个数  之和是不是大于 $k$ 即可</p>
-<h4 id="Code-2"><a href="#Code-2" class="headerlink" title="Code"></a>Code</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">3e5</span> + <span class="number">5</span>;</span><br><span class="line">ll a[N], n, k, num[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">check</span><span class="params">(ll lim)</span> </span>&#123;</span><br><span class="line">  priority_queue&lt;ll&gt; q;</span><br><span class="line">  ll s = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">    s += a[i];</span><br><span class="line">    q.<span class="built_in">push</span>(a[i]);</span><br><span class="line">    <span class="keyword">while</span>(s &gt; lim) s -= q.<span class="built_in">top</span>(), q.<span class="built_in">pop</span>(); </span><br><span class="line">    num[i] = q.<span class="built_in">size</span>();</span><br><span class="line">  &#125;</span><br><span class="line">  s = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span>(q.<span class="built_in">size</span>()) q.<span class="built_in">pop</span>();</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = n; i &gt;= <span class="number">1</span>; i--) &#123;</span><br><span class="line">    s += a[i];</span><br><span class="line">    q.<span class="built_in">push</span>(a[i]);</span><br><span class="line">    <span class="keyword">while</span>(s &gt; lim) s -= q.<span class="built_in">top</span>(), q.<span class="built_in">pop</span>(); </span><br><span class="line">    <span class="keyword">if</span>(num[i - <span class="number">1</span>] + q.<span class="built_in">size</span>() &gt;= k) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  ll l = <span class="number">0</span>, r = <span class="number">0</span>, ans;</span><br><span class="line">  std::cin &gt;&gt; n &gt;&gt; k;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) std::cin &gt;&gt; a[i], r += a[i];</span><br><span class="line">  <span class="comment">//cout &lt;&lt; l &lt;&lt; &#x27; &#x27; &lt;&lt; r &lt;&lt; endl;</span></span><br><span class="line">  <span class="keyword">while</span>(r &gt;= l) &#123;</span><br><span class="line">    ll mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">check</span>(mid)) &#123;</span><br><span class="line">      ans = mid;</span><br><span class="line">      r = mid - <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> l = mid + <span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  cout &lt;&lt; ans &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  std::ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);</span><br><span class="line">  std::cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line"></span><br><span class="line">  <span class="type">int</span> t;</span><br><span class="line">  std::cin &gt;&gt; t;</span><br><span class="line">  <span class="keyword">while</span>(t--) &#123;</span><br><span class="line">    <span class="built_in">solve</span>();</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <tags>
-        <tag>算法竞赛</tag>
       </tags>
   </entry>
   <entry>
@@ -794,285 +837,12 @@
       </tags>
   </entry>
   <entry>
-    <title>大学笔记 | 线性代数</title>
-    <url>/2023/06/06/Linear-Algebra/</url>
-    <content><![CDATA[<p>从入门到入土</p>
-<span id="more"></span>
-
-<h2 id="第一章-矩阵的运算与初等变换"><a href="#第一章-矩阵的运算与初等变换" class="headerlink" title="第一章 矩阵的运算与初等变换"></a>第一章 矩阵的运算与初等变换</h2><h3 id="S-1-1-矩阵和向量的概念"><a href="#S-1-1-矩阵和向量的概念" class="headerlink" title="$\S 1.1$ 矩阵和向量的概念"></a>$\S 1.1$ 矩阵和向量的概念</h3><ul>
-<li><p>矩阵</p>
-<p>  $m \times n$ 的数表构成 $m$ 行 $n$ 列矩阵，这 $m \times n$ 个数是 $A$ 的元素，简称元</p>
-<p>  实矩阵就是全是实数元素的矩阵</p>
-<p>  复矩阵就是全是复数元素的矩阵</p>
-<ul>
-<li><p>特殊矩阵</p>
-<p>  同型矩阵：行数和列数都分别相等的矩阵（指的是两个矩阵之间的关系）</p>
-<p>  相等矩阵：同型矩阵、对应元素相等<br>  方阵：行数列数相等（就单个矩阵而言）</p>
-<p>  上（下）三角矩阵：主对角线下（上）元素全为 $0$ 的矩阵</p>
-<p>  对角矩阵：只有对角线上元素不为 $0$</p>
-<p>  列矩阵，行矩阵：$1 \times n$，$n \times 1$ 的矩阵</p>
-<p>  单位矩阵：特殊的对角阵，对角线上全为 $1$</p>
-<p>  零矩阵：全为 $0$</p>
-<p>  负矩阵：$-A $ 是 $A$ 的负矩阵</p>
-<p>  对称矩阵：元素关于对角线对称</p>
-<p>  反对称矩阵：元素关于对角线称相反数且对角线上元素全为 $0$</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="第五章-方阵的特征值，特征向量与相似化简"><a href="#第五章-方阵的特征值，特征向量与相似化简" class="headerlink" title="第五章 方阵的特征值，特征向量与相似化简"></a>第五章 方阵的特征值，特征向量与相似化简</h2><h3 id="S-5-1-数域-多项式的根"><a href="#S-5-1-数域-多项式的根" class="headerlink" title="$\S 5.1$ 数域 多项式的根"></a>$\S 5.1$ 数域 多项式的根</h3><ul>
-<li><p>数域</p>
-<p>  设 $\mathbb{Q} \subseteq K \subseteq \mathbb{C}$，称 $K$ 为一个数域，当：</p>
-<ol>
-<li>$0, 1 \in K$</li>
-<li>$\forall a, b \in K. a \pm b, ab \in K$， 且对 $b \not= 0, b^{-1} \in K$</li>
-</ol>
-</li>
-<li><p>多项式，根，零点，标准分解式</p>
-</li>
-</ul>
-<h3 id="S-5-2-方阵的特征值与特征向量"><a href="#S-5-2-方阵的特征值与特征向量" class="headerlink" title="$\S 5.2$ 方阵的特征值与特征向量"></a>$\S 5.2$ 方阵的特征值与特征向量</h3><ul>
-<li><p>$n$ 阶 $A$ 矩阵对角线上元素的和称为 $A$ 的迹，记为 $trA$</p>
-</li>
-<li><p>$\lambda E - A$ 称为 $A$ 的特征矩阵，$|\lambda E - A|$ 的值表达式 $\psi(\lambda)$ 是一</p>
-<p>  个多项式，称为 $A$ 的特征多项式，特征多项式的根称为 $A$ 的特征值，亦称为特征根 </p>
-<ul>
-<li>$\psi(\lambda) = \lambda^n+c_{n-1}\lambda^{n-1}+ \cdots + c_1\lambda + c_0$ 则有 $c_{n - 1} = -trA,c_0 = (-1)^n|A|$</li>
-<li>设 $n$ 阶矩阵 $A$ 的全部特征值 $\lambda_1,\lambda_2,\cdots,\lambda_n$，则有<ol>
-<li>$|A| = \lambda_1\cdots\lambda_n$</li>
-<li>$tr(A) = \lambda_1 + \cdots + \lambda_n$</li>
-<li>由 $(1)$ 可知方阵可逆的充要条件是所有特征值均不为0</li>
-</ol>
-</li>
-</ul>
-</li>
-<li><p>非零特征向量 $a$ 满足对于特征值 $\lambda_0$，有 $Aa = \lambda_0a$ </p>
-<ul>
-<li>若存在数 $\lambda_0$ 以及非零向量 $a$ 使 $Aa = \lambda_0a$ ，则必有 $\lambda_0$ 是 $A$ 的特征值，$a$ 是 $A$ 关于 $\lambda_0$ 的特征向量</li>
-<li>属于不同特征值的特征向量是线性无关的</li>
-<li>对于矩阵 $A$ 的 $r$ 重特征值 $\lambda$ ，属于他的线性无关特征向量个数 $k \le r$</li>
-</ul>
-</li>
-<li><p>一些结论和补充</p>
-<ul>
-<li><p>设 $R(A) = n - 1$ ，则 $A^*$ 的特征值为 $0$ （$n-1$重）和 $\sum_{i = 1}^{n}A_{ii}$ （$A_{ii}$ 为 $A$ 的元素 $a_{ii}$  对应的代数余子式）</p>
-</li>
-<li><p>设 $R(A) &lt; n-1$ 则 $A^*$ 有 $n$ 重零特征值</p>
-</li>
-<li><p>若 $\lambda$ 是 $A$ 的特征值，则 $\varphi(\lambda)$ 是 $\varphi(A)$ 的特征值</p>
-</li>
-<li><table>
-<thead>
-<tr>
-<th align="left"></th>
-<th>$A$</th>
-<th>$\varphi(A)$</th>
-<th>$A^{-1}$</th>
-<th>$A^*$</th>
-<th>$B=P^{-1}AP$</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">特征值</td>
-<td>$\lambda$</td>
-<td>$\varphi(\lambda)$</td>
-<td>$\frac{1}{\lambda}$</td>
-<td>$\frac{</td>
-<td>A</td>
-</tr>
-<tr>
-<td align="left">特征向量</td>
-<td>$\alpha$</td>
-<td>$\alpha$</td>
-<td>$\alpha$</td>
-<td>$\alpha$</td>
-<td>$p^{-1}\alpha$</td>
-</tr>
-</tbody></table>
-</li>
-<li><p>$A^T$ 与 $A$ 的特征值相同，但特征向量未必相同</p>
-</li>
-<li><p>.幂等矩阵 $A$ （$A^2 = A$）特征值为 $0$ 或 $1$</p>
-<p>  对合矩阵 $A$ （$A^2 = E$）特征值为 $-1$ 或 $1$</p>
-<p>  幂零矩阵 $A$ （$A^2 = 0$）特征值为 $0$</p>
-<p>  正交矩阵 $A$ （$AA^T = E$）特征值不一定为实数，但模长一定为 $1$ </p>
-<p>  $n$ 阶实矩阵 $A$ 满足 $R(A) = 1$，特征值 $\lambda_1 = \sum_{i = 1}^na_{ii}$，$\lambda_2=\cdots=\lambda_n = 0$（其实就是方阵秩为 $n-1$ ，其伴随矩阵的特征值）</p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="S-5-3-方阵相似于对角矩阵的条件"><a href="#S-5-3-方阵相似于对角矩阵的条件" class="headerlink" title="$\S 5.3$ 方阵相似于对角矩阵的条件"></a>$\S 5.3$ 方阵相似于对角矩阵的条件</h3><ul>
-<li><p>相似矩阵 $P^{-1}AP=B$</p>
-<p>  相似变换，反身性，对称性，传递性</p>
-<ul>
-<li>$A\sim B$，则 $R(A) = R(B)$</li>
-<li>$A\sim B$，则 $|A| = |B|$，即 $A,B$ 同时可逆或不可逆</li>
-<li>$A\sim B$，则 $A^T \sim B^T$，更进一步，$f(A) \sim f(B)$</li>
-<li>$A$ 可逆 $A\sim B$，则 $A^{-1} \sim B^{-1}$</li>
-<li>$A\sim B$，则 $A$ 与 $B$ 特征多项式相同，<strong>从而 $A$ 与 $B$ 的特征值相同，但特征向量未必相同</strong>（BTW，特征多项式相同的矩阵未必相似）</li>
-<li>$A$ 与对角矩阵相似，则对角矩阵上的元素是 $A$ 的 $n$ 个特征值</li>
-</ul>
-</li>
-<li><p>$n$ 阶方阵 $A$ 可以相似对角化的充要条件是 $A$ 有 $n$ 个线性无关的特征向量</p>
-</li>
-<li><p>设 $\lambda_i$ 是方阵 $A$ 的 $n_i$ 重特征值，那么 $A$ 对应于 $\lambda_i$ 的特征向量中线性无关组的向量个数最多为 $n_i$ 个</p>
-</li>
-<li><p>$A$ 的全部特征向量的一个极大无关组，称为 $A$ 的一个特征向量系，其向量个数 $q=\sum_{i=1}^tm_i \le \sum_{t=1}^{t}n_i=n$，$q$ 为 $n$ 时，$A$ 的特征向量时完全的，否则是不完全的，值得注意的是，对于 $A$ 的任一单特征值$\lambda_i$，必有 $m_i=n_i=1$（$n_i$ 表示第 $i$ 个特征根重数，$m_i$ 表示第 $i$ 个特征根对应方程解的个数）</p>
-</li>
-</ul>
-<h3 id="S-5-4-正交矩阵"><a href="#S-5-4-正交矩阵" class="headerlink" title="$\S 5.4$ 正交矩阵"></a>$\S 5.4$ 正交矩阵</h3><ul>
-<li>内积，向量长度，单位向量</li>
-<li>正交向量组（对于只含一个向量 $a$ 的向量组，当 $a \ne 0$ 时，该向量组也是正交组）<ul>
-<li>正交向量组也线性无关</li>
-</ul>
-</li>
-<li>将一个全是单位向量的且两两正交的向量组称为单位正交向量组</li>
-<li>$Schmidt$ 逐步正交化</li>
-<li>正交矩阵（$AA^T = E$）<ul>
-<li>$n$ 阶实矩阵 $A$ 为正交矩阵的充要条件是 $A$ 的行（列）向量都是两两正交的单位向量</li>
-<li>若 $A$ 是正交矩阵，则 $|A| = 1$ 或 $|A| = -1$ </li>
-<li>若 $A$，$B$ 均是正交矩阵，则 $AB$ 也是正交矩阵，但 $A+B$ 不是</li>
-<li>若 $A$ 是正交矩阵，则 $A^*$，$A^{-k}$ ，$A^k$ 亦为正交矩阵</li>
-<li>若 $A$ 是正交矩阵，且 $\lambda$ 是 $A$ 的特征值，则 $|\lambda| = 1$，且 $\frac{1}{\lambda}$ 也是 $A$ 的特征值</li>
-</ul>
-</li>
-<li>设 $P$ 为正交矩阵， $y = Px$ 为正交变换，正交变换不改变模长</li>
-</ul>
-<h3 id="S-5-5-实对称矩阵的相似对角化"><a href="#S-5-5-实对称矩阵的相似对角化" class="headerlink" title="$\S 5.5$ 实对称矩阵的相似对角化"></a>$\S 5.5$ 实对称矩阵的相似对角化</h3><ul>
-<li>实对称矩阵的特征值<strong>必为实数</strong></li>
-<li>实对称阵 $A$    <strong>不同特征值对应的特征向量正交</strong>，且二者互为充要条件</li>
-<li>实对称阵<strong>一定能相似对角化</strong></li>
-<li>实对称矩阵<strong>非零特征值个数等于它的秩</strong></li>
-<li>若$A$，$B$ 均为实对称阵，且 $A$ 和 $B$ 特征值完全相同，则必有 $A \sim B$</li>
-</ul>
-<h2 id="第六章-二次型与对称矩阵"><a href="#第六章-二次型与对称矩阵" class="headerlink" title="第六章 二次型与对称矩阵"></a>第六章 二次型与对称矩阵</h2><h3 id="S-6-1-二次型及其矩阵"><a href="#S-6-1-二次型及其矩阵" class="headerlink" title="$\S 6.1$ 二次型及其矩阵"></a>$\S 6.1$ 二次型及其矩阵</h3><ul>
-<li><p>二次型，二次型矩阵，二次型的秩，线性变换（可逆变换，不可逆变换）</p>
-</li>
-<li><p>合同变换</p>
-<p>  $P^TAP = B$，则 $A, B$ 合同，记为 $A \simeq B$，$P$ 为合同因子</p>
-<p>  合同必等价，反之不真</p>
-<p>  合同和相似是两个独立概念，合同未必相似，相似未必等价</p>
-</li>
-<li><p>相关结论</p>
-<p>  对实对称矩阵 $A, B$ 若 $A \sim B$，则 $A \simeq B$，但是合同未必相似 如 $diag\{3,3,3\}$ 和 $E$ 合同，但不相似</p>
-<p>  若对实对称矩阵$A, B$ 特征值相同，则 $A \simeq B$，且$A \sim B$</p>
-<p>  若 $A \simeq B$，则 $R(A) = R(B)$</p>
-<p>  若 $A \simeq B$，且 $A$ 为对称矩阵则 $B$ 也为对称矩阵（特殊的若 $A \simeq \Lambda$，则 $A$ 必为对称阵）</p>
-</li>
-</ul>
-<h3 id="S-6-2-二次型的标准型"><a href="#S-6-2-二次型的标准型" class="headerlink" title="$\S 6.2$ 二次型的标准型"></a>$\S 6.2$ 二次型的标准型</h3><ul>
-<li><p>标准型</p>
-<p>  标准型各项系数均是特征值</p>
-</li>
-<li><p>正交变换法</p>
-</li>
-<li><p>拉格朗日配方法</p>
-<p>  如果只有交叉项利用平方差公式凑出平方项</p>
-</li>
-<li><p>相关结论</p>
-<p>  任何二次型必可经过可逆线性变换为标准型</p>
-<p>  任何对称矩阵必可合同于对角矩阵</p>
-</li>
-</ul>
-<h3 id="S-6-3-合同变换与二次型的规范形"><a href="#S-6-3-合同变换与二次型的规范形" class="headerlink" title="$\S 6.3$ 合同变换与二次型的规范形"></a>$\S 6.3$ 合同变换与二次型的规范形</h3><ul>
-<li><p>合同变换法</p>
-<p>  三种初等合同变换</p>
-<p>  合同变换法 $(A|E) \to (\Lambda|P^T)$</p>
-</li>
-<li><p>实二次型的规范形</p>
-<p>  任何实对称矩阵必可经过实数域上变换得到如下矩阵</p>
-<p>  $$\begin{bmatrix}</p>
-<pre><code>1&amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \\\
-&amp; \ddots  &amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \\\
-&amp;  &amp; 1 &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \\\
-&amp;  &amp;  &amp; -1 &amp;  &amp;  &amp;  &amp;  &amp; \\\
-&amp;  &amp;  &amp;  &amp; \ddots &amp;  &amp;  &amp;  &amp; \\\
-&amp;  &amp;  &amp;  &amp;  &amp; -1 &amp;  &amp;  &amp; \\\
-&amp;  &amp;  &amp;  &amp;  &amp;  &amp; 0 &amp;  &amp; \\\
-&amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \ddots &amp; \\\
-&amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp;0</code></pre><p>  \end{bmatrix}$$</p>
-<p>  其中 $1$ 的个数 $p$ 称为正惯性指数，$-1$ 个数称为负惯性指数，$p-q$ 称为 $A$ 的符号差，正负惯性指数之和是 $A$ 的秩</p>
-<p>  两个 $n$ 阶实对称阵合同的充要条件是它们秩相同且正惯性指数也相同。</p>
-<p>  特别地，若两个 $n$ 阶实对称阵的特征值相同，则它们必相似，从而必合同。</p>
-</li>
-</ul>
-<h3 id="S-6-4-实二次型的分类-正定二次型"><a href="#S-6-4-实二次型的分类-正定二次型" class="headerlink" title="$\S 6.4$ 实二次型的分类 正定二次型"></a>$\S 6.4$ 实二次型的分类 正定二次型</h3><ul>
-<li><p>实二次型的分类</p>
-<p>  对于实二次型 $f(x) = x^TAx$，若对任何非零实向量 $x$ 都有 $f(x)$，则称 $f$ 为正定二次型</p>
-<p>  可逆线性变化不改变实二次型的正定性</p>
-</li>
-<li><p>正定二次型与正定矩阵<br>  $n$ 元实二次型正定的充分必要条件是其标准形中 $n$ 个平方项的系数全大于零<br>  实二次型 $f(x) = x^TAx$ 正定的充分必要条件是 $A$ 的特征值全大于零<br>  $n$ 元实二次型 $f(x) = x^TAx$ 正定的充分必要条件是它的正惯性指数为 $n$</p>
-<p>  实二次型 $f(x) = x^TAx$ 正定的充分必要条件是 $A$ 的所有顺次主子式全大于零</p>
-<p>  对于实对称矩阵$A$，如果实二次$f(x)=x^TAx$ 正定，则称 $A$ 是正定矩阵.</p>
-<p>  实对称矩阵 $A$ 正定的充分必要条件是 $A \simeq E$.</p>
-<p>  实对称矩阵 $A$ 正定的充分必要条件是：有可逆 $P$，使得 $A=P^TP$</p>
-</li>
-<li><p>正定矩阵的一些简单性质：</p>
-<ol>
-<li>若 $A$ 是正定矩阵，则 $A^T, A^{-1}, A^*, A^k,kA$（ $k$ 为任意正实数）均为正定矩阵。</li>
-<li>若A正定，则有|A|&gt;0,从而A必可逆。</li>
-<li>设 $A$ 与 $B$ 是正定矩阵，则 $AB$ 是正定矩阵的充要条件是 $A$ 和 $B$ 可交换</li>
-<li>设 $A、B$ 都是 $n$ 阶正定矩阵，则 $A+B$ 也是正定矩阵.</li>
-<li>设 $A$ 是 $n$ 阶正定矩阵，则对 $\forall \alpha &gt; 0, |A + \alpha E| &gt; \alpha^n$</li>
-</ol>
-</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>数学</tag>
-        <tag>大学课程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>博客搭建踩坑指北</title>
-    <url>/2023/06/27/Cross-The-Hole/</url>
-    <content><![CDATA[<p>从踩坑到掉坑里</p>
-<span id="more"></span>
-
-<p>本博客采用 Hexo + GitHub 搭建，具体教程网上很多不再赘述</p>
-<p>下面分享一些自己踩过的坑</p>
-<h3 id="公式块中公式无法正常换行"><a href="#公式块中公式无法正常换行" class="headerlink" title="公式块中公式无法正常换行"></a>公式块中公式无法正常换行</h3><h4 id="问题简述"><a href="#问题简述" class="headerlink" title="问题简述"></a>问题简述</h4><p>用 $$ 插入公式块时，本地上用 typora 显示公式换行，但网页上未显示出来</p>
-<p><code>\\</code> 无法正常换行</p>
-<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>在公式块前面加上 <code>\begin&#123;aligned&#125;</code> 末尾加上 <code>\end&#123;aligned&#125;</code> 即可</p>
-<h3 id="Majax-渲染"><a href="#Majax-渲染" class="headerlink" title="Majax 渲染"></a>Majax 渲染</h3><h4 id="问题简述-1"><a href="#问题简述-1" class="headerlink" title="问题简述"></a>问题简述</h4><ol>
-<li><p>无法正常渲染二重闭曲面积分</p>
-</li>
-<li>  <figure class="highlight latex"><table><tr><td class="code"><pre><span class="line"><span class="built_in">$</span><span class="keyword">\iiint</span><span class="built_in">_</span>&#123;<span class="keyword">\Omega</span>&#125;(<span class="keyword">\frac</span>&#123;<span class="keyword">\partial</span> P&#125;&#123;<span class="keyword">\partial</span> x&#125; + <span class="keyword">\frac</span>&#123;<span class="keyword">\partial</span> Q&#125;&#123;<span class="keyword">\partial</span> y&#125; + <span class="keyword">\frac</span>&#123;<span class="keyword">\partial</span> R&#125;&#123;<span class="keyword">\partial</span> z&#125;)dV = <span class="keyword">\unicode</span>&#123;8751&#125;<span class="built_in">_</span>&#123;<span class="keyword">\sum</span>&#125;Pdydz + Qdzdx + Rdxdy <span class="built_in">$</span></span><br></pre></td></tr></table></figure>
-
-<p> 可以正常渲染出来</p>
-<p> $\iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV = \unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy $</p>
- <figure class="highlight latex"><table><tr><td class="code"><pre><span class="line"><span class="built_in">$</span><span class="keyword">\unicode</span>&#123;8751&#125;<span class="built_in">_</span>&#123;<span class="keyword">\sum</span>&#125;Pdydz + Qdzdx + Rdxdy = <span class="keyword">\iiint</span><span class="built_in">_</span>&#123;<span class="keyword">\Omega</span>&#125;(<span class="keyword">\frac</span>&#123;<span class="keyword">\partial</span> P&#125;&#123;<span class="keyword">\partial</span> x&#125; + <span class="keyword">\frac</span>&#123;<span class="keyword">\partial</span> Q&#125;&#123;<span class="keyword">\partial</span> y&#125; + <span class="keyword">\frac</span>&#123;<span class="keyword">\partial</span> R&#125;&#123;<span class="keyword">\partial</span> z&#125;)dV<span class="built_in">$</span></span><br></pre></td></tr></table></figure>
-
-<p> 渲染异常</p>
-<p> $\unicode{8751}<em>{\sum}Pdydz + Qdzdx + Rdxdy = \iiint</em>{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$</p>
-</li>
-</ol>
-<h4 id="解决方案-1"><a href="#解决方案-1" class="headerlink" title="解决方案"></a>解决方案</h4><ol>
-<li><p>用 <code>\unicode&#123;8751&#125;</code> 表示即可</p>
-</li>
-<li><p>很神奇的问题，解决方法也很玄学，将</p>
- <figure class="highlight latex"><table><tr><td class="code"><pre><span class="line"><span class="keyword">\unicode</span>&#123;8751&#125;<span class="built_in">_</span>&#123;<span class="keyword">\sum</span>&#125;Pdydz + Qdzdx + Rdxdy = <span class="keyword">\iiint</span><span class="built_in">_</span>&#123;<span class="keyword">\Omega</span>&#125;(<span class="keyword">\frac</span>&#123;<span class="keyword">\partial</span> P&#125;&#123;<span class="keyword">\partial</span> x&#125; + <span class="keyword">\frac</span>&#123;<span class="keyword">\partial</span> Q&#125;&#123;<span class="keyword">\partial</span> y&#125; + <span class="keyword">\frac</span>&#123;<span class="keyword">\partial</span> R&#125;&#123;<span class="keyword">\partial</span> z&#125;)dV</span><br></pre></td></tr></table></figure>
-
-<p> 改为</p>
- <figure class="highlight latex"><table><tr><td class="code"><pre><span class="line"><span class="keyword">\unicode</span>&#123;8751&#125;<span class="built_in">_</span>&#123;<span class="keyword">\sum</span>&#125; Pdydz + Qdzdx + Rdxdy = <span class="keyword">\iiint</span><span class="built_in">_</span><span class="keyword">\Omega</span>(<span class="keyword">\frac</span>&#123;<span class="keyword">\partial</span> P&#125;&#123;<span class="keyword">\partial</span> x&#125; + <span class="keyword">\frac</span>&#123;<span class="keyword">\partial</span> Q&#125;&#123;<span class="keyword">\partial</span> y&#125; + <span class="keyword">\frac</span>&#123;<span class="keyword">\partial</span> R&#125;&#123;<span class="keyword">\partial</span> z&#125;)dV</span><br></pre></td></tr></table></figure>
-
-<p> 即可</p>
-<p> $\unicode{8751}_\sum Pdydz + Qdzdx + Rdxdy = \iiint_\Omega(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$</p>
-<p> 感觉可能是 <code>&#123;&#125;</code> 和 mathjax 渲染有一些冲突，具体原因还不完全清楚（？）</p>
-</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>博客搭建</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>大学笔记 | 大学物理BI</title>
     <url>/2023/06/06/Physics-I/</url>
     <content><![CDATA[<p>从入门到放弃</p>
 <span id="more"></span>
 
-<p>公式汇总<br>$$<br>\begin{gather<em>}<br>热力学\<br>内能 \ \Delta E = \frac{i}{2}\frac{m}{M}R\Delta T = \frac{i}{2}pV\<br>热量 \ Q = \frac{m}{M}C_k \Delta T \<br>等体过程\ C_V = \frac{i}{2}R \ \ 等压过程\ C_p = \frac{i + 2}{2}R\<br>等温过程\ A = \frac{m}{M}RTln\frac{V_2}{V_1}\<br>一般PV围成的面积减小是放热，增大是吸热\<br>p = nkT(微观形式)\<br>\varepsilon_k = \frac{3}{2}kT\\ \<br>电场\<br>均匀带电圆环轴线上电场 \ E = \frac{qx}{4\pi \varepsilon_0 (R^2 + x^2) ^{3/2}}\\<br>圆电流圆心处电场 \ E = 0\<br>平板电容\ C = \frac{\varepsilon S}{d}\ 圆柱形电容\ C = \frac{2\pi \varepsilon l}{ln\frac{R_B}{R_A}}\ 平板电容\ C = \frac{4\pi\varepsilon R_A R_B}{R_A - R_B}\ \\ \<br>磁场 \<br>圆电流轴线上磁场 \ B = \frac{\mu_0 I R^2}{2(R^2 + x^2)^{3 / 2}}\<br>圆电流圆心处产生磁场 \ B = \frac{\mu I}{2R} \<br>\end{gather</em>}<br>$$</p>
+<p>公式汇总<br>$$<br>\begin{gather}<br>热力学\\ \<br>内能 \ \Delta E = \frac{i}{2}\frac{m}{M}R\Delta T = \frac{i}{2}pV\\ \<br>热量 \ Q = \frac{m}{M}C_k \Delta T \\ \<br>等体过程\ C_V = \frac{i}{2}R \ \ 等压过程\ C_p = \frac{i + 2}{2}R\\ \<br>等温过程\ A = \frac{m}{M}RTln\frac{V_2}{V_1}\\ \\<br>一般PV围成的面积减小是放热，增大是吸热\\ \\<br>p = nkT(微观形式)\\ \<br>\varepsilon_k = \frac{3}{2}kT\\ \<br>电场\\ \<br>均匀带电圆环轴线上电场 \ E = \frac{qx}{4\pi \varepsilon_0 (R^2 + x^2) ^{3/2}}\\ \<br>圆电流圆心处电场 \ E = 0\\ \<br>平板电容\ C = \frac{\varepsilon S}{d}\ 圆柱形电容\ C = \frac{2\pi \varepsilon l}{ln\frac{R_B}{R_A}}\ 平板电容\ C = \frac{4\pi\varepsilon R_A R_B}{R_A - R_B}\ \\ \<br>磁场 \\ \<br>圆电流轴线上磁场 \ B = \frac{\mu_0 I R^2}{2(R^2 + x^2)^{3 / 2}}\\ \<br>圆电流圆心处产生磁场 \ B = \frac{\mu I}{2R} \\ \<br>\end{gather}<br>$$</p>
 <h2 id="第三章-刚体的定轴转动"><a href="#第三章-刚体的定轴转动" class="headerlink" title="第三章 刚体的定轴转动"></a>第三章 刚体的定轴转动</h2><ul>
 <li>常见几何体的转动惯量<ul>
 <li>细圆环 &amp; 薄圆环 $MR^2$</li>
@@ -1419,6 +1189,236 @@
       <tags>
         <tag>大学课程</tag>
         <tag>物理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大学笔记 | 线性代数</title>
+    <url>/2023/06/06/Linear-Algebra/</url>
+    <content><![CDATA[<p>从入门到入土</p>
+<span id="more"></span>
+
+<h2 id="第一章-矩阵的运算与初等变换"><a href="#第一章-矩阵的运算与初等变换" class="headerlink" title="第一章 矩阵的运算与初等变换"></a>第一章 矩阵的运算与初等变换</h2><h3 id="S-1-1-矩阵和向量的概念"><a href="#S-1-1-矩阵和向量的概念" class="headerlink" title="$\S 1.1$ 矩阵和向量的概念"></a>$\S 1.1$ 矩阵和向量的概念</h3><ul>
+<li><p>矩阵</p>
+<p>  $m \times n$ 的数表构成 $m$ 行 $n$ 列矩阵，这 $m \times n$ 个数是 $A$ 的元素，简称元</p>
+<p>  实矩阵就是全是实数元素的矩阵</p>
+<p>  复矩阵就是全是复数元素的矩阵</p>
+<ul>
+<li><p>特殊矩阵</p>
+<p>  同型矩阵：行数和列数都分别相等的矩阵（指的是两个矩阵之间的关系）</p>
+<p>  相等矩阵：同型矩阵、对应元素相等<br>  方阵：行数列数相等（就单个矩阵而言）</p>
+<p>  上（下）三角矩阵：主对角线下（上）元素全为 $0$ 的矩阵</p>
+<p>  对角矩阵：只有对角线上元素不为 $0$</p>
+<p>  列矩阵，行矩阵：$1 \times n$，$n \times 1$ 的矩阵</p>
+<p>  单位矩阵：特殊的对角阵，对角线上全为 $1$</p>
+<p>  零矩阵：全为 $0$</p>
+<p>  负矩阵：$-A $ 是 $A$ 的负矩阵</p>
+<p>  对称矩阵：元素关于对角线对称</p>
+<p>  反对称矩阵：元素关于对角线称相反数且对角线上元素全为 $0$</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="第五章-方阵的特征值，特征向量与相似化简"><a href="#第五章-方阵的特征值，特征向量与相似化简" class="headerlink" title="第五章 方阵的特征值，特征向量与相似化简"></a>第五章 方阵的特征值，特征向量与相似化简</h2><h3 id="S-5-1-数域-多项式的根"><a href="#S-5-1-数域-多项式的根" class="headerlink" title="$\S 5.1$ 数域 多项式的根"></a>$\S 5.1$ 数域 多项式的根</h3><ul>
+<li><p>数域</p>
+<p>  设 $\mathbb{Q} \subseteq K \subseteq \mathbb{C}$，称 $K$ 为一个数域，当：</p>
+<ol>
+<li>$0, 1 \in K$</li>
+<li>$\forall a, b \in K. a \pm b, ab \in K$， 且对 $b \not= 0, b^{-1} \in K$</li>
+</ol>
+</li>
+<li><p>多项式，根，零点，标准分解式</p>
+</li>
+</ul>
+<h3 id="S-5-2-方阵的特征值与特征向量"><a href="#S-5-2-方阵的特征值与特征向量" class="headerlink" title="$\S 5.2$ 方阵的特征值与特征向量"></a>$\S 5.2$ 方阵的特征值与特征向量</h3><ul>
+<li><p>$n$ 阶 $A$ 矩阵对角线上元素的和称为 $A$ 的迹，记为 $trA$</p>
+</li>
+<li><p>$\lambda E - A$ 称为 $A$ 的特征矩阵，$|\lambda E - A|$ 的值表达式 $\psi(\lambda)$ 是一</p>
+<p>  个多项式，称为 $A$ 的特征多项式，特征多项式的根称为 $A$ 的特征值，亦称为特征根 </p>
+<ul>
+<li>$\psi(\lambda) = \lambda^n+c_{n-1}\lambda^{n-1}+ \cdots + c_1\lambda + c_0$ 则有 $c_{n - 1} = -trA,c_0 = (-1)^n|A|$</li>
+<li>设 $n$ 阶矩阵 $A$ 的全部特征值 $\lambda_1,\lambda_2,\cdots,\lambda_n$，则有<ol>
+<li>$|A| = \lambda_1\cdots\lambda_n$</li>
+<li>$tr(A) = \lambda_1 + \cdots + \lambda_n$</li>
+<li>由 $(1)$ 可知方阵可逆的充要条件是所有特征值均不为0</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>非零特征向量 $a$ 满足对于特征值 $\lambda_0$，有 $Aa = \lambda_0a$ </p>
+<ul>
+<li>若存在数 $\lambda_0$ 以及非零向量 $a$ 使 $Aa = \lambda_0a$ ，则必有 $\lambda_0$ 是 $A$ 的特征值，$a$ 是 $A$ 关于 $\lambda_0$ 的特征向量</li>
+<li>属于不同特征值的特征向量是线性无关的</li>
+<li>对于矩阵 $A$ 的 $r$ 重特征值 $\lambda$ ，属于他的线性无关特征向量个数 $k \le r$</li>
+</ul>
+</li>
+<li><p>一些结论和补充</p>
+<ul>
+<li><p>设 $R(A) = n - 1$ ，则 $A^*$ 的特征值为 $0$ （$n-1$重）和 $\sum_{i = 1}^{n}A_{ii}$ （$A_{ii}$ 为 $A$ 的元素 $a_{ii}$  对应的代数余子式）</p>
+</li>
+<li><p>设 $R(A) &lt; n-1$ 则 $A^*$ 有 $n$ 重零特征值</p>
+</li>
+<li><p>若 $\lambda$ 是 $A$ 的特征值，则 $\varphi(\lambda)$ 是 $\varphi(A)$ 的特征值</p>
+</li>
+<li><table>
+<thead>
+<tr>
+<th align="left"></th>
+<th>$A$</th>
+<th>$\varphi(A)$</th>
+<th>$A^{-1}$</th>
+<th>$A^*$</th>
+<th>$B=P^{-1}AP$</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">特征值</td>
+<td>$\lambda$</td>
+<td>$\varphi(\lambda)$</td>
+<td>$\frac{1}{\lambda}$</td>
+<td>$\frac{</td>
+<td>A</td>
+</tr>
+<tr>
+<td align="left">特征向量</td>
+<td>$\alpha$</td>
+<td>$\alpha$</td>
+<td>$\alpha$</td>
+<td>$\alpha$</td>
+<td>$p^{-1}\alpha$</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>$A^T$ 与 $A$ 的特征值相同，但特征向量未必相同</p>
+</li>
+<li><p>.幂等矩阵 $A$ （$A^2 = A$）特征值为 $0$ 或 $1$</p>
+<p>  对合矩阵 $A$ （$A^2 = E$）特征值为 $-1$ 或 $1$</p>
+<p>  幂零矩阵 $A$ （$A^2 = 0$）特征值为 $0$</p>
+<p>  正交矩阵 $A$ （$AA^T = E$）特征值不一定为实数，但模长一定为 $1$ </p>
+<p>  $n$ 阶实矩阵 $A$ 满足 $R(A) = 1$，特征值 $\lambda_1 = \sum_{i = 1}^na_{ii}$，$\lambda_2=\cdots=\lambda_n = 0$（其实就是方阵秩为 $n-1$ ，其伴随矩阵的特征值）</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="S-5-3-方阵相似于对角矩阵的条件"><a href="#S-5-3-方阵相似于对角矩阵的条件" class="headerlink" title="$\S 5.3$ 方阵相似于对角矩阵的条件"></a>$\S 5.3$ 方阵相似于对角矩阵的条件</h3><ul>
+<li><p>相似矩阵 $P^{-1}AP=B$</p>
+<p>  相似变换，反身性，对称性，传递性</p>
+<ul>
+<li>$A\sim B$，则 $R(A) = R(B)$</li>
+<li>$A\sim B$，则 $|A| = |B|$，即 $A,B$ 同时可逆或不可逆</li>
+<li>$A\sim B$，则 $A^T \sim B^T$，更进一步，$f(A) \sim f(B)$</li>
+<li>$A$ 可逆 $A\sim B$，则 $A^{-1} \sim B^{-1}$</li>
+<li>$A\sim B$，则 $A$ 与 $B$ 特征多项式相同，<strong>从而 $A$ 与 $B$ 的特征值相同，但特征向量未必相同</strong>（BTW，特征多项式相同的矩阵未必相似）</li>
+<li>$A$ 与对角矩阵相似，则对角矩阵上的元素是 $A$ 的 $n$ 个特征值</li>
+</ul>
+</li>
+<li><p>$n$ 阶方阵 $A$ 可以相似对角化的充要条件是 $A$ 有 $n$ 个线性无关的特征向量</p>
+</li>
+<li><p>设 $\lambda_i$ 是方阵 $A$ 的 $n_i$ 重特征值，那么 $A$ 对应于 $\lambda_i$ 的特征向量中线性无关组的向量个数最多为 $n_i$ 个</p>
+</li>
+<li><p>$A$ 的全部特征向量的一个极大无关组，称为 $A$ 的一个特征向量系，其向量个数 $q=\sum_{i=1}^tm_i \le \sum_{t=1}^{t}n_i=n$，$q$ 为 $n$ 时，$A$ 的特征向量时完全的，否则是不完全的，值得注意的是，对于 $A$ 的任一单特征值$\lambda_i$，必有 $m_i=n_i=1$（$n_i$ 表示第 $i$ 个特征根重数，$m_i$ 表示第 $i$ 个特征根对应方程解的个数）</p>
+</li>
+</ul>
+<h3 id="S-5-4-正交矩阵"><a href="#S-5-4-正交矩阵" class="headerlink" title="$\S 5.4$ 正交矩阵"></a>$\S 5.4$ 正交矩阵</h3><ul>
+<li>内积，向量长度，单位向量</li>
+<li>正交向量组（对于只含一个向量 $a$ 的向量组，当 $a \ne 0$ 时，该向量组也是正交组）<ul>
+<li>正交向量组也线性无关</li>
+</ul>
+</li>
+<li>将一个全是单位向量的且两两正交的向量组称为单位正交向量组</li>
+<li>$Schmidt$ 逐步正交化</li>
+<li>正交矩阵（$AA^T = E$）<ul>
+<li>$n$ 阶实矩阵 $A$ 为正交矩阵的充要条件是 $A$ 的行（列）向量都是两两正交的单位向量</li>
+<li>若 $A$ 是正交矩阵，则 $|A| = 1$ 或 $|A| = -1$ </li>
+<li>若 $A$，$B$ 均是正交矩阵，则 $AB$ 也是正交矩阵，但 $A+B$ 不是</li>
+<li>若 $A$ 是正交矩阵，则 $A^*$，$A^{-k}$ ，$A^k$ 亦为正交矩阵</li>
+<li>若 $A$ 是正交矩阵，且 $\lambda$ 是 $A$ 的特征值，则 $|\lambda| = 1$，且 $\frac{1}{\lambda}$ 也是 $A$ 的特征值</li>
+</ul>
+</li>
+<li>设 $P$ 为正交矩阵， $y = Px$ 为正交变换，正交变换不改变模长</li>
+</ul>
+<h3 id="S-5-5-实对称矩阵的相似对角化"><a href="#S-5-5-实对称矩阵的相似对角化" class="headerlink" title="$\S 5.5$ 实对称矩阵的相似对角化"></a>$\S 5.5$ 实对称矩阵的相似对角化</h3><ul>
+<li>实对称矩阵的特征值<strong>必为实数</strong></li>
+<li>实对称阵 $A$    <strong>不同特征值对应的特征向量正交</strong>，且二者互为充要条件</li>
+<li>实对称阵<strong>一定能相似对角化</strong></li>
+<li>实对称矩阵<strong>非零特征值个数等于它的秩</strong></li>
+<li>若$A$，$B$ 均为实对称阵，且 $A$ 和 $B$ 特征值完全相同，则必有 $A \sim B$</li>
+</ul>
+<h2 id="第六章-二次型与对称矩阵"><a href="#第六章-二次型与对称矩阵" class="headerlink" title="第六章 二次型与对称矩阵"></a>第六章 二次型与对称矩阵</h2><h3 id="S-6-1-二次型及其矩阵"><a href="#S-6-1-二次型及其矩阵" class="headerlink" title="$\S 6.1$ 二次型及其矩阵"></a>$\S 6.1$ 二次型及其矩阵</h3><ul>
+<li><p>二次型，二次型矩阵，二次型的秩，线性变换（可逆变换，不可逆变换）</p>
+</li>
+<li><p>合同变换</p>
+<p>  $P^TAP = B$，则 $A, B$ 合同，记为 $A \simeq B$，$P$ 为合同因子</p>
+<p>  合同必等价，反之不真</p>
+<p>  合同和相似是两个独立概念，合同未必相似，相似未必等价</p>
+</li>
+<li><p>相关结论</p>
+<p>  对实对称矩阵 $A, B$ 若 $A \sim B$，则 $A \simeq B$，但是合同未必相似 如 $diag\{3,3,3\}$ 和 $E$ 合同，但不相似</p>
+<p>  若对实对称矩阵$A, B$ 特征值相同，则 $A \simeq B$，且$A \sim B$</p>
+<p>  若 $A \simeq B$，则 $R(A) = R(B)$</p>
+<p>  若 $A \simeq B$，且 $A$ 为对称矩阵则 $B$ 也为对称矩阵（特殊的若 $A \simeq \Lambda$，则 $A$ 必为对称阵）</p>
+</li>
+</ul>
+<h3 id="S-6-2-二次型的标准型"><a href="#S-6-2-二次型的标准型" class="headerlink" title="$\S 6.2$ 二次型的标准型"></a>$\S 6.2$ 二次型的标准型</h3><ul>
+<li><p>标准型</p>
+<p>  标准型各项系数均是特征值</p>
+</li>
+<li><p>正交变换法</p>
+</li>
+<li><p>拉格朗日配方法</p>
+<p>  如果只有交叉项利用平方差公式凑出平方项</p>
+</li>
+<li><p>相关结论</p>
+<p>  任何二次型必可经过可逆线性变换为标准型</p>
+<p>  任何对称矩阵必可合同于对角矩阵</p>
+</li>
+</ul>
+<h3 id="S-6-3-合同变换与二次型的规范形"><a href="#S-6-3-合同变换与二次型的规范形" class="headerlink" title="$\S 6.3$ 合同变换与二次型的规范形"></a>$\S 6.3$ 合同变换与二次型的规范形</h3><ul>
+<li><p>合同变换法</p>
+<p>  三种初等合同变换</p>
+<p>  合同变换法 $(A|E) \to (\Lambda|P^T)$</p>
+</li>
+<li><p>实二次型的规范形</p>
+<p>  任何实对称矩阵必可经过实数域上变换得到如下矩阵</p>
+<p>  $$\begin{bmatrix}</p>
+<pre><code>1&amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \\\
+&amp; \ddots  &amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \\\
+&amp;  &amp; 1 &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \\\
+&amp;  &amp;  &amp; -1 &amp;  &amp;  &amp;  &amp;  &amp; \\\
+&amp;  &amp;  &amp;  &amp; \ddots &amp;  &amp;  &amp;  &amp; \\\
+&amp;  &amp;  &amp;  &amp;  &amp; -1 &amp;  &amp;  &amp; \\\
+&amp;  &amp;  &amp;  &amp;  &amp;  &amp; 0 &amp;  &amp; \\\
+&amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \ddots &amp; \\\
+&amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp;0</code></pre><p>  \end{bmatrix}$$</p>
+<p>  其中 $1$ 的个数 $p$ 称为正惯性指数，$-1$ 个数称为负惯性指数，$p-q$ 称为 $A$ 的符号差，正负惯性指数之和是 $A$ 的秩</p>
+<p>  两个 $n$ 阶实对称阵合同的充要条件是它们秩相同且正惯性指数也相同。</p>
+<p>  特别地，若两个 $n$ 阶实对称阵的特征值相同，则它们必相似，从而必合同。</p>
+</li>
+</ul>
+<h3 id="S-6-4-实二次型的分类-正定二次型"><a href="#S-6-4-实二次型的分类-正定二次型" class="headerlink" title="$\S 6.4$ 实二次型的分类 正定二次型"></a>$\S 6.4$ 实二次型的分类 正定二次型</h3><ul>
+<li><p>实二次型的分类</p>
+<p>  对于实二次型 $f(x) = x^TAx$，若对任何非零实向量 $x$ 都有 $f(x)$，则称 $f$ 为正定二次型</p>
+<p>  可逆线性变化不改变实二次型的正定性</p>
+</li>
+<li><p>正定二次型与正定矩阵<br>  $n$ 元实二次型正定的充分必要条件是其标准形中 $n$ 个平方项的系数全大于零<br>  实二次型 $f(x) = x^TAx$ 正定的充分必要条件是 $A$ 的特征值全大于零<br>  $n$ 元实二次型 $f(x) = x^TAx$ 正定的充分必要条件是它的正惯性指数为 $n$</p>
+<p>  实二次型 $f(x) = x^TAx$ 正定的充分必要条件是 $A$ 的所有顺次主子式全大于零</p>
+<p>  对于实对称矩阵$A$，如果实二次$f(x)=x^TAx$ 正定，则称 $A$ 是正定矩阵.</p>
+<p>  实对称矩阵 $A$ 正定的充分必要条件是 $A \simeq E$.</p>
+<p>  实对称矩阵 $A$ 正定的充分必要条件是：有可逆 $P$，使得 $A=P^TP$</p>
+</li>
+<li><p>正定矩阵的一些简单性质：</p>
+<ol>
+<li>若 $A$ 是正定矩阵，则 $A^T, A^{-1}, A^*, A^k,kA$（ $k$ 为任意正实数）均为正定矩阵。</li>
+<li>若A正定，则有|A|&gt;0,从而A必可逆。</li>
+<li>设 $A$ 与 $B$ 是正定矩阵，则 $AB$ 是正定矩阵的充要条件是 $A$ 和 $B$ 可交换</li>
+<li>设 $A、B$ 都是 $n$ 阶正定矩阵，则 $A+B$ 也是正定矩阵.</li>
+<li>设 $A$ 是 $n$ 阶正定矩阵，则对 $\forall \alpha &gt; 0, |A + \alpha E| &gt; \alpha^n$</li>
+</ol>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>数学</tag>
+        <tag>大学课程</tag>
       </tags>
   </entry>
 </search>
