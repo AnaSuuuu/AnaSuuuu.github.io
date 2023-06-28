@@ -20,19 +20,21 @@
     var CONFIG = {"hostname":"anasuuuu.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"manual"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="注：本页面所介绍的内容可能会不定期更新 博客尚处于完善阶段，本页面也是  氦！ 这里是 Ana_Su 的博客 (≧∇≦)ﾉ  关于我 性别男，安徽芜湖人 目前就读于 JLU，学习通信工程相关的知识，时刻为上门装宽带准备着 是个轻微重度社恐，平时不太主动找人交流，更倾向于一个人呆着，前段时间微信 puq 通道试着关闭了之后发现根本没有看 puq 的需求，之后就很少关注朋友的 puq 了 平时很少打">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于">
-<meta property="og:url" content="https://anasuuuu.github.io/about/index.html">
+  <meta name="description" content="浅挖个坑，期末考完填上">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习笔记 | 多项式与生成函数">
+<meta property="og:url" content="https://anasuuuu.github.io/2023/06/28/Poly/index.html">
 <meta property="og:site_name" content="Ana_Su&#39;s Blog">
-<meta property="og:description" content="注：本页面所介绍的内容可能会不定期更新 博客尚处于完善阶段，本页面也是  氦！ 这里是 Ana_Su 的博客 (≧∇≦)ﾉ  关于我 性别男，安徽芜湖人 目前就读于 JLU，学习通信工程相关的知识，时刻为上门装宽带准备着 是个轻微重度社恐，平时不太主动找人交流，更倾向于一个人呆着，前段时间微信 puq 通道试着关闭了之后发现根本没有看 puq 的需求，之后就很少关注朋友的 puq 了 平时很少打">
+<meta property="og:description" content="浅挖个坑，期末考完填上">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-06-13T04:55:42.000Z">
-<meta property="article:modified_time" content="2023-06-28T15:13:01.385Z">
+<meta property="article:published_time" content="2023-06-28T15:44:11.000Z">
+<meta property="article:modified_time" content="2023-06-28T15:45:20.076Z">
 <meta property="article:author" content="Ana Su">
+<meta property="article:tag" content="算法竞赛">
+<meta property="article:tag" content="数学">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://anasuuuu.github.io/about/">
+<link rel="canonical" href="https://anasuuuu.github.io/2023/06/28/Poly/">
 
 
 <script id="page-configurations">
@@ -40,13 +42,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>关于 | Ana_Su's Blog
-</title>
+  <title>学习笔记 | 多项式与生成函数 | Ana_Su's Blog</title>
   
 
 
@@ -178,68 +179,106 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="zh-CN">
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://anasuuuu.github.io/2023/06/28/Poly/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/./images/avatar.jpg">
+      <meta itemprop="name" content="Ana Su">
+      <meta itemprop="description" content="HELLO,WORLD!">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ana_Su's Blog">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          学习笔记 | 多项式与生成函数
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">关于
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
 
-<div class="post-meta">
+              <time title="创建时间：2023-06-28 23:44:11 / 修改时间：23:45:20" itemprop="dateCreated datePublished" datetime="2023-06-28T23:44:11+08:00">2023-06-28</time>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>11</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>浅挖个坑，期末考完填上</p>
+<span id="more"></span>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/" rel="tag"># 算法竞赛</a>
+              <a href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag"># 数学</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/06/27/Cross-The-Hole/" rel="prev" title="博客搭建踩坑指北">
+      <i class="fa fa-chevron-left"></i> 博客搭建踩坑指北
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          <blockquote>
-<p>注：本页面所介绍的内容可能会不定期更新</p>
-<p>博客尚处于完善阶段，本页面也是</p>
-</blockquote>
-<p>氦！</p>
-<p>这里是 Ana_Su 的博客 (≧∇≦)ﾉ</p>
-<hr>
-<h3 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h3><ul>
-<li>性别男，安徽芜湖人</li>
-<li>目前就读于 JLU，学习通信工程相关的知识，<del>时刻为上门装宽带准备着</del></li>
-<li>是个轻微重度社恐，平时不太主动找人交流，更倾向于一个人呆着，前段时间微信 puq 通道试着关闭了之后发现根本没有看 puq 的需求，之后就很少关注朋友的 puq 了</li>
-<li>平时很少打游戏，但偶尔会看看动漫，算是个二次元（？）<del>不过纯度可能越来越低了（悲</del></li>
-</ul>
-<hr>
-<h3 id="关于博客"><a href="#关于博客" class="headerlink" title="关于博客"></a>关于博客</h3><ul>
-<li>或许会分享一些大学的笔记，日常生活的胡思乱想以及自认为有趣的东西（？）</li>
-<li>鉴于本人知识水平和认知水准的限制，本博客的内容不一定保证正确（<strong>请时刻记住这一点</strong>），希望读者阅读时保持自己的思考。对于一些个人发表的偏主观的看法，大家或许看作是一个心智不成熟人的胡言乱语会更好点（？）对于一些学习笔记，也请谨慎阅读，因为我是真的很菜</li>
-<li>随时欢迎各种反馈，我会认真改进的 (～￣▽￣)～</li>
-</ul>
-<hr>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>贴一些奇奇怪怪的链接（？）</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Rv4y1w7hA/?spm_id_from=333.999.0.0&vd_source=0f0f84fd4f7853dba4619576003d75fb">整点赛博薯条</a></li>
-<li><a target="_blank" rel="noopener" href="https://y.qq.com/n/ryqq/playlist/8552471142">学习时的歌单</a></li>
-</ul>
-
-      </div>
-      
-      
-      
-    </div>
-    
-
-    
-    
-    
 
 
           </div>
@@ -290,7 +329,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E6%88%91"><span class="nav-text">关于我</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2"><span class="nav-text">关于博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-text">其他</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
