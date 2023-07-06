@@ -30,8 +30,8 @@
 <meta property="article:published_time" content="2023-07-05T15:42:29.000Z">
 <meta property="article:modified_time" content="2023-07-06T09:22:29.441Z">
 <meta property="article:author" content="Ana Su">
-<meta property="article:tag" content="数学">
 <meta property="article:tag" content="算法竞赛">
+<meta property="article:tag" content="数学">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://anasuuuu.github.io/2023/07/05/Math-In-ACM-I/">
@@ -256,6 +256,7 @@
       
         <p>好记性不如烂笔头 qwq</p>
 <span id="more"></span>
+
 <h2 id="1-扩展欧几里得算法"><a href="#1-扩展欧几里得算法" class="headerlink" title="1. 扩展欧几里得算法"></a>1. 扩展欧几里得算法</h2><h3 id="1-1-算法介绍"><a href="#1-1-算法介绍" class="headerlink" title="1.1 算法介绍"></a>1.1 算法介绍</h3><p>设 $a, b$ 为不全为 $0$ 的整数，存在整数 $x, y$ 使得 $ax + by = (a, b)$。</p>
 <p>进一步地，$ax + by = m$ 有解的充要条件是 $(a, b) | m$ （裴蜀定理，又叫做贝祖定理） 。</p>
 <h3 id="1-2-证明"><a href="#1-2-证明" class="headerlink" title="1.2 证明"></a>1.2 证明</h3><p>若我们求 $ax + by = (a, b)$ 的解，不如先求 $bx + (a \% b) y = (b, a \% b)$ 的解，而且由欧几里得算法可知 $(a, b) = (b, a \% b)$。</p>
@@ -263,6 +264,9 @@
 <p>对于进一步结论的证明，若 $m$ 是该方程组的解，由于 $(a, b)$ 可以整除左式，那么 $(a, b)$ 也可以整除右式（充分性）。</p>
 <p>若 $(a, b)|m$，那么我们已知 $ax + by = (a, b)$ 的一组解，等式两边同时乘以 $\dfrac{m}{(a, b)}$ 便可以得到原方程组的解（必要性）。</p>
 <h3 id="1-3-例题"><a href="#1-3-例题" class="headerlink" title="1.3 例题"></a>1.3 例题</h3><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">exgcd</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b, <span class="type">int</span> &amp;x, <span class="type">int</span> &amp;y)</span> </span>{</span><br><span class="line">    <span class="keyword">if</span> (b == <span class="number">0</span>) {</span><br><span class="line">        x = <span class="number">1</span>;</span><br><span class="line">        y = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    }</span><br><span class="line">    <span class="type">int</span> d = <span class="built_in">exgcd</span>(b, a % b, y, x); </span><br><span class="line">    y -= (a / b) * x;</span><br><span class="line">    <span class="keyword">return</span> d;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+
+
 
     </div>
 
@@ -272,8 +276,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag"># 数学</a>
               <a href="/tags/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/" rel="tag"># 算法竞赛</a>
+              <a href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag"># 数学</a>
           </div>
 
         
@@ -426,12 +430,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">44k</span>
+    <span title="站点总字数">38k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:20</span>
+    <span title="站点阅读时长">1:09</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>

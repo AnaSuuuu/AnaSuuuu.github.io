@@ -301,6 +301,7 @@
       
         <p>从入门到进门</p>
 <span id="more"></span>
+
 <h2 id="第一章-电路模型和电路定律"><a href="#第一章-电路模型和电路定律" class="headerlink" title="第一章 电路模型和电路定律"></a>第一章 电路模型和电路定律</h2><h4 id="第一章总结"><a href="#第一章总结" class="headerlink" title="第一章总结"></a>第一章总结</h4><ol>
 <li>研究的电路都满足集总假设条件，默认电路都是集总电路</li>
 <li>激励称为输入，响应称为输出</li>
@@ -314,19 +315,19 @@
 <li><p>电流源并联时叠加，串联时要求两个电流源相等且就是这两个电流源大小，电压源串联时叠加，并联要求电压源相等</p>
 </li>
 <li><p>单口网络等效变换</p>
-<p> <img src="单口网络等效变换.png" alt="单口网络等效变换"></p>
+<p> <img src="%E5%8D%95%E5%8F%A3%E7%BD%91%E7%BB%9C%E7%AD%89%E6%95%88%E5%8F%98%E6%8D%A2.png" alt="单口网络等效变换"></p>
 </li>
 <li><p>Y-Δ变换</p>
-<p> <img src="Y-Δ变换1.png" alt="Y-Δ变换1"></p>
-<p> <img src="Y-Δ变换2.png" alt="Y-Δ变换2"></p>
-<p> <img src="Y-Δ变换3.png" alt="Y-Δ变换3"></p>
+<p> <img src="Y-%CE%94%E5%8F%98%E6%8D%A21.png" alt="Y-Δ变换1"></p>
+<p> <img src="Y-%CE%94%E5%8F%98%E6%8D%A22.png" alt="Y-Δ变换2"></p>
+<p> <img src="Y-%CE%94%E5%8F%98%E6%8D%A23.png" alt="Y-Δ变换3"></p>
 </li>
 </ol>
 <h2 id="第三章-直流电阻电路的一般分析"><a href="#第三章-直流电阻电路的一般分析" class="headerlink" title="第三章 直流电阻电路的一般分析"></a>第三章 直流电阻电路的一般分析</h2><h4 id="第三章总结"><a href="#第三章总结" class="headerlink" title="第三章总结"></a>第三章总结</h4><ol>
 <li><p>网孔分析法 ：每个网孔各设一个电流，利用回路中总电压代数和为 $0$ 列方程，方程左右两边满足 <code>压升 = 压降</code> ，<strong>注意设的电流方向</strong> （本质是 KVL）</p>
 </li>
 <li><p>节点分析法（本质是 KCL）</p>
-<p> <img src="节点分析法.png" alt="节点分析法"></p>
+<p> <img src="%E8%8A%82%E7%82%B9%E5%88%86%E6%9E%90%E6%B3%95.png" alt="节点分析法"></p>
 <p> 注意右式是以流<strong>进</strong>的电流为正，并且如果某一个支路上要是有电流源了，那么和这个电流源串联的电阻在算自感，互感时都可以忽略不计</p>
 <p> 还要注意的是，如果网络含独立电压源，最好一段接地，另一端直接求出电压</p>
 </li>
@@ -334,13 +335,15 @@
 </li>
 </ol>
 <p>例题：</p>
-<p><img src="例2.1.png" alt="例2.1"></p>
+<p><img src="%E4%BE%8B2.1.png" alt="例2.1"></p>
 <blockquote>
 <p>解：左图可以化简为右图，易得 $I = \frac{2}{3}$</p>
 </blockquote>
 <h2 id="第四章-电路定理"><a href="#第四章-电路定理" class="headerlink" title="第四章 电路定理"></a>第四章 电路定理</h2><h4 id="第四章总结"><a href="#第四章总结" class="headerlink" title="第四章总结"></a>第四章总结</h4><ol>
-<li>叠加定理和齐次定理只对线性电路适用</li>
-<li>注意的是叠加定理每次都是只考虑一个<strong>独立源</strong>，受控源每次都是放在电路中的</li>
+<li><p>叠加定理和齐次定理只对线性电路适用</p>
+</li>
+<li><p>注意的是叠加定理每次都是只考虑一个<strong>独立源</strong>，受控源每次都是放在电路中的</p>
+</li>
 <li><p>置换定理：利用电压源 / 电流源替换（例题1， 2）</p>
 </li>
 <li><p>戴维南定理：单口网络可以等效为电压源串电阻，电压源大小为开路电压，电阻为独立源置0后的阻值（注意受控源有阻值） </p>
@@ -349,11 +352,12 @@
 </li>
 <li><p>求输出电阻常用的方法有：等效电阻法（这里是从端口方向看的），外加电压法（独立源要置0），开短路法（注意后面两个方法适合含受控源的情况）</p>
 </li>
-<li>$R_L = R_0$ 时满足最大功率条件，$\eta = \frac{负载产生功率}{总产生功率}$ 注意多个电源存在时有的电源会吸收功率，这个功率不能算在分母里，分母中只能算产生功率，而且算 $\eta$ 时要带回原电路来算，不能盲目认为 $R_L$ 和端口等效电阻相等就认为 $\eta$ 是 $50\%$</li>
+<li><p>$R_L = R_0$ 时满足最大功率条件，$\eta = \frac{负载产生功率}{总产生功率}$ 注意多个电源存在时有的电源会吸收功率，这个功率不能算在分母里，分母中只能算产生功率，而且算 $\eta$ 时要带回原电路来算，不能盲目认为 $R_L$ 和端口等效电阻相等就认为 $\eta$ 是 $50\%$</p>
+</li>
 </ol>
 <p>例题：</p>
-<p><img src="例3.1.png" alt="例3.1"></p>
-<p><img src="例3.2.png" alt="例3.2"></p>
+<p><img src="%E4%BE%8B3.1.png" alt="例3.1"></p>
+<p><img src="%E4%BE%8B3.2.png" alt="例3.2"></p>
 <blockquote>
 <p>当我们知道某支路上的电流 / 电压时，我们可以用<strong>电压源 / 电流源来替换该支路上的其他元件</strong>，这样的话并不改变整个电路结构，研究某一复杂电路时，我们要清楚自己到底想求什么，然后对于<strong>和电流源串联的元件，思考能否舍弃，和电压源并联的元件，思考能否舍弃</strong></p>
 </blockquote>
@@ -362,13 +366,13 @@
 <p> 动态电路：至少含有一个动态元件，含有几个动态元件就称为几阶动态电路</p>
 </li>
 <li><p>电容，电感</p>
-<p> <img src="电容，电感关系.png" alt="电容，电感关系"></p>
+<p> <img src="%E7%94%B5%E5%AE%B9%EF%BC%8C%E7%94%B5%E6%84%9F%E5%85%B3%E7%B3%BB.png" alt="电容，电感关系"></p>
 </li>
 <li><p>完全响应 = 零输入响应 + 零状态响应</p>
 <p> = 固有响应 + 强迫响应</p>
 <p> = 暂态响应 + 稳态响应</p>
 <p> 其实暂态可以粗浅理解为 $e^{-kt}$ 的量</p>
-<p> <img src="几个概念.png" alt="几个概念"></p>
+<p> <img src="%E5%87%A0%E4%B8%AA%E6%A6%82%E5%BF%B5.png" alt="几个概念"></p>
 </li>
 <li><p>$f(t) = f(\infty) + [f(0_+) - f(\infty)]e^{\frac{t}{\tau}}$</p>
 </li>
@@ -401,51 +405,48 @@
 <p>  <strong>一阶线性直流电路</strong>中的电感电容<strong>电阻</strong>， 均适用三要素法</p>
 </li>
 </ul>
-<p><img src="换路定则.png" alt="换路定则"></p>
+<p><img src="%E6%8D%A2%E8%B7%AF%E5%AE%9A%E5%88%99.png" alt="换路定则"></p>
 <p><strong>注意一下换路定理不能盲目用</strong></p>
-<p><img src="特例.png" alt="特例"></p>
+<p><img src="%E7%89%B9%E4%BE%8B.png" alt="特例"></p>
 <h3 id="S-5-3-一阶电路的跃阶响应"><a href="#S-5-3-一阶电路的跃阶响应" class="headerlink" title="$\S 5.3$ 一阶电路的跃阶响应"></a>$\S 5.3$ 一阶电路的跃阶响应</h3><ul>
-<li>单位跃阶函数时一种奇异函数， 定义 $\varepsilon(t) = \begin{cases} 0 &amp;&amp; t &lt; 0\ 1 &amp;&amp; t &gt; 0\end{cases}$</li>
+<li><p>单位跃阶函数时一种奇异函数， 定义 $\varepsilon(t) = \begin{cases} 0 &amp;&amp; t &lt; 0\\ 1 &amp;&amp; t &gt; 0\end{cases}$</p>
+</li>
 <li><p>电路的单位跃阶响应为 $s(t) = (1 - e^{-\frac{t}{\tau}})\varepsilon(t)$ </p>
 </li>
 <li><p>其实可以先求出电压为 $1V$ 时的响应函数，然后用阶跃函数表示电压函数，最后真正响应函数的零状态响应就是阶跃函数 $\times (1 - e^{-\frac{t}{\tau}})$ 然后再加上零输入响应就是完全响应</p>
 </li>
 </ul>
-<p><img src="例5.1.jpg" alt="例5.1"></p>
+<p><img src="%E4%BE%8B5.1.jpg" alt="例5.1"></p>
 <p>（有坑）</p>
-<p><img src="例5.2.png" alt="例5.2"></p>
+<p><img src="%E4%BE%8B5.2.png" alt="例5.2"></p>
 <blockquote>
 <p>首先从状态量入手，算 $0_-$ 时候的<strong>状态量</strong>，研究 $0_+$ 状态时可以把电容变为电压源，电感变为电流源，然后用三要素法分析。但是这题有个坑。无论是状态量还是非状态量，分解成暂态响应和固态响应时都可以直接按 <code>常数</code> + <code>按e指数衰减部分</code> ，但是分解成零输入和零状态时，状态量比较好分解就按照一般方法来，非状态量不可以按照状态量的方法，要列关于 i / u 的方程，然后把 i / u 转化为零输入 / 零状态时的量来求 </p>
 </blockquote>
-<p><img src="例5.3.png" alt="例5.3"></p>
+<p><img src="%E4%BE%8B5.3.png" alt="例5.3"></p>
 <blockquote>
 <p>分成 $0 &lt; t &lt; 1$ 和 $1 &lt; t$ 区间来处理</p>
-<script type="math/tex; mode=display">t = \begin{cases} 2(1 - e^{-t}) \ , 0 \le t \le 1& \\\ 1 + (1 - 2e^{-1})e^{-2(t - 1)} \ ,t \ge 1 & \end{cases}</script></blockquote>
-<p><img src="例5.4.png" alt="例5.4"></p>
+<p>$$t = \begin{cases} 2(1 - e^{-t}) \ , 0 \le t \le 1&amp; \\\ 1 + (1 - 2e^{-1})e^{-2(t - 1)} \ ,t \ge 1 &amp; \end{cases}$$</p>
+</blockquote>
+<p><img src="%E4%BE%8B5.4.png" alt="例5.4"></p>
 <blockquote>
-<script type="math/tex; mode=display">
-u_s(t) = \varepsilon(t) + 2\varepsilon(t - 1) - 3\varepsilon(t - 3)\\
-t = \begin{cases} 20e^{-\frac{t}{\tau}} + (1 - e^{-\frac{t}{\tau}}) \ , 0 \le t \le 1& \\ 20e^{-\frac{t}{\tau}} + (1 - e^{-\frac{t}{\tau}}) + 2(1 - e^{-\frac{t - 1}{\tau}}) \ ,1 \le t \le 3 & \\ 20e^{-\frac{t}{\tau}} + (1 - e^{-\frac{t}{\tau}}) + 2(1 - e^{-\frac{t - 1}{\tau}}) - 3(1 - e^{-\frac{t - 3}{\tau}}) \ ,t \ge 3\end{cases}</script></blockquote>
+<p>$$<br>u_s(t) = \varepsilon(t) + 2\varepsilon(t - 1) - 3\varepsilon(t - 3)\<br>t = \begin{cases} 20e^{-\frac{t}{\tau}} + (1 - e^{-\frac{t}{\tau}}) \ , 0 \le t \le 1&amp; \\ 20e^{-\frac{t}{\tau}} + (1 - e^{-\frac{t}{\tau}}) + 2(1 - e^{-\frac{t - 1}{\tau}}) \ ,1 \le t \le 3 &amp; \\ 20e^{-\frac{t}{\tau}} + (1 - e^{-\frac{t}{\tau}}) + 2(1 - e^{-\frac{t - 1}{\tau}}) - 3(1 - e^{-\frac{t - 3}{\tau}}) \ ,t \ge 3\end{cases}<br>$$</p>
+</blockquote>
 <h2 id="第六章-相量法"><a href="#第六章-相量法" class="headerlink" title="第六章 相量法"></a>第六章 相量法</h2><h4 id="第六章总结"><a href="#第六章总结" class="headerlink" title="第六章总结"></a>第六章总结</h4><ol>
-<li>我们要建立概念就是复数，三角函数，$e$ 指数之间是可以相互转化的，所以往往可以把他们看作等价的，<strong>都可以表示二维平面上的向量</strong></li>
-<li>算相量加减法时转化为复数形式，算相量乘除法时转化为 $e$ 指数形式</li>
-<li>三角函数转化为相量时，除非特殊说明，不然默认相量前面的都是有效值，即峰值的 $\frac{1}{\sqrt 2}$</li>
-<li>对于相量而言，我们在计算上时可以把它看作和相量相同计算，<strong>但是相量不是向量，向量是真实存在物理量，相量不真实存在，是表示正弦信号的工具</strong></li>
+<li><p>我们要建立概念就是复数，三角函数，$e$ 指数之间是可以相互转化的，所以往往可以把他们看作等价的，<strong>都可以表示二维平面上的向量</strong></p>
+</li>
+<li><p>算相量加减法时转化为复数形式，算相量乘除法时转化为 $e$ 指数形式</p>
+</li>
+<li><p>三角函数转化为相量时，除非特殊说明，不然默认相量前面的都是有效值，即峰值的 $\frac{1}{\sqrt 2}$</p>
+</li>
+<li><p>对于相量而言，我们在计算上时可以把它看作和相量相同计算，<strong>但是相量不是向量，向量是真实存在物理量，相量不真实存在，是表示正弦信号的工具</strong></p>
+</li>
 <li><p>当电源电流是三角函数形式，即不断变化时要用相量来表示，$U$ 和 $I$ 上要记得打点，相量是可以用来表征正弦波的，<strong>但不等同</strong></p>
 </li>
 <li><p>对于接下来的正弦稳态电路和之前学的电路<strong>没什么不同</strong>，区别就是电流电压用相量表示，并且电感电容都可以用阻抗来表示，$Z_C= -j\frac{1}{\omega C},Z_L = jL\omega $</p>
 </li>
 </ol>
 <ul>
-<li><p>复数</p>
-<script type="math/tex; mode=display">
-  F = a + jb\\
-  F = |F|(cos\theta + jsin\theta)\\
-  F = |F|e^{j\theta}\\
-  \theta = arg \ F = arctan(\frac{b}{a})\\
-  Re[F] = a\\
-  lm[F] = b\\
-  F^* = a - jb = |F|\angle-\theta</script><p>  复数加减用代数形式，乘除用指数形式</p>
+<li><p>复数<br>  $$<br>  F = a + jb\<br>  F = |F|(cos\theta + jsin\theta)\<br>  F = |F|e^{j\theta}\<br>  \theta = arg \ F = arctan(\frac{b}{a})\<br>  Re[F] = a\<br>  lm[F] = b\<br>  F^* = a - jb = |F|\angle-\theta<br>  $$<br>  复数加减用代数形式，乘除用指数形式</p>
 </li>
 <li><p>正弦量</p>
 <p>  按正弦规律变化的电流，电压称为正弦量。由振幅（正数），角速度，初相位三要素决定</p>
@@ -486,7 +487,7 @@ t = \begin{cases} 20e^{-\frac{t}{\tau}} + (1 - e^{-\frac{t}{\tau}}) \ , 0 \le t 
 <li>耦合元件：由一跳以上支路组成，一支路的电压，电流与其他支路的电压，电流直接相关</li>
 <li>在本章学习中，我们大多研究的耦合元件是线圈，线圈在通了电流之后会产生磁，而磁又会生电，从而产生电压，所以对于一个线圈上的电压，往往是由两部分组成，一个是它自身产生的电压，另一个是和它耦合的线圈的电压，自身电流和电磁之间比例系数是自感 $L$，和耦合元件之间是互感 $M$，但是我们有时也能见到 $L_{12}$，这种表示 $2$ 线圈在 $1$ 上的互感系数</li>
 </ul>
-<p><img src="耦合电感伏安关系.png" alt="耦合电感伏安关系"></p>
+<p><img src="%E8%80%A6%E5%90%88%E7%94%B5%E6%84%9F%E4%BC%8F%E5%AE%89%E5%85%B3%E7%B3%BB.png" alt="耦合电感伏安关系"></p>
 <ul>
 <li>同名端：当电流沿着不同线圈的两个端点流入，若产生的磁通方向相同，则这两个端点称为同名端，往往题目会直接告诉，若两个耦合线圈电流沿着同名端通入，互感 $ML &gt; 0$，反之 $ML &lt; 0$，或者可以理解为 $I_1$ 在线圈 $1$ 打点端通入，那么互感 $M$ 产生的电压 $+$ 极也在线圈 $2$ 打点端</li>
 </ul>
@@ -497,30 +498,30 @@ t = \begin{cases} 20e^{-\frac{t}{\tau}} + (1 - e^{-\frac{t}{\tau}}) \ , 0 \le t 
 </ul>
 </li>
 </ul>
-<p><img src="去耦等效线圈.png" alt="去耦等效线圈"></p>
+<p><img src="%E5%8E%BB%E8%80%A6%E7%AD%89%E6%95%88%E7%BA%BF%E5%9C%88.png" alt="去耦等效线圈"></p>
 <ul>
 <li><p>耦合电路的串联</p>
 <p>  当两个电感串联且电流沿着同名端流过（此时异名端相连），则可以等效为一个新电感 $L’ = L_1 + L_2 + 2M$</p>
-<p>  <img src="线圈串联.png" alt="线圈串联"></p>
+<p>  <img src="%E7%BA%BF%E5%9C%88%E4%B8%B2%E8%81%94.png" alt="线圈串联"></p>
 <p>  同理若电感串联但电流沿着异名端流过（同名端相连)，那么可以等效为一个新电感 $L’ = L_1 + L_2 - 2M$</p>
 </li>
 <li><p>耦合电路的并联</p>
 <p>  当线圈并联且异名端相连时，可以等效为一个新线圈 $L’ = \frac{L_1L_2 - M^2}{L_1 + L_2 + 2M}$（能记住最好，也可以不记住，用T型等效去推，比较推荐（之后会介绍））</p>
 <p>  当线圈并联且同名端相连时，可以等效为 $L’ = \frac{L_1L_2 - M^2}{L_1 + L_2 - 2M}$</p>
-<p>  <img src="线圈并联.png" alt="线圈并联"></p>
+<p>  <img src="%E7%BA%BF%E5%9C%88%E5%B9%B6%E8%81%94.png" alt="线圈并联"></p>
 </li>
 <li><p>耦合系数</p>
 <p>  我们都知道 $L$ 是大于 $0$ 的，所以在上述串联并联公式中，我们不难发现 $M$ 是要满足一定条件的，这里我们引入耦合系数 $k$ 来表示 $M$ 和 $L$ 之间的关系</p>
-<p>  <img src="耦合系数.png" alt="耦合系数"></p>
+<p>  <img src="%E8%80%A6%E5%90%88%E7%B3%BB%E6%95%B0.png" alt="耦合系数"></p>
 </li>
 <li><p>常见的等效方法</p>
 <ul>
 <li><p>$T$ 型等效</p>
-<p>  <img src="T型等效1.png" alt="T型等效1"></p>
-<p>  <img src="T型等效2.png" alt="T型等效2"></p>
+<p>  <img src="T%E5%9E%8B%E7%AD%89%E6%95%881.png" alt="T型等效1"></p>
+<p>  <img src="T%E5%9E%8B%E7%AD%89%E6%95%882.png" alt="T型等效2"></p>
 <p>  $T$ 型等效在处理并联等问题上十分有效</p>
-<p>  $e.g 8.1$</p>
-<p>  <img src="例8.1.png" alt="例8.1"></p>
+<p>  $e.g\ 8.1$</p>
+<p>  <img src="%E4%BE%8B8.1.png" alt="例8.1"></p>
 <blockquote>
 <p> 值得一提的是，这里之所以可以把两个线圈下端相连是因为只连一端不影响回路</p>
 </blockquote>
@@ -529,35 +530,35 @@ t = \begin{cases} 20e^{-\frac{t}{\tau}} + (1 - e^{-\frac{t}{\tau}}) \ , 0 \le t 
 </li>
 <li><p>互感化除法</p>
 <p>  是不是很眼熟，嗯互感化除法其实就是 $T$ 型等效法的一个应用，这两个没什么区别qwq</p>
-<p>  <img src="互感化除法.png" alt="互感化除法"></p>
+<p>  <img src="%E4%BA%92%E6%84%9F%E5%8C%96%E9%99%A4%E6%B3%95.png" alt="互感化除法"></p>
 </li>
 <li><p>回路分析法</p>
 <p>  其实没有用到任何化简，就是我们遇到一个新电路时的常见思路，把线圈变为理想线圈和受控源再分析，这个回路分析法是为接下来的简化方法服务的</p>
-<p>  <img src="回路分析法.png" alt="回路分析法"></p>
+<p>  <img src="%E5%9B%9E%E8%B7%AF%E5%88%86%E6%9E%90%E6%B3%95.png" alt="回路分析法"></p>
 </li>
 <li><p>反映阻抗法</p>
 <p>  仔细观察上一个化简的结果，我们发现初级电路和次级电路可以等效为一个新电路</p>
 <p>  我们设 $Z_{11},Z_{22}$ 为初级电路和次级电路的视在阻值，视在阻值就是不考虑线圈的互感作用，直接计算出的电路的阻值</p>
 <p>  那么初级线圈对新电路的贡献阻值为 $Z_1’ = Z_{11}$ 嗯就是它本身非常好记</p>
 <p>  次级线圈对新电路的贡献阻值为 $Z_2’ = \frac{(\omega M)^2}{Z_{22}}$ 这个结果看起来很真，说明 $M$ 和 $Z_{22}$ 都会对新电路有影响，这个结果也被称为反映阻抗，不难看出其实反映阻抗和同名端位置无关</p>
-<p>  <img src="反映阻抗法.png" alt="反映阻抗法"></p>
-<p>  <img src="反映电阻2.png" alt="反映电阻2"></p>
+<p>  <img src="%E5%8F%8D%E6%98%A0%E9%98%BB%E6%8A%97%E6%B3%95.png" alt="反映阻抗法"></p>
+<p>  <img src="%E5%8F%8D%E6%98%A0%E7%94%B5%E9%98%BB2.png" alt="反映电阻2"></p>
 <p>  所以化简的新电路如上，笔者推荐记住这个结果，比较方便</p>
 <p>  但是记住这种方法要求次级回路中无独立源</p>
 </li>
 <li><p>戴维南等效法</p>
 <p>  有了上述反映阻抗法的铺垫，我们可以利用戴维南等效法，从次级回路的两个端口看去，将其转化为一个新电路，这个新电路的阻值就按反映阻抗法的方法去求，只不过从次级回路来看的话，其实原先的次级回路相当于现在的初级回路，原先的初级回路相当于现在的次级回路</p>
 <p>  但还有一个问题，开路电压 $U_{OC}$ 怎么求，其实也很简单，我们原先不是假设次级线圈是一个理想线圈和受控源吗，这个$U_{OC}$ 就是受控源的电压值，也非常好理解，故 $U_{OC} = j\omega M I_1 = j\omega M \frac{U_s}{Z_{11}}$， $U_{OC}$正负要看具体端口正负以及同名异名情况</p>
-<p>  <img src="戴维南等效法.png" alt="戴维南等效法"></p>
+<p>  <img src="%E6%88%B4%E7%BB%B4%E5%8D%97%E7%AD%89%E6%95%88%E6%B3%95.png" alt="戴维南等效法"></p>
 </li>
 </ul>
 <h3 id="S-8-4-理想变压器电路的分析"><a href="#S-8-4-理想变压器电路的分析" class="headerlink" title="$\S 8.4$ 理想变压器电路的分析"></a>$\S 8.4$ 理想变压器电路的分析</h3><p>与先前的耦合线圈不同，理想变压器虽然长得和耦合线圈一样，但是不考虑 $L$ 和 $M$</p>
-<p><img src="理想变压器电压电流关系.png" alt="理想变压器电压电流关系"></p>
-<p><img src="理想变压器变换关系.png" alt="理想变压器变换关系"></p>
-<p><img src="例8.2.png" alt="例8.2"></p>
-<p><img src="例8.3.png" alt="例8.3"></p>
-<p><img src="例8.4.png" alt="例8.4"></p>
-<p><img src="例8.5.png" alt="例8.5"></p>
+<p><img src="%E7%90%86%E6%83%B3%E5%8F%98%E5%8E%8B%E5%99%A8%E7%94%B5%E5%8E%8B%E7%94%B5%E6%B5%81%E5%85%B3%E7%B3%BB.png" alt="理想变压器电压电流关系"></p>
+<p><img src="%E7%90%86%E6%83%B3%E5%8F%98%E5%8E%8B%E5%99%A8%E5%8F%98%E6%8D%A2%E5%85%B3%E7%B3%BB.png" alt="理想变压器变换关系"></p>
+<p><img src="%E4%BE%8B8.2.png" alt="例8.2"></p>
+<p><img src="%E4%BE%8B8.3.png" alt="例8.3"></p>
+<p><img src="%E4%BE%8B8.4.png" alt="例8.4"></p>
+<p><img src="%E4%BE%8B8.5.png" alt="例8.5"></p>
 <h2 id="第九章-三相电路"><a href="#第九章-三相电路" class="headerlink" title="第九章 三相电路"></a>第九章 三相电路</h2><h4 id="第九章总结"><a href="#第九章总结" class="headerlink" title="第九章总结"></a>第九章总结</h4><ol>
 <li><p>$I_a, I_b, I_c$ 是相电流，$I_{ab}, I_{ac}, I_{bc}$ 是线电流</p>
 </li>
@@ -567,9 +568,12 @@ t = \begin{cases} 20e^{-\frac{t}{\tau}} + (1 - e^{-\frac{t}{\tau}}) \ , 0 \le t 
 </li>
 <li><p>做题时，应将负载和电源都变为 $Y$ 型联接，求出线电流，相电流之后再利用 $2$，$3$ 中的关系来替换</p>
 </li>
-<li>$Y$型 和 $\Delta$ 型变换往往利用的是 线电压 / 线电流 不变</li>
-<li>$Y$ 型电路 $U$ 超前 $I$ 一个$\phi$ 角，这个角是其中一个电阻的辐角</li>
-<li>$P_总 = 3P_相 = \sqrt 3 P_线$</li>
+<li><p>$Y$型 和 $\Delta$ 型变换往往利用的是 线电压 / 线电流 不变</p>
+</li>
+<li><p>$Y$ 型电路 $U$ 超前 $I$ 一个$\phi$ 角，这个角是其中一个电阻的辐角</p>
+</li>
+<li><p>$P_总 = 3P_相 = \sqrt 3 P_线$</p>
+</li>
 </ol>
 <h3 id="S-9-1-三相电路"><a href="#S-9-1-三相电路" class="headerlink" title="$\S 9.1$ 三相电路"></a>$\S 9.1$ 三相电路</h3><ul>
 <li><p>三个电压电流分别相差 $120°$ 的相位</p>
@@ -577,18 +581,18 @@ t = \begin{cases} 20e^{-\frac{t}{\tau}} + (1 - e^{-\frac{t}{\tau}}) \ , 0 \le t 
 <p>  相比于单相发电机，三相发电机输出功率高，经济好，性能好，易于制造</p>
 </li>
 </ul>
-<p><img src="三相交流电压.png" alt="三相交流电压"></p>
+<p><img src="%E4%B8%89%E7%9B%B8%E4%BA%A4%E6%B5%81%E7%94%B5%E5%8E%8B.png" alt="三相交流电压"></p>
 <ul>
 <li><p>三相电源的联结</p>
 <ul>
 <li><p>$Y$ 型链接</p>
 <p>  $U_a, U_b, U_c$ 是线电压， $U_{ab}, U_{ac}, U_{bc}$ 是项电压</p>
 <p>  利用相量图来理解</p>
-<p>  <img src="Y型链接.png" alt="Y型链接"></p>
+<p>  <img src="Y%E5%9E%8B%E9%93%BE%E6%8E%A5.png" alt="Y型链接"></p>
 </li>
 <li><p>$\Delta$ 形联接</p>
 <p>  电路接反时会很危险，会先接上电压表来判断</p>
-<p>  <img src="三角链接.png" alt="三角链接"></p>
+<p>  <img src="%E4%B8%89%E8%A7%92%E9%93%BE%E6%8E%A5.png" alt="三角链接"></p>
 </li>
 </ul>
 </li>
@@ -596,23 +600,24 @@ t = \begin{cases} 20e^{-\frac{t}{\tau}} + (1 - e^{-\frac{t}{\tau}}) \ , 0 \le t 
 <ul>
 <li><p>$Y-Y$ 联接</p>
 <p>  通过节点电压法可得 $U_{nn’} = 0$</p>
-<p><img src="YY联接.png" alt="YY联接"></p>
+<p><img src="YY%E8%81%94%E6%8E%A5.png" alt="YY联接"></p>
 </li>
 <li><p>$\Delta - ?$ 联接</p>
-<p><img src="三角-？联接.png" alt="三角-？联接"></p>
+<p><img src="%E4%B8%89%E8%A7%92-%EF%BC%9F%E8%81%94%E6%8E%A5.png" alt="三角-？联接"></p>
 </li>
 </ul>
 </li>
 </ul>
 <h3 id="S-9-2-对称三相电路的计算"><a href="#S-9-2-对称三相电路的计算" class="headerlink" title="$\S 9.2$ 对称三相电路的计算"></a>$\S 9.2$ 对称三相电路的计算</h3><h3 id="S-9-3-三相电路的功率"><a href="#S-9-3-三相电路的功率" class="headerlink" title="$\S 9.3$ 三相电路的功率"></a>$\S 9.3$ 三相电路的功率</h3><p>二表法适合测对称三相负载的功率，表的示数单独拿出来没有意义，要结合在一起看，而且一定要对称时才可以计算</p>
-<p><img src="二表法.png" alt="二表法"></p>
-<p><img src="对称三相负载功率.png" alt="对称三相负载功率"></p>
-<p><img src="注意.png" alt="注意"></p>
-<p>$e.g 9.1$</p>
-<p><img src="例9.1.png" alt="例9.1"></p>
+<p><img src="%E4%BA%8C%E8%A1%A8%E6%B3%95.png" alt="二表法"></p>
+<p><img src="%E5%AF%B9%E7%A7%B0%E4%B8%89%E7%9B%B8%E8%B4%9F%E8%BD%BD%E5%8A%9F%E7%8E%87.png" alt="对称三相负载功率"></p>
+<p><img src="%E6%B3%A8%E6%84%8F.png" alt="注意"></p>
+<p>$e.g\ 9.1$</p>
+<p><img src="%E4%BE%8B9.1.png" alt="例9.1"></p>
 <blockquote>
-<script type="math/tex; mode=display">
-</script></blockquote>
+<p>$$</p>
+<p>$$</p>
+</blockquote>
 
     </div>
 
@@ -779,12 +784,12 @@ t = \begin{cases} 20e^{-\frac{t}{\tau}} + (1 - e^{-\frac{t}{\tau}}) \ , 0 \le t 
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">44k</span>
+    <span title="站点总字数">38k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:20</span>
+    <span title="站点阅读时长">1:09</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
