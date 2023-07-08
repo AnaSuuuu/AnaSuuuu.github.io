@@ -31,7 +31,7 @@
 <meta property="og:image" content="https://anasuuuu.github.io/2023/06/26/CF-Instrumentality-Project-I/1829G-sol1.png">
 <meta property="og:image" content="https://anasuuuu.github.io/2023/06/26/CF-Instrumentality-Project-I/1829G-sol2.png">
 <meta property="article:published_time" content="2023-06-26T11:44:34.000Z">
-<meta property="article:modified_time" content="2023-07-06T12:27:32.466Z">
+<meta property="article:modified_time" content="2023-07-08T10:11:21.705Z">
 <meta property="article:author" content="Ana Su">
 <meta property="article:tag" content="算法竞赛">
 <meta name="twitter:card" content="summary">
@@ -222,7 +222,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-07-06 20:27:32" itemprop="dateModified" datetime="2023-07-06T20:27:32+08:00">2023-07-06</time>
+                <time title="修改时间：2023-07-08 18:11:21" itemprop="dateModified" datetime="2023-07-08T18:11:21+08:00">2023-07-08</time>
               </span>
 
           
@@ -238,14 +238,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.5k</span>
+              <span>3.5k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>5 分钟</span>
+              <span>6 分钟</span>
             </span>
 
         </div>
@@ -260,9 +260,22 @@
         <p>千里之行，始于足下</p>
 <span id="more"></span>
 
-<h2 id="1829-Codeforces-Round-871-Div-4"><a href="#1829-Codeforces-Round-871-Div-4" class="headerlink" title="1829. Codeforces Round 871 (Div. 4)"></a>1829. <a target="_blank" rel="noopener" href="https://codeforces.com/contest/1829">Codeforces Round 871 (Div. 4)</a></h2><h3 id="G-Hits-Different"><a href="#G-Hits-Different" class="headerlink" title="G. Hits Different"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1829/problem/G">G. Hits Different</a></h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p><img src="1829G.png" alt="1829G"></p>
+<h2 id="1826-Codeforces-Round-870-Div-2"><a href="#1826-Codeforces-Round-870-Div-2" class="headerlink" title="1826. Codeforces Round 870 (Div. 2)"></a>1826. <a target="_blank" rel="noopener" href="https://codeforces.com/contest/1826">Codeforces Round 870 (Div. 2)</a></h2><h3 id="E-Walk-the-Runway"><a href="#E-Walk-the-Runway" class="headerlink" title="E. Walk the Runway"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1826/problem/E">E. Walk the Runway</a></h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>$n$ 个人每个人都有一个价值 $p_i$，然后这 $n$ 个人有 $m$ 维数值，要求你从中选取若干个人并且可以任意调整选的人的顺序，要求选的人满足 $m$ 维中每一维里选的人的数值都严格递增。</p>
+<p>$n \le 5000,m \le 500$。</p>
+<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>如果我们已知两个人之间的偏序关系，我们可以在两个人之间连一条有向边（或不连），故这 $n$ 个人的关系可以用一个有向无环图来表示，在图上跑 dfs，时间复杂度是 $O(n^2)$，是完全够的，那么我们现在研究如何求任意两个人之间偏序关系。</p>
+<p>直接暴力求偏序关系的时间复杂度是 $O(n^2m)$，显然是会 T 的，那么我们可以用 bitset 来优化。对每一维排完序后前面的肯定不会排在这个数的后面，故每次用 bitset 的 &amp; 运算即可，时间复杂度是 $O(\dfrac{m}{w})$，其中 $w$ 等于 $64$。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1826/submission/212761847">Code</a></p>
+<h3 id="F-Fading-into-Fog"><a href="#F-Fading-into-Fog" class="headerlink" title="F. Fading into Fog"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1826/problem/F">F. Fading into Fog</a></h3><h4 id="Description-1"><a href="#Description-1" class="headerlink" title="Description"></a>Description</h4><p>交互题</p>
+<p>有 $n$ 个隐藏点，每次你可以给出 $a$，$b$，$c$，询问一条形如 $ax+by+c=0$ 的直线，交互库会以<strong>任意顺序</strong>告诉你每个点在直线上的投影（保证每个返回的投影点与真实投影点的距离不超过 $10^{-4}$）。</p>
+<p>请用最少的询问求出这些隐藏点的位置，精度相差 $10^{-3}$ 即可。</p>
+<p>保证每个隐藏点的与其他隐藏点的 $x$ 坐标和 $y$ 坐标都至少相差 $1$，每次询问的 $∣a∣+∣b∣≥0.1$。</p>
+<h4 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h4><p>通过画图观察不难发现，其实最多三次询问就可以确定这 $n$ 个点了，所以题目就变为不超过三次询问求出 $n$ 点，一条平行 $x$ 轴，一条平行 $y$ 轴，一条斜着的边（但是很贴近 $x$ 轴），前两个就可以确定这 $n$ 个点的横纵坐标，第三个完全确定这 $n$ 个点。</p>
+<p>为什么第三条线要贴近 $x$ 轴呢？因为我们的处理方法是对第一，三条线得到的 $n$ 个投影点按横坐标排序，选一条贴近 $x$ 轴的线保证这 $n$ 个点和第一条线的 $n$ 个点顺序一致，这样的话我们就可以算出每个点纵坐标的值，但不准确可能会有误差，但是我们知道每个点的纵坐标，所以我们可以找纵坐标和我们计算的估计值中最贴近的值来替换。</p>
+<p>值得注意的是，本题对精度要求较高，应用 <code>long double</code> 来存储</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1826/submission/212805712">Code</a></p>
+<h2 id="1829-Codeforces-Round-871-Div-4"><a href="#1829-Codeforces-Round-871-Div-4" class="headerlink" title="1829. Codeforces Round 871 (Div. 4)"></a>1829. <a target="_blank" rel="noopener" href="https://codeforces.com/contest/1829">Codeforces Round 871 (Div. 4)</a></h2><h3 id="G-Hits-Different"><a href="#G-Hits-Different" class="headerlink" title="G. Hits Different"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1829/problem/G">G. Hits Different</a></h3><h4 id="Description-2"><a href="#Description-2" class="headerlink" title="Description"></a>Description</h4><p><img src="1829G.png" alt="1829G"></p>
 <p>若干块以金字塔状摆放，用球击倒下方的，上方也会倒下，第 $n$ 块分数 $n^2$，问用球打第 $n$ 块能得多少分</p>
-<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>方法一：</p>
+<h4 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h4><p>方法一：</p>
 <p>​    动态规划， $f[i]$ 表示击打第 $i$ 块能得的分数，$f[i] = f[左上] + f[右上] - f[公共]$，因为左上和右上是有公共部分会多算，所以简单容斥一下</p>
 <p>方法二：</p>
 <p>​    还是动态规划，先把图倾斜 $45°$</p>
@@ -273,24 +286,24 @@
 <p>​    嗯，变成一个简单二维DP就能解决的问题了</p>
 <p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1829/submission/211201013">Code (Method I)</a></p>
 <p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1829/submission/211200275">Code (Method II)</a></p>
-<h2 id="1837-Educational-Codeforces-Round-149-Rated-for-Div-2"><a href="#1837-Educational-Codeforces-Round-149-Rated-for-Div-2" class="headerlink" title="1837. Educational Codeforces Round 149 (Rated for Div. 2)"></a>1837. <a target="_blank" rel="noopener" href="https://codeforces.com/contest/1837">Educational Codeforces Round 149 (Rated for Div. 2)</a></h2><h3 id="E-Playoff-Fixing"><a href="#E-Playoff-Fixing" class="headerlink" title="E. Playoff Fixing"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1837/problem/E">E. Playoff Fixing</a></h3><h4 id="Description-1"><a href="#Description-1" class="headerlink" title="Description"></a>Description</h4><p>给定数 $k$，一共有 $2^k$ 个人参加比赛，序号越小的实力越强。每轮第 $2i$ 和 $2i-1$ 进行比赛，一共进行 $k$ 轮，最后要求序号为 $1$ 的一直留到最后一轮，序号为 $2$ 的留到倒数第二轮，序号为 $3 \sim 4$ 的留到倒数第三轮，以此类推，序号 $2^{k - 1} + 1$ 到 $2^k$ 的人要求第一轮淘汰，给定部分人当前位置，如果这个位置上还没确定选手就用 $-1$ 表示，问一共又有多少种表示合法方案</p>
-<h4 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h4><p>第一轮中，我们可以知道序号 $2^{k - 1} + 1$ 到 $2^k$ 的人可以安排在哪里，一定是在 $\{1,2\}$，$\{3,4\},\cdots, \{2^k - 1,2^k\}$ 中各选一个，如果两个都没选则两个位置都可以放，记一下这种情况的个数是 $cnt1$，如果一个位置放了小于 $2^{k-1}$ 的序号，那么只能选另一个位置放，如果两个位置都被选了且不合法，那么就返回 $0$，设一共有 $cnt2$ 个可以放的位置，那么这轮方案数是 $2^{cnt1} \times cnt1 !$ 而且这一轮放置的人下一轮都被淘汰了，所以无后效性，然后下一轮其实就变为规模折半的子问题，不断迭代计算即可</p>
+<h2 id="1837-Educational-Codeforces-Round-149-Rated-for-Div-2"><a href="#1837-Educational-Codeforces-Round-149-Rated-for-Div-2" class="headerlink" title="1837. Educational Codeforces Round 149 (Rated for Div. 2)"></a>1837. <a target="_blank" rel="noopener" href="https://codeforces.com/contest/1837">Educational Codeforces Round 149 (Rated for Div. 2)</a></h2><h3 id="E-Playoff-Fixing"><a href="#E-Playoff-Fixing" class="headerlink" title="E. Playoff Fixing"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1837/problem/E">E. Playoff Fixing</a></h3><h4 id="Description-3"><a href="#Description-3" class="headerlink" title="Description"></a>Description</h4><p>给定数 $k$，一共有 $2^k$ 个人参加比赛，序号越小的实力越强。每轮第 $2i$ 和 $2i-1$ 进行比赛，一共进行 $k$ 轮，最后要求序号为 $1$ 的一直留到最后一轮，序号为 $2$ 的留到倒数第二轮，序号为 $3 \sim 4$ 的留到倒数第三轮，以此类推，序号 $2^{k - 1} + 1$ 到 $2^k$ 的人要求第一轮淘汰，给定部分人当前位置，如果这个位置上还没确定选手就用 $-1$ 表示，问一共又有多少种表示合法方案</p>
+<h4 id="Solution-3"><a href="#Solution-3" class="headerlink" title="Solution"></a>Solution</h4><p>第一轮中，我们可以知道序号 $2^{k - 1} + 1$ 到 $2^k$ 的人可以安排在哪里，一定是在 $\{1,2\}$，$\{3,4\},\cdots, \{2^k - 1,2^k\}$ 中各选一个，如果两个都没选则两个位置都可以放，记一下这种情况的个数是 $cnt1$，如果一个位置放了小于 $2^{k-1}$ 的序号，那么只能选另一个位置放，如果两个位置都被选了且不合法，那么就返回 $0$，设一共有 $cnt2$ 个可以放的位置，那么这轮方案数是 $2^{cnt1} \times cnt1 !$ 而且这一轮放置的人下一轮都被淘汰了，所以无后效性，然后下一轮其实就变为规模折半的子问题，不断迭代计算即可</p>
 <p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1837/submission/211143124">Code</a></p>
-<h3 id="F-Editorial-for-Two"><a href="#F-Editorial-for-Two" class="headerlink" title="F. Editorial for Two"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1837/problem/F">F. Editorial for Two</a></h3><h4 id="Description-2"><a href="#Description-2" class="headerlink" title="Description"></a>Description</h4><p>$n$ 个数中选 $k$ 个数（不改变在原序列中顺序），要求这 $k$ 个数分为前后两半后，这前后两部分和的最大值尽可能小</p>
-<h4 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h4><p>这道题可以用二分来做，对于二分值 $lim$，先正着扫一遍，再倒着扫一遍，扫到第 $i$ 位置时，我们只要算一下前 $i - 1$ 位置中 和不超过 $lim$ 的最多可以选的数的个数 + 后 $i$ 到 $n$ 位置中 和不超过 $k$ 的最多可以选的数的个数  之和是不是大于 $k$ 即可</p>
+<h3 id="F-Editorial-for-Two"><a href="#F-Editorial-for-Two" class="headerlink" title="F. Editorial for Two"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1837/problem/F">F. Editorial for Two</a></h3><h4 id="Description-4"><a href="#Description-4" class="headerlink" title="Description"></a>Description</h4><p>$n$ 个数中选 $k$ 个数（不改变在原序列中顺序），要求这 $k$ 个数分为前后两半后，这前后两部分和的最大值尽可能小</p>
+<h4 id="Solution-4"><a href="#Solution-4" class="headerlink" title="Solution"></a>Solution</h4><p>这道题可以用二分来做，对于二分值 $lim$，先正着扫一遍，再倒着扫一遍，扫到第 $i$ 位置时，我们只要算一下前 $i - 1$ 位置中 和不超过 $lim$ 的最多可以选的数的个数 + 后 $i$ 到 $n$ 位置中 和不超过 $k$ 的最多可以选的数的个数  之和是不是大于 $k$ 即可</p>
 <p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1837/submission/211151946">Code</a></p>
-<h2 id="1840-Codeforces-Round-878-Div-3"><a href="#1840-Codeforces-Round-878-Div-3" class="headerlink" title="1840. Codeforces Round 878 (Div. 3)"></a>1840. <a target="_blank" rel="noopener" href="https://codeforces.com/contest/1840">Codeforces Round 878 (Div. 3)</a></h2><h3 id="F-Railguns"><a href="#F-Railguns" class="headerlink" title="F. Railguns"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1840/problem/F">F. Railguns</a></h3><h4 id="Description-3"><a href="#Description-3" class="headerlink" title="Description"></a>Description</h4><p>Tema 在 $n⋅m$ 的网格内要从 $(0,0)$ 走到 $n⋅m$。第 $0$ 秒末 Tema 位于 $(0,0)$。</p>
+<h2 id="1840-Codeforces-Round-878-Div-3"><a href="#1840-Codeforces-Round-878-Div-3" class="headerlink" title="1840. Codeforces Round 878 (Div. 3)"></a>1840. <a target="_blank" rel="noopener" href="https://codeforces.com/contest/1840">Codeforces Round 878 (Div. 3)</a></h2><h3 id="F-Railguns"><a href="#F-Railguns" class="headerlink" title="F. Railguns"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1840/problem/F">F. Railguns</a></h3><h4 id="Description-5"><a href="#Description-5" class="headerlink" title="Description"></a>Description</h4><p>Tema 在 $n⋅m$ 的网格内要从 $(0,0)$ 走到 $n⋅m$。第 $0$ 秒末 Tema 位于 $(0,0)$。</p>
 <p>每次行动 Tema 可以选择向下走，向右走或不动。</p>
 <p>机器人会发射 $r$ 次激光炮以阻挠他前进，具体为在第 $t$ 秒，向第 $x$ 行或第 $x$ 列发射激光炮，一整列或一整行都会受到炮击。若 Tema 在第 $t$ 秒末还停留在被炮击的单元格内则会被击毁。求 Tema 从 $(0,0)$ 到达 $(n,m)$ 的最短时间，若无法抵达，则输出 $−1$。</p>
 <p>$r$ 次炮击格式为 $t$，$d$，$coord$ ，$t$ 表示炮击发生的时间，$d$ 表示炮击方式 ( $d=1$ 时攻击一整行，$d=2$ 时攻击一整列)，$coord$ 表示攻击的是具体哪一行/列）</p>
-<h4 id="Solution-3"><a href="#Solution-3" class="headerlink" title="Solution"></a>Solution</h4><p>设 $f[i][j][k]$ 表示在 $k$ 时刻到第 $i$ 行第 $j$ 列是否合法，由于我们发现时间 $t$ 的范围是到 $10^9$ 且到达某位置的时间 $t$ 只和 $i$，$j$，和停下躲避了几次有关，而且躲避的次数最多不超过 $100$ 次，所以 $k$ 可以用停下躲避的次数来表示，这样转移方程就很简单了  $f[i][j][k] = f[i - 1][j][k] | f[i][j - 1][k] | f[i][j][k - 1]$</p>
+<h4 id="Solution-5"><a href="#Solution-5" class="headerlink" title="Solution"></a>Solution</h4><p>设 $f[i][j][k]$ 表示在 $k$ 时刻到第 $i$ 行第 $j$ 列是否合法，由于我们发现时间 $t$ 的范围是到 $10^9$ 且到达某位置的时间 $t$ 只和 $i$，$j$，和停下躲避了几次有关，而且躲避的次数最多不超过 $100$ 次，所以 $k$ 可以用停下躲避的次数来表示，这样转移方程就很简单了  $f[i][j][k] = f[i - 1][j][k] | f[i][j - 1][k] | f[i][j][k - 1]$</p>
 <p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1840/submission/211968399">Code</a></p>
-<h3 id="G2-In-Search-of-Truth-Hard-Version"><a href="#G2-In-Search-of-Truth-Hard-Version" class="headerlink" title="G2. In Search of Truth (Hard Version)"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1840/problem/G2">G2. In Search of Truth (Hard Version)</a></h3><h4 id="Description-4"><a href="#Description-4" class="headerlink" title="Description"></a>Description</h4><p>交互题</p>
+<h3 id="G2-In-Search-of-Truth-Hard-Version"><a href="#G2-In-Search-of-Truth-Hard-Version" class="headerlink" title="G2. In Search of Truth (Hard Version)"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1840/problem/G2">G2. In Search of Truth (Hard Version)</a></h3><h4 id="Description-6"><a href="#Description-6" class="headerlink" title="Description"></a>Description</h4><p>交互题</p>
 <p>一个转盘共 $n$（ $n$ 未知 ）个格子，格子 $1$ 到 $n$ 乱序编号，你每次可以顺/逆时针旋转 $k$ 个格子，输出顺/逆时针（分别用“+”、“-”表示）和 $k$。需要读取起始格子的编号和每次旋转后格子的编号，求 $n$。</p>
 <p>Easy Version 中旋转次数不大于 $2023$</p>
 <p>Hard Version 中旋转次数不大于 $1000$</p>
 <p>$n≤1×10^6,−10^9≤k≤10^9$</p>
-<h4 id="Solution-4"><a href="#Solution-4" class="headerlink" title="Solution"></a>Solution</h4><p>很不错的一道题</p>
+<h4 id="Solution-6"><a href="#Solution-6" class="headerlink" title="Solution"></a>Solution</h4><p>很不错的一道题</p>
 <p>对于 Easy Version，参考 BSGS 算法，先连续 999 次 +1，然后每次 +1000，这样最多 1000 次就可以循环完一圈，然后走完一圈后必定会落在最初连续的前 1000 个格子上，我们可以通过转了多少正好可以走一圈来推算 n 的大小，最多询问 999 + 1000 次</p>
 <p>对于 Hard Version，我们在 Easy Version 基础上稍加改进，我们对于一个 $n$，可以先转 $n_0$，然后再按 G1 的方法去转，先连续转 $d$ 个 $+1$，再一直 $+d$ 直到转完一圈为止，但是这个 $n_0$ 和 $d$ 如何确定呢。我们可以先随机 $k$ 次，然后去这 $k$ 次中得到的最大的数选为 $n_0$，因为如果直接选的话，选的数可能过大或过小，若是不随机选 $k$ 个数而是连续选 $k$ 个或间隔选 $k$ 个则容易被卡掉。不过这个算法由于是一定程度上取决于随机数的，所以不一定完全正确，当 $n$ 大于 $n_0 + d^2$ 时，就无法转到一圈，此时不对。所以 $k$ 次算出的数必须有一个要大于 $n - d^2$，出错的概率为 $P(A) = (\frac{n - d^2 - 1}{n})^k,(k + 2d = 1000)$，不难发现通过改变 $n$ 和 $k$ 大小是可以改变出错概率的，当选择 $k = 400, d = 300$ 时，即使是在 $n = 10^6$ 情况下 $P(A)$ 的数量级才是 $10^{-17}$，远远小于 $1$，故可以通过此题</p>
 <p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1840/submission/212058294">Code (Easy Version)</a></p>
@@ -389,7 +402,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1829-Codeforces-Round-871-Div-4"><span class="nav-text">1829. Codeforces Round 871 (Div. 4)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#G-Hits-Different"><span class="nav-text">G. Hits Different</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Description"><span class="nav-text">Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution"><span class="nav-text">Solution</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1837-Educational-Codeforces-Round-149-Rated-for-Div-2"><span class="nav-text">1837. Educational Codeforces Round 149 (Rated for Div. 2)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#E-Playoff-Fixing"><span class="nav-text">E. Playoff Fixing</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Description-1"><span class="nav-text">Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution-1"><span class="nav-text">Solution</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#F-Editorial-for-Two"><span class="nav-text">F. Editorial for Two</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Description-2"><span class="nav-text">Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution-2"><span class="nav-text">Solution</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1840-Codeforces-Round-878-Div-3"><span class="nav-text">1840. Codeforces Round 878 (Div. 3)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#F-Railguns"><span class="nav-text">F. Railguns</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Description-3"><span class="nav-text">Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution-3"><span class="nav-text">Solution</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#G2-In-Search-of-Truth-Hard-Version"><span class="nav-text">G2. In Search of Truth (Hard Version)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Description-4"><span class="nav-text">Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution-4"><span class="nav-text">Solution</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1826-Codeforces-Round-870-Div-2"><span class="nav-text">1826. Codeforces Round 870 (Div. 2)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#E-Walk-the-Runway"><span class="nav-text">E. Walk the Runway</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Description"><span class="nav-text">Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution"><span class="nav-text">Solution</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#F-Fading-into-Fog"><span class="nav-text">F. Fading into Fog</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Description-1"><span class="nav-text">Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution-1"><span class="nav-text">Solution</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1829-Codeforces-Round-871-Div-4"><span class="nav-text">1829. Codeforces Round 871 (Div. 4)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#G-Hits-Different"><span class="nav-text">G. Hits Different</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Description-2"><span class="nav-text">Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution-2"><span class="nav-text">Solution</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1837-Educational-Codeforces-Round-149-Rated-for-Div-2"><span class="nav-text">1837. Educational Codeforces Round 149 (Rated for Div. 2)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#E-Playoff-Fixing"><span class="nav-text">E. Playoff Fixing</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Description-3"><span class="nav-text">Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution-3"><span class="nav-text">Solution</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#F-Editorial-for-Two"><span class="nav-text">F. Editorial for Two</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Description-4"><span class="nav-text">Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution-4"><span class="nav-text">Solution</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1840-Codeforces-Round-878-Div-3"><span class="nav-text">1840. Codeforces Round 878 (Div. 3)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#F-Railguns"><span class="nav-text">F. Railguns</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Description-5"><span class="nav-text">Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution-5"><span class="nav-text">Solution</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#G2-In-Search-of-Truth-Hard-Version"><span class="nav-text">G2. In Search of Truth (Hard Version)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Description-6"><span class="nav-text">Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution-6"><span class="nav-text">Solution</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -405,7 +418,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -460,12 +473,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">39k</span>
+    <span title="站点总字数">40k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:11</span>
+    <span title="站点阅读时长">1:13</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
