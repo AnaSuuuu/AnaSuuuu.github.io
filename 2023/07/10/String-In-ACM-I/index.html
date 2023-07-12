@@ -28,7 +28,7 @@
 <meta property="og:description" content="Manacher，KMP">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-07-10T03:11:13.000Z">
-<meta property="article:modified_time" content="2023-07-11T10:05:16.528Z">
+<meta property="article:modified_time" content="2023-07-11T15:24:01.689Z">
 <meta property="article:author" content="Ana Su">
 <meta name="twitter:card" content="summary">
 
@@ -217,7 +217,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-07-11 18:05:16" itemprop="dateModified" datetime="2023-07-11T18:05:16+08:00">2023-07-11</time>
+                <time title="修改时间：2023-07-11 23:24:01" itemprop="dateModified" datetime="2023-07-11T23:24:01+08:00">2023-07-11</time>
               </span>
 
           
@@ -265,7 +265,7 @@
 <p>那么我们就设置 $len[i] = min\{len[mid], maxr - i \}$ 然后继续尝试扩展，这样就可以较快地求出 $len[i]$，然后更新 $maxr$ 和 $mid$</p>
 <p>当 $i$ 在 $maxr$ 右边时，我们无法得知关于 $len[i]$ 的信息，只好从 $1$ 开始遍历，然后更新 $maxr$ 和 $mid$。</p>
 <p>本算法时间复杂度和空间复杂度均为线性的。</p>
-<h3 id="1-3-实现"><a href="#1-3-实现" class="headerlink" title="1.3 实现"></a>1.3 实现</h3><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">update</span><span class="params">()</span> </span>{</span><br><span class="line">  s2[<span class="number">0</span>] = s2[<span class="number">1</span>] = <span class="string">'#'</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) {</span><br><span class="line">    s2[i &lt;&lt; <span class="number">1</span>] = s1[i - <span class="number">1</span>];</span><br><span class="line">    s2[i &lt;&lt; <span class="number">1</span> | <span class="number">1</span>] = <span class="string">'#'</span>;</span><br><span class="line">  }</span><br><span class="line">  n = <span class="number">2</span> * n + <span class="number">1</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">manacher</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="type">int</span> maxr = <span class="number">0</span>, mid = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) {</span><br><span class="line">    <span class="keyword">if</span>(i &lt; maxr) len[i] = <span class="built_in">min</span>(len[(mid &lt;&lt; <span class="number">1</span>) - i], len[mid] + mid - i);</span><br><span class="line">    <span class="keyword">else</span> len[i] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(i + len[i] &lt;= n &amp;&amp;  i - len[i] &gt; <span class="number">0</span> &amp;&amp; s2[i + len[i]] == s2[i - len[i]]) len[i]++;</span><br><span class="line">    <span class="keyword">if</span>(len[i] + i &gt; maxr) {</span><br><span class="line">      maxr = len[i] + i;</span><br><span class="line">      mid = i; </span><br><span class="line">    } </span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="1-3-实现"><a href="#1-3-实现" class="headerlink" title="1.3 实现"></a>1.3 实现</h3><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">update</span><span class="params">()</span> </span>{</span><br><span class="line">  s2[<span class="number">0</span>] = s2[<span class="number">1</span>] = <span class="string">'#'</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) {</span><br><span class="line">    s2[i &lt;&lt; <span class="number">1</span>] = s1[i];</span><br><span class="line">    s2[i &lt;&lt; <span class="number">1</span> | <span class="number">1</span>] = <span class="string">'#'</span>;</span><br><span class="line">  }</span><br><span class="line">  n = <span class="number">2</span> * n + <span class="number">1</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">manacher</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="type">int</span> maxr = <span class="number">0</span>, mid = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) {</span><br><span class="line">    <span class="keyword">if</span>(i &lt; maxr) len[i] = <span class="built_in">min</span>(len[(mid &lt;&lt; <span class="number">1</span>) - i], len[mid] + mid - i);</span><br><span class="line">    <span class="keyword">else</span> len[i] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(i + len[i] &lt;= n &amp;&amp;  i - len[i] &gt; <span class="number">0</span> &amp;&amp; s2[i + len[i]] == s2[i - len[i]]) len[i]++;</span><br><span class="line">    <span class="keyword">if</span>(len[i] + i &gt; maxr) {</span><br><span class="line">      maxr = len[i] + i;</span><br><span class="line">      mid = i; </span><br><span class="line">    } </span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 
 
@@ -435,12 +435,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">45k</span>
+    <span title="站点总字数">46k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:21</span>
+    <span title="站点阅读时长">1:23</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
