@@ -1,89 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>博客搭建踩坑指北</title>
-    <url>/2023/06/27/Cross-The-Hole/</url>
-    <content><![CDATA[<p>从踩坑到掉坑里</p>
+    <title>CodeForces 补全计划（1826 ~ 1850）</title>
+    <url>/2023/06/26/CF-Instrumentality-Project-I/</url>
+    <content><![CDATA[<p>千里之行，始于足下</p>
 <span id="more"></span>
 
-<p>本博客采用 Hexo + GitHub 搭建，具体教程网上很多不再赘述</p>
-<p>不过这里还是推荐两个我主要参考的教程 <a href="https://ouuan.github.io/post/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8C%97/">hexo博客搭建指北</a> 和 <a href="https://venusnero.github.io/2019/01/23/build_hexo_github_blog/">从零搭建 Hexo + Github 博客</a></p>
-<p>下面分享一些自己踩过的坑</p>
-<h3 id="公式块中公式无法正常换行"><a href="#公式块中公式无法正常换行" class="headerlink" title="公式块中公式无法正常换行"></a>公式块中公式无法正常换行</h3><h4 id="问题简述"><a href="#问题简述" class="headerlink" title="问题简述"></a>问题简述</h4><p>用 $$ 插入公式块时，本地上用 typora 显示公式换行，但网页上未显示出来</p>
-<p><code>\\</code> 无法正常换行</p>
-<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>在公式块前面加上 <code>\begin{gather}</code> 末尾加上 <code>\end{gather}</code> 即可</p>
-<h3 id="Majax-渲染"><a href="#Majax-渲染" class="headerlink" title="Majax 渲染"></a>Majax 渲染</h3><h4 id="问题简述-1"><a href="#问题简述-1" class="headerlink" title="问题简述"></a>问题简述</h4><ol>
-<li><p>无法正常渲染二重闭曲面积分</p>
-</li>
-<li><pre><code class="latex">$\iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV = \unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy $
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line"></span><br><span class="line"> 可以正常渲染出来</span><br><span class="line"></span><br><span class="line">$\iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV = \unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy $</span><br><span class="line"></span><br><span class="line">```latex</span><br><span class="line">$\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$</span><br></pre></td></tr></tbody></table></figure>
-
-渲染异常
-
-$\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$
-</code></pre>
-</li>
-</ol>
-<h4 id="解决方案-1"><a href="#解决方案-1" class="headerlink" title="解决方案"></a>解决方案</h4><ol>
-<li><p>用 <code>\unicode{8751}</code> 表示即可</p>
-</li>
-<li><p>很神奇的问题，解决方法也很玄学，将</p>
- <figure class="highlight latex"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">\unicode</span>{8751}<span class="built_in">_</span>{<span class="keyword">\sum</span>}Pdydz + Qdzdx + Rdxdy = <span class="keyword">\iiint</span><span class="built_in">_</span>{<span class="keyword">\Omega</span>}(<span class="keyword">\frac</span>{<span class="keyword">\partial</span> P}{<span class="keyword">\partial</span> x} + <span class="keyword">\frac</span>{<span class="keyword">\partial</span> Q}{<span class="keyword">\partial</span> y} + <span class="keyword">\frac</span>{<span class="keyword">\partial</span> R}{<span class="keyword">\partial</span> z})dV</span><br></pre></td></tr></tbody></table></figure>
-
-<p> 改为</p>
- <figure class="highlight latex"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">\unicode</span>{8751}<span class="built_in">_</span>{<span class="keyword">\sum</span>} Pdydz + Qdzdx + Rdxdy = <span class="keyword">\iiint</span><span class="built_in">_</span><span class="keyword">\Omega</span>(<span class="keyword">\frac</span>{<span class="keyword">\partial</span> P}{<span class="keyword">\partial</span> x} + <span class="keyword">\frac</span>{<span class="keyword">\partial</span> Q}{<span class="keyword">\partial</span> y} + <span class="keyword">\frac</span>{<span class="keyword">\partial</span> R}{<span class="keyword">\partial</span> z})dV</span><br></pre></td></tr></tbody></table></figure>
-
-<p> 即可</p>
-<p> $\unicode{8751}_\sum Pdydz + Qdzdx + Rdxdy = \iiint_\Omega(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$</p>
-<p> 感觉可能是 <code>{}</code> 和 mathjax 渲染有一些冲突，具体原因还不完全清楚（？）</p>
-</li>
-</ol>
-<h3 id="表格中的"><a href="#表格中的" class="headerlink" title="表格中的 |"></a>表格中的 |</h3><h4 id="问题简述-2"><a href="#问题简述-2" class="headerlink" title="问题简述"></a>问题简述</h4><p>由于 markdown 本身的语法，我们无法直接在表格中打出竖线 |</p>
-<h4 id="解决方案-2"><a href="#解决方案-2" class="headerlink" title="解决方案"></a>解决方案</h4><ul>
-<li>当表格内容不用 $\LaTeX$ 时，可通过转义符 <code>\|</code> 或 <code>&amp;#124;</code> 来实现竖杠或绝对值； </li>
-<li>但是用 $\LaTeX$ 时第一个会显示为 “∥”，第二个会报错，故要用 <code>\vert</code> </li>
+<h2 id="1826-Codeforces-Round-870-Div-2"><a href="#1826-Codeforces-Round-870-Div-2" class="headerlink" title="1826. Codeforces Round 870 (Div. 2)"></a>1826. <a href="https://codeforces.com/contest/1826">Codeforces Round 870 (Div. 2)</a></h2><h3 id="E-Walk-the-Runway"><a href="#E-Walk-the-Runway" class="headerlink" title="E. Walk the Runway"></a><a href="https://codeforces.com/contest/1826/problem/E">E. Walk the Runway</a></h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>$n$ 个人每个人都有一个价值 $p_i$，然后这 $n$ 个人有 $m$ 维数值，要求你从中选取若干个人并且可以任意调整选的人的顺序，要求选的人满足 $m$ 维中每一维里选的人的数值都严格递增。</p>
+<p>$n \le 5000,m \le 500$。</p>
+<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>如果我们已知两个人之间的偏序关系，我们可以在两个人之间连一条有向边（或不连），故这 $n$ 个人的关系可以用一个有向无环图来表示，在图上跑 dfs，时间复杂度是 $O(n^2)$，是完全够的，那么我们现在研究如何求任意两个人之间偏序关系。</p>
+<p>直接暴力求偏序关系的时间复杂度是 $O(n^2m)$，显然是会 T 的，那么我们可以用 bitset 来优化。对每一维排完序后前面的肯定不会排在这个数的后面，故每次用 bitset 的 &amp; 运算即可，时间复杂度是 $O(\dfrac{m}{w})$，其中 $w$ 等于 $64$。</p>
+<p><a href="https://codeforces.com/contest/1826/submission/212761847">Code</a></p>
+<h3 id="F-Fading-into-Fog"><a href="#F-Fading-into-Fog" class="headerlink" title="F. Fading into Fog"></a><a href="https://codeforces.com/contest/1826/problem/F">F. Fading into Fog</a></h3><h4 id="Description-1"><a href="#Description-1" class="headerlink" title="Description"></a>Description</h4><p>交互题</p>
+<p>有 $n$ 个隐藏点，每次你可以给出 $a$，$b$，$c$，询问一条形如 $ax+by+c=0$ 的直线，交互库会以<strong>任意顺序</strong>告诉你每个点在直线上的投影（保证每个返回的投影点与真实投影点的距离不超过 $10^{-4}$）。</p>
+<p>请用最少的询问求出这些隐藏点的位置，精度相差 $10^{-3}$ 即可。</p>
+<p>保证每个隐藏点的与其他隐藏点的 $x$ 坐标和 $y$ 坐标都至少相差 $1$，每次询问的 $∣a∣+∣b∣≥0.1$。</p>
+<h4 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h4><p>通过画图观察不难发现，其实最多三次询问就可以确定这 $n$ 个点了，所以题目就变为不超过三次询问求出 $n$ 点，一条平行 $x$ 轴，一条平行 $y$ 轴，一条斜着的边（但是很贴近 $x$ 轴），前两个就可以确定这 $n$ 个点的横纵坐标，第三个完全确定这 $n$ 个点。</p>
+<p>为什么第三条线要贴近 $x$ 轴呢？因为我们的处理方法是对第一，三条线得到的 $n$ 个投影点按横坐标排序，选一条贴近 $x$ 轴的线保证这 $n$ 个点和第一条线的 $n$ 个点顺序一致，这样的话我们就可以算出每个点纵坐标的值，但不准确可能会有误差，但是我们知道每个点的纵坐标，所以我们可以找纵坐标和我们计算的估计值中最贴近的值来替换。</p>
+<p>值得注意的是，本题对精度要求较高，应用 <code>long double</code> 来存储</p>
+<p><a href="https://codeforces.com/contest/1826/submission/212805712">Code</a></p>
+<h2 id="1828-Codeforces-Round-873-Div-2"><a href="#1828-Codeforces-Round-873-Div-2" class="headerlink" title="1828. Codeforces Round 873 (Div. 2)"></a>1828. <a href="https://codeforces.com/contest/1828">Codeforces Round 873 (Div. 2)</a></h2><h3 id="D2-Range-Sorting-Hard-Version"><a href="#D2-Range-Sorting-Hard-Version" class="headerlink" title="D2. Range Sorting (Hard Version)"></a><a href="https://codeforces.com/contest/1828/problem/D2">D2. Range Sorting (Hard Version)</a></h3><h4 id="Description-2"><a href="#Description-2" class="headerlink" title="Description"></a>Description</h4><p>对一个数组 $\{p_i\}$ 的一段区间 $[l,r]$ 排序的代价为 $r−l$ ，对整个数组 $p_i$ 排序的代价为选定若干区间并排序，使得整个数组有序的代价之和。</p>
+<p>求 $\{a_i\}$ 的所有子段排序的代价之和。</p>
+<p>Easy Version $n \le 5 \times 10^3$</p>
+<p>Hard Version $n \le 3 \times 10^5$</p>
+<h4 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h4><p>有点难想。</p>
+<p>仔细观察样例，不难发现一些性质：</p>
+<ul>
+<li>操作区间一定是不重叠的，不然直接对整个区间操作更优。</li>
+<li>尽可能多区间操作会使答案更优。</li>
+<li>更分成两个区间操作则一定满足前一个区间的最大值小于后一个区间的最小值。</li>
 </ul>
-<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://blog.csdn.net/skytruine/article/details/105710349">Markdown表格数学公式中使用绝对值“| |”或竖杠”|”</a></p>
-<h3 id="背景-和-透明度"><a href="#背景-和-透明度" class="headerlink" title="背景 和 透明度"></a>背景 和 透明度</h3><h4 id="问题简述-3"><a href="#问题简述-3" class="headerlink" title="问题简述"></a>问题简述</h4><p>在 Hexo 7.x 版本下设置 背景 和 透明度</p>
-<h4 id="解决方案-3"><a href="#解决方案-3" class="headerlink" title="解决方案"></a>解决方案</h4><ul>
-<li><p>新建 _custom.styl 文件，并在 main.styl 中引用该文件</p>
-  <figure class="highlight stylus"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">//个人添加</span></span><br><span class="line"><span class="keyword">@import</span> <span class="string">"_custom.styl"</span></span><br></pre></td></tr></tbody></table></figure>
-</li>
-<li><pre><code class="stylus"><span class="comment">//背景图片</span>
-<span class="selector-tag">body</span> {
-    background:url(https://pic.heson10.com/img/image-20200712231958010.png);
-    <span class="attribute">background-repeat</span>: no-repeat;
-    <span class="attribute">background-attachment</span>:fixed;
-    <span class="attribute">background-size</span>: cover;
-    <span class="attribute">background-position</span>:<span class="number">50%</span> <span class="number">50%</span>;
-}
-
-<span class="comment">//博客内容透明化</span>
-<span class="comment">//文章内容的透明度设置</span>
-<span class="selector-class">.content-wrap</span> {
-  <span class="attribute">opacity</span>: <span class="number">0.9</span>;
-}
-
-<span class="comment">//侧边框的透明度设置</span>
-<span class="selector-class">.sidebar</span> {
-  <span class="attribute">opacity</span>: <span class="number">0.9</span>;
-}
-
-<span class="comment">//菜单栏的透明度设置</span>
-<span class="selector-class">.header-inner</span> {
-  <span class="attribute">background</span>: rgba(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0.9</span>);
-}
-
-<span class="comment">//搜索框（local-search）的透明度设置</span>
-<span class="selector-class">.popup</span> {
-  <span class="attribute">opacity</span>: <span class="number">0.9</span>;
-}</code></pre>
-</li>
-</ul>
-<h4 id="参考-1"><a href="#参考-1" class="headerlink" title="参考"></a>参考</h4><p><a href="https://www.heson10.com/volantis/posts/52911.html">Hexo+Next7.X 博客美化教程合集</a></p>
+<p>那么基于以上性质，我们很容易搞出 $O(n^3)$ 暴力：枚举区间左右端点，枚举中间间隔点，提前用 st表 预处理出区间最大最小值然后来求，但是这样发现连 Easy Version 都过不了，故我们可以来稍改进一下思路。</p>
+<p>对于 Easy Version，我们可以固定左端点，每次枚举右端点，每次向后加入一个新的数时，我们要重新计算对答案的贡献，我们算 $[l, r]$ 区间的答案就是区间长度减去最多可拆分区间数，假设我们已经知道了 $[l, r - 1]$ 区间的答案以及划分区间，加入 $a_r$ 数后，我们其实就是要把这个数和某个区间合并，满足合并后的区间的最小值依然大于前面区间的最大值。所以我们可以记录之前几个划分区间的最大值，然后不断向前跳，看 $a_r$ 可以和哪几个区间合并，找到第一个可以合并的区间就直接合并，这样一定是最优的。合并完之后更新新的拆分区间，答案也比较好统计，时间复杂度 $O(n^2)$。</p>
+<p>对于 Hard Vesion，我们发现很难从 Easy Version 上再继续优化，我们换另一个思路。能过 $3 \times 10^5$ 的做法应该是 $O(nlogn)$ 或 $O(n)$ 的，所以我们要找到这个复杂度的算法应该是算每个位置所能做出的贡献。我们先算最坏情况下一共的代价为 $\sum_{i = 2}^{n}(i - 1)(n - i + 1)$，然后我们再算每个位置对代价能减少的贡献。若能对答案产生减少的贡献，对于一个大区间，我们一定可以拆分成两个小区间。对于每个位置，我们不妨假设这个位置 $i$ 上的数是后一个区间的最小值。然后我们往后找到第一个小于 $a_i$ 的数的位置 $r_i$（这里求“第一个小于“这样的位置，我们可以用单调栈来求），然后再往前找第一个小于 $a_i$ 的数的位置 $l_i$，那么我们可以确定后一个区间的左端点是 $(l_i + 1)$，右端点是在 $i \sim (r_i - 1)$ 里选。然后前一个区间的右端点是 $l_i$，最后只用确定前一个区间的左端点，这里我们可以用 st表 先求出区间最大值，然后不断跳表来求出左端点 $kdl$。然后这个位置的数对答案减少的贡献为 $(r_i - i)\times(l_i - kdl + 1)$，时间复杂度为 $O(nlogn)$。</p>
+<p><a href="https://codeforces.com/contest/1828/submission/212909151">Code (Easy Version)</a></p>
+<p><a href="https://codeforces.com/contest/1828/submission/213004607">Code (Hard Version)</a></p>
+<h3 id="E-Palindrome-Partition"><a href="#E-Palindrome-Partition" class="headerlink" title="E. Palindrome Partition"></a><a href="https://codeforces.com/contest/1828/problem/E">E. Palindrome Partition</a></h3><h4 id="Description-3"><a href="#Description-3" class="headerlink" title="Description"></a>Description</h4><p>称一个字符串是好的，当且仅当它是一个长度为偶数的回文串或由若干长度为偶数的回文串拼接而成。</p>
+<p>给定一个长度为 $n$ 的字符串 $s$，求有多少 $s$ 的子串是好的。</p>
+<p>$1≤n≤5×10^5$，$s$ 仅包含小写字母。</p>
+<h4 id="Solution-3"><a href="#Solution-3" class="headerlink" title="Solution"></a>Solution</h4><p>根据数据范围可以得出正解的时间复杂度应该是 $O(n)$ 或 $O(nlogn)$ 的。</p>
+<p>本题采用动态规划，可以令 $g[i]$ 表示以 $i$ 结尾的好串个数，那么显然答案就是 $\sum_{i = 1}^n g[i]$ 。那么怎么求 $g[i]$ 呢，我们考虑到对于一个回文串，我们把它尽可能多分为由若干回文字串组成，分到不能分为止。这样分解出来的每一个回文串里一定不会包含回文前缀 / 后缀（因为要是包含的话就又可以分解了）。这样分解之后，对于一个好的字符串，一定是由若干小的不可分解的回文串组成。而且显然这种分解方法是唯一的。说明这样的话，对于每个好的字符串而言我们只算了一次，正是我们想要的。基于这个思路，我们再引入一个新的数组 $f[i]$，$f[i]$ 表示以 $i$ 结尾的回文串的最小长度，因为以 $i$ 结尾的字串一定是包含以 $i$ 结尾的最小回文串的，而且基于之前的分解方法，我们可以得到 $g[i] = g[i - f[i]] + 1(f[i] \ne 0)$，当 $f[i] = 0$ 时，$g[i] = 0$。那么现在我们将问题转化为了如何求 $f[i]$，我们先进行一遍 Manacher 算法，求出以每一位为对称轴的最大回文半径，由于要求是偶回文，所以我们只考虑以两个位置中间为轴。我们发现，若以第 $i$ 位为轴，那么 $[i + 1, i + len[i]]$ 这个范围内是都可以作为回文结尾的，可以被 $i$ 覆盖。而想要让回文最小，就是从后向前扫一遍，如果先被以 $i$ 覆盖的，一定满足以 $i$ 为轴回文最小，我们知道了右端点和回文轴就可以计算出回文长度了，也就可以计算出 $f[i]$ 了，要注意的是，如果区间中一部分点被之前的对称轴覆盖了，那么我们被之后对称轴覆盖时要跳过这几个点，可以用双向链表来维护。</p>
+<p><a href="https://codeforces.com/contest/1828/submission/213452328">Code</a></p>
+<h3 id="F-Two-Centroids"><a href="#F-Two-Centroids" class="headerlink" title="F. Two Centroids"></a><a href="https://codeforces.com/contest/1828/problem/F">F. Two Centroids</a></h3><h4 id="Description-4"><a href="#Description-4" class="headerlink" title="Description"></a>Description</h4><h4 id="Solution-4"><a href="#Solution-4" class="headerlink" title="Solution"></a>Solution</h4><h2 id="1829-Codeforces-Round-871-Div-4"><a href="#1829-Codeforces-Round-871-Div-4" class="headerlink" title="1829. Codeforces Round 871 (Div. 4)"></a>1829. <a href="https://codeforces.com/contest/1829">Codeforces Round 871 (Div. 4)</a></h2><h3 id="G-Hits-Different"><a href="#G-Hits-Different" class="headerlink" title="G. Hits Different"></a><a href="https://codeforces.com/contest/1829/problem/G">G. Hits Different</a></h3><h4 id="Description-5"><a href="#Description-5" class="headerlink" title="Description"></a>Description</h4><p><img src="1829G.png" alt="1829G"></p>
+<p>若干块以金字塔状摆放，用球击倒下方的，上方也会倒下，第 $n$ 块分数 $n^2$，问用球打第 $n$ 块能得多少分</p>
+<h4 id="Solution-5"><a href="#Solution-5" class="headerlink" title="Solution"></a>Solution</h4><p>方法一：</p>
+<p>​    动态规划， $f[i]$ 表示击打第 $i$ 块能得的分数，$f[i] = f[左上] + f[右上] - f[公共]$，因为左上和右上是有公共部分会多算，所以简单容斥一下</p>
+<p>方法二：</p>
+<p>​    还是动态规划，先把图倾斜 $45°$</p>
+<p>​    <img src="1829G-sol1.png" alt="1829G-sol1"></p>
+<p>​    感觉变好看了一点（？）</p>
+<p>​    再转45°</p>
+<p><img src="1829G-sol2.png" alt="1829G-sol2"></p>
+<p>​    嗯，变成一个简单二维DP就能解决的问题了</p>
+<p><a href="https://codeforces.com/contest/1829/submission/211201013">Code (Method I)</a></p>
+<p><a href="https://codeforces.com/contest/1829/submission/211200275">Code (Method II)</a></p>
+<h2 id="1837-Educational-Codeforces-Round-149-Rated-for-Div-2"><a href="#1837-Educational-Codeforces-Round-149-Rated-for-Div-2" class="headerlink" title="1837. Educational Codeforces Round 149 (Rated for Div. 2)"></a>1837. <a href="https://codeforces.com/contest/1837">Educational Codeforces Round 149 (Rated for Div. 2)</a></h2><h3 id="E-Playoff-Fixing"><a href="#E-Playoff-Fixing" class="headerlink" title="E. Playoff Fixing"></a><a href="https://codeforces.com/contest/1837/problem/E">E. Playoff Fixing</a></h3><h4 id="Description-6"><a href="#Description-6" class="headerlink" title="Description"></a>Description</h4><p>给定数 $k$，一共有 $2^k$ 个人参加比赛，序号越小的实力越强。每轮第 $2i$ 和 $2i-1$ 进行比赛，一共进行 $k$ 轮，最后要求序号为 $1$ 的一直留到最后一轮，序号为 $2$ 的留到倒数第二轮，序号为 $3 \sim 4$ 的留到倒数第三轮，以此类推，序号 $2^{k - 1} + 1$ 到 $2^k$ 的人要求第一轮淘汰，给定部分人当前位置，如果这个位置上还没确定选手就用 $-1$ 表示，问一共又有多少种表示合法方案</p>
+<h4 id="Solution-6"><a href="#Solution-6" class="headerlink" title="Solution"></a>Solution</h4><p>第一轮中，我们可以知道序号 $2^{k - 1} + 1$ 到 $2^k$ 的人可以安排在哪里，一定是在 $\{1,2\}$，$\{3,4\},\cdots, \{2^k - 1,2^k\}$ 中各选一个，如果两个都没选则两个位置都可以放，记一下这种情况的个数是 $cnt1$，如果一个位置放了小于 $2^{k-1}$ 的序号，那么只能选另一个位置放，如果两个位置都被选了且不合法，那么就返回 $0$，设一共有 $cnt2$ 个可以放的位置，那么这轮方案数是 $2^{cnt1} \times cnt1 !$ 而且这一轮放置的人下一轮都被淘汰了，所以无后效性，然后下一轮其实就变为规模折半的子问题，不断迭代计算即可</p>
+<p><a href="https://codeforces.com/contest/1837/submission/211143124">Code</a></p>
+<h3 id="F-Editorial-for-Two"><a href="#F-Editorial-for-Two" class="headerlink" title="F. Editorial for Two"></a><a href="https://codeforces.com/contest/1837/problem/F">F. Editorial for Two</a></h3><h4 id="Description-7"><a href="#Description-7" class="headerlink" title="Description"></a>Description</h4><p>$n$ 个数中选 $k$ 个数（不改变在原序列中顺序），要求这 $k$ 个数分为前后两半后，这前后两部分和的最大值尽可能小</p>
+<h4 id="Solution-7"><a href="#Solution-7" class="headerlink" title="Solution"></a>Solution</h4><p>这道题可以用二分来做，对于二分值 $lim$，先正着扫一遍，再倒着扫一遍，扫到第 $i$ 位置时，我们只要算一下前 $i - 1$ 位置中 和不超过 $lim$ 的最多可以选的数的个数 + 后 $i$ 到 $n$ 位置中 和不超过 $k$ 的最多可以选的数的个数  之和是不是大于 $k$ 即可</p>
+<p><a href="https://codeforces.com/contest/1837/submission/211151946">Code</a></p>
+<h2 id="1840-Codeforces-Round-878-Div-3"><a href="#1840-Codeforces-Round-878-Div-3" class="headerlink" title="1840. Codeforces Round 878 (Div. 3)"></a>1840. <a href="https://codeforces.com/contest/1840">Codeforces Round 878 (Div. 3)</a></h2><h3 id="F-Railguns"><a href="#F-Railguns" class="headerlink" title="F. Railguns"></a><a href="https://codeforces.com/contest/1840/problem/F">F. Railguns</a></h3><h4 id="Description-8"><a href="#Description-8" class="headerlink" title="Description"></a>Description</h4><p>Tema 在 $n⋅m$ 的网格内要从 $(0,0)$ 走到 $n⋅m$。第 $0$ 秒末 Tema 位于 $(0,0)$。</p>
+<p>每次行动 Tema 可以选择向下走，向右走或不动。</p>
+<p>机器人会发射 $r$ 次激光炮以阻挠他前进，具体为在第 $t$ 秒，向第 $x$ 行或第 $x$ 列发射激光炮，一整列或一整行都会受到炮击。若 Tema 在第 $t$ 秒末还停留在被炮击的单元格内则会被击毁。求 Tema 从 $(0,0)$ 到达 $(n,m)$ 的最短时间，若无法抵达，则输出 $−1$。</p>
+<p>$r$ 次炮击格式为 $t$，$d$，$coord$ ，$t$ 表示炮击发生的时间，$d$ 表示炮击方式 ( $d=1$ 时攻击一整行，$d=2$ 时攻击一整列)，$coord$ 表示攻击的是具体哪一行/列）</p>
+<h4 id="Solution-8"><a href="#Solution-8" class="headerlink" title="Solution"></a>Solution</h4><p>设 $f[i][j][k]$ 表示在 $k$ 时刻到第 $i$ 行第 $j$ 列是否合法，由于我们发现时间 $t$ 的范围是到 $10^9$ 且到达某位置的时间 $t$ 只和 $i$，$j$，和停下躲避了几次有关，而且躲避的次数最多不超过 $100$ 次，所以 $k$ 可以用停下躲避的次数来表示，这样转移方程就很简单了  $f[i][j][k] = f[i - 1][j][k] | f[i][j - 1][k] | f[i][j][k - 1]$</p>
+<p><a href="https://codeforces.com/contest/1840/submission/211968399">Code</a></p>
+<h3 id="G2-In-Search-of-Truth-Hard-Version"><a href="#G2-In-Search-of-Truth-Hard-Version" class="headerlink" title="G2. In Search of Truth (Hard Version)"></a><a href="https://codeforces.com/contest/1840/problem/G2">G2. In Search of Truth (Hard Version)</a></h3><h4 id="Description-9"><a href="#Description-9" class="headerlink" title="Description"></a>Description</h4><p>交互题</p>
+<p>一个转盘共 $n$（ $n$ 未知 ）个格子，格子 $1$ 到 $n$ 乱序编号，你每次可以顺/逆时针旋转 $k$ 个格子，输出顺/逆时针（分别用“+”、“-”表示）和 $k$。需要读取起始格子的编号和每次旋转后格子的编号，求 $n$。</p>
+<p>Easy Version 中旋转次数不大于 $2023$</p>
+<p>Hard Version 中旋转次数不大于 $1000$</p>
+<p>$n≤1×10^6,−10^9≤k≤10^9$</p>
+<h4 id="Solution-9"><a href="#Solution-9" class="headerlink" title="Solution"></a>Solution</h4><p>很不错的一道题</p>
+<p>对于 Easy Version，参考 BSGS 算法，先连续 999 次 +1，然后每次 +1000，这样最多 1000 次就可以循环完一圈，然后走完一圈后必定会落在最初连续的前 1000 个格子上，我们可以通过转了多少正好可以走一圈来推算 n 的大小，最多询问 999 + 1000 次</p>
+<p>对于 Hard Version，我们在 Easy Version 基础上稍加改进，我们对于一个 $n$，可以先转 $n_0$，然后再按 G1 的方法去转，先连续转 $d$ 个 $+1$，再一直 $+d$ 直到转完一圈为止，但是这个 $n_0$ 和 $d$ 如何确定呢。我们可以先随机 $k$ 次，然后去这 $k$ 次中得到的最大的数选为 $n_0$，因为如果直接选的话，选的数可能过大或过小，若是不随机选 $k$ 个数而是连续选 $k$ 个或间隔选 $k$ 个则容易被卡掉。不过这个算法由于是一定程度上取决于随机数的，所以不一定完全正确，当 $n$ 大于 $n_0 + d^2$ 时，就无法转到一圈，此时不对。所以 $k$ 次算出的数必须有一个要大于 $n - d^2$，出错的概率为 $P(A) = (\frac{n - d^2 - 1}{n})^k,(k + 2d = 1000)$，不难发现通过改变 $n$ 和 $k$ 大小是可以改变出错概率的，当选择 $k = 400, d = 300$ 时，即使是在 $n = 10^6$ 情况下 $P(A)$ 的数量级才是 $10^{-17}$，远远小于 $1$，故可以通过此题</p>
+<p><a href="https://codeforces.com/contest/1840/submission/212058294">Code (Easy Version)</a></p>
+<p><a href="https://codeforces.com/contest/1840/submission/212063730">Code (Hard Version)</a></p>
 ]]></content>
       <tags>
-        <tag>博客搭建</tag>
+        <tag>算法竞赛</tag>
       </tags>
   </entry>
   <entry>
@@ -838,84 +833,89 @@ $\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{
       </tags>
   </entry>
   <entry>
-    <title>CodeForces 补全计划（1826 ~ 1850）</title>
-    <url>/2023/06/26/CF-Instrumentality-Project-I/</url>
-    <content><![CDATA[<p>千里之行，始于足下</p>
+    <title>博客搭建踩坑指北</title>
+    <url>/2023/06/27/Cross-The-Hole/</url>
+    <content><![CDATA[<p>从踩坑到掉坑里</p>
 <span id="more"></span>
 
-<h2 id="1826-Codeforces-Round-870-Div-2"><a href="#1826-Codeforces-Round-870-Div-2" class="headerlink" title="1826. Codeforces Round 870 (Div. 2)"></a>1826. <a href="https://codeforces.com/contest/1826">Codeforces Round 870 (Div. 2)</a></h2><h3 id="E-Walk-the-Runway"><a href="#E-Walk-the-Runway" class="headerlink" title="E. Walk the Runway"></a><a href="https://codeforces.com/contest/1826/problem/E">E. Walk the Runway</a></h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>$n$ 个人每个人都有一个价值 $p_i$，然后这 $n$ 个人有 $m$ 维数值，要求你从中选取若干个人并且可以任意调整选的人的顺序，要求选的人满足 $m$ 维中每一维里选的人的数值都严格递增。</p>
-<p>$n \le 5000,m \le 500$。</p>
-<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>如果我们已知两个人之间的偏序关系，我们可以在两个人之间连一条有向边（或不连），故这 $n$ 个人的关系可以用一个有向无环图来表示，在图上跑 dfs，时间复杂度是 $O(n^2)$，是完全够的，那么我们现在研究如何求任意两个人之间偏序关系。</p>
-<p>直接暴力求偏序关系的时间复杂度是 $O(n^2m)$，显然是会 T 的，那么我们可以用 bitset 来优化。对每一维排完序后前面的肯定不会排在这个数的后面，故每次用 bitset 的 &amp; 运算即可，时间复杂度是 $O(\dfrac{m}{w})$，其中 $w$ 等于 $64$。</p>
-<p><a href="https://codeforces.com/contest/1826/submission/212761847">Code</a></p>
-<h3 id="F-Fading-into-Fog"><a href="#F-Fading-into-Fog" class="headerlink" title="F. Fading into Fog"></a><a href="https://codeforces.com/contest/1826/problem/F">F. Fading into Fog</a></h3><h4 id="Description-1"><a href="#Description-1" class="headerlink" title="Description"></a>Description</h4><p>交互题</p>
-<p>有 $n$ 个隐藏点，每次你可以给出 $a$，$b$，$c$，询问一条形如 $ax+by+c=0$ 的直线，交互库会以<strong>任意顺序</strong>告诉你每个点在直线上的投影（保证每个返回的投影点与真实投影点的距离不超过 $10^{-4}$）。</p>
-<p>请用最少的询问求出这些隐藏点的位置，精度相差 $10^{-3}$ 即可。</p>
-<p>保证每个隐藏点的与其他隐藏点的 $x$ 坐标和 $y$ 坐标都至少相差 $1$，每次询问的 $∣a∣+∣b∣≥0.1$。</p>
-<h4 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h4><p>通过画图观察不难发现，其实最多三次询问就可以确定这 $n$ 个点了，所以题目就变为不超过三次询问求出 $n$ 点，一条平行 $x$ 轴，一条平行 $y$ 轴，一条斜着的边（但是很贴近 $x$ 轴），前两个就可以确定这 $n$ 个点的横纵坐标，第三个完全确定这 $n$ 个点。</p>
-<p>为什么第三条线要贴近 $x$ 轴呢？因为我们的处理方法是对第一，三条线得到的 $n$ 个投影点按横坐标排序，选一条贴近 $x$ 轴的线保证这 $n$ 个点和第一条线的 $n$ 个点顺序一致，这样的话我们就可以算出每个点纵坐标的值，但不准确可能会有误差，但是我们知道每个点的纵坐标，所以我们可以找纵坐标和我们计算的估计值中最贴近的值来替换。</p>
-<p>值得注意的是，本题对精度要求较高，应用 <code>long double</code> 来存储</p>
-<p><a href="https://codeforces.com/contest/1826/submission/212805712">Code</a></p>
-<h2 id="1828-Codeforces-Round-873-Div-2"><a href="#1828-Codeforces-Round-873-Div-2" class="headerlink" title="1828. Codeforces Round 873 (Div. 2)"></a>1828. <a href="https://codeforces.com/contest/1828">Codeforces Round 873 (Div. 2)</a></h2><h3 id="D2-Range-Sorting-Hard-Version"><a href="#D2-Range-Sorting-Hard-Version" class="headerlink" title="D2. Range Sorting (Hard Version)"></a><a href="https://codeforces.com/contest/1828/problem/D2">D2. Range Sorting (Hard Version)</a></h3><h4 id="Description-2"><a href="#Description-2" class="headerlink" title="Description"></a>Description</h4><p>对一个数组 $\{p_i\}$ 的一段区间 $[l,r]$ 排序的代价为 $r−l$ ，对整个数组 $p_i$ 排序的代价为选定若干区间并排序，使得整个数组有序的代价之和。</p>
-<p>求 $\{a_i\}$ 的所有子段排序的代价之和。</p>
-<p>Easy Version $n \le 5 \times 10^3$</p>
-<p>Hard Version $n \le 3 \times 10^5$</p>
-<h4 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h4><p>有点难想。</p>
-<p>仔细观察样例，不难发现一些性质：</p>
-<ul>
-<li>操作区间一定是不重叠的，不然直接对整个区间操作更优。</li>
-<li>尽可能多区间操作会使答案更优。</li>
-<li>更分成两个区间操作则一定满足前一个区间的最大值小于后一个区间的最小值。</li>
+<p>本博客采用 Hexo + GitHub 搭建，具体教程网上很多不再赘述</p>
+<p>不过这里还是推荐两个我主要参考的教程 <a href="https://ouuan.github.io/post/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8C%97/">hexo博客搭建指北</a> 和 <a href="https://venusnero.github.io/2019/01/23/build_hexo_github_blog/">从零搭建 Hexo + Github 博客</a></p>
+<p>下面分享一些自己踩过的坑</p>
+<h3 id="公式块中公式无法正常换行"><a href="#公式块中公式无法正常换行" class="headerlink" title="公式块中公式无法正常换行"></a>公式块中公式无法正常换行</h3><h4 id="问题简述"><a href="#问题简述" class="headerlink" title="问题简述"></a>问题简述</h4><p>用 $$ 插入公式块时，本地上用 typora 显示公式换行，但网页上未显示出来</p>
+<p><code>\\</code> 无法正常换行</p>
+<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>在公式块前面加上 <code>\begin{gather}</code> 末尾加上 <code>\end{gather}</code> 即可</p>
+<h3 id="Majax-渲染"><a href="#Majax-渲染" class="headerlink" title="Majax 渲染"></a>Majax 渲染</h3><h4 id="问题简述-1"><a href="#问题简述-1" class="headerlink" title="问题简述"></a>问题简述</h4><ol>
+<li><p>无法正常渲染二重闭曲面积分</p>
+</li>
+<li><pre><code class="latex">$\iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV = \unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy $
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line"></span><br><span class="line"> 可以正常渲染出来</span><br><span class="line"></span><br><span class="line">$\iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV = \unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy $</span><br><span class="line"></span><br><span class="line">```latex</span><br><span class="line">$\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$</span><br></pre></td></tr></tbody></table></figure>
+
+渲染异常
+
+$\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$
+</code></pre>
+</li>
+</ol>
+<h4 id="解决方案-1"><a href="#解决方案-1" class="headerlink" title="解决方案"></a>解决方案</h4><ol>
+<li><p>用 <code>\unicode{8751}</code> 表示即可</p>
+</li>
+<li><p>很神奇的问题，解决方法也很玄学，将</p>
+ <figure class="highlight latex"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">\unicode</span>{8751}<span class="built_in">_</span>{<span class="keyword">\sum</span>}Pdydz + Qdzdx + Rdxdy = <span class="keyword">\iiint</span><span class="built_in">_</span>{<span class="keyword">\Omega</span>}(<span class="keyword">\frac</span>{<span class="keyword">\partial</span> P}{<span class="keyword">\partial</span> x} + <span class="keyword">\frac</span>{<span class="keyword">\partial</span> Q}{<span class="keyword">\partial</span> y} + <span class="keyword">\frac</span>{<span class="keyword">\partial</span> R}{<span class="keyword">\partial</span> z})dV</span><br></pre></td></tr></tbody></table></figure>
+
+<p> 改为</p>
+ <figure class="highlight latex"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">\unicode</span>{8751}<span class="built_in">_</span>{<span class="keyword">\sum</span>} Pdydz + Qdzdx + Rdxdy = <span class="keyword">\iiint</span><span class="built_in">_</span><span class="keyword">\Omega</span>(<span class="keyword">\frac</span>{<span class="keyword">\partial</span> P}{<span class="keyword">\partial</span> x} + <span class="keyword">\frac</span>{<span class="keyword">\partial</span> Q}{<span class="keyword">\partial</span> y} + <span class="keyword">\frac</span>{<span class="keyword">\partial</span> R}{<span class="keyword">\partial</span> z})dV</span><br></pre></td></tr></tbody></table></figure>
+
+<p> 即可</p>
+<p> $\unicode{8751}_\sum Pdydz + Qdzdx + Rdxdy = \iiint_\Omega(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$</p>
+<p> 感觉可能是 <code>{}</code> 和 mathjax 渲染有一些冲突，具体原因还不完全清楚（？）</p>
+</li>
+</ol>
+<h3 id="表格中的"><a href="#表格中的" class="headerlink" title="表格中的 |"></a>表格中的 |</h3><h4 id="问题简述-2"><a href="#问题简述-2" class="headerlink" title="问题简述"></a>问题简述</h4><p>由于 markdown 本身的语法，我们无法直接在表格中打出竖线 |</p>
+<h4 id="解决方案-2"><a href="#解决方案-2" class="headerlink" title="解决方案"></a>解决方案</h4><ul>
+<li>当表格内容不用 $\LaTeX$ 时，可通过转义符 <code>\|</code> 或 <code>&amp;#124;</code> 来实现竖杠或绝对值； </li>
+<li>但是用 $\LaTeX$ 时第一个会显示为 “∥”，第二个会报错，故要用 <code>\vert</code> </li>
 </ul>
-<p>那么基于以上性质，我们很容易搞出 $O(n^3)$ 暴力：枚举区间左右端点，枚举中间间隔点，提前用 st表 预处理出区间最大最小值然后来求，但是这样发现连 Easy Version 都过不了，故我们可以来稍改进一下思路。</p>
-<p>对于 Easy Version，我们可以固定左端点，每次枚举右端点，每次向后加入一个新的数时，我们要重新计算对答案的贡献，我们算 $[l, r]$ 区间的答案就是区间长度减去最多可拆分区间数，假设我们已经知道了 $[l, r - 1]$ 区间的答案以及划分区间，加入 $a_r$ 数后，我们其实就是要把这个数和某个区间合并，满足合并后的区间的最小值依然大于前面区间的最大值。所以我们可以记录之前几个划分区间的最大值，然后不断向前跳，看 $a_r$ 可以和哪几个区间合并，找到第一个可以合并的区间就直接合并，这样一定是最优的。合并完之后更新新的拆分区间，答案也比较好统计，时间复杂度 $O(n^2)$。</p>
-<p>对于 Hard Vesion，我们发现很难从 Easy Version 上再继续优化，我们换另一个思路。能过 $3 \times 10^5$ 的做法应该是 $O(nlogn)$ 或 $O(n)$ 的，所以我们要找到这个复杂度的算法应该是算每个位置所能做出的贡献。我们先算最坏情况下一共的代价为 $\sum_{i = 2}^{n}(i - 1)(n - i + 1)$，然后我们再算每个位置对代价能减少的贡献。若能对答案产生减少的贡献，对于一个大区间，我们一定可以拆分成两个小区间。对于每个位置，我们不妨假设这个位置 $i$ 上的数是后一个区间的最小值。然后我们往后找到第一个小于 $a_i$ 的数的位置 $r_i$（这里求“第一个小于“这样的位置，我们可以用单调栈来求），然后再往前找第一个小于 $a_i$ 的数的位置 $l_i$，那么我们可以确定后一个区间的左端点是 $(l_i + 1)$，右端点是在 $i \sim (r_i - 1)$ 里选。然后前一个区间的右端点是 $l_i$，最后只用确定前一个区间的左端点，这里我们可以用 st表 先求出区间最大值，然后不断跳表来求出左端点 $kdl$。然后这个位置的数对答案减少的贡献为 $(r_i - i)\times(l_i - kdl + 1)$，时间复杂度为 $O(nlogn)$。</p>
-<p><a href="https://codeforces.com/contest/1828/submission/212909151">Code (Easy Version)</a></p>
-<p><a href="https://codeforces.com/contest/1828/submission/213004607">Code (Hard Version)</a></p>
-<h3 id="E-Palindrome-Partition"><a href="#E-Palindrome-Partition" class="headerlink" title="E. Palindrome Partition"></a><a href="https://codeforces.com/contest/1828/problem/E">E. Palindrome Partition</a></h3><h4 id="Description-3"><a href="#Description-3" class="headerlink" title="Description"></a>Description</h4><p>称一个字符串是好的，当且仅当它是一个长度为偶数的回文串或由若干长度为偶数的回文串拼接而成。</p>
-<p>给定一个长度为 $n$ 的字符串 $s$，求有多少 $s$ 的子串是好的。</p>
-<p>$1≤n≤5×10^5$，$s$ 仅包含小写字母。</p>
-<h4 id="Solution-3"><a href="#Solution-3" class="headerlink" title="Solution"></a>Solution</h4><p>根据数据范围可以得出正解的时间复杂度应该是 $O(n)$ 或 $O(nlogn)$ 的。</p>
-<p>本题采用动态规划，可以令 $g[i]$ 表示以 $i$ 结尾的好串个数，那么显然答案就是 $\sum_{i = 1}^n g[i]$ 。那么怎么求 $g[i]$ 呢，我们考虑到对于一个回文串，我们把它尽可能多分为由若干回文字串组成，分到不能分为止。这样分解出来的每一个回文串里一定不会包含回文前缀 / 后缀（因为要是包含的话就又可以分解了）。这样分解之后，对于一个好的字符串，一定是由若干小的不可分解的回文串组成。而且显然这种分解方法是唯一的。说明这样的话，对于每个好的字符串而言我们只算了一次，正是我们想要的。基于这个思路，我们再引入一个新的数组 $f[i]$，$f[i]$ 表示以 $i$ 结尾的回文串的最小长度，因为以 $i$ 结尾的字串一定是包含以 $i$ 结尾的最小回文串的，而且基于之前的分解方法，我们可以得到 $g[i] = g[i - f[i]] + 1(f[i] \ne 0)$，当 $f[i] = 0$ 时，$g[i] = 0$。那么现在我们将问题转化为了如何求 $f[i]$，我们先进行一遍 Manacher 算法，求出以每一位为对称轴的最大回文半径，由于要求是偶回文，所以我们只考虑以两个位置中间为轴。我们发现，若以第 $i$ 位为轴，那么 $[i + 1, i + len[i]]$ 这个范围内是都可以作为回文结尾的，可以被 $i$ 覆盖。而想要让回文最小，就是从后向前扫一遍，如果先被以 $i$ 覆盖的，一定满足以 $i$ 为轴回文最小，我们知道了右端点和回文轴就可以计算出回文长度了，也就可以计算出 $f[i]$ 了，要注意的是，如果区间中一部分点被之前的对称轴覆盖了，那么我们被之后对称轴覆盖时要跳过这几个点，可以用双向链表来维护。</p>
-<p><a href="https://codeforces.com/contest/1828/submission/213452328">Code</a></p>
-<h3 id="F-Two-Centroids"><a href="#F-Two-Centroids" class="headerlink" title="F. Two Centroids"></a><a href="https://codeforces.com/contest/1828/problem/F">F. Two Centroids</a></h3><h4 id="Description-4"><a href="#Description-4" class="headerlink" title="Description"></a>Description</h4><h4 id="Solution-4"><a href="#Solution-4" class="headerlink" title="Solution"></a>Solution</h4><h2 id="1829-Codeforces-Round-871-Div-4"><a href="#1829-Codeforces-Round-871-Div-4" class="headerlink" title="1829. Codeforces Round 871 (Div. 4)"></a>1829. <a href="https://codeforces.com/contest/1829">Codeforces Round 871 (Div. 4)</a></h2><h3 id="G-Hits-Different"><a href="#G-Hits-Different" class="headerlink" title="G. Hits Different"></a><a href="https://codeforces.com/contest/1829/problem/G">G. Hits Different</a></h3><h4 id="Description-5"><a href="#Description-5" class="headerlink" title="Description"></a>Description</h4><p><img src="1829G.png" alt="1829G"></p>
-<p>若干块以金字塔状摆放，用球击倒下方的，上方也会倒下，第 $n$ 块分数 $n^2$，问用球打第 $n$ 块能得多少分</p>
-<h4 id="Solution-5"><a href="#Solution-5" class="headerlink" title="Solution"></a>Solution</h4><p>方法一：</p>
-<p>​    动态规划， $f[i]$ 表示击打第 $i$ 块能得的分数，$f[i] = f[左上] + f[右上] - f[公共]$，因为左上和右上是有公共部分会多算，所以简单容斥一下</p>
-<p>方法二：</p>
-<p>​    还是动态规划，先把图倾斜 $45°$</p>
-<p>​    <img src="1829G-sol1.png" alt="1829G-sol1"></p>
-<p>​    感觉变好看了一点（？）</p>
-<p>​    再转45°</p>
-<p><img src="1829G-sol2.png" alt="1829G-sol2"></p>
-<p>​    嗯，变成一个简单二维DP就能解决的问题了</p>
-<p><a href="https://codeforces.com/contest/1829/submission/211201013">Code (Method I)</a></p>
-<p><a href="https://codeforces.com/contest/1829/submission/211200275">Code (Method II)</a></p>
-<h2 id="1837-Educational-Codeforces-Round-149-Rated-for-Div-2"><a href="#1837-Educational-Codeforces-Round-149-Rated-for-Div-2" class="headerlink" title="1837. Educational Codeforces Round 149 (Rated for Div. 2)"></a>1837. <a href="https://codeforces.com/contest/1837">Educational Codeforces Round 149 (Rated for Div. 2)</a></h2><h3 id="E-Playoff-Fixing"><a href="#E-Playoff-Fixing" class="headerlink" title="E. Playoff Fixing"></a><a href="https://codeforces.com/contest/1837/problem/E">E. Playoff Fixing</a></h3><h4 id="Description-6"><a href="#Description-6" class="headerlink" title="Description"></a>Description</h4><p>给定数 $k$，一共有 $2^k$ 个人参加比赛，序号越小的实力越强。每轮第 $2i$ 和 $2i-1$ 进行比赛，一共进行 $k$ 轮，最后要求序号为 $1$ 的一直留到最后一轮，序号为 $2$ 的留到倒数第二轮，序号为 $3 \sim 4$ 的留到倒数第三轮，以此类推，序号 $2^{k - 1} + 1$ 到 $2^k$ 的人要求第一轮淘汰，给定部分人当前位置，如果这个位置上还没确定选手就用 $-1$ 表示，问一共又有多少种表示合法方案</p>
-<h4 id="Solution-6"><a href="#Solution-6" class="headerlink" title="Solution"></a>Solution</h4><p>第一轮中，我们可以知道序号 $2^{k - 1} + 1$ 到 $2^k$ 的人可以安排在哪里，一定是在 $\{1,2\}$，$\{3,4\},\cdots, \{2^k - 1,2^k\}$ 中各选一个，如果两个都没选则两个位置都可以放，记一下这种情况的个数是 $cnt1$，如果一个位置放了小于 $2^{k-1}$ 的序号，那么只能选另一个位置放，如果两个位置都被选了且不合法，那么就返回 $0$，设一共有 $cnt2$ 个可以放的位置，那么这轮方案数是 $2^{cnt1} \times cnt1 !$ 而且这一轮放置的人下一轮都被淘汰了，所以无后效性，然后下一轮其实就变为规模折半的子问题，不断迭代计算即可</p>
-<p><a href="https://codeforces.com/contest/1837/submission/211143124">Code</a></p>
-<h3 id="F-Editorial-for-Two"><a href="#F-Editorial-for-Two" class="headerlink" title="F. Editorial for Two"></a><a href="https://codeforces.com/contest/1837/problem/F">F. Editorial for Two</a></h3><h4 id="Description-7"><a href="#Description-7" class="headerlink" title="Description"></a>Description</h4><p>$n$ 个数中选 $k$ 个数（不改变在原序列中顺序），要求这 $k$ 个数分为前后两半后，这前后两部分和的最大值尽可能小</p>
-<h4 id="Solution-7"><a href="#Solution-7" class="headerlink" title="Solution"></a>Solution</h4><p>这道题可以用二分来做，对于二分值 $lim$，先正着扫一遍，再倒着扫一遍，扫到第 $i$ 位置时，我们只要算一下前 $i - 1$ 位置中 和不超过 $lim$ 的最多可以选的数的个数 + 后 $i$ 到 $n$ 位置中 和不超过 $k$ 的最多可以选的数的个数  之和是不是大于 $k$ 即可</p>
-<p><a href="https://codeforces.com/contest/1837/submission/211151946">Code</a></p>
-<h2 id="1840-Codeforces-Round-878-Div-3"><a href="#1840-Codeforces-Round-878-Div-3" class="headerlink" title="1840. Codeforces Round 878 (Div. 3)"></a>1840. <a href="https://codeforces.com/contest/1840">Codeforces Round 878 (Div. 3)</a></h2><h3 id="F-Railguns"><a href="#F-Railguns" class="headerlink" title="F. Railguns"></a><a href="https://codeforces.com/contest/1840/problem/F">F. Railguns</a></h3><h4 id="Description-8"><a href="#Description-8" class="headerlink" title="Description"></a>Description</h4><p>Tema 在 $n⋅m$ 的网格内要从 $(0,0)$ 走到 $n⋅m$。第 $0$ 秒末 Tema 位于 $(0,0)$。</p>
-<p>每次行动 Tema 可以选择向下走，向右走或不动。</p>
-<p>机器人会发射 $r$ 次激光炮以阻挠他前进，具体为在第 $t$ 秒，向第 $x$ 行或第 $x$ 列发射激光炮，一整列或一整行都会受到炮击。若 Tema 在第 $t$ 秒末还停留在被炮击的单元格内则会被击毁。求 Tema 从 $(0,0)$ 到达 $(n,m)$ 的最短时间，若无法抵达，则输出 $−1$。</p>
-<p>$r$ 次炮击格式为 $t$，$d$，$coord$ ，$t$ 表示炮击发生的时间，$d$ 表示炮击方式 ( $d=1$ 时攻击一整行，$d=2$ 时攻击一整列)，$coord$ 表示攻击的是具体哪一行/列）</p>
-<h4 id="Solution-8"><a href="#Solution-8" class="headerlink" title="Solution"></a>Solution</h4><p>设 $f[i][j][k]$ 表示在 $k$ 时刻到第 $i$ 行第 $j$ 列是否合法，由于我们发现时间 $t$ 的范围是到 $10^9$ 且到达某位置的时间 $t$ 只和 $i$，$j$，和停下躲避了几次有关，而且躲避的次数最多不超过 $100$ 次，所以 $k$ 可以用停下躲避的次数来表示，这样转移方程就很简单了  $f[i][j][k] = f[i - 1][j][k] | f[i][j - 1][k] | f[i][j][k - 1]$</p>
-<p><a href="https://codeforces.com/contest/1840/submission/211968399">Code</a></p>
-<h3 id="G2-In-Search-of-Truth-Hard-Version"><a href="#G2-In-Search-of-Truth-Hard-Version" class="headerlink" title="G2. In Search of Truth (Hard Version)"></a><a href="https://codeforces.com/contest/1840/problem/G2">G2. In Search of Truth (Hard Version)</a></h3><h4 id="Description-9"><a href="#Description-9" class="headerlink" title="Description"></a>Description</h4><p>交互题</p>
-<p>一个转盘共 $n$（ $n$ 未知 ）个格子，格子 $1$ 到 $n$ 乱序编号，你每次可以顺/逆时针旋转 $k$ 个格子，输出顺/逆时针（分别用“+”、“-”表示）和 $k$。需要读取起始格子的编号和每次旋转后格子的编号，求 $n$。</p>
-<p>Easy Version 中旋转次数不大于 $2023$</p>
-<p>Hard Version 中旋转次数不大于 $1000$</p>
-<p>$n≤1×10^6,−10^9≤k≤10^9$</p>
-<h4 id="Solution-9"><a href="#Solution-9" class="headerlink" title="Solution"></a>Solution</h4><p>很不错的一道题</p>
-<p>对于 Easy Version，参考 BSGS 算法，先连续 999 次 +1，然后每次 +1000，这样最多 1000 次就可以循环完一圈，然后走完一圈后必定会落在最初连续的前 1000 个格子上，我们可以通过转了多少正好可以走一圈来推算 n 的大小，最多询问 999 + 1000 次</p>
-<p>对于 Hard Version，我们在 Easy Version 基础上稍加改进，我们对于一个 $n$，可以先转 $n_0$，然后再按 G1 的方法去转，先连续转 $d$ 个 $+1$，再一直 $+d$ 直到转完一圈为止，但是这个 $n_0$ 和 $d$ 如何确定呢。我们可以先随机 $k$ 次，然后去这 $k$ 次中得到的最大的数选为 $n_0$，因为如果直接选的话，选的数可能过大或过小，若是不随机选 $k$ 个数而是连续选 $k$ 个或间隔选 $k$ 个则容易被卡掉。不过这个算法由于是一定程度上取决于随机数的，所以不一定完全正确，当 $n$ 大于 $n_0 + d^2$ 时，就无法转到一圈，此时不对。所以 $k$ 次算出的数必须有一个要大于 $n - d^2$，出错的概率为 $P(A) = (\frac{n - d^2 - 1}{n})^k,(k + 2d = 1000)$，不难发现通过改变 $n$ 和 $k$ 大小是可以改变出错概率的，当选择 $k = 400, d = 300$ 时，即使是在 $n = 10^6$ 情况下 $P(A)$ 的数量级才是 $10^{-17}$，远远小于 $1$，故可以通过此题</p>
-<p><a href="https://codeforces.com/contest/1840/submission/212058294">Code (Easy Version)</a></p>
-<p><a href="https://codeforces.com/contest/1840/submission/212063730">Code (Hard Version)</a></p>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://blog.csdn.net/skytruine/article/details/105710349">Markdown表格数学公式中使用绝对值“| |”或竖杠”|”</a></p>
+<h3 id="背景-和-透明度"><a href="#背景-和-透明度" class="headerlink" title="背景 和 透明度"></a>背景 和 透明度</h3><h4 id="问题简述-3"><a href="#问题简述-3" class="headerlink" title="问题简述"></a>问题简述</h4><p>在 Hexo 7.x 版本下设置 背景 和 透明度</p>
+<h4 id="解决方案-3"><a href="#解决方案-3" class="headerlink" title="解决方案"></a>解决方案</h4><ul>
+<li><p>新建 _custom.styl 文件，并在 main.styl 中引用该文件</p>
+  <figure class="highlight stylus"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">//个人添加</span></span><br><span class="line"><span class="keyword">@import</span> <span class="string">"_custom.styl"</span></span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><pre><code class="stylus"><span class="comment">//背景图片</span>
+<span class="selector-tag">body</span> {
+    background:url(https://pic.heson10.com/img/image-20200712231958010.png);
+    <span class="attribute">background-repeat</span>: no-repeat;
+    <span class="attribute">background-attachment</span>:fixed;
+    <span class="attribute">background-size</span>: cover;
+    <span class="attribute">background-position</span>:<span class="number">50%</span> <span class="number">50%</span>;
+}
+
+<span class="comment">//博客内容透明化</span>
+<span class="comment">//文章内容的透明度设置</span>
+<span class="selector-class">.content-wrap</span> {
+  <span class="attribute">opacity</span>: <span class="number">0.9</span>;
+}
+
+<span class="comment">//侧边框的透明度设置</span>
+<span class="selector-class">.sidebar</span> {
+  <span class="attribute">opacity</span>: <span class="number">0.9</span>;
+}
+
+<span class="comment">//菜单栏的透明度设置</span>
+<span class="selector-class">.header-inner</span> {
+  <span class="attribute">background</span>: rgba(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0.9</span>);
+}
+
+<span class="comment">//搜索框（local-search）的透明度设置</span>
+<span class="selector-class">.popup</span> {
+  <span class="attribute">opacity</span>: <span class="number">0.9</span>;
+}</code></pre>
+</li>
+</ul>
+<h4 id="参考-1"><a href="#参考-1" class="headerlink" title="参考"></a>参考</h4><p><a href="https://www.heson10.com/volantis/posts/52911.html">Hexo+Next7.X 博客美化教程合集</a></p>
 ]]></content>
       <tags>
-        <tag>算法竞赛</tag>
+        <tag>博客搭建</tag>
       </tags>
   </entry>
   <entry>
@@ -1208,21 +1208,25 @@ $\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{
 </ol>
 <h3 id="4-3-实现"><a href="#4-3-实现" class="headerlink" title="4.3 实现"></a>4.3 实现</h3><figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">CRT</span><span class="params">()</span> </span>{</span><br><span class="line">  ll n, M = <span class="number">1</span>, ans = <span class="number">0</span>;</span><br><span class="line">  cin &gt;&gt; n; </span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) {</span><br><span class="line">    cin &gt;&gt; b[i] &gt;&gt; a[i];</span><br><span class="line">    M *= b[i];</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) {</span><br><span class="line">    ll m = M / b[i];</span><br><span class="line">    ll x, y;</span><br><span class="line">    <span class="built_in">exgcd</span>(m, b[i], x, y); <span class="comment">// 注：如果模数不为质数时，求逆元不能用费马小定理来算，只能用扩欧来算</span></span><br><span class="line">    x = (x + b[i]) % b[i]; x %= M;</span><br><span class="line">    m *= x; m %= M;</span><br><span class="line">    ans += a[i] * m % M;</span><br><span class="line">    ans %= M;</span><br><span class="line">  }</span><br><span class="line">  cout &lt;&lt; (ans % M + M) % M &lt;&lt; endl;</span><br><span class="line">  <span class="keyword">return</span> ;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<h3 id="4-4-扩展中国剩余定理"><a href="#4-4-扩展中国剩余定理" class="headerlink" title="4.4 扩展中国剩余定理"></a>4.4 扩展中国剩余定理</h3>]]></content>
-      <tags>
-        <tag>数学</tag>
-        <tag>算法竞赛</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>学习笔记 | 多项式与生成函数</title>
-    <url>/2023/06/28/Poly/</url>
-    <content><![CDATA[<p>浅挖个坑，期末考完填上</p>
-<span id="more"></span>
+<h3 id="4-4-扩展中国剩余定理"><a href="#4-4-扩展中国剩余定理" class="headerlink" title="4.4 扩展中国剩余定理"></a>4.4 扩展中国剩余定理</h3><p>中国剩余定理的适用范围是模数互质的情况，那么当方程模数不互质时我们要用到扩展中国剩余定理。</p>
+<p>思路是不断把 $n$ 个方程两两合并，对于<br>$$<br>\begin{cases} x \equiv b(\mod a) \\ x \equiv B(\mod A)  \end{cases}<br>$$<br>我们令 $x = ya + b = YB + A$ ，那么有 $B - b = ya - YA$，我们利用扩欧可以求解出 $x’a + y’A = (a,A)$ 的一组解，那么若 $(a, A) \nmid B-b$ 则方程无解，对于有解的情况 $(x’ \times \dfrac{B - b}{(a, A)})a + (y’ \times \dfrac{B - b}{(a, A)})A = B - b$，令 $X = x’ \times \dfrac{B - b}{(a, A)}, Y = y’ \times \dfrac{B - b}{(a, A)}$ 若是让解最小即是让 $X$ 最小，我们调整 $X$ 可以通过让 $X + k \times \dfrac{A}{(a, A)}$，这时 $Y$ 相应减去同等系数的 $\dfrac{a}{(a, A)}$。所以 $X = (X \mod \dfrac{A}{(a, A)} + \dfrac{A}{(a, A)}) \mod \dfrac{A}{(a, A)}$。求出新的 $X$ 后再根据 $x = yX + a$ 可以求出新的 $x$，新的 $b = x \mod \dfrac{A \times a}{(a, A)}$，新的 $a = \dfrac{A \times a}{(a, A)}$。那么就可以得出新的方程 $x \equiv b(\mod a)$ 了。最后通过不断合并变为一个方程就能求出答案了。  </p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">ExCRT</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) {</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%lld%lld"</span>, &amp;A, &amp;B);</span><br><span class="line">    <span class="keyword">if</span>(i == <span class="number">1</span>) {</span><br><span class="line">      a = A;</span><br><span class="line">      b = B;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span> {</span><br><span class="line">      g = <span class="built_in">exgcd</span>(a, A, x, y);</span><br><span class="line">      <span class="keyword">if</span>((B - b) % g) {</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"-1"</span>);</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">      }</span><br><span class="line">      x = x * ((B - b) / g);</span><br><span class="line">      x = (x % (A / g) + (A / g)) % (A / g);</span><br><span class="line">      l = A / g * a;</span><br><span class="line">      b = ((a * x + b) % l + l) % l;</span><br><span class="line">      a = l;</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>, b % a);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h2 id="5-卢卡斯定理"><a href="#5-卢卡斯定理" class="headerlink" title="5. 卢卡斯定理"></a>5. 卢卡斯定理</h2><h3 id="5-1-定义"><a href="#5-1-定义" class="headerlink" title="5.1 定义"></a>5.1 定义</h3><p>对于质数 $p$，有<br>$$<br>\begin{pmatrix} n \\ m \end{pmatrix} \mod p = \begin{pmatrix} \left \lfloor \dfrac{n}{p} \right \rfloor \\ \left \lfloor \dfrac{m}{p}\right \rfloor \end{pmatrix} \cdot \begin{pmatrix} n \mod p \\m \mod p \end{pmatrix} \mod p<br>$$<br>由于$n \mod p$ 和 $m \mod p$ 肯定小于 $p$，所以直接算即可，对 $\left \lfloor \dfrac{n}{p} \right \rfloor$ 部分再用卢卡斯定理计算。</p>
+<p>也即 $Lucas(n,m,p)=c(n\%p,m\%p)×Lucas(\dfrac{n}{p},\dfrac{m}{p},p)$。</p>
+<h3 id="5-2-证明"><a href="#5-2-证明" class="headerlink" title="5.2 证明"></a>5.2 证明</h3><p>首先证明首先我们需要证明 $C_p^i \equiv \dfrac{p}{i}C_{p - 1}^{i - 1} \equiv 0(\mod p)(1 \le i \le p-1)$ 由于 $p$ 为质数，故 $\dfrac{1}{i}C_{p - 1}^{i - 1}$ 为整数，乘以 $p$ 后和 $p$ 同余为 $0$，故得证。</p>
+<p>根据这个性质有 $(1 + x)^p \equiv 1 + x^p(\mod p)$</p>
+<p>对于 $C_m^n \mod p$，其实就是求 $(1 + x^n)\mod p$ 中 $x^m$ 的系数。</p>
+<p>我们令 $n = ap +b$，$m = cp + d$。所以接下来证 $C_n^m \equiv C_a^c \times C_b^d(\mod p)$。</p>
+<p>我们有<br>$$<br>(1 + x)^n \equiv (1 + x)^{pa}(1 + x)^b \equiv (1 + x^p)^a(1 + x)^b(\mod p)<br>$$<br>观察 $x^m$ 的系数，故 $C_n^m x^m \equiv C_a^c x^{cp}C_b^dx^d(\mod p)$，由于 $x^b$ 系数一致，所以<br>$$<br>C_n^m \equiv C_a^c \times C_b^d \equiv C_{\left \lfloor \frac{n}{p} \right \rfloor}^{\left \lfloor \frac{m}{p} \right \rfloor} \times C_{n \mod p}^{m \mod p}(\mod p)<br>$$<br>故得证。</p>
+<h3 id="5-3-实现"><a href="#5-3-实现" class="headerlink" title="5.3 实现"></a>5.3 实现</h3><figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function">ll <span class="title">Lucas</span><span class="params">(ll n, ll m)</span> </span>{</span><br><span class="line">  <span class="keyword">return</span> ((m == <span class="number">0</span>) ? <span class="number">1</span> : (<span class="built_in">c</span>(n % p, m % p) % p * <span class="built_in">Lucas</span>(n / p, m / p) % p));</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
 ]]></content>
       <tags>
-        <tag>数学</tag>
         <tag>算法竞赛</tag>
+        <tag>数学</tag>
       </tags>
   </entry>
   <entry>
@@ -1608,6 +1612,17 @@ $\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{
 <h3 id="2-3-实现"><a href="#2-3-实现" class="headerlink" title="2.3 实现"></a>2.3 实现</h3><figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">kmp</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="type">int</span> len_a = <span class="built_in">strlen</span>(a + <span class="number">1</span>), len_b = <span class="built_in">strlen</span>(b + <span class="number">1</span>);</span><br><span class="line">  <span class="type">int</span> j = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">2</span>; i &lt;= len_b; i++) { <span class="comment">// i 要从 2 开始，不然的话计算前缀函数会把自身也算上，变为 k[i] = i</span></span><br><span class="line">    <span class="keyword">while</span>(j &amp;&amp; b[j + <span class="number">1</span>] != b[i]) j = k[j];</span><br><span class="line">    <span class="keyword">if</span>(b[j + <span class="number">1</span>] == b[i]) j++;</span><br><span class="line">    k[i] = j;</span><br><span class="line">  }</span><br><span class="line">  j = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= len_a; i++) {</span><br><span class="line">    <span class="keyword">while</span>(j &amp;&amp; b[j + <span class="number">1</span>] != a[i]) j = k[j];</span><br><span class="line">    <span class="keyword">if</span>(b[j + <span class="number">1</span>] == a[i]) j++;</span><br><span class="line">    <span class="keyword">if</span>(j == len_b) cout &lt;&lt; i - j + <span class="number">1</span> &lt;&lt; endl;</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= len_b; i++) cout &lt;&lt; k[i] &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">  cout &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 ]]></content>
+  </entry>
+  <entry>
+    <title>学习笔记 | 多项式与生成函数</title>
+    <url>/2023/06/28/Poly/</url>
+    <content><![CDATA[<p>浅挖个坑，期末考完填上</p>
+<span id="more"></span>
+]]></content>
+      <tags>
+        <tag>算法竞赛</tag>
+        <tag>数学</tag>
+      </tags>
   </entry>
   <entry>
     <title>学习笔记 | UCB-CS61B</title>
