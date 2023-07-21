@@ -833,6 +833,15 @@
       </tags>
   </entry>
   <entry>
+    <title>算法笔记 | 博弈论</title>
+    <url>/2023/07/20/Game-In-ACM/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>算法竞赛</tag>
+        <tag>博弈论</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>博客搭建踩坑指北</title>
     <url>/2023/06/27/Cross-The-Hole/</url>
     <content><![CDATA[<p>从踩坑到掉坑里</p>
@@ -916,6 +925,33 @@ $\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{
 ]]></content>
       <tags>
         <tag>博客搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>算法竞赛 | 杭电多校训练</title>
+    <url>/2023/07/19/HDU-In-Summer-0/</url>
+    <content><![CDATA[<p>浅记录一下暑假 10 次 <del>坐牢</del> 比赛。</p>
+<span id="more"></span>
+
+<h2 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h2><p>做题（X   坐牢（O</p>
+<h3 id="1002-City-Upgrading"><a href="#1002-City-Upgrading" class="headerlink" title="1002. City Upgrading"></a>1002. <a href="http://acm.hdu.edu.cn/showproblem.php?pid=7276">City Upgrading</a></h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>一棵树，每个点都有权值，选中一个点的话，这个点相连的节点也会被选中，要求花费最小让整棵树全部点都被选中。</p>
+<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>树形DP，我们令 $f[i][0]$ 表示在 $i$ 位置选，$f[i][1]$ 表示在 $i$ 的儿子位置处选，让 $i$ 被儿子覆盖， $f[i][2]$ 表示在 $i$ 的父亲位置处选，让 $i$ 被父亲覆盖。</p>
+<p>如果选 $i$ 位置，那么不难得出 $f[i][1] = a[i] + \sum \min\{f[son][0], f[son][1], f[son][2]\}$ ，因为这时候儿子 $son$ 怎么选都可以。</p>
+<p>如果选 $i$ 父亲位置，那么 $f[i][2] = \sum \min\{f[son][1], f[son][2]\}$，这个时候儿子 $son$ 要么自己选，要么被 son 的儿子覆盖。</p>
+<p>如果选 $i$ 儿子位置，这个时候有点复杂，因为要决定 $i$ 应该被哪个儿子覆盖，应该由花费最小的儿子覆盖，设这个儿子为 $chosen_son$ ，那么这个儿子一定是要选的，所以代价是 $f[chosen_son][0] + \sum_{son \ne chosen_son} \min\{f[son][0], f[son][1]\}$，而且一定有其他儿子 $son’$ 满足 $f[chosen_son][0] + \sum_{son \ne chosen_son} \min\{f[son][0], f[son][1]\} &lt; f[son’][0] + \sum_{son \ne son’} \min\{f[son][0], f[son][1]\}$，两边同类项抵消后，就是要选 $f[son][0] - \min\{f[son][0], f[son][1]\}$ 最小的儿子作为这个 $chosen_son$，在向下搜索时找到这个儿子，剩下就好解决了。</p>
+<p><a href="http://acm.hdu.edu.cn/viewcode.php?rid=38674964">Code</a></p>
+<h3 id="1009-Assertion"><a href="#1009-Assertion" class="headerlink" title="1009. Assertion"></a>1009. <a href="http://acm.hdu.edu.cn/showproblem.php?pid=7283">Assertion</a></h3><h4 id="Description-1"><a href="#Description-1" class="headerlink" title="Description"></a>Description</h4><p>把 $m$ 个物品放进 $n$ 个柜子，问是否至少有一个里面物品数大于等于 $d$。</p>
+<h4 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h4><p>签到题，判断 $d$ 和 $\left \lfloor \dfrac{m - 1}{n} \right \rfloor + 1$ 即可。</p>
+<p><a href="http://acm.hdu.edu.cn/viewcode.php?rid=38672478">Code</a></p>
+<h2 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2"></a>Day 2</h2><p>队友给力捏，比第一次打得好多力 qwq</p>
+<h3 id="1001-Alice-Game"><a href="#1001-Alice-Game" class="headerlink" title="1001. Alice Game"></a>1001. <a href="http://acm.hdu.edu.cn/showproblem.php?pid=7287">Alice Game</a></h3><h3 id="1002-Binary-Number"><a href="#1002-Binary-Number" class="headerlink" title="1002. Binary Number"></a>1002. <a href="http://acm.hdu.edu.cn/showproblem.php?pid=7288">Binary Number</a></h3><h4 id="Description-2"><a href="#Description-2" class="headerlink" title="Description"></a>Description</h4><p>对二进制数做 $k$ 次操作，每次任取一段 $[l,r]$ 做 $01$ 翻折，问 $k$ 次之后获得的最大数。</p>
+<h4 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h4><p>总体思路是从高位到低位，把最高位连续的 $0$ 变 $1$，次数多的也不用担心，次数如果多于连续 $0$ 的段数则全为 $1$。这里有两个特判，一个是只给定一位二进制，那么一定是 $1$，答案与 $k$ 的奇偶相关。还有一种情况是给定全是 $1$，$k = 1$，这时候是 $111\dots 10$ 。</p>
+<h3 id="1009-String-Problem"><a href="#1009-String-Problem" class="headerlink" title="1009. String Problem"></a>1009. <a href="http://acm.hdu.edu.cn/showproblem.php?pid=7295">String Problem</a></h3><h4 id="Description-3"><a href="#Description-3" class="headerlink" title="Description"></a>Description</h4><p>将字符串拆成尽可能少的段，使得每段只包含一种字母。每段对答案的贡献为长度减一。</p>
+<h4 id="Solution-3"><a href="#Solution-3" class="headerlink" title="Solution"></a>Solution</h4><p>签到题。</p>
+]]></content>
+      <tags>
+        <tag>算法竞赛</tag>
+        <tag>训练合集</tag>
       </tags>
   </entry>
   <entry>
@@ -1585,6 +1621,17 @@ $\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{
       </tags>
   </entry>
   <entry>
+    <title>学习笔记 | 多项式与生成函数</title>
+    <url>/2023/06/28/Poly/</url>
+    <content><![CDATA[<p>浅挖个坑，期末考完填上</p>
+<span id="more"></span>
+]]></content>
+      <tags>
+        <tag>算法竞赛</tag>
+        <tag>数学</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>算法笔记 | 字符串（一）</title>
     <url>/2023/07/10/String-In-ACM-I/</url>
     <content><![CDATA[<p>Manacher，KMP</p>
@@ -1612,17 +1659,6 @@ $\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{
 <h3 id="2-3-实现"><a href="#2-3-实现" class="headerlink" title="2.3 实现"></a>2.3 实现</h3><figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">kmp</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="type">int</span> len_a = <span class="built_in">strlen</span>(a + <span class="number">1</span>), len_b = <span class="built_in">strlen</span>(b + <span class="number">1</span>);</span><br><span class="line">  <span class="type">int</span> j = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">2</span>; i &lt;= len_b; i++) { <span class="comment">// i 要从 2 开始，不然的话计算前缀函数会把自身也算上，变为 k[i] = i</span></span><br><span class="line">    <span class="keyword">while</span>(j &amp;&amp; b[j + <span class="number">1</span>] != b[i]) j = k[j];</span><br><span class="line">    <span class="keyword">if</span>(b[j + <span class="number">1</span>] == b[i]) j++;</span><br><span class="line">    k[i] = j;</span><br><span class="line">  }</span><br><span class="line">  j = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= len_a; i++) {</span><br><span class="line">    <span class="keyword">while</span>(j &amp;&amp; b[j + <span class="number">1</span>] != a[i]) j = k[j];</span><br><span class="line">    <span class="keyword">if</span>(b[j + <span class="number">1</span>] == a[i]) j++;</span><br><span class="line">    <span class="keyword">if</span>(j == len_b) cout &lt;&lt; i - j + <span class="number">1</span> &lt;&lt; endl;</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= len_b; i++) cout &lt;&lt; k[i] &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">  cout &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 ]]></content>
-  </entry>
-  <entry>
-    <title>学习笔记 | 多项式与生成函数</title>
-    <url>/2023/06/28/Poly/</url>
-    <content><![CDATA[<p>浅挖个坑，期末考完填上</p>
-<span id="more"></span>
-]]></content>
-      <tags>
-        <tag>算法竞赛</tag>
-        <tag>数学</tag>
-      </tags>
   </entry>
   <entry>
     <title>学习笔记 | UCB-CS61B</title>
