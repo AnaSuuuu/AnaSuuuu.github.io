@@ -27,12 +27,15 @@
 <meta property="og:site_name" content="Ana_Su&#39;s Blog">
 <meta property="og:description" content="浅记录一下暑假 10 次 坐牢 比赛。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://anasuuuu.github.io/2023/07/19/HDU-In-Summer-0/D2-1007.png">
+<meta property="og:image" content="https://anasuuuu.github.io/2023/07/19/HDU-In-Summer-0/D2-1007(1">
 <meta property="article:published_time" content="2023-07-19T14:28:07.000Z">
-<meta property="article:modified_time" content="2023-07-21T07:25:55.544Z">
+<meta property="article:modified_time" content="2023-07-21T07:53:52.344Z">
 <meta property="article:author" content="Ana Su">
 <meta property="article:tag" content="算法竞赛">
 <meta property="article:tag" content="训练合集">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://anasuuuu.github.io/2023/07/19/HDU-In-Summer-0/D2-1007.png">
 
 <link rel="canonical" href="https://anasuuuu.github.io/2023/07/19/HDU-In-Summer-0/">
 
@@ -219,7 +222,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-07-21 15:25:55" itemprop="dateModified" datetime="2023-07-21T15:25:55+08:00">2023-07-21</time>
+                <time title="修改时间：2023-07-21 15:53:52" itemprop="dateModified" datetime="2023-07-21T15:53:52+08:00">2023-07-21</time>
               </span>
 
           
@@ -235,14 +238,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.3k</span>
+              <span>1.5k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
+              <span>3 分钟</span>
             </span>
 
         </div>
@@ -256,7 +259,6 @@
       
         <p>浅记录一下暑假 10 次 <del>坐牢</del> 比赛。</p>
 <span id="more"></span>
-
 <h2 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h2><p>做题（X   坐牢（O</p>
 <h3 id="1002-City-Upgrading"><a href="#1002-City-Upgrading" class="headerlink" title="1002. City Upgrading"></a>1002. <a target="_blank" rel="noopener" href="http://acm.hdu.edu.cn/showproblem.php?pid=7276">City Upgrading</a></h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>一棵树，每个点都有权值，选中一个点的话，这个点相连的节点也会被选中，要求花费最小让整棵树全部点都被选中。</p>
 <h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>树形DP，我们令 $f[i][0]$ 表示在 $i$ 位置选，$f[i][1]$ 表示在 $i$ 的儿子位置处选，让 $i$ 被儿子覆盖， $f[i][2]$ 表示在 $i$ 的父亲位置处选，让 $i$ 被父亲覆盖。</p>
@@ -270,8 +272,16 @@
 <h2 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2"></a>Day 2</h2><p>队友给力捏，比第一次打得好多力 qwq</p>
 <h3 id="1001-Alice-Game"><a href="#1001-Alice-Game" class="headerlink" title="1001. Alice Game"></a>1001. <a target="_blank" rel="noopener" href="http://acm.hdu.edu.cn/showproblem.php?pid=7287">Alice Game</a></h3><h3 id="1002-Binary-Number"><a href="#1002-Binary-Number" class="headerlink" title="1002. Binary Number"></a>1002. <a target="_blank" rel="noopener" href="http://acm.hdu.edu.cn/showproblem.php?pid=7288">Binary Number</a></h3><h4 id="Description-2"><a href="#Description-2" class="headerlink" title="Description"></a>Description</h4><p>对二进制数做 $k$ 次操作，每次任取一段 $[l,r]$ 做 $01$ 翻折，问 $k$ 次之后获得的最大数。</p>
 <h4 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h4><p>总体思路是从高位到低位，把最高位连续的 $0$ 变 $1$，次数多的也不用担心，次数如果多于连续 $0$ 的段数则全为 $1$。这里有两个特判，一个是只给定一位二进制，那么一定是 $1$，答案与 $k$ 的奇偶相关。还有一种情况是给定全是 $1$，$k = 1$，这时候是 $111\dots 10$ 。</p>
-<h3 id="1009-String-Problem"><a href="#1009-String-Problem" class="headerlink" title="1009. String Problem"></a>1009. <a target="_blank" rel="noopener" href="http://acm.hdu.edu.cn/showproblem.php?pid=7295">String Problem</a></h3><h4 id="Description-3"><a href="#Description-3" class="headerlink" title="Description"></a>Description</h4><p>将字符串拆成尽可能少的段，使得每段只包含一种字母。每段对答案的贡献为长度减一。</p>
-<h4 id="Solution-3"><a href="#Solution-3" class="headerlink" title="Solution"></a>Solution</h4><p>签到题。</p>
+<p><a target="_blank" rel="noopener" href="http://acm.hdu.edu.cn/viewcode.php?rid=38686833">Code</a></p>
+<h3 id="1007-foreverlasting-and-fried-chicken"><a href="#1007-foreverlasting-and-fried-chicken" class="headerlink" title="1007. foreverlasting and fried-chicken"></a>1007. <a target="_blank" rel="noopener" href="http://acm.hdu.edu.cn/showproblem.php?pid=7293">foreverlasting and fried-chicken</a></h3><h4 id="Description-3"><a href="#Description-3" class="headerlink" title="Description"></a>Description</h4><p>给定一张图，找出图中有多少个子图，构造如下。</p>
+<p><img src="D2-1007.png" alt="D2-1007"></p>
+<h4 id="Solution-3"><a href="#Solution-3" class="headerlink" title="Solution"></a>Solution</h4><p>关键是找到中间的两个蓝色和黄色的点。</p>
+<p><img src="D2-1007(1" alt="D2-1007(1)">.png)</p>
+<p>把点之间的连接关系用 <code>bitset</code> 存储好，枚举蓝点和黄点。中间共有的四个点用 <code>&amp;</code> 操作直接求出，剩下的点的个数也好求出，最后答案是 $\sum C_n^2 \times C_m^4$。</p>
+<p><a target="_blank" rel="noopener" href="http://acm.hdu.edu.cn/viewcode.php?rid=38687319">Code</a></p>
+<h3 id="1009-String-Problem"><a href="#1009-String-Problem" class="headerlink" title="1009. String Problem"></a>1009. <a target="_blank" rel="noopener" href="http://acm.hdu.edu.cn/showproblem.php?pid=7295">String Problem</a></h3><h4 id="Description-4"><a href="#Description-4" class="headerlink" title="Description"></a>Description</h4><p>将字符串拆成尽可能少的段，使得每段只包含一种字母。每段对答案的贡献为长度减一。</p>
+<h4 id="Solution-4"><a href="#Solution-4" class="headerlink" title="Solution"></a>Solution</h4><p>签到题。</p>
+<p><a target="_blank" rel="noopener" href="http://acm.hdu.edu.cn/viewcode.php?rid=38685806">Code</a></p>
 
     </div>
 
@@ -367,7 +377,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-1"><span class="nav-text">Day 1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1002-City-Upgrading"><span class="nav-text">1002. City Upgrading</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Description"><span class="nav-text">Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution"><span class="nav-text">Solution</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1009-Assertion"><span class="nav-text">1009. Assertion</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Description-1"><span class="nav-text">Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution-1"><span class="nav-text">Solution</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-2"><span class="nav-text">Day 2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1001-Alice-Game"><span class="nav-text">1001. Alice Game</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1002-Binary-Number"><span class="nav-text">1002. Binary Number</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Description-2"><span class="nav-text">Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution-2"><span class="nav-text">Solution</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1009-String-Problem"><span class="nav-text">1009. String Problem</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Description-3"><span class="nav-text">Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution-3"><span class="nav-text">Solution</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-1"><span class="nav-text">Day 1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1002-City-Upgrading"><span class="nav-text">1002. City Upgrading</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Description"><span class="nav-text">Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution"><span class="nav-text">Solution</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1009-Assertion"><span class="nav-text">1009. Assertion</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Description-1"><span class="nav-text">Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution-1"><span class="nav-text">Solution</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-2"><span class="nav-text">Day 2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1001-Alice-Game"><span class="nav-text">1001. Alice Game</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1002-Binary-Number"><span class="nav-text">1002. Binary Number</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Description-2"><span class="nav-text">Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution-2"><span class="nav-text">Solution</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1007-foreverlasting-and-fried-chicken"><span class="nav-text">1007. foreverlasting and fried-chicken</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Description-3"><span class="nav-text">Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution-3"><span class="nav-text">Solution</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1009-String-Problem"><span class="nav-text">1009. String Problem</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Description-4"><span class="nav-text">Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution-4"><span class="nav-text">Solution</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -438,12 +448,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">49k</span>
+    <span title="站点总字数">50k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:29</span>
+    <span title="站点阅读时长">1:30</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
