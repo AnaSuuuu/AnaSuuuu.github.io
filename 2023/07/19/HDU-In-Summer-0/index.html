@@ -28,7 +28,7 @@
 <meta property="og:description" content="浅记录一下暑假 10 次 坐牢 比赛。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://anasuuuu.github.io/2023/07/19/HDU-In-Summer-0/D2-1007.png">
-<meta property="og:image" content="https://anasuuuu.github.io/2023/07/19/HDU-In-Summer-0/D2-1007(1">
+<meta property="og:image" content="https://anasuuuu.github.io/2023/07/19/HDU-In-Summer-0/D2-1007(1).png">
 <meta property="article:published_time" content="2023-07-19T14:28:07.000Z">
 <meta property="article:modified_time" content="2023-07-21T07:53:52.344Z">
 <meta property="article:author" content="Ana Su">
@@ -238,7 +238,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.5k</span>
+              <span>1.4k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -259,6 +259,7 @@
       
         <p>浅记录一下暑假 10 次 <del>坐牢</del> 比赛。</p>
 <span id="more"></span>
+
 <h2 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h2><p>做题（X   坐牢（O</p>
 <h3 id="1002-City-Upgrading"><a href="#1002-City-Upgrading" class="headerlink" title="1002. City Upgrading"></a>1002. <a target="_blank" rel="noopener" href="http://acm.hdu.edu.cn/showproblem.php?pid=7276">City Upgrading</a></h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>一棵树，每个点都有权值，选中一个点的话，这个点相连的节点也会被选中，要求花费最小让整棵树全部点都被选中。</p>
 <h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>树形DP，我们令 $f[i][0]$ 表示在 $i$ 位置选，$f[i][1]$ 表示在 $i$ 的儿子位置处选，让 $i$ 被儿子覆盖， $f[i][2]$ 表示在 $i$ 的父亲位置处选，让 $i$ 被父亲覆盖。</p>
@@ -276,7 +277,7 @@
 <h3 id="1007-foreverlasting-and-fried-chicken"><a href="#1007-foreverlasting-and-fried-chicken" class="headerlink" title="1007. foreverlasting and fried-chicken"></a>1007. <a target="_blank" rel="noopener" href="http://acm.hdu.edu.cn/showproblem.php?pid=7293">foreverlasting and fried-chicken</a></h3><h4 id="Description-3"><a href="#Description-3" class="headerlink" title="Description"></a>Description</h4><p>给定一张图，找出图中有多少个子图，构造如下。</p>
 <p><img src="D2-1007.png" alt="D2-1007"></p>
 <h4 id="Solution-3"><a href="#Solution-3" class="headerlink" title="Solution"></a>Solution</h4><p>关键是找到中间的两个蓝色和黄色的点。</p>
-<p><img src="D2-1007(1" alt="D2-1007(1)">.png)</p>
+<p><img src="D2-1007(1).png" alt="D2-1007(1)"></p>
 <p>把点之间的连接关系用 <code>bitset</code> 存储好，枚举蓝点和黄点。中间共有的四个点用 <code>&amp;</code> 操作直接求出，剩下的点的个数也好求出，最后答案是 $\sum C_n^2 \times C_m^4$。</p>
 <p><a target="_blank" rel="noopener" href="http://acm.hdu.edu.cn/viewcode.php?rid=38687319">Code</a></p>
 <h3 id="1009-String-Problem"><a href="#1009-String-Problem" class="headerlink" title="1009. String Problem"></a>1009. <a target="_blank" rel="noopener" href="http://acm.hdu.edu.cn/showproblem.php?pid=7295">String Problem</a></h3><h4 id="Description-4"><a href="#Description-4" class="headerlink" title="Description"></a>Description</h4><p>将字符串拆成尽可能少的段，使得每段只包含一种字母。每段对答案的贡献为长度减一。</p>
@@ -393,7 +394,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -448,12 +449,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">51k</span>
+    <span title="站点总字数">52k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:33</span>
+    <span title="站点阅读时长">1:34</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
