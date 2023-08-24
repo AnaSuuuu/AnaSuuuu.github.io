@@ -30,8 +30,8 @@
 <meta property="article:published_time" content="2023-07-05T15:42:29.000Z">
 <meta property="article:modified_time" content="2023-07-21T08:50:15.126Z">
 <meta property="article:author" content="Ana Su">
-<meta property="article:tag" content="数学">
 <meta property="article:tag" content="算法竞赛">
+<meta property="article:tag" content="数学">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://anasuuuu.github.io/2023/07/05/Math-In-ACM-I/">
@@ -235,7 +235,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>5k</span>
+              <span>4.9k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -256,7 +256,6 @@
       
         <p>扩展欧几里得，逆元，欧拉函数</p>
 <span id="more"></span>
-
 <h2 id="1-扩展欧几里得算法"><a href="#1-扩展欧几里得算法" class="headerlink" title="1. 扩展欧几里得算法"></a>1. 扩展欧几里得算法</h2><h3 id="1-1-算法介绍"><a href="#1-1-算法介绍" class="headerlink" title="1.1 算法介绍"></a>1.1 算法介绍</h3><p>设 $a, b$ 为不全为 $0$ 的整数，存在整数 $x, y$ 使得 $ax + by = (a, b)$。</p>
 <p>进一步地，$ax + by = m$ 有解的充要条件是 $(a, b) | m$ （裴蜀定理，又叫做贝祖定理） 。</p>
 <h3 id="1-2-证明"><a href="#1-2-证明" class="headerlink" title="1.2 证明"></a>1.2 证明</h3><p>若我们求 $ax + by = (a, b)$ 的解，不如先求 $bx + (a \mod b) y = (b, a \mod b)$ 的解，而且由欧几里得算法可知 $(a, b) = (b, a \mod b)$。</p>
@@ -264,37 +263,31 @@
 <p>对于进一步结论的证明，若 $m$ 是该方程组的解，由于 $(a, b)$ 可以整除左式，那么 $(a, b)$ 也可以整除右式（充分性）。</p>
 <p>若 $(a, b)|m$，那么我们已知 $ax + by = (a, b)$ 的一组解，等式两边同时乘以 $\dfrac{m}{(a, b)}$ 便可以得到原方程组的解（必要性）。</p>
 <h3 id="1-3-实现"><a href="#1-3-实现" class="headerlink" title="1.3 实现"></a>1.3 实现</h3><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">exgcd</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b, <span class="type">int</span> &amp;x, <span class="type">int</span> &amp;y)</span> </span>{</span><br><span class="line">    <span class="keyword">if</span> (b == <span class="number">0</span>) {</span><br><span class="line">        x = <span class="number">1</span>;</span><br><span class="line">        y = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    }</span><br><span class="line">    <span class="type">int</span> d = <span class="built_in">exgcd</span>(b, a % b, y, x); </span><br><span class="line">    y -= (a / b) * x;</span><br><span class="line">    <span class="keyword">return</span> d;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-
-
 <h2 id="2-逆元"><a href="#2-逆元" class="headerlink" title="2. 逆元"></a>2. 逆元</h2><h3 id="2-1-定义"><a href="#2-1-定义" class="headerlink" title="2.1 定义"></a>2.1 定义</h3><p>若 $ab \equiv 1(\mod p)$ 则称 $a$，$b$ 在 模 $p$ 意义下互为逆元，记为 $a = inv(b)$。</p>
-<h3 id="2-2-扩展欧几里得求逆元"><a href="#2-2-扩展欧几里得求逆元" class="headerlink" title="2.2 扩展欧几里得求逆元"></a>2.2 扩展欧几里得求逆元</h3><p>由上一节可知，扩展欧几里得可以求出 $ax + by = 1$ 的一组 $x, y$ 解，故我们要求 $ax \equiv 1(mod\ b)$ 即求 $ax + by = 1$ 的一组解，而且这里要求有解的条件是 $(a, b) = 1$，利用扩展欧几里得很容易得出。</p>
+<h3 id="2-2-扩展欧几里得求逆元"><a href="#2-2-扩展欧几里得求逆元" class="headerlink" title="2.2 扩展欧几里得求逆元"></a>2.2 扩展欧几里得求逆元</h3><p>由上一节可知，扩展欧几里得可以求出 $ax + by = 1$ 的一组 $x, y$ 解，故我们要求 $ax \equiv 1(mod b)$ 即求 $ax + by = 1$ 的一组解，而且这里要求有解的条件是 $(a, b) = 1$，利用扩展欧几里得很容易得出。</p>
 <figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ll <span class="title">exgcd</span><span class="params">(ll a, ll b, ll &amp;x, ll &amp;y)</span> </span>{</span><br><span class="line">    <span class="keyword">if</span> (b == <span class="number">0</span>)</span><br><span class="line">    {</span><br><span class="line">        x = <span class="number">1</span>;</span><br><span class="line">        y = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    }</span><br><span class="line">    ll d = <span class="built_in">exgcd</span>(b, a % b, y, x);</span><br><span class="line">    y -= (a / b) * x;</span><br><span class="line">    <span class="keyword">return</span> d;</span><br><span class="line">}</span><br><span class="line"><span class="function">ll <span class="title">inv</span><span class="params">(ll a, ll p)</span> </span>{</span><br><span class="line">    ll x, y;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">exgcd</span>(a, p, x, y) != <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">return</span> (x % p + p) % p;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-
-
 <h3 id="2-3-费马小定理求逆元"><a href="#2-3-费马小定理求逆元" class="headerlink" title="2.3 费马小定理求逆元"></a>2.3 费马小定理求逆元</h3><p>费马小定理的内容如下：</p>
 <blockquote>
-<p>若 $p$ 为素数，且 $(a, p) = 1$，则 $a^{p - 1} \equiv 1(mod \ p)$。</p>
+<p>若 $p$ 为素数，且 $(a, p) = 1$，则 $a^{p - 1} \equiv 1(mod  p)$。</p>
 </blockquote>
 <p><strong>证明（待完善）</strong></p>
-<p>利用该定理，不难得出 $inv(a) \equiv a^{p - 2}(mod \ p)$，故可以用快速幂来求解。</p>
+<p>利用该定理，不难得出 $inv(a) \equiv a^{p - 2}(mod  p)$，故可以用快速幂来求解。</p>
 <figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> ll <span class="title">qpow</span><span class="params">(ll a, ll b, ll p)</span> </span>{</span><br><span class="line">    ll ans = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (b) {</span><br><span class="line">        <span class="keyword">if</span> (b &amp; <span class="number">1</span>) ans = ans % p * a % p;</span><br><span class="line">        a = a % p * a % p;</span><br><span class="line">        b &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="keyword">inline</span> ll <span class="title">inv</span><span class="params">(ll a, ll p)</span> </span>{</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">qpow</span>(a, p - <span class="number">2</span>, p);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
 <h3 id="2-4-线性递推求解逆元"><a href="#2-4-线性递推求解逆元" class="headerlink" title="2.4 线性递推求解逆元"></a>2.4 线性递推求解逆元</h3><p>如果题目要求 $1 \sim n$ 的逆元，那么前两种方法都很低效，这里引入第三种，线性递推来求解。</p>
 <p>下面用 $O(n)$ 方法求 $1 \sim n$ 关于 $p$ 的逆元。</p>
-<p>首先显然 $1^{-1} \equiv 1(mod \ p)$。</p>
+<p>首先显然 $1^{-1} \equiv 1(mod  p)$。</p>
 <p>对于数 $i$，有 $p = ki + j$，这里 $k = \left \lfloor \dfrac{p}{i} \right \rfloor,j = p \% i$。</p>
-<p>那么则有 $ki + j \equiv 0(mod \ p)$，等式两边同时乘以 $i^{-1}j^{-1}$，则有 $kj^{-1} + i^{-1} \equiv 0(mod \ p)$。</p>
-<p>故 $i^{-1} \equiv -\left \lfloor \dfrac{p}{i} \right \rfloor(p \ mod \ i)^{-1}(mod \ p)$，而且 $p \ mod \ i$ 肯定小于 $i$ ，所以可以由前递推后。</p>
+<p>那么则有 $ki + j \equiv 0(mod  p)$，等式两边同时乘以 $i^{-1}j^{-1}$，则有 $kj^{-1} + i^{-1} \equiv 0(mod  p)$。</p>
+<p>故 $i^{-1} \equiv -\left \lfloor \dfrac{p}{i} \right \rfloor(p  mod  i)^{-1}(mod  p)$，而且 $p  mod  i$ 肯定小于 $i$ ，所以可以由前递推后。</p>
 <p>值得一提的是，这里为防止出现负数，所以写的是 <code>p - p / i</code> ，而且当 $i | p$ 时 <code>inv[i]</code> 应该是没有意义的，我们往往用大素数 $10^9 + 7$ 来表示。</p>
 <figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">inv[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt;= n; ++i) {</span><br><span class="line">  inv[i] = (<span class="type">long</span> <span class="type">long</span>)(p - p / i) * inv[p % i] % p;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
 <h3 id="2-5-求任意-n-个数的逆元"><a href="#2-5-求任意-n-个数的逆元" class="headerlink" title="2.5 求任意 n 个数的逆元"></a>2.5 求任意 n 个数的逆元</h3><p>对于求任意 $n$ 个数 $a_i$，我们算这个 $n$ 个数的前缀积，记为 $s_i$。</p>
 <p>然后我们计算 $s_n$ 的逆元为 $sInv_n$，那么 $s_i$ 的逆元为 $sInv_i =sInv_{i + 1} \times a_{i + 1}$。</p>
 <p>然后易得 $a_i$ 的逆元 $Inv_i = sInv_i \times s_{i - 1}$。</p>
 <p>时间复杂度近似 $O(n)$。 </p>
-<h2 id="3-欧拉函数"><a href="#3-欧拉函数" class="headerlink" title="3. 欧拉函数"></a>3. 欧拉函数</h2><h2 id="4-中国剩余定理"><a href="#4-中国剩余定理" class="headerlink" title="4. 中国剩余定理"></a>4. 中国剩余定理</h2><h3 id="4-1-问题简述"><a href="#4-1-问题简述" class="headerlink" title="4.1 问题简述"></a>4.1 问题简述</h3><p>中国剩余定理是用来求解诸如<br>$$<br>\begin{cases} x \equiv a_1(\mod n_1) \\ x \equiv a_2(\mod n_2) \\ \ \ \ \ \vdots \\ x \equiv a_k(\mod n_k) \end{cases}<br>$$<br>这样的方程组问题。</p>
+<h2 id="3-欧拉函数"><a href="#3-欧拉函数" class="headerlink" title="3. 欧拉函数"></a>3. 欧拉函数</h2><h2 id="4-中国剩余定理"><a href="#4-中国剩余定理" class="headerlink" title="4. 中国剩余定理"></a>4. 中国剩余定理</h2><h3 id="4-1-问题简述"><a href="#4-1-问题简述" class="headerlink" title="4.1 问题简述"></a>4.1 问题简述</h3><p>中国剩余定理是用来求解诸如</p>
+<script type="math/tex; mode=display">
+\begin{cases} x \equiv a_1(\mod n_1) \\ x \equiv a_2(\mod n_2) \\ \ \ \ \ \vdots \\ x \equiv a_k(\mod n_k) \end{cases}</script><p>这样的方程组问题。</p>
 <h3 id="4-2-过程"><a href="#4-2-过程" class="headerlink" title="4.2 过程"></a>4.2 过程</h3><ol>
 <li>算所有模数的积 $n$；</li>
 <li>对于第 $i$ 个方程：<ul>
@@ -306,22 +299,25 @@
 <li>方程组在模 $n$ 意义下的唯一解为 $x = \sum_{i = 1}^k a_ic_i(\mod n)$</li>
 </ol>
 <h3 id="4-3-实现"><a href="#4-3-实现" class="headerlink" title="4.3 实现"></a>4.3 实现</h3><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">CRT</span><span class="params">()</span> </span>{</span><br><span class="line">  ll n, M = <span class="number">1</span>, ans = <span class="number">0</span>;</span><br><span class="line">  cin &gt;&gt; n; </span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) {</span><br><span class="line">    cin &gt;&gt; b[i] &gt;&gt; a[i];</span><br><span class="line">    M *= b[i];</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) {</span><br><span class="line">    ll m = M / b[i];</span><br><span class="line">    ll x, y;</span><br><span class="line">    <span class="built_in">exgcd</span>(m, b[i], x, y); <span class="comment">// 注：如果模数不为质数时，求逆元不能用费马小定理来算，只能用扩欧来算</span></span><br><span class="line">    x = (x + b[i]) % b[i]; x %= M;</span><br><span class="line">    m *= x; m %= M;</span><br><span class="line">    ans += a[i] * m % M;</span><br><span class="line">    ans %= M;</span><br><span class="line">  }</span><br><span class="line">  cout &lt;&lt; (ans % M + M) % M &lt;&lt; endl;</span><br><span class="line">  <span class="keyword">return</span> ;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
 <h3 id="4-4-扩展中国剩余定理"><a href="#4-4-扩展中国剩余定理" class="headerlink" title="4.4 扩展中国剩余定理"></a>4.4 扩展中国剩余定理</h3><p>中国剩余定理的适用范围是模数互质的情况，那么当方程模数不互质时我们要用到扩展中国剩余定理。</p>
-<p>思路是不断把 $n$ 个方程两两合并，对于<br>$$<br>\begin{cases} x \equiv b(\mod a) \\ x \equiv B(\mod A)  \end{cases}<br>$$<br>我们令 $x = ya + b = YB + A$ ，那么有 $B - b = ya - YA$，我们利用扩欧可以求解出 $x’a + y’A = (a,A)$ 的一组解，那么若 $(a, A) \nmid B-b$ 则方程无解，对于有解的情况 $(x’ \times \dfrac{B - b}{(a, A)})a + (y’ \times \dfrac{B - b}{(a, A)})A = B - b$，令 $X = x’ \times \dfrac{B - b}{(a, A)}, Y = y’ \times \dfrac{B - b}{(a, A)}$ 若是让解最小即是让 $X$ 最小，我们调整 $X$ 可以通过让 $X + k \times \dfrac{A}{(a, A)}$，这时 $Y$ 相应减去同等系数的 $\dfrac{a}{(a, A)}$。所以 $X = (X \mod \dfrac{A}{(a, A)} + \dfrac{A}{(a, A)}) \mod \dfrac{A}{(a, A)}$。求出新的 $X$ 后再根据 $x = yX + a$ 可以求出新的 $x$，新的 $b = x \mod \dfrac{A \times a}{(a, A)}$，新的 $a = \dfrac{A \times a}{(a, A)}$。那么就可以得出新的方程 $x \equiv b(\mod a)$ 了。最后通过不断合并变为一个方程就能求出答案了。  </p>
+<p>思路是不断把 $n$ 个方程两两合并，对于</p>
+<script type="math/tex; mode=display">
+\begin{cases} x \equiv b(\mod a) \\ x \equiv B(\mod A)  \end{cases}</script><p>我们令 $x = ya + b = YB + A$ ，那么有 $B - b = ya - YA$，我们利用扩欧可以求解出 $x’a + y’A = (a,A)$ 的一组解，那么若 $(a, A) \nmid B-b$ 则方程无解，对于有解的情况 $(x’ \times \dfrac{B - b}{(a, A)})a + (y’ \times \dfrac{B - b}{(a, A)})A = B - b$，令 $X = x’ \times \dfrac{B - b}{(a, A)}, Y = y’ \times \dfrac{B - b}{(a, A)}$ 若是让解最小即是让 $X$ 最小，我们调整 $X$ 可以通过让 $X + k \times \dfrac{A}{(a, A)}$，这时 $Y$ 相应减去同等系数的 $\dfrac{a}{(a, A)}$。所以 $X = (X \mod \dfrac{A}{(a, A)} + \dfrac{A}{(a, A)}) \mod \dfrac{A}{(a, A)}$。求出新的 $X$ 后再根据 $x = yX + a$ 可以求出新的 $x$，新的 $b = x \mod \dfrac{A \times a}{(a, A)}$，新的 $a = \dfrac{A \times a}{(a, A)}$。那么就可以得出新的方程 $x \equiv b(\mod a)$ 了。最后通过不断合并变为一个方程就能求出答案了。  </p>
 <figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">ExCRT</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) {</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%lld%lld"</span>, &amp;A, &amp;B);</span><br><span class="line">    <span class="keyword">if</span>(i == <span class="number">1</span>) {</span><br><span class="line">      a = A;</span><br><span class="line">      b = B;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span> {</span><br><span class="line">      g = <span class="built_in">exgcd</span>(a, A, x, y);</span><br><span class="line">      <span class="keyword">if</span>((B - b) % g) {</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"-1"</span>);</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">      }</span><br><span class="line">      x = x * ((B - b) / g);</span><br><span class="line">      x = (x % (A / g) + (A / g)) % (A / g);</span><br><span class="line">      l = A / g * a;</span><br><span class="line">      b = ((a * x + b) % l + l) % l;</span><br><span class="line">      a = l;</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>, b % a);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<h2 id="5-卢卡斯定理"><a href="#5-卢卡斯定理" class="headerlink" title="5. 卢卡斯定理"></a>5. 卢卡斯定理</h2><h3 id="5-1-定义"><a href="#5-1-定义" class="headerlink" title="5.1 定义"></a>5.1 定义</h3><p>对于质数 $p$，有<br>$$<br>\begin{pmatrix} n \\ m \end{pmatrix} \mod p = \begin{pmatrix} \left \lfloor \dfrac{n}{p} \right \rfloor \\ \left \lfloor \dfrac{m}{p}\right \rfloor \end{pmatrix} \cdot \begin{pmatrix} n \mod p \\m \mod p \end{pmatrix} \mod p<br>$$<br>由于$n \mod p$ 和 $m \mod p$ 肯定小于 $p$，所以直接算即可，对 $\left \lfloor \dfrac{n}{p} \right \rfloor$ 部分再用卢卡斯定理计算。</p>
+<h2 id="5-卢卡斯定理"><a href="#5-卢卡斯定理" class="headerlink" title="5. 卢卡斯定理"></a>5. 卢卡斯定理</h2><h3 id="5-1-定义"><a href="#5-1-定义" class="headerlink" title="5.1 定义"></a>5.1 定义</h3><p>对于质数 $p$，有</p>
+<script type="math/tex; mode=display">
+\begin{pmatrix} n \\ m \end{pmatrix} \mod p = \begin{pmatrix} \left \lfloor \dfrac{n}{p} \right \rfloor \\ \left \lfloor \dfrac{m}{p}\right \rfloor \end{pmatrix} \cdot \begin{pmatrix} n \mod p \\m \mod p \end{pmatrix} \mod p</script><p>由于$n \mod p$ 和 $m \mod p$ 肯定小于 $p$，所以直接算即可，对 $\left \lfloor \dfrac{n}{p} \right \rfloor$ 部分再用卢卡斯定理计算。</p>
 <p>也即 $Lucas(n,m,p)=c(n\%p,m\%p)×Lucas(\dfrac{n}{p},\dfrac{m}{p},p)$。</p>
 <h3 id="5-2-证明"><a href="#5-2-证明" class="headerlink" title="5.2 证明"></a>5.2 证明</h3><p>首先证明首先我们需要证明 $C_p^i \equiv \dfrac{p}{i}C_{p - 1}^{i - 1} \equiv 0(\mod p)(1 \le i \le p-1)$ 由于 $p$ 为质数，故 $\dfrac{1}{i}C_{p - 1}^{i - 1}$ 为整数，乘以 $p$ 后和 $p$ 同余为 $0$，故得证。</p>
 <p>根据这个性质有 $(1 + x)^p \equiv 1 + x^p(\mod p)$</p>
 <p>对于 $C_m^n \mod p$，其实就是求 $(1 + x^n)\mod p$ 中 $x^m$ 的系数。</p>
 <p>我们令 $n = ap +b$，$m = cp + d$。所以接下来证 $C_n^m \equiv C_a^c \times C_b^d(\mod p)$。</p>
-<p>我们有<br>$$<br>(1 + x)^n \equiv (1 + x)^{pa}(1 + x)^b \equiv (1 + x^p)^a(1 + x)^b(\mod p)<br>$$<br>观察 $x^m$ 的系数，故 $C_n^m x^m \equiv C_a^c x^{cp}C_b^dx^d(\mod p)$，由于 $x^b$ 系数一致，所以<br>$$<br>C_n^m \equiv C_a^c \times C_b^d \equiv C_{\left \lfloor \frac{n}{p} \right \rfloor}^{\left \lfloor \frac{m}{p} \right \rfloor} \times C_{n \mod p}^{m \mod p}(\mod p)<br>$$<br>故得证。</p>
+<p>我们有</p>
+<script type="math/tex; mode=display">
+(1 + x)^n \equiv (1 + x)^{pa}(1 + x)^b \equiv (1 + x^p)^a(1 + x)^b(\mod p)</script><p>观察 $x^m$ 的系数，故 $C_n^m x^m \equiv C_a^c x^{cp}C_b^dx^d(\mod p)$，由于 $x^b$ 系数一致，所以 </p>
+<script type="math/tex; mode=display">
+C_n^m \equiv C_a^c \times C_b^d \equiv C_{\left \lfloor \frac{n}{p} \right \rfloor}^{\left \lfloor \frac{m}{p} \right \rfloor} \times C_{n \mod p}^{m \mod p}(\mod p)</script><p>故得证。</p>
 <h3 id="5-3-实现"><a href="#5-3-实现" class="headerlink" title="5.3 实现"></a>5.3 实现</h3><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ll <span class="title">Lucas</span><span class="params">(ll n, ll m)</span> </span>{</span><br><span class="line">  <span class="keyword">return</span> ((m == <span class="number">0</span>) ? <span class="number">1</span> : (<span class="built_in">c</span>(n % p, m % p) % p * <span class="built_in">Lucas</span>(n / p, m / p) % p));</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
 <h3 id="5-4-扩展卢卡斯定理"><a href="#5-4-扩展卢卡斯定理" class="headerlink" title="5.4 扩展卢卡斯定理"></a>5.4 扩展卢卡斯定理</h3>
     </div>
 
@@ -331,8 +327,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag"># 数学</a>
               <a href="/tags/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/" rel="tag"># 算法竞赛</a>
+              <a href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag"># 数学</a>
           </div>
 
         
@@ -488,12 +484,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">54k</span>
+    <span title="站点总字数">55k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:38</span>
+    <span title="站点阅读时长">1:40</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
