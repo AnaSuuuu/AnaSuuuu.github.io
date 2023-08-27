@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"anasuuuu.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"manual"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="1862. Codeforces Round 894 (Div. 3)E. Kolya and Movie TheatreDescriptionSolutionF. Magic Will Save the WorldDescriptionSolutionG. The Great EqualizerDescriptionSolution">
+  <meta name="description" content="1862. Codeforces Round 894 (Div. 3)E. Kolya and Movie TheatreDescription一段长为 $n$ 的序列 $a$，你从中至多选 $m$ 个数。设你选的数中下标最大的为 $x$，那么你选的答案要减去 $x \times d$。问该怎么选是答案最大。 Solution从前往后扫一遍，设下标最大的为 $i$，维护前 $k$ 大的序列以及">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CodeForces 补全计划（1851 ~ 1875）">
 <meta property="og:url" content="https://anasuuuu.github.io/2023/08/27/CF-Instrumentality-Project-II/index.html">
 <meta property="og:site_name" content="Ana_Su&#39;s Blog">
-<meta property="og:description" content="1862. Codeforces Round 894 (Div. 3)E. Kolya and Movie TheatreDescriptionSolutionF. Magic Will Save the WorldDescriptionSolutionG. The Great EqualizerDescriptionSolution">
+<meta property="og:description" content="1862. Codeforces Round 894 (Div. 3)E. Kolya and Movie TheatreDescription一段长为 $n$ 的序列 $a$，你从中至多选 $m$ 个数。设你选的数中下标最大的为 $x$，那么你选的答案要减去 $x \times d$。问该怎么选是答案最大。 Solution从前往后扫一遍，设下标最大的为 $i$，维护前 $k$ 大的序列以及">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-08-27T03:35:04.000Z">
-<meta property="article:modified_time" content="2023-08-27T09:39:53.503Z">
+<meta property="article:modified_time" content="2023-08-27T10:48:17.829Z">
 <meta property="article:author" content="Ana Su">
 <meta property="article:tag" content="算法竞赛">
 <meta name="twitter:card" content="summary">
@@ -212,7 +212,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2023-08-27 11:35:04 / 修改时间：17:39:53" itemprop="dateCreated datePublished" datetime="2023-08-27T11:35:04+08:00">2023-08-27</time>
+              <time title="创建时间：2023-08-27 11:35:04 / 修改时间：18:48:17" itemprop="dateCreated datePublished" datetime="2023-08-27T11:35:04+08:00">2023-08-27</time>
             </span>
 
           
@@ -228,7 +228,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>151</span>
+              <span>763</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -248,7 +248,19 @@
 
       
         <span id="more"></span>
-<h2 id="1862-Codeforces-Round-894-Div-3"><a href="#1862-Codeforces-Round-894-Div-3" class="headerlink" title="1862. Codeforces Round 894 (Div. 3)"></a>1862. <a target="_blank" rel="noopener" href="https://codeforces.com/contest/1862">Codeforces Round 894 (Div. 3)</a></h2><h3 id="E-Kolya-and-Movie-Theatre"><a href="#E-Kolya-and-Movie-Theatre" class="headerlink" title="E. Kolya and Movie Theatre"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1862/problem/E">E. Kolya and Movie Theatre</a></h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><h3 id="F-Magic-Will-Save-the-World"><a href="#F-Magic-Will-Save-the-World" class="headerlink" title="F. Magic Will Save the World"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1862/problem/F">F. Magic Will Save the World</a></h3><h4 id="Description-1"><a href="#Description-1" class="headerlink" title="Description"></a>Description</h4><h4 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h4><h3 id="G-The-Great-Equalizer"><a href="#G-The-Great-Equalizer" class="headerlink" title="G. The Great Equalizer"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1862/problem/G">G. The Great Equalizer</a></h3><h4 id="Description-2"><a href="#Description-2" class="headerlink" title="Description"></a>Description</h4><h4 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h4>
+
+<h2 id="1862-Codeforces-Round-894-Div-3"><a href="#1862-Codeforces-Round-894-Div-3" class="headerlink" title="1862. Codeforces Round 894 (Div. 3)"></a>1862. <a target="_blank" rel="noopener" href="https://codeforces.com/contest/1862">Codeforces Round 894 (Div. 3)</a></h2><h3 id="E-Kolya-and-Movie-Theatre"><a href="#E-Kolya-and-Movie-Theatre" class="headerlink" title="E. Kolya and Movie Theatre"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1862/problem/E">E. Kolya and Movie Theatre</a></h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>一段长为 $n$ 的序列 $a$，你从中至多选 $m$ 个数。设你选的数中下标最大的为 $x$，那么你选的答案要减去 $x \times d$。问该怎么选是答案最大。</p>
+<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>从前往后扫一遍，设下标最大的为 $i$，维护前 $k$ 大的序列以及和，算答案的时候直接减去 $i \times d$ 即可。</p>
+<p>注：万一插入的第 $i$ 号元素排不到前 $k$ 大，算答案时不应该减 $i \times d$ 。但其实不用考虑，因为这种情况一定不是最优，当最大下标值小于 $i$ 的时候一定会有一个答案，前 $k$ 大值和当前一样，但减去的数要小一些，所以不会更新答案。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1862/submission/220495907">Code</a></p>
+<h3 id="F-Magic-Will-Save-the-World"><a href="#F-Magic-Will-Save-the-World" class="headerlink" title="F. Magic Will Save the World"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1862/problem/F">F. Magic Will Save the World</a></h3><h4 id="Description-1"><a href="#Description-1" class="headerlink" title="Description"></a>Description</h4><p>若干小怪，每个小怪血量 $s_i$，你可以用 水 或 火 元素攻击，消耗等量的 水 或 火 元素。你每秒可以增加 $w$ 水元素 和 $f$ 火元素，问最快要几秒消灭全部小怪。</p>
+<h4 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h4><p>对于每个小怪，要么被火消灭，要么被水消灭，不难发现小怪总血量比较低，所以可以利用 $01$ 背包思想解决。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1862/submission/220568374">Code</a></p>
+<h3 id="G-The-Great-Equalizer"><a href="#G-The-Great-Equalizer" class="headerlink" title="G. The Great Equalizer"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1862/problem/G">G. The Great Equalizer</a></h3><h4 id="Description-2"><a href="#Description-2" class="headerlink" title="Description"></a>Description</h4><p>初始有一段长度为 $n$ 的序列，记一次操作为将序列按升序排列然后除去相等的元素。然后设新序列元素长度 $n’$，将第一个元素加上 $n’$，第二个加上 $n’ - 1$，第三个加上 $n’ - 2$ 以此类推。</p>
+<p>问最后只剩下一个元素的值。</p>
+<h4 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h4><p>我们发现两个性质，第一，每个元素之间的相对大小不会发生变化，第二，设两两相邻元素之间的最大元素为 $max_gap$，则每次操作后 $max_gap$ 都会减一。那么最后剩下的那个元素的值为 原序列中最大的元素加上操作次数（即 $max_gap$）。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1862/submission/220600516">Code</a></p>
+
     </div>
 
     
