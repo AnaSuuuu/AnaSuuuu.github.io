@@ -235,7 +235,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>4.4k</span>
+              <span>4.6k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -256,6 +256,7 @@
       
         <p>从入门到入土</p>
 <span id="more"></span>
+
 <h2 id="第一章-矩阵的运算与初等变换"><a href="#第一章-矩阵的运算与初等变换" class="headerlink" title="第一章 矩阵的运算与初等变换"></a>第一章 矩阵的运算与初等变换</h2><h3 id="S-1-1-矩阵和向量的概念"><a href="#S-1-1-矩阵和向量的概念" class="headerlink" title="$\S 1.1$ 矩阵和向量的概念"></a>$\S 1.1$ 矩阵和向量的概念</h3><ul>
 <li><p>矩阵</p>
 <p>  $m \times n$ 的数表构成 $m$ 行 $n$ 列矩阵，这 $m \times n$ 个数是 $A$ 的元素，简称元</p>
@@ -316,11 +317,40 @@
 </li>
 <li><p>一些结论和补充</p>
 <ul>
-<li>设 $R(A) = n - 1$ ，则 $A^*$ 的特征值为 $0$ （$n-1$ 重）和 $\sum_{i = 1}^{n}A_{ii}$ （$A_{ii}$ 为 $A$ 的元素 $a_{ii}$  对应的代数余子式）</li>
-<li>设 $R(A) &lt; n-1$ ，则 $A^*$ 有 $n$ 重零特征值</li>
+<li><p>设 $R(A) = n - 1$ ，则 $A^*$ 的特征值为 $0$ （$n-1$ 重）和 $\sum_{i = 1}^{n}A_{ii}$ （$A_{ii}$ 为 $A$ 的元素 $a_{ii}$  对应的代数余子式）</p>
+</li>
+<li><p>设 $R(A) &lt; n-1$ ，则 $A^*$ 有 $n$ 重零特征值</p>
+</li>
 <li><p>若 $\lambda$ 是 $A$ 的特征值，则 $\varphi(\lambda)$ 是 $\varphi(A)$ 的特征值</p>
 </li>
-<li><p>|          | $A$       | $\varphi(A)$       | $A^{-1}$            | $A^*$                           | $B=P^{-1}AP$   |<br>  | :———- | ————- | ————————— | —————————- | ———————————————- | ——————— |<br>  | 特征值   | $\lambda$ | $\varphi(\lambda)$ | $\frac{1}{\lambda}$ | $\frac{\vert A \vert}{\lambda}$ | $\lambda$      |<br>  | 特征向量 | $\alpha$  | $\alpha$           | $\alpha$            | $\alpha$                        | $p^{-1}\alpha$ |</p>
+<li><table>
+<thead>
+<tr>
+<th align="left"></th>
+<th>$A$</th>
+<th>$\varphi(A)$</th>
+<th>$A^{-1}$</th>
+<th>$A^*$</th>
+<th>$B=P^{-1}AP$</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">特征值</td>
+<td>$\lambda$</td>
+<td>$\varphi(\lambda)$</td>
+<td>$\frac{1}{\lambda}$</td>
+<td>$\frac{\vert A \vert}{\lambda}$</td>
+<td>$\lambda$</td>
+</tr>
+<tr>
+<td align="left">特征向量</td>
+<td>$\alpha$</td>
+<td>$\alpha$</td>
+<td>$\alpha$</td>
+<td>$\alpha$</td>
+<td>$p^{-1}\alpha$</td>
+</tr>
+</tbody></table>
 </li>
 <li><p>$A^T$ 与 $A$ 的特征值相同，但特征向量未必相同</p>
 </li>
@@ -412,26 +442,23 @@
 <p>  合同变换法 $(A|E) \to (\Lambda|P^T)$。</p>
 </li>
 <li><p>实二次型的规范形</p>
-<p>  任何实对称矩阵必可经过实数域上变换得到如下矩阵</p>
-<script type="math/tex; mode=display">
-  \begin{bmatrix}
-    1&  &  &  &  &  &  &  & \\\
-    & \ddots  &  &  &  &  &  &  & \\\
-    &  & 1 &  &  &  &  &  & \\\
-    &  &  & -1 &  &  &  &  & \\\
-    &  &  &  & \ddots &  &  &  & \\\
-    &  &  &  &  & -1 &  &  & \\\
-    &  &  &  &  &  & 0 &  & \\\
-    &  &  &  &  &  &  & \ddots & \\\
-    &  &  &  &  &  &  &  &0
-  \end{bmatrix}</script></li>
+<p>  任何实对称矩阵必可经过实数域上变换得到如下矩阵<br>  $$<br>  \begin{bmatrix}</p>
+<pre><code>1&amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \\\
+&amp; \ddots  &amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \\\
+&amp;  &amp; 1 &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \\\
+&amp;  &amp;  &amp; -1 &amp;  &amp;  &amp;  &amp;  &amp; \\\
+&amp;  &amp;  &amp;  &amp; \ddots &amp;  &amp;  &amp;  &amp; \\\
+&amp;  &amp;  &amp;  &amp;  &amp; -1 &amp;  &amp;  &amp; \\\
+&amp;  &amp;  &amp;  &amp;  &amp;  &amp; 0 &amp;  &amp; \\\
+&amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \ddots &amp; \\\
+&amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp;0</code></pre><p>  \end{bmatrix}<br>  $$</p>
+</li>
 </ul>
 <pre><code>其中 $1$ 的个数 $p$ 称为正惯性指数，$-1$ 个数称为负惯性指数，$p-q$ 称为 $A$ 的符号差，正负惯性指数之和是 $A$ 的秩。
 
 两个 $n$ 阶实对称阵合同的充要条件是它们秩相同且正惯性指数也相同。
 
-特别地，若两个 $n$ 阶实对称阵的特征值相同，则它们必相似，从而必合同。
-</code></pre><h3 id="S-6-4-实二次型的分类-正定二次型"><a href="#S-6-4-实二次型的分类-正定二次型" class="headerlink" title="$\S 6.4$ 实二次型的分类 正定二次型"></a>$\S 6.4$ 实二次型的分类 正定二次型</h3><ul>
+特别地，若两个 $n$ 阶实对称阵的特征值相同，则它们必相似，从而必合同。</code></pre><h3 id="S-6-4-实二次型的分类-正定二次型"><a href="#S-6-4-实二次型的分类-正定二次型" class="headerlink" title="$\S 6.4$ 实二次型的分类 正定二次型"></a>$\S 6.4$ 实二次型的分类 正定二次型</h3><ul>
 <li><p>实二次型的分类</p>
 <p>  对于实二次型 $f(x) = x^TAx$，若对任何非零实向量 $x$ 都有 $f(x)$，则称 $f$ 为正定二次型。</p>
 <p>  可逆线性变化不改变实二次型的正定性。</p>
@@ -563,7 +590,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -623,7 +650,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:40</span>
+    <span title="站点阅读时长">1:41</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
