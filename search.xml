@@ -49,14 +49,34 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Probability</title>
-    <url>/2023/08/29/Probability/</url>
+    <title>Electronic-Devices-and-Circuit-Theory</title>
+    <url>/2023/08/29/Electronic-Devices-and-Circuit-Theory/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>Discrete-Math</title>
+    <title>Probability</title>
+    <url>/2023/08/29/Probability/</url>
+    <content><![CDATA[<p>a</p>
+<span id="more"></span>
+
+<p>## 第一章 随机事件及其概率论<br>### $\S 1.1 $ 随机试验与随机事件<br>\1. 基本概念<br>- 我们通常用字母 $E$ 表示一个随机试验。随机试验 $E$ 的基本结果称为样本点，用 $\omega$ 表示。称随机试验 $E$ 的所有基本结果的集合为样本空间，用 $\Omega =\{ \omega\} $ 表示。<br>- 样本空间 $\Omega$ 的部分子集称为随机试验 $E$ 的随机事件 $A$，若试验结果 $\omega \in A$，则称事件 $A$ 发生。<br>- 由一个样本点组成的事件称为基本事件。必然发生的事件称为必然事件，不可能发生事件称为不可能事件。<br>- 有限的样本点的空间称为有限样本空间，无限的样本点的空间称为无限样本空间。</p>
+<p>\2. 事件关系<br>- 当 $A$ 发生时 $B$ 一定发生，则 $B$ 包含事件 $A$，记作 $A \subseteq B$。<br>- 相互包含的事件称为事件相等，记作 $A=B$。<br>- $A$，$B$ 不能同时发生称为互不相容。<br>- $A$，$B$ 事件中必有一个发生且不能同时发生称为事件的互逆，它们是 互逆 / 对立 的。其中一个事件是另一个事件的逆事件。记作 $\bar A = B$。</p>
+<p>\3. 随机事件的运算<br>- 事件的交，说明两个事件中至少发生一个事件，又称为$A$，$B$ 事件的并事件或和事件，记作 $A \cup B$。<br>- 事件的并，说明两个事件中都发生，又称为 $A$，$B$ 事件的交事件或积事件，记作 $A \cap B$。<br>- 事件的差，事件 $A$ 发生而 $B$ 不发生，记作 $A-B$。<br>- 集合的运算满足结合律，交换律，分配律。这里着重强调一下对偶率。写作 $\bar{A \cup B} = \bar{A}\bar{B}$，$\bar{AB}=\bar A \cup \bar B$。</p>
+<p>### $\S 1.2$ 随机事件的概率</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>大学笔记 | 离散数学</title>
     <url>/2023/08/29/Discrete-Math/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<p>s</p>
+<span id="more"></span>
+
+<p>## 第一章 命题逻辑<br>### $\S 1.1$ 命题符号化及联结词<br>- 命题：能判断真假的陈述句。<br>- 不能分解的更简单的命题称为简单命题或原子命题。<br>- 简单命题真值确定，又称为命题常项或命题常元。<br>- 真值可变的简单陈述句称为命题变项或命题变元。<br>- 复合命题由简单命题与联接词联接而成。<br>- 复合命题 “非 $p$” 称为 $p$ 的否定式，记作 $\neg p$。$\neg$ 称为否定联结词。<br>- 复合命题 “$p$ 并且 $q$” 称为 $p$ 与 $q$ 的合取式，记作 $p \wedge q$。$\wedge$ 称为合取联结词。<br>- 复合命题 “$p$ 或 $q$” 称为 $p$ 与 $q$ 的析取式，记作 $p \vee q$。$\vee$ 称为析取联结词。<br>- 复合命题 “如果 $p$，则 $q$” 称为 $p$ 与 $q$ 的蕴涵式，记作 $p \to q$。称 $p$ 为蕴涵式的前件，$q$ 为蕴涵式的后件。$\to$ 称为蕴涵联结词。<strong>该命题为假当且仅当 $p$ 为真且 $q$为假。</strong><br>- 复合命题 “$p$ 当且仅当 $q$” 称为 $p$ 与 $q$ 的等价式，记作 $p \leftrightarrow q$。$\leftrightarrow$ 称为等价联结词。该命题为真当且仅当 $p$ 和 $q$ 均为真。</p>
+]]></content>
+      <tags>
+        <tag>数学</tag>
+        <tag>大学课程</tag>
+      </tags>
   </entry>
   <entry>
     <title>Linux学习笔记：git专题</title>
