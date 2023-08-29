@@ -49,9 +49,20 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Probability</title>
+    <url>/2023/08/29/Probability/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Discrete-Math</title>
+    <url>/2023/08/29/Discrete-Math/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>Linux学习笔记：git专题</title>
     <url>/2023/08/27/Linux-Git/</url>
-    <content><![CDATA[<span id="more"></span>
+    <content><![CDATA[<p>git 学习笔记。</p>
+<span id="more"></span>
 
 <h3 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h3><p>git 是一款非常强大的版本管理软件，它可以使你的文字稿 / 代码 / 图片等很好地存储管理起来，让其不在丢失，甚至能看到你修改过的不同痕迹。而 github 是一个著名开源平台，你可以将代码放在该网站上，它上面的一个个仓库既可以让你存放你的代码，让别人看见，也可以让你学习到别人的代码，起到 ”我为人人，人人为我“ 的开源作用。</p>
 <p>本文参考于 <a href="https://www.bilibili.com/video/BV1Yx411f7Cu/?spm_id_from=333.1007.top_right_bar_window_custom_collection.content.click&amp;vd_source=0f0f84fd4f7853dba4619576003d75fb">再也不丢文件的方法～ Git从入门到精通</a>。</p>
@@ -86,7 +97,7 @@
 <blockquote>
 <p>若 xx 分支有内容未被保存，git 会提醒你，不让你进行操作。</p>
 </blockquote>
-<h3 id="3与别人共享代码-——-github-上线"><a href="#3与别人共享代码-——-github-上线" class="headerlink" title="3与别人共享代码 —— github 上线"></a>3与别人共享代码 —— github 上线</h3><p>首先确保你在 github 上新建了一个仓库，使你本地的文件有仓库可以存放。</p>
+<h3 id="3-与别人共享代码-——-github-上线"><a href="#3-与别人共享代码-——-github-上线" class="headerlink" title="3. 与别人共享代码 —— github 上线"></a>3. 与别人共享代码 —— github 上线</h3><p>首先确保你在 github 上新建了一个仓库，使你本地的文件有仓库可以存放。</p>
 <p>添加远程仓库：<code>git remote add origin xxx</code> （xxx为远程地址）。</p>
 <p>首次将本地分支提交到远程仓库：<code>git push --set-upstrwam origin xx</code>（<code>xx</code> 为分支名称）。</p>
 <blockquote>
@@ -937,8 +948,8 @@ $\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{
 </ul>
 ]]></content>
       <tags>
-        <tag>大学课程</tag>
         <tag>数学</tag>
+        <tag>大学课程</tag>
       </tags>
   </entry>
   <entry>
@@ -1360,8 +1371,8 @@ $\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{
 </ul>
 ]]></content>
       <tags>
-        <tag>大学课程</tag>
         <tag>数学</tag>
+        <tag>大学课程</tag>
       </tags>
   </entry>
   <entry>
@@ -2043,8 +2054,8 @@ $\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{
 </blockquote>
 ]]></content>
       <tags>
-        <tag>电路</tag>
         <tag>大学课程</tag>
+        <tag>电路</tag>
       </tags>
   </entry>
 </search>
