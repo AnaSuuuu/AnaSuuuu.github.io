@@ -1,736 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>置顶 | 博客目录</title>
-    <url>/2023/07/22/Index/</url>
-    <content><![CDATA[<p>茵蒂克丝 <del>Index（雾</del> 小姐姐指引你前行</p>
-<p><img src="INDEX_%E8%8C%B5%E8%92%82%E5%85%8B%E7%B5%B2.jpg" alt="INDEX_茵蒂克絲"></p>
-<span id="more"></span>
-
-<h2 id="算法竞赛"><a href="#算法竞赛" class="headerlink" title="算法竞赛"></a>算法竞赛</h2><p><del>算法竞赛？纯纯网瘾罢！</del></p>
-<p><strong>套题合集：</strong></p>
-<ul>
-<li><p><a href="https://anasuuuu.github.io/2023/07/19/HDU-In-Summer-0/">算法竞赛 | 杭电多校训练</a></p>
-</li>
-<li><p><a href="https://anasuuuu.github.io/2023/06/26/CF-Instrumentality-Project-I/">CodeForces 补全计划（1826 ~ 1850）</a>    </p>
-</li>
-</ul>
-<p><strong>数学：</strong></p>
-<ul>
-<li><p><a href="https://anasuuuu.github.io/2023/07/05/Math-In-ACM-I/">算法笔记 | 数论（一）</a>：扩展欧几里得，逆元，欧拉函数，中国剩余定理，卢卡斯定理。</p>
-</li>
-<li><p><a href="https://anasuuuu.github.io/2023/07/20/Game-In-ACM/">算法笔记 | 博弈论</a>：SG 函数。</p>
-</li>
-<li><p><a href="https://anasuuuu.github.io/2023/06/28/Poly/">学习笔记 | 多项式与生成函数</a></p>
-</li>
-</ul>
-<p><strong>字符串：</strong></p>
-<ul>
-<li><a href="https://anasuuuu.github.io/2023/07/10/String-In-ACM-I/">算法笔记 | 字符串（一）</a>：Manacher，KMP。</li>
-</ul>
-<p><strong>杂项：</strong></p>
-<ul>
-<li><a href="https://anasuuuu.github.io/2023/07/07/somethingelse-in-ACM/">算法笔记 | 杂项（一）</a></li>
-</ul>
-<h2 id="大学课程"><a href="#大学课程" class="headerlink" title="大学课程"></a>大学课程</h2><p>摸鱼大专笔记 ⊙﹏⊙∥ 以应付考试为主。</p>
-<p><strong>大一下：</strong></p>
-<ul>
-<li><a href="https://anasuuuu.github.io/2023/06/06/Physics-I/">大学笔记 | 大学物理BI</a></li>
-<li><a href="https://anasuuuu.github.io/2023/06/05/Circuit-Analysis/">大学笔记 | 电路原理</a></li>
-<li><a href="https://anasuuuu.github.io/2023/06/05/Calculus/">大学笔记 | 微积分</a></li>
-<li><a href="https://anasuuuu.github.io/2023/06/06/Linear-Algebra/">大学笔记 | 线性代数</a></li>
-</ul>
-<h2 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h2><ul>
-<li><p><a href="https://anasuuuu.github.io/2023/07/09/UCB-CS61B/">学习笔记 | UCB-CS61B</a></p>
-</li>
-<li><p><a href="https://anasuuuu.github.io/2023/06/27/Cross-The-Hole/">博客搭建踩坑指北</a></p>
-</li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>Probability</title>
-    <url>/2023/08/29/Probability/</url>
-    <content><![CDATA[<p>随机入门。</p>
-<span id="more"></span>
-
-<h2 id="第一章-随机事件及其概率论"><a href="#第一章-随机事件及其概率论" class="headerlink" title="第一章 随机事件及其概率论"></a>第一章 随机事件及其概率论</h2><h3 id="S-1-1-随机试验与随机事件"><a href="#S-1-1-随机试验与随机事件" class="headerlink" title="$\S 1.1 $ 随机试验与随机事件"></a>$\S 1.1 $ 随机试验与随机事件</h3><ol>
-<li><p>基本概念</p>
-<ul>
-<li>我们通常用字母 $E$ 表示一个随机试验。随机试验 $E$ 的基本结果称为样本点，用 $\omega$ 表示。称随机试验 $E$ 的所有基本结果的集合为样本空间，用 $\Omega =\{ \omega\} $ 表示。</li>
-<li>样本空间 $\Omega$ 的部分子集称为随机试验 $E$ 的随机事件 $A$，若试验结果 $\omega \in A$，则称事件 $A$ 发生。</li>
-<li>由一个样本点组成的事件称为基本事件。必然发生的事件称为必然事件，不可能发生事件称为不可能事件。</li>
-<li>有限的样本点的空间称为有限样本空间，无限的样本点的空间称为无限样本空间。</li>
-</ul>
-</li>
-<li><p>事件关系</p>
-<ul>
-<li>当 $A$ 发生时 $B$ 一定发生，则 $B$ 包含事件 $A$，记作 $A \subseteq B$。</li>
-<li>相互包含的事件称为事件相等，记作 $A=B$。</li>
-<li>$A$，$B$ 不能同时发生称为互不相容。</li>
-<li>$A$，$B$ 事件中必有一个发生且不能同时发生称为事件的互逆，它们是 互逆 / 对立 的。其中一个事件是另一个事件的逆事件。记作 $\bar A = B$。显然 $\bar{\bar A} = A$。</li>
-</ul>
-</li>
-<li><p>随机事件的运算</p>
-<ul>
-<li>事件的交，说明两个事件中至少发生一个事件，又称为$A$，$B$ 事件的并事件或和事件，记作 $A \cup B$。</li>
-<li>事件的并，说明两个事件中都发生，又称为 $A$，$B$ 事件的交事件或积事件，记作 $A \cap B$。</li>
-<li>事件的差，事件 $A$ 发生而 $B$ 不发生，记作 $A-B$。</li>
-<li>集合的运算满足结合律，交换律，分配律。这里着重强调一下对偶率。写作 $\bar{A \cup B} = \bar{A}\bar{B}$，$\bar{AB}=\bar A \cup \bar B$。</li>
-</ul>
-</li>
-<li><p>几个常见结论<br> $$<br> A - B = A - AB = A \bar B \<br> A \cup B = A \cup (B-A) = A\cup(B - AB) \<br> A = A\Omega = A(B\cup \bar B) = AB\cup A\bar B<br> $$</p>
-</li>
-</ol>
-<h3 id="S-1-2-随机事件的概率"><a href="#S-1-2-随机事件的概率" class="headerlink" title="$\S 1.2$ 随机事件的概率"></a>$\S 1.2$ 随机事件的概率</h3><h3 id="课后例题节选"><a href="#课后例题节选" class="headerlink" title="课后例题节选"></a>课后例题节选</h3><p>1.1<br>$$<br>(A \cup B)(A \cup \bar B)(\bar A \cup B)<br>$$</p>
-<p>$$<br>解：LHS = AB<br>$$</p>
-]]></content>
-      <tags>
-        <tag>数学</tag>
-        <tag>大学课程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大学笔记 | 大学物理BII</title>
-    <url>/2023/08/30/Physics-II/</url>
-    <content><![CDATA[<p>从入门到 奇怪的知识增加了.jpg 。</p>
-<span id="more"></span>
-]]></content>
-      <tags>
-        <tag>物理</tag>
-        <tag>大学笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>学习笔记 | 模拟电子技术基础</title>
-    <url>/2023/08/29/Electronic-Devices-and-Circuit-Theory/</url>
-    <content><![CDATA[<p>本课最大的收获使习得了上课隐身术，只有聪明的人才能看到我。</p>
-<span id="more"></span>
-]]></content>
-      <tags>
-        <tag>大学课程</tag>
-        <tag>专业课</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大学笔记 | 大学物理BI</title>
-    <url>/2023/06/06/Physics-I/</url>
-    <content><![CDATA[<p>从入门到放弃。</p>
-<span id="more"></span>
-
-<p>公式汇总<br>$$<br>\begin{gather}<br>热力学\\ \<br>内能 \ \Delta E = \frac{i}{2}\frac{m}{M}R\Delta T = \frac{i}{2}pV\\ \<br>热量 \ Q = \frac{m}{M}C_k \Delta T \\ \<br>等体过程\ C_V = \frac{i}{2}R \ \ 等压过程\ C_p = \frac{i + 2}{2}R\\ \<br>等温过程\ A = \frac{m}{M}RTln\frac{V_2}{V_1}\\ \\<br>一般PV围成的面积减小是放热，增大是吸热\\ \\<br>p = nkT(微观形式)\\ \<br>\varepsilon_k = \frac{3}{2}kT\\ \<br>电场\\ \<br>均匀带电圆环轴线上电场 \ E = \frac{qx}{4\pi \varepsilon_0 (R^2 + x^2) ^{3/2}}\\ \<br>圆电流圆心处电场 \ E = 0\\ \<br>平板电容\ C = \frac{\varepsilon S}{d}\ 圆柱形电容\ C = \frac{2\pi \varepsilon l}{ln\frac{R_B}{R_A}}\ 平板电容\ C = \frac{4\pi\varepsilon R_A R_B}{R_A - R_B}\ \\ \<br>磁场 \\ \<br>圆电流轴线上磁场 \ B = \frac{\mu_0 I R^2}{2(R^2 + x^2)^{3 / 2}}\\ \<br>圆电流圆心处产生磁场 \ B = \frac{\mu I}{2R} \\ \<br>\end{gather}<br>$$</p>
-<h2 id="第三章-刚体的定轴转动"><a href="#第三章-刚体的定轴转动" class="headerlink" title="第三章 刚体的定轴转动"></a>第三章 刚体的定轴转动</h2><ul>
-<li>常见几何体的转动惯量<ul>
-<li>细圆环 &amp; 薄圆环 $MR^2$</li>
-<li>薄圆盘 &amp; 圆柱体 $\frac{1}{2}MR^2$</li>
-<li>细棒 中心轴 $\frac{1}{12}MR^2$ 一端 $\frac{1}{3}ML^2$</li>
-<li>薄球壳 $\frac{2}{3}MR^2$</li>
-<li>球体 $\frac{2}{5}MR^2$</li>
-</ul>
-</li>
-</ul>
-<h2 id="第六章-热力学基础"><a href="#第六章-热力学基础" class="headerlink" title="第六章 热力学基础"></a>第六章 热力学基础</h2><h3 id="S-6-1-热力学第一定律"><a href="#S-6-1-热力学第一定律" class="headerlink" title="$\S 6.1$ 热力学第一定律"></a>$\S 6.1$ 热力学第一定律</h3><ul>
-<li><p>热力学过程，准静态过程(曲线描述， 方程描述)</p>
-<p>  <strong>只有准静态过程才能用曲线描述出来</strong></p>
-</li>
-<li><p>内能， 热量， 功</p>
-<p>​    </p>
-<p>​    </p>
-</li>
-</ul>
-<h3 id="6-2-理想气体的典型热力学过程"><a href="#6-2-理想气体的典型热力学过程" class="headerlink" title="$6.2$ 理想气体的典型热力学过程"></a>$6.2$ 理想气体的典型热力学过程</h3><ul>
-<li><p>等体过程$$\begin{cases} 功 &amp; \\ 内能 &amp; \\ 热量 &amp; \end{cases}$$</p>
-</li>
-<li><p>等压过程$$\begin{cases} 功 &amp; \\ 内能 &amp; \\ 热量 &amp; \end{cases}$$</p>
-</li>
-<li><p>等温过程$$\begin{cases} 功 &amp; \\ 内能 &amp; \\ 热量 &amp; \end{cases}$$</p>
-</li>
-<li><p>绝热过程$$\begin{cases} 功 &amp; \\ 内能 &amp; \\ 热量 &amp; \end{cases}$$</p>
-</li>
-</ul>
-<h3 id="S-6-3-循环过程"><a href="#S-6-3-循环过程" class="headerlink" title="$\S 6.3$ 循环过程"></a>$\S 6.3$ 循环过程</h3><h3 id="S-6-4-热力学第二定律"><a href="#S-6-4-热力学第二定律" class="headerlink" title="$\S 6.4$ 热力学第二定律"></a>$\S 6.4$ 热力学第二定律</h3><h2 id="第七章-静电场"><a href="#第七章-静电场" class="headerlink" title="第七章 静电场"></a>第七章 静电场</h2><h4 id="第七章总结"><a href="#第七章总结" class="headerlink" title="第七章总结"></a>第七章总结</h4><ol>
-<li><p>$k = \frac{1}{4\pi \varepsilon_0}$ ，$F = \frac{q_1q_2}{4\pi \varepsilon r^2}$</p>
-</li>
-<li><p>无限长均匀带电直线和均匀带电半圆弧对圆心处场强相等</p>
-</li>
-<li><p>电位移矢量 $\vec D = \varepsilon_0\varepsilon_r\vec E = \varepsilon \vec E$ ，很多时候 $\vec D$ 和 $\vec E$ 很相像，只是 $D$ 既与 $E$ 有关，又与电介质有关 </p>
-</li>
-<li><p>$\oint \vec D \cdot d\vec S = q$ ，多用对称做</p>
-</li>
-<li><p>$W_e = \frac{1}{2}U_{ab}Q, w_e = \frac{1}{2}DE$</p>
-</li>
-<li><p>平行板电容 $C = \frac{\varepsilon S}{d}$ ，圆柱形电容 $C = \frac{2 \pi \varepsilon l}{ln\frac{R_B}{R_A}}$， 球形电容 $C = \frac{4\pi \varepsilon R_A R_B}{R_B - R_A}$</p>
-</li>
-</ol>
-<h3 id="S-7-1-点电荷-库仑定律"><a href="#S-7-1-点电荷-库仑定律" class="headerlink" title="$\S 7.1$ 点电荷 库仑定律"></a>$\S 7.1$ 点电荷 库仑定律</h3><ul>
-<li>电荷的分类，电荷的量子化，电荷守恒定律，点电荷</li>
-<li>库伦定律<ul>
-<li>真空中， $\vec{F} = k\frac{q_1q_2}{r^2}\vec{e_r} = \frac{1}{4\pi\varepsilon_0}\frac{q_1q_2}{r^2}\vec{e_r}$</li>
-<li>电介质中，$\vec{F} = \frac{1}{4\pi\varepsilon_0\varepsilon_r}\frac{q_1q_2}{r^2}\vec{e_r} = \frac{1}{4\pi\varepsilon}\frac{q_1q_2}{r^2}\vec{e_r}$</li>
-</ul>
-</li>
-</ul>
-<h3 id="S-7-2-电场-电场强度"><a href="#S-7-2-电场-电场强度" class="headerlink" title="$\S 7.2$ 电场 电场强度"></a>$\S 7.2$ 电场 电场强度</h3><p>​    电荷之间的作用是通过电场实现的</p>
-<ul>
-<li><p>电场强度 $\vec{E}= \frac{\vec{F}}{q_0} $</p>
-</li>
-<li><p>场强叠加原理</p>
-</li>
-<li><p>场强计算</p>
-<ul>
-<li><p>点电荷 $\vec{E} = \frac{q}{4\pi\varepsilon_0r^2}\vec{e_r}$</p>
-</li>
-<li><p>电偶极子（偶极矩 $\vec{p} = q\vec{l}$）（特殊情况下场强用中垂线和轴线场强叠加得到）</p>
-<p>  中垂线上场强 $E_B = \frac{ql}{4\pi\varepsilon_0(r^2 + \frac{l^2}{4})^{3/2}}\approx \frac{-\vec{p}}{4\pi\varepsilon_0r^3}$</p>
-<p>  轴线上场强 $E_A = \frac{1}{4\pi\varepsilon_0}[\frac{q}{(r - \frac{l}{2})^2} - \frac{q}{(r + \frac{l}{2})^2}] \approx\frac{ql}{2\pi\varepsilon_0r^3} = \frac{\vec{p}}{2\pi\varepsilon_0r^3}$</p>
-</li>
-<li><p><img src="%E4%BE%8B4.1.png" alt="例4.1"></p>
-<p>  对于一均匀带电直线（$l,q$) 如上图，与其垂直相距 $a$ 的一点场强</p>
-<p>  $E_x = \frac{\lambda}{4\pi\varepsilon_0a}(sin\theta_2 - \sin\theta_1)$</p>
-<p>  $E_y = \frac{\lambda}{4\pi\varepsilon_0a}(cos\theta_1 - \cos\theta_2)$</p>
-<p>  特殊的，中垂线上 $E = E_y = \frac{q}{4\pi\varepsilon_0a\sqrt{a^2 + l^2/4}}$</p>
-<p>  ​                直线无限长时，$E = E_y = \frac{\lambda}{2\pi\varepsilon_0a}$</p>
-</li>
-<li><p>圆环轴线电场计算既可以直接算，也可以把上下分成两部分，各压缩为 $\frac{q}{2}$ 的点电荷来算 $E = \frac{1}{4\pi\varepsilon_0}\frac{qx}{(R^2 + x^2)^{\frac{3}{2}}}$</p>
-</li>
-<li><p>算圆盘电场可看作无数个圆环电场叠加 $E = \int_0^R\frac{1}{4\pi\varepsilon_0}\frac{2x\sigma\pi rdr}{(x^2 + r^2)^{3/2}} = \frac{\sigma}{2\varepsilon_0}[1-\frac{x}{\sqrt{x^2+R^2}}]$</p>
-<p>  特殊的，当 $R \to \infty$，$E = \frac{\sigma}{2\varepsilon_0}$</p>
-<p>  将两个带有等量异种电荷无限大板放一块，板中间 $E = \frac{\sigma}{\varepsilon_0}$，板外是 $0$</p>
-<p>  注：电荷量密度是代数量，本身有正负</p>
-</li>
-<li><p>无限长均匀带电直线和均匀带电半圆弧对圆心产生的q等效</p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="S-7-3-静电场中的电介质-电位移"><a href="#S-7-3-静电场中的电介质-电位移" class="headerlink" title="$\S 7.3$ 静电场中的电介质 电位移"></a>$\S 7.3$ 静电场中的电介质 电位移</h3><ul>
-<li><p>电介质，偶极子模型，有极分子，无极分子</p>
-</li>
-<li><p>电介质的极化（一般电场越强，温度越低（温度低使分子无规律性降低），分子排列越有序，极化效果越显著）</p>
-<ul>
-<li><p>位移极化</p>
-<p>  分子中正负电荷各收到电场力，由于正负电荷中心相对位移而极化</p>
-</li>
-<li><p>转向极化</p>
-<p>  分子收到电场产生的力矩作用而有序排列，从而产生的极化</p>
-<p>二者宏观表现相同，一般不刻意区分</p>
-<p>当介质中分子电偶极矩和不为零时，介质被极化</p>
-<p>分子极化导致介质端面上出现的电荷称为束缚电荷，这种现象称为电极化</p>
-<p>介质中电场 $E$ 是由自由电荷电场 $E_0$ 和极化电荷电场 $E’$ 叠加的结果，有 $\vec{E} = \vec{E’} + \vec{E_0}$（$E_0, E’$ 方向相反）</p>
-<p>当介质<strong>均匀充满</strong>电场时，介质中任一点场强 $\vec{E}$ 为原来真空中该处场强 $\vec{E_0}$ 的 $\frac{1}{\varepsilon_r}$，$\varepsilon_r$ 因介质而异</p>
-<p>电介质不被击穿的最大电场强度为该电介质的介电强度</p>
-</li>
-</ul>
-</li>
-<li><p>电极化强度</p>
-<p>  $\vec P = \frac{\sum \vec P_{mole}}{\Delta V}$，单位是 $C·m^{-2}$ ，称为电极化强度矢量，反映了介质内电极化的强弱和方向</p>
-<p>  均匀极化后的电极化强度等于极电荷密度 $\vec P = \sigma’$</p>
-<p>  故有 $\vec E_0 = \frac{\sigma}{\varepsilon_0},\vec E’ = \frac{\sigma’}{\varepsilon_0},\vec E = \frac{\sigma}{\varepsilon_0\varepsilon_r}$，带入三者关系式得 $\sigma’ = \frac{\varepsilon_r - 1}{\varepsilon_r} \sigma$，反映了自由电荷和极化电荷的关系</p>
-<p>  令 $\chi_e = \varepsilon_e - 1$，称为电介质的电极化率，那么 $P = \frac{\varepsilon_r - 1}{\varepsilon_r} \sigma = \varepsilon_0\chi_eE$</p>
-</li>
-<li><p>电位移矢量</p>
-<p>  $\vec D = \varepsilon_0\vec E + \vec P = \varepsilon_0\varepsilon_r\vec E = \varepsilon\vec E$，$\vec D$ 为电位移矢量，$\varepsilon$ 称为介电常数</p>
-</li>
-</ul>
-<h3 id="S-7-4-静电场中高斯定理"><a href="#S-7-4-静电场中高斯定理" class="headerlink" title="$\S 7.4$ 静电场中高斯定理"></a>$\S 7.4$ 静电场中高斯定理</h3><ul>
-<li><p>电场线（有源性，无旋性，互不相交），电位移线，电通量$\Phi_e$（穿出闭合面为正，穿出为负）</p>
-</li>
-<li><p>高斯定理</p>
-<p>  $\oint_S \vec D d\vec S = \sum q_i$ 这里的 $q$ 均为高斯面内部，高斯面并不客观存在</p>
-</li>
-</ul>
-<h3 id="S-7-5-静电场的环路定理-电势"><a href="#S-7-5-静电场的环路定理-电势" class="headerlink" title="$\S 7.5$ 静电场的环路定理 电势"></a>$\S 7.5$ 静电场的环路定理 电势</h3><ul>
-<li><p>静电场的环路定理</p>
-<p>  $\oint_L E·dl = 0$，电场力是保守力，静电场是保守力场（有势场）</p>
-</li>
-<li><p>电势，电势叠加原理，</p>
-</li>
-</ul>
-<h3 id="S-7-6-电场强度与电势梯度的关系"><a href="#S-7-6-电场强度与电势梯度的关系" class="headerlink" title="$\S 7.6$ 电场强度与电势梯度的关系"></a>$\S 7.6$ 电场强度与电势梯度的关系</h3><ul>
-<li><p>等势面，电势梯度</p>
-<p>  $\bigtriangledown = \frac{\partial}{\partial x}\vec i + \frac{\partial}{\partial y}\vec j + \frac{\partial}{\partial z}\vec k \to \vec E = -\bigtriangledown U$</p>
-</li>
-</ul>
-<h3 id="S-7-7-静电场中的导体"><a href="#S-7-7-静电场中的导体" class="headerlink" title="$\S 7.7$ 静电场中的导体"></a>$\S 7.7$ 静电场中的导体</h3><ul>
-<li><p>静电平衡</p>
-<ul>
-<li><p>条件</p>
-<p>  导体内部 $\vec E = 0$，导体表面 $\vec E$ 与导体垂直，故导体为等势体</p>
-</li>
-<li><p>净电荷只分布于表面</p>
-<p>  对于有空腔，空腔内无电荷的导体，净电荷依然只分布在外表面</p>
-<p>  对于有空腔且空腔内有电荷的导体，内空腔表面产生电荷是内空腔电荷代数和为 $0$</p>
-<p>  处于静电平衡的导体表面电荷面密度与该处表面曲率半径成正比</p>
-<p>导体表面<strong>附近</strong>电场强度 $E = \frac{\sigma}{\varepsilon_0}$</p>
-</li>
-</ul>
-</li>
-<li><p>静电屏蔽</p>
-<p>  导体空腔可以使腔内空间不受腔外带电体影响</p>
-<p>  接地导体空腔可以使腔外空间不受腔内带电体影响</p>
-</li>
-<li><p>电容器</p>
-<ol>
-<li><p>平板电容器</p>
-<p> $E = \frac{\sigma}{\varepsilon},U_{AB} = \frac{\sigma}{\varepsilon}d = \frac{qd}{\varepsilon s},C = \frac{q}{U_{AB}} = \frac{\varepsilon S}{d}$</p>
-</li>
-<li><p>圆柱形电容器</p>
-<p> $E = \frac{\lambda}{2\pi\varepsilon r},U_{AB} = \frac{\lambda}{2\pi\varepsilon}ln\frac{R_B}{R_A},C = \frac{q}{U_{AB}} = \frac{2\pi\varepsilon l}{ln\frac{R_B}{R_A}}$</p>
-</li>
-<li><p>球形电容器</p>
-<p> $E = \frac{q}{4\pi\varepsilon r^2},U_{AB} = \frac{q}{4\pi\varepsilon}(\frac{1}{R_A}-\frac{1}{R_B}),C = \frac{q}{U_{AB}} = \frac{4\pi\varepsilon R_A R_B}{R_B-R_A}$</p>
-<p>决定电容器电容的因素是电容器的大小，形状，板间电介质</p>
-</li>
-</ol>
-</li>
-<li><p>电场能量</p>
-<p>  $W_e = \frac{1}{2}U_{ab}Q = \frac{1}{2}CU_{ab}^2 = \frac{1}{2}\frac{Q_{ab}^2}{C}$</p>
-<p>  $w_e = \frac{W_e}{V} = \frac{1}{2}\varepsilon E^2$，$w_e$ 是电场能量密度</p>
-<p>  $W_e = \int_V w_edV$</p>
-</li>
-</ul>
-<h2 id="第八章-稳恒磁场"><a href="#第八章-稳恒磁场" class="headerlink" title="第八章 稳恒磁场"></a>第八章 稳恒磁场</h2><h3 id="S-8-1-恒定电流"><a href="#S-8-1-恒定电流" class="headerlink" title="$\S 8.1$ 恒定电流"></a>$\S 8.1$ 恒定电流</h3><ul>
-<li><p>电流和电流密度</p>
-<p>  $I = \frac{dq}{dt} = qnvs$</p>
-<p>  传导电流：到电介质中电荷的定向移动</p>
-<p>  运流电流：带电导体的机械运动</p>
-<p>  电流密度 $\vec J = \frac{dI}{dS_\tau}\vec e_n = \rho \vec v = nq \vec v$ </p>
-<p>  $dI = JdS \times cos\theta = \vec J \cdot d\vec S,I = \int_S \vec J \cdot d\vec S$</p>
-</li>
-<li><p>欧姆定律</p>
-<p>  $I = \frac{U}{R} = GU$</p>
-<p>  $R = \int \frac{\rho dl}{S}$</p>
-<p>  $J = \sigma E$      $\sigma$ 是电导率，$E$ 是场强</p>
-</li>
-<li><p>电动势</p>
-<p>  电源提供非静电力使正电荷沿逆静电场方向运动</p>
-<p>  电动势是单位正电荷绕闭合回路运动一周非静电力做的功 $\varepsilon = \frac{A}{q} = \oint_L\vec E_k d\vec l$ </p>
-<p>  与电势不同的是，电动势与路径<strong>有关</strong></p>
-</li>
-</ul>
-<h3 id="S-8-2-基本磁现象-安培定律"><a href="#S-8-2-基本磁现象-安培定律" class="headerlink" title="$\S 8.2$ 基本磁现象 安培定律"></a>$\S 8.2$ 基本磁现象 安培定律</h3><ul>
-<li><p>基本磁现象</p>
-</li>
-<li><p>安培定律</p>
-<p>  $F = \frac{\mu_0}{4\pi}\oint_{c_2}I_2d\vec l_2 \times \oint_{c_1} \frac{I_1d\vec l_1 \times \vec r_{12}}{\vec r_{12}^3} $</p>
-<p>  方向：右手法则</p>
-<p>  电流元之间的安培力不满足力的作用力和反作用力定律</p>
-<blockquote>
-<p>可以这样想，看是否满足力的相互作用关系就是看它们是否动量守恒，而两个电流元和它们中间的电磁场作为一个整体是守恒的，而电磁场动量不为 $0$，故不满足作用力与反作用力关系</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="S-8-3-磁场-毕奥-萨伐尔定律"><a href="#S-8-3-磁场-毕奥-萨伐尔定律" class="headerlink" title="$\S 8.3$ 磁场 毕奥-萨伐尔定律"></a>$\S 8.3$ 磁场 毕奥-萨伐尔定律</h3><ul>
-<li><p>磁场 磁感应强度</p>
-<p>  磁场是一种特殊形态的<strong>物质</strong></p>
-<p>  磁矩 $\vec m = IS\vec e_n$ 其中 $\vec e_n$ 与 $I$ 成方向满足右手螺旋定则</p>
-<p>  $B = \frac{F_{max}}{qv} = \frac{dF}{Idl}$ ，$\vec B$ 的方向：$\vec F_{max} \times \vec v$</p>
-</li>
-<li><p>毕奥-萨伐尔定律</p>
-<p>  电流元视为运动电荷的集合 $Id\vec l = dNq\vec v = nsd\vec lq \vec v$</p>
-<p>  $dB = \frac{\mu_0Id\vec l \times \vec r}{4\pi r^3} = N\frac{\mu_0}{4\pi}\frac{q\vec v \times \vec r}{r^3},\ \mu_0 = 4\pi \times 10 ^{-7} N / A^2$</p>
-<p>  方向遵循右手法则 $Id\vec l \times \vec r$</p>
-<ul>
-<li><p>有限长的载流直导线磁场 $B = \frac{\mu_0I}{4\pi x}(cos\theta_1 - cos\theta_2)$</p>
-<p><img src="%E8%BD%BD%E6%B5%81%E7%9B%B4%E5%AF%BC%E7%BA%BF%E7%A3%81%E5%9C%BA.png" alt="载流直导线磁场"></p>
-<p>​    一些特殊情况</p>
-<p>​        点在直导线延长线上时 $B = 0$</p>
-<p>​        无限长的载流直导线磁场 $B = \frac{\mu_0I}{2\pi a}$</p>
-<p>​        半无限长的载流直导线磁场 $B = \frac{\mu_0I}{4\pi a}$</p>
-<p>​        圆电流轴线上的磁场</p>
-<p>​        $B = \frac{\mu_0IR^2\vec i}{2(R^2 + x^2)^{3/2}}$</p>
-</li>
-<li><p>圆电流直线上磁场磁场 $B = \frac{\mu_0IR^2\vec i}{2(R^2 + x^2)^{3/2}}$</p>
-<p>  <img src="%E5%9C%86%E7%94%B5%E6%B5%81%E8%BD%B4%E7%BA%BF%E4%B8%8A%E7%9A%84%E7%A3%81%E5%9C%BA.png" alt="圆电流轴线上的磁场"></p>
-<p>  一些说明</p>
-<p>  ​            x=0时 $B = \frac{\mu_0 I}{2R}$</p>
-<p>  ​            方向满足右手螺旋定则</p>
-<p>  ​            N匝时， $B = N\frac{\mu_0IR^2\vec i}{2(R^2 + x^2)^{3/2}}$</p>
-<p>  半无限长的载流直导线磁场 $B = \frac{\mu_0I}{4\pi a}$</p>
-</li>
-<li><p>载流直螺线管内部磁场 $B = \frac{\mu_0 nI}{2}(cos \beta_2 - cos\beta_1)$</p>
-</li>
-</ul>
-</li>
-</ul>
-<p><img src="%E8%9E%BA%E7%BA%BF%E7%AE%A1%E5%86%85%E9%83%A8%E7%A3%81%E5%9C%BA-1.png" alt="螺线管内部磁场-1"></p>
-<p><img src="%E8%9E%BA%E7%BA%BF%E7%AE%A1%E5%86%85%E9%83%A8%E7%A3%81%E5%9C%BA-2.png" alt="螺线管内部磁场-2"></p>
-<p>​        一些特殊情况</p>
-<p>​            无限长螺线管内部磁场 $B = \mu_0nI$</p>
-<p>​            半无限长螺线管内部磁场 $B = \frac{\mu_0nI}{2}$</p>
-<h3 id="S-8-4-磁通量-磁场中的高斯定理"><a href="#S-8-4-磁通量-磁场中的高斯定理" class="headerlink" title="$\S 8.4$ 磁通量 磁场中的高斯定理"></a>$\S 8.4$ 磁通量 磁场中的高斯定理</h3><ul>
-<li>磁场线</li>
-</ul>
-<p>​        该点切线方向为该点磁场方向</p>
-<p>​        不相交，是闭合的，磁场线和形成磁场的电流成右手螺旋关系</p>
-<ul>
-<li><p>磁通量</p>
-<p>  匀强时 $\phi_m = \vec B \cdot \vec S$</p>
-<p>  对任意磁场 $\phi_m = \int \vec B \cdot d\vec S$</p>
-</li>
-<li><p>磁场高斯定理</p>
-<p>  $\oint \vec B \cdot d\vec S = 0$ 说明磁场是无源场</p>
-</li>
-</ul>
-<h3 id="S-8-5-磁场对载流导线和运动电荷的作用"><a href="#S-8-5-磁场对载流导线和运动电荷的作用" class="headerlink" title="$\S 8.5$ 磁场对载流导线和运动电荷的作用"></a>$\S 8.5$ 磁场对载流导线和运动电荷的作用</h3><ul>
-<li><p>安培力</p>
-<p>  磁场中导线受到力的作用 $dF = Id\vec l \times \vec B$</p>
-</li>
-<li><p>磁场对直导线</p>
-<p>  $F = BIlsin \alpha$</p>
-</li>
-<li><p>磁场对线圈</p>
-<p>  当磁场与线圈倾斜一个角度时，会产生力矩 $M = BISsin\phi$</p>
-<p>  定义磁矩 $\vec P_m = NIS\cdot \vec n, \vec M = \vec P_m \times \vec B$</p>
-<p>  磁矩方向和磁场方向对线圈具体影响如下</p>
-<p>  <img src="%E7%A3%81%E5%9C%BA%E6%96%B9%E5%90%91%E5%AF%B9%E7%BA%BF%E5%9C%88%E7%9A%84%E5%BD%B1%E5%93%8D.png" alt="磁场方向对线圈的影响"></p>
-</li>
-<li><p>洛伦兹力</p>
-<p>  $\vec F_m = q\vec v\times \vec B$ 同样符合右手螺旋定则，注意 $q$ 的方向是以电流方向而定</p>
-</li>
-<li><p>霍尔效应</p>
-<p>  霍尔电势差 $U_H = R_H\frac{IB}{b}$，$R_H$ 称为霍尔系数，平衡后电子受到洛伦兹力和电场力平衡<br>  $R_H$ 为正，空穴载流子，$p$ 型半导体；$R_H$ 为负，导体或 $n$ 型半导体</p>
-<p>   <img src="%E9%9C%8D%E5%B0%94%E6%95%88%E5%BA%94-%E5%8D%8A%E5%AF%BC%E4%BD%93%E7%B1%BB%E5%9E%8B.png" alt="霍尔效应-半导体类型"></p>
-</li>
-</ul>
-<h3 id="S-8-6-磁介质-磁化过程"><a href="#S-8-6-磁介质-磁化过程" class="headerlink" title="$\S 8.6$ 磁介质 磁化过程"></a>$\S 8.6$ 磁介质 磁化过程</h3><ul>
-<li><p>磁介质</p>
-<p>  $\vec B = \vec B_0 + \vec B’$ 右式两项同向时，是顺磁质（磁化后使空间磁场变强），反之为抗磁质（磁化后使空间磁场变弱），若未顺磁质且 $\vec B’ &gt;&gt; \vec B_0$ 称为铁磁质</p>
-</li>
-<li><p>分子磁矩</p>
-<p>  物质分子中，每个电子参与两种运动——绕核的轨道运动（轨道磁矩）和自身旋转运动（自旋磁矩）</p>
-<p>  两种磁矩矢量和是分子磁矩，可以用一个圆电流表示，称为分子电流</p>
-</li>
-<li><p>磁化强度</p>
-<p>  $\vec M = \frac{\sum \vec P_m}{\Delta V}$ 单位体积内分子磁矩矢量和</p>
-</li>
-<li><p>磁场强度</p>
-<p>  磁介质存在时，介质中磁感应强度 $\vec B = \vec B_0 + \mu_0 \vec M$</p>
-<p>  引入磁场强度 $\vec H = \frac{\vec B}{\mu_0} - \vec M$</p>
-<p>  研究表明对于各向同性非铁磁介质，磁化强度和磁场强度满足 $\vec M = \chi_m \vec H$，$\chi_m$ 称为介质的磁化率</p>
-<p>  则有 $\vec B = \mu_0(1 + \chi_m)\vec H = \mu_0\mu_r \vec H = \mu \vec H$，其中 $\mu_r = 1 + \chi_m$ $\mu, \mu_r$ 分别被称为磁导率和相对磁导率，$\vec H = \frac{\vec B}{\mu}$</p>
-<p>  <img src="%E7%A3%81%E4%BB%8B%E8%B4%A8%E6%95%B0%E5%80%BC.png" alt="磁介质数值"></p>
-</li>
-<li><p>铁磁质</p>
-<p>  磁导率大，磁饱和现象，磁滞回线</p>
-</li>
-</ul>
-<h3 id="S-8-7-安培环路定理"><a href="#S-8-7-安培环路定理" class="headerlink" title="$\S 8.7$ 安培环路定理"></a>$\S 8.7$ 安培环路定理</h3><ul>
-<li>安培环路定理</li>
-</ul>
-<p>​        $\oint \vec B \cdot d\vec l = \mu_0 \sum I_内$ 或 $\oint \vec H \cdot d\vec l = \sum I_内$ 电流方向有正有负，和 $B$ 成右手螺旋关系则为正，反之为负 </p>
-<p>​        积分回路是 $N$ 圈时，$\oint \vec H \cdot d\vec l = N\sum I_内$</p>
-<p>​        无限长线圈场内 $B = \mu_0 n I$ </p>
-<p>​        无限大平面（线密度 $I$） $B = \frac{\mu_0 I}{2}$</p>
-<h2 id="第九章-电磁感应与麦克斯韦方程组"><a href="#第九章-电磁感应与麦克斯韦方程组" class="headerlink" title="第九章 电磁感应与麦克斯韦方程组"></a>第九章 电磁感应与麦克斯韦方程组</h2><h3 id="S-9-1-电磁感应的基本规律"><a href="#S-9-1-电磁感应的基本规律" class="headerlink" title="$\S 9.1$ 电磁感应的基本规律"></a>$\S 9.1$ 电磁感应的基本规律</h3><ul>
-<li><p>法拉第电磁感应定律</p>
-<p>  $\varepsilon = -N\frac{d\phi}{dt} \rightarrow q = \frac{\phi_1 - \phi_2}{R}$</p>
-</li>
-<li><p>楞次定律</p>
-<p>  感应电流总是反抗磁场引起的变化</p>
-</li>
-</ul>
-<h3 id="S-9-2-动生电动势与感生电动势"><a href="#S-9-2-动生电动势与感生电动势" class="headerlink" title="$\S 9.2$ 动生电动势与感生电动势"></a>$\S 9.2$ 动生电动势与感生电动势</h3><ul>
-<li><p>动手电动势</p>
-<p>  $\varepsilon = Bvl$，方向：右手法 / 楞次定律 </p>
-</li>
-<li><p>感生电动势</p>
-<p>  $\varepsilon = -\frac{d\phi_m}{dt} = \frac{\partial\vec B}{\partial t}\cdot dS$</p>
-</li>
-<li><p>涡流与趋肤效应</p>
-</li>
-</ul>
-<h3 id="S-9-3-自感与互感"><a href="#S-9-3-自感与互感" class="headerlink" title="$\S 9.3$ 自感与互感"></a>$\S 9.3$ 自感与互感</h3><ul>
-<li><p>自感</p>
-<p>  $N\phi_m = LI  \rightarrow L = N\frac{\phi}{I} \rightarrow \varepsilon = -N\frac{d\phi_m}{dt} = -NL\frac{dI}{dt}$</p>
-</li>
-<li><p>互感</p>
-<p>  $\varepsilon_1 = -M\frac{dI_2}{dt},\varepsilon_2 = -M\frac{dI_1}{dt}$ ，$M$ 只与线圈各属性和磁介质情况有关 </p>
-</li>
-</ul>
-<h3 id="S-9-4-磁场的能量"><a href="#S-9-4-磁场的能量" class="headerlink" title="$\S 9.4$ 磁场的能量"></a>$\S 9.4$ 磁场的能量</h3><p>磁场能量密度 $w_m = \frac{B^2}{2\mu} = \frac{1}{2}\mu H^2 = \frac{1}{2}BH \rightarrow W_m = \int w_mdV$</p>
-<h3 id="S-9-5-位移电流"><a href="#S-9-5-位移电流" class="headerlink" title="$\S 9.5$ 位移电流"></a>$\S 9.5$ 位移电流</h3><ul>
-<li><p>位移电流</p>
-<p>  由于变化的磁场也可以产生电流，故麦克斯韦提出可以假设变化的磁场之间（如两个电极板之间）也看作是有电流存在，这个电流被称为位移电流，$I_d = \frac{d\phi}{dt}$ 位移电流密度 $\vec J_d = \frac{d\vec D}{dt}$</p>
-<p>  位移电流的实质其实就是变化的电场，只要有变化的电场，或有磁场使电场变化，则有位移电流</p>
-<p>  值得一提的是，两种电流在产生磁场方面是等效的，但是位移电流不产生焦耳热</p>
-</li>
-<li><p>全电流</p>
-<p>  $I_全 = I + I_d$ </p>
-<p>  安培环路定理完善为 $\oint \vec H\cdot d\vec l = \sum I_全 = \sum I + \sum I_d$</p>
-</li>
-</ul>
-<h3 id="S-9-6-麦克斯韦方程组"><a href="#S-9-6-麦克斯韦方程组" class="headerlink" title="$\S 9.6$ 麦克斯韦方程组"></a>$\S 9.6$ 麦克斯韦方程组</h3><p><img src="%E9%BA%A6%E5%85%8B%E6%96%AF%E9%9F%A6%E6%96%B9%E7%A8%8B%E7%BB%84.png" alt="麦克斯韦方程组"></p>
-]]></content>
-      <tags>
-        <tag>物理</tag>
-        <tag>大学笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大学笔记 | 离散数学</title>
-    <url>/2023/08/29/Discrete-Math/</url>
-    <content><![CDATA[<p>从入门到出门。</p>
-<span id="more"></span>
-
-<h2 id="第一章-命题逻辑"><a href="#第一章-命题逻辑" class="headerlink" title="第一章 命题逻辑"></a>第一章 命题逻辑</h2><h3 id="S-1-1-命题符号化及联结词"><a href="#S-1-1-命题符号化及联结词" class="headerlink" title="$\S 1.1$ 命题符号化及联结词"></a>$\S 1.1$ 命题符号化及联结词</h3><p>- 命题：能判断真假的陈述句。<br>- 不能分解的更简单的命题称为简单命题或原子命题。<br>- 简单命题真值确定，又称为命题常项或命题常元。<br>- 真值可变的简单陈述句称为命题变项或命题变元。<br>- 复合命题由简单命题与联接词联接而成。<br>- 复合命题 “非 $p$” 称为 $p$ 的否定式，记作 $\neg p$。$\neg$ 称为否定联结词。<br>- 复合命题 “$p$ 并且 $q$” 称为 $p$ 与 $q$ 的合取式，记作 $p \wedge q$。$\wedge$ 称为合取联结词。<br>- 复合命题 “$p$ 或 $q$” 称为 $p$ 与 $q$ 的析取式，记作 $p \vee q$。$\vee$ 称为析取联结词。<br>- 复合命题 “如果 $p$，则 $q$” 称为 $p$ 与 $q$ 的蕴涵式，记作 $p \to q$。称 $p$ 为蕴涵式的前件，$q$ 为蕴涵式的后件。$\to$ 称为蕴涵联结词。<strong>该命题为假当且仅当 $p$ 为真且 $q$为假。</strong><br>- 复合命题 “$p$ 当且仅当 $q$” 称为 $p$ 与 $q$ 的等价式，记作 $p \leftrightarrow q$。$\leftrightarrow$ 称为等价联结词。该命题为真当且仅当 $p$ 和 $q$ 均为真。</p>
-]]></content>
-      <tags>
-        <tag>数学</tag>
-        <tag>大学课程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux学习笔记：git专题</title>
-    <url>/2023/08/27/Linux-Git/</url>
-    <content><![CDATA[<p>git 学习笔记。</p>
-<span id="more"></span>
-
-<h3 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h3><p>git 是一款非常强大的版本管理软件，它可以使你的文字稿 / 代码 / 图片等很好地存储管理起来，让其不在丢失，甚至能看到你修改过的不同痕迹。而 github 是一个著名开源平台，你可以将代码放在该网站上，它上面的一个个仓库既可以让你存放你的代码，让别人看见，也可以让你学习到别人的代码，起到 ”我为人人，人人为我“ 的开源作用。</p>
-<p>本文参考于 <a href="https://www.bilibili.com/video/BV1Yx411f7Cu/?spm_id_from=333.1007.top_right_bar_window_custom_collection.content.click&amp;vd_source=0f0f84fd4f7853dba4619576003d75fb">再也不丢文件的方法～ Git从入门到精通</a>。</p>
-<h3 id="1-本地基础操作"><a href="#1-本地基础操作" class="headerlink" title="1. 本地基础操作"></a>1. 本地基础操作</h3><p>把当前文件夹变为一个 git 仓库 创建 git 仓库：<code>git init</code>。</p>
-<p>查看当前仓库文件变化情况：<code>git status</code>。</p>
-<blockquote>
-<p>如果文件是红色的，说明新的修改还未被添加，只有被添加的修改才能被提交，被保存好。</p>
-</blockquote>
-<p>添加修改：<code>git add xx</code>（xx 为想添加的文件名称）。</p>
-<blockquote>
-<p>可使用 <code>git add .</code> 来添加当前仓库所有修改。</p>
-</blockquote>
-<p>本次还没有提交的更改：<code>git diff</code>（比较工作区与暂存区的区别）。</p>
-<p>回滚，撤销提交操作：<code>git reset</code>。</p>
-<p>向 git 提交自己身份（name）：<code>git config --global user.name "xxx"</code>。</p>
-<p>向 git 提交自己身份（email）：<code>git config --global user.email "xxx@xx.com"</code>。</p>
-<p>向 git 提交内容：<code>git commit -m “xx”</code> （xx为对提交的内容进行描述）。</p>
-<blockquote>
-<p>如果直接 <code>git commit</code> 会进入一个编辑器界面，要求你对本次的修改进行描述。</p>
-<p>修改默认编辑器：<code>git config --global core.editor vim / vscode / emacs</code>。</p>
-<p><code>git commit -a</code> 可以直接</p>
-</blockquote>
-<p>让 git 不提交某些文件/忽略某些文件：创建文件 <code>.gitignore</code> 并在文件中添加文件名/文件夹名 即可。 </p>
-<blockquote>
-<p>若想让 <code>.gitignore</code> 忽略某些文件，但这些文件在之前已经被追踪过了，可以用：<code>git rm --cached xx （xx为文件名）</code> 来使 git 不再追踪这些文件。</p>
-</blockquote>
-<h3 id="2-git-分支"><a href="#2-git-分支" class="headerlink" title="2. git 分支"></a>2. git 分支</h3><p>git 添加分支：<code>git branch xx</code> （xx为分支名）。</p>
-<p>git 切换分支：<code>git checkout xx</code> （xx为分支名）。</p>
-<p>合并分支：<code>git merge xx</code>（xx为分支名）。</p>
-<p>列出本地分支：<code>git branch</code>。</p>
-<p>删除分支:<code>git branch -d xx</code> (xx为分支名，-D强制删除)。</p>
-<blockquote>
-<p>若 xx 分支有内容未被保存，git 会提醒你，不让你进行操作。</p>
-</blockquote>
-<h3 id="3-与别人共享代码-——-github-上线"><a href="#3-与别人共享代码-——-github-上线" class="headerlink" title="3. 与别人共享代码 —— github 上线"></a>3. 与别人共享代码 —— github 上线</h3><p>首先确保你在 github 上新建了一个仓库，使你本地的文件有仓库可以存放。</p>
-<p>添加远程仓库：<code>git remote add origin xxx</code> （xxx为远程地址）。</p>
-<p>首次将本地分支提交到远程仓库：<code>git push --set-upstrwam origin xx</code>（<code>xx</code> 为分支名称）。</p>
-<blockquote>
-<p>之后会让你输入用户名和密码，若你想输入一次之后就不用再输入，则只用在 <code>git push</code> 之前加上一句 <code>git config credential.helper store</code>。</p>
-<p>在次之后再提交这个分支只用 <code>git push</code> 即可。</p>
-</blockquote>
-<p>克隆仓库：<code>git clone xxx</code>（xxx为远程地址）。</p>
-<p>若和别人合作之后，再次想把代码拉去下来只需要：<code>git pull</code> 即可。 </p>
-]]></content>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux学习笔记：vim专题</title>
-    <url>/2023/08/27/Linux-Vim/</url>
-    <content><![CDATA[<span id="more"></span>
-]]></content>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>学习笔记 | UCB-CS61B</title>
-    <url>/2023/07/09/UCB-CS61B/</url>
-    <content><![CDATA[<span id="more"></span>
-
-]]></content>
-  </entry>
-  <entry>
-    <title>UCB-CS70</title>
-    <url>/2023/08/28/UCB-CS70/</url>
-    <content><![CDATA[<span id="more"></span>
-]]></content>
-  </entry>
-  <entry>
-    <title>Study notes | CS61A</title>
-    <url>/2023/08/28/UCB-CS61A/</url>
-    <content><![CDATA[<p>Start!</p>
-<span id="more"></span>
-
-<h1 id="Chapter-1-Building-Abstractions-with-Functions"><a href="#Chapter-1-Building-Abstractions-with-Functions" class="headerlink" title="Chapter 1: Building Abstractions with Functions"></a>Chapter 1: Building Abstractions with Functions</h1><h3 id="1-2-Elements-of-Programing"><a href="#1-2-Elements-of-Programing" class="headerlink" title="1.2 Elements of Programing"></a>1.2 Elements of Programing</h3><h4 id="1-2-3-Importing-Library-Functions"><a href="#1-2-3-Importing-Library-Functions" class="headerlink" title="1.2.3 Importing Library Functions"></a>1.2.3 Importing Library Functions</h4><p>Python defines a very large number of functions, including the operator functions mentioned in the preceding section,so we can import them into our programing.</p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> math <span class="keyword">import</span> sqrt</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>sqrt(<span class="number">256</span>)</span><br><span class="line"><span class="number">16.0</span></span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<h4 id="1-2-4-Names-and-the-Environment"><a href="#1-2-4-Names-and-the-Environment" class="headerlink" title="1.2.4 Names and the Environment"></a>1.2.4 Names and the Environment</h4><p>Names can be bound via <code>=</code> or <code>import</code>.</p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> math <span class="keyword">import</span> pi</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>pi * <span class="number">71</span> / <span class="number">223</span></span><br><span class="line"><span class="number">1.0002380197528042</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>Names can be bound to functions. For instance, the name <code>max</code> is bound to the max function we have been using. </p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">max</span></span><br><span class="line">&lt;built-<span class="keyword">in</span> function <span class="built_in">max</span>&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>f = <span class="built_in">max</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>f</span><br><span class="line">&lt;built-<span class="keyword">in</span> function <span class="built_in">max</span>&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>f(<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>)</span><br><span class="line"><span class="number">4</span></span><br></pre></td></tr></tbody></table></figure>
-
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">max</span> = <span class="number">5</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">max</span></span><br><span class="line"><span class="number">5</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>Interpreter must maintain some sort of memory which is called <strong>environment</strong> to keep track of the names, values and the bindings.</p>
-<p><code>=</code> can combine multiple values and names.</p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>area, circumference = pi * radius * radius, <span class="number">2</span> * pi * radius</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>x, y = <span class="number">3</span>, <span class="number">4.5</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>y, x = x, y</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>x</span><br><span class="line"><span class="number">4.5</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>y</span><br><span class="line"><span class="number">3</span></span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<h4 id="1-2-6-The-Non-Pure-Print-Function"><a href="#1-2-6-The-Non-Pure-Print-Function" class="headerlink" title="1.2.6  The Non-Pure Print Function"></a>1.2.6  The Non-Pure Print Function</h4><p><strong>Pure functions.</strong> Functions have some input (their arguments) and return some output (the result of applying them). </p>
-<p><strong>Non-pure functions.</strong> In addition to returning a value, applying a non-pure function can generate <em>side effects</em>, which make some change to the state of the interpreter or computer.</p>
-<p>Take <code>abs</code> and <code>print</code> as an example.</p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">abs</span>(-<span class="number">2</span>)</span><br><span class="line"><span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">3</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(<span class="built_in">print</span>(<span class="number">1</span>), <span class="built_in">print</span>(<span class="number">2</span>))</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="literal">None</span> <span class="literal">None</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p><img src="pure_function-1.png" alt="pure_function-1"></p>
-<p><img src="pure_function-2.png" alt="pure_function-2"></p>
-]]></content>
-      <tags>
-        <tag>计算机科学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux 学习笔记</title>
-    <url>/2023/07/22/Linux/</url>
-    <content><![CDATA[<p>Linux 基础配置，包括 pacman 包管理，ranger 文件管理。</p>
-<span id="more"></span>
-
-<h3 id="更改字体大小"><a href="#更改字体大小" class="headerlink" title="更改字体大小"></a>更改字体大小</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">nvim ~/.Xresources</span><br></pre></td></tr></tbody></table></figure>
-
-<p>进去之后输入</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">Xft.dpi: 120</span><br></pre></td></tr></tbody></table></figure>
-
-<p>即可将字体调整到合适的大小了。</p>
-<h3 id="联网"><a href="#联网" class="headerlink" title="联网"></a>联网</h3><p>刚开始的时候需要输入一下命令:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">wpa_passphrase Wifi_name Wifi_password &gt; internet.conf</span><br></pre></td></tr></tbody></table></figure>
-
-<p>之后每次启动都要输入以下命令：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">ip link set wlo1 up</span><br><span class="line">sudo wpa_supplicant -c internet.conf -i wlo1 &amp;</span><br><span class="line">sudo dhcpcd</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="配置-VPN"><a href="#配置-VPN" class="headerlink" title="配置 VPN"></a>配置 VPN</h3><p>xfce 桌面环境下的 manjaro 没有图形化界面可以设置代理，只能用终端环境去编辑。</p>
-<p>更改 proxy 配置，首先打开终端并输入:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">sudo vim /etc/environment</span><br></pre></td></tr></tbody></table></figure>
-
-<p>然后找到以 “http_proxy” 开头的设置，如果没有就自己新建。</p>
-<p>添加如下：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http_proxy="http://your_proxy_server:proxy_port"</span><br><span class="line">https_proxy="http://your_proxy_server:proxy_port"</span><br><span class="line">socks_proxy="http://your_proxy_server:proxy_port"</span><br></pre></td></tr></tbody></table></figure>
-
-<p><strong>参考：</strong> <a href="https://www.zhihu.com/question/586110918/answer/2910628561">xface如何设置系统代理?</a></p>
-<h3 id="pacman-教程"><a href="#pacman-教程" class="headerlink" title="pacman 教程"></a>pacman 教程</h3><p>pacman 之于 Arch，就好比 App store 之于 IOS。</p>
-<ul>
-<li><p><code>pacman -S xx</code></p>
-<p>  安装 xx 软件。</p>
-</li>
-<li><p><code>pacman -Sy</code></p>
-<p>  查询软件库是否是最新并更新。</p>
-</li>
-<li><p><code>pacman -Syy</code></p>
-<p>  强行刷新并更新至最新软件库。</p>
-</li>
-<li><p><code>pacman -Su</code></p>
-<p>  更新软件。</p>
-</li>
-<li><p><code>pacman -Syu</code></p>
-<p>  更新软件库并更新软件。</p>
-</li>
-<li><p><code>pacman -Syyu</code></p>
-<p>  强行刷新，更新至最新软件库并更新软件。</p>
-</li>
-<li><p><code>pacman -Ss xx</code></p>
-<p>  查询所有名称带 xx 的软件。</p>
-</li>
-<li><p><code>pacman -Sc</code></p>
-<p>  删除一些安装包等缓存。</p>
-</li>
-<li><p><code>pacman -R xx</code></p>
-<p>  删除软件。</p>
-</li>
-<li><p><code>pacman -Rs xx</code></p>
-<p>  删除软件及其相关依赖。</p>
-</li>
-<li><p><code>pacman -Rns xx</code>（推荐）</p>
-<p>  删除软件，相关依赖以及全局配置文件（但不会删除个人配置文件，如.vimrc）。</p>
-</li>
-<li><p><code>pacman -Q</code></p>
-<p>  查询电脑上所有软件。</p>
-</li>
-<li><p><code>pacman -Q | wc -l</code></p>
-<p>  快速知道有多少软件。</p>
-</li>
-<li><p><code>pacman -Qe</code></p>
-<p>  查询自己装的所有软件。</p>
-</li>
-<li><p><code>pacman -Qeq</code></p>
-<p>  查询自己装的所有软件且不显示版本号。</p>
-</li>
-<li><p><code>pacman -Qs xx</code></p>
-<p>  查询所有名字带 xx 的软件。</p>
-</li>
-<li><p><code>pacman -Qdt</code></p>
-<p>  查询所有不再被依赖的软件。</p>
-</li>
-<li><p><code>pacman -Qdtq</code></p>
-<p>  查询所有不再被依赖的软件且不显示版本号。</p>
-</li>
-<li><p><code>pacman -R $(pacman -Qdtq)</code></p>
-<p>  删除所有不再被依赖的软件。</p>
-</li>
-<li><p><code>nvim /etc/pacman.conf</code> </p>
-<p>  编辑 pacman 的配置文件。</p>
-</li>
-</ul>
-<h3 id="Ranger-教程"><a href="#Ranger-教程" class="headerlink" title="Ranger 教程"></a>Ranger 教程</h3><ul>
-<li><p><code>k</code> <code>j</code> 控制同目录下上下文件移动</p>
-</li>
-<li><p><code>[</code> <code>]</code>  控制上级目录的上下文件移动</p>
-</li>
-<li><p><code>&lt;Shift&gt; + H</code> 在历史记录中退回 <code>&lt;Shift&gt; + L</code> 在历史记录中前进</p>
-</li>
-<li><p><code>zh</code> 或 <code>&lt;Ctrl&gt; + h</code> 显示或隐藏系统文件</p>
-</li>
-</ul>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
-<li>查看桌面环境（DE）</li>
-</ul>
-<p>打开终端并复制粘贴此命令：</p>
-<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">echo $XDG_CURRENT_DESKTOP</span><br></pre></td></tr></tbody></table></figure>
-
-<ul>
-<li>查看系统信息</li>
-</ul>
-<p>在终端中输入 <code>screenfetch</code> 即可，显示桌面环境版本以及其他系统信息。</p>
-]]></content>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CodeForces 补全计划（1851 ~ 1875）</title>
-    <url>/2023/08/27/CF-Instrumentality-Project-II/</url>
-    <content><![CDATA[<span id="more"></span>
-
-<h2 id="1862-Codeforces-Round-894-Div-3"><a href="#1862-Codeforces-Round-894-Div-3" class="headerlink" title="1862. Codeforces Round 894 (Div. 3)"></a>1862. <a href="https://codeforces.com/contest/1862">Codeforces Round 894 (Div. 3)</a></h2><h3 id="E-Kolya-and-Movie-Theatre"><a href="#E-Kolya-and-Movie-Theatre" class="headerlink" title="E. Kolya and Movie Theatre"></a><a href="https://codeforces.com/contest/1862/problem/E">E. Kolya and Movie Theatre</a></h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>一段长为 $n$ 的序列 $a$，你从中至多选 $m$ 个数。设你选的数中下标最大的为 $x$，那么你选的答案要减去 $x \times d$。问该怎么选是答案最大。</p>
-<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>从前往后扫一遍，设下标最大的为 $i$，维护前 $k$ 大的序列以及和，算答案的时候直接减去 $i \times d$ 即可。</p>
-<p>注：万一插入的第 $i$ 号元素排不到前 $k$ 大，算答案时不应该减 $i \times d$ 。但其实不用考虑，因为这种情况一定不是最优，当最大下标值小于 $i$ 的时候一定会有一个答案，前 $k$ 大值和当前一样，但减去的数要小一些，所以不会更新答案。</p>
-<p><a href="https://codeforces.com/contest/1862/submission/220495907">Code</a></p>
-<h3 id="F-Magic-Will-Save-the-World"><a href="#F-Magic-Will-Save-the-World" class="headerlink" title="F. Magic Will Save the World"></a><a href="https://codeforces.com/contest/1862/problem/F">F. Magic Will Save the World</a></h3><h4 id="Description-1"><a href="#Description-1" class="headerlink" title="Description"></a>Description</h4><p>若干小怪，每个小怪血量 $s_i$，你可以用 水 或 火 元素攻击，消耗等量的 水 或 火 元素。你每秒可以增加 $w$ 水元素 和 $f$ 火元素，问最快要几秒消灭全部小怪。</p>
-<h4 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h4><p>对于每个小怪，要么被火消灭，要么被水消灭，不难发现小怪总血量比较低，所以可以利用 $01$ 背包思想解决。</p>
-<p><a href="https://codeforces.com/contest/1862/submission/220568374">Code</a></p>
-<h3 id="G-The-Great-Equalizer"><a href="#G-The-Great-Equalizer" class="headerlink" title="G. The Great Equalizer"></a><a href="https://codeforces.com/contest/1862/problem/G">G. The Great Equalizer</a></h3><h4 id="Description-2"><a href="#Description-2" class="headerlink" title="Description"></a>Description</h4><p>初始有一段长度为 $n$ 的序列，记一次操作为将序列按升序排列然后除去相等的元素。然后设新序列元素长度 $n’$，将第一个元素加上 $n’$，第二个加上 $n’ - 1$，第三个加上 $n’ - 2$ 以此类推。</p>
-<p>问最后只剩下一个元素的值。</p>
-<h4 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h4><p>我们发现两个性质，第一，每个元素之间的相对大小不会发生变化，第二，设两两相邻元素之间的最大元素为 $max_gap$，则每次操作后 $max_gap$ 都会减一。那么最后剩下的那个元素的值为 原序列中最大的元素加上操作次数（即 $max_gap$）。</p>
-<p><a href="https://codeforces.com/contest/1862/submission/220600516">Code</a></p>
-]]></content>
-      <tags>
-        <tag>算法竞赛</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CodeForces 补全计划（1826 ~ 1850）</title>
     <url>/2023/06/26/CF-Instrumentality-Project-I/</url>
     <content><![CDATA[<p>千里之行，始于足下。</p>
@@ -836,542 +106,24 @@
       </tags>
   </entry>
   <entry>
-    <title>博客搭建踩坑指北</title>
-    <url>/2023/06/27/Cross-The-Hole/</url>
-    <content><![CDATA[<p>从踩坑到掉坑里</p>
-<span id="more"></span>
+    <title>CodeForces 补全计划（1851 ~ 1875）</title>
+    <url>/2023/08/27/CF-Instrumentality-Project-II/</url>
+    <content><![CDATA[<span id="more"></span>
 
-<p>本博客采用 Hexo + GitHub 搭建，具体教程网上很多不再赘述</p>
-<p>不过这里还是推荐两个我主要参考的教程 <a href="https://ouuan.github.io/post/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8C%97/">hexo博客搭建指北</a> 和 <a href="https://venusnero.github.io/2019/01/23/build_hexo_github_blog/">从零搭建 Hexo + Github 博客</a></p>
-<p>下面分享一些自己踩过的坑</p>
-<h3 id="公式块中公式无法正常换行"><a href="#公式块中公式无法正常换行" class="headerlink" title="公式块中公式无法正常换行"></a>公式块中公式无法正常换行</h3><h4 id="问题简述"><a href="#问题简述" class="headerlink" title="问题简述"></a>问题简述</h4><p>用 $$ 插入公式块时，本地上用 typora 显示公式换行，但网页上未显示出来</p>
-<p><code>\\</code> 无法正常换行</p>
-<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>在公式块前面加上 <code>\begin{gather}</code> 末尾加上 <code>\end{gather}</code> 即可</p>
-<h3 id="Majax-渲染"><a href="#Majax-渲染" class="headerlink" title="Majax 渲染"></a>Majax 渲染</h3><h4 id="问题简述-1"><a href="#问题简述-1" class="headerlink" title="问题简述"></a>问题简述</h4><ol>
-<li><p>无法正常渲染二重闭曲面积分</p>
-</li>
-<li><pre><code class="latex">$\iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV = \unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy $
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line"></span><br><span class="line"> 可以正常渲染出来</span><br><span class="line"></span><br><span class="line">$\iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV = \unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy $</span><br><span class="line"></span><br><span class="line">```latex</span><br><span class="line">$\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$</span><br></pre></td></tr></tbody></table></figure>
-
-渲染异常
-
-$\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$
-</code></pre>
-</li>
-</ol>
-<h4 id="解决方案-1"><a href="#解决方案-1" class="headerlink" title="解决方案"></a>解决方案</h4><ol>
-<li><p>用 <code>\unicode{8751}</code> 表示即可</p>
-</li>
-<li><p>很神奇的问题，解决方法也很玄学，将</p>
- <figure class="highlight latex"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">\unicode</span>{8751}<span class="built_in">_</span>{<span class="keyword">\sum</span>}Pdydz + Qdzdx + Rdxdy = <span class="keyword">\iiint</span><span class="built_in">_</span>{<span class="keyword">\Omega</span>}(<span class="keyword">\frac</span>{<span class="keyword">\partial</span> P}{<span class="keyword">\partial</span> x} + <span class="keyword">\frac</span>{<span class="keyword">\partial</span> Q}{<span class="keyword">\partial</span> y} + <span class="keyword">\frac</span>{<span class="keyword">\partial</span> R}{<span class="keyword">\partial</span> z})dV</span><br></pre></td></tr></tbody></table></figure>
-
-<p> 改为</p>
- <figure class="highlight latex"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">\unicode</span>{8751}<span class="built_in">_</span>{<span class="keyword">\sum</span>} Pdydz + Qdzdx + Rdxdy = <span class="keyword">\iiint</span><span class="built_in">_</span><span class="keyword">\Omega</span>(<span class="keyword">\frac</span>{<span class="keyword">\partial</span> P}{<span class="keyword">\partial</span> x} + <span class="keyword">\frac</span>{<span class="keyword">\partial</span> Q}{<span class="keyword">\partial</span> y} + <span class="keyword">\frac</span>{<span class="keyword">\partial</span> R}{<span class="keyword">\partial</span> z})dV</span><br></pre></td></tr></tbody></table></figure>
-
-<p> 即可</p>
-<p> $\unicode{8751}_\sum Pdydz + Qdzdx + Rdxdy = \iiint_\Omega(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$</p>
-<p> 感觉可能是 <code>{}</code> 和 mathjax 渲染有一些冲突，具体原因还不完全清楚（？）</p>
-</li>
-</ol>
-<h3 id="表格中的"><a href="#表格中的" class="headerlink" title="表格中的 |"></a>表格中的 |</h3><h4 id="问题简述-2"><a href="#问题简述-2" class="headerlink" title="问题简述"></a>问题简述</h4><p>由于 markdown 本身的语法，我们无法直接在表格中打出竖线 |</p>
-<h4 id="解决方案-2"><a href="#解决方案-2" class="headerlink" title="解决方案"></a>解决方案</h4><ul>
-<li>当表格内容不用 $\LaTeX$ 时，可通过转义符 <code>\|</code> 或 <code>&amp;#124;</code> 来实现竖杠或绝对值； </li>
-<li>但是用 $\LaTeX$ 时第一个会显示为 “∥”，第二个会报错，故要用 <code>\vert</code> </li>
-</ul>
-<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://blog.csdn.net/skytruine/article/details/105710349">Markdown表格数学公式中使用绝对值“| |”或竖杠”|”</a></p>
-<h3 id="背景-和-透明度"><a href="#背景-和-透明度" class="headerlink" title="背景 和 透明度"></a>背景 和 透明度</h3><h4 id="问题简述-3"><a href="#问题简述-3" class="headerlink" title="问题简述"></a>问题简述</h4><p>在 Hexo 7.x 版本下设置 背景 和 透明度</p>
-<h4 id="解决方案-3"><a href="#解决方案-3" class="headerlink" title="解决方案"></a>解决方案</h4><ul>
-<li><p>新建 _custom.styl 文件，并在 main.styl 中引用该文件</p>
-  <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">//个人添加</span><br><span class="line">@import "_custom.styl"</span><br></pre></td></tr></tbody></table></figure>
-</li>
-<li><pre><code class="stylus"><span class="comment">//背景图片</span>
-<span class="selector-tag">body</span> {
-    background:url(https://pic.heson10.com/img/image-20200712231958010.png);
-    <span class="attribute">background-repeat</span>: no-repeat;
-    <span class="attribute">background-attachment</span>:fixed;
-    <span class="attribute">background-size</span>: cover;
-    <span class="attribute">background-position</span>:<span class="number">50%</span> <span class="number">50%</span>;
-}
-
-<span class="comment">//博客内容透明化</span>
-<span class="comment">//文章内容的透明度设置</span>
-<span class="selector-class">.content-wrap</span> {
-  <span class="attribute">opacity</span>: <span class="number">0.9</span>;
-}
-
-<span class="comment">//侧边框的透明度设置</span>
-<span class="selector-class">.sidebar</span> {
-  <span class="attribute">opacity</span>: <span class="number">0.9</span>;
-}
-
-<span class="comment">//菜单栏的透明度设置</span>
-<span class="selector-class">.header-inner</span> {
-  <span class="attribute">background</span>: rgba(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0.9</span>);
-}
-
-<span class="comment">//搜索框（local-search）的透明度设置</span>
-<span class="selector-class">.popup</span> {
-  <span class="attribute">opacity</span>: <span class="number">0.9</span>;
-}
-&lt;!--code￼<span class="number">4</span>--&gt;
-</code></pre>
-</li>
-</ul>
-<h4 id="参考-1"><a href="#参考-1" class="headerlink" title="参考"></a>参考</h4><p><a href="https://blog.csdn.net/qq_40790680/article/details/128971322">hexo 自定义文章排序</a></p>
-]]></content>
-      <tags>
-        <tag>博客搭建</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>算法竞赛 | 杭电多校训练</title>
-    <url>/2023/07/19/HDU-In-Summer-0/</url>
-    <content><![CDATA[<p>浅记录一下暑假 10 次 <del>坐牢</del> 比赛。</p>
-<span id="more"></span>
-
-<h2 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h2><h3 id="1001-Hide-And-Seek-Game"><a href="#1001-Hide-And-Seek-Game" class="headerlink" title="1001. Hide-And-Seek Game"></a>1001. <a href="https://acm.hdu.edu.cn/showproblem.php?pid=7275">Hide-And-Seek Game</a></h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>两个人都在一棵树上，沿着树的边走，一次走一条边，一个人从 $S_a$ 出发，前往 $T_a$，到达 $T_a$ 后就返回向 $S_a$ 走，如此往复。另一个人在 $S_b$ 和  $T_b$ 之间走，问最早在那个点能相遇，若不相遇，则输出 <code>-1</code> 。$t$ 组数据，每组数据 $n$ 个结点，$m$ 次询问。</p>
-<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>本题 $n$ 和 $m$ 都较小（ $n, m \le 300$），所以可以枚举所有可能相遇的点。判断点 $i$ 是否在 $(S_a, T_a)$ 路线上的方法是判断 $dist(i, S_a) + dist(i, T_a) == dist(S_a, T_a)$。注意，对于每个点 $i$，相遇的时间节点可能是 $2k \times dist(S_a, T_a) + dist(S_a, i)$ 或 $2k \times dist(S_a, T_a) + 2 \times dist(S_a, T_a) - dist(i, S_a)$ 。另一个人的时间同理，所以这就相当于解二元一次方程。（不了解二元一次方程组的可以先做 <a href="https://www.luogu.com.cn/problem/P5656">P5656 【模板】二元一次不定方程 (exgcd)</a>）</p>
-<p>注意一下，这里算两点间距离利用 LCA 来求，但不能直接用倍增去求（因为这样会超时），要用 dfs 序来求 LCA（时间复杂度要优化很多）。 </p>
-<p><a href="https://acm.hdu.edu.cn/viewcode.php?rid=38826162">Code</a></p>
-<h3 id="1002-City-Upgrading"><a href="#1002-City-Upgrading" class="headerlink" title="1002. City Upgrading"></a>1002. <a href="http://acm.hdu.edu.cn/showproblem.php?pid=7276">City Upgrading</a></h3><h4 id="Description-1"><a href="#Description-1" class="headerlink" title="Description"></a>Description</h4><p>一棵树，每个点都有权值，选中一个点的话，这个点相连的节点也会被选中，要求花费最小让整棵树全部点都被选中。</p>
-<h4 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h4><p>树形DP，我们令 $f[i][0]$ 表示在 $i$ 位置选，$f[i][1]$ 表示在 $i$ 的儿子位置处选，让 $i$ 被儿子覆盖， $f[i][2]$ 表示在 $i$ 的父亲位置处选，让 $i$ 被父亲覆盖。</p>
-<p>如果选 $i$ 位置，那么不难得出 $f[i][1] = a[i] + \sum \min\{f[son][0], f[son][1], f[son][2]\}$ ，因为这时候儿子 $son$ 怎么选都可以。</p>
-<p>如果选 $i$ 父亲位置，那么 $f[i][2] = \sum \min\{f[son][1], f[son][2]\}$，这个时候儿子 $son$ 要么自己选，要么被 son 的儿子覆盖。</p>
-<p>如果选 $i$ 儿子位置，这个时候有点复杂，因为要决定 $i$ 应该被哪个儿子覆盖，应该由花费最小的儿子覆盖，设这个儿子为 $chosen_son$ ，那么这个儿子一定是要选的，所以代价是 $f[chosen_son][0] + \sum_{son \ne chosen_son} \min\{f[son][0], f[son][1]\}$，而且一定有其他儿子 $son’$ 满足 $f[chosen_son][0] + \sum_{son \ne chosen_son} \min\{f[son][0], f[son][1]\} &lt; f[son’][0] + \sum_{son \ne son’} \min\{f[son][0], f[son][1]\}$，两边同类项抵消后，就是要选 $f[son][0] - \min\{f[son][0], f[son][1]\}$ 最小的儿子作为这个 $chosen_son$，在向下搜索时找到这个儿子，剩下就好解决了。</p>
-<p><a href="http://acm.hdu.edu.cn/viewcode.php?rid=38674964">Code</a></p>
-<h3 id="1003-Mr-Liang-play-Card-Game"><a href="#1003-Mr-Liang-play-Card-Game" class="headerlink" title="1003. Mr. Liang play Card Game"></a>1003. <a href="https://acm.hdu.edu.cn/showproblem.php?pid=7277">Mr. Liang play Card Game</a></h3><h4 id="Description-2"><a href="#Description-2" class="headerlink" title="Description"></a>Description</h4><p>桌上有 $n$ 张牌，第 $i$ 张牌的类型是 $a_i$，然后又告诉你每种牌的价值 $v_i$，每张牌初始等级为 $1$ 级，你每次可以进行两种操作，第一种操作是将某张牌打出去，若等级为 $k$，则获得 $p^{k - 1} \times v[a[i]]$ 的价值，第二种操作是将相邻的两张同类型同等级的牌合并，等级为合并前等级 $+1$。问全部出完牌之后的最大价值。 </p>
-<h4 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h4><p>一道较为基础的区间 DP，想到 $f$ 数组的状态就比较好转移了。</p>
-<p>$f[l][r][type][level]$ 表示将 $[l, r]$ 区间全部合并完，只剩下一张 $type$ 类型等级 $level$ 的牌所获得的最大价值。</p>
-<p>$g[l][r]$ 表示将 $[l, r]$ 区间内牌全部打出去所获得的最大价值。</p>
-<p>每次枚举 $l, r, type, level$，不难推出：<br>$$<br>\begin{gather}<br>g[l][r] = \max \{g[l][r], g[l][mid] + g[mid + 1][r]\}; \<br>f[l][r][t][1] =\max \{f[l][r][t][1], f[l][mid][t][1] + g[mid + 1][r], f[mid + 1][r][t][1] + g[l][mid]\}; \<br>f[l][r][t][lev] = \max \{f[l][r][t][lev], f[l][mid][t][lev - 1] + f[mid + 1][r][t][lev - 1]\}\ (len &gt; 1)<br>\end{gather}<br>$$<br>更新完 $f$ 数组后再更新 $g$ 数组。<br>$$<br>g[l][r] = \max \{g[l][r], f[l][r][t][lev] + v[t] \times c[lev] \};<br>$$<br><a href="https://acm.hdu.edu.cn/viewcode.php?rid=38826810">Code</a></p>
-<h3 id="1009-Assertion"><a href="#1009-Assertion" class="headerlink" title="1009. Assertion"></a>1009. <a href="http://acm.hdu.edu.cn/showproblem.php?pid=7283">Assertion</a></h3><h4 id="Description-3"><a href="#Description-3" class="headerlink" title="Description"></a>Description</h4><p>把 $m$ 个物品放进 $n$ 个柜子，问是否至少有一个里面物品数大于等于 $d$。</p>
-<h4 id="Solution-3"><a href="#Solution-3" class="headerlink" title="Solution"></a>Solution</h4><p>签到题，判断 $d$ 和 $\left \lfloor \dfrac{m - 1}{n} \right \rfloor + 1$ 即可。</p>
-<p><a href="http://acm.hdu.edu.cn/viewcode.php?rid=38672478">Code</a></p>
-<h2 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2"></a>Day 2</h2><h3 id="1001-Alice-Game"><a href="#1001-Alice-Game" class="headerlink" title="1001. Alice Game"></a>1001. <a href="http://acm.hdu.edu.cn/showproblem.php?pid=7287">Alice Game</a></h3><h3 id="1002-Binary-Number"><a href="#1002-Binary-Number" class="headerlink" title="1002. Binary Number"></a>1002. <a href="http://acm.hdu.edu.cn/showproblem.php?pid=7288">Binary Number</a></h3><h4 id="Description-4"><a href="#Description-4" class="headerlink" title="Description"></a>Description</h4><p>对二进制数做 $k$ 次操作，每次任取一段 $[l,r]$ 做 $01$ 翻折，问 $k$ 次之后获得的最大数。</p>
-<h4 id="Solution-4"><a href="#Solution-4" class="headerlink" title="Solution"></a>Solution</h4><p>总体思路是从高位到低位，把最高位连续的 $0$ 变 $1$，次数多的也不用担心，次数如果多于连续 $0$ 的段数则全为 $1$。这里有两个特判，一个是只给定一位二进制，那么一定是 $1$，答案与 $k$ 的奇偶相关。还有一种情况是给定全是 $1$，$k = 1$，这时候是 $111\dots 10$ 。</p>
-<p><a href="http://acm.hdu.edu.cn/viewcode.php?rid=38686833">Code</a></p>
-<h3 id="1007-foreverlasting-and-fried-chicken"><a href="#1007-foreverlasting-and-fried-chicken" class="headerlink" title="1007. foreverlasting and fried-chicken"></a>1007. <a href="http://acm.hdu.edu.cn/showproblem.php?pid=7293">foreverlasting and fried-chicken</a></h3><h4 id="Description-5"><a href="#Description-5" class="headerlink" title="Description"></a>Description</h4><p>给定一张图，找出图中有多少个子图，构造如下。</p>
-<p><img src="D2-1007.png" alt="D2-1007"></p>
-<h4 id="Solution-5"><a href="#Solution-5" class="headerlink" title="Solution"></a>Solution</h4><p>关键是找到中间的两个蓝色和黄色的点。</p>
-<p><img src="D2-1007(1).png" alt="D2-1007(1)"></p>
-<p>把点之间的连接关系用 <code>bitset</code> 存储好，枚举蓝点和黄点。中间共有的四个点用 <code>&amp;</code> 操作直接求出，剩下的点的个数也好求出，最后答案是 $\sum C_n^2 \times C_m^4$。</p>
-<p><a href="http://acm.hdu.edu.cn/viewcode.php?rid=38687319">Code</a></p>
-<h3 id="1009-String-Problem"><a href="#1009-String-Problem" class="headerlink" title="1009. String Problem"></a>1009. <a href="http://acm.hdu.edu.cn/showproblem.php?pid=7295">String Problem</a></h3><h4 id="Description-6"><a href="#Description-6" class="headerlink" title="Description"></a>Description</h4><p>将字符串拆成尽可能少的段，使得每段只包含一种字母。每段对答案的贡献为长度减一。</p>
-<h4 id="Solution-6"><a href="#Solution-6" class="headerlink" title="Solution"></a>Solution</h4><p>签到题。</p>
-<p><a href="http://acm.hdu.edu.cn/viewcode.php?rid=38685806">Code</a></p>
-<h2 id="Day-6"><a href="#Day-6" class="headerlink" title="Day 6"></a>Day 6</h2><h3 id="1001"><a href="#1001" class="headerlink" title="1001."></a>1001.</h3><h4 id="Description-7"><a href="#Description-7" class="headerlink" title="Description"></a>Description</h4><h4 id="Solution-7"><a href="#Solution-7" class="headerlink" title="Solution"></a>Solution</h4><h3 id="1006"><a href="#1006" class="headerlink" title="1006."></a>1006.</h3><h3 id="Description-8"><a href="#Description-8" class="headerlink" title="Description"></a>Description</h3><h4 id="Solution-8"><a href="#Solution-8" class="headerlink" title="Solution"></a>Solution</h4><h2 id="Day-7"><a href="#Day-7" class="headerlink" title="Day 7"></a>Day 7</h2><h3 id="1002"><a href="#1002" class="headerlink" title="1002."></a>1002.</h3><h4 id="Description-9"><a href="#Description-9" class="headerlink" title="Description"></a>Description</h4><h4 id="Solution-9"><a href="#Solution-9" class="headerlink" title="Solution"></a>Solution</h4><h3 id="1011"><a href="#1011" class="headerlink" title="1011."></a>1011.</h3><h4 id="Description-10"><a href="#Description-10" class="headerlink" title="Description"></a>Description</h4><h4 id="Solution-10"><a href="#Solution-10" class="headerlink" title="Solution"></a>Solution</h4><h3 id="1013"><a href="#1013" class="headerlink" title="1013."></a>1013.</h3><h4 id="Description-11"><a href="#Description-11" class="headerlink" title="Description"></a>Description</h4><h4 id="Solution-11"><a href="#Solution-11" class="headerlink" title="Solution"></a>Solution</h4><h2 id="Day-9"><a href="#Day-9" class="headerlink" title="Day 9"></a>Day 9</h2><h3 id="1002-Inference"><a href="#1002-Inference" class="headerlink" title="1002. Inference"></a>1002. <a href="https://acm.hdu.edu.cn/showproblem.php?pid=7382">Inference</a></h3><h4 id="Description-12"><a href="#Description-12" class="headerlink" title="Description"></a>Description</h4><p>有 $m$ 个特征，这些特征之间存在 $k$ 个依赖关系，这些依赖关系组成了一张有向无环图。给定出 $n$ 组数据以及一个推断公式，然后根据这 $n$ 组数据推断一组新的数据里第 $m$ 个特征值最有可能是多少？（$0$ / $1$ / $2$）</p>
-<h4 id="Solution-12"><a href="#Solution-12" class="headerlink" title="Solution"></a>Solution</h4><p>本题题意较为复杂，但实际比较简单。</p>
-<p>稍微讲解下题意。</p>
-<p>$\pi(x_i)$ 表示的是指向 $x_i$ 的点，即 $x_i$ 所依赖的特征。</p>
-<p>在公式<br>$$<br>P(x_m | x_1, \dots, x_{m - 1}) = \prod_{i = 1}^m P(x_i|\pi(x_i))<br>$$<br>中，对于 $P(x_i | \pi(x_i)) = \dfrac{P(\pi(x_i), x_i)}{P(\pi(x_i))}$，这个公式其实就是条件概率公式。所求的是在 $n$ 组数据中满足 $\pi(x_i)$ 的行中同时满足 $x_i$ 的概率。</p>
-<p>比如 $P(x_1 = 1)$ 就是求这 $n$ 组中 $x_1 = 1$ 的概率，$P(x_2 = 1 | x_1 = 0)$ 则是表示这 $n$ 组中满足 $x_1 = 0$ 的行里，$x_2 = 1$ 的概率。</p>
-<p>题目最后求的是 $x_m$ 最有可能等于 $1 / 2 / 0$ 中的哪一个数，我们直接把公式套进去比较。题目满足一定会有一个概率比另外两个大，同时，我们观察发现，代入公式时，这三个式子前 $m - 1$ 项都是一样的（因为 $x_m$ 的取值不影响前面的 $P(x_i | \pi(x_i))$），所以只比较第 $m$ 项，所以题目变成了，求满足 $\pi(x_i)$ 的行里，$x_m$ 在 $0 / 1 / 2$ 中哪个数次数出现的最多。 然后题目又说了 $\pi(x) \le 5$，故线性扫一遍即可。时间复杂度 $O(n)$。</p>
-<p><a href="https://acm.hdu.edu.cn/viewcode.php?rid=38801204">Code</a></p>
+<h2 id="1862-Codeforces-Round-894-Div-3"><a href="#1862-Codeforces-Round-894-Div-3" class="headerlink" title="1862. Codeforces Round 894 (Div. 3)"></a>1862. <a href="https://codeforces.com/contest/1862">Codeforces Round 894 (Div. 3)</a></h2><h3 id="E-Kolya-and-Movie-Theatre"><a href="#E-Kolya-and-Movie-Theatre" class="headerlink" title="E. Kolya and Movie Theatre"></a><a href="https://codeforces.com/contest/1862/problem/E">E. Kolya and Movie Theatre</a></h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>一段长为 $n$ 的序列 $a$，你从中至多选 $m$ 个数。设你选的数中下标最大的为 $x$，那么你选的答案要减去 $x \times d$。问该怎么选是答案最大。</p>
+<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>从前往后扫一遍，设下标最大的为 $i$，维护前 $k$ 大的序列以及和，算答案的时候直接减去 $i \times d$ 即可。</p>
+<p>注：万一插入的第 $i$ 号元素排不到前 $k$ 大，算答案时不应该减 $i \times d$ 。但其实不用考虑，因为这种情况一定不是最优，当最大下标值小于 $i$ 的时候一定会有一个答案，前 $k$ 大值和当前一样，但减去的数要小一些，所以不会更新答案。</p>
+<p><a href="https://codeforces.com/contest/1862/submission/220495907">Code</a></p>
+<h3 id="F-Magic-Will-Save-the-World"><a href="#F-Magic-Will-Save-the-World" class="headerlink" title="F. Magic Will Save the World"></a><a href="https://codeforces.com/contest/1862/problem/F">F. Magic Will Save the World</a></h3><h4 id="Description-1"><a href="#Description-1" class="headerlink" title="Description"></a>Description</h4><p>若干小怪，每个小怪血量 $s_i$，你可以用 水 或 火 元素攻击，消耗等量的 水 或 火 元素。你每秒可以增加 $w$ 水元素 和 $f$ 火元素，问最快要几秒消灭全部小怪。</p>
+<h4 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h4><p>对于每个小怪，要么被火消灭，要么被水消灭，不难发现小怪总血量比较低，所以可以利用 $01$ 背包思想解决。</p>
+<p><a href="https://codeforces.com/contest/1862/submission/220568374">Code</a></p>
+<h3 id="G-The-Great-Equalizer"><a href="#G-The-Great-Equalizer" class="headerlink" title="G. The Great Equalizer"></a><a href="https://codeforces.com/contest/1862/problem/G">G. The Great Equalizer</a></h3><h4 id="Description-2"><a href="#Description-2" class="headerlink" title="Description"></a>Description</h4><p>初始有一段长度为 $n$ 的序列，记一次操作为将序列按升序排列然后除去相等的元素。然后设新序列元素长度 $n’$，将第一个元素加上 $n’$，第二个加上 $n’ - 1$，第三个加上 $n’ - 2$ 以此类推。</p>
+<p>问最后只剩下一个元素的值。</p>
+<h4 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h4><p>我们发现两个性质，第一，每个元素之间的相对大小不会发生变化，第二，设两两相邻元素之间的最大元素为 $max_gap$，则每次操作后 $max_gap$ 都会减一。那么最后剩下的那个元素的值为 原序列中最大的元素加上操作次数（即 $max_gap$）。</p>
+<p><a href="https://codeforces.com/contest/1862/submission/220600516">Code</a></p>
 ]]></content>
       <tags>
         <tag>算法竞赛</tag>
-        <tag>训练合集</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>算法笔记 | 字符串（一）</title>
-    <url>/2023/07/10/String-In-ACM-I/</url>
-    <content><![CDATA[<p>Manacher，KMP。</p>
-<span id="more"></span>
-
-<h2 id="1-Manacher-算法"><a href="#1-Manacher-算法" class="headerlink" title="1. Manacher 算法"></a>1. Manacher 算法</h2><h3 id="1-1-算法介绍"><a href="#1-1-算法介绍" class="headerlink" title="1.1 算法介绍"></a>1.1 算法介绍</h3><p>该算法可以线性求出字符串的以各个位置为轴的回文子串最大长度</p>
-<h3 id="1-2-过程"><a href="#1-2-过程" class="headerlink" title="1.2 过程"></a>1.2 过程</h3><p>本算法求的是以各位置为对称中心的最大对称半径是多少，由于会出现长度为奇数的对称区间（对称中心在两个位置中间），偶数长度的对称区间（对称中心在某一个位置处）。所以我们对原字串进行变换，比如 <code>abcba</code> 变为 <code>##a#b#c#b#a#</code> ，这样的话对称中心就是这个位置本身了。</p>
-<p>我们引入一个数组 $len$ ，$len$ 数组表示这个点能够扩展出的回文长度。</p>
-<p>我们从前向后遍历一遍，循环变量为 $i$，引入辅助变量 $maxr$ 和 $mid$ ，$maxr$ 表示触及到的最右边的字符位置，$mid$ 表示包含 $maxr$ 回文串的中心轴所在位置。对于每次遍历到的新的位置 $i$，不难发现如果 $i &lt; maxr$，那么 $len[i] = min\{len[mid] \}$</p>
-<p>当 $i$ 在 $maxr$ 左边且在 $mid$ 右边时：</p>
-<p>设 $i$ 关于 $mid$ 的对称点为 $j$，显然 $len[i]$ 一定不会小于 $len[j]$（对称）。</p>
-<p>其中 $j$ 为 $(mid&lt;&lt;1)−i$。</p>
-<p>那么我们就设置 $len[i] = min\{len[mid], maxr - i \}$ 然后继续尝试扩展，这样就可以较快地求出 $len[i]$，然后更新 $maxr$ 和 $mid$</p>
-<p>当 $i$ 在 $maxr$ 右边时，我们无法得知关于 $len[i]$ 的信息，只好从 $1$ 开始遍历，然后更新 $maxr$ 和 $mid$。</p>
-<p>本算法时间复杂度和空间复杂度均为线性的。</p>
-<h3 id="1-3-实现"><a href="#1-3-实现" class="headerlink" title="1.3 实现"></a>1.3 实现</h3><figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">update</span><span class="params">()</span> </span>{</span><br><span class="line">  s2[<span class="number">0</span>] = s2[<span class="number">1</span>] = <span class="string">'#'</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) {</span><br><span class="line">    s2[i &lt;&lt; <span class="number">1</span>] = s1[i];</span><br><span class="line">    s2[i &lt;&lt; <span class="number">1</span> | <span class="number">1</span>] = <span class="string">'#'</span>;</span><br><span class="line">  }</span><br><span class="line">  n = <span class="number">2</span> * n + <span class="number">1</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">manacher</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="type">int</span> maxr = <span class="number">0</span>, mid = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) {</span><br><span class="line">    <span class="keyword">if</span>(i &lt; maxr) len[i] = <span class="built_in">min</span>(len[(mid &lt;&lt; <span class="number">1</span>) - i], len[mid] + mid - i);</span><br><span class="line">    <span class="keyword">else</span> len[i] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(i + len[i] &lt;= n &amp;&amp;  i - len[i] &gt; <span class="number">0</span> &amp;&amp; s2[i + len[i]] == s2[i - len[i]]) len[i]++;</span><br><span class="line">    <span class="keyword">if</span>(len[i] + i &gt; maxr) {</span><br><span class="line">      maxr = len[i] + i;</span><br><span class="line">      mid = i; </span><br><span class="line">    } </span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<h2 id="2-KMP-算法"><a href="#2-KMP-算法" class="headerlink" title="2. KMP 算法"></a>2. KMP 算法</h2><h3 id="2-1-前缀函数"><a href="#2-1-前缀函数" class="headerlink" title="2.1 前缀函数"></a>2.1 前缀函数</h3><p>给定一个长度为 $n$ 的字符串 $s$，其前缀函数被定义为一个长度为 $n$ 的数组 $\pi$。 其中 $\pi[i]$ 的定义是：最长的相等的正后缀前后缀长度（自身除外），举个例子，字串 $s[0\dots i]$ 有一对相等的真前缀 $s[0\dots k - 1]$ 和真后缀 $s[i - (k - 1) \dots i]$ 它们相等且是这个字串中所能找到最长的前缀后缀，那么 $\pi[i] = k$。</p>
-<h3 id="2-2-优化-amp-过程"><a href="#2-2-优化-amp-过程" class="headerlink" title="2.2 优化 &amp; 过程"></a>2.2 优化 &amp; 过程</h3><p>直接最朴素的计算前缀函数时间复杂度为 $O(n^3)$，故我们可以加入优化。</p>
-<p>优化一：每次新加入一个数时，贡献最多加 $1$，即 $\pi[i + 1] \le \pi[i] + 1$ ，取等当且仅当 $s[\pi[i] + 1] == s[i + 1]$。</p>
-<p>优化二：其实优化一的情况优化了新加入的数依然匹配成功的情况，那么优化二可以优化新加入的数失配的情况。我们假设记录一个数组 $k$，$k[i]$ 表示第 $i + 1$ 位失配之后应该跳到第 $k[i]$ 位上。那么我们每次可以不断向前跳，如果匹配成功就是优化一的情况，匹配不成功就继续回跳。</p>
-<p>我们假设向前回跳一次到达的位置为 $j$。仔细观察，我们发现 $s[0\dots j] = s[i - j \dots i] = s[\pi[i] - j \dots \pi[i]](j &lt; \pi[i])$，那么则有 $j = \pi[\pi[i]]$，故每次向前跳只需让 $j = k[j]$，等找到适配时就按优化一更新，一直适配不成功就按 $0$ 来更新 $k[i]$。这样的话相当于让该串自己匹配自己来求 $k[i]$，然后求该串在其他串中出现的位置就让该串与其他串匹配，等到 $j$ 变为该串的长度时，说明整个串出现了，可以记录下出现的位置了。</p>
-<h3 id="2-3-实现"><a href="#2-3-实现" class="headerlink" title="2.3 实现"></a>2.3 实现</h3><figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">kmp</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="type">int</span> len_a = <span class="built_in">strlen</span>(a + <span class="number">1</span>), len_b = <span class="built_in">strlen</span>(b + <span class="number">1</span>);</span><br><span class="line">  <span class="type">int</span> j = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">2</span>; i &lt;= len_b; i++) { <span class="comment">// i 要从 2 开始，不然的话计算前缀函数会把自身也算上，变为 k[i] = i</span></span><br><span class="line">    <span class="keyword">while</span>(j &amp;&amp; b[j + <span class="number">1</span>] != b[i]) j = k[j];</span><br><span class="line">    <span class="keyword">if</span>(b[j + <span class="number">1</span>] == b[i]) j++;</span><br><span class="line">    k[i] = j;</span><br><span class="line">  }</span><br><span class="line">  j = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= len_a; i++) {</span><br><span class="line">    <span class="keyword">while</span>(j &amp;&amp; b[j + <span class="number">1</span>] != a[i]) j = k[j];</span><br><span class="line">    <span class="keyword">if</span>(b[j + <span class="number">1</span>] == a[i]) j++;</span><br><span class="line">    <span class="keyword">if</span>(j == len_b) cout &lt;&lt; i - j + <span class="number">1</span> &lt;&lt; endl;</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= len_b; i++) cout &lt;&lt; k[i] &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">  cout &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
-    <title>算法笔记 | 数论（一）</title>
-    <url>/2023/07/05/Math-In-ACM-I/</url>
-    <content><![CDATA[<p>扩展欧几里得，逆元，欧拉函数</p>
-<span id="more"></span>
-
-<h2 id="1-扩展欧几里得算法"><a href="#1-扩展欧几里得算法" class="headerlink" title="1. 扩展欧几里得算法"></a>1. 扩展欧几里得算法</h2><h3 id="1-1-算法介绍"><a href="#1-1-算法介绍" class="headerlink" title="1.1 算法介绍"></a>1.1 算法介绍</h3><p>设 $a, b$ 为不全为 $0$ 的整数，存在整数 $x, y$ 使得 $ax + by = (a, b)$。</p>
-<p>进一步地，$ax + by = m$ 有解的充要条件是 $(a, b) | m$ （裴蜀定理，又叫做贝祖定理） 。</p>
-<h3 id="1-2-证明"><a href="#1-2-证明" class="headerlink" title="1.2 证明"></a>1.2 证明</h3><p>若我们求 $ax + by = (a, b)$ 的解，不如先求 $bx + (a \mod b) y = (b, a \mod b)$ 的解，而且由欧几里得算法可知 $(a, b) = (b, a \mod b)$。</p>
-<p>经过变换 $bx + (a \mod b)y = bx + (a - b \times \left \lfloor \dfrac{a}{b} \right \rfloor )y = ay + b(x - \left \lfloor \dfrac{a}{b} \right \rfloor y)$，所以得出 $bx + (a \mod b) y = (b, a \mod b)$ 的解为 $x_0, y_0$ 后就可以得出 $ax + by = (a, b)$ 的解是 $x = y_0, y = (x_0 - \left \lfloor \dfrac{a}{b} \right \rfloor y_0)$ 而通过不断辗转相除法，显然到最后我们得到的式子为 $(a, b)x + 0\times y = (a, b)$，很容易可以令 $x = 1, y = 0$ 为这里的一组解，然后不断迭代回去求出我们要的解。</p>
-<p>对于进一步结论的证明，若 $m$ 是该方程组的解，由于 $(a, b)$ 可以整除左式，那么 $(a, b)$ 也可以整除右式（充分性）。</p>
-<p>若 $(a, b)|m$，那么我们已知 $ax + by = (a, b)$ 的一组解，等式两边同时乘以 $\dfrac{m}{(a, b)}$ 便可以得到原方程组的解（必要性）。</p>
-<h3 id="1-3-实现"><a href="#1-3-实现" class="headerlink" title="1.3 实现"></a>1.3 实现</h3><figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">exgcd</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b, <span class="type">int</span> &amp;x, <span class="type">int</span> &amp;y)</span> </span>{</span><br><span class="line">    <span class="keyword">if</span> (b == <span class="number">0</span>) {</span><br><span class="line">        x = <span class="number">1</span>;</span><br><span class="line">        y = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    }</span><br><span class="line">    <span class="type">int</span> d = <span class="built_in">exgcd</span>(b, a % b, y, x); </span><br><span class="line">    y -= (a / b) * x;</span><br><span class="line">    <span class="keyword">return</span> d;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<h2 id="2-逆元"><a href="#2-逆元" class="headerlink" title="2. 逆元"></a>2. 逆元</h2><h3 id="2-1-定义"><a href="#2-1-定义" class="headerlink" title="2.1 定义"></a>2.1 定义</h3><p>若 $ab \equiv 1(\mod p)$ 则称 $a$，$b$ 在 模 $p$ 意义下互为逆元，记为 $a = inv(b)$。</p>
-<h3 id="2-2-扩展欧几里得求逆元"><a href="#2-2-扩展欧几里得求逆元" class="headerlink" title="2.2 扩展欧几里得求逆元"></a>2.2 扩展欧几里得求逆元</h3><p>由上一节可知，扩展欧几里得可以求出 $ax + by = 1$ 的一组 $x, y$ 解，故我们要求 $ax \equiv 1(mod\ b)$ 即求 $ax + by = 1$ 的一组解，而且这里要求有解的条件是 $(a, b) = 1$，利用扩展欧几里得很容易得出。</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function">ll <span class="title">exgcd</span><span class="params">(ll a, ll b, ll &amp;x, ll &amp;y)</span> </span>{</span><br><span class="line">    <span class="keyword">if</span> (b == <span class="number">0</span>)</span><br><span class="line">    {</span><br><span class="line">        x = <span class="number">1</span>;</span><br><span class="line">        y = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    }</span><br><span class="line">    ll d = <span class="built_in">exgcd</span>(b, a % b, y, x);</span><br><span class="line">    y -= (a / b) * x;</span><br><span class="line">    <span class="keyword">return</span> d;</span><br><span class="line">}</span><br><span class="line"><span class="function">ll <span class="title">inv</span><span class="params">(ll a, ll p)</span> </span>{</span><br><span class="line">    ll x, y;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">exgcd</span>(a, p, x, y) != <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">return</span> (x % p + p) % p;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<h3 id="2-3-费马小定理求逆元"><a href="#2-3-费马小定理求逆元" class="headerlink" title="2.3 费马小定理求逆元"></a>2.3 费马小定理求逆元</h3><p>费马小定理的内容如下：</p>
-<blockquote>
-<p>若 $p$ 为素数，且 $(a, p) = 1$，则 $a^{p - 1} \equiv 1(mod \ p)$。</p>
-</blockquote>
-<p><strong>证明（待完善）</strong></p>
-<p>利用该定理，不难得出 $inv(a) \equiv a^{p - 2}(mod \ p)$，故可以用快速幂来求解。</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> ll <span class="title">qpow</span><span class="params">(ll a, ll b, ll p)</span> </span>{</span><br><span class="line">    ll ans = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (b) {</span><br><span class="line">        <span class="keyword">if</span> (b &amp; <span class="number">1</span>) ans = ans % p * a % p;</span><br><span class="line">        a = a % p * a % p;</span><br><span class="line">        b &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="keyword">inline</span> ll <span class="title">inv</span><span class="params">(ll a, ll p)</span> </span>{</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">qpow</span>(a, p - <span class="number">2</span>, p);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="2-4-线性递推求解逆元"><a href="#2-4-线性递推求解逆元" class="headerlink" title="2.4 线性递推求解逆元"></a>2.4 线性递推求解逆元</h3><p>如果题目要求 $1 \sim n$ 的逆元，那么前两种方法都很低效，这里引入第三种，线性递推来求解。</p>
-<p>下面用 $O(n)$ 方法求 $1 \sim n$ 关于 $p$ 的逆元。</p>
-<p>首先显然 $1^{-1} \equiv 1(mod \ p)$。</p>
-<p>对于数 $i$，有 $p = ki + j$，这里 $k = \left \lfloor \dfrac{p}{i} \right \rfloor,j = p \% i$。</p>
-<p>那么则有 $ki + j \equiv 0(mod \ p)$，等式两边同时乘以 $i^{-1}j^{-1}$，则有 $kj^{-1} + i^{-1} \equiv 0(mod \ p)$。</p>
-<p>故 $i^{-1} \equiv -\left \lfloor \dfrac{p}{i} \right \rfloor(p \ mod \ i)^{-1}(mod \ p)$，而且 $p \ mod \ i$ 肯定小于 $i$ ，所以可以由前递推后。</p>
-<p>值得一提的是，这里为防止出现负数，所以写的是 <code>p - p / i</code> ，而且当 $i | p$ 时 <code>inv[i]</code> 应该是没有意义的，我们往往用大素数 $10^9 + 7$ 来表示。</p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line">inv[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt;= n; ++i) {</span><br><span class="line">  inv[i] = (<span class="type">long</span> <span class="type">long</span>)(p - p / i) * inv[p % i] % p;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="2-5-求任意-n-个数的逆元"><a href="#2-5-求任意-n-个数的逆元" class="headerlink" title="2.5 求任意 n 个数的逆元"></a>2.5 求任意 n 个数的逆元</h3><p>对于求任意 $n$ 个数 $a_i$，我们算这个 $n$ 个数的前缀积，记为 $s_i$。</p>
-<p>然后我们计算 $s_n$ 的逆元为 $sInv_n$，那么 $s_i$ 的逆元为 $sInv_i =sInv_{i + 1} \times a_{i + 1}$。</p>
-<p>然后易得 $a_i$ 的逆元 $Inv_i = sInv_i \times s_{i - 1}$。</p>
-<p>时间复杂度近似 $O(n)$。 </p>
-<h2 id="3-欧拉函数"><a href="#3-欧拉函数" class="headerlink" title="3. 欧拉函数"></a>3. 欧拉函数</h2><h2 id="4-中国剩余定理"><a href="#4-中国剩余定理" class="headerlink" title="4. 中国剩余定理"></a>4. 中国剩余定理</h2><h3 id="4-1-问题简述"><a href="#4-1-问题简述" class="headerlink" title="4.1 问题简述"></a>4.1 问题简述</h3><p>中国剩余定理是用来求解诸如<br>$$<br>\begin{cases} x \equiv a_1(\mod n_1) \\ x \equiv a_2(\mod n_2) \\ \ \ \ \ \vdots \\ x \equiv a_k(\mod n_k) \end{cases}<br>$$<br>这样的方程组问题。</p>
-<h3 id="4-2-过程"><a href="#4-2-过程" class="headerlink" title="4.2 过程"></a>4.2 过程</h3><ol>
-<li>算所有模数的积 $n$；</li>
-<li>对于第 $i$ 个方程：<ul>
-<li>计算 $m_i = \dfrac{n}{n_i}$；</li>
-<li>计算 $m_i$ 在模 $n_i$ 意义下的逆元 $m_i^{-1}$；</li>
-<li>计算 $c_i = m_im_i^{-1}$（这时不要对 $n_i$ 取模）</li>
-</ul>
-</li>
-<li>方程组在模 $n$ 意义下的唯一解为 $x = \sum_{i = 1}^k a_ic_i(\mod n)$</li>
-</ol>
-<h3 id="4-3-实现"><a href="#4-3-实现" class="headerlink" title="4.3 实现"></a>4.3 实现</h3><figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">CRT</span><span class="params">()</span> </span>{</span><br><span class="line">  ll n, M = <span class="number">1</span>, ans = <span class="number">0</span>;</span><br><span class="line">  cin &gt;&gt; n; </span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) {</span><br><span class="line">    cin &gt;&gt; b[i] &gt;&gt; a[i];</span><br><span class="line">    M *= b[i];</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) {</span><br><span class="line">    ll m = M / b[i];</span><br><span class="line">    ll x, y;</span><br><span class="line">    <span class="built_in">exgcd</span>(m, b[i], x, y); <span class="comment">// 注：如果模数不为质数时，求逆元不能用费马小定理来算，只能用扩欧来算</span></span><br><span class="line">    x = (x + b[i]) % b[i]; x %= M;</span><br><span class="line">    m *= x; m %= M;</span><br><span class="line">    ans += a[i] * m % M;</span><br><span class="line">    ans %= M;</span><br><span class="line">  }</span><br><span class="line">  cout &lt;&lt; (ans % M + M) % M &lt;&lt; endl;</span><br><span class="line">  <span class="keyword">return</span> ;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="4-4-扩展中国剩余定理"><a href="#4-4-扩展中国剩余定理" class="headerlink" title="4.4 扩展中国剩余定理"></a>4.4 扩展中国剩余定理</h3><p>中国剩余定理的适用范围是模数互质的情况，那么当方程模数不互质时我们要用到扩展中国剩余定理。</p>
-<p>思路是不断把 $n$ 个方程两两合并，对于<br>$$<br>\begin{cases} x \equiv b(\mod a) \\ x \equiv B(\mod A)  \end{cases}<br>$$<br>我们令 $x = ya + b = YB + A$ ，那么有 $B - b = ya - YA$，我们利用扩欧可以求解出 $x’a + y’A = (a,A)$ 的一组解，那么若 $(a, A) \nmid B-b$ 则方程无解，对于有解的情况 $(x’ \times \dfrac{B - b}{(a, A)})a + (y’ \times \dfrac{B - b}{(a, A)})A = B - b$，令 $X = x’ \times \dfrac{B - b}{(a, A)}, Y = y’ \times \dfrac{B - b}{(a, A)}$ 若是让解最小即是让 $X$ 最小，我们调整 $X$ 可以通过让 $X + k \times \dfrac{A}{(a, A)}$，这时 $Y$ 相应减去同等系数的 $\dfrac{a}{(a, A)}$。所以 $X = (X \mod \dfrac{A}{(a, A)} + \dfrac{A}{(a, A)}) \mod \dfrac{A}{(a, A)}$。求出新的 $X$ 后再根据 $x = yX + a$ 可以求出新的 $x$，新的 $b = x \mod \dfrac{A \times a}{(a, A)}$，新的 $a = \dfrac{A \times a}{(a, A)}$。那么就可以得出新的方程 $x \equiv b(\mod a)$ 了。最后通过不断合并变为一个方程就能求出答案了。  </p>
-<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">ExCRT</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) {</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%lld%lld"</span>, &amp;A, &amp;B);</span><br><span class="line">    <span class="keyword">if</span>(i == <span class="number">1</span>) {</span><br><span class="line">      a = A;</span><br><span class="line">      b = B;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span> {</span><br><span class="line">      g = <span class="built_in">exgcd</span>(a, A, x, y);</span><br><span class="line">      <span class="keyword">if</span>((B - b) % g) {</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"-1"</span>);</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">      }</span><br><span class="line">      x = x * ((B - b) / g);</span><br><span class="line">      x = (x % (A / g) + (A / g)) % (A / g);</span><br><span class="line">      l = A / g * a;</span><br><span class="line">      b = ((a * x + b) % l + l) % l;</span><br><span class="line">      a = l;</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>, b % a);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<h2 id="5-卢卡斯定理"><a href="#5-卢卡斯定理" class="headerlink" title="5. 卢卡斯定理"></a>5. 卢卡斯定理</h2><h3 id="5-1-定义"><a href="#5-1-定义" class="headerlink" title="5.1 定义"></a>5.1 定义</h3><p>对于质数 $p$，有<br>$$<br>\begin{pmatrix} n \\ m \end{pmatrix} \mod p = \begin{pmatrix} \left \lfloor \dfrac{n}{p} \right \rfloor \\ \left \lfloor \dfrac{m}{p}\right \rfloor \end{pmatrix} \cdot \begin{pmatrix} n \mod p \\m \mod p \end{pmatrix} \mod p<br>$$<br>由于$n \mod p$ 和 $m \mod p$ 肯定小于 $p$，所以直接算即可，对 $\left \lfloor \dfrac{n}{p} \right \rfloor$ 部分再用卢卡斯定理计算。</p>
-<p>也即 $Lucas(n,m,p)=c(n\%p,m\%p)×Lucas(\dfrac{n}{p},\dfrac{m}{p},p)$。</p>
-<h3 id="5-2-证明"><a href="#5-2-证明" class="headerlink" title="5.2 证明"></a>5.2 证明</h3><p>首先证明首先我们需要证明 $C_p^i \equiv \dfrac{p}{i}C_{p - 1}^{i - 1} \equiv 0(\mod p)(1 \le i \le p-1)$ 由于 $p$ 为质数，故 $\dfrac{1}{i}C_{p - 1}^{i - 1}$ 为整数，乘以 $p$ 后和 $p$ 同余为 $0$，故得证。</p>
-<p>根据这个性质有 $(1 + x)^p \equiv 1 + x^p(\mod p)$</p>
-<p>对于 $C_m^n \mod p$，其实就是求 $(1 + x^n)\mod p$ 中 $x^m$ 的系数。</p>
-<p>我们令 $n = ap +b$，$m = cp + d$。所以接下来证 $C_n^m \equiv C_a^c \times C_b^d(\mod p)$。</p>
-<p>我们有<br>$$<br>(1 + x)^n \equiv (1 + x)^{pa}(1 + x)^b \equiv (1 + x^p)^a(1 + x)^b(\mod p)<br>$$<br>观察 $x^m$ 的系数，故 $C_n^m x^m \equiv C_a^c x^{cp}C_b^dx^d(\mod p)$，由于 $x^b$ 系数一致，所以<br>$$<br>C_n^m \equiv C_a^c \times C_b^d \equiv C_{\left \lfloor \frac{n}{p} \right \rfloor}^{\left \lfloor \frac{m}{p} \right \rfloor} \times C_{n \mod p}^{m \mod p}(\mod p)<br>$$<br>故得证。</p>
-<h3 id="5-3-实现"><a href="#5-3-实现" class="headerlink" title="5.3 实现"></a>5.3 实现</h3><figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function">ll <span class="title">Lucas</span><span class="params">(ll n, ll m)</span> </span>{</span><br><span class="line">  <span class="keyword">return</span> ((m == <span class="number">0</span>) ? <span class="number">1</span> : (<span class="built_in">c</span>(n % p, m % p) % p * <span class="built_in">Lucas</span>(n / p, m / p) % p));</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="5-4-扩展卢卡斯定理"><a href="#5-4-扩展卢卡斯定理" class="headerlink" title="5.4 扩展卢卡斯定理"></a>5.4 扩展卢卡斯定理</h3>]]></content>
-      <tags>
-        <tag>算法竞赛</tag>
-        <tag>数学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>算法笔记 | 博弈论</title>
-    <url>/2023/07/20/Game-In-ACM/</url>
-    <content><![CDATA[<p>SG 函数</p>
-<span id="more"></span>
-
-<h2 id="博弈论简介"><a href="#博弈论简介" class="headerlink" title="博弈论简介"></a>博弈论简介</h2><p>注：下面这段文字摘抄自 <a href="https://oi-wiki.org/math/game-theory/intro/">OI-Wiki</a></p>
-<h3 id="公平组合游戏"><a href="#公平组合游戏" class="headerlink" title="公平组合游戏"></a>公平组合游戏</h3><p>公平组合游戏（Impartial Game）的定义如下：</p>
-<ul>
-<li>游戏有两个人参与，二者轮流做出决策，双方均知道游戏的完整信息；</li>
-<li>任意一个游戏者在某一确定状态可以作出的决策集合只与当前的状态有关，而与游戏者无关；</li>
-<li>游戏中的同一个状态不可能多次抵达，游戏以玩家无法行动为结束，且游戏一定会在有限步后以非平局结束。</li>
-</ul>
-<h3 id="非公平组合游戏"><a href="#非公平组合游戏" class="headerlink" title="非公平组合游戏"></a>非公平组合游戏</h3><p>非公平组合游戏（Partizan Game）与公平组合游戏的区别在于在非公平组合游戏中，游戏者在某一确定状态可以做出的决策集合与游戏者有关。大部分的棋类游戏都 <strong>不是</strong> 公平组合游戏，如国际象棋、中国象棋、围棋、五子棋等（因为双方都不能使用对方的棋子）。</p>
-<h3 id="反常游戏"><a href="#反常游戏" class="headerlink" title="反常游戏"></a>反常游戏</h3><p>反常游戏（Misère Game）按照传统的游戏规则进行游戏，但是其胜者为第一个无法行动的玩家。以 Nim 游戏为例，Nim 游戏中取走最后一颗石子的为胜者，而反常 Nim 游戏中取走最后一刻石子的为败者。</p>
-<hr>
-<p>本文主要研究公平组合游戏。</p>
-<h2 id="SG-函数"><a href="#SG-函数" class="headerlink" title="SG 函数"></a>SG 函数</h2><p>我们通过 Nim 游戏来介绍 SG 函数，什么是 Nim 游戏呢？</p>
-<p>Nim 游戏是一种两个人玩的回合制数学战略游戏。游戏者轮流从几排棋子（或者任何道具）中选择一排，再由这一排中取走一个或者多个，依规则不同，拿走最后一个的可能是输家，也有可能是赢家。（转自 <a href="https://zh.wikipedia.org/zh-sg/%E5%B0%BC%E5%A7%86%E6%B8%B8%E6%88%8F">尼姆游戏</a>）</p>
-<p>我们接下来定义一种函数 $SG(x)$，并且令 $SG(x):=mex\{SG(y)|x \to y\}$，这里 $x$，$y$ 均表示某种状态，$x \to y$ 表示 $x$ 可以通过一次操作到达 $y$，也可以理解为 $y$ 是 $x$ 的后继状态。$mex$ 表示一个集合中未出现的最小自然数（例如 $mex\{0, 1, 3\} = 2$ ）。如果 $SG(x) = n$，说明可以从当前状态转移到 $0\sim n - 1$ 的状态。</p>
-<p>对于一个状态，如果它是必胜态，那么它移动一步，下一步一定<strong>可以</strong>变成必败态。如果一个状态是必败态，那么它无论怎么移动，它的下一步<strong>只能</strong>是必胜态。我们令 $SG(x) = 0$ 表示必败，$SG(x) \ne 0$ 表示必胜。那么 $SG(x) = 0$ 时说明下一步的状态 $y$ 全都是 $SG(y) \ne 0$，$SG(x) \ne 0$ 说明下一步存在状态 $y’$ 满足 $SG(y’) \ne 0$。符合我们的胜败状态。</p>
-<p>对于单堆的 Nim 游戏，不难证明 $SG(x) = x$，但是对于双堆，三堆，n 堆情况就很复杂。所以我们引入 <strong>SG定理</strong>。</p>
-<p><strong>Sprague-Grundy定理</strong>（两个游戏的情形）：</p>
-<blockquote>
-<p>对于公平组合游戏的两个状态 $x$ 和 $y$，有 $SG(x + y) = SG(x) \oplus SG(y)$</p>
-</blockquote>
-<p>推广的情形：</p>
-<blockquote>
-<p>对于公平组合游戏的 $n$ 个状态 $x_1,x_2, \dots,x_n$，有 $SG(x_1 + x_2 + \cdots + x_n) = SG(x_1) \oplus SG(x_2) \oplus \cdots \oplus SG(x_n)$</p>
-</blockquote>
-<p>定理具体证明见<a href="https://www.zhihu.com/question/51290443">这里</a>。</p>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="https://oi-wiki.org/math/game-theory/impartial-game/">公平组合游戏 - OI-Wiki</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/257013159">算法学习笔记(51): SG函数 - Pecco - 知乎</a></p>
-]]></content>
-      <tags>
-        <tag>算法竞赛</tag>
-        <tag>博弈论</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>学习笔记 | 多项式与生成函数</title>
-    <url>/2023/06/28/Poly/</url>
-    <content><![CDATA[<p>浅挖个坑，期末考完填上</p>
-<span id="more"></span>
-]]></content>
-      <tags>
-        <tag>算法竞赛</tag>
-        <tag>数学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>算法笔记 | 杂项（一）</title>
-    <url>/2023/07/07/somethingelse-in-ACM/</url>
-    <content><![CDATA[<p>CDQ 分治</p>
-<span id="more"></span>
-
-<h2 id="1-CDQ-分治"><a href="#1-CDQ-分治" class="headerlink" title="1. CDQ 分治"></a>1. CDQ 分治</h2>]]></content>
-      <tags>
-        <tag>算法竞赛</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大学笔记 | 线性代数</title>
-    <url>/2023/06/06/Linear-Algebra/</url>
-    <content><![CDATA[<p>从入门到入土</p>
-<span id="more"></span>
-
-<h2 id="第一章-矩阵的运算与初等变换"><a href="#第一章-矩阵的运算与初等变换" class="headerlink" title="第一章 矩阵的运算与初等变换"></a>第一章 矩阵的运算与初等变换</h2><h3 id="S-1-1-矩阵和向量的概念"><a href="#S-1-1-矩阵和向量的概念" class="headerlink" title="$\S 1.1$ 矩阵和向量的概念"></a>$\S 1.1$ 矩阵和向量的概念</h3><ul>
-<li><p>矩阵</p>
-<p>  $m \times n$ 的数表构成 $m$ 行 $n$ 列矩阵，这 $m \times n$ 个数是 $A$ 的元素，简称元</p>
-<p>  实矩阵就是全是实数元素的矩阵</p>
-<p>  复矩阵就是全是复数元素的矩阵</p>
-<ul>
-<li><p>特殊矩阵</p>
-<p>  同型矩阵：行数和列数都分别相等的矩阵（指的是两个矩阵之间的关系）</p>
-<p>  相等矩阵：同型矩阵、对应元素相等<br>  方阵：行数列数相等（就单个矩阵而言）</p>
-<p>  上（下）三角矩阵：主对角线下（上）元素全为 $0$ 的矩阵</p>
-<p>  对角矩阵：只有对角线上元素不为 $0$</p>
-<p>  列矩阵，行矩阵：$1 \times n$，$n \times 1$ 的矩阵</p>
-<p>  单位矩阵：特殊的对角阵，对角线上全为 $1$</p>
-<p>  零矩阵：全为 $0$</p>
-<p>  负矩阵：$-A $ 是 $A$ 的负矩阵</p>
-<p>  对称矩阵：元素关于对角线对称</p>
-<p>  反对称矩阵：元素关于对角线称相反数且对角线上元素全为 $0$</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="第二章-方阵的行列式"><a href="#第二章-方阵的行列式" class="headerlink" title="第二章 方阵的行列式"></a>第二章 方阵的行列式</h2><h3 id="省流"><a href="#省流" class="headerlink" title="省流"></a>省流</h3><p>行列式</p>
-<h2 id="第三章-可逆矩阵"><a href="#第三章-可逆矩阵" class="headerlink" title="第三章 可逆矩阵"></a>第三章 可逆矩阵</h2><h3 id="省流-1"><a href="#省流-1" class="headerlink" title="省流"></a>省流</h3><p>可逆矩阵，行列式的秩，伴随矩阵</p>
-<h2 id="第四章-线性方程组和向量组的线性相关性"><a href="#第四章-线性方程组和向量组的线性相关性" class="headerlink" title="第四章 线性方程组和向量组的线性相关性"></a>第四章 线性方程组和向量组的线性相关性</h2><h3 id="省流-2"><a href="#省流-2" class="headerlink" title="省流"></a>省流</h3><p>方程组数和未知数相等可以直接用卡莱姆法则</p>
-<p>不同的时候，齐次下直接找通解，非齐次是通解和特解叠加</p>
-<h2 id="第五章-方阵的特征值，特征向量与相似化简"><a href="#第五章-方阵的特征值，特征向量与相似化简" class="headerlink" title="第五章 方阵的特征值，特征向量与相似化简"></a>第五章 方阵的特征值，特征向量与相似化简</h2><h3 id="S-5-1-数域-多项式的根"><a href="#S-5-1-数域-多项式的根" class="headerlink" title="$\S 5.1$ 数域 多项式的根"></a>$\S 5.1$ 数域 多项式的根</h3><ul>
-<li><p>数域</p>
-<p>  设 $\mathbb{Q} \subseteq K \subseteq \mathbb{C}$，称 $K$ 为一个数域，当：</p>
-<ol>
-<li>$0, 1 \in K$</li>
-<li>$\forall a, b \in K. a \pm b, ab \in K$， 且对 $b \not= 0, b^{-1} \in K$</li>
-</ol>
-</li>
-<li><p>多项式，根，零点，标准分解式</p>
-</li>
-</ul>
-<h3 id="S-5-2-方阵的特征值与特征向量"><a href="#S-5-2-方阵的特征值与特征向量" class="headerlink" title="$\S 5.2$ 方阵的特征值与特征向量"></a>$\S 5.2$ 方阵的特征值与特征向量</h3><ul>
-<li><p>$n$ 阶 $A$ 矩阵对角线上元素的和称为 $A$ 的迹，记为 $trA$</p>
-</li>
-<li><p>$\lambda E - A$ 称为 $A$ 的特征矩阵，$|\lambda E - A|$ 的值表达式 $\psi(\lambda)$ 是一   </p>
-<p>  个多项式，称为 $A$ 的特征多项式，特征多项式的根称为 $A$ 的特征值，亦称为特征根 </p>
-<ul>
-<li>$\psi(\lambda) = \lambda^n+c_{n-1}\lambda^{n-1}+ \cdots + c_1\lambda + c_0$ 则有 $c_{n - 1} = -trA,c_0 = (-1)^n|A|$</li>
-<li>设 $n$ 阶矩阵 $A$ 的全部特征值 $\lambda_1,\lambda_2,\cdots,\lambda_n$，则有<ol>
-<li>$|A| = \lambda_1\cdots\lambda_n$</li>
-<li>$tr(A) = \lambda_1 + \cdots + \lambda_n$</li>
-<li>由 $(1)$ 可知方阵可逆的充要条件是所有特征值均不为 $0$</li>
-</ol>
-</li>
-</ul>
-</li>
-<li><p>非零特征向量 $a$ 满足对于特征值 $\lambda_0$，有 $Aa = \lambda_0a$ </p>
-<ul>
-<li>若存在数 $\lambda_0$ 以及非零向量 $a$ 使 $Aa = \lambda_0a$ ，则必有 $\lambda_0$ 是 $A$ 的特征值，$a$ 是 $A$ 关于 $\lambda_0$ 的特征向量</li>
-<li>属于不同特征值的特征向量是线性无关的</li>
-<li>对于矩阵 $A$ 的 $r$ 重特征值 $\lambda$ ，属于他的线性无关特征向量个数 $k \le r$</li>
-</ul>
-</li>
-<li><p>一些结论和补充</p>
-<ul>
-<li><p>设 $R(A) = n - 1$ ，则 $A^*$ 的特征值为 $0$ （$n-1$ 重）和 $\sum_{i = 1}^{n}A_{ii}$ （$A_{ii}$ 为 $A$ 的元素 $a_{ii}$  对应的代数余子式）</p>
-</li>
-<li><p>设 $R(A) &lt; n-1$ ，则 $A^*$ 有 $n$ 重零特征值</p>
-</li>
-<li><p>若 $\lambda$ 是 $A$ 的特征值，则 $\varphi(\lambda)$ 是 $\varphi(A)$ 的特征值</p>
-</li>
-<li><table>
-<thead>
-<tr>
-<th align="left"></th>
-<th>$A$</th>
-<th>$\varphi(A)$</th>
-<th>$A^{-1}$</th>
-<th>$A^*$</th>
-<th>$B=P^{-1}AP$</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">特征值</td>
-<td>$\lambda$</td>
-<td>$\varphi(\lambda)$</td>
-<td>$\frac{1}{\lambda}$</td>
-<td>$\frac{\vert A \vert}{\lambda}$</td>
-<td>$\lambda$</td>
-</tr>
-<tr>
-<td align="left">特征向量</td>
-<td>$\alpha$</td>
-<td>$\alpha$</td>
-<td>$\alpha$</td>
-<td>$\alpha$</td>
-<td>$p^{-1}\alpha$</td>
-</tr>
-</tbody></table>
-</li>
-<li><p>$A^T$ 与 $A$ 的特征值相同，但特征向量未必相同</p>
-</li>
-<li><p>幂等矩阵 $A$ （$A^2 = A$）特征值为 $0$ 或 $1$</p>
-<p>  对合矩阵 $A$ （$A^2 = E$）特征值为 $-1$ 或 $1$</p>
-<p>  幂零矩阵 $A$ （$A^2 = 0$）特征值为 $0$</p>
-<p>  正交矩阵 $A$ （$AA^T = E$）特征值不一定为实数，但模长一定为 $1$ </p>
-<p>  $n$ 阶实矩阵 $A$ 满足 $R(A) = n - 1$，特征值 $\lambda_1 = \sum_{i = 1}^na_{ii}$，$\lambda_2=\cdots=\lambda_n = 0$（其实就是方阵秩为 $n-1$ ，其伴随矩阵的特征值）</p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="S-5-3-方阵相似于对角矩阵的条件"><a href="#S-5-3-方阵相似于对角矩阵的条件" class="headerlink" title="$\S 5.3$ 方阵相似于对角矩阵的条件"></a>$\S 5.3$ 方阵相似于对角矩阵的条件</h3><ul>
-<li><p>相似矩阵 $P^{-1}AP=B$</p>
-<p>  相似变换，反身性，对称性，传递性</p>
-<ul>
-<li>$A\sim B$，则 $R(A) = R(B)$</li>
-<li>$A\sim B$，则 $|A| = |B|$，即 $A,B$ 同时可逆或不可逆</li>
-<li>$A\sim B$，则 $A^T \sim B^T$，更进一步，$f(A) \sim f(B)$</li>
-<li>$A$ 可逆，$A\sim B$，则 $A^{-1} \sim B^{-1}$</li>
-<li>$A\sim B$，则 $A$ 与 $B$ 特征多项式相同，<strong>从而 $A$ 与 $B$ 的特征值相同，但特征向量未必相同</strong>（BTW，特征多项式相同的矩阵未必相似）</li>
-<li>$A$ 与对角矩阵相似，则对角矩阵上的元素是 $A$ 的 $n$ 个特征值</li>
-</ul>
-</li>
-<li><p>$n$ 阶方阵 $A$ 可以相似对角化的充要条件是 $A$ 有 $n$ 个线性无关的特征向量</p>
-</li>
-<li><p>设 $\lambda_i$ 是方阵 $A$ 的 $n_i$ 重特征值，那么 $A$ 对应于 $\lambda_i$ 的特征向量中线性无关组的向量个数最多为 $n_i$ 个</p>
-</li>
-<li><p>$A$ 的全部特征向量的一个极大无关组，称为 $A$ 的一个特征向量系，其向量个数 $q=\sum_{i=1}^tm_i \le \sum_{t=1}^{t}n_i=n$，$q$ 为 $n$ 时，$A$ 的特征向量时完全的，否则是不完全的，值得注意的是，对于 $A$ 的任一单特征值 $\lambda_i$，必有 $m_i=n_i=1$（$n_i$ 表示第 $i$ 个特征根重数，$m_i$ 表示第 $i$ 个特征根对应方程解的个数）</p>
-</li>
-</ul>
-<h3 id="S-5-4-正交矩阵"><a href="#S-5-4-正交矩阵" class="headerlink" title="$\S 5.4$ 正交矩阵"></a>$\S 5.4$ 正交矩阵</h3><ul>
-<li>内积，向量长度，单位向量</li>
-<li>正交向量组（对于只含一个向量 $a$ 的向量组，当 $a \ne 0$ 时，该向量组也是正交组）<ul>
-<li>正交向量组也线性无关</li>
-</ul>
-</li>
-<li>将一个全是单位向量的且两两正交的向量组称为单位正交向量组</li>
-<li>$Schmidt$ 逐步正交化</li>
-<li>正交矩阵（$AA^T = E$）<ul>
-<li>$n$ 阶实矩阵 $A$ 为正交矩阵的充要条件是 $A$ 的行（列）向量都是两两正交的单位向量</li>
-<li>若 $A$ 是正交矩阵，则 $|A| = 1$ 或 $|A| = -1$ </li>
-<li>若 $A$，$B$ 均是正交矩阵，则 $AB$ 也是正交矩阵，但 $A+B$ 不是</li>
-<li>若 $A$ 是正交矩阵，则 $A^*$，$A^{-k}$ ，$A^k$ 亦为正交矩阵</li>
-<li>若 $A$ 是正交矩阵，且 $\lambda$ 是 $A$ 的特征值，则 $|\lambda| = 1$，且 $\frac{1}{\lambda}$ 也是 $A$ 的特征值</li>
-</ul>
-</li>
-<li>设 $P$ 为正交矩阵， $y = Px$ 为正交变换，正交变换不改变模长</li>
-</ul>
-<h3 id="S-5-5-实对称矩阵的相似对角化"><a href="#S-5-5-实对称矩阵的相似对角化" class="headerlink" title="$\S 5.5$ 实对称矩阵的相似对角化"></a>$\S 5.5$ 实对称矩阵的相似对角化</h3><ul>
-<li>实对称矩阵的特征值<strong>必为实数</strong></li>
-<li>实对称阵 $A$  <strong>不同特征值对应的特征向量正交</strong>，且二者互为充要条件</li>
-<li>实对称阵<strong>一定能相似对角化</strong></li>
-<li>实对称矩阵<strong>非零特征值个数等于它的秩</strong></li>
-<li>若$A$，$B$ 均为实对称阵，且 $A$ 和 $B$ 特征值完全相同，则必有 $A \sim B$</li>
-</ul>
-<h2 id="第六章-二次型与对称矩阵"><a href="#第六章-二次型与对称矩阵" class="headerlink" title="第六章 二次型与对称矩阵"></a>第六章 二次型与对称矩阵</h2><h3 id="S-6-1-二次型及其矩阵"><a href="#S-6-1-二次型及其矩阵" class="headerlink" title="$\S 6.1$ 二次型及其矩阵"></a>$\S 6.1$ 二次型及其矩阵</h3><ul>
-<li><p>二次型，二次型矩阵，二次型的秩，线性变换（可逆变换，不可逆变换）</p>
-</li>
-<li><p>合同变换</p>
-<p>  $P^TAP = B$，则 $A, B$ 合同，记为 $A \simeq B$，$P$ 为合同因子</p>
-<p>  合同必等价，反之不真</p>
-<p>  合同和相似是两个独立概念，合同未必相似，相似未必等价</p>
-</li>
-<li><p>相关结论</p>
-<p>  对实对称矩阵 $A, B$ 若 $A \sim B$，则 $A \simeq B$，但是合同未必相似 如 $diag\{3,3,3\}$ 和 $E$ 合同，但不相似</p>
-<p>  若对实对称矩阵$A, B$ 特征值相同，则 $A \simeq B$，且$A \sim B$</p>
-<p>  若 $A \simeq B$，则 $R(A) = R(B)$</p>
-<p>  若 $A \simeq B$，且 $A$ 为对称矩阵则 $B$ 也为对称矩阵（特殊的若 $A \simeq \Lambda$，则 $A$ 必为对称阵）</p>
-</li>
-</ul>
-<h3 id="S-6-2-二次型的标准型"><a href="#S-6-2-二次型的标准型" class="headerlink" title="$\S 6.2$ 二次型的标准型"></a>$\S 6.2$ 二次型的标准型</h3><ul>
-<li><p>标准型</p>
-<p>  标准型各项系数均是特征值</p>
-</li>
-<li><p>正交变换法</p>
-</li>
-<li><p>拉格朗日配方法</p>
-<p>  如果只有交叉项利用平方差公式凑出平方项</p>
-</li>
-<li><p>相关结论</p>
-<p>  任何二次型必可经过可逆线性变换为标准型</p>
-<p>  任何对称矩阵必可合同于对角矩阵</p>
-</li>
-</ul>
-<h3 id="S-6-3-合同变换与二次型的规范形"><a href="#S-6-3-合同变换与二次型的规范形" class="headerlink" title="$\S 6.3$ 合同变换与二次型的规范形"></a>$\S 6.3$ 合同变换与二次型的规范形</h3><ul>
-<li><p>合同变换法</p>
-<p>  三种初等合同变换。</p>
-<p>  合同变换法 $(A|E) \to (\Lambda|P^T)$。</p>
-</li>
-<li><p>实二次型的规范形</p>
-<p>  任何实对称矩阵必可经过实数域上变换得到如下矩阵<br>  $$<br>  \begin{bmatrix}</p>
-<pre><code>1&amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \\\
-&amp; \ddots  &amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \\\
-&amp;  &amp; 1 &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \\\
-&amp;  &amp;  &amp; -1 &amp;  &amp;  &amp;  &amp;  &amp; \\\
-&amp;  &amp;  &amp;  &amp; \ddots &amp;  &amp;  &amp;  &amp; \\\
-&amp;  &amp;  &amp;  &amp;  &amp; -1 &amp;  &amp;  &amp; \\\
-&amp;  &amp;  &amp;  &amp;  &amp;  &amp; 0 &amp;  &amp; \\\
-&amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \ddots &amp; \\\
-&amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp;0</code></pre><p>  \end{bmatrix}<br>  $$</p>
-</li>
-</ul>
-<pre><code>其中 $1$ 的个数 $p$ 称为正惯性指数，$-1$ 个数称为负惯性指数，$p-q$ 称为 $A$ 的符号差，正负惯性指数之和是 $A$ 的秩。
-
-两个 $n$ 阶实对称阵合同的充要条件是它们秩相同且正惯性指数也相同。
-
-特别地，若两个 $n$ 阶实对称阵的特征值相同，则它们必相似，从而必合同。</code></pre><h3 id="S-6-4-实二次型的分类-正定二次型"><a href="#S-6-4-实二次型的分类-正定二次型" class="headerlink" title="$\S 6.4$ 实二次型的分类 正定二次型"></a>$\S 6.4$ 实二次型的分类 正定二次型</h3><ul>
-<li><p>实二次型的分类</p>
-<p>  对于实二次型 $f(x) = x^TAx$，若对任何非零实向量 $x$ 都有 $f(x)$，则称 $f$ 为正定二次型。</p>
-<p>  可逆线性变化不改变实二次型的正定性。</p>
-</li>
-<li><p>正定二次型与正定矩阵<br>  $n$ 元实二次型正定的充分必要条件是其标准形中 $n$ 个平方项的系数全大于零。<br>  实二次型 $f(x) = x^TAx$ 正定的充分必要条件是 $A$ 的特征值全大于零。<br>  $n$ 元实二次型 $f(x) = x^TAx$ 正定的充分必要条件是它的正惯性指数为 $n$。</p>
-<p>  实二次型 $f(x) = x^TAx$ 正定的充分必要条件是 $A$ 的所有顺次主子式全大于零。</p>
-<p>  对于实对称矩阵$A$，如果实二次$f(x)=x^TAx$ 正定，则称 $A$ 是正定矩阵。</p>
-<p>  实对称矩阵 $A$ 正定的充分必要条件是 $A \simeq E$。</p>
-<p>  实对称矩阵 $A$ 正定的充分必要条件是：有可逆 $P$，使得 $A=P^TP$。</p>
-</li>
-<li><p>正定矩阵的一些简单性质：</p>
-<ol>
-<li>若 $A$ 是正定矩阵，则 $A^T, A^{-1}, A^*, A^k,kA$（ $k$ 为任意正实数）均为正定矩阵。</li>
-<li>若 $A$ 正定，则有 $|A|&gt;0$, 从而 $A$ 必可逆。</li>
-<li>设 $A$ 与 $B$ 是正定矩阵，则 $AB$ 是正定矩阵的充要条件是 $A$ 和 $B$ 可交换。</li>
-<li>设 $A、B$ 都是 $n$ 阶正定矩阵，则 $A+B$ 也是正定矩阵。</li>
-<li>设 $A$ 是 $n$ 阶正定矩阵，则对 $\forall \alpha &gt; 0, |A + \alpha E| &gt; \alpha^n$。</li>
-</ol>
-</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>数学</tag>
-        <tag>大学课程</tag>
       </tags>
   </entry>
   <entry>
@@ -1798,6 +550,94 @@ $\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{
       </tags>
   </entry>
   <entry>
+    <title>博客搭建踩坑指北</title>
+    <url>/2023/06/27/Cross-The-Hole/</url>
+    <content><![CDATA[<p>从踩坑到掉坑里</p>
+<span id="more"></span>
+
+<p>本博客采用 Hexo + GitHub 搭建，具体教程网上很多不再赘述</p>
+<p>不过这里还是推荐两个我主要参考的教程 <a href="https://ouuan.github.io/post/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8C%97/">hexo博客搭建指北</a> 和 <a href="https://venusnero.github.io/2019/01/23/build_hexo_github_blog/">从零搭建 Hexo + Github 博客</a></p>
+<p>下面分享一些自己踩过的坑</p>
+<h3 id="公式块中公式无法正常换行"><a href="#公式块中公式无法正常换行" class="headerlink" title="公式块中公式无法正常换行"></a>公式块中公式无法正常换行</h3><h4 id="问题简述"><a href="#问题简述" class="headerlink" title="问题简述"></a>问题简述</h4><p>用 $$ 插入公式块时，本地上用 typora 显示公式换行，但网页上未显示出来</p>
+<p><code>\\</code> 无法正常换行</p>
+<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>在公式块前面加上 <code>\begin{gather}</code> 末尾加上 <code>\end{gather}</code> 即可</p>
+<h3 id="Majax-渲染"><a href="#Majax-渲染" class="headerlink" title="Majax 渲染"></a>Majax 渲染</h3><h4 id="问题简述-1"><a href="#问题简述-1" class="headerlink" title="问题简述"></a>问题简述</h4><ol>
+<li><p>无法正常渲染二重闭曲面积分</p>
+</li>
+<li><pre><code class="latex">$\iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV = \unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy $
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line"></span><br><span class="line"> 可以正常渲染出来</span><br><span class="line"></span><br><span class="line">$\iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV = \unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy $</span><br><span class="line"></span><br><span class="line">```latex</span><br><span class="line">$\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$</span><br></pre></td></tr></tbody></table></figure>
+
+渲染异常
+
+$\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$
+</code></pre>
+</li>
+</ol>
+<h4 id="解决方案-1"><a href="#解决方案-1" class="headerlink" title="解决方案"></a>解决方案</h4><ol>
+<li><p>用 <code>\unicode{8751}</code> 表示即可</p>
+</li>
+<li><p>很神奇的问题，解决方法也很玄学，将</p>
+ <figure class="highlight latex"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">\unicode</span>{8751}<span class="built_in">_</span>{<span class="keyword">\sum</span>}Pdydz + Qdzdx + Rdxdy = <span class="keyword">\iiint</span><span class="built_in">_</span>{<span class="keyword">\Omega</span>}(<span class="keyword">\frac</span>{<span class="keyword">\partial</span> P}{<span class="keyword">\partial</span> x} + <span class="keyword">\frac</span>{<span class="keyword">\partial</span> Q}{<span class="keyword">\partial</span> y} + <span class="keyword">\frac</span>{<span class="keyword">\partial</span> R}{<span class="keyword">\partial</span> z})dV</span><br></pre></td></tr></tbody></table></figure>
+
+<p> 改为</p>
+ <figure class="highlight latex"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">\unicode</span>{8751}<span class="built_in">_</span>{<span class="keyword">\sum</span>} Pdydz + Qdzdx + Rdxdy = <span class="keyword">\iiint</span><span class="built_in">_</span><span class="keyword">\Omega</span>(<span class="keyword">\frac</span>{<span class="keyword">\partial</span> P}{<span class="keyword">\partial</span> x} + <span class="keyword">\frac</span>{<span class="keyword">\partial</span> Q}{<span class="keyword">\partial</span> y} + <span class="keyword">\frac</span>{<span class="keyword">\partial</span> R}{<span class="keyword">\partial</span> z})dV</span><br></pre></td></tr></tbody></table></figure>
+
+<p> 即可</p>
+<p> $\unicode{8751}_\sum Pdydz + Qdzdx + Rdxdy = \iiint_\Omega(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$</p>
+<p> 感觉可能是 <code>{}</code> 和 mathjax 渲染有一些冲突，具体原因还不完全清楚（？）</p>
+</li>
+</ol>
+<h3 id="表格中的"><a href="#表格中的" class="headerlink" title="表格中的 |"></a>表格中的 |</h3><h4 id="问题简述-2"><a href="#问题简述-2" class="headerlink" title="问题简述"></a>问题简述</h4><p>由于 markdown 本身的语法，我们无法直接在表格中打出竖线 |</p>
+<h4 id="解决方案-2"><a href="#解决方案-2" class="headerlink" title="解决方案"></a>解决方案</h4><ul>
+<li>当表格内容不用 $\LaTeX$ 时，可通过转义符 <code>\|</code> 或 <code>&amp;#124;</code> 来实现竖杠或绝对值； </li>
+<li>但是用 $\LaTeX$ 时第一个会显示为 “∥”，第二个会报错，故要用 <code>\vert</code> </li>
+</ul>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://blog.csdn.net/skytruine/article/details/105710349">Markdown表格数学公式中使用绝对值“| |”或竖杠”|”</a></p>
+<h3 id="背景-和-透明度"><a href="#背景-和-透明度" class="headerlink" title="背景 和 透明度"></a>背景 和 透明度</h3><h4 id="问题简述-3"><a href="#问题简述-3" class="headerlink" title="问题简述"></a>问题简述</h4><p>在 Hexo 7.x 版本下设置 背景 和 透明度</p>
+<h4 id="解决方案-3"><a href="#解决方案-3" class="headerlink" title="解决方案"></a>解决方案</h4><ul>
+<li><p>新建 _custom.styl 文件，并在 main.styl 中引用该文件</p>
+  <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">//个人添加</span><br><span class="line">@import "_custom.styl"</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><pre><code class="stylus"><span class="comment">//背景图片</span>
+<span class="selector-tag">body</span> {
+    background:url(https://pic.heson10.com/img/image-20200712231958010.png);
+    <span class="attribute">background-repeat</span>: no-repeat;
+    <span class="attribute">background-attachment</span>:fixed;
+    <span class="attribute">background-size</span>: cover;
+    <span class="attribute">background-position</span>:<span class="number">50%</span> <span class="number">50%</span>;
+}
+
+<span class="comment">//博客内容透明化</span>
+<span class="comment">//文章内容的透明度设置</span>
+<span class="selector-class">.content-wrap</span> {
+  <span class="attribute">opacity</span>: <span class="number">0.9</span>;
+}
+
+<span class="comment">//侧边框的透明度设置</span>
+<span class="selector-class">.sidebar</span> {
+  <span class="attribute">opacity</span>: <span class="number">0.9</span>;
+}
+
+<span class="comment">//菜单栏的透明度设置</span>
+<span class="selector-class">.header-inner</span> {
+  <span class="attribute">background</span>: rgba(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0.9</span>);
+}
+
+<span class="comment">//搜索框（local-search）的透明度设置</span>
+<span class="selector-class">.popup</span> {
+  <span class="attribute">opacity</span>: <span class="number">0.9</span>;
+}
+&lt;!--code￼<span class="number">4</span>--&gt;
+</code></pre>
+</li>
+</ul>
+<h4 id="参考-1"><a href="#参考-1" class="headerlink" title="参考"></a>参考</h4><p><a href="https://blog.csdn.net/qq_40790680/article/details/128971322">hexo 自定义文章排序</a></p>
+]]></content>
+      <tags>
+        <tag>博客搭建</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>大学笔记 | 电路原理</title>
     <url>/2023/06/05/Circuit-Analysis/</url>
     <content><![CDATA[<p>从入门到进门</p>
@@ -2123,6 +963,1174 @@ $\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{
       <tags>
         <tag>大学课程</tag>
         <tag>电路</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大学笔记 | 离散数学</title>
+    <url>/2023/08/29/Discrete-Math/</url>
+    <content><![CDATA[<p>从入门到出门。</p>
+<span id="more"></span>
+
+<h2 id="第一章-命题逻辑"><a href="#第一章-命题逻辑" class="headerlink" title="第一章 命题逻辑"></a>第一章 命题逻辑</h2><h3 id="S-1-1-命题符号化及联结词"><a href="#S-1-1-命题符号化及联结词" class="headerlink" title="$\S 1.1$ 命题符号化及联结词"></a>$\S 1.1$ 命题符号化及联结词</h3><p>- 命题：能判断真假的陈述句。<br>- 不能分解的更简单的命题称为简单命题或原子命题。<br>- 简单命题真值确定，又称为命题常项或命题常元。<br>- 真值可变的简单陈述句称为命题变项或命题变元。<br>- 复合命题由简单命题与联接词联接而成。<br>- 复合命题 “非 $p$” 称为 $p$ 的否定式，记作 $\neg p$。$\neg$ 称为否定联结词。<br>- 复合命题 “$p$ 并且 $q$” 称为 $p$ 与 $q$ 的合取式，记作 $p \wedge q$。$\wedge$ 称为合取联结词。<br>- 复合命题 “$p$ 或 $q$” 称为 $p$ 与 $q$ 的析取式，记作 $p \vee q$。$\vee$ 称为析取联结词。<br>- 复合命题 “如果 $p$，则 $q$” 称为 $p$ 与 $q$ 的蕴涵式，记作 $p \to q$。称 $p$ 为蕴涵式的前件，$q$ 为蕴涵式的后件。$\to$ 称为蕴涵联结词。<strong>该命题为假当且仅当 $p$ 为真且 $q$为假。</strong><br>- 复合命题 “$p$ 当且仅当 $q$” 称为 $p$ 与 $q$ 的等价式，记作 $p \leftrightarrow q$。$\leftrightarrow$ 称为等价联结词。该命题为真当且仅当 $p$ 和 $q$ 均为真。</p>
+]]></content>
+      <tags>
+        <tag>数学</tag>
+        <tag>大学课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学习笔记 | 模拟电子技术基础</title>
+    <url>/2023/08/29/Electronic-Devices-and-Circuit-Theory/</url>
+    <content><![CDATA[<p>本课最大的收获使习得了上课隐身术，只有聪明的人才能看到我。</p>
+<span id="more"></span>
+]]></content>
+      <tags>
+        <tag>大学课程</tag>
+        <tag>专业课</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>算法笔记 | 博弈论</title>
+    <url>/2023/07/20/Game-In-ACM/</url>
+    <content><![CDATA[<p>SG 函数</p>
+<span id="more"></span>
+
+<h2 id="博弈论简介"><a href="#博弈论简介" class="headerlink" title="博弈论简介"></a>博弈论简介</h2><p>注：下面这段文字摘抄自 <a href="https://oi-wiki.org/math/game-theory/intro/">OI-Wiki</a></p>
+<h3 id="公平组合游戏"><a href="#公平组合游戏" class="headerlink" title="公平组合游戏"></a>公平组合游戏</h3><p>公平组合游戏（Impartial Game）的定义如下：</p>
+<ul>
+<li>游戏有两个人参与，二者轮流做出决策，双方均知道游戏的完整信息；</li>
+<li>任意一个游戏者在某一确定状态可以作出的决策集合只与当前的状态有关，而与游戏者无关；</li>
+<li>游戏中的同一个状态不可能多次抵达，游戏以玩家无法行动为结束，且游戏一定会在有限步后以非平局结束。</li>
+</ul>
+<h3 id="非公平组合游戏"><a href="#非公平组合游戏" class="headerlink" title="非公平组合游戏"></a>非公平组合游戏</h3><p>非公平组合游戏（Partizan Game）与公平组合游戏的区别在于在非公平组合游戏中，游戏者在某一确定状态可以做出的决策集合与游戏者有关。大部分的棋类游戏都 <strong>不是</strong> 公平组合游戏，如国际象棋、中国象棋、围棋、五子棋等（因为双方都不能使用对方的棋子）。</p>
+<h3 id="反常游戏"><a href="#反常游戏" class="headerlink" title="反常游戏"></a>反常游戏</h3><p>反常游戏（Misère Game）按照传统的游戏规则进行游戏，但是其胜者为第一个无法行动的玩家。以 Nim 游戏为例，Nim 游戏中取走最后一颗石子的为胜者，而反常 Nim 游戏中取走最后一刻石子的为败者。</p>
+<hr>
+<p>本文主要研究公平组合游戏。</p>
+<h2 id="SG-函数"><a href="#SG-函数" class="headerlink" title="SG 函数"></a>SG 函数</h2><p>我们通过 Nim 游戏来介绍 SG 函数，什么是 Nim 游戏呢？</p>
+<p>Nim 游戏是一种两个人玩的回合制数学战略游戏。游戏者轮流从几排棋子（或者任何道具）中选择一排，再由这一排中取走一个或者多个，依规则不同，拿走最后一个的可能是输家，也有可能是赢家。（转自 <a href="https://zh.wikipedia.org/zh-sg/%E5%B0%BC%E5%A7%86%E6%B8%B8%E6%88%8F">尼姆游戏</a>）</p>
+<p>我们接下来定义一种函数 $SG(x)$，并且令 $SG(x):=mex\{SG(y)|x \to y\}$，这里 $x$，$y$ 均表示某种状态，$x \to y$ 表示 $x$ 可以通过一次操作到达 $y$，也可以理解为 $y$ 是 $x$ 的后继状态。$mex$ 表示一个集合中未出现的最小自然数（例如 $mex\{0, 1, 3\} = 2$ ）。如果 $SG(x) = n$，说明可以从当前状态转移到 $0\sim n - 1$ 的状态。</p>
+<p>对于一个状态，如果它是必胜态，那么它移动一步，下一步一定<strong>可以</strong>变成必败态。如果一个状态是必败态，那么它无论怎么移动，它的下一步<strong>只能</strong>是必胜态。我们令 $SG(x) = 0$ 表示必败，$SG(x) \ne 0$ 表示必胜。那么 $SG(x) = 0$ 时说明下一步的状态 $y$ 全都是 $SG(y) \ne 0$，$SG(x) \ne 0$ 说明下一步存在状态 $y’$ 满足 $SG(y’) \ne 0$。符合我们的胜败状态。</p>
+<p>对于单堆的 Nim 游戏，不难证明 $SG(x) = x$，但是对于双堆，三堆，n 堆情况就很复杂。所以我们引入 <strong>SG定理</strong>。</p>
+<p><strong>Sprague-Grundy定理</strong>（两个游戏的情形）：</p>
+<blockquote>
+<p>对于公平组合游戏的两个状态 $x$ 和 $y$，有 $SG(x + y) = SG(x) \oplus SG(y)$</p>
+</blockquote>
+<p>推广的情形：</p>
+<blockquote>
+<p>对于公平组合游戏的 $n$ 个状态 $x_1,x_2, \dots,x_n$，有 $SG(x_1 + x_2 + \cdots + x_n) = SG(x_1) \oplus SG(x_2) \oplus \cdots \oplus SG(x_n)$</p>
+</blockquote>
+<p>定理具体证明见<a href="https://www.zhihu.com/question/51290443">这里</a>。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="https://oi-wiki.org/math/game-theory/impartial-game/">公平组合游戏 - OI-Wiki</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/257013159">算法学习笔记(51): SG函数 - Pecco - 知乎</a></p>
+]]></content>
+      <tags>
+        <tag>算法竞赛</tag>
+        <tag>博弈论</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>算法竞赛 | 杭电多校训练</title>
+    <url>/2023/07/19/HDU-In-Summer-0/</url>
+    <content><![CDATA[<p>浅记录一下暑假 10 次 <del>坐牢</del> 比赛。</p>
+<span id="more"></span>
+
+<h2 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h2><h3 id="1001-Hide-And-Seek-Game"><a href="#1001-Hide-And-Seek-Game" class="headerlink" title="1001. Hide-And-Seek Game"></a>1001. <a href="https://acm.hdu.edu.cn/showproblem.php?pid=7275">Hide-And-Seek Game</a></h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>两个人都在一棵树上，沿着树的边走，一次走一条边，一个人从 $S_a$ 出发，前往 $T_a$，到达 $T_a$ 后就返回向 $S_a$ 走，如此往复。另一个人在 $S_b$ 和  $T_b$ 之间走，问最早在那个点能相遇，若不相遇，则输出 <code>-1</code> 。$t$ 组数据，每组数据 $n$ 个结点，$m$ 次询问。</p>
+<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>本题 $n$ 和 $m$ 都较小（ $n, m \le 300$），所以可以枚举所有可能相遇的点。判断点 $i$ 是否在 $(S_a, T_a)$ 路线上的方法是判断 $dist(i, S_a) + dist(i, T_a) == dist(S_a, T_a)$。注意，对于每个点 $i$，相遇的时间节点可能是 $2k \times dist(S_a, T_a) + dist(S_a, i)$ 或 $2k \times dist(S_a, T_a) + 2 \times dist(S_a, T_a) - dist(i, S_a)$ 。另一个人的时间同理，所以这就相当于解二元一次方程。（不了解二元一次方程组的可以先做 <a href="https://www.luogu.com.cn/problem/P5656">P5656 【模板】二元一次不定方程 (exgcd)</a>）</p>
+<p>注意一下，这里算两点间距离利用 LCA 来求，但不能直接用倍增去求（因为这样会超时），要用 dfs 序来求 LCA（时间复杂度要优化很多）。 </p>
+<p><a href="https://acm.hdu.edu.cn/viewcode.php?rid=38826162">Code</a></p>
+<h3 id="1002-City-Upgrading"><a href="#1002-City-Upgrading" class="headerlink" title="1002. City Upgrading"></a>1002. <a href="http://acm.hdu.edu.cn/showproblem.php?pid=7276">City Upgrading</a></h3><h4 id="Description-1"><a href="#Description-1" class="headerlink" title="Description"></a>Description</h4><p>一棵树，每个点都有权值，选中一个点的话，这个点相连的节点也会被选中，要求花费最小让整棵树全部点都被选中。</p>
+<h4 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h4><p>树形DP，我们令 $f[i][0]$ 表示在 $i$ 位置选，$f[i][1]$ 表示在 $i$ 的儿子位置处选，让 $i$ 被儿子覆盖， $f[i][2]$ 表示在 $i$ 的父亲位置处选，让 $i$ 被父亲覆盖。</p>
+<p>如果选 $i$ 位置，那么不难得出 $f[i][1] = a[i] + \sum \min\{f[son][0], f[son][1], f[son][2]\}$ ，因为这时候儿子 $son$ 怎么选都可以。</p>
+<p>如果选 $i$ 父亲位置，那么 $f[i][2] = \sum \min\{f[son][1], f[son][2]\}$，这个时候儿子 $son$ 要么自己选，要么被 son 的儿子覆盖。</p>
+<p>如果选 $i$ 儿子位置，这个时候有点复杂，因为要决定 $i$ 应该被哪个儿子覆盖，应该由花费最小的儿子覆盖，设这个儿子为 $chosen_son$ ，那么这个儿子一定是要选的，所以代价是 $f[chosen_son][0] + \sum_{son \ne chosen_son} \min\{f[son][0], f[son][1]\}$，而且一定有其他儿子 $son’$ 满足 $f[chosen_son][0] + \sum_{son \ne chosen_son} \min\{f[son][0], f[son][1]\} &lt; f[son’][0] + \sum_{son \ne son’} \min\{f[son][0], f[son][1]\}$，两边同类项抵消后，就是要选 $f[son][0] - \min\{f[son][0], f[son][1]\}$ 最小的儿子作为这个 $chosen_son$，在向下搜索时找到这个儿子，剩下就好解决了。</p>
+<p><a href="http://acm.hdu.edu.cn/viewcode.php?rid=38674964">Code</a></p>
+<h3 id="1003-Mr-Liang-play-Card-Game"><a href="#1003-Mr-Liang-play-Card-Game" class="headerlink" title="1003. Mr. Liang play Card Game"></a>1003. <a href="https://acm.hdu.edu.cn/showproblem.php?pid=7277">Mr. Liang play Card Game</a></h3><h4 id="Description-2"><a href="#Description-2" class="headerlink" title="Description"></a>Description</h4><p>桌上有 $n$ 张牌，第 $i$ 张牌的类型是 $a_i$，然后又告诉你每种牌的价值 $v_i$，每张牌初始等级为 $1$ 级，你每次可以进行两种操作，第一种操作是将某张牌打出去，若等级为 $k$，则获得 $p^{k - 1} \times v[a[i]]$ 的价值，第二种操作是将相邻的两张同类型同等级的牌合并，等级为合并前等级 $+1$。问全部出完牌之后的最大价值。 </p>
+<h4 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h4><p>一道较为基础的区间 DP，想到 $f$ 数组的状态就比较好转移了。</p>
+<p>$f[l][r][type][level]$ 表示将 $[l, r]$ 区间全部合并完，只剩下一张 $type$ 类型等级 $level$ 的牌所获得的最大价值。</p>
+<p>$g[l][r]$ 表示将 $[l, r]$ 区间内牌全部打出去所获得的最大价值。</p>
+<p>每次枚举 $l, r, type, level$，不难推出：<br>$$<br>\begin{gather}<br>g[l][r] = \max \{g[l][r], g[l][mid] + g[mid + 1][r]\}; \<br>f[l][r][t][1] =\max \{f[l][r][t][1], f[l][mid][t][1] + g[mid + 1][r], f[mid + 1][r][t][1] + g[l][mid]\}; \<br>f[l][r][t][lev] = \max \{f[l][r][t][lev], f[l][mid][t][lev - 1] + f[mid + 1][r][t][lev - 1]\}\ (len &gt; 1)<br>\end{gather}<br>$$<br>更新完 $f$ 数组后再更新 $g$ 数组。<br>$$<br>g[l][r] = \max \{g[l][r], f[l][r][t][lev] + v[t] \times c[lev] \};<br>$$<br><a href="https://acm.hdu.edu.cn/viewcode.php?rid=38826810">Code</a></p>
+<h3 id="1009-Assertion"><a href="#1009-Assertion" class="headerlink" title="1009. Assertion"></a>1009. <a href="http://acm.hdu.edu.cn/showproblem.php?pid=7283">Assertion</a></h3><h4 id="Description-3"><a href="#Description-3" class="headerlink" title="Description"></a>Description</h4><p>把 $m$ 个物品放进 $n$ 个柜子，问是否至少有一个里面物品数大于等于 $d$。</p>
+<h4 id="Solution-3"><a href="#Solution-3" class="headerlink" title="Solution"></a>Solution</h4><p>签到题，判断 $d$ 和 $\left \lfloor \dfrac{m - 1}{n} \right \rfloor + 1$ 即可。</p>
+<p><a href="http://acm.hdu.edu.cn/viewcode.php?rid=38672478">Code</a></p>
+<h2 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2"></a>Day 2</h2><h3 id="1001-Alice-Game"><a href="#1001-Alice-Game" class="headerlink" title="1001. Alice Game"></a>1001. <a href="http://acm.hdu.edu.cn/showproblem.php?pid=7287">Alice Game</a></h3><h3 id="1002-Binary-Number"><a href="#1002-Binary-Number" class="headerlink" title="1002. Binary Number"></a>1002. <a href="http://acm.hdu.edu.cn/showproblem.php?pid=7288">Binary Number</a></h3><h4 id="Description-4"><a href="#Description-4" class="headerlink" title="Description"></a>Description</h4><p>对二进制数做 $k$ 次操作，每次任取一段 $[l,r]$ 做 $01$ 翻折，问 $k$ 次之后获得的最大数。</p>
+<h4 id="Solution-4"><a href="#Solution-4" class="headerlink" title="Solution"></a>Solution</h4><p>总体思路是从高位到低位，把最高位连续的 $0$ 变 $1$，次数多的也不用担心，次数如果多于连续 $0$ 的段数则全为 $1$。这里有两个特判，一个是只给定一位二进制，那么一定是 $1$，答案与 $k$ 的奇偶相关。还有一种情况是给定全是 $1$，$k = 1$，这时候是 $111\dots 10$ 。</p>
+<p><a href="http://acm.hdu.edu.cn/viewcode.php?rid=38686833">Code</a></p>
+<h3 id="1007-foreverlasting-and-fried-chicken"><a href="#1007-foreverlasting-and-fried-chicken" class="headerlink" title="1007. foreverlasting and fried-chicken"></a>1007. <a href="http://acm.hdu.edu.cn/showproblem.php?pid=7293">foreverlasting and fried-chicken</a></h3><h4 id="Description-5"><a href="#Description-5" class="headerlink" title="Description"></a>Description</h4><p>给定一张图，找出图中有多少个子图，构造如下。</p>
+<p><img src="D2-1007.png" alt="D2-1007"></p>
+<h4 id="Solution-5"><a href="#Solution-5" class="headerlink" title="Solution"></a>Solution</h4><p>关键是找到中间的两个蓝色和黄色的点。</p>
+<p><img src="D2-1007(1).png" alt="D2-1007(1)"></p>
+<p>把点之间的连接关系用 <code>bitset</code> 存储好，枚举蓝点和黄点。中间共有的四个点用 <code>&amp;</code> 操作直接求出，剩下的点的个数也好求出，最后答案是 $\sum C_n^2 \times C_m^4$。</p>
+<p><a href="http://acm.hdu.edu.cn/viewcode.php?rid=38687319">Code</a></p>
+<h3 id="1009-String-Problem"><a href="#1009-String-Problem" class="headerlink" title="1009. String Problem"></a>1009. <a href="http://acm.hdu.edu.cn/showproblem.php?pid=7295">String Problem</a></h3><h4 id="Description-6"><a href="#Description-6" class="headerlink" title="Description"></a>Description</h4><p>将字符串拆成尽可能少的段，使得每段只包含一种字母。每段对答案的贡献为长度减一。</p>
+<h4 id="Solution-6"><a href="#Solution-6" class="headerlink" title="Solution"></a>Solution</h4><p>签到题。</p>
+<p><a href="http://acm.hdu.edu.cn/viewcode.php?rid=38685806">Code</a></p>
+<h2 id="Day-6"><a href="#Day-6" class="headerlink" title="Day 6"></a>Day 6</h2><h3 id="1001"><a href="#1001" class="headerlink" title="1001."></a>1001.</h3><h4 id="Description-7"><a href="#Description-7" class="headerlink" title="Description"></a>Description</h4><h4 id="Solution-7"><a href="#Solution-7" class="headerlink" title="Solution"></a>Solution</h4><h3 id="1006"><a href="#1006" class="headerlink" title="1006."></a>1006.</h3><h3 id="Description-8"><a href="#Description-8" class="headerlink" title="Description"></a>Description</h3><h4 id="Solution-8"><a href="#Solution-8" class="headerlink" title="Solution"></a>Solution</h4><h2 id="Day-7"><a href="#Day-7" class="headerlink" title="Day 7"></a>Day 7</h2><h3 id="1002"><a href="#1002" class="headerlink" title="1002."></a>1002.</h3><h4 id="Description-9"><a href="#Description-9" class="headerlink" title="Description"></a>Description</h4><h4 id="Solution-9"><a href="#Solution-9" class="headerlink" title="Solution"></a>Solution</h4><h3 id="1011"><a href="#1011" class="headerlink" title="1011."></a>1011.</h3><h4 id="Description-10"><a href="#Description-10" class="headerlink" title="Description"></a>Description</h4><h4 id="Solution-10"><a href="#Solution-10" class="headerlink" title="Solution"></a>Solution</h4><h3 id="1013"><a href="#1013" class="headerlink" title="1013."></a>1013.</h3><h4 id="Description-11"><a href="#Description-11" class="headerlink" title="Description"></a>Description</h4><h4 id="Solution-11"><a href="#Solution-11" class="headerlink" title="Solution"></a>Solution</h4><h2 id="Day-9"><a href="#Day-9" class="headerlink" title="Day 9"></a>Day 9</h2><h3 id="1002-Inference"><a href="#1002-Inference" class="headerlink" title="1002. Inference"></a>1002. <a href="https://acm.hdu.edu.cn/showproblem.php?pid=7382">Inference</a></h3><h4 id="Description-12"><a href="#Description-12" class="headerlink" title="Description"></a>Description</h4><p>有 $m$ 个特征，这些特征之间存在 $k$ 个依赖关系，这些依赖关系组成了一张有向无环图。给定出 $n$ 组数据以及一个推断公式，然后根据这 $n$ 组数据推断一组新的数据里第 $m$ 个特征值最有可能是多少？（$0$ / $1$ / $2$）</p>
+<h4 id="Solution-12"><a href="#Solution-12" class="headerlink" title="Solution"></a>Solution</h4><p>本题题意较为复杂，但实际比较简单。</p>
+<p>稍微讲解下题意。</p>
+<p>$\pi(x_i)$ 表示的是指向 $x_i$ 的点，即 $x_i$ 所依赖的特征。</p>
+<p>在公式<br>$$<br>P(x_m | x_1, \dots, x_{m - 1}) = \prod_{i = 1}^m P(x_i|\pi(x_i))<br>$$<br>中，对于 $P(x_i | \pi(x_i)) = \dfrac{P(\pi(x_i), x_i)}{P(\pi(x_i))}$，这个公式其实就是条件概率公式。所求的是在 $n$ 组数据中满足 $\pi(x_i)$ 的行中同时满足 $x_i$ 的概率。</p>
+<p>比如 $P(x_1 = 1)$ 就是求这 $n$ 组中 $x_1 = 1$ 的概率，$P(x_2 = 1 | x_1 = 0)$ 则是表示这 $n$ 组中满足 $x_1 = 0$ 的行里，$x_2 = 1$ 的概率。</p>
+<p>题目最后求的是 $x_m$ 最有可能等于 $1 / 2 / 0$ 中的哪一个数，我们直接把公式套进去比较。题目满足一定会有一个概率比另外两个大，同时，我们观察发现，代入公式时，这三个式子前 $m - 1$ 项都是一样的（因为 $x_m$ 的取值不影响前面的 $P(x_i | \pi(x_i))$），所以只比较第 $m$ 项，所以题目变成了，求满足 $\pi(x_i)$ 的行里，$x_m$ 在 $0 / 1 / 2$ 中哪个数次数出现的最多。 然后题目又说了 $\pi(x) \le 5$，故线性扫一遍即可。时间复杂度 $O(n)$。</p>
+<p><a href="https://acm.hdu.edu.cn/viewcode.php?rid=38801204">Code</a></p>
+]]></content>
+      <tags>
+        <tag>算法竞赛</tag>
+        <tag>训练合集</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>置顶 | 博客目录</title>
+    <url>/2023/07/22/Index/</url>
+    <content><![CDATA[<p>茵蒂克丝 <del>Index（雾</del> 小姐姐指引你前行</p>
+<span id="more"></span>
+
+<p><img src="INDEX_%E8%8C%B5%E8%92%82%E5%85%8B%E7%B5%B2.jpg" alt="INDEX_茵蒂克絲"></p>
+<h2 id="算法竞赛"><a href="#算法竞赛" class="headerlink" title="算法竞赛"></a>算法竞赛</h2><p><del>算法竞赛？纯纯网瘾罢！</del></p>
+<p><strong>套题合集：</strong></p>
+<ul>
+<li><p><a href="https://anasuuuu.github.io/2023/07/19/HDU-In-Summer-0/">算法竞赛 | 杭电多校训练</a></p>
+</li>
+<li><p><a href="https://anasuuuu.github.io/2023/06/26/CF-Instrumentality-Project-I/">CodeForces 补全计划（1826 ~ 1850）</a>    </p>
+</li>
+<li><p>CodeForces 补全计划（1851 ~ 1875）</p>
+</li>
+</ul>
+<p><strong>数学：</strong></p>
+<ul>
+<li><p><a href="https://anasuuuu.github.io/2023/07/05/Math-In-ACM-I/">算法笔记 | 数论（一）</a>：扩展欧几里得，逆元，欧拉函数，中国剩余定理，卢卡斯定理。</p>
+</li>
+<li><p><a href="https://anasuuuu.github.io/2023/07/20/Game-In-ACM/">算法笔记 | 博弈论</a>：SG 函数。</p>
+</li>
+<li><p><a href="https://anasuuuu.github.io/2023/06/28/Poly/">学习笔记 | 多项式与生成函数</a></p>
+</li>
+</ul>
+<p><strong>字符串：</strong></p>
+<ul>
+<li><a href="https://anasuuuu.github.io/2023/07/10/String-In-ACM-I/">算法笔记 | 字符串（一）</a>：Manacher，KMP。</li>
+</ul>
+<p><strong>杂项：</strong></p>
+<ul>
+<li><a href="https://anasuuuu.github.io/2023/07/07/somethingelse-in-ACM/">算法笔记 | 杂项（一）</a></li>
+</ul>
+<h2 id="大学课程"><a href="#大学课程" class="headerlink" title="大学课程"></a>大学课程</h2><p>摸鱼大专笔记 ⊙﹏⊙∥ 以应付考试为主。</p>
+<p><strong>大一下：</strong></p>
+<ul>
+<li><a href="https://anasuuuu.github.io/2023/06/06/Physics-I/">大学笔记 | 大学物理BI</a></li>
+<li><a href="https://anasuuuu.github.io/2023/06/05/Circuit-Analysis/">大学笔记 | 电路原理</a></li>
+<li><a href="https://anasuuuu.github.io/2023/06/05/Calculus/">大学笔记 | 微积分</a></li>
+<li><a href="https://anasuuuu.github.io/2023/06/06/Linear-Algebra/">大学笔记 | 线性代数</a></li>
+</ul>
+<p><strong>大二上：</strong></p>
+<ul>
+<li>大学笔记 | 大学物理BII</li>
+<li></li>
+</ul>
+<h2 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h2><p><strong>Linux 系列：</strong></p>
+<ul>
+<li><p><a href="https://anasuuuu.github.io/2023/07/09/UCB-CS61B/">学习笔记 | UCB-CS61B</a></p>
+</li>
+<li><p><a href="https://anasuuuu.github.io/2023/06/27/Cross-The-Hole/">博客搭建踩坑指北</a></p>
+</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>大学笔记 | 线性代数</title>
+    <url>/2023/06/06/Linear-Algebra/</url>
+    <content><![CDATA[<p>从入门到入土</p>
+<span id="more"></span>
+
+<h2 id="第一章-矩阵的运算与初等变换"><a href="#第一章-矩阵的运算与初等变换" class="headerlink" title="第一章 矩阵的运算与初等变换"></a>第一章 矩阵的运算与初等变换</h2><h3 id="S-1-1-矩阵和向量的概念"><a href="#S-1-1-矩阵和向量的概念" class="headerlink" title="$\S 1.1$ 矩阵和向量的概念"></a>$\S 1.1$ 矩阵和向量的概念</h3><ul>
+<li><p>矩阵</p>
+<p>  $m \times n$ 的数表构成 $m$ 行 $n$ 列矩阵，这 $m \times n$ 个数是 $A$ 的元素，简称元</p>
+<p>  实矩阵就是全是实数元素的矩阵</p>
+<p>  复矩阵就是全是复数元素的矩阵</p>
+<ul>
+<li><p>特殊矩阵</p>
+<p>  同型矩阵：行数和列数都分别相等的矩阵（指的是两个矩阵之间的关系）</p>
+<p>  相等矩阵：同型矩阵、对应元素相等<br>  方阵：行数列数相等（就单个矩阵而言）</p>
+<p>  上（下）三角矩阵：主对角线下（上）元素全为 $0$ 的矩阵</p>
+<p>  对角矩阵：只有对角线上元素不为 $0$</p>
+<p>  列矩阵，行矩阵：$1 \times n$，$n \times 1$ 的矩阵</p>
+<p>  单位矩阵：特殊的对角阵，对角线上全为 $1$</p>
+<p>  零矩阵：全为 $0$</p>
+<p>  负矩阵：$-A $ 是 $A$ 的负矩阵</p>
+<p>  对称矩阵：元素关于对角线对称</p>
+<p>  反对称矩阵：元素关于对角线称相反数且对角线上元素全为 $0$</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="第二章-方阵的行列式"><a href="#第二章-方阵的行列式" class="headerlink" title="第二章 方阵的行列式"></a>第二章 方阵的行列式</h2><h3 id="省流"><a href="#省流" class="headerlink" title="省流"></a>省流</h3><p>行列式</p>
+<h2 id="第三章-可逆矩阵"><a href="#第三章-可逆矩阵" class="headerlink" title="第三章 可逆矩阵"></a>第三章 可逆矩阵</h2><h3 id="省流-1"><a href="#省流-1" class="headerlink" title="省流"></a>省流</h3><p>可逆矩阵，行列式的秩，伴随矩阵</p>
+<h2 id="第四章-线性方程组和向量组的线性相关性"><a href="#第四章-线性方程组和向量组的线性相关性" class="headerlink" title="第四章 线性方程组和向量组的线性相关性"></a>第四章 线性方程组和向量组的线性相关性</h2><h3 id="省流-2"><a href="#省流-2" class="headerlink" title="省流"></a>省流</h3><p>方程组数和未知数相等可以直接用卡莱姆法则</p>
+<p>不同的时候，齐次下直接找通解，非齐次是通解和特解叠加</p>
+<h2 id="第五章-方阵的特征值，特征向量与相似化简"><a href="#第五章-方阵的特征值，特征向量与相似化简" class="headerlink" title="第五章 方阵的特征值，特征向量与相似化简"></a>第五章 方阵的特征值，特征向量与相似化简</h2><h3 id="S-5-1-数域-多项式的根"><a href="#S-5-1-数域-多项式的根" class="headerlink" title="$\S 5.1$ 数域 多项式的根"></a>$\S 5.1$ 数域 多项式的根</h3><ul>
+<li><p>数域</p>
+<p>  设 $\mathbb{Q} \subseteq K \subseteq \mathbb{C}$，称 $K$ 为一个数域，当：</p>
+<ol>
+<li>$0, 1 \in K$</li>
+<li>$\forall a, b \in K. a \pm b, ab \in K$， 且对 $b \not= 0, b^{-1} \in K$</li>
+</ol>
+</li>
+<li><p>多项式，根，零点，标准分解式</p>
+</li>
+</ul>
+<h3 id="S-5-2-方阵的特征值与特征向量"><a href="#S-5-2-方阵的特征值与特征向量" class="headerlink" title="$\S 5.2$ 方阵的特征值与特征向量"></a>$\S 5.2$ 方阵的特征值与特征向量</h3><ul>
+<li><p>$n$ 阶 $A$ 矩阵对角线上元素的和称为 $A$ 的迹，记为 $trA$</p>
+</li>
+<li><p>$\lambda E - A$ 称为 $A$ 的特征矩阵，$|\lambda E - A|$ 的值表达式 $\psi(\lambda)$ 是一   </p>
+<p>  个多项式，称为 $A$ 的特征多项式，特征多项式的根称为 $A$ 的特征值，亦称为特征根 </p>
+<ul>
+<li>$\psi(\lambda) = \lambda^n+c_{n-1}\lambda^{n-1}+ \cdots + c_1\lambda + c_0$ 则有 $c_{n - 1} = -trA,c_0 = (-1)^n|A|$</li>
+<li>设 $n$ 阶矩阵 $A$ 的全部特征值 $\lambda_1,\lambda_2,\cdots,\lambda_n$，则有<ol>
+<li>$|A| = \lambda_1\cdots\lambda_n$</li>
+<li>$tr(A) = \lambda_1 + \cdots + \lambda_n$</li>
+<li>由 $(1)$ 可知方阵可逆的充要条件是所有特征值均不为 $0$</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>非零特征向量 $a$ 满足对于特征值 $\lambda_0$，有 $Aa = \lambda_0a$ </p>
+<ul>
+<li>若存在数 $\lambda_0$ 以及非零向量 $a$ 使 $Aa = \lambda_0a$ ，则必有 $\lambda_0$ 是 $A$ 的特征值，$a$ 是 $A$ 关于 $\lambda_0$ 的特征向量</li>
+<li>属于不同特征值的特征向量是线性无关的</li>
+<li>对于矩阵 $A$ 的 $r$ 重特征值 $\lambda$ ，属于他的线性无关特征向量个数 $k \le r$</li>
+</ul>
+</li>
+<li><p>一些结论和补充</p>
+<ul>
+<li><p>设 $R(A) = n - 1$ ，则 $A^*$ 的特征值为 $0$ （$n-1$ 重）和 $\sum_{i = 1}^{n}A_{ii}$ （$A_{ii}$ 为 $A$ 的元素 $a_{ii}$  对应的代数余子式）</p>
+</li>
+<li><p>设 $R(A) &lt; n-1$ ，则 $A^*$ 有 $n$ 重零特征值</p>
+</li>
+<li><p>若 $\lambda$ 是 $A$ 的特征值，则 $\varphi(\lambda)$ 是 $\varphi(A)$ 的特征值</p>
+</li>
+<li><table>
+<thead>
+<tr>
+<th align="left"></th>
+<th>$A$</th>
+<th>$\varphi(A)$</th>
+<th>$A^{-1}$</th>
+<th>$A^*$</th>
+<th>$B=P^{-1}AP$</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">特征值</td>
+<td>$\lambda$</td>
+<td>$\varphi(\lambda)$</td>
+<td>$\frac{1}{\lambda}$</td>
+<td>$\frac{\vert A \vert}{\lambda}$</td>
+<td>$\lambda$</td>
+</tr>
+<tr>
+<td align="left">特征向量</td>
+<td>$\alpha$</td>
+<td>$\alpha$</td>
+<td>$\alpha$</td>
+<td>$\alpha$</td>
+<td>$p^{-1}\alpha$</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>$A^T$ 与 $A$ 的特征值相同，但特征向量未必相同</p>
+</li>
+<li><p>幂等矩阵 $A$ （$A^2 = A$）特征值为 $0$ 或 $1$</p>
+<p>  对合矩阵 $A$ （$A^2 = E$）特征值为 $-1$ 或 $1$</p>
+<p>  幂零矩阵 $A$ （$A^2 = 0$）特征值为 $0$</p>
+<p>  正交矩阵 $A$ （$AA^T = E$）特征值不一定为实数，但模长一定为 $1$ </p>
+<p>  $n$ 阶实矩阵 $A$ 满足 $R(A) = n - 1$，特征值 $\lambda_1 = \sum_{i = 1}^na_{ii}$，$\lambda_2=\cdots=\lambda_n = 0$（其实就是方阵秩为 $n-1$ ，其伴随矩阵的特征值）</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="S-5-3-方阵相似于对角矩阵的条件"><a href="#S-5-3-方阵相似于对角矩阵的条件" class="headerlink" title="$\S 5.3$ 方阵相似于对角矩阵的条件"></a>$\S 5.3$ 方阵相似于对角矩阵的条件</h3><ul>
+<li><p>相似矩阵 $P^{-1}AP=B$</p>
+<p>  相似变换，反身性，对称性，传递性</p>
+<ul>
+<li>$A\sim B$，则 $R(A) = R(B)$</li>
+<li>$A\sim B$，则 $|A| = |B|$，即 $A,B$ 同时可逆或不可逆</li>
+<li>$A\sim B$，则 $A^T \sim B^T$，更进一步，$f(A) \sim f(B)$</li>
+<li>$A$ 可逆，$A\sim B$，则 $A^{-1} \sim B^{-1}$</li>
+<li>$A\sim B$，则 $A$ 与 $B$ 特征多项式相同，<strong>从而 $A$ 与 $B$ 的特征值相同，但特征向量未必相同</strong>（BTW，特征多项式相同的矩阵未必相似）</li>
+<li>$A$ 与对角矩阵相似，则对角矩阵上的元素是 $A$ 的 $n$ 个特征值</li>
+</ul>
+</li>
+<li><p>$n$ 阶方阵 $A$ 可以相似对角化的充要条件是 $A$ 有 $n$ 个线性无关的特征向量</p>
+</li>
+<li><p>设 $\lambda_i$ 是方阵 $A$ 的 $n_i$ 重特征值，那么 $A$ 对应于 $\lambda_i$ 的特征向量中线性无关组的向量个数最多为 $n_i$ 个</p>
+</li>
+<li><p>$A$ 的全部特征向量的一个极大无关组，称为 $A$ 的一个特征向量系，其向量个数 $q=\sum_{i=1}^tm_i \le \sum_{t=1}^{t}n_i=n$，$q$ 为 $n$ 时，$A$ 的特征向量时完全的，否则是不完全的，值得注意的是，对于 $A$ 的任一单特征值 $\lambda_i$，必有 $m_i=n_i=1$（$n_i$ 表示第 $i$ 个特征根重数，$m_i$ 表示第 $i$ 个特征根对应方程解的个数）</p>
+</li>
+</ul>
+<h3 id="S-5-4-正交矩阵"><a href="#S-5-4-正交矩阵" class="headerlink" title="$\S 5.4$ 正交矩阵"></a>$\S 5.4$ 正交矩阵</h3><ul>
+<li>内积，向量长度，单位向量</li>
+<li>正交向量组（对于只含一个向量 $a$ 的向量组，当 $a \ne 0$ 时，该向量组也是正交组）<ul>
+<li>正交向量组也线性无关</li>
+</ul>
+</li>
+<li>将一个全是单位向量的且两两正交的向量组称为单位正交向量组</li>
+<li>$Schmidt$ 逐步正交化</li>
+<li>正交矩阵（$AA^T = E$）<ul>
+<li>$n$ 阶实矩阵 $A$ 为正交矩阵的充要条件是 $A$ 的行（列）向量都是两两正交的单位向量</li>
+<li>若 $A$ 是正交矩阵，则 $|A| = 1$ 或 $|A| = -1$ </li>
+<li>若 $A$，$B$ 均是正交矩阵，则 $AB$ 也是正交矩阵，但 $A+B$ 不是</li>
+<li>若 $A$ 是正交矩阵，则 $A^*$，$A^{-k}$ ，$A^k$ 亦为正交矩阵</li>
+<li>若 $A$ 是正交矩阵，且 $\lambda$ 是 $A$ 的特征值，则 $|\lambda| = 1$，且 $\frac{1}{\lambda}$ 也是 $A$ 的特征值</li>
+</ul>
+</li>
+<li>设 $P$ 为正交矩阵， $y = Px$ 为正交变换，正交变换不改变模长</li>
+</ul>
+<h3 id="S-5-5-实对称矩阵的相似对角化"><a href="#S-5-5-实对称矩阵的相似对角化" class="headerlink" title="$\S 5.5$ 实对称矩阵的相似对角化"></a>$\S 5.5$ 实对称矩阵的相似对角化</h3><ul>
+<li>实对称矩阵的特征值<strong>必为实数</strong></li>
+<li>实对称阵 $A$  <strong>不同特征值对应的特征向量正交</strong>，且二者互为充要条件</li>
+<li>实对称阵<strong>一定能相似对角化</strong></li>
+<li>实对称矩阵<strong>非零特征值个数等于它的秩</strong></li>
+<li>若$A$，$B$ 均为实对称阵，且 $A$ 和 $B$ 特征值完全相同，则必有 $A \sim B$</li>
+</ul>
+<h2 id="第六章-二次型与对称矩阵"><a href="#第六章-二次型与对称矩阵" class="headerlink" title="第六章 二次型与对称矩阵"></a>第六章 二次型与对称矩阵</h2><h3 id="S-6-1-二次型及其矩阵"><a href="#S-6-1-二次型及其矩阵" class="headerlink" title="$\S 6.1$ 二次型及其矩阵"></a>$\S 6.1$ 二次型及其矩阵</h3><ul>
+<li><p>二次型，二次型矩阵，二次型的秩，线性变换（可逆变换，不可逆变换）</p>
+</li>
+<li><p>合同变换</p>
+<p>  $P^TAP = B$，则 $A, B$ 合同，记为 $A \simeq B$，$P$ 为合同因子</p>
+<p>  合同必等价，反之不真</p>
+<p>  合同和相似是两个独立概念，合同未必相似，相似未必等价</p>
+</li>
+<li><p>相关结论</p>
+<p>  对实对称矩阵 $A, B$ 若 $A \sim B$，则 $A \simeq B$，但是合同未必相似 如 $diag\{3,3,3\}$ 和 $E$ 合同，但不相似</p>
+<p>  若对实对称矩阵$A, B$ 特征值相同，则 $A \simeq B$，且$A \sim B$</p>
+<p>  若 $A \simeq B$，则 $R(A) = R(B)$</p>
+<p>  若 $A \simeq B$，且 $A$ 为对称矩阵则 $B$ 也为对称矩阵（特殊的若 $A \simeq \Lambda$，则 $A$ 必为对称阵）</p>
+</li>
+</ul>
+<h3 id="S-6-2-二次型的标准型"><a href="#S-6-2-二次型的标准型" class="headerlink" title="$\S 6.2$ 二次型的标准型"></a>$\S 6.2$ 二次型的标准型</h3><ul>
+<li><p>标准型</p>
+<p>  标准型各项系数均是特征值</p>
+</li>
+<li><p>正交变换法</p>
+</li>
+<li><p>拉格朗日配方法</p>
+<p>  如果只有交叉项利用平方差公式凑出平方项</p>
+</li>
+<li><p>相关结论</p>
+<p>  任何二次型必可经过可逆线性变换为标准型</p>
+<p>  任何对称矩阵必可合同于对角矩阵</p>
+</li>
+</ul>
+<h3 id="S-6-3-合同变换与二次型的规范形"><a href="#S-6-3-合同变换与二次型的规范形" class="headerlink" title="$\S 6.3$ 合同变换与二次型的规范形"></a>$\S 6.3$ 合同变换与二次型的规范形</h3><ul>
+<li><p>合同变换法</p>
+<p>  三种初等合同变换。</p>
+<p>  合同变换法 $(A|E) \to (\Lambda|P^T)$。</p>
+</li>
+<li><p>实二次型的规范形</p>
+<p>  任何实对称矩阵必可经过实数域上变换得到如下矩阵<br>  $$<br>  \begin{bmatrix}</p>
+<pre><code>1&amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \\\
+&amp; \ddots  &amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \\\
+&amp;  &amp; 1 &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \\\
+&amp;  &amp;  &amp; -1 &amp;  &amp;  &amp;  &amp;  &amp; \\\
+&amp;  &amp;  &amp;  &amp; \ddots &amp;  &amp;  &amp;  &amp; \\\
+&amp;  &amp;  &amp;  &amp;  &amp; -1 &amp;  &amp;  &amp; \\\
+&amp;  &amp;  &amp;  &amp;  &amp;  &amp; 0 &amp;  &amp; \\\
+&amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \ddots &amp; \\\
+&amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp;  &amp;0</code></pre><p>  \end{bmatrix}<br>  $$</p>
+</li>
+</ul>
+<pre><code>其中 $1$ 的个数 $p$ 称为正惯性指数，$-1$ 个数称为负惯性指数，$p-q$ 称为 $A$ 的符号差，正负惯性指数之和是 $A$ 的秩。
+
+两个 $n$ 阶实对称阵合同的充要条件是它们秩相同且正惯性指数也相同。
+
+特别地，若两个 $n$ 阶实对称阵的特征值相同，则它们必相似，从而必合同。</code></pre><h3 id="S-6-4-实二次型的分类-正定二次型"><a href="#S-6-4-实二次型的分类-正定二次型" class="headerlink" title="$\S 6.4$ 实二次型的分类 正定二次型"></a>$\S 6.4$ 实二次型的分类 正定二次型</h3><ul>
+<li><p>实二次型的分类</p>
+<p>  对于实二次型 $f(x) = x^TAx$，若对任何非零实向量 $x$ 都有 $f(x)$，则称 $f$ 为正定二次型。</p>
+<p>  可逆线性变化不改变实二次型的正定性。</p>
+</li>
+<li><p>正定二次型与正定矩阵<br>  $n$ 元实二次型正定的充分必要条件是其标准形中 $n$ 个平方项的系数全大于零。<br>  实二次型 $f(x) = x^TAx$ 正定的充分必要条件是 $A$ 的特征值全大于零。<br>  $n$ 元实二次型 $f(x) = x^TAx$ 正定的充分必要条件是它的正惯性指数为 $n$。</p>
+<p>  实二次型 $f(x) = x^TAx$ 正定的充分必要条件是 $A$ 的所有顺次主子式全大于零。</p>
+<p>  对于实对称矩阵$A$，如果实二次$f(x)=x^TAx$ 正定，则称 $A$ 是正定矩阵。</p>
+<p>  实对称矩阵 $A$ 正定的充分必要条件是 $A \simeq E$。</p>
+<p>  实对称矩阵 $A$ 正定的充分必要条件是：有可逆 $P$，使得 $A=P^TP$。</p>
+</li>
+<li><p>正定矩阵的一些简单性质：</p>
+<ol>
+<li>若 $A$ 是正定矩阵，则 $A^T, A^{-1}, A^*, A^k,kA$（ $k$ 为任意正实数）均为正定矩阵。</li>
+<li>若 $A$ 正定，则有 $|A|&gt;0$, 从而 $A$ 必可逆。</li>
+<li>设 $A$ 与 $B$ 是正定矩阵，则 $AB$ 是正定矩阵的充要条件是 $A$ 和 $B$ 可交换。</li>
+<li>设 $A、B$ 都是 $n$ 阶正定矩阵，则 $A+B$ 也是正定矩阵。</li>
+<li>设 $A$ 是 $n$ 阶正定矩阵，则对 $\forall \alpha &gt; 0, |A + \alpha E| &gt; \alpha^n$。</li>
+</ol>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>数学</tag>
+        <tag>大学课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux学习笔记：vim专题</title>
+    <url>/2023/08/27/Linux-Vim/</url>
+    <content><![CDATA[<span id="more"></span>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux 学习笔记</title>
+    <url>/2023/07/22/Linux/</url>
+    <content><![CDATA[<p>Linux 基础配置，包括 pacman 包管理，ranger 文件管理。</p>
+<span id="more"></span>
+
+<h3 id="更改字体大小"><a href="#更改字体大小" class="headerlink" title="更改字体大小"></a>更改字体大小</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">nvim ~/.Xresources</span><br></pre></td></tr></tbody></table></figure>
+
+<p>进去之后输入</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">Xft.dpi: 120</span><br></pre></td></tr></tbody></table></figure>
+
+<p>即可将字体调整到合适的大小了。</p>
+<h3 id="联网"><a href="#联网" class="headerlink" title="联网"></a>联网</h3><p>刚开始的时候需要输入一下命令:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">wpa_passphrase Wifi_name Wifi_password &gt; internet.conf</span><br></pre></td></tr></tbody></table></figure>
+
+<p>之后每次启动都要输入以下命令：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">ip link set wlo1 up</span><br><span class="line">sudo wpa_supplicant -c internet.conf -i wlo1 &amp;</span><br><span class="line">sudo dhcpcd</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="配置-VPN"><a href="#配置-VPN" class="headerlink" title="配置 VPN"></a>配置 VPN</h3><p>xfce 桌面环境下的 manjaro 没有图形化界面可以设置代理，只能用终端环境去编辑。</p>
+<p>更改 proxy 配置，首先打开终端并输入:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">sudo vim /etc/environment</span><br></pre></td></tr></tbody></table></figure>
+
+<p>然后找到以 “http_proxy” 开头的设置，如果没有就自己新建。</p>
+<p>添加如下：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http_proxy="http://your_proxy_server:proxy_port"</span><br><span class="line">https_proxy="http://your_proxy_server:proxy_port"</span><br><span class="line">socks_proxy="http://your_proxy_server:proxy_port"</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>参考：</strong> <a href="https://www.zhihu.com/question/586110918/answer/2910628561">xface如何设置系统代理?</a></p>
+<h3 id="pacman-教程"><a href="#pacman-教程" class="headerlink" title="pacman 教程"></a>pacman 教程</h3><p>pacman 之于 Arch，就好比 App store 之于 IOS。</p>
+<ul>
+<li><p><code>pacman -S xx</code></p>
+<p>  安装 xx 软件。</p>
+</li>
+<li><p><code>pacman -Sy</code></p>
+<p>  查询软件库是否是最新并更新。</p>
+</li>
+<li><p><code>pacman -Syy</code></p>
+<p>  强行刷新并更新至最新软件库。</p>
+</li>
+<li><p><code>pacman -Su</code></p>
+<p>  更新软件。</p>
+</li>
+<li><p><code>pacman -Syu</code></p>
+<p>  更新软件库并更新软件。</p>
+</li>
+<li><p><code>pacman -Syyu</code></p>
+<p>  强行刷新，更新至最新软件库并更新软件。</p>
+</li>
+<li><p><code>pacman -Ss xx</code></p>
+<p>  查询所有名称带 xx 的软件。</p>
+</li>
+<li><p><code>pacman -Sc</code></p>
+<p>  删除一些安装包等缓存。</p>
+</li>
+<li><p><code>pacman -R xx</code></p>
+<p>  删除软件。</p>
+</li>
+<li><p><code>pacman -Rs xx</code></p>
+<p>  删除软件及其相关依赖。</p>
+</li>
+<li><p><code>pacman -Rns xx</code>（推荐）</p>
+<p>  删除软件，相关依赖以及全局配置文件（但不会删除个人配置文件，如.vimrc）。</p>
+</li>
+<li><p><code>pacman -Q</code></p>
+<p>  查询电脑上所有软件。</p>
+</li>
+<li><p><code>pacman -Q | wc -l</code></p>
+<p>  快速知道有多少软件。</p>
+</li>
+<li><p><code>pacman -Qe</code></p>
+<p>  查询自己装的所有软件。</p>
+</li>
+<li><p><code>pacman -Qeq</code></p>
+<p>  查询自己装的所有软件且不显示版本号。</p>
+</li>
+<li><p><code>pacman -Qs xx</code></p>
+<p>  查询所有名字带 xx 的软件。</p>
+</li>
+<li><p><code>pacman -Qdt</code></p>
+<p>  查询所有不再被依赖的软件。</p>
+</li>
+<li><p><code>pacman -Qdtq</code></p>
+<p>  查询所有不再被依赖的软件且不显示版本号。</p>
+</li>
+<li><p><code>pacman -R $(pacman -Qdtq)</code></p>
+<p>  删除所有不再被依赖的软件。</p>
+</li>
+<li><p><code>nvim /etc/pacman.conf</code> </p>
+<p>  编辑 pacman 的配置文件。</p>
+</li>
+</ul>
+<h3 id="Ranger-教程"><a href="#Ranger-教程" class="headerlink" title="Ranger 教程"></a>Ranger 教程</h3><ul>
+<li><p><code>k</code> <code>j</code> 控制同目录下上下文件移动</p>
+</li>
+<li><p><code>[</code> <code>]</code>  控制上级目录的上下文件移动</p>
+</li>
+<li><p><code>&lt;Shift&gt; + H</code> 在历史记录中退回 <code>&lt;Shift&gt; + L</code> 在历史记录中前进</p>
+</li>
+<li><p><code>zh</code> 或 <code>&lt;Ctrl&gt; + h</code> 显示或隐藏系统文件</p>
+</li>
+</ul>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
+<li>查看桌面环境（DE）</li>
+</ul>
+<p>打开终端并复制粘贴此命令：</p>
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">echo $XDG_CURRENT_DESKTOP</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>查看系统信息</li>
+</ul>
+<p>在终端中输入 <code>screenfetch</code> 即可，显示桌面环境版本以及其他系统信息。</p>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux学习笔记：git专题</title>
+    <url>/2023/08/27/Linux-Git/</url>
+    <content><![CDATA[<p>git 学习笔记。</p>
+<span id="more"></span>
+
+<h3 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h3><p>git 是一款非常强大的版本管理软件，它可以使你的文字稿 / 代码 / 图片等很好地存储管理起来，让其不在丢失，甚至能看到你修改过的不同痕迹。而 github 是一个著名开源平台，你可以将代码放在该网站上，它上面的一个个仓库既可以让你存放你的代码，让别人看见，也可以让你学习到别人的代码，起到 ”我为人人，人人为我“ 的开源作用。</p>
+<p>本文参考于 <a href="https://www.bilibili.com/video/BV1Yx411f7Cu/?spm_id_from=333.1007.top_right_bar_window_custom_collection.content.click&amp;vd_source=0f0f84fd4f7853dba4619576003d75fb">再也不丢文件的方法～ Git从入门到精通</a>。</p>
+<h3 id="1-本地基础操作"><a href="#1-本地基础操作" class="headerlink" title="1. 本地基础操作"></a>1. 本地基础操作</h3><p>把当前文件夹变为一个 git 仓库 创建 git 仓库：<code>git init</code>。</p>
+<p>查看当前仓库文件变化情况：<code>git status</code>。</p>
+<blockquote>
+<p>如果文件是红色的，说明新的修改还未被添加，只有被添加的修改才能被提交，被保存好。</p>
+</blockquote>
+<p>添加修改：<code>git add xx</code>（xx 为想添加的文件名称）。</p>
+<blockquote>
+<p>可使用 <code>git add .</code> 来添加当前仓库所有修改。</p>
+</blockquote>
+<p>本次还没有提交的更改：<code>git diff</code>（比较工作区与暂存区的区别）。</p>
+<p>回滚，撤销提交操作：<code>git reset</code>。</p>
+<p>向 git 提交自己身份（name）：<code>git config --global user.name "xxx"</code>。</p>
+<p>向 git 提交自己身份（email）：<code>git config --global user.email "xxx@xx.com"</code>。</p>
+<p>向 git 提交内容：<code>git commit -m “xx”</code> （xx为对提交的内容进行描述）。</p>
+<blockquote>
+<p>如果直接 <code>git commit</code> 会进入一个编辑器界面，要求你对本次的修改进行描述。</p>
+<p>修改默认编辑器：<code>git config --global core.editor vim / vscode / emacs</code>。</p>
+<p><code>git commit -a</code> 可以直接</p>
+</blockquote>
+<p>让 git 不提交某些文件/忽略某些文件：创建文件 <code>.gitignore</code> 并在文件中添加文件名/文件夹名 即可。 </p>
+<blockquote>
+<p>若想让 <code>.gitignore</code> 忽略某些文件，但这些文件在之前已经被追踪过了，可以用：<code>git rm --cached xx （xx为文件名）</code> 来使 git 不再追踪这些文件。</p>
+</blockquote>
+<h3 id="2-git-分支"><a href="#2-git-分支" class="headerlink" title="2. git 分支"></a>2. git 分支</h3><p>git 添加分支：<code>git branch xx</code> （xx为分支名）。</p>
+<p>git 切换分支：<code>git checkout xx</code> （xx为分支名）。</p>
+<p>合并分支：<code>git merge xx</code>（xx为分支名）。</p>
+<p>列出本地分支：<code>git branch</code>。</p>
+<p>删除分支:<code>git branch -d xx</code> (xx为分支名，-D强制删除)。</p>
+<blockquote>
+<p>若 xx 分支有内容未被保存，git 会提醒你，不让你进行操作。</p>
+</blockquote>
+<h3 id="3-与别人共享代码-——-github-上线"><a href="#3-与别人共享代码-——-github-上线" class="headerlink" title="3. 与别人共享代码 —— github 上线"></a>3. 与别人共享代码 —— github 上线</h3><p>首先确保你在 github 上新建了一个仓库，使你本地的文件有仓库可以存放。</p>
+<p>添加远程仓库：<code>git remote add origin xxx</code> （xxx为远程地址）。</p>
+<p>首次将本地分支提交到远程仓库：<code>git push --set-upstrwam origin xx</code>（<code>xx</code> 为分支名称）。</p>
+<blockquote>
+<p>之后会让你输入用户名和密码，若你想输入一次之后就不用再输入，则只用在 <code>git push</code> 之前加上一句 <code>git config credential.helper store</code>。</p>
+<p>在次之后再提交这个分支只用 <code>git push</code> 即可。</p>
+</blockquote>
+<p>克隆仓库：<code>git clone xxx</code>（xxx为远程地址）。</p>
+<p>若和别人合作之后，再次想把代码拉去下来只需要：<code>git pull</code> 即可。 </p>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>算法笔记 | 数论（一）</title>
+    <url>/2023/07/05/Math-In-ACM-I/</url>
+    <content><![CDATA[<p>扩展欧几里得，逆元，欧拉函数</p>
+<span id="more"></span>
+
+<h2 id="1-扩展欧几里得算法"><a href="#1-扩展欧几里得算法" class="headerlink" title="1. 扩展欧几里得算法"></a>1. 扩展欧几里得算法</h2><h3 id="1-1-算法介绍"><a href="#1-1-算法介绍" class="headerlink" title="1.1 算法介绍"></a>1.1 算法介绍</h3><p>设 $a, b$ 为不全为 $0$ 的整数，存在整数 $x, y$ 使得 $ax + by = (a, b)$。</p>
+<p>进一步地，$ax + by = m$ 有解的充要条件是 $(a, b) | m$ （裴蜀定理，又叫做贝祖定理） 。</p>
+<h3 id="1-2-证明"><a href="#1-2-证明" class="headerlink" title="1.2 证明"></a>1.2 证明</h3><p>若我们求 $ax + by = (a, b)$ 的解，不如先求 $bx + (a \mod b) y = (b, a \mod b)$ 的解，而且由欧几里得算法可知 $(a, b) = (b, a \mod b)$。</p>
+<p>经过变换 $bx + (a \mod b)y = bx + (a - b \times \left \lfloor \dfrac{a}{b} \right \rfloor )y = ay + b(x - \left \lfloor \dfrac{a}{b} \right \rfloor y)$，所以得出 $bx + (a \mod b) y = (b, a \mod b)$ 的解为 $x_0, y_0$ 后就可以得出 $ax + by = (a, b)$ 的解是 $x = y_0, y = (x_0 - \left \lfloor \dfrac{a}{b} \right \rfloor y_0)$ 而通过不断辗转相除法，显然到最后我们得到的式子为 $(a, b)x + 0\times y = (a, b)$，很容易可以令 $x = 1, y = 0$ 为这里的一组解，然后不断迭代回去求出我们要的解。</p>
+<p>对于进一步结论的证明，若 $m$ 是该方程组的解，由于 $(a, b)$ 可以整除左式，那么 $(a, b)$ 也可以整除右式（充分性）。</p>
+<p>若 $(a, b)|m$，那么我们已知 $ax + by = (a, b)$ 的一组解，等式两边同时乘以 $\dfrac{m}{(a, b)}$ 便可以得到原方程组的解（必要性）。</p>
+<h3 id="1-3-实现"><a href="#1-3-实现" class="headerlink" title="1.3 实现"></a>1.3 实现</h3><figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">exgcd</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b, <span class="type">int</span> &amp;x, <span class="type">int</span> &amp;y)</span> </span>{</span><br><span class="line">    <span class="keyword">if</span> (b == <span class="number">0</span>) {</span><br><span class="line">        x = <span class="number">1</span>;</span><br><span class="line">        y = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    }</span><br><span class="line">    <span class="type">int</span> d = <span class="built_in">exgcd</span>(b, a % b, y, x); </span><br><span class="line">    y -= (a / b) * x;</span><br><span class="line">    <span class="keyword">return</span> d;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h2 id="2-逆元"><a href="#2-逆元" class="headerlink" title="2. 逆元"></a>2. 逆元</h2><h3 id="2-1-定义"><a href="#2-1-定义" class="headerlink" title="2.1 定义"></a>2.1 定义</h3><p>若 $ab \equiv 1(\mod p)$ 则称 $a$，$b$ 在 模 $p$ 意义下互为逆元，记为 $a = inv(b)$。</p>
+<h3 id="2-2-扩展欧几里得求逆元"><a href="#2-2-扩展欧几里得求逆元" class="headerlink" title="2.2 扩展欧几里得求逆元"></a>2.2 扩展欧几里得求逆元</h3><p>由上一节可知，扩展欧几里得可以求出 $ax + by = 1$ 的一组 $x, y$ 解，故我们要求 $ax \equiv 1(mod\ b)$ 即求 $ax + by = 1$ 的一组解，而且这里要求有解的条件是 $(a, b) = 1$，利用扩展欧几里得很容易得出。</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function">ll <span class="title">exgcd</span><span class="params">(ll a, ll b, ll &amp;x, ll &amp;y)</span> </span>{</span><br><span class="line">    <span class="keyword">if</span> (b == <span class="number">0</span>)</span><br><span class="line">    {</span><br><span class="line">        x = <span class="number">1</span>;</span><br><span class="line">        y = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    }</span><br><span class="line">    ll d = <span class="built_in">exgcd</span>(b, a % b, y, x);</span><br><span class="line">    y -= (a / b) * x;</span><br><span class="line">    <span class="keyword">return</span> d;</span><br><span class="line">}</span><br><span class="line"><span class="function">ll <span class="title">inv</span><span class="params">(ll a, ll p)</span> </span>{</span><br><span class="line">    ll x, y;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">exgcd</span>(a, p, x, y) != <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">return</span> (x % p + p) % p;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h3 id="2-3-费马小定理求逆元"><a href="#2-3-费马小定理求逆元" class="headerlink" title="2.3 费马小定理求逆元"></a>2.3 费马小定理求逆元</h3><p>费马小定理的内容如下：</p>
+<blockquote>
+<p>若 $p$ 为素数，且 $(a, p) = 1$，则 $a^{p - 1} \equiv 1(mod \ p)$。</p>
+</blockquote>
+<p><strong>证明（待完善）</strong></p>
+<p>利用该定理，不难得出 $inv(a) \equiv a^{p - 2}(mod \ p)$，故可以用快速幂来求解。</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> ll <span class="title">qpow</span><span class="params">(ll a, ll b, ll p)</span> </span>{</span><br><span class="line">    ll ans = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (b) {</span><br><span class="line">        <span class="keyword">if</span> (b &amp; <span class="number">1</span>) ans = ans % p * a % p;</span><br><span class="line">        a = a % p * a % p;</span><br><span class="line">        b &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="keyword">inline</span> ll <span class="title">inv</span><span class="params">(ll a, ll p)</span> </span>{</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">qpow</span>(a, p - <span class="number">2</span>, p);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="2-4-线性递推求解逆元"><a href="#2-4-线性递推求解逆元" class="headerlink" title="2.4 线性递推求解逆元"></a>2.4 线性递推求解逆元</h3><p>如果题目要求 $1 \sim n$ 的逆元，那么前两种方法都很低效，这里引入第三种，线性递推来求解。</p>
+<p>下面用 $O(n)$ 方法求 $1 \sim n$ 关于 $p$ 的逆元。</p>
+<p>首先显然 $1^{-1} \equiv 1(mod \ p)$。</p>
+<p>对于数 $i$，有 $p = ki + j$，这里 $k = \left \lfloor \dfrac{p}{i} \right \rfloor,j = p \% i$。</p>
+<p>那么则有 $ki + j \equiv 0(mod \ p)$，等式两边同时乘以 $i^{-1}j^{-1}$，则有 $kj^{-1} + i^{-1} \equiv 0(mod \ p)$。</p>
+<p>故 $i^{-1} \equiv -\left \lfloor \dfrac{p}{i} \right \rfloor(p \ mod \ i)^{-1}(mod \ p)$，而且 $p \ mod \ i$ 肯定小于 $i$ ，所以可以由前递推后。</p>
+<p>值得一提的是，这里为防止出现负数，所以写的是 <code>p - p / i</code> ，而且当 $i | p$ 时 <code>inv[i]</code> 应该是没有意义的，我们往往用大素数 $10^9 + 7$ 来表示。</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line">inv[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt;= n; ++i) {</span><br><span class="line">  inv[i] = (<span class="type">long</span> <span class="type">long</span>)(p - p / i) * inv[p % i] % p;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="2-5-求任意-n-个数的逆元"><a href="#2-5-求任意-n-个数的逆元" class="headerlink" title="2.5 求任意 n 个数的逆元"></a>2.5 求任意 n 个数的逆元</h3><p>对于求任意 $n$ 个数 $a_i$，我们算这个 $n$ 个数的前缀积，记为 $s_i$。</p>
+<p>然后我们计算 $s_n$ 的逆元为 $sInv_n$，那么 $s_i$ 的逆元为 $sInv_i =sInv_{i + 1} \times a_{i + 1}$。</p>
+<p>然后易得 $a_i$ 的逆元 $Inv_i = sInv_i \times s_{i - 1}$。</p>
+<p>时间复杂度近似 $O(n)$。 </p>
+<h2 id="3-欧拉函数"><a href="#3-欧拉函数" class="headerlink" title="3. 欧拉函数"></a>3. 欧拉函数</h2><h2 id="4-中国剩余定理"><a href="#4-中国剩余定理" class="headerlink" title="4. 中国剩余定理"></a>4. 中国剩余定理</h2><h3 id="4-1-问题简述"><a href="#4-1-问题简述" class="headerlink" title="4.1 问题简述"></a>4.1 问题简述</h3><p>中国剩余定理是用来求解诸如<br>$$<br>\begin{cases} x \equiv a_1(\mod n_1) \\ x \equiv a_2(\mod n_2) \\ \ \ \ \ \vdots \\ x \equiv a_k(\mod n_k) \end{cases}<br>$$<br>这样的方程组问题。</p>
+<h3 id="4-2-过程"><a href="#4-2-过程" class="headerlink" title="4.2 过程"></a>4.2 过程</h3><ol>
+<li>算所有模数的积 $n$；</li>
+<li>对于第 $i$ 个方程：<ul>
+<li>计算 $m_i = \dfrac{n}{n_i}$；</li>
+<li>计算 $m_i$ 在模 $n_i$ 意义下的逆元 $m_i^{-1}$；</li>
+<li>计算 $c_i = m_im_i^{-1}$（这时不要对 $n_i$ 取模）</li>
+</ul>
+</li>
+<li>方程组在模 $n$ 意义下的唯一解为 $x = \sum_{i = 1}^k a_ic_i(\mod n)$</li>
+</ol>
+<h3 id="4-3-实现"><a href="#4-3-实现" class="headerlink" title="4.3 实现"></a>4.3 实现</h3><figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">CRT</span><span class="params">()</span> </span>{</span><br><span class="line">  ll n, M = <span class="number">1</span>, ans = <span class="number">0</span>;</span><br><span class="line">  cin &gt;&gt; n; </span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) {</span><br><span class="line">    cin &gt;&gt; b[i] &gt;&gt; a[i];</span><br><span class="line">    M *= b[i];</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) {</span><br><span class="line">    ll m = M / b[i];</span><br><span class="line">    ll x, y;</span><br><span class="line">    <span class="built_in">exgcd</span>(m, b[i], x, y); <span class="comment">// 注：如果模数不为质数时，求逆元不能用费马小定理来算，只能用扩欧来算</span></span><br><span class="line">    x = (x + b[i]) % b[i]; x %= M;</span><br><span class="line">    m *= x; m %= M;</span><br><span class="line">    ans += a[i] * m % M;</span><br><span class="line">    ans %= M;</span><br><span class="line">  }</span><br><span class="line">  cout &lt;&lt; (ans % M + M) % M &lt;&lt; endl;</span><br><span class="line">  <span class="keyword">return</span> ;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="4-4-扩展中国剩余定理"><a href="#4-4-扩展中国剩余定理" class="headerlink" title="4.4 扩展中国剩余定理"></a>4.4 扩展中国剩余定理</h3><p>中国剩余定理的适用范围是模数互质的情况，那么当方程模数不互质时我们要用到扩展中国剩余定理。</p>
+<p>思路是不断把 $n$ 个方程两两合并，对于<br>$$<br>\begin{cases} x \equiv b(\mod a) \\ x \equiv B(\mod A)  \end{cases}<br>$$<br>我们令 $x = ya + b = YB + A$ ，那么有 $B - b = ya - YA$，我们利用扩欧可以求解出 $x’a + y’A = (a,A)$ 的一组解，那么若 $(a, A) \nmid B-b$ 则方程无解，对于有解的情况 $(x’ \times \dfrac{B - b}{(a, A)})a + (y’ \times \dfrac{B - b}{(a, A)})A = B - b$，令 $X = x’ \times \dfrac{B - b}{(a, A)}, Y = y’ \times \dfrac{B - b}{(a, A)}$ 若是让解最小即是让 $X$ 最小，我们调整 $X$ 可以通过让 $X + k \times \dfrac{A}{(a, A)}$，这时 $Y$ 相应减去同等系数的 $\dfrac{a}{(a, A)}$。所以 $X = (X \mod \dfrac{A}{(a, A)} + \dfrac{A}{(a, A)}) \mod \dfrac{A}{(a, A)}$。求出新的 $X$ 后再根据 $x = yX + a$ 可以求出新的 $x$，新的 $b = x \mod \dfrac{A \times a}{(a, A)}$，新的 $a = \dfrac{A \times a}{(a, A)}$。那么就可以得出新的方程 $x \equiv b(\mod a)$ 了。最后通过不断合并变为一个方程就能求出答案了。  </p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">ExCRT</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) {</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%lld%lld"</span>, &amp;A, &amp;B);</span><br><span class="line">    <span class="keyword">if</span>(i == <span class="number">1</span>) {</span><br><span class="line">      a = A;</span><br><span class="line">      b = B;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span> {</span><br><span class="line">      g = <span class="built_in">exgcd</span>(a, A, x, y);</span><br><span class="line">      <span class="keyword">if</span>((B - b) % g) {</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"-1"</span>);</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">      }</span><br><span class="line">      x = x * ((B - b) / g);</span><br><span class="line">      x = (x % (A / g) + (A / g)) % (A / g);</span><br><span class="line">      l = A / g * a;</span><br><span class="line">      b = ((a * x + b) % l + l) % l;</span><br><span class="line">      a = l;</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>, b % a);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h2 id="5-卢卡斯定理"><a href="#5-卢卡斯定理" class="headerlink" title="5. 卢卡斯定理"></a>5. 卢卡斯定理</h2><h3 id="5-1-定义"><a href="#5-1-定义" class="headerlink" title="5.1 定义"></a>5.1 定义</h3><p>对于质数 $p$，有<br>$$<br>\begin{pmatrix} n \\ m \end{pmatrix} \mod p = \begin{pmatrix} \left \lfloor \dfrac{n}{p} \right \rfloor \\ \left \lfloor \dfrac{m}{p}\right \rfloor \end{pmatrix} \cdot \begin{pmatrix} n \mod p \\m \mod p \end{pmatrix} \mod p<br>$$<br>由于$n \mod p$ 和 $m \mod p$ 肯定小于 $p$，所以直接算即可，对 $\left \lfloor \dfrac{n}{p} \right \rfloor$ 部分再用卢卡斯定理计算。</p>
+<p>也即 $Lucas(n,m,p)=c(n\%p,m\%p)×Lucas(\dfrac{n}{p},\dfrac{m}{p},p)$。</p>
+<h3 id="5-2-证明"><a href="#5-2-证明" class="headerlink" title="5.2 证明"></a>5.2 证明</h3><p>首先证明首先我们需要证明 $C_p^i \equiv \dfrac{p}{i}C_{p - 1}^{i - 1} \equiv 0(\mod p)(1 \le i \le p-1)$ 由于 $p$ 为质数，故 $\dfrac{1}{i}C_{p - 1}^{i - 1}$ 为整数，乘以 $p$ 后和 $p$ 同余为 $0$，故得证。</p>
+<p>根据这个性质有 $(1 + x)^p \equiv 1 + x^p(\mod p)$</p>
+<p>对于 $C_m^n \mod p$，其实就是求 $(1 + x^n)\mod p$ 中 $x^m$ 的系数。</p>
+<p>我们令 $n = ap +b$，$m = cp + d$。所以接下来证 $C_n^m \equiv C_a^c \times C_b^d(\mod p)$。</p>
+<p>我们有<br>$$<br>(1 + x)^n \equiv (1 + x)^{pa}(1 + x)^b \equiv (1 + x^p)^a(1 + x)^b(\mod p)<br>$$<br>观察 $x^m$ 的系数，故 $C_n^m x^m \equiv C_a^c x^{cp}C_b^dx^d(\mod p)$，由于 $x^b$ 系数一致，所以<br>$$<br>C_n^m \equiv C_a^c \times C_b^d \equiv C_{\left \lfloor \frac{n}{p} \right \rfloor}^{\left \lfloor \frac{m}{p} \right \rfloor} \times C_{n \mod p}^{m \mod p}(\mod p)<br>$$<br>故得证。</p>
+<h3 id="5-3-实现"><a href="#5-3-实现" class="headerlink" title="5.3 实现"></a>5.3 实现</h3><figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function">ll <span class="title">Lucas</span><span class="params">(ll n, ll m)</span> </span>{</span><br><span class="line">  <span class="keyword">return</span> ((m == <span class="number">0</span>) ? <span class="number">1</span> : (<span class="built_in">c</span>(n % p, m % p) % p * <span class="built_in">Lucas</span>(n / p, m / p) % p));</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="5-4-扩展卢卡斯定理"><a href="#5-4-扩展卢卡斯定理" class="headerlink" title="5.4 扩展卢卡斯定理"></a>5.4 扩展卢卡斯定理</h3>]]></content>
+      <tags>
+        <tag>算法竞赛</tag>
+        <tag>数学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大学笔记 | 大学物理BI</title>
+    <url>/2023/06/06/Physics-I/</url>
+    <content><![CDATA[<p>从入门到放弃。</p>
+<span id="more"></span>
+
+<p>公式汇总<br>$$<br>\begin{gather}<br>热力学\\ \<br>内能 \ \Delta E = \frac{i}{2}\frac{m}{M}R\Delta T = \frac{i}{2}pV\\ \<br>热量 \ Q = \frac{m}{M}C_k \Delta T \\ \<br>等体过程\ C_V = \frac{i}{2}R \ \ 等压过程\ C_p = \frac{i + 2}{2}R\\ \<br>等温过程\ A = \frac{m}{M}RTln\frac{V_2}{V_1}\\ \\<br>一般PV围成的面积减小是放热，增大是吸热\\ \\<br>p = nkT(微观形式)\\ \<br>\varepsilon_k = \frac{3}{2}kT\\ \<br>电场\\ \<br>均匀带电圆环轴线上电场 \ E = \frac{qx}{4\pi \varepsilon_0 (R^2 + x^2) ^{3/2}}\\ \<br>圆电流圆心处电场 \ E = 0\\ \<br>平板电容\ C = \frac{\varepsilon S}{d}\ 圆柱形电容\ C = \frac{2\pi \varepsilon l}{ln\frac{R_B}{R_A}}\ 平板电容\ C = \frac{4\pi\varepsilon R_A R_B}{R_A - R_B}\ \\ \<br>磁场 \\ \<br>圆电流轴线上磁场 \ B = \frac{\mu_0 I R^2}{2(R^2 + x^2)^{3 / 2}}\\ \<br>圆电流圆心处产生磁场 \ B = \frac{\mu I}{2R} \\ \<br>\end{gather}<br>$$</p>
+<h2 id="第三章-刚体的定轴转动"><a href="#第三章-刚体的定轴转动" class="headerlink" title="第三章 刚体的定轴转动"></a>第三章 刚体的定轴转动</h2><ul>
+<li>常见几何体的转动惯量<ul>
+<li>细圆环 &amp; 薄圆环 $MR^2$</li>
+<li>薄圆盘 &amp; 圆柱体 $\frac{1}{2}MR^2$</li>
+<li>细棒 中心轴 $\frac{1}{12}MR^2$ 一端 $\frac{1}{3}ML^2$</li>
+<li>薄球壳 $\frac{2}{3}MR^2$</li>
+<li>球体 $\frac{2}{5}MR^2$</li>
+</ul>
+</li>
+</ul>
+<h2 id="第六章-热力学基础"><a href="#第六章-热力学基础" class="headerlink" title="第六章 热力学基础"></a>第六章 热力学基础</h2><h3 id="S-6-1-热力学第一定律"><a href="#S-6-1-热力学第一定律" class="headerlink" title="$\S 6.1$ 热力学第一定律"></a>$\S 6.1$ 热力学第一定律</h3><ul>
+<li><p>热力学过程，准静态过程(曲线描述， 方程描述)</p>
+<p>  <strong>只有准静态过程才能用曲线描述出来</strong></p>
+</li>
+<li><p>内能， 热量， 功</p>
+<p>​    </p>
+<p>​    </p>
+</li>
+</ul>
+<h3 id="6-2-理想气体的典型热力学过程"><a href="#6-2-理想气体的典型热力学过程" class="headerlink" title="$6.2$ 理想气体的典型热力学过程"></a>$6.2$ 理想气体的典型热力学过程</h3><ul>
+<li><p>等体过程$$\begin{cases} 功 &amp; \\ 内能 &amp; \\ 热量 &amp; \end{cases}$$</p>
+</li>
+<li><p>等压过程$$\begin{cases} 功 &amp; \\ 内能 &amp; \\ 热量 &amp; \end{cases}$$</p>
+</li>
+<li><p>等温过程$$\begin{cases} 功 &amp; \\ 内能 &amp; \\ 热量 &amp; \end{cases}$$</p>
+</li>
+<li><p>绝热过程$$\begin{cases} 功 &amp; \\ 内能 &amp; \\ 热量 &amp; \end{cases}$$</p>
+</li>
+</ul>
+<h3 id="S-6-3-循环过程"><a href="#S-6-3-循环过程" class="headerlink" title="$\S 6.3$ 循环过程"></a>$\S 6.3$ 循环过程</h3><h3 id="S-6-4-热力学第二定律"><a href="#S-6-4-热力学第二定律" class="headerlink" title="$\S 6.4$ 热力学第二定律"></a>$\S 6.4$ 热力学第二定律</h3><h2 id="第七章-静电场"><a href="#第七章-静电场" class="headerlink" title="第七章 静电场"></a>第七章 静电场</h2><h4 id="第七章总结"><a href="#第七章总结" class="headerlink" title="第七章总结"></a>第七章总结</h4><ol>
+<li><p>$k = \frac{1}{4\pi \varepsilon_0}$ ，$F = \frac{q_1q_2}{4\pi \varepsilon r^2}$</p>
+</li>
+<li><p>无限长均匀带电直线和均匀带电半圆弧对圆心处场强相等</p>
+</li>
+<li><p>电位移矢量 $\vec D = \varepsilon_0\varepsilon_r\vec E = \varepsilon \vec E$ ，很多时候 $\vec D$ 和 $\vec E$ 很相像，只是 $D$ 既与 $E$ 有关，又与电介质有关 </p>
+</li>
+<li><p>$\oint \vec D \cdot d\vec S = q$ ，多用对称做</p>
+</li>
+<li><p>$W_e = \frac{1}{2}U_{ab}Q, w_e = \frac{1}{2}DE$</p>
+</li>
+<li><p>平行板电容 $C = \frac{\varepsilon S}{d}$ ，圆柱形电容 $C = \frac{2 \pi \varepsilon l}{ln\frac{R_B}{R_A}}$， 球形电容 $C = \frac{4\pi \varepsilon R_A R_B}{R_B - R_A}$</p>
+</li>
+</ol>
+<h3 id="S-7-1-点电荷-库仑定律"><a href="#S-7-1-点电荷-库仑定律" class="headerlink" title="$\S 7.1$ 点电荷 库仑定律"></a>$\S 7.1$ 点电荷 库仑定律</h3><ul>
+<li>电荷的分类，电荷的量子化，电荷守恒定律，点电荷</li>
+<li>库伦定律<ul>
+<li>真空中， $\vec{F} = k\frac{q_1q_2}{r^2}\vec{e_r} = \frac{1}{4\pi\varepsilon_0}\frac{q_1q_2}{r^2}\vec{e_r}$</li>
+<li>电介质中，$\vec{F} = \frac{1}{4\pi\varepsilon_0\varepsilon_r}\frac{q_1q_2}{r^2}\vec{e_r} = \frac{1}{4\pi\varepsilon}\frac{q_1q_2}{r^2}\vec{e_r}$</li>
+</ul>
+</li>
+</ul>
+<h3 id="S-7-2-电场-电场强度"><a href="#S-7-2-电场-电场强度" class="headerlink" title="$\S 7.2$ 电场 电场强度"></a>$\S 7.2$ 电场 电场强度</h3><p>​    电荷之间的作用是通过电场实现的</p>
+<ul>
+<li><p>电场强度 $\vec{E}= \frac{\vec{F}}{q_0} $</p>
+</li>
+<li><p>场强叠加原理</p>
+</li>
+<li><p>场强计算</p>
+<ul>
+<li><p>点电荷 $\vec{E} = \frac{q}{4\pi\varepsilon_0r^2}\vec{e_r}$</p>
+</li>
+<li><p>电偶极子（偶极矩 $\vec{p} = q\vec{l}$）（特殊情况下场强用中垂线和轴线场强叠加得到）</p>
+<p>  中垂线上场强 $E_B = \frac{ql}{4\pi\varepsilon_0(r^2 + \frac{l^2}{4})^{3/2}}\approx \frac{-\vec{p}}{4\pi\varepsilon_0r^3}$</p>
+<p>  轴线上场强 $E_A = \frac{1}{4\pi\varepsilon_0}[\frac{q}{(r - \frac{l}{2})^2} - \frac{q}{(r + \frac{l}{2})^2}] \approx\frac{ql}{2\pi\varepsilon_0r^3} = \frac{\vec{p}}{2\pi\varepsilon_0r^3}$</p>
+</li>
+<li><p><img src="%E4%BE%8B4.1.png" alt="例4.1"></p>
+<p>  对于一均匀带电直线（$l,q$) 如上图，与其垂直相距 $a$ 的一点场强</p>
+<p>  $E_x = \frac{\lambda}{4\pi\varepsilon_0a}(sin\theta_2 - \sin\theta_1)$</p>
+<p>  $E_y = \frac{\lambda}{4\pi\varepsilon_0a}(cos\theta_1 - \cos\theta_2)$</p>
+<p>  特殊的，中垂线上 $E = E_y = \frac{q}{4\pi\varepsilon_0a\sqrt{a^2 + l^2/4}}$</p>
+<p>  ​                直线无限长时，$E = E_y = \frac{\lambda}{2\pi\varepsilon_0a}$</p>
+</li>
+<li><p>圆环轴线电场计算既可以直接算，也可以把上下分成两部分，各压缩为 $\frac{q}{2}$ 的点电荷来算 $E = \frac{1}{4\pi\varepsilon_0}\frac{qx}{(R^2 + x^2)^{\frac{3}{2}}}$</p>
+</li>
+<li><p>算圆盘电场可看作无数个圆环电场叠加 $E = \int_0^R\frac{1}{4\pi\varepsilon_0}\frac{2x\sigma\pi rdr}{(x^2 + r^2)^{3/2}} = \frac{\sigma}{2\varepsilon_0}[1-\frac{x}{\sqrt{x^2+R^2}}]$</p>
+<p>  特殊的，当 $R \to \infty$，$E = \frac{\sigma}{2\varepsilon_0}$</p>
+<p>  将两个带有等量异种电荷无限大板放一块，板中间 $E = \frac{\sigma}{\varepsilon_0}$，板外是 $0$</p>
+<p>  注：电荷量密度是代数量，本身有正负</p>
+</li>
+<li><p>无限长均匀带电直线和均匀带电半圆弧对圆心产生的q等效</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="S-7-3-静电场中的电介质-电位移"><a href="#S-7-3-静电场中的电介质-电位移" class="headerlink" title="$\S 7.3$ 静电场中的电介质 电位移"></a>$\S 7.3$ 静电场中的电介质 电位移</h3><ul>
+<li><p>电介质，偶极子模型，有极分子，无极分子</p>
+</li>
+<li><p>电介质的极化（一般电场越强，温度越低（温度低使分子无规律性降低），分子排列越有序，极化效果越显著）</p>
+<ul>
+<li><p>位移极化</p>
+<p>  分子中正负电荷各收到电场力，由于正负电荷中心相对位移而极化</p>
+</li>
+<li><p>转向极化</p>
+<p>  分子收到电场产生的力矩作用而有序排列，从而产生的极化</p>
+<p>二者宏观表现相同，一般不刻意区分</p>
+<p>当介质中分子电偶极矩和不为零时，介质被极化</p>
+<p>分子极化导致介质端面上出现的电荷称为束缚电荷，这种现象称为电极化</p>
+<p>介质中电场 $E$ 是由自由电荷电场 $E_0$ 和极化电荷电场 $E’$ 叠加的结果，有 $\vec{E} = \vec{E’} + \vec{E_0}$（$E_0, E’$ 方向相反）</p>
+<p>当介质<strong>均匀充满</strong>电场时，介质中任一点场强 $\vec{E}$ 为原来真空中该处场强 $\vec{E_0}$ 的 $\frac{1}{\varepsilon_r}$，$\varepsilon_r$ 因介质而异</p>
+<p>电介质不被击穿的最大电场强度为该电介质的介电强度</p>
+</li>
+</ul>
+</li>
+<li><p>电极化强度</p>
+<p>  $\vec P = \frac{\sum \vec P_{mole}}{\Delta V}$，单位是 $C·m^{-2}$ ，称为电极化强度矢量，反映了介质内电极化的强弱和方向</p>
+<p>  均匀极化后的电极化强度等于极电荷密度 $\vec P = \sigma’$</p>
+<p>  故有 $\vec E_0 = \frac{\sigma}{\varepsilon_0},\vec E’ = \frac{\sigma’}{\varepsilon_0},\vec E = \frac{\sigma}{\varepsilon_0\varepsilon_r}$，带入三者关系式得 $\sigma’ = \frac{\varepsilon_r - 1}{\varepsilon_r} \sigma$，反映了自由电荷和极化电荷的关系</p>
+<p>  令 $\chi_e = \varepsilon_e - 1$，称为电介质的电极化率，那么 $P = \frac{\varepsilon_r - 1}{\varepsilon_r} \sigma = \varepsilon_0\chi_eE$</p>
+</li>
+<li><p>电位移矢量</p>
+<p>  $\vec D = \varepsilon_0\vec E + \vec P = \varepsilon_0\varepsilon_r\vec E = \varepsilon\vec E$，$\vec D$ 为电位移矢量，$\varepsilon$ 称为介电常数</p>
+</li>
+</ul>
+<h3 id="S-7-4-静电场中高斯定理"><a href="#S-7-4-静电场中高斯定理" class="headerlink" title="$\S 7.4$ 静电场中高斯定理"></a>$\S 7.4$ 静电场中高斯定理</h3><ul>
+<li><p>电场线（有源性，无旋性，互不相交），电位移线，电通量$\Phi_e$（穿出闭合面为正，穿出为负）</p>
+</li>
+<li><p>高斯定理</p>
+<p>  $\oint_S \vec D d\vec S = \sum q_i$ 这里的 $q$ 均为高斯面内部，高斯面并不客观存在</p>
+</li>
+</ul>
+<h3 id="S-7-5-静电场的环路定理-电势"><a href="#S-7-5-静电场的环路定理-电势" class="headerlink" title="$\S 7.5$ 静电场的环路定理 电势"></a>$\S 7.5$ 静电场的环路定理 电势</h3><ul>
+<li><p>静电场的环路定理</p>
+<p>  $\oint_L E·dl = 0$，电场力是保守力，静电场是保守力场（有势场）</p>
+</li>
+<li><p>电势，电势叠加原理，</p>
+</li>
+</ul>
+<h3 id="S-7-6-电场强度与电势梯度的关系"><a href="#S-7-6-电场强度与电势梯度的关系" class="headerlink" title="$\S 7.6$ 电场强度与电势梯度的关系"></a>$\S 7.6$ 电场强度与电势梯度的关系</h3><ul>
+<li><p>等势面，电势梯度</p>
+<p>  $\bigtriangledown = \frac{\partial}{\partial x}\vec i + \frac{\partial}{\partial y}\vec j + \frac{\partial}{\partial z}\vec k \to \vec E = -\bigtriangledown U$</p>
+</li>
+</ul>
+<h3 id="S-7-7-静电场中的导体"><a href="#S-7-7-静电场中的导体" class="headerlink" title="$\S 7.7$ 静电场中的导体"></a>$\S 7.7$ 静电场中的导体</h3><ul>
+<li><p>静电平衡</p>
+<ul>
+<li><p>条件</p>
+<p>  导体内部 $\vec E = 0$，导体表面 $\vec E$ 与导体垂直，故导体为等势体</p>
+</li>
+<li><p>净电荷只分布于表面</p>
+<p>  对于有空腔，空腔内无电荷的导体，净电荷依然只分布在外表面</p>
+<p>  对于有空腔且空腔内有电荷的导体，内空腔表面产生电荷是内空腔电荷代数和为 $0$</p>
+<p>  处于静电平衡的导体表面电荷面密度与该处表面曲率半径成正比</p>
+<p>导体表面<strong>附近</strong>电场强度 $E = \frac{\sigma}{\varepsilon_0}$</p>
+</li>
+</ul>
+</li>
+<li><p>静电屏蔽</p>
+<p>  导体空腔可以使腔内空间不受腔外带电体影响</p>
+<p>  接地导体空腔可以使腔外空间不受腔内带电体影响</p>
+</li>
+<li><p>电容器</p>
+<ol>
+<li><p>平板电容器</p>
+<p> $E = \frac{\sigma}{\varepsilon},U_{AB} = \frac{\sigma}{\varepsilon}d = \frac{qd}{\varepsilon s},C = \frac{q}{U_{AB}} = \frac{\varepsilon S}{d}$</p>
+</li>
+<li><p>圆柱形电容器</p>
+<p> $E = \frac{\lambda}{2\pi\varepsilon r},U_{AB} = \frac{\lambda}{2\pi\varepsilon}ln\frac{R_B}{R_A},C = \frac{q}{U_{AB}} = \frac{2\pi\varepsilon l}{ln\frac{R_B}{R_A}}$</p>
+</li>
+<li><p>球形电容器</p>
+<p> $E = \frac{q}{4\pi\varepsilon r^2},U_{AB} = \frac{q}{4\pi\varepsilon}(\frac{1}{R_A}-\frac{1}{R_B}),C = \frac{q}{U_{AB}} = \frac{4\pi\varepsilon R_A R_B}{R_B-R_A}$</p>
+<p>决定电容器电容的因素是电容器的大小，形状，板间电介质</p>
+</li>
+</ol>
+</li>
+<li><p>电场能量</p>
+<p>  $W_e = \frac{1}{2}U_{ab}Q = \frac{1}{2}CU_{ab}^2 = \frac{1}{2}\frac{Q_{ab}^2}{C}$</p>
+<p>  $w_e = \frac{W_e}{V} = \frac{1}{2}\varepsilon E^2$，$w_e$ 是电场能量密度</p>
+<p>  $W_e = \int_V w_edV$</p>
+</li>
+</ul>
+<h2 id="第八章-稳恒磁场"><a href="#第八章-稳恒磁场" class="headerlink" title="第八章 稳恒磁场"></a>第八章 稳恒磁场</h2><h3 id="S-8-1-恒定电流"><a href="#S-8-1-恒定电流" class="headerlink" title="$\S 8.1$ 恒定电流"></a>$\S 8.1$ 恒定电流</h3><ul>
+<li><p>电流和电流密度</p>
+<p>  $I = \frac{dq}{dt} = qnvs$</p>
+<p>  传导电流：到电介质中电荷的定向移动</p>
+<p>  运流电流：带电导体的机械运动</p>
+<p>  电流密度 $\vec J = \frac{dI}{dS_\tau}\vec e_n = \rho \vec v = nq \vec v$ </p>
+<p>  $dI = JdS \times cos\theta = \vec J \cdot d\vec S,I = \int_S \vec J \cdot d\vec S$</p>
+</li>
+<li><p>欧姆定律</p>
+<p>  $I = \frac{U}{R} = GU$</p>
+<p>  $R = \int \frac{\rho dl}{S}$</p>
+<p>  $J = \sigma E$      $\sigma$ 是电导率，$E$ 是场强</p>
+</li>
+<li><p>电动势</p>
+<p>  电源提供非静电力使正电荷沿逆静电场方向运动</p>
+<p>  电动势是单位正电荷绕闭合回路运动一周非静电力做的功 $\varepsilon = \frac{A}{q} = \oint_L\vec E_k d\vec l$ </p>
+<p>  与电势不同的是，电动势与路径<strong>有关</strong></p>
+</li>
+</ul>
+<h3 id="S-8-2-基本磁现象-安培定律"><a href="#S-8-2-基本磁现象-安培定律" class="headerlink" title="$\S 8.2$ 基本磁现象 安培定律"></a>$\S 8.2$ 基本磁现象 安培定律</h3><ul>
+<li><p>基本磁现象</p>
+</li>
+<li><p>安培定律</p>
+<p>  $F = \frac{\mu_0}{4\pi}\oint_{c_2}I_2d\vec l_2 \times \oint_{c_1} \frac{I_1d\vec l_1 \times \vec r_{12}}{\vec r_{12}^3} $</p>
+<p>  方向：右手法则</p>
+<p>  电流元之间的安培力不满足力的作用力和反作用力定律</p>
+<blockquote>
+<p>可以这样想，看是否满足力的相互作用关系就是看它们是否动量守恒，而两个电流元和它们中间的电磁场作为一个整体是守恒的，而电磁场动量不为 $0$，故不满足作用力与反作用力关系</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="S-8-3-磁场-毕奥-萨伐尔定律"><a href="#S-8-3-磁场-毕奥-萨伐尔定律" class="headerlink" title="$\S 8.3$ 磁场 毕奥-萨伐尔定律"></a>$\S 8.3$ 磁场 毕奥-萨伐尔定律</h3><ul>
+<li><p>磁场 磁感应强度</p>
+<p>  磁场是一种特殊形态的<strong>物质</strong></p>
+<p>  磁矩 $\vec m = IS\vec e_n$ 其中 $\vec e_n$ 与 $I$ 成方向满足右手螺旋定则</p>
+<p>  $B = \frac{F_{max}}{qv} = \frac{dF}{Idl}$ ，$\vec B$ 的方向：$\vec F_{max} \times \vec v$</p>
+</li>
+<li><p>毕奥-萨伐尔定律</p>
+<p>  电流元视为运动电荷的集合 $Id\vec l = dNq\vec v = nsd\vec lq \vec v$</p>
+<p>  $dB = \frac{\mu_0Id\vec l \times \vec r}{4\pi r^3} = N\frac{\mu_0}{4\pi}\frac{q\vec v \times \vec r}{r^3},\ \mu_0 = 4\pi \times 10 ^{-7} N / A^2$</p>
+<p>  方向遵循右手法则 $Id\vec l \times \vec r$</p>
+<ul>
+<li><p>有限长的载流直导线磁场 $B = \frac{\mu_0I}{4\pi x}(cos\theta_1 - cos\theta_2)$</p>
+<p><img src="%E8%BD%BD%E6%B5%81%E7%9B%B4%E5%AF%BC%E7%BA%BF%E7%A3%81%E5%9C%BA.png" alt="载流直导线磁场"></p>
+<p>​    一些特殊情况</p>
+<p>​        点在直导线延长线上时 $B = 0$</p>
+<p>​        无限长的载流直导线磁场 $B = \frac{\mu_0I}{2\pi a}$</p>
+<p>​        半无限长的载流直导线磁场 $B = \frac{\mu_0I}{4\pi a}$</p>
+<p>​        圆电流轴线上的磁场</p>
+<p>​        $B = \frac{\mu_0IR^2\vec i}{2(R^2 + x^2)^{3/2}}$</p>
+</li>
+<li><p>圆电流直线上磁场磁场 $B = \frac{\mu_0IR^2\vec i}{2(R^2 + x^2)^{3/2}}$</p>
+<p>  <img src="%E5%9C%86%E7%94%B5%E6%B5%81%E8%BD%B4%E7%BA%BF%E4%B8%8A%E7%9A%84%E7%A3%81%E5%9C%BA.png" alt="圆电流轴线上的磁场"></p>
+<p>  一些说明</p>
+<p>  ​            x=0时 $B = \frac{\mu_0 I}{2R}$</p>
+<p>  ​            方向满足右手螺旋定则</p>
+<p>  ​            N匝时， $B = N\frac{\mu_0IR^2\vec i}{2(R^2 + x^2)^{3/2}}$</p>
+<p>  半无限长的载流直导线磁场 $B = \frac{\mu_0I}{4\pi a}$</p>
+</li>
+<li><p>载流直螺线管内部磁场 $B = \frac{\mu_0 nI}{2}(cos \beta_2 - cos\beta_1)$</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="%E8%9E%BA%E7%BA%BF%E7%AE%A1%E5%86%85%E9%83%A8%E7%A3%81%E5%9C%BA-1.png" alt="螺线管内部磁场-1"></p>
+<p><img src="%E8%9E%BA%E7%BA%BF%E7%AE%A1%E5%86%85%E9%83%A8%E7%A3%81%E5%9C%BA-2.png" alt="螺线管内部磁场-2"></p>
+<p>​        一些特殊情况</p>
+<p>​            无限长螺线管内部磁场 $B = \mu_0nI$</p>
+<p>​            半无限长螺线管内部磁场 $B = \frac{\mu_0nI}{2}$</p>
+<h3 id="S-8-4-磁通量-磁场中的高斯定理"><a href="#S-8-4-磁通量-磁场中的高斯定理" class="headerlink" title="$\S 8.4$ 磁通量 磁场中的高斯定理"></a>$\S 8.4$ 磁通量 磁场中的高斯定理</h3><ul>
+<li>磁场线</li>
+</ul>
+<p>​        该点切线方向为该点磁场方向</p>
+<p>​        不相交，是闭合的，磁场线和形成磁场的电流成右手螺旋关系</p>
+<ul>
+<li><p>磁通量</p>
+<p>  匀强时 $\phi_m = \vec B \cdot \vec S$</p>
+<p>  对任意磁场 $\phi_m = \int \vec B \cdot d\vec S$</p>
+</li>
+<li><p>磁场高斯定理</p>
+<p>  $\oint \vec B \cdot d\vec S = 0$ 说明磁场是无源场</p>
+</li>
+</ul>
+<h3 id="S-8-5-磁场对载流导线和运动电荷的作用"><a href="#S-8-5-磁场对载流导线和运动电荷的作用" class="headerlink" title="$\S 8.5$ 磁场对载流导线和运动电荷的作用"></a>$\S 8.5$ 磁场对载流导线和运动电荷的作用</h3><ul>
+<li><p>安培力</p>
+<p>  磁场中导线受到力的作用 $dF = Id\vec l \times \vec B$</p>
+</li>
+<li><p>磁场对直导线</p>
+<p>  $F = BIlsin \alpha$</p>
+</li>
+<li><p>磁场对线圈</p>
+<p>  当磁场与线圈倾斜一个角度时，会产生力矩 $M = BISsin\phi$</p>
+<p>  定义磁矩 $\vec P_m = NIS\cdot \vec n, \vec M = \vec P_m \times \vec B$</p>
+<p>  磁矩方向和磁场方向对线圈具体影响如下</p>
+<p>  <img src="%E7%A3%81%E5%9C%BA%E6%96%B9%E5%90%91%E5%AF%B9%E7%BA%BF%E5%9C%88%E7%9A%84%E5%BD%B1%E5%93%8D.png" alt="磁场方向对线圈的影响"></p>
+</li>
+<li><p>洛伦兹力</p>
+<p>  $\vec F_m = q\vec v\times \vec B$ 同样符合右手螺旋定则，注意 $q$ 的方向是以电流方向而定</p>
+</li>
+<li><p>霍尔效应</p>
+<p>  霍尔电势差 $U_H = R_H\frac{IB}{b}$，$R_H$ 称为霍尔系数，平衡后电子受到洛伦兹力和电场力平衡<br>  $R_H$ 为正，空穴载流子，$p$ 型半导体；$R_H$ 为负，导体或 $n$ 型半导体</p>
+<p>   <img src="%E9%9C%8D%E5%B0%94%E6%95%88%E5%BA%94-%E5%8D%8A%E5%AF%BC%E4%BD%93%E7%B1%BB%E5%9E%8B.png" alt="霍尔效应-半导体类型"></p>
+</li>
+</ul>
+<h3 id="S-8-6-磁介质-磁化过程"><a href="#S-8-6-磁介质-磁化过程" class="headerlink" title="$\S 8.6$ 磁介质 磁化过程"></a>$\S 8.6$ 磁介质 磁化过程</h3><ul>
+<li><p>磁介质</p>
+<p>  $\vec B = \vec B_0 + \vec B’$ 右式两项同向时，是顺磁质（磁化后使空间磁场变强），反之为抗磁质（磁化后使空间磁场变弱），若未顺磁质且 $\vec B’ &gt;&gt; \vec B_0$ 称为铁磁质</p>
+</li>
+<li><p>分子磁矩</p>
+<p>  物质分子中，每个电子参与两种运动——绕核的轨道运动（轨道磁矩）和自身旋转运动（自旋磁矩）</p>
+<p>  两种磁矩矢量和是分子磁矩，可以用一个圆电流表示，称为分子电流</p>
+</li>
+<li><p>磁化强度</p>
+<p>  $\vec M = \frac{\sum \vec P_m}{\Delta V}$ 单位体积内分子磁矩矢量和</p>
+</li>
+<li><p>磁场强度</p>
+<p>  磁介质存在时，介质中磁感应强度 $\vec B = \vec B_0 + \mu_0 \vec M$</p>
+<p>  引入磁场强度 $\vec H = \frac{\vec B}{\mu_0} - \vec M$</p>
+<p>  研究表明对于各向同性非铁磁介质，磁化强度和磁场强度满足 $\vec M = \chi_m \vec H$，$\chi_m$ 称为介质的磁化率</p>
+<p>  则有 $\vec B = \mu_0(1 + \chi_m)\vec H = \mu_0\mu_r \vec H = \mu \vec H$，其中 $\mu_r = 1 + \chi_m$ $\mu, \mu_r$ 分别被称为磁导率和相对磁导率，$\vec H = \frac{\vec B}{\mu}$</p>
+<p>  <img src="%E7%A3%81%E4%BB%8B%E8%B4%A8%E6%95%B0%E5%80%BC.png" alt="磁介质数值"></p>
+</li>
+<li><p>铁磁质</p>
+<p>  磁导率大，磁饱和现象，磁滞回线</p>
+</li>
+</ul>
+<h3 id="S-8-7-安培环路定理"><a href="#S-8-7-安培环路定理" class="headerlink" title="$\S 8.7$ 安培环路定理"></a>$\S 8.7$ 安培环路定理</h3><ul>
+<li>安培环路定理</li>
+</ul>
+<p>​        $\oint \vec B \cdot d\vec l = \mu_0 \sum I_内$ 或 $\oint \vec H \cdot d\vec l = \sum I_内$ 电流方向有正有负，和 $B$ 成右手螺旋关系则为正，反之为负 </p>
+<p>​        积分回路是 $N$ 圈时，$\oint \vec H \cdot d\vec l = N\sum I_内$</p>
+<p>​        无限长线圈场内 $B = \mu_0 n I$ </p>
+<p>​        无限大平面（线密度 $I$） $B = \frac{\mu_0 I}{2}$</p>
+<h2 id="第九章-电磁感应与麦克斯韦方程组"><a href="#第九章-电磁感应与麦克斯韦方程组" class="headerlink" title="第九章 电磁感应与麦克斯韦方程组"></a>第九章 电磁感应与麦克斯韦方程组</h2><h3 id="S-9-1-电磁感应的基本规律"><a href="#S-9-1-电磁感应的基本规律" class="headerlink" title="$\S 9.1$ 电磁感应的基本规律"></a>$\S 9.1$ 电磁感应的基本规律</h3><ul>
+<li><p>法拉第电磁感应定律</p>
+<p>  $\varepsilon = -N\frac{d\phi}{dt} \rightarrow q = \frac{\phi_1 - \phi_2}{R}$</p>
+</li>
+<li><p>楞次定律</p>
+<p>  感应电流总是反抗磁场引起的变化</p>
+</li>
+</ul>
+<h3 id="S-9-2-动生电动势与感生电动势"><a href="#S-9-2-动生电动势与感生电动势" class="headerlink" title="$\S 9.2$ 动生电动势与感生电动势"></a>$\S 9.2$ 动生电动势与感生电动势</h3><ul>
+<li><p>动手电动势</p>
+<p>  $\varepsilon = Bvl$，方向：右手法 / 楞次定律 </p>
+</li>
+<li><p>感生电动势</p>
+<p>  $\varepsilon = -\frac{d\phi_m}{dt} = \frac{\partial\vec B}{\partial t}\cdot dS$</p>
+</li>
+<li><p>涡流与趋肤效应</p>
+</li>
+</ul>
+<h3 id="S-9-3-自感与互感"><a href="#S-9-3-自感与互感" class="headerlink" title="$\S 9.3$ 自感与互感"></a>$\S 9.3$ 自感与互感</h3><ul>
+<li><p>自感</p>
+<p>  $N\phi_m = LI  \rightarrow L = N\frac{\phi}{I} \rightarrow \varepsilon = -N\frac{d\phi_m}{dt} = -NL\frac{dI}{dt}$</p>
+</li>
+<li><p>互感</p>
+<p>  $\varepsilon_1 = -M\frac{dI_2}{dt},\varepsilon_2 = -M\frac{dI_1}{dt}$ ，$M$ 只与线圈各属性和磁介质情况有关 </p>
+</li>
+</ul>
+<h3 id="S-9-4-磁场的能量"><a href="#S-9-4-磁场的能量" class="headerlink" title="$\S 9.4$ 磁场的能量"></a>$\S 9.4$ 磁场的能量</h3><p>磁场能量密度 $w_m = \frac{B^2}{2\mu} = \frac{1}{2}\mu H^2 = \frac{1}{2}BH \rightarrow W_m = \int w_mdV$</p>
+<h3 id="S-9-5-位移电流"><a href="#S-9-5-位移电流" class="headerlink" title="$\S 9.5$ 位移电流"></a>$\S 9.5$ 位移电流</h3><ul>
+<li><p>位移电流</p>
+<p>  由于变化的磁场也可以产生电流，故麦克斯韦提出可以假设变化的磁场之间（如两个电极板之间）也看作是有电流存在，这个电流被称为位移电流，$I_d = \frac{d\phi}{dt}$ 位移电流密度 $\vec J_d = \frac{d\vec D}{dt}$</p>
+<p>  位移电流的实质其实就是变化的电场，只要有变化的电场，或有磁场使电场变化，则有位移电流</p>
+<p>  值得一提的是，两种电流在产生磁场方面是等效的，但是位移电流不产生焦耳热</p>
+</li>
+<li><p>全电流</p>
+<p>  $I_全 = I + I_d$ </p>
+<p>  安培环路定理完善为 $\oint \vec H\cdot d\vec l = \sum I_全 = \sum I + \sum I_d$</p>
+</li>
+</ul>
+<h3 id="S-9-6-麦克斯韦方程组"><a href="#S-9-6-麦克斯韦方程组" class="headerlink" title="$\S 9.6$ 麦克斯韦方程组"></a>$\S 9.6$ 麦克斯韦方程组</h3><p><img src="%E9%BA%A6%E5%85%8B%E6%96%AF%E9%9F%A6%E6%96%B9%E7%A8%8B%E7%BB%84.png" alt="麦克斯韦方程组"></p>
+]]></content>
+      <tags>
+        <tag>物理</tag>
+        <tag>大学笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Probability</title>
+    <url>/2023/08/29/Probability/</url>
+    <content><![CDATA[<p>随机入门。</p>
+<span id="more"></span>
+
+<h2 id="第一章-随机事件及其概率论"><a href="#第一章-随机事件及其概率论" class="headerlink" title="第一章 随机事件及其概率论"></a>第一章 随机事件及其概率论</h2><h3 id="S-1-1-随机试验与随机事件"><a href="#S-1-1-随机试验与随机事件" class="headerlink" title="$\S 1.1 $ 随机试验与随机事件"></a>$\S 1.1 $ 随机试验与随机事件</h3><ol>
+<li><p>基本概念</p>
+<ul>
+<li>我们通常用字母 $E$ 表示一个随机试验。随机试验 $E$ 的基本结果称为样本点，用 $\omega$ 表示。称随机试验 $E$ 的所有基本结果的集合为样本空间，用 $\Omega =\{ \omega\} $ 表示。</li>
+<li>样本空间 $\Omega$ 的部分子集称为随机试验 $E$ 的随机事件 $A$，若试验结果 $\omega \in A$，则称事件 $A$ 发生。</li>
+<li>由一个样本点组成的事件称为基本事件。必然发生的事件称为必然事件，不可能发生事件称为不可能事件。</li>
+<li>有限的样本点的空间称为有限样本空间，无限的样本点的空间称为无限样本空间。</li>
+</ul>
+</li>
+<li><p>事件关系</p>
+<ul>
+<li>当 $A$ 发生时 $B$ 一定发生，则 $B$ 包含事件 $A$，记作 $A \subseteq B$。</li>
+<li>相互包含的事件称为事件相等，记作 $A=B$。</li>
+<li>$A$，$B$ 不能同时发生称为互不相容。</li>
+<li>$A$，$B$ 事件中必有一个发生且不能同时发生称为事件的互逆，它们是 互逆 / 对立 的。其中一个事件是另一个事件的逆事件。记作 $\bar A = B$。显然 $\bar{\bar A} = A$。</li>
+</ul>
+</li>
+<li><p>随机事件的运算</p>
+<ul>
+<li>事件的交，说明两个事件中至少发生一个事件，又称为$A$，$B$ 事件的并事件或和事件，记作 $A \cup B$。</li>
+<li>事件的并，说明两个事件中都发生，又称为 $A$，$B$ 事件的交事件或积事件，记作 $A \cap B$。</li>
+<li>事件的差，事件 $A$ 发生而 $B$ 不发生，记作 $A-B$。</li>
+<li>集合的运算满足结合律，交换律，分配律。这里着重强调一下对偶率。写作 $\bar{A \cup B} = \bar{A}\bar{B}$，$\bar{AB}=\bar A \cup \bar B$。</li>
+</ul>
+</li>
+<li><p>几个常见结论<br> $$<br> A - B = A - AB = A \bar B \<br> A \cup B = A \cup (B-A) = A\cup(B - AB) \<br> A = A\Omega = A(B\cup \bar B) = AB\cup A\bar B<br> $$</p>
+</li>
+</ol>
+<h3 id="S-1-2-随机事件的概率"><a href="#S-1-2-随机事件的概率" class="headerlink" title="$\S 1.2$ 随机事件的概率"></a>$\S 1.2$ 随机事件的概率</h3><h3 id="课后例题节选"><a href="#课后例题节选" class="headerlink" title="课后例题节选"></a>课后例题节选</h3><p>1.1<br>$$<br>(A \cup B)(A \cup \bar B)(\bar A \cup B)<br>$$</p>
+<p>$$<br>解：LHS = AB<br>$$</p>
+]]></content>
+      <tags>
+        <tag>数学</tag>
+        <tag>大学课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学习笔记 | 多项式与生成函数</title>
+    <url>/2023/06/28/Poly/</url>
+    <content><![CDATA[<p>浅挖个坑，期末考完填上</p>
+<span id="more"></span>
+]]></content>
+      <tags>
+        <tag>算法竞赛</tag>
+        <tag>数学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大学笔记 | 大学物理BII</title>
+    <url>/2023/08/30/Physics-II/</url>
+    <content><![CDATA[<p>从入门到 奇怪的知识增加了.jpg 。</p>
+<span id="more"></span>
+]]></content>
+      <tags>
+        <tag>物理</tag>
+        <tag>大学笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>算法笔记 | 字符串（一）</title>
+    <url>/2023/07/10/String-In-ACM-I/</url>
+    <content><![CDATA[<p>Manacher，KMP。</p>
+<span id="more"></span>
+
+<h2 id="1-Manacher-算法"><a href="#1-Manacher-算法" class="headerlink" title="1. Manacher 算法"></a>1. Manacher 算法</h2><h3 id="1-1-算法介绍"><a href="#1-1-算法介绍" class="headerlink" title="1.1 算法介绍"></a>1.1 算法介绍</h3><p>该算法可以线性求出字符串的以各个位置为轴的回文子串最大长度</p>
+<h3 id="1-2-过程"><a href="#1-2-过程" class="headerlink" title="1.2 过程"></a>1.2 过程</h3><p>本算法求的是以各位置为对称中心的最大对称半径是多少，由于会出现长度为奇数的对称区间（对称中心在两个位置中间），偶数长度的对称区间（对称中心在某一个位置处）。所以我们对原字串进行变换，比如 <code>abcba</code> 变为 <code>##a#b#c#b#a#</code> ，这样的话对称中心就是这个位置本身了。</p>
+<p>我们引入一个数组 $len$ ，$len$ 数组表示这个点能够扩展出的回文长度。</p>
+<p>我们从前向后遍历一遍，循环变量为 $i$，引入辅助变量 $maxr$ 和 $mid$ ，$maxr$ 表示触及到的最右边的字符位置，$mid$ 表示包含 $maxr$ 回文串的中心轴所在位置。对于每次遍历到的新的位置 $i$，不难发现如果 $i &lt; maxr$，那么 $len[i] = min\{len[mid] \}$</p>
+<p>当 $i$ 在 $maxr$ 左边且在 $mid$ 右边时：</p>
+<p>设 $i$ 关于 $mid$ 的对称点为 $j$，显然 $len[i]$ 一定不会小于 $len[j]$（对称）。</p>
+<p>其中 $j$ 为 $(mid&lt;&lt;1)−i$。</p>
+<p>那么我们就设置 $len[i] = min\{len[mid], maxr - i \}$ 然后继续尝试扩展，这样就可以较快地求出 $len[i]$，然后更新 $maxr$ 和 $mid$</p>
+<p>当 $i$ 在 $maxr$ 右边时，我们无法得知关于 $len[i]$ 的信息，只好从 $1$ 开始遍历，然后更新 $maxr$ 和 $mid$。</p>
+<p>本算法时间复杂度和空间复杂度均为线性的。</p>
+<h3 id="1-3-实现"><a href="#1-3-实现" class="headerlink" title="1.3 实现"></a>1.3 实现</h3><figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">update</span><span class="params">()</span> </span>{</span><br><span class="line">  s2[<span class="number">0</span>] = s2[<span class="number">1</span>] = <span class="string">'#'</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) {</span><br><span class="line">    s2[i &lt;&lt; <span class="number">1</span>] = s1[i];</span><br><span class="line">    s2[i &lt;&lt; <span class="number">1</span> | <span class="number">1</span>] = <span class="string">'#'</span>;</span><br><span class="line">  }</span><br><span class="line">  n = <span class="number">2</span> * n + <span class="number">1</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">manacher</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="type">int</span> maxr = <span class="number">0</span>, mid = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) {</span><br><span class="line">    <span class="keyword">if</span>(i &lt; maxr) len[i] = <span class="built_in">min</span>(len[(mid &lt;&lt; <span class="number">1</span>) - i], len[mid] + mid - i);</span><br><span class="line">    <span class="keyword">else</span> len[i] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(i + len[i] &lt;= n &amp;&amp;  i - len[i] &gt; <span class="number">0</span> &amp;&amp; s2[i + len[i]] == s2[i - len[i]]) len[i]++;</span><br><span class="line">    <span class="keyword">if</span>(len[i] + i &gt; maxr) {</span><br><span class="line">      maxr = len[i] + i;</span><br><span class="line">      mid = i; </span><br><span class="line">    } </span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h2 id="2-KMP-算法"><a href="#2-KMP-算法" class="headerlink" title="2. KMP 算法"></a>2. KMP 算法</h2><h3 id="2-1-前缀函数"><a href="#2-1-前缀函数" class="headerlink" title="2.1 前缀函数"></a>2.1 前缀函数</h3><p>给定一个长度为 $n$ 的字符串 $s$，其前缀函数被定义为一个长度为 $n$ 的数组 $\pi$。 其中 $\pi[i]$ 的定义是：最长的相等的正后缀前后缀长度（自身除外），举个例子，字串 $s[0\dots i]$ 有一对相等的真前缀 $s[0\dots k - 1]$ 和真后缀 $s[i - (k - 1) \dots i]$ 它们相等且是这个字串中所能找到最长的前缀后缀，那么 $\pi[i] = k$。</p>
+<h3 id="2-2-优化-amp-过程"><a href="#2-2-优化-amp-过程" class="headerlink" title="2.2 优化 &amp; 过程"></a>2.2 优化 &amp; 过程</h3><p>直接最朴素的计算前缀函数时间复杂度为 $O(n^3)$，故我们可以加入优化。</p>
+<p>优化一：每次新加入一个数时，贡献最多加 $1$，即 $\pi[i + 1] \le \pi[i] + 1$ ，取等当且仅当 $s[\pi[i] + 1] == s[i + 1]$。</p>
+<p>优化二：其实优化一的情况优化了新加入的数依然匹配成功的情况，那么优化二可以优化新加入的数失配的情况。我们假设记录一个数组 $k$，$k[i]$ 表示第 $i + 1$ 位失配之后应该跳到第 $k[i]$ 位上。那么我们每次可以不断向前跳，如果匹配成功就是优化一的情况，匹配不成功就继续回跳。</p>
+<p>我们假设向前回跳一次到达的位置为 $j$。仔细观察，我们发现 $s[0\dots j] = s[i - j \dots i] = s[\pi[i] - j \dots \pi[i]](j &lt; \pi[i])$，那么则有 $j = \pi[\pi[i]]$，故每次向前跳只需让 $j = k[j]$，等找到适配时就按优化一更新，一直适配不成功就按 $0$ 来更新 $k[i]$。这样的话相当于让该串自己匹配自己来求 $k[i]$，然后求该串在其他串中出现的位置就让该串与其他串匹配，等到 $j$ 变为该串的长度时，说明整个串出现了，可以记录下出现的位置了。</p>
+<h3 id="2-3-实现"><a href="#2-3-实现" class="headerlink" title="2.3 实现"></a>2.3 实现</h3><figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">kmp</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="type">int</span> len_a = <span class="built_in">strlen</span>(a + <span class="number">1</span>), len_b = <span class="built_in">strlen</span>(b + <span class="number">1</span>);</span><br><span class="line">  <span class="type">int</span> j = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">2</span>; i &lt;= len_b; i++) { <span class="comment">// i 要从 2 开始，不然的话计算前缀函数会把自身也算上，变为 k[i] = i</span></span><br><span class="line">    <span class="keyword">while</span>(j &amp;&amp; b[j + <span class="number">1</span>] != b[i]) j = k[j];</span><br><span class="line">    <span class="keyword">if</span>(b[j + <span class="number">1</span>] == b[i]) j++;</span><br><span class="line">    k[i] = j;</span><br><span class="line">  }</span><br><span class="line">  j = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= len_a; i++) {</span><br><span class="line">    <span class="keyword">while</span>(j &amp;&amp; b[j + <span class="number">1</span>] != a[i]) j = k[j];</span><br><span class="line">    <span class="keyword">if</span>(b[j + <span class="number">1</span>] == a[i]) j++;</span><br><span class="line">    <span class="keyword">if</span>(j == len_b) cout &lt;&lt; i - j + <span class="number">1</span> &lt;&lt; endl;</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= len_b; i++) cout &lt;&lt; k[i] &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">  cout &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>Study notes | CS61A</title>
+    <url>/2023/08/28/UCB-CS61A/</url>
+    <content><![CDATA[<p>Start!</p>
+<span id="more"></span>
+
+<h1 id="Chapter-1-Building-Abstractions-with-Functions"><a href="#Chapter-1-Building-Abstractions-with-Functions" class="headerlink" title="Chapter 1: Building Abstractions with Functions"></a>Chapter 1: Building Abstractions with Functions</h1><h3 id="1-2-Elements-of-Programing"><a href="#1-2-Elements-of-Programing" class="headerlink" title="1.2 Elements of Programing"></a>1.2 Elements of Programing</h3><h4 id="1-2-3-Importing-Library-Functions"><a href="#1-2-3-Importing-Library-Functions" class="headerlink" title="1.2.3 Importing Library Functions"></a>1.2.3 Importing Library Functions</h4><p>Python defines a very large number of functions, including the operator functions mentioned in the preceding section,so we can import them into our programing.</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> math <span class="keyword">import</span> sqrt</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>sqrt(<span class="number">256</span>)</span><br><span class="line"><span class="number">16.0</span></span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h4 id="1-2-4-Names-and-the-Environment"><a href="#1-2-4-Names-and-the-Environment" class="headerlink" title="1.2.4 Names and the Environment"></a>1.2.4 Names and the Environment</h4><p>Names can be bound via <code>=</code> or <code>import</code>.</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> math <span class="keyword">import</span> pi</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>pi * <span class="number">71</span> / <span class="number">223</span></span><br><span class="line"><span class="number">1.0002380197528042</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>Names can be bound to functions. For instance, the name <code>max</code> is bound to the max function we have been using. </p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">max</span></span><br><span class="line">&lt;built-<span class="keyword">in</span> function <span class="built_in">max</span>&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>f = <span class="built_in">max</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>f</span><br><span class="line">&lt;built-<span class="keyword">in</span> function <span class="built_in">max</span>&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>f(<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>)</span><br><span class="line"><span class="number">4</span></span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">max</span> = <span class="number">5</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">max</span></span><br><span class="line"><span class="number">5</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>Interpreter must maintain some sort of memory which is called <strong>environment</strong> to keep track of the names, values and the bindings.</p>
+<p><code>=</code> can combine multiple values and names.</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>area, circumference = pi * radius * radius, <span class="number">2</span> * pi * radius</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>x, y = <span class="number">3</span>, <span class="number">4.5</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>y, x = x, y</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>x</span><br><span class="line"><span class="number">4.5</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>y</span><br><span class="line"><span class="number">3</span></span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h4 id="1-2-6-The-Non-Pure-Print-Function"><a href="#1-2-6-The-Non-Pure-Print-Function" class="headerlink" title="1.2.6  The Non-Pure Print Function"></a>1.2.6  The Non-Pure Print Function</h4><p><strong>Pure functions.</strong> Functions have some input (their arguments) and return some output (the result of applying them). </p>
+<p><strong>Non-pure functions.</strong> In addition to returning a value, applying a non-pure function can generate <em>side effects</em>, which make some change to the state of the interpreter or computer.</p>
+<p>Take <code>abs</code> and <code>print</code> as an example.</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">abs</span>(-<span class="number">2</span>)</span><br><span class="line"><span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">3</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(<span class="built_in">print</span>(<span class="number">1</span>), <span class="built_in">print</span>(<span class="number">2</span>))</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="literal">None</span> <span class="literal">None</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p><img src="pure_function-1.png" alt="pure_function-1"></p>
+<p><img src="pure_function-2.png" alt="pure_function-2"></p>
+]]></content>
+      <tags>
+        <tag>计算机科学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学习笔记 | UCB-CS61B</title>
+    <url>/2023/07/09/UCB-CS61B/</url>
+    <content><![CDATA[<span id="more"></span>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>UCB-CS70</title>
+    <url>/2023/08/28/UCB-CS70/</url>
+    <content><![CDATA[<span id="more"></span>
+]]></content>
+  </entry>
+  <entry>
+    <title>算法笔记 | 杂项（一）</title>
+    <url>/2023/07/07/somethingelse-in-ACM/</url>
+    <content><![CDATA[<p>CDQ 分治</p>
+<span id="more"></span>
+
+<h2 id="1-CDQ-分治"><a href="#1-CDQ-分治" class="headerlink" title="1. CDQ 分治"></a>1. CDQ 分治</h2>]]></content>
+      <tags>
+        <tag>算法竞赛</tag>
       </tags>
   </entry>
 </search>
