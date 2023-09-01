@@ -28,10 +28,10 @@
 <meta property="og:description" content="——你说入门，它真入了吗？ ——如入。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-08-30T09:54:00.000Z">
-<meta property="article:modified_time" content="2023-08-30T10:52:44.520Z">
+<meta property="article:modified_time" content="2023-08-31T08:50:56.813Z">
 <meta property="article:author" content="Ana Su">
-<meta property="article:tag" content="大学笔记">
 <meta property="article:tag" content="专业课">
+<meta property="article:tag" content="大学笔记">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://anasuuuu.github.io/2023/08/30/Signals-and-Systems/">
@@ -211,10 +211,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2023-08-30 17:54:00 / 修改时间：18:52:44" itemprop="dateCreated datePublished" datetime="2023-08-30T17:54:00+08:00">2023-08-30</time>
+              <time title="创建时间：2023-08-30 17:54:00" itemprop="dateCreated datePublished" datetime="2023-08-30T17:54:00+08:00">2023-08-30</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-08-31 16:50:56" itemprop="dateModified" datetime="2023-08-31T16:50:56+08:00">2023-08-31</time>
+              </span>
 
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
@@ -229,7 +235,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>18</span>
+              <span>800</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -252,6 +258,54 @@
 <p>——如入。</p>
 <span id="more"></span>
 
+
+
+<h2 id="第一章-信号与系统"><a href="#第一章-信号与系统" class="headerlink" title="第一章 信号与系统"></a>第一章 信号与系统</h2><h3 id="S-1-2-信号"><a href="#S-1-2-信号" class="headerlink" title="$\S 1.2$ 信号"></a>$\S 1.2$ 信号</h3><ul>
+<li><p>信号常表现为时间函数。</p>
+<blockquote>
+<p>我们通常用解析式法和图像法来表示信号。</p>
+</blockquote>
+</li>
+<li><p>分类</p>
+<p>  确定信号 &amp; 随机信号</p>
+<blockquote>
+<p>前者对于任一时间点可以给出确切表达式，而后者不行。</p>
+</blockquote>
+<p>  连续信号 &amp; 离散信号</p>
+<blockquote>
+<p>自变量是连续（离散）的信号称为连续（离散）信号。</p>
+<p>而模拟信号要求自变量和因变量都是连续的，数字变量要求自变量和因变量都是离散的。</p>
+</blockquote>
+<p>  周期信号 &amp; 非周期信号</p>
+<p>  能量信号 &amp; 功率信号</p>
+</li>
+</ul>
+<h3 id="S-1-3-信号的基本运算"><a href="#S-1-3-信号的基本运算" class="headerlink" title="$\S 1.3$ 信号的基本运算"></a>$\S 1.3$ 信号的基本运算</h3><ul>
+<li>加法和乘法</li>
+<li>反转和平移</li>
+<li>尺度变换（横坐标展缩）</li>
+</ul>
+<h3 id="S-1-4-阶跃函数和冲激函数"><a href="#S-1-4-阶跃函数和冲激函数" class="headerlink" title="$\S 1.4$ 阶跃函数和冲激函数"></a>$\S 1.4$ 阶跃函数和冲激函数</h3><ul>
+<li>$Unit\ step\ funtion$ 单位阶跃函数</li>
+</ul>
+<p>$$<br>\varepsilon(t) = U(t) =\left\{\begin{matrix}<br> 1 \ (t &gt; 0)\\0 \ (t &lt; 0)</p>
+<p>\end{matrix}\right.<br>$$</p>
+<ul>
+<li>$Unit\ ramp\ fucntion$ 单位斜变函数</li>
+</ul>
+<p>$$<br>r(t) = t\varepsilon(t) =  \left\{\begin{matrix}<br> t \ (t &gt; 0)\\0 \ (t \le 0)</p>
+<p>\end{matrix}\right.<br>\\ BTW,r(at - t_0) = (at - t_0)\varepsilon(at - t_0)<br>$$</p>
+<ul>
+<li>$Signum\ function$ 符号函数</li>
+</ul>
+<p>$$<br>sgn(t) =  \left\{\begin{matrix}<br> 1 \ (t &gt; 0)\-1 \ (t &lt; 0) </p>
+<p>\end{matrix}\right.\\ = 2\varepsilon(t) - 1 = \varepsilon(t) - \varepsilon(-t)<br>$$</p>
+<ul>
+<li>$Gate\ function$ 门函数</li>
+</ul>
+<p>$$<br>g_{\tau}(t) = \left\{\begin{matrix}<br> 1 \ (-\dfrac{\tau}{2} &lt; t &lt; \dfrac{\tau}{2})\\0 \ (others) </p>
+<p>\end{matrix}\right.<br>$$</p>
+
     </div>
 
     
@@ -260,8 +314,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E5%A4%A7%E5%AD%A6%E7%AC%94%E8%AE%B0/" rel="tag"># 大学笔记</a>
               <a href="/tags/%E4%B8%93%E4%B8%9A%E8%AF%BE/" rel="tag"># 专业课</a>
+              <a href="/tags/%E5%A4%A7%E5%AD%A6%E7%AC%94%E8%AE%B0/" rel="tag"># 大学笔记</a>
           </div>
 
         
@@ -273,7 +327,10 @@
     <a href="/2023/08/30/Physics-II/" rel="prev" title="大学笔记 | 大学物理BII">
       <i class="fa fa-chevron-left"></i> 大学笔记 | 大学物理BII
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2023/08/31/Functions-of-a-Complex-Variable/" rel="next" title="大学笔记 | 复变函数与积分变换">
+      大学笔记 | 复变函数与积分变换 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -343,6 +400,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F"><span class="nav-text">第一章 信号与系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#S-1-2-%E4%BF%A1%E5%8F%B7"><span class="nav-text">$\S 1.2$ 信号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-1-3-%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97"><span class="nav-text">$\S 1.3$ 信号的基本运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-1-4-%E9%98%B6%E8%B7%83%E5%87%BD%E6%95%B0%E5%92%8C%E5%86%B2%E6%BF%80%E5%87%BD%E6%95%B0"><span class="nav-text">$\S 1.4$ 阶跃函数和冲激函数</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -358,7 +416,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-count">26</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -413,12 +471,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">63k</span>
+    <span title="站点总字数">65k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:55</span>
+    <span title="站点阅读时长">1:58</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
