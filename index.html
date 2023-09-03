@@ -270,6 +270,108 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://anasuuuu.github.io/2023/08/27/CF-Instrumentality-Project-II/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/./images/avatar.jpg">
+      <meta itemprop="name" content="Ana Su">
+      <meta itemprop="description" content="黎明将至 春宵苦短 不断前进吧">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ana_Su's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/08/27/CF-Instrumentality-Project-II/" class="post-title-link" itemprop="url">CodeForces 补全计划（1851 ~ 1875）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-08-27 11:35:04" itemprop="dateCreated datePublished" datetime="2023-08-27T11:35:04+08:00">2023-08-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-09-03 15:42:05" itemprop="dateModified" datetime="2023-09-03T15:42:05+08:00">2023-09-03</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.6k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <span id="more"></span>
+
+<h2 id="Educational-Codeforces-Round-154-Rated-for-Div-2"><a href="#Educational-Codeforces-Round-154-Rated-for-Div-2" class="headerlink" title="Educational Codeforces Round 154 (Rated for Div. 2)"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1861">Educational Codeforces Round 154 (Rated for Div. 2)</a></h2><h3 id="E-Non-Intersecting-Subpermutations"><a href="#E-Non-Intersecting-Subpermutations" class="headerlink" title="E. Non-Intersecting Subpermutations"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1861/problem/E">E. Non-Intersecting Subpermutations</a></h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>对于一个序列，取若干个长度为 $k$ 的子序列，满足这些子序列互不相交且包含 $1 \sim k$ 全部元素，定义这个序列的价值就是子序列个数的最大值。</p>
+<p>给定序列长度 $n$，每个元素都是由 $1 \sim k$ 组成，问所组成序列的价值总和是多少。</p>
+<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>我们对于一个既定的序列，要求出他的子序列个数的方法是用贪心，使序列的右端点尽可能靠左。</p>
+<p>我们设 $f_i$ 表示最后一个序列右端点在 $i$ 处的方案数<strong>（注意这里是方案数，并不是对答案的贡献数）</strong>，那么当前最后一个序列对答案的贡献是 $f_i \times k^{n - i}$。（这里的想法相当于我们每次只算一个位置 $[i - k + 1, i]$ 上的序列对总答案的影响）</p>
+<p>对于方案转移，我们枚举上一个序列的右端点 $j$，那么这里有 $j \in [0, i - k]$（$j = 0$ 表示没有上一个序列）。</p>
+<p>我们再引入 $g_i$ 表示对于长度是 $i$ 的一段序列，第一个合法子序列出现的位置是 $[i - k + 1, i]$ 的方案数。</p>
+<p>故不难理解 $f_i = \sum f_j \times g_{i - j}$。然后问题转化为如何求 $g_i$ 数组。</p>
+<p>对于 $g_i$ 而言，最后 $k$ 个位置一定是 $1 \sim k$，前 $i - k$ 位置任意选，故有 $k^{i - k} \times k!$ 的方案数。</p>
+<p>但是会有不合法的方案算在内，可能会出现子序列先于 $[i - k + 1, i]$ 位置出现。</p>
+<p>分类讨论，枚举可能先于出现的位置 $[j - k + 1, j]$，若 $i - j &lt;= k$ ，那么不合法的方案数相当于是 $g_j \times (i - j)!$，因为在最后 $i - j$ 个位置上，相当于每个数都只出现了一次。若 $i - j &gt; k$，那么不合法的方案数相当于是 $g_j \times k! \times k^{i - j - k}$。最后 $k$ 个位置上 $k$ 个数各出现一次，$[j + 1, i - k]$ 位置上的数字随便选。最后把不合法的情况都减掉即可。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1861/submission/221631049">Code</a></p>
+<h2 id="1862-Codeforces-Round-894-Div-3"><a href="#1862-Codeforces-Round-894-Div-3" class="headerlink" title="1862. Codeforces Round 894 (Div. 3)"></a>1862. <a target="_blank" rel="noopener" href="https://codeforces.com/contest/1862">Codeforces Round 894 (Div. 3)</a></h2><h3 id="E-Kolya-and-Movie-Theatre"><a href="#E-Kolya-and-Movie-Theatre" class="headerlink" title="E. Kolya and Movie Theatre"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1862/problem/E">E. Kolya and Movie Theatre</a></h3><h4 id="Description-1"><a href="#Description-1" class="headerlink" title="Description"></a>Description</h4><p>一段长为 $n$ 的序列 $a$，你从中至多选 $m$ 个数。设你选的数中下标最大的为 $x$，那么你选的答案要减去 $x \times d$。问该怎么选是答案最大。</p>
+<h4 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h4><p>从前往后扫一遍，设下标最大的为 $i$，维护前 $k$ 大的序列以及和，算答案的时候直接减去 $i \times d$ 即可。</p>
+<p>注：万一插入的第 $i$ 号元素排不到前 $k$ 大，算答案时不应该减 $i \times d$ 。但其实不用考虑，因为这种情况一定不是最优，当最大下标值小于 $i$ 的时候一定会有一个答案，前 $k$ 大值和当前一样，但减去的数要小一些，所以不会更新答案。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1862/submission/220495907">Code</a></p>
+<h3 id="F-Magic-Will-Save-the-World"><a href="#F-Magic-Will-Save-the-World" class="headerlink" title="F. Magic Will Save the World"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1862/problem/F">F. Magic Will Save the World</a></h3><h4 id="Description-2"><a href="#Description-2" class="headerlink" title="Description"></a>Description</h4><p>若干小怪，每个小怪血量 $s_i$，你可以用 水 或 火 元素攻击，消耗等量的 水 或 火 元素。你每秒可以增加 $w$ 水元素 和 $f$ 火元素，问最快要几秒消灭全部小怪。</p>
+<h4 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h4><p>对于每个小怪，要么被火消灭，要么被水消灭，不难发现小怪总血量比较低，所以可以利用 $01$ 背包思想解决。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1862/submission/220568374">Code</a></p>
+<h3 id="G-The-Great-Equalizer"><a href="#G-The-Great-Equalizer" class="headerlink" title="G. The Great Equalizer"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1862/problem/G">G. The Great Equalizer</a></h3><h4 id="Description-3"><a href="#Description-3" class="headerlink" title="Description"></a>Description</h4><p>初始有一段长度为 $n$ 的序列，记一次操作为将序列按升序排列然后除去相等的元素。然后设新序列元素长度 $n’$，将第一个元素加上 $n’$，第二个加上 $n’ - 1$，第三个加上 $n’ - 2$ 以此类推。</p>
+<p>问最后只剩下一个元素的值。</p>
+<h4 id="Solution-3"><a href="#Solution-3" class="headerlink" title="Solution"></a>Solution</h4><p>我们发现两个性质，第一，每个元素之间的相对大小不会发生变化，第二，设两两相邻元素之间的最大元素为 $max_gap$，则每次操作后 $max_gap$ 都会减一。那么最后剩下的那个元素的值为 原序列中最大的元素加上操作次数（即 $max_gap$）。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1862/submission/220600516">Code</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://anasuuuu.github.io/2023/08/30/Physics-II/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1609,91 +1711,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://anasuuuu.github.io/2023/08/27/CF-Instrumentality-Project-II/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/./images/avatar.jpg">
-      <meta itemprop="name" content="Ana Su">
-      <meta itemprop="description" content="黎明将至 春宵苦短 不断前进吧">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ana_Su's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/08/27/CF-Instrumentality-Project-II/" class="post-title-link" itemprop="url">CodeForces 补全计划（1851 ~ 1875）</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-08-27 11:35:04 / 修改时间：19:46:21" itemprop="dateCreated datePublished" datetime="2023-08-27T11:35:04+08:00">2023-08-27</time>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>763</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <span id="more"></span>
-
-<h2 id="1862-Codeforces-Round-894-Div-3"><a href="#1862-Codeforces-Round-894-Div-3" class="headerlink" title="1862. Codeforces Round 894 (Div. 3)"></a>1862. <a target="_blank" rel="noopener" href="https://codeforces.com/contest/1862">Codeforces Round 894 (Div. 3)</a></h2><h3 id="E-Kolya-and-Movie-Theatre"><a href="#E-Kolya-and-Movie-Theatre" class="headerlink" title="E. Kolya and Movie Theatre"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1862/problem/E">E. Kolya and Movie Theatre</a></h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>一段长为 $n$ 的序列 $a$，你从中至多选 $m$ 个数。设你选的数中下标最大的为 $x$，那么你选的答案要减去 $x \times d$。问该怎么选是答案最大。</p>
-<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>从前往后扫一遍，设下标最大的为 $i$，维护前 $k$ 大的序列以及和，算答案的时候直接减去 $i \times d$ 即可。</p>
-<p>注：万一插入的第 $i$ 号元素排不到前 $k$ 大，算答案时不应该减 $i \times d$ 。但其实不用考虑，因为这种情况一定不是最优，当最大下标值小于 $i$ 的时候一定会有一个答案，前 $k$ 大值和当前一样，但减去的数要小一些，所以不会更新答案。</p>
-<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1862/submission/220495907">Code</a></p>
-<h3 id="F-Magic-Will-Save-the-World"><a href="#F-Magic-Will-Save-the-World" class="headerlink" title="F. Magic Will Save the World"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1862/problem/F">F. Magic Will Save the World</a></h3><h4 id="Description-1"><a href="#Description-1" class="headerlink" title="Description"></a>Description</h4><p>若干小怪，每个小怪血量 $s_i$，你可以用 水 或 火 元素攻击，消耗等量的 水 或 火 元素。你每秒可以增加 $w$ 水元素 和 $f$ 火元素，问最快要几秒消灭全部小怪。</p>
-<h4 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h4><p>对于每个小怪，要么被火消灭，要么被水消灭，不难发现小怪总血量比较低，所以可以利用 $01$ 背包思想解决。</p>
-<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1862/submission/220568374">Code</a></p>
-<h3 id="G-The-Great-Equalizer"><a href="#G-The-Great-Equalizer" class="headerlink" title="G. The Great Equalizer"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1862/problem/G">G. The Great Equalizer</a></h3><h4 id="Description-2"><a href="#Description-2" class="headerlink" title="Description"></a>Description</h4><p>初始有一段长度为 $n$ 的序列，记一次操作为将序列按升序排列然后除去相等的元素。然后设新序列元素长度 $n’$，将第一个元素加上 $n’$，第二个加上 $n’ - 1$，第三个加上 $n’ - 2$ 以此类推。</p>
-<p>问最后只剩下一个元素的值。</p>
-<h4 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h4><p>我们发现两个性质，第一，每个元素之间的相对大小不会发生变化，第二，设两两相邻元素之间的最大元素为 $max_gap$，则每次操作后 $max_gap$ 都会减一。那么最后剩下的那个元素的值为 原序列中最大的元素加上操作次数（即 $max_gap$）。</p>
-<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1862/submission/220600516">Code</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://anasuuuu.github.io/2023/06/26/CF-Instrumentality-Project-I/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2495,12 +2512,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">65k</span>
+    <span title="站点总字数">66k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:58</span>
+    <span title="站点阅读时长">1:59</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
