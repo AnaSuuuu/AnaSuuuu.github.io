@@ -28,8 +28,10 @@
 <meta property="og:description" content="从入门到出门。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://anasuuuu.github.io/2023/08/29/Discrete-Math/1.1-1.png">
+<meta property="og:image" content="https://anasuuuu.github.io/2023/08/29/Discrete-Math/1.1-2.jpg">
+<meta property="og:image" content="https://anasuuuu.github.io/2023/08/29/Discrete-Math/1.2-1.jpg">
 <meta property="article:published_time" content="2023-08-29T04:59:36.000Z">
-<meta property="article:modified_time" content="2023-09-03T09:39:51.384Z">
+<meta property="article:modified_time" content="2023-09-05T05:47:22.473Z">
 <meta property="article:author" content="Ana Su">
 <meta property="article:tag" content="数学">
 <meta property="article:tag" content="大学课程">
@@ -221,7 +223,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-09-03 17:39:51" itemprop="dateModified" datetime="2023-09-03T17:39:51+08:00">2023-09-03</time>
+                <time title="修改时间：2023-09-05 13:47:22" itemprop="dateModified" datetime="2023-09-05T13:47:22+08:00">2023-09-05</time>
               </span>
 
           
@@ -237,14 +239,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.2k</span>
+              <span>1.9k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
+              <span>3 分钟</span>
             </span>
 
         </div>
@@ -258,7 +260,6 @@
       
         <p>从入门到出门。</p>
 <span id="more"></span>
-
 <h2 id="第一章-命题逻辑"><a href="#第一章-命题逻辑" class="headerlink" title="第一章 命题逻辑"></a>第一章 命题逻辑</h2><h3 id="S-1-1-命题符号化及联结词"><a href="#S-1-1-命题符号化及联结词" class="headerlink" title="$\S 1.1$ 命题符号化及联结词"></a>$\S 1.1$ 命题符号化及联结词</h3><ol>
 <li><p>命题以及联结词</p>
 <ul>
@@ -316,12 +317,45 @@
 <li><p>$n$ 元真值函数 $F:\{0, 1\}^n \to \{0, 1\}$，对于 $n$ 个命题变项有 $2^{2^n}$ 个真值函数 。</p>
 <blockquote>
 <p>因为 $n$ 个变量可以形成 $2^n$ 个结果，对于每个结果，又有 $0 / 1$ 的选择，故一共 $2^{2^n}$。</p>
+<p><img src="1.1-2.jpg" alt="1.1-2"></p>
 <p>参考 <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_45472866/article/details/108023600">离散数学n元变量的真值函数（或者真值表的种类数）有 2^(2^n)个 详解</a></p>
 </blockquote>
 </li>
 </ul>
 </li>
 </ol>
+<p>对于 $A$，$B$ 命题，若 $A \leftrightarrow B$ 是重言式，则称 $A$，$B$ 等价，记作$A \Leftrightarrow B$。</p>
+<blockquote>
+<p>注意 $\Leftrightarrow$ 不是联接词。</p>
+</blockquote>
+<p><img src="1.2-1.jpg" alt="1.2-1"></p>
+<ul>
+<li><p><strong>等值演算</strong>：由已知的等值式推演出新的等值式；<strong>置换规则</strong>：若 $A \Leftrightarrow B$，则 $\Phi(A) \Leftrightarrow \Phi(B)$。</p>
+<blockquote>
+<p>证明两个公式等值时，可以直接用等值演算来验证，而证明公式不等值时，往往要通过赋值来使两边真值不等来验证。</p>
+</blockquote>
+</li>
+<li><p>仅由有限个命题变项或其否定构成的析取式称为<strong>简单析取式</strong>，仅由有限个命题变项或其否定构成的合取式称为<strong>简单合取式</strong>。</p>
+</li>
+<li><p>由有限个简单析取式<strong>合取</strong>而成的式子称为<strong>合取范式</strong>，由有限个简单合取式<strong>析取</strong>而成的式子称为<strong>析取范式</strong>。析取范式和合取范式总称为<strong>范式</strong>。</p>
+<blockquote>
+<p>单个命题变项或其否定既是简单析取式又是简单合取式。</p>
+</blockquote>
+</li>
+<li><p>任一命题公式都有与之等值的析取范式和合取范式，且不唯一存在。</p>
+</li>
+<li><p><strong>极小项</strong>：在含有若干命题变项的简单合取式中，每个命题变项及其否定有且仅有一个出现一次，这样的简单合取式称为极小项。 <strong>极大项</strong>：在含有若干命题变项的简单析取式中，每个命题变项及其否定有且仅有一个出现一次，这样的简单析取式称为极小项。</p>
+<blockquote>
+<p>$n$ 个命题变项产生 $2^n$ 个极小（大）项。</p>
+<p>用 $m_i(M_i)$ 表示第 $i$ 个极小（大）项，$i$ 是该极小（大）项成真（假）赋值的十进制表示。</p>
+<p>$\neg m_I \Leftrightarrow M_i$，$\neg M_i \Leftrightarrow m_i$。</p>
+</blockquote>
+</li>
+<li><p><strong>主析取范式</strong>：由极小项组成的析取范式，<strong>主合取范式</strong>：由极大项合取组成的合取范式。</p>
+</li>
+<li><p>任何命题公式都有与之等值的主析取范式和主合取范式，并且是唯一的。</p>
+</li>
+</ul>
 
     </div>
 
@@ -488,12 +522,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">67k</span>
+    <span title="站点总字数">69k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:01</span>
+    <span title="站点阅读时长">2:05</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
