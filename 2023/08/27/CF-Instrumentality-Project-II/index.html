@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"anasuuuu.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"manual"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Educational Codeforces Round 154 (Rated for Div. 2)E. Non-Intersecting SubpermutationsDescription对于一个序列，取若干个长度为 $k$ 的子序列，满足这些子序列互不相交且包含 $1 \sim k$ 全部元素，定义这个序列的价值就是子序列个数的最大值。 给定序列长度 $n$，每个元素都是由 $1 \si">
+  <meta name="description" content="Educational Codeforces Round 154 (Rated for Div. 2)E. Non-Intersecting SubpermutationsDescription对于一个序列，取若干个长度为 $k$ 的子序列，满足这些子序列互不相交且包含 $1 \sim k$ 全部元素，定义这个序列的价值就是子序列个数的最大值。 给定序列长度 $n$，每个元素都是由 $1 \s">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CodeForces 补全计划（1851 ~ 1875）">
 <meta property="og:url" content="https://anasuuuu.github.io/2023/08/27/CF-Instrumentality-Project-II/index.html">
 <meta property="og:site_name" content="Ana_Su&#39;s Blog">
-<meta property="og:description" content="Educational Codeforces Round 154 (Rated for Div. 2)E. Non-Intersecting SubpermutationsDescription对于一个序列，取若干个长度为 $k$ 的子序列，满足这些子序列互不相交且包含 $1 \sim k$ 全部元素，定义这个序列的价值就是子序列个数的最大值。 给定序列长度 $n$，每个元素都是由 $1 \si">
+<meta property="og:description" content="Educational Codeforces Round 154 (Rated for Div. 2)E. Non-Intersecting SubpermutationsDescription对于一个序列，取若干个长度为 $k$ 的子序列，满足这些子序列互不相交且包含 $1 \sim k$ 全部元素，定义这个序列的价值就是子序列个数的最大值。 给定序列长度 $n$，每个元素都是由 $1 \s">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-08-27T03:35:04.000Z">
 <meta property="article:modified_time" content="2023-09-03T07:42:05.942Z">
@@ -254,6 +254,7 @@
 
       
         <span id="more"></span>
+
 <h2 id="Educational-Codeforces-Round-154-Rated-for-Div-2"><a href="#Educational-Codeforces-Round-154-Rated-for-Div-2" class="headerlink" title="Educational Codeforces Round 154 (Rated for Div. 2)"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1861">Educational Codeforces Round 154 (Rated for Div. 2)</a></h2><h3 id="E-Non-Intersecting-Subpermutations"><a href="#E-Non-Intersecting-Subpermutations" class="headerlink" title="E. Non-Intersecting Subpermutations"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1861/problem/E">E. Non-Intersecting Subpermutations</a></h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>对于一个序列，取若干个长度为 $k$ 的子序列，满足这些子序列互不相交且包含 $1 \sim k$ 全部元素，定义这个序列的价值就是子序列个数的最大值。</p>
 <p>给定序列长度 $n$，每个元素都是由 $1 \sim k$ 组成，问所组成序列的价值总和是多少。</p>
 <h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>我们对于一个既定的序列，要求出他的子序列个数的方法是用贪心，使序列的右端点尽可能靠左。</p>
