@@ -234,14 +234,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.6k</span>
+              <span>2.6k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>6 分钟</span>
+              <span>5 分钟</span>
             </span>
 
         </div>
@@ -255,6 +255,7 @@
       
         <p>从踩坑到掉坑里</p>
 <span id="more"></span>
+
 <p>本博客采用 Hexo + GitHub 搭建，具体教程网上很多不再赘述</p>
 <p>不过这里还是推荐两个我主要参考的教程 <a target="_blank" rel="noopener" href="https://ouuan.github.io/post/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8C%97/">hexo博客搭建指北</a> 和 <a target="_blank" rel="noopener" href="https://venusnero.github.io/2019/01/23/build_hexo_github_blog/">从零搭建 Hexo + Github 博客</a></p>
 <p>下面分享一些自己踩过的坑</p>
@@ -264,10 +265,13 @@
 <h3 id="Majax-渲染"><a href="#Majax-渲染" class="headerlink" title="Majax 渲染"></a>Majax 渲染</h3><h4 id="问题简述-1"><a href="#问题简述-1" class="headerlink" title="问题简述"></a>问题简述</h4><ol>
 <li><p>无法正常渲染二重闭曲面积分</p>
 </li>
-<li><p>```latex<br> $\iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV = \unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy $</p>
- <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"> 可以正常渲染出来</span><br><span class="line"></span><br><span class="line">$\iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV = \unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy $</span><br><span class="line"></span><br><span class="line">```latex</span><br><span class="line">$\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$</span><br></pre></td></tr></tbody></table></figure>
-<p> 渲染异常</p>
-<p> $\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$</p>
+<li><pre><code class="latex">$\iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV = \unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy $
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"> 可以正常渲染出来</span><br><span class="line"></span><br><span class="line">$\iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV = \unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy $</span><br><span class="line"></span><br><span class="line">```latex</span><br><span class="line">$\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$</span><br></pre></td></tr></tbody></table></figure>
+
+渲染异常
+
+$\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$
+</code></pre>
 </li>
 </ol>
 <h4 id="解决方案-1"><a href="#解决方案-1" class="headerlink" title="解决方案"></a>解决方案</h4><ol>
@@ -275,8 +279,10 @@
 </li>
 <li><p>很神奇的问题，解决方法也很玄学，将</p>
  <figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\unicode</span>{8751}<span class="built_in">_</span>{<span class="keyword">\sum</span>}Pdydz + Qdzdx + Rdxdy = <span class="keyword">\iiint</span><span class="built_in">_</span>{<span class="keyword">\Omega</span>}(<span class="keyword">\frac</span>{<span class="keyword">\partial</span> P}{<span class="keyword">\partial</span> x} + <span class="keyword">\frac</span>{<span class="keyword">\partial</span> Q}{<span class="keyword">\partial</span> y} + <span class="keyword">\frac</span>{<span class="keyword">\partial</span> R}{<span class="keyword">\partial</span> z})dV</span><br></pre></td></tr></tbody></table></figure>
+
 <p> 改为</p>
  <figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\unicode</span>{8751}<span class="built_in">_</span>{<span class="keyword">\sum</span>} Pdydz + Qdzdx + Rdxdy = <span class="keyword">\iiint</span><span class="built_in">_</span><span class="keyword">\Omega</span>(<span class="keyword">\frac</span>{<span class="keyword">\partial</span> P}{<span class="keyword">\partial</span> x} + <span class="keyword">\frac</span>{<span class="keyword">\partial</span> Q}{<span class="keyword">\partial</span> y} + <span class="keyword">\frac</span>{<span class="keyword">\partial</span> R}{<span class="keyword">\partial</span> z})dV</span><br></pre></td></tr></tbody></table></figure>
+
 <p> 即可</p>
 <p> $\unicode{8751}_\sum Pdydz + Qdzdx + Rdxdy = \iiint_\Omega(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$</p>
 <p> 感觉可能是 <code>{}</code> 和 mathjax 渲染有一些冲突，具体原因还不完全清楚（？）</p>
@@ -293,26 +299,37 @@
 <li><p>新建 _custom.styl 文件，并在 main.styl 中引用该文件</p>
   <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//个人添加</span><br><span class="line">@import "_custom.styl"</span><br></pre></td></tr></tbody></table></figure>
 </li>
-<li><p>```stylus<br>  //背景图片<br>  body {</p>
-<pre><code>  background:url(https://pic.heson10.com/img/image-20200712231958010.png);
-  background-repeat: no-repeat;
-  background-attachment:fixed;
-  background-size: cover;
-  background-position:50% 50%;
-</code></pre><p>  }</p>
-<p>  //博客内容透明化<br>  //文章内容的透明度设置<br>  .content-wrap {</p>
-<pre><code>opacity: 0.9;
-</code></pre><p>  }</p>
-<p>  //侧边框的透明度设置<br>  .sidebar {</p>
-<pre><code>opacity: 0.9;
-</code></pre><p>  }</p>
-<p>  //菜单栏的透明度设置<br>  .header-inner {</p>
-<pre><code>background: rgba(255,255,255,0.9);
-</code></pre><p>  }</p>
-<p>  //搜索框（local-search）的透明度设置<br>  .popup {</p>
-<pre><code>opacity: 0.9;
-</code></pre><p>  }</p>
-  <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 参考</span><br><span class="line"></span><br><span class="line">[Hexo+Next7.X 博客美化教程合集](https://www.heson10.com/volantis/posts/52911.html)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 自定义文章排序</span><br><span class="line"></span><br><span class="line">#### 问题简述</span><br><span class="line"></span><br><span class="line">希望将个别博客置顶而设置自定义排序</span><br><span class="line"></span><br><span class="line">#### 解决方案</span><br><span class="line"></span><br><span class="line">在`node_modules\hexo-generator-index-pin-top\lib\generator.js`文件中找到了似乎是用于排序的代码，该文件是为了添加文章置顶功能的，但当置顶等级设置相同时，按照发布日期进行排序。</span><br><span class="line"></span><br><span class="line">修改后如下：</span><br><span class="line"></span><br><span class="line">```js</span><br><span class="line">'use strict';</span><br><span class="line">var pagination = require('hexo-pagination');</span><br><span class="line">module.exports = function(locals){</span><br><span class="line">  var config = this.config;</span><br><span class="line">  var posts = locals.posts;</span><br><span class="line">    posts.data = posts.data.sort(function(a, b) {</span><br><span class="line">        if(a.top &amp;&amp; b.top) { // 当两篇文章top都有定义时</span><br><span class="line">            if(a.top == b.top) return b.updated - a.updated; // 若top值一样，则按照文章更新日期降序排列</span><br><span class="line">            else return b.top - a.top; // 否则按照top值降序排列</span><br><span class="line">        }</span><br><span class="line">        else if(a.top &amp;&amp; !b.top) { // 以下两种情况是若只有一篇文章top有定义，则将有top的排在前面(这里用异或操作居然不行233)</span><br><span class="line">            return -1;</span><br><span class="line">        }</span><br><span class="line">        else if(!a.top &amp;&amp; b.top) { //上一条已解释</span><br><span class="line">            return 1;</span><br><span class="line">        }</span><br><span class="line">        else return b.updated - a.updated; // 若都没定义，则按照文章更新日期降序排列</span><br><span class="line">    });</span><br><span class="line">  var paginationDir = config.pagination_dir || 'page';</span><br><span class="line">  return pagination('', posts, {</span><br><span class="line">    perPage: config.index_generator.per_page,</span><br><span class="line">    layout: ['index', 'archive'],</span><br><span class="line">    format: paginationDir + '/%d/',</span><br><span class="line">    data: {</span><br><span class="line">      __index: true</span><br><span class="line">    }</span><br><span class="line">  });</span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure>
+<li><pre><code class="stylus"><span class="comment">//背景图片</span>
+<span class="selector-tag">body</span> {
+    background:url(https://pic.heson10.com/img/image-20200712231958010.png);
+    <span class="attribute">background-repeat</span>: no-repeat;
+    <span class="attribute">background-attachment</span>:fixed;
+    <span class="attribute">background-size</span>: cover;
+    <span class="attribute">background-position</span>:<span class="number">50%</span> <span class="number">50%</span>;
+}
+
+<span class="comment">//博客内容透明化</span>
+<span class="comment">//文章内容的透明度设置</span>
+<span class="selector-class">.content-wrap</span> {
+  <span class="attribute">opacity</span>: <span class="number">0.9</span>;
+}
+
+<span class="comment">//侧边框的透明度设置</span>
+<span class="selector-class">.sidebar</span> {
+  <span class="attribute">opacity</span>: <span class="number">0.9</span>;
+}
+
+<span class="comment">//菜单栏的透明度设置</span>
+<span class="selector-class">.header-inner</span> {
+  <span class="attribute">background</span>: rgba(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0.9</span>);
+}
+
+<span class="comment">//搜索框（local-search）的透明度设置</span>
+<span class="selector-class">.popup</span> {
+  <span class="attribute">opacity</span>: <span class="number">0.9</span>;
+}
+&lt;!--code￼<span class="number">4</span>--&gt;
+</code></pre>
 </li>
 </ul>
 <h4 id="参考-1"><a href="#参考-1" class="headerlink" title="参考"></a>参考</h4><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_40790680/article/details/128971322">hexo 自定义文章排序</a></p>
@@ -481,12 +498,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">82k</span>
+    <span title="站点总字数">81k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:29</span>
+    <span title="站点阅读时长">2:28</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
