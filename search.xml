@@ -1,43 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>CodeForces 补全计划（1851 ~ 1875）</title>
-    <url>/2023/08/27/CF-Instrumentality-Project-II/</url>
-    <content><![CDATA[<p>千里之行，始于足下。</p>
-<span id="more"></span>
-
-<h2 id="1860-Educational-Codeforces-Round-153-Rated-for-Div-2"><a href="#1860-Educational-Codeforces-Round-153-Rated-for-Div-2" class="headerlink" title="1860. Educational Codeforces Round 153 (Rated for Div. 2)"></a>1860. <a href="https://codeforces.com/contest/1860">Educational Codeforces Round 153 (Rated for Div. 2)</a></h2><h3 id="A-Not-a-Substring"><a href="#A-Not-a-Substring" class="headerlink" title="A. Not a Substring"></a><a href="https://codeforces.com/contest/1860/problem/A">A. Not a Substring</a></h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>给定一个长度为 $n$ 的由 <code>(</code> 和 <code>)</code> 组成的序列，问是否存在一个长度为 $2n$ 的序列，使得新序列不包含原序列。</p>
-<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>水题，主要熟悉一下 stl 里 string 用法。看 <code>((()))</code> 和 <code>()()()</code> 这样的谁符合，都不符合就是 <code>NO</code>。</p>
-<p>string 可以直接通过 <code>+</code> 来在尾部插入字符，<code>"()"</code> 也可以表示一个常量数组，也可以用 <code>a.find(s) == string::npos</code> 来判断 s 是否在 a 中出现。</p>
-<p><a href="https://codeforces.com/contest/1860/submission/222003094">Code</a></p>
-<h2 id="1861-Educational-Codeforces-Round-154-Rated-for-Div-2"><a href="#1861-Educational-Codeforces-Round-154-Rated-for-Div-2" class="headerlink" title="1861. Educational Codeforces Round 154 (Rated for Div. 2)"></a>1861. <a href="https://codeforces.com/contest/1861">Educational Codeforces Round 154 (Rated for Div. 2)</a></h2><h3 id="E-Non-Intersecting-Subpermutations"><a href="#E-Non-Intersecting-Subpermutations" class="headerlink" title="E. Non-Intersecting Subpermutations"></a><a href="https://codeforces.com/contest/1861/problem/E">E. Non-Intersecting Subpermutations</a></h3><h4 id="Description-1"><a href="#Description-1" class="headerlink" title="Description"></a>Description</h4><p>对于一个序列，取若干个长度为 $k$ 的子序列，满足这些子序列互不相交且包含 $1 \sim k$ 全部元素，定义这个序列的价值就是子序列个数的最大值。</p>
-<p>给定序列长度 $n$，每个元素都是由 $1 \sim k$ 组成，问所组成序列的价值总和是多少。</p>
-<h4 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h4><p>我们对于一个既定的序列，要求出他的子序列个数的方法是用贪心，使序列的右端点尽可能靠左。</p>
-<p>我们设 $f_i$ 表示最后一个序列右端点在 $i$ 处的方案数<strong>（注意这里是方案数，并不是对答案的贡献数）</strong>，那么当前最后一个序列对答案的贡献是 $f_i \times k^{n - i}$。（这里的想法相当于我们每次只算一个位置 $[i - k + 1, i]$ 上的序列对总答案的影响）</p>
-<p>对于方案转移，我们枚举上一个序列的右端点 $j$，那么这里有 $j \in [0, i - k]$（$j = 0$ 表示没有上一个序列）。</p>
-<p>我们再引入 $g_i$ 表示对于长度是 $i$ 的一段序列，第一个合法子序列出现的位置是 $[i - k + 1, i]$ 的方案数。</p>
-<p>故不难理解 $f_i = \sum f_j \times g_{i - j}$。然后问题转化为如何求 $g_i$ 数组。</p>
-<p>对于 $g_i$ 而言，最后 $k$ 个位置一定是 $1 \sim k$，前 $i - k$ 位置任意选，故有 $k^{i - k} \times k!$ 的方案数。</p>
-<p>但是会有不合法的方案算在内，可能会出现子序列先于 $[i - k + 1, i]$ 位置出现。</p>
-<p>分类讨论，枚举可能先于出现的位置 $[j - k + 1, j]$，若 $i - j &lt;= k$ ，那么不合法的方案数相当于是 $g_j \times (i - j)!$，因为在最后 $i - j$ 个位置上，相当于每个数都只出现了一次。若 $i - j &gt; k$，那么不合法的方案数相当于是 $g_j \times k! \times k^{i - j - k}$。最后 $k$ 个位置上 $k$ 个数各出现一次，$[j + 1, i - k]$ 位置上的数字随便选。最后把不合法的情况都减掉即可。</p>
-<p><a href="https://codeforces.com/contest/1861/submission/221631049">Code</a></p>
-<h2 id="1862-Codeforces-Round-894-Div-3"><a href="#1862-Codeforces-Round-894-Div-3" class="headerlink" title="1862. Codeforces Round 894 (Div. 3)"></a>1862. <a href="https://codeforces.com/contest/1862">Codeforces Round 894 (Div. 3)</a></h2><h3 id="E-Kolya-and-Movie-Theatre"><a href="#E-Kolya-and-Movie-Theatre" class="headerlink" title="E. Kolya and Movie Theatre"></a><a href="https://codeforces.com/contest/1862/problem/E">E. Kolya and Movie Theatre</a></h3><h4 id="Description-2"><a href="#Description-2" class="headerlink" title="Description"></a>Description</h4><p>一段长为 $n$ 的序列 $a$，你从中至多选 $m$ 个数。设你选的数中下标最大的为 $x$，那么你选的答案要减去 $x \times d$。问该怎么选是答案最大。</p>
-<h4 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h4><p>从前往后扫一遍，设下标最大的为 $i$，维护前 $k$ 大的序列以及和，算答案的时候直接减去 $i \times d$ 即可。</p>
-<p>注：万一插入的第 $i$ 号元素排不到前 $k$ 大，算答案时不应该减 $i \times d$ 。但其实不用考虑，因为这种情况一定不是最优，当最大下标值小于 $i$ 的时候一定会有一个答案，前 $k$ 大值和当前一样，但减去的数要小一些，所以不会更新答案。</p>
-<p><a href="https://codeforces.com/contest/1862/submission/220495907">Code</a></p>
-<h3 id="F-Magic-Will-Save-the-World"><a href="#F-Magic-Will-Save-the-World" class="headerlink" title="F. Magic Will Save the World"></a><a href="https://codeforces.com/contest/1862/problem/F">F. Magic Will Save the World</a></h3><h4 id="Description-3"><a href="#Description-3" class="headerlink" title="Description"></a>Description</h4><p>若干小怪，每个小怪血量 $s_i$，你可以用 水 或 火 元素攻击，消耗等量的 水 或 火 元素。你每秒可以增加 $w$ 水元素 和 $f$ 火元素，问最快要几秒消灭全部小怪。</p>
-<h4 id="Solution-3"><a href="#Solution-3" class="headerlink" title="Solution"></a>Solution</h4><p>对于每个小怪，要么被火消灭，要么被水消灭，不难发现小怪总血量比较低，所以可以利用 $01$ 背包思想解决。</p>
-<p><a href="https://codeforces.com/contest/1862/submission/220568374">Code</a></p>
-<h3 id="G-The-Great-Equalizer"><a href="#G-The-Great-Equalizer" class="headerlink" title="G. The Great Equalizer"></a><a href="https://codeforces.com/contest/1862/problem/G">G. The Great Equalizer</a></h3><h4 id="Description-4"><a href="#Description-4" class="headerlink" title="Description"></a>Description</h4><p>初始有一段长度为 $n$ 的序列，记一次操作为将序列按升序排列然后除去相等的元素。然后设新序列元素长度 $n’$，将第一个元素加上 $n’$，第二个加上 $n’ - 1$，第三个加上 $n’ - 2$ 以此类推。</p>
-<p>问最后只剩下一个元素的值。</p>
-<h4 id="Solution-4"><a href="#Solution-4" class="headerlink" title="Solution"></a>Solution</h4><p>我们发现两个性质，第一，每个元素之间的相对大小不会发生变化，第二，设两两相邻元素之间的最大元素为 $max_gap$，则每次操作后 $max_gap$ 都会减一。那么最后剩下的那个元素的值为 原序列中最大的元素加上操作次数（即 $max_gap$）。</p>
-<p><a href="https://codeforces.com/contest/1862/submission/220600516">Code</a></p>
-]]></content>
-      <tags>
-        <tag>算法竞赛</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CodeForces 补全计划（1826 ~ 1850）</title>
     <url>/2023/06/26/CF-Instrumentality-Project-I/</url>
     <content><![CDATA[<p>千里之行，始于足下。</p>
@@ -140,672 +103,6 @@
 ]]></content>
       <tags>
         <tag>算法竞赛</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>博客搭建踩坑指北</title>
-    <url>/2023/06/27/Cross-The-Hole/</url>
-    <content><![CDATA[<p>从踩坑到掉坑里</p>
-<span id="more"></span>
-
-<p>本博客采用 Hexo + GitHub 搭建，具体教程网上很多不再赘述</p>
-<p>不过这里还是推荐两个我主要参考的教程 <a href="https://ouuan.github.io/post/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8C%97/">hexo博客搭建指北</a> 和 <a href="https://venusnero.github.io/2019/01/23/build_hexo_github_blog/">从零搭建 Hexo + Github 博客</a></p>
-<p>下面分享一些自己踩过的坑</p>
-<h3 id="公式块中公式无法正常换行"><a href="#公式块中公式无法正常换行" class="headerlink" title="公式块中公式无法正常换行"></a>公式块中公式无法正常换行</h3><h4 id="问题简述"><a href="#问题简述" class="headerlink" title="问题简述"></a>问题简述</h4><p>用 $$ 插入公式块时，本地上用 typora 显示公式换行，但网页上未显示出来</p>
-<p><code>\\</code> 无法正常换行</p>
-<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>在公式块前面加上 <code>\begin{gather}</code> 末尾加上 <code>\end{gather}</code> 即可</p>
-<h3 id="Majax-渲染"><a href="#Majax-渲染" class="headerlink" title="Majax 渲染"></a>Majax 渲染</h3><h4 id="问题简述-1"><a href="#问题简述-1" class="headerlink" title="问题简述"></a>问题简述</h4><ol>
-<li><p>无法正常渲染二重闭曲面积分</p>
-</li>
-<li><pre><code class="latex">$\iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV = \unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy $
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line"></span><br><span class="line"> 可以正常渲染出来</span><br><span class="line"></span><br><span class="line">$\iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV = \unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy $</span><br><span class="line"></span><br><span class="line">```latex</span><br><span class="line">$\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$</span><br></pre></td></tr></tbody></table></figure>
-
-渲染异常
-
-$\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$
-</code></pre>
-</li>
-</ol>
-<h4 id="解决方案-1"><a href="#解决方案-1" class="headerlink" title="解决方案"></a>解决方案</h4><ol>
-<li><p>用 <code>\unicode{8751}</code> 表示即可</p>
-</li>
-<li><p>很神奇的问题，解决方法也很玄学，将</p>
- <figure class="highlight latex"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">\unicode</span>{8751}<span class="built_in">_</span>{<span class="keyword">\sum</span>}Pdydz + Qdzdx + Rdxdy = <span class="keyword">\iiint</span><span class="built_in">_</span>{<span class="keyword">\Omega</span>}(<span class="keyword">\frac</span>{<span class="keyword">\partial</span> P}{<span class="keyword">\partial</span> x} + <span class="keyword">\frac</span>{<span class="keyword">\partial</span> Q}{<span class="keyword">\partial</span> y} + <span class="keyword">\frac</span>{<span class="keyword">\partial</span> R}{<span class="keyword">\partial</span> z})dV</span><br></pre></td></tr></tbody></table></figure>
-
-<p> 改为</p>
- <figure class="highlight latex"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">\unicode</span>{8751}<span class="built_in">_</span>{<span class="keyword">\sum</span>} Pdydz + Qdzdx + Rdxdy = <span class="keyword">\iiint</span><span class="built_in">_</span><span class="keyword">\Omega</span>(<span class="keyword">\frac</span>{<span class="keyword">\partial</span> P}{<span class="keyword">\partial</span> x} + <span class="keyword">\frac</span>{<span class="keyword">\partial</span> Q}{<span class="keyword">\partial</span> y} + <span class="keyword">\frac</span>{<span class="keyword">\partial</span> R}{<span class="keyword">\partial</span> z})dV</span><br></pre></td></tr></tbody></table></figure>
-
-<p> 即可</p>
-<p> $\unicode{8751}_\sum Pdydz + Qdzdx + Rdxdy = \iiint_\Omega(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$</p>
-<p> 感觉可能是 <code>{}</code> 和 mathjax 渲染有一些冲突，具体原因还不完全清楚（？）</p>
-</li>
-</ol>
-<h3 id="表格中的"><a href="#表格中的" class="headerlink" title="表格中的 |"></a>表格中的 |</h3><h4 id="问题简述-2"><a href="#问题简述-2" class="headerlink" title="问题简述"></a>问题简述</h4><p>由于 markdown 本身的语法，我们无法直接在表格中打出竖线 |</p>
-<h4 id="解决方案-2"><a href="#解决方案-2" class="headerlink" title="解决方案"></a>解决方案</h4><ul>
-<li>当表格内容不用 $\LaTeX$ 时，可通过转义符 <code>\|</code> 或 <code>&amp;#124;</code> 来实现竖杠或绝对值； </li>
-<li>但是用 $\LaTeX$ 时第一个会显示为 “∥”，第二个会报错，故要用 <code>\vert</code> </li>
-</ul>
-<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://blog.csdn.net/skytruine/article/details/105710349">Markdown表格数学公式中使用绝对值“| |”或竖杠”|”</a></p>
-<h3 id="背景-和-透明度"><a href="#背景-和-透明度" class="headerlink" title="背景 和 透明度"></a>背景 和 透明度</h3><h4 id="问题简述-3"><a href="#问题简述-3" class="headerlink" title="问题简述"></a>问题简述</h4><p>在 Hexo 7.x 版本下设置 背景 和 透明度</p>
-<h4 id="解决方案-3"><a href="#解决方案-3" class="headerlink" title="解决方案"></a>解决方案</h4><ul>
-<li><p>新建 _custom.styl 文件，并在 main.styl 中引用该文件</p>
-  <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">//个人添加</span><br><span class="line">@import "_custom.styl"</span><br></pre></td></tr></tbody></table></figure>
-</li>
-<li><pre><code class="stylus"><span class="comment">//背景图片</span>
-<span class="selector-tag">body</span> {
-    background:url(https://pic.heson10.com/img/image-20200712231958010.png);
-    <span class="attribute">background-repeat</span>: no-repeat;
-    <span class="attribute">background-attachment</span>:fixed;
-    <span class="attribute">background-size</span>: cover;
-    <span class="attribute">background-position</span>:<span class="number">50%</span> <span class="number">50%</span>;
-}
-
-<span class="comment">//博客内容透明化</span>
-<span class="comment">//文章内容的透明度设置</span>
-<span class="selector-class">.content-wrap</span> {
-  <span class="attribute">opacity</span>: <span class="number">0.9</span>;
-}
-
-<span class="comment">//侧边框的透明度设置</span>
-<span class="selector-class">.sidebar</span> {
-  <span class="attribute">opacity</span>: <span class="number">0.9</span>;
-}
-
-<span class="comment">//菜单栏的透明度设置</span>
-<span class="selector-class">.header-inner</span> {
-  <span class="attribute">background</span>: rgba(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0.9</span>);
-}
-
-<span class="comment">//搜索框（local-search）的透明度设置</span>
-<span class="selector-class">.popup</span> {
-  <span class="attribute">opacity</span>: <span class="number">0.9</span>;
-}
-&lt;!--code￼<span class="number">4</span>--&gt;
-</code></pre>
-</li>
-</ul>
-<h4 id="参考-1"><a href="#参考-1" class="headerlink" title="参考"></a>参考</h4><p><a href="https://blog.csdn.net/qq_40790680/article/details/128971322">hexo 自定义文章排序</a></p>
-]]></content>
-      <tags>
-        <tag>博客搭建</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大学笔记 | 电路原理</title>
-    <url>/2023/06/05/Circuit-Analysis/</url>
-    <content><![CDATA[<p>从入门到进门</p>
-<span id="more"></span>
-
-<h2 id="第一章-电路模型和电路定律"><a href="#第一章-电路模型和电路定律" class="headerlink" title="第一章 电路模型和电路定律"></a>第一章 电路模型和电路定律</h2><h4 id="第一章总结"><a href="#第一章总结" class="headerlink" title="第一章总结"></a>第一章总结</h4><ol>
-<li>研究的电路都满足集总假设条件，默认电路都是集总电路</li>
-<li>激励称为输入，响应称为输出</li>
-<li>关联参考方向：电流与压降方向一致，非关联参考方向：电流与压降方向相反</li>
-<li>支路，节点，回路，网孔，网络</li>
-<li>KCL，KVL</li>
-<li>电阻有负电阻</li>
-<li>受控电压源（?CVS），受控电流源（?CCS）</li>
-</ol>
-<h2 id="第二章-直流电阻电路的等效变换分析"><a href="#第二章-直流电阻电路的等效变换分析" class="headerlink" title="第二章 直流电阻电路的等效变换分析"></a>第二章 直流电阻电路的等效变换分析</h2><h4 id="第二章总结"><a href="#第二章总结" class="headerlink" title="第二章总结"></a>第二章总结</h4><ol>
-<li><p>电流源并联时叠加，串联时要求两个电流源相等且就是这两个电流源大小，电压源串联时叠加，并联要求电压源相等</p>
-</li>
-<li><p>单口网络等效变换</p>
-<p> <img src="%E5%8D%95%E5%8F%A3%E7%BD%91%E7%BB%9C%E7%AD%89%E6%95%88%E5%8F%98%E6%8D%A2.png" alt="单口网络等效变换"></p>
-</li>
-<li><p>Y-Δ变换</p>
-<p> <img src="Y-%CE%94%E5%8F%98%E6%8D%A21.png" alt="Y-Δ变换1"></p>
-<p> <img src="Y-%CE%94%E5%8F%98%E6%8D%A22.png" alt="Y-Δ变换2"></p>
-<p> <img src="Y-%CE%94%E5%8F%98%E6%8D%A23.png" alt="Y-Δ变换3"></p>
-</li>
-</ol>
-<h2 id="第三章-直流电阻电路的一般分析"><a href="#第三章-直流电阻电路的一般分析" class="headerlink" title="第三章 直流电阻电路的一般分析"></a>第三章 直流电阻电路的一般分析</h2><h4 id="第三章总结"><a href="#第三章总结" class="headerlink" title="第三章总结"></a>第三章总结</h4><ol>
-<li><p>网孔分析法 ：每个网孔各设一个电流，利用回路中总电压代数和为 $0$ 列方程，方程左右两边满足 <code>压升 = 压降</code> ，<strong>注意设的电流方向</strong> （本质是 KVL）</p>
-</li>
-<li><p>节点分析法（本质是 KCL）</p>
-<p> <img src="%E8%8A%82%E7%82%B9%E5%88%86%E6%9E%90%E6%B3%95.png" alt="节点分析法"></p>
-<p> 注意右式是以流<strong>进</strong>的电流为正，并且如果某一个支路上要是有电流源了，那么和这个电流源串联的电阻在算自感，互感时都可以忽略不计</p>
-<p> 还要注意的是，如果网络含独立电压源，最好一段接地，另一端直接求出电压</p>
-</li>
-<li><p>回路分析法和网孔分析法本质一样，只是网孔是特殊的回路</p>
-</li>
-</ol>
-<p>例题：</p>
-<p><img src="%E4%BE%8B2.1.png" alt="例2.1"></p>
-<blockquote>
-<p>解：左图可以化简为右图，易得 $I = \frac{2}{3}$</p>
-</blockquote>
-<h2 id="第四章-电路定理"><a href="#第四章-电路定理" class="headerlink" title="第四章 电路定理"></a>第四章 电路定理</h2><h4 id="第四章总结"><a href="#第四章总结" class="headerlink" title="第四章总结"></a>第四章总结</h4><ol>
-<li><p>叠加定理和齐次定理只对线性电路适用</p>
-</li>
-<li><p>注意的是叠加定理每次都是只考虑一个<strong>独立源</strong>，受控源每次都是放在电路中的</p>
-</li>
-<li><p>置换定理：利用电压源 / 电流源替换（例题1， 2）</p>
-</li>
-<li><p>戴维南定理：单口网络可以等效为电压源串电阻，电压源大小为开路电压，电阻为独立源置0后的阻值（注意受控源有阻值） </p>
-</li>
-<li><p>诺顿定理：单口网络等效为电流源（大小为短路电流）并电阻，与戴维南类似（是戴维南定理的对偶形式）</p>
-</li>
-<li><p>求输出电阻常用的方法有：等效电阻法（这里是从端口方向看的），外加电压法（独立源要置0），开短路法（注意后面两个方法适合含受控源的情况）</p>
-</li>
-<li><p>$R_L = R_0$ 时满足最大功率条件，$\eta = \frac{负载产生功率}{总产生功率}$ 注意多个电源存在时有的电源会吸收功率，这个功率不能算在分母里，分母中只能算产生功率，而且算 $\eta$ 时要带回原电路来算，不能盲目认为 $R_L$ 和端口等效电阻相等就认为 $\eta$ 是 $50\%$</p>
-</li>
-</ol>
-<p>例题：</p>
-<p><img src="%E4%BE%8B3.1.png" alt="例3.1"></p>
-<p><img src="%E4%BE%8B3.2.png" alt="例3.2"></p>
-<blockquote>
-<p>当我们知道某支路上的电流 / 电压时，我们可以用<strong>电压源 / 电流源来替换该支路上的其他元件</strong>，这样的话并不改变整个电路结构，研究某一复杂电路时，我们要清楚自己到底想求什么，然后对于<strong>和电流源串联的元件，思考能否舍弃，和电压源并联的元件，思考能否舍弃</strong></p>
-</blockquote>
-<h2 id="第五章-一阶直流动态电路时域分析"><a href="#第五章-一阶直流动态电路时域分析" class="headerlink" title="第五章 一阶直流动态电路时域分析"></a>第五章 一阶直流动态电路时域分析</h2><h4 id="第五章总结"><a href="#第五章总结" class="headerlink" title="第五章总结"></a>第五章总结</h4><ol>
-<li><p>动态元件：元件的伏安关系包含对电流电压的微分 / 积分</p>
-<p> 动态电路：至少含有一个动态元件，含有几个动态元件就称为几阶动态电路</p>
-</li>
-<li><p>电容，电感</p>
-<p> <img src="%E7%94%B5%E5%AE%B9%EF%BC%8C%E7%94%B5%E6%84%9F%E5%85%B3%E7%B3%BB.png" alt="电容，电感关系"></p>
-</li>
-<li><p>完全响应 = 零输入响应 + 零状态响应</p>
-<p> = 固有响应 + 强迫响应</p>
-<p> = 暂态响应 + 稳态响应</p>
-<p> 其实暂态可以粗浅理解为 $e^{-kt}$ 的量</p>
-<p> <img src="%E5%87%A0%E4%B8%AA%E6%A6%82%E5%BF%B5.png" alt="几个概念"></p>
-</li>
-<li><p>$f(t) = f(\infty) + [f(0_+) - f(\infty)]e^{\frac{t}{\tau}}$</p>
-</li>
-</ol>
-<h3 id="S-5-1-一阶电路的零输入响应-amp-零状态响应"><a href="#S-5-1-一阶电路的零输入响应-amp-零状态响应" class="headerlink" title="$\S 5.1$ 一阶电路的零输入响应 &amp; 零状态响应"></a>$\S 5.1$ 一阶电路的零输入响应 &amp; 零状态响应</h3><ul>
-<li>换路定则</li>
-</ul>
-<p>​        换路前后电容电流和电感电压为有限制的情况下， 换路前后瞬间电容电压和电感电流不能跃变。 </p>
-<p>​        该定则常用来判断 $i_L(0_+)与i_L(0_-),u_C(0_+)与u_C(0_-)$ 是否相等</p>
-<ul>
-<li><p>零输入响应公式形式</p>
-<p>  对于电容：$u_c = U_0e^{-\frac{t}{\tau}}, \tau = RC$</p>
-<p>  对于电感：$i_l = I_0e^{-\frac{t}{\tau}}, \tau = \frac{L}{R}$</p>
-</li>
-</ul>
-<p>​        这里电感可以看作是一个电压源，而电容可以看作是一个电流源，<strong>然后这里的 $R$ 是指换路后电路的总电阻值</strong></p>
-<ul>
-<li><p>零状态响应公式</p>
-<p>  对于电容：$u_c = U_{\infty}(1 - e^{-\frac{t}{\tau}}), \tau = RC$</p>
-<p>  对于电感：$i_l = I_{\infty}(1 - e^{-\frac{t}{\tau}}), \tau = \frac{L}{R}$</p>
-</li>
-</ul>
-<h3 id="S-5-2-一阶电路的全响应"><a href="#S-5-2-一阶电路的全响应" class="headerlink" title="$\S 5.2$ 一阶电路的全响应"></a>$\S 5.2$ 一阶电路的全响应</h3><ul>
-<li><p>全响应公式形式</p>
-<p>  对于电容：$u_c = U_0e^{-\frac{t}{\tau}} + U_{\infty}(1 - e^{-\frac{t}{\tau}}), \tau = RC$</p>
-<p>  对于电感：$i_l = I_0e^{-\frac{t}{\tau}} + I_{\infty}(1 - e^{-\frac{t}{\tau}}), \tau = \frac{L}{R}$</p>
-<p>  全响应时的电容电压即零状态时的电容电压加上零响应时的电容电压， 电感电源同理</p>
-<p>  值得注意的是，这里的电阻 $R$ 是<strong>除去储能元件</strong>以及将激励源置零所得到的</p>
-<p>  <strong>可以写作 $f(t) = f(\infty) + [f(0_+) - f(\infty)]e^{\frac{t}{\tau}}$， 这便是三要素法</strong></p>
-<p>  <strong>一阶线性直流电路</strong>中的电感电容<strong>电阻</strong>， 均适用三要素法</p>
-</li>
-</ul>
-<p><img src="%E6%8D%A2%E8%B7%AF%E5%AE%9A%E5%88%99.png" alt="换路定则"></p>
-<p><strong>注意一下换路定理不能盲目用</strong></p>
-<p><img src="%E7%89%B9%E4%BE%8B.png" alt="特例"></p>
-<h3 id="S-5-3-一阶电路的跃阶响应"><a href="#S-5-3-一阶电路的跃阶响应" class="headerlink" title="$\S 5.3$ 一阶电路的跃阶响应"></a>$\S 5.3$ 一阶电路的跃阶响应</h3><ul>
-<li><p>单位跃阶函数时一种奇异函数， 定义 $\varepsilon(t) = \begin{cases} 0 &amp;&amp; t &lt; 0\\ 1 &amp;&amp; t &gt; 0\end{cases}$</p>
-</li>
-<li><p>电路的单位跃阶响应为 $s(t) = (1 - e^{-\frac{t}{\tau}})\varepsilon(t)$ </p>
-</li>
-<li><p>其实可以先求出电压为 $1V$ 时的响应函数，然后用阶跃函数表示电压函数，最后真正响应函数的零状态响应就是阶跃函数 $\times (1 - e^{-\frac{t}{\tau}})$ 然后再加上零输入响应就是完全响应</p>
-</li>
-</ul>
-<p><img src="%E4%BE%8B5.1.jpg" alt="例5.1"></p>
-<p>（有坑）</p>
-<p><img src="%E4%BE%8B5.2.png" alt="例5.2"></p>
-<blockquote>
-<p>首先从状态量入手，算 $0_-$ 时候的<strong>状态量</strong>，研究 $0_+$ 状态时可以把电容变为电压源，电感变为电流源，然后用三要素法分析。但是这题有个坑。无论是状态量还是非状态量，分解成暂态响应和固态响应时都可以直接按 <code>常数</code> + <code>按e指数衰减部分</code> ，但是分解成零输入和零状态时，状态量比较好分解就按照一般方法来，非状态量不可以按照状态量的方法，要列关于 i / u 的方程，然后把 i / u 转化为零输入 / 零状态时的量来求 </p>
-</blockquote>
-<p><img src="%E4%BE%8B5.3.png" alt="例5.3"></p>
-<blockquote>
-<p>分成 $0 &lt; t &lt; 1$ 和 $1 &lt; t$ 区间来处理</p>
-<p>$$t = \begin{cases} 2(1 - e^{-t}) \ , 0 \le t \le 1&amp; \\\ 1 + (1 - 2e^{-1})e^{-2(t - 1)} \ ,t \ge 1 &amp; \end{cases}$$</p>
-</blockquote>
-<p><img src="%E4%BE%8B5.4.png" alt="例5.4"></p>
-<blockquote>
-<p>$$<br>u_s(t) = \varepsilon(t) + 2\varepsilon(t - 1) - 3\varepsilon(t - 3)\<br>t = \begin{cases} 20e^{-\frac{t}{\tau}} + (1 - e^{-\frac{t}{\tau}}) \ , 0 \le t \le 1&amp; \\ 20e^{-\frac{t}{\tau}} + (1 - e^{-\frac{t}{\tau}}) + 2(1 - e^{-\frac{t - 1}{\tau}}) \ ,1 \le t \le 3 &amp; \\ 20e^{-\frac{t}{\tau}} + (1 - e^{-\frac{t}{\tau}}) + 2(1 - e^{-\frac{t - 1}{\tau}}) - 3(1 - e^{-\frac{t - 3}{\tau}}) \ ,t \ge 3\end{cases}<br>$$</p>
-</blockquote>
-<h2 id="第六章-相量法"><a href="#第六章-相量法" class="headerlink" title="第六章 相量法"></a>第六章 相量法</h2><h4 id="第六章总结"><a href="#第六章总结" class="headerlink" title="第六章总结"></a>第六章总结</h4><ol>
-<li><p>我们要建立概念就是复数，三角函数，$e$ 指数之间是可以相互转化的，所以往往可以把他们看作等价的，<strong>都可以表示二维平面上的向量</strong></p>
-</li>
-<li><p>算相量加减法时转化为复数形式，算相量乘除法时转化为 $e$ 指数形式</p>
-</li>
-<li><p>三角函数转化为相量时，除非特殊说明，不然默认相量前面的都是有效值，即峰值的 $\frac{1}{\sqrt 2}$</p>
-</li>
-<li><p>对于相量而言，我们在计算上时可以把它看作和相量相同计算，<strong>但是相量不是向量，向量是真实存在物理量，相量不真实存在，是表示正弦信号的工具</strong></p>
-</li>
-<li><p>当电源电流是三角函数形式，即不断变化时要用相量来表示，$U$ 和 $I$ 上要记得打点，相量是可以用来表征正弦波的，<strong>但不等同</strong></p>
-</li>
-<li><p>对于接下来的正弦稳态电路和之前学的电路<strong>没什么不同</strong>，区别就是电流电压用相量表示，并且电感电容都可以用阻抗来表示，$Z_C= -j\frac{1}{\omega C},Z_L = jL\omega $</p>
-</li>
-</ol>
-<ul>
-<li><p>复数<br>  $$<br>  F = a + jb\<br>  F = |F|(cos\theta + jsin\theta)\<br>  F = |F|e^{j\theta}\<br>  \theta = arg \ F = arctan(\frac{b}{a})\<br>  Re[F] = a\<br>  lm[F] = b\<br>  F^* = a - jb = |F|\angle-\theta<br>  $$<br>  复数加减用代数形式，乘除用指数形式</p>
-</li>
-<li><p>正弦量</p>
-<p>  按正弦规律变化的电流，电压称为正弦量。由振幅（正数），角速度，初相位三要素决定</p>
-<p>  按国家统一标准用cos表示正弦量</p>
-<p>  相量和正弦量不相等，写的时候注意区分</p>
-<p>  峰峰值是振幅的两倍，有效值也称为均方根值</p>
-<p>  化成相量形式时前面的系数是有效值大小，化成正弦量时前面的系数是峰值大小</p>
-</li>
-<li><p>电路定理的相量形式</p>
-<p>  $\omega L$ 感抗  $-\frac{1}{\omega L}$ 感纳   $-\frac{1}{c\omega}$ 容抗  $\omega C$ 容纳   </p>
-<p>  将一般的电路定理全部改成相量形式</p>
-</li>
-</ul>
-<h2 id="第七章-正弦稳态电路的分析"><a href="#第七章-正弦稳态电路的分析" class="headerlink" title="第七章 正弦稳态电路的分析"></a>第七章 正弦稳态电路的分析</h2><h4 id="第七章总结"><a href="#第七章总结" class="headerlink" title="第七章总结"></a>第七章总结</h4><ol>
-<li><p>$|Z| = \frac{U}{I},Z = R + jX,\theta_z = \varphi_u - \varphi_i$ </p>
-<p> $|Z|$ 称为阻抗模，$R$称为等效电阻分量，$X$称为等效电抗分量（$X &gt; 0,\theta_z &gt; 0$ 时称 $Z$ 为感性阻抗，$X&lt;0,\theta_z &lt; 0$ 时称为 $Z$ 容性阻抗）</p>
-</li>
-<li><p>$Y = \frac{I}{U} = G + jB$</p>
-</li>
-<li><p>有功功率 $P$，无功功率 $Q$，视在功率 $S$</p>
-</li>
-<li><p>功率因素 $\lambda = \frac{P}{S}$ 要记得标上电流 超前 / 滞后 电压，往往都是电流 滞后 电压，所以要通过串 / 并联电容来实现</p>
-</li>
-<li><p>最大传递功率：一种是 $R_L$ 任意可调，只需让虚部是 $R_0$ 虚部相反数，实部和 $R_0$ 实部相等。另一种是 $R_L$ 有限制，不能直接满足第一种条件，应该是 $R_L$ 和 $R_0$ 模长相等</p>
-</li>
-</ol>
-<h2 id="第八章-含有耦合电感的电路"><a href="#第八章-含有耦合电感的电路" class="headerlink" title="第八章 含有耦合电感的电路"></a>第八章 含有耦合电感的电路</h2><h4 id="第八章总结"><a href="#第八章总结" class="headerlink" title="第八章总结"></a>第八章总结</h4><ol>
-<li>$u = L\frac{di_1}{dt} + M\frac{di_2}{dt}$ ，并且知道如何判断同名端，如何判断电压电流正负</li>
-<li>$k = \frac{M}{\sqrt {L_1 L_2}}$</li>
-<li>判断等效受控源正负方向：假设电流从一个线圈打点端方向流入，则假设对于另一个线圈支路上的的受控电压源而言，该受控电压源和这条支路上的线圈打点端同向</li>
-<li>遇到复杂，难以处理的电路，优先考虑化为理想线圈加受控源的形式（$\S 8.2$ 方法一）</li>
-<li>记住串联线圈化简的公式和 $T$ 型等效公式</li>
-<li>知道耦合系数是什么并且知道临界状况</li>
-<li>知道反映阻抗法并能灵活运用于戴维南等效电路中</li>
-<li><strong>什么都不知道时一定要会通过理想线圈加受控源的方法转化电路分析</strong></li>
-</ol>
-<h3 id="S-8-1-耦合电感的伏安关系"><a href="#S-8-1-耦合电感的伏安关系" class="headerlink" title="$\S 8.1$ 耦合电感的伏安关系"></a>$\S 8.1$ 耦合电感的伏安关系</h3><ul>
-<li>耦合元件：由一跳以上支路组成，一支路的电压，电流与其他支路的电压，电流直接相关</li>
-<li>在本章学习中，我们大多研究的耦合元件是线圈，线圈在通了电流之后会产生磁，而磁又会生电，从而产生电压，所以对于一个线圈上的电压，往往是由两部分组成，一个是它自身产生的电压，另一个是和它耦合的线圈的电压，自身电流和电磁之间比例系数是自感 $L$，和耦合元件之间是互感 $M$，但是我们有时也能见到 $L_{12}$，这种表示 $2$ 线圈在 $1$ 上的互感系数</li>
-</ul>
-<p><img src="%E8%80%A6%E5%90%88%E7%94%B5%E6%84%9F%E4%BC%8F%E5%AE%89%E5%85%B3%E7%B3%BB.png" alt="耦合电感伏安关系"></p>
-<ul>
-<li>同名端：当电流沿着不同线圈的两个端点流入，若产生的磁通方向相同，则这两个端点称为同名端，往往题目会直接告诉，若两个耦合线圈电流沿着同名端通入，互感 $ML &gt; 0$，反之 $ML &lt; 0$，或者可以理解为 $I_1$ 在线圈 $1$ 打点端通入，那么互感 $M$ 产生的电压 $+$ 极也在线圈 $2$ 打点端</li>
-</ul>
-<h3 id="S-8-2-耦合电感的去耦等效模型"><a href="#S-8-2-耦合电感的去耦等效模型" class="headerlink" title="$\S 8.2$ 耦合电感的去耦等效模型"></a>$\S 8.2$ 耦合电感的去耦等效模型</h3><ul>
-<li>利用受控源来等效：我们可以将线圈 $L$ 转化为纯线圈（不考虑互感）和受控电压源（最本源的方法，当你分析不出来或不太好处理时，都可以这样转化）<ul>
-<li>下图是电流沿着同名端流入时，受控源正负<strong>均</strong>与电流方向一致</li>
-<li>当沿着异名端流入时，受控源正负<strong>均</strong>与电流方向相反</li>
-</ul>
-</li>
-</ul>
-<p><img src="%E5%8E%BB%E8%80%A6%E7%AD%89%E6%95%88%E7%BA%BF%E5%9C%88.png" alt="去耦等效线圈"></p>
-<ul>
-<li><p>耦合电路的串联</p>
-<p>  当两个电感串联且电流沿着同名端流过（此时异名端相连），则可以等效为一个新电感 $L’ = L_1 + L_2 + 2M$</p>
-<p>  <img src="%E7%BA%BF%E5%9C%88%E4%B8%B2%E8%81%94.png" alt="线圈串联"></p>
-<p>  同理若电感串联但电流沿着异名端流过（同名端相连)，那么可以等效为一个新电感 $L’ = L_1 + L_2 - 2M$</p>
-</li>
-<li><p>耦合电路的并联</p>
-<p>  当线圈并联且异名端相连时，可以等效为一个新线圈 $L’ = \frac{L_1L_2 - M^2}{L_1 + L_2 + 2M}$（能记住最好，也可以不记住，用T型等效去推，比较推荐（之后会介绍））</p>
-<p>  当线圈并联且同名端相连时，可以等效为 $L’ = \frac{L_1L_2 - M^2}{L_1 + L_2 - 2M}$</p>
-<p>  <img src="%E7%BA%BF%E5%9C%88%E5%B9%B6%E8%81%94.png" alt="线圈并联"></p>
-</li>
-<li><p>耦合系数</p>
-<p>  我们都知道 $L$ 是大于 $0$ 的，所以在上述串联并联公式中，我们不难发现 $M$ 是要满足一定条件的，这里我们引入耦合系数 $k$ 来表示 $M$ 和 $L$ 之间的关系</p>
-<p>  <img src="%E8%80%A6%E5%90%88%E7%B3%BB%E6%95%B0.png" alt="耦合系数"></p>
-</li>
-<li><p>常见的等效方法</p>
-<ul>
-<li><p>$T$ 型等效</p>
-<p>  <img src="T%E5%9E%8B%E7%AD%89%E6%95%881.png" alt="T型等效1"></p>
-<p>  <img src="T%E5%9E%8B%E7%AD%89%E6%95%882.png" alt="T型等效2"></p>
-<p>  $T$ 型等效在处理并联等问题上十分有效</p>
-<p>  $e.g\ 8.1$</p>
-<p>  <img src="%E4%BE%8B8.1.png" alt="例8.1"></p>
-<blockquote>
-<p> 值得一提的是，这里之所以可以把两个线圈下端相连是因为只连一端不影响回路</p>
-</blockquote>
-<h3 id="S-8-3-空心变压器电路的分析"><a href="#S-8-3-空心变压器电路的分析" class="headerlink" title="$\S 8.3$ 空心变压器电路的分析"></a>$\S 8.3$ 空心变压器电路的分析</h3></li>
-</ul>
-</li>
-<li><p>互感化除法</p>
-<p>  是不是很眼熟，嗯互感化除法其实就是 $T$ 型等效法的一个应用，这两个没什么区别qwq</p>
-<p>  <img src="%E4%BA%92%E6%84%9F%E5%8C%96%E9%99%A4%E6%B3%95.png" alt="互感化除法"></p>
-</li>
-<li><p>回路分析法</p>
-<p>  其实没有用到任何化简，就是我们遇到一个新电路时的常见思路，把线圈变为理想线圈和受控源再分析，这个回路分析法是为接下来的简化方法服务的</p>
-<p>  <img src="%E5%9B%9E%E8%B7%AF%E5%88%86%E6%9E%90%E6%B3%95.png" alt="回路分析法"></p>
-</li>
-<li><p>反映阻抗法</p>
-<p>  仔细观察上一个化简的结果，我们发现初级电路和次级电路可以等效为一个新电路</p>
-<p>  我们设 $Z_{11},Z_{22}$ 为初级电路和次级电路的视在阻值，视在阻值就是不考虑线圈的互感作用，直接计算出的电路的阻值</p>
-<p>  那么初级线圈对新电路的贡献阻值为 $Z_1’ = Z_{11}$ 嗯就是它本身非常好记</p>
-<p>  次级线圈对新电路的贡献阻值为 $Z_2’ = \frac{(\omega M)^2}{Z_{22}}$ 这个结果看起来很真，说明 $M$ 和 $Z_{22}$ 都会对新电路有影响，这个结果也被称为反映阻抗，不难看出其实反映阻抗和同名端位置无关</p>
-<p>  <img src="%E5%8F%8D%E6%98%A0%E9%98%BB%E6%8A%97%E6%B3%95.png" alt="反映阻抗法"></p>
-<p>  <img src="%E5%8F%8D%E6%98%A0%E7%94%B5%E9%98%BB2.png" alt="反映电阻2"></p>
-<p>  所以化简的新电路如上，笔者推荐记住这个结果，比较方便</p>
-<p>  但是记住这种方法要求次级回路中无独立源</p>
-</li>
-<li><p>戴维南等效法</p>
-<p>  有了上述反映阻抗法的铺垫，我们可以利用戴维南等效法，从次级回路的两个端口看去，将其转化为一个新电路，这个新电路的阻值就按反映阻抗法的方法去求，只不过从次级回路来看的话，其实原先的次级回路相当于现在的初级回路，原先的初级回路相当于现在的次级回路</p>
-<p>  但还有一个问题，开路电压 $U_{OC}$ 怎么求，其实也很简单，我们原先不是假设次级线圈是一个理想线圈和受控源吗，这个$U_{OC}$ 就是受控源的电压值，也非常好理解，故 $U_{OC} = j\omega M I_1 = j\omega M \frac{U_s}{Z_{11}}$， $U_{OC}$正负要看具体端口正负以及同名异名情况</p>
-<p>  <img src="%E6%88%B4%E7%BB%B4%E5%8D%97%E7%AD%89%E6%95%88%E6%B3%95.png" alt="戴维南等效法"></p>
-</li>
-</ul>
-<h3 id="S-8-4-理想变压器电路的分析"><a href="#S-8-4-理想变压器电路的分析" class="headerlink" title="$\S 8.4$ 理想变压器电路的分析"></a>$\S 8.4$ 理想变压器电路的分析</h3><p>与先前的耦合线圈不同，理想变压器虽然长得和耦合线圈一样，但是不考虑 $L$ 和 $M$</p>
-<p><img src="%E7%90%86%E6%83%B3%E5%8F%98%E5%8E%8B%E5%99%A8%E7%94%B5%E5%8E%8B%E7%94%B5%E6%B5%81%E5%85%B3%E7%B3%BB.png" alt="理想变压器电压电流关系"></p>
-<p><img src="%E7%90%86%E6%83%B3%E5%8F%98%E5%8E%8B%E5%99%A8%E5%8F%98%E6%8D%A2%E5%85%B3%E7%B3%BB.png" alt="理想变压器变换关系"></p>
-<p><img src="%E4%BE%8B8.2.png" alt="例8.2"></p>
-<p><img src="%E4%BE%8B8.3.png" alt="例8.3"></p>
-<p><img src="%E4%BE%8B8.4.png" alt="例8.4"></p>
-<p><img src="%E4%BE%8B8.5.png" alt="例8.5"></p>
-<h2 id="第九章-三相电路"><a href="#第九章-三相电路" class="headerlink" title="第九章 三相电路"></a>第九章 三相电路</h2><h4 id="第九章总结"><a href="#第九章总结" class="headerlink" title="第九章总结"></a>第九章总结</h4><ol>
-<li><p>$I_a, I_b, I_c$ 是相电流，$I_{ab}, I_{ac}, I_{bc}$ 是线电流</p>
-</li>
-<li><p>$Y$ 型联接中，$U_{ab} = \sqrt 3 U_{a}\angle 30°,I_a = I_{ab}$ </p>
-</li>
-<li><p>$\Delta$ 型联接中，$U_a = U_{ab},I_a = \sqrt 3I_{ab}\angle -30°$ </p>
-</li>
-<li><p>做题时，应将负载和电源都变为 $Y$ 型联接，求出线电流，相电流之后再利用 $2$，$3$ 中的关系来替换</p>
-</li>
-<li><p>$Y$型 和 $\Delta$ 型变换往往利用的是 线电压 / 线电流 不变</p>
-</li>
-<li><p>$Y$ 型电路 $U$ 超前 $I$ 一个$\phi$ 角，这个角是其中一个电阻的辐角</p>
-</li>
-<li><p>$P_总 = 3P_相 = \sqrt 3 P_线$</p>
-</li>
-</ol>
-<h3 id="S-9-1-三相电路"><a href="#S-9-1-三相电路" class="headerlink" title="$\S 9.1$ 三相电路"></a>$\S 9.1$ 三相电路</h3><ul>
-<li><p>三个电压电流分别相差 $120°$ 的相位</p>
-<p>  根据转子转向，三相电路有正负相序之分，一般没说明时默认正序（$B$ 滞后 $A$ $120°$）</p>
-<p>  相比于单相发电机，三相发电机输出功率高，经济好，性能好，易于制造</p>
-</li>
-</ul>
-<p><img src="%E4%B8%89%E7%9B%B8%E4%BA%A4%E6%B5%81%E7%94%B5%E5%8E%8B.png" alt="三相交流电压"></p>
-<ul>
-<li><p>三相电源的联结</p>
-<ul>
-<li><p>$Y$ 型链接</p>
-<p>  $U_a, U_b, U_c$ 是线电压， $U_{ab}, U_{ac}, U_{bc}$ 是项电压</p>
-<p>  利用相量图来理解</p>
-<p>  <img src="Y%E5%9E%8B%E9%93%BE%E6%8E%A5.png" alt="Y型链接"></p>
-</li>
-<li><p>$\Delta$ 形联接</p>
-<p>  电路接反时会很危险，会先接上电压表来判断</p>
-<p>  <img src="%E4%B8%89%E8%A7%92%E9%93%BE%E6%8E%A5.png" alt="三角链接"></p>
-</li>
-</ul>
-</li>
-<li><p>对称三相电路分析</p>
-<ul>
-<li><p>$Y-Y$ 联接</p>
-<p>  通过节点电压法可得 $U_{nn’} = 0$</p>
-<p><img src="YY%E8%81%94%E6%8E%A5.png" alt="YY联接"></p>
-</li>
-<li><p>$\Delta - ?$ 联接</p>
-<p><img src="%E4%B8%89%E8%A7%92-%EF%BC%9F%E8%81%94%E6%8E%A5.png" alt="三角-？联接"></p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="S-9-2-对称三相电路的计算"><a href="#S-9-2-对称三相电路的计算" class="headerlink" title="$\S 9.2$ 对称三相电路的计算"></a>$\S 9.2$ 对称三相电路的计算</h3><h3 id="S-9-3-三相电路的功率"><a href="#S-9-3-三相电路的功率" class="headerlink" title="$\S 9.3$ 三相电路的功率"></a>$\S 9.3$ 三相电路的功率</h3><p>二表法适合测对称三相负载的功率，表的示数单独拿出来没有意义，要结合在一起看，而且一定要对称时才可以计算</p>
-<p><img src="%E4%BA%8C%E8%A1%A8%E6%B3%95.png" alt="二表法"></p>
-<p><img src="%E5%AF%B9%E7%A7%B0%E4%B8%89%E7%9B%B8%E8%B4%9F%E8%BD%BD%E5%8A%9F%E7%8E%87.png" alt="对称三相负载功率"></p>
-<p><img src="%E6%B3%A8%E6%84%8F.png" alt="注意"></p>
-<p>$e.g\ 9.1$</p>
-<p><img src="%E4%BE%8B9.1.png" alt="例9.1"></p>
-<blockquote>
-<p>$$</p>
-<p>$$</p>
-</blockquote>
-]]></content>
-      <tags>
-        <tag>专业课</tag>
-        <tag>大学笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大学笔记 | 离散数学</title>
-    <url>/2023/08/29/Discrete-Math/</url>
-    <content><![CDATA[<p>从入门到出门。</p>
-<span id="more"></span>
-
-<h2 id="第一章-命题逻辑"><a href="#第一章-命题逻辑" class="headerlink" title="第一章 命题逻辑"></a>第一章 命题逻辑</h2><h3 id="S-1-1-命题符号化及联结词"><a href="#S-1-1-命题符号化及联结词" class="headerlink" title="$\S 1.1$ 命题符号化及联结词"></a>$\S 1.1$ 命题符号化及联结词</h3><ul>
-<li><p>命题：能判断真假的陈述句。表示其正确性的值称为真值。</p>
-</li>
-<li><p>不能分解的更简单的命题称为<strong>简单命题</strong>或<strong>原子命题</strong>。</p>
-</li>
-<li><p>简单命题真值确定，又称为<strong>命题常项</strong>或命题常元。</p>
-</li>
-<li><p>真值可变的简单陈述句称为<strong>命题变项</strong>或命题变元。</p>
-</li>
-<li><p>复合命题由简单命题与联接词联接而成。联结词也称为<strong>真值联结词</strong>或<strong>逻辑联结词</strong>。</p>
-</li>
-<li><p>复合命题 “非 $p$” 称为 $p$ 的否定式，记作 $\neg p$。$\neg$ 称为否定联结词。</p>
-</li>
-<li><p>复合命题 “$p$ 并且 $q$” 称为 $p$ 与 $q$ 的<strong>合取式</strong>，记作 $p \wedge q$。$\wedge$ 称为<strong>合取联结词</strong>。</p>
-</li>
-<li><p>复合命题 “$p$ 或 $q$” 称为 $p$ 与 $q$ 的<strong>析取式</strong>，记作 $p \vee q$。$\vee$ 称为<strong>析取联结词</strong>。</p>
-</li>
-<li><p>复合命题 “如果 $p$，则 $q$” 称为 $p$ 与 $q$ 的<strong>蕴涵式</strong>，记作 $p \to q$。称 $p$ 为蕴涵式的前件，$q$ 为蕴涵式的后件。$\to$ 称为蕴涵联结词。<strong>该命题为假当且仅当 $p$ 为真且 $q$为假</strong>。</p>
-<blockquote>
-<p>$q$ 是 $p$ 的必要条件，$p$ 是 $q$ 的充分条件。等同于”只要 $p$ 就 $q$”，“$p$ 仅当 $q$”，“只有 $q$ 才 $p$”等。</p>
-<p>若两个命题均是否定行为，可以考虑先化作逆否命题形式。</p>
-<p>还有一种较为直观判断 $p \to q$ 还是 $q \to p$ 的方法是画维恩图。后件的区域是会包含前件的区域的。</p>
-</blockquote>
-<p>  <img src="1.1-1.png" alt="1.1-1"></p>
-</li>
-<li><p>复合命题 “$p$ 当且仅当 $q$” 称为 $p$ 与 $q$ 的等价式，记作 $p \leftrightarrow q$。$\leftrightarrow$ 称为等价联结词。<strong>该命题为真当且仅当 $p$ 和 $q$ 均为真或均为假</strong>。</p>
-</li>
-</ul>
-<h3 id="S-1-2-命题公式及分类"><a href="#S-1-2-命题公式及分类" class="headerlink" title="$\S 1.2$ 命题公式及分类"></a>$\S 1.2$ 命题公式及分类</h3><ul>
-<li><p>命题公式定义：</p>
-<ul>
-<li>单个命题常项 / 变项 / 0 / 1 是命题公式。</li>
-<li>有限次的联结词与命题公式结合使用也是命题公式。</li>
-<li>命题公式又称为合式公式，简称公式。</li>
-</ul>
-</li>
-<li><p>命题公式层次的定义：</p>
-<ul>
-<li>单个命题是 $0$ 层公式。</li>
-<li>$A$ 是 $n + 1$ 层当且仅当：<ul>
-<li>$A = \neg B$， $B$ 是第 $n$ 层。</li>
-<li>$A = B \oplus C$，其中 $B$，$C$ 是第 $i$ ，$j$ 层，且 $n = max(i, j),\oplus =\vee / \wedge / \to / \leftrightarrow$。 </li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>对于某一命题公式 $A$，对于其中的命题变项，指定它们的一组真值，称为 $A$ 的一个<strong>赋值 / 解释</strong>。使 $A$ 真值为真的这组值称为<strong>成真赋值</strong>，反之称为<strong>成假赋值</strong>。</p>
-</li>
-<li><p>特殊的，若 $A$ 在所有赋值下均为真，则称为<strong>重言式</strong>或<strong>永真式</strong>；若 $A$ 在所有赋值下均为假，则称为<strong>矛盾式</strong>或<strong>永假式</strong>；若 $A$ 在某一赋值下为真，则称为<strong>可满足式</strong>。</p>
-</li>
-<li><p>$n$ 元真值函数 $F:\{0, 1\}^n \to \{0, 1\}$，对于 $n$ 个命题变项有 $2^{2^n}$ 个真值函数 。</p>
-<blockquote>
-<p>因为 $n$ 个变量可以形成 $2^n$ 个结果，对于每个结果，又有 $0 / 1$ 的选择，故一共 $2^{2^n}$。</p>
-<p><img src="1.1-2.jpg" alt="1.1-2"></p>
-<p>参考 <a href="https://blog.csdn.net/qq_45472866/article/details/108023600">离散数学n元变量的真值函数（或者真值表的种类数）有 2^(2^n)个 详解</a></p>
-</blockquote>
-</li>
-</ul>
-<p>对于 $A$，$B$ 命题，若 $A \leftrightarrow B$ 是重言式，则称 $A$，$B$ 等价，记作$A \Leftrightarrow B$。</p>
-<blockquote>
-<p>注意 $\Leftrightarrow$ 不是联接词。</p>
-</blockquote>
-<h3 id="S-1-3-命题逻辑等值演算"><a href="#S-1-3-命题逻辑等值演算" class="headerlink" title="$\S 1.3$ 命题逻辑等值演算"></a>$\S 1.3$ 命题逻辑等值演算</h3><ul>
-<li><p><strong>等值演算</strong>：由已知的等值式推演出新的等值式；<strong>置换规则</strong>：若 $A \Leftrightarrow B$，则 $\Phi(A) \Leftrightarrow \Phi(B)$。</p>
-<blockquote>
-<p>证明两个公式等值时，可以直接用等值演算来验证，而证明公式不等值时，往往要通过赋值来使两边真值不等来验证。</p>
-</blockquote>
-</li>
-</ul>
-<p><img src="1.3-1.jpg" alt="1.3-1"></p>
-<h3 id="S-1-4-范式"><a href="#S-1-4-范式" class="headerlink" title="$\S 1.4$ 范式"></a>$\S 1.4$ 范式</h3><ul>
-<li><p>仅由有限个命题变项或其否定构成的析取式称为<strong>简单析取式</strong>，仅由有限个命题变项或其否定构成的合取式称为<strong>简单合取式</strong>。</p>
-</li>
-<li><p>由有限个简单析取式<strong>合取</strong>而成的式子称为<strong>合取范式</strong>，由有限个简单合取式<strong>析取</strong>而成的式子称为<strong>析取范式</strong>。析取范式和合取范式总称为<strong>范式</strong>。</p>
-<blockquote>
-<p>单个命题变项或其否定既是简单析取式又是简单合取式。</p>
-</blockquote>
-</li>
-<li><p>任一命题公式都有与之等值的析取范式和合取范式，且不唯一存在。</p>
-</li>
-<li><p><strong>极小项</strong>：在含有若干命题变项的简单合取式中，每个命题变项及其否定有且仅有一个出现一次，这样的简单合取式称为极小项。 <strong>极大项</strong>：在含有若干命题变项的简单析取式中，每个命题变项及其否定有且仅有一个出现一次，这样的简单析取式称为极小项。</p>
-<blockquote>
-<p>$n$ 个命题变项产生 $2^n$ 个极小（大）项。</p>
-<p>用 $m_i(M_i)$ 表示第 $i$ 个极小（大）项，$i$ 是该极小（大）项成真（假）赋值的十进制表示。</p>
-<p>$\neg m_I \Leftrightarrow M_i$，$\neg M_i \Leftrightarrow m_i$。</p>
-</blockquote>
-</li>
-<li><p><strong>主析取范式</strong>：由极小项组成的析取范式，<strong>主合取范式</strong>：由极大项合取组成的合取范式。</p>
-</li>
-<li><p>任何命题公式都有与之等值的主析取范式和主合取范式，并且是唯一的。</p>
-</li>
-<li><p>利用公式的主析（合）取范式可以快速成真（假）赋值。</p>
-</li>
-<li><p>判断公式类型（重要推论）：<br>  设 $A$ 有 $n$ 个命题变项，则</p>
-<ul>
-<li><p>$A$ 为重言式 $\Leftrightarrow$ $A$ 的主析取范式含 $2^n$ 个极小项。</p>
-<p>  ​                    $\Leftrightarrow$ $A$ 的主合取范式为 $1$。</p>
-</li>
-<li><p>$A$ 为矛盾式 $\Leftrightarrow$ $A$ 的主析取范式为 $0$。</p>
-<p>  ​                    $\Leftrightarrow$ $A$ 的主合取范式含 $2^n$ 个极大项。</p>
-</li>
-<li><p>$A$ 为非重言式的可满足式 $\Leftrightarrow$ $A$ 的主析取范式中至少含一个且不含全部极小项。</p>
-<p>  ​                    $\Leftrightarrow$ $A$ 的主合取范式中至少含一个且不含全部极大项。</p>
-<blockquote>
-<p>当 $A$ 的主析取范式含 $2^n$ 个极小项时，说明有 $2^n$ 个成真赋值，也就是说无论怎么赋值结果都是 $1$。</p>
-<p>当 $A$ 的主合取范式含 $2^n$ 个极大项时，说明有 $2^n$ 个成假赋值，也就是说无论怎么赋值结果都是 $0$。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="S-1-5-联结词全功能集"><a href="#S-1-5-联结词全功能集" class="headerlink" title="$\S 1.5$ 联结词全功能集"></a>$\S 1.5$ 联结词全功能集</h3><ul>
-<li>$S$ 是一个联结词集合，若<strong>任何</strong> $n$ 元函数均可以由仅含 $S$ 中联结词构成的公式表示，则称 $S$ 是联结词全功能集（注意：若 $S$ 是全功能集，那么任何命题公式都可以用 $S$ 中联结词表示）。</li>
-</ul>
-<p><img src="1.5-1.png" alt="1.5-1"></p>
-<blockquote>
-<p>实质上是先证明任一命题都是可以化作主析取 / 合取范式，故可用 $\{\neg,\vee,\wedge\}$ 表示，然后证 $\vee,\wedge,\neg$ 三者之间是可以相互推的，故后面三个也都是全功能集。</p>
-</blockquote>
-<ul>
-<li><p>与非式：$p \uparrow q \Leftrightarrow \neg(p\wedge q)$</p>
-<p>  或非式：$p \downarrow q \Leftrightarrow \neg(p \vee q)$</p>
-<p>  <img src="1.5-2.png" alt="1.5-2"></p>
-</li>
-</ul>
-<p><img src="1.5-3.png" alt="1.5-3"></p>
-<blockquote>
-<p>不难发现，$\uparrow$ 和 $\downarrow$ 可以把 $\vee,\wedge,\neg$ 都表示出来，故 $\{\uparrow\},\{\downarrow\}$ 是联结词全功能集。 </p>
-</blockquote>
-<h3 id="S-1-6-组合电路"><a href="#S-1-6-组合电路" class="headerlink" title="$\S 1.6$ 组合电路"></a>$\S 1.6$ 组合电路</h3><p><img src="1.6-1.png" alt="1.6-1"></p>
-]]></content>
-      <tags>
-        <tag>数学</tag>
-        <tag>大学课程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大学笔记 | 模拟电子技术基础</title>
-    <url>/2023/08/29/Electronic-Devices-and-Circuit-Theory/</url>
-    <content><![CDATA[<p>本课最大的收获是习得了上课隐身术，只有聪明的人才能看到我。</p>
-<span id="more"></span>
-
-<h2 id="第一章-二极管及二极管电路"><a href="#第一章-二极管及二极管电路" class="headerlink" title="第一章 二极管及二极管电路"></a>第一章 二极管及二极管电路</h2><h3 id="S-1-1-半导体材料及特性"><a href="#S-1-1-半导体材料及特性" class="headerlink" title="$\S 1.1$ 半导体材料及特性"></a>$\S 1.1$ 半导体材料及特性</h3><blockquote>
-<p>这部分了解即可。</p>
-</blockquote>
-<p>物质按导电能力可分为导体，半导体和绝缘体，其中半导体主要材料是硅（Si），锗（Ge）和砷化镓（GaAs）。</p>
-<p>研究半导体原子结构时，为简化起见，把内层电子和原子核视为一个整体，称为惯性核，其周围是价电子。</p>
-<ol>
-<li>本征半导体</li>
-</ol>
-<p><strong>完全纯净的，晶体结构完整的半导体晶体称为本征半导体。</strong>在 $0K$ 温度下，没有自由移动的载流子，不能导电相当于绝缘体。而当温度升高时共价键中的价电子从外界获得能量而激发成自由电子，这种现象称为本征激发。</p>
-<p><strong>可以把激发出的空位视为带正电荷的载流子，并把它称为空穴。</strong>半导体时依靠自由电子和空穴导电的。</p>
-<p>本征激发使两种载流子数量相等。空穴和自由电子相遇抵消的过程称为复合。温度一定时，两种载流子数目保持不变处于热平衡状态。</p>
-<p>设 $n_i$ 为热平衡载流子浓度，$p_0, h_0$ 分别为空穴和载流子浓度，则有 $p_0 = n_0 = n_i$。但是这种半导体导电能力很弱。</p>
-<blockquote>
-<p>本征激发和温度有关，复合和粒子浓度有关。</p>
-</blockquote>
-<p>杂质半导体分为 $N$ 型（电子型）和 $P$ 型（空穴型）</p>
-<ol start="2">
-<li>$N$ 型半导体</li>
-</ol>
-<blockquote>
-<p>N 是 negative，指的是负的电子。</p>
-</blockquote>
-<p>向半导体中加入少量五价元素，称五价元素为<strong>施主元素</strong>，自由电子为多数载流子，简称多子。空穴称为少子。</p>
-<ol start="3">
-<li>$P$ 型半导体</li>
-</ol>
-<blockquote>
-<p>P 是 positive，指的是正的空穴。</p>
-</blockquote>
-<p>向半导体中加入少量三价元素，称三价元素为<strong>受主元素</strong>，空穴为多子。自由电子为少子。</p>
-<p>杂质越多，多子浓度越高，导电性越强。<strong>少子浓度与温度有关。</strong></p>
-<ol start="4">
-<li>漂移电流和扩散电流</li>
-</ol>
-<p>在外加电场作用下，载流子的定向移动称为漂移运动，会产生漂移电流。</p>
-<p>载流子由于浓度不一致会产生扩散运动，并产生扩散电流。</p>
-<h3 id="S-1-2-PN-结的形成及特性"><a href="#S-1-2-PN-结的形成及特性" class="headerlink" title="$\S 1.2$ $PN$ 结的形成及特性"></a>$\S 1.2$ $PN$ 结的形成及特性</h3><ol>
-<li>形成</li>
-</ol>
-<p>利用掺杂的方法，使半导体一半是 $P$ 一半是 $N$，由于扩散运动使两边载流子不断中和之后，$P$ 区的负离子和 $N$ 区的正离子形成内奸电场组织多子扩散。直到两边达到稳态，就形成了 $PN$ 结。</p>
-<p>两边掺杂浓度一样可以形成对称结，反之形成不对称结。</p>
-<p>中间的正负离子界面称为空间电荷区，又称为耗尽区 / 势垒区 / 阻挡区。</p>
-<p>内建电场的电位差 $V_B$ 称为内建电位差，满足<br>$$<br>V_B \approx V_Tln\dfrac{N_aN_d}{n_i^2} \<br>V_T = \dfrac{kT}{q}<br>$$</p>
-<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CElectronic-Devices-and-Circuit-Theory%5C1.2-1.png" alt="1-1"></p>
-<ol start="2">
-<li>特性</li>
-</ol>
-<ul>
-<li><p>正向特性：当电源正极接 P，负极接 N，称 PN 结外加正向电压，也称正向偏置。会使 PN 结减小（刚开始很小的时候，电子难过去，后来不断削弱阻挡区，电流指数级上涨）。</p>
-</li>
-<li><p>反向特性：当电源正极接 N，负极接 P，称 PN 结外加反向电压，也称反向偏置。会使 PN 结增大（阻挡区越来越厚，电子更难过去，不导通）。</p>
-</li>
-<li><p>伏安特性：PN 结的电流与端电压存在关系：</p>
-</li>
-</ul>
-<p>$$<br>i = I_s(e^{v/V_T} - 1)<br>$$</p>
-<blockquote>
-<p>$I_s$ 是反向饱和电流，$V_T$ 是和温度相关的，室温下 $V_T$ 是 26 mv。 </p>
-<p>Ge 作材料的晶体管导通电压是 0.2 ~ 0.3 V，Si 是 0.6 ~ 0.7 V。</p>
-</blockquote>
-<p>​        当 PN 结正偏且 $\left |  v \right |  \gg V_T$ 时，式子可简化为<br>$$<br>i \approx I_se^{v/V_T}<br>$$<br>​        当 PN 结反偏且 $\left |  v \right |  \gg V_T$ 时，式子可简化为<br>$$<br>i \approx -I_s<br>$$</p>
-<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CElectronic-Devices-and-Circuit-Theory%5C1.2-2.png" alt="1-2"></p>
-<blockquote>
-<p>其实反向的时候有一个非常非常小的电流。</p>
-</blockquote>
-<ul>
-<li>击穿特性：当 PN 结的反向电压增大到某一值时，反向电流会突然增大，PN 结被击穿，击穿分为：雪崩击穿（掺杂浓度低的时候，PN 结宽）和齐纳击穿（掺杂浓度高的时候，PN 结窄）。</li>
-</ul>
-<blockquote>
-<p>雪崩击穿：温度越高，所需击穿电压越高。齐纳击穿：温度越高，所需击穿电压越高。</p>
-</blockquote>
-<ol start="3">
-<li>PN 结的电容效应</li>
-</ol>
-<p>PN 结具有电荷随着电压变化而变化的特性，与电容类似。</p>
-<ul>
-<li><p>势垒电容</p>
-<blockquote>
-<p>由空间电荷区的电荷所导致。反向电压越大，空间电荷区越宽，电容越大。</p>
-</blockquote>
-</li>
-</ul>
-<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CElectronic-Devices-and-Circuit-Theory%5C1.2-3.png" alt="1-3"></p>
-<ul>
-<li><p>扩散电容</p>
-<blockquote>
-<p>由 P 区和 N 区粒子浓度差所导致。正向电压越大，N 区扩散来的电子越多，浓度越大，曲线也不断上升。这条曲线反映了从结到边缘处，粒子浓度越来越少。</p>
-</blockquote>
-<p>  <img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CElectronic-Devices-and-Circuit-Theory%5C1.2-4.png" alt="1-4"></p>
-<h3 id="S-1-3-二极管及基本电路"><a href="#S-1-3-二极管及基本电路" class="headerlink" title="$\S 1.3$ 二极管及基本电路"></a>$\S 1.3$ 二极管及基本电路</h3><ol>
-<li><p>结构及特性</p>
-<p> 将 PN 结加上电极引线封装起来，构成了二极管。</p>
-<p> <img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CElectronic-Devices-and-Circuit-Theory%5C1.3-1.png" alt="1.3-1"></p>
-</li>
-</ol>
-</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>专业课</tag>
-        <tag>大学课程</tag>
       </tags>
   </entry>
   <entry>
@@ -1227,8 +524,711 @@ $\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{
 </ul>
 ]]></content>
       <tags>
-        <tag>大学笔记</tag>
         <tag>数学</tag>
+        <tag>大学笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>博客搭建踩坑指北</title>
+    <url>/2023/06/27/Cross-The-Hole/</url>
+    <content><![CDATA[<p>从踩坑到掉坑里</p>
+<span id="more"></span>
+
+<p>本博客采用 Hexo + GitHub 搭建，具体教程网上很多不再赘述</p>
+<p>不过这里还是推荐两个我主要参考的教程 <a href="https://ouuan.github.io/post/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8C%97/">hexo博客搭建指北</a> 和 <a href="https://venusnero.github.io/2019/01/23/build_hexo_github_blog/">从零搭建 Hexo + Github 博客</a></p>
+<p>下面分享一些自己踩过的坑</p>
+<h3 id="公式块中公式无法正常换行"><a href="#公式块中公式无法正常换行" class="headerlink" title="公式块中公式无法正常换行"></a>公式块中公式无法正常换行</h3><h4 id="问题简述"><a href="#问题简述" class="headerlink" title="问题简述"></a>问题简述</h4><p>用 $$ 插入公式块时，本地上用 typora 显示公式换行，但网页上未显示出来</p>
+<p><code>\\</code> 无法正常换行</p>
+<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>在公式块前面加上 <code>\begin{gather}</code> 末尾加上 <code>\end{gather}</code> 即可</p>
+<h3 id="Majax-渲染"><a href="#Majax-渲染" class="headerlink" title="Majax 渲染"></a>Majax 渲染</h3><h4 id="问题简述-1"><a href="#问题简述-1" class="headerlink" title="问题简述"></a>问题简述</h4><ol>
+<li><p>无法正常渲染二重闭曲面积分</p>
+</li>
+<li><pre><code class="latex">$\iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV = \unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy $
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line"></span><br><span class="line"> 可以正常渲染出来</span><br><span class="line"></span><br><span class="line">$\iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV = \unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy $</span><br><span class="line"></span><br><span class="line">```latex</span><br><span class="line">$\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$</span><br></pre></td></tr></tbody></table></figure>
+
+渲染异常
+
+$\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$
+</code></pre>
+</li>
+</ol>
+<h4 id="解决方案-1"><a href="#解决方案-1" class="headerlink" title="解决方案"></a>解决方案</h4><ol>
+<li><p>用 <code>\unicode{8751}</code> 表示即可</p>
+</li>
+<li><p>很神奇的问题，解决方法也很玄学，将</p>
+ <figure class="highlight latex"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">\unicode</span>{8751}<span class="built_in">_</span>{<span class="keyword">\sum</span>}Pdydz + Qdzdx + Rdxdy = <span class="keyword">\iiint</span><span class="built_in">_</span>{<span class="keyword">\Omega</span>}(<span class="keyword">\frac</span>{<span class="keyword">\partial</span> P}{<span class="keyword">\partial</span> x} + <span class="keyword">\frac</span>{<span class="keyword">\partial</span> Q}{<span class="keyword">\partial</span> y} + <span class="keyword">\frac</span>{<span class="keyword">\partial</span> R}{<span class="keyword">\partial</span> z})dV</span><br></pre></td></tr></tbody></table></figure>
+
+<p> 改为</p>
+ <figure class="highlight latex"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">\unicode</span>{8751}<span class="built_in">_</span>{<span class="keyword">\sum</span>} Pdydz + Qdzdx + Rdxdy = <span class="keyword">\iiint</span><span class="built_in">_</span><span class="keyword">\Omega</span>(<span class="keyword">\frac</span>{<span class="keyword">\partial</span> P}{<span class="keyword">\partial</span> x} + <span class="keyword">\frac</span>{<span class="keyword">\partial</span> Q}{<span class="keyword">\partial</span> y} + <span class="keyword">\frac</span>{<span class="keyword">\partial</span> R}{<span class="keyword">\partial</span> z})dV</span><br></pre></td></tr></tbody></table></figure>
+
+<p> 即可</p>
+<p> $\unicode{8751}_\sum Pdydz + Qdzdx + Rdxdy = \iiint_\Omega(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$</p>
+<p> 感觉可能是 <code>{}</code> 和 mathjax 渲染有一些冲突，具体原因还不完全清楚（？）</p>
+</li>
+</ol>
+<h3 id="表格中的"><a href="#表格中的" class="headerlink" title="表格中的 |"></a>表格中的 |</h3><h4 id="问题简述-2"><a href="#问题简述-2" class="headerlink" title="问题简述"></a>问题简述</h4><p>由于 markdown 本身的语法，我们无法直接在表格中打出竖线 |</p>
+<h4 id="解决方案-2"><a href="#解决方案-2" class="headerlink" title="解决方案"></a>解决方案</h4><ul>
+<li>当表格内容不用 $\LaTeX$ 时，可通过转义符 <code>\|</code> 或 <code>&amp;#124;</code> 来实现竖杠或绝对值； </li>
+<li>但是用 $\LaTeX$ 时第一个会显示为 “∥”，第二个会报错，故要用 <code>\vert</code> </li>
+</ul>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://blog.csdn.net/skytruine/article/details/105710349">Markdown表格数学公式中使用绝对值“| |”或竖杠”|”</a></p>
+<h3 id="背景-和-透明度"><a href="#背景-和-透明度" class="headerlink" title="背景 和 透明度"></a>背景 和 透明度</h3><h4 id="问题简述-3"><a href="#问题简述-3" class="headerlink" title="问题简述"></a>问题简述</h4><p>在 Hexo 7.x 版本下设置 背景 和 透明度</p>
+<h4 id="解决方案-3"><a href="#解决方案-3" class="headerlink" title="解决方案"></a>解决方案</h4><ul>
+<li><p>新建 _custom.styl 文件，并在 main.styl 中引用该文件</p>
+  <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">//个人添加</span><br><span class="line">@import "_custom.styl"</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><pre><code class="stylus"><span class="comment">//背景图片</span>
+<span class="selector-tag">body</span> {
+    background:url(https://pic.heson10.com/img/image-20200712231958010.png);
+    <span class="attribute">background-repeat</span>: no-repeat;
+    <span class="attribute">background-attachment</span>:fixed;
+    <span class="attribute">background-size</span>: cover;
+    <span class="attribute">background-position</span>:<span class="number">50%</span> <span class="number">50%</span>;
+}
+
+<span class="comment">//博客内容透明化</span>
+<span class="comment">//文章内容的透明度设置</span>
+<span class="selector-class">.content-wrap</span> {
+  <span class="attribute">opacity</span>: <span class="number">0.9</span>;
+}
+
+<span class="comment">//侧边框的透明度设置</span>
+<span class="selector-class">.sidebar</span> {
+  <span class="attribute">opacity</span>: <span class="number">0.9</span>;
+}
+
+<span class="comment">//菜单栏的透明度设置</span>
+<span class="selector-class">.header-inner</span> {
+  <span class="attribute">background</span>: rgba(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0.9</span>);
+}
+
+<span class="comment">//搜索框（local-search）的透明度设置</span>
+<span class="selector-class">.popup</span> {
+  <span class="attribute">opacity</span>: <span class="number">0.9</span>;
+}
+&lt;!--code￼<span class="number">4</span>--&gt;
+</code></pre>
+</li>
+</ul>
+<h4 id="参考-1"><a href="#参考-1" class="headerlink" title="参考"></a>参考</h4><p><a href="https://blog.csdn.net/qq_40790680/article/details/128971322">hexo 自定义文章排序</a></p>
+]]></content>
+      <tags>
+        <tag>博客搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大学笔记 | 离散数学</title>
+    <url>/2023/08/29/Discrete-Math/</url>
+    <content><![CDATA[<p>从入门到出门。</p>
+<span id="more"></span>
+
+<h2 id="第一章-命题逻辑"><a href="#第一章-命题逻辑" class="headerlink" title="第一章 命题逻辑"></a>第一章 命题逻辑</h2><h3 id="S-1-1-命题符号化及联结词"><a href="#S-1-1-命题符号化及联结词" class="headerlink" title="$\S 1.1$ 命题符号化及联结词"></a>$\S 1.1$ 命题符号化及联结词</h3><ul>
+<li><p>命题：能判断真假的陈述句。表示其正确性的值称为真值。</p>
+</li>
+<li><p>不能分解的更简单的命题称为<strong>简单命题</strong>或<strong>原子命题</strong>。</p>
+</li>
+<li><p>简单命题真值确定，又称为<strong>命题常项</strong>或命题常元。</p>
+</li>
+<li><p>真值可变的简单陈述句称为<strong>命题变项</strong>或命题变元。</p>
+</li>
+<li><p>复合命题由简单命题与联接词联接而成。联结词也称为<strong>真值联结词</strong>或<strong>逻辑联结词</strong>。</p>
+</li>
+<li><p>复合命题 “非 $p$” 称为 $p$ 的否定式，记作 $\neg p$。$\neg$ 称为否定联结词。</p>
+</li>
+<li><p>复合命题 “$p$ 并且 $q$” 称为 $p$ 与 $q$ 的<strong>合取式</strong>，记作 $p \wedge q$。$\wedge$ 称为<strong>合取联结词</strong>。</p>
+</li>
+<li><p>复合命题 “$p$ 或 $q$” 称为 $p$ 与 $q$ 的<strong>析取式</strong>，记作 $p \vee q$。$\vee$ 称为<strong>析取联结词</strong>。</p>
+</li>
+<li><p>复合命题 “如果 $p$，则 $q$” 称为 $p$ 与 $q$ 的<strong>蕴涵式</strong>，记作 $p \to q$。称 $p$ 为蕴涵式的前件，$q$ 为蕴涵式的后件。$\to$ 称为蕴涵联结词。<strong>该命题为假当且仅当 $p$ 为真且 $q$为假</strong>。</p>
+<blockquote>
+<p>$q$ 是 $p$ 的必要条件，$p$ 是 $q$ 的充分条件。等同于”只要 $p$ 就 $q$”，“$p$ 仅当 $q$”，“只有 $q$ 才 $p$”等。</p>
+<p>若两个命题均是否定行为，可以考虑先化作逆否命题形式。</p>
+<p>还有一种较为直观判断 $p \to q$ 还是 $q \to p$ 的方法是画维恩图。后件的区域是会包含前件的区域的。</p>
+</blockquote>
+<p>  <img src="1.1-1.png" alt="1.1-1"></p>
+</li>
+<li><p>复合命题 “$p$ 当且仅当 $q$” 称为 $p$ 与 $q$ 的等价式，记作 $p \leftrightarrow q$。$\leftrightarrow$ 称为等价联结词。<strong>该命题为真当且仅当 $p$ 和 $q$ 均为真或均为假</strong>。</p>
+</li>
+</ul>
+<h3 id="S-1-2-命题公式及分类"><a href="#S-1-2-命题公式及分类" class="headerlink" title="$\S 1.2$ 命题公式及分类"></a>$\S 1.2$ 命题公式及分类</h3><ul>
+<li><p>命题公式定义：</p>
+<ul>
+<li>单个命题常项 / 变项 / 0 / 1 是命题公式。</li>
+<li>有限次的联结词与命题公式结合使用也是命题公式。</li>
+<li>命题公式又称为合式公式，简称公式。</li>
+</ul>
+</li>
+<li><p>命题公式层次的定义：</p>
+<ul>
+<li>单个命题是 $0$ 层公式。</li>
+<li>$A$ 是 $n + 1$ 层当且仅当：<ul>
+<li>$A = \neg B$， $B$ 是第 $n$ 层。</li>
+<li>$A = B \oplus C$，其中 $B$，$C$ 是第 $i$ ，$j$ 层，且 $n = max(i, j),\oplus =\vee / \wedge / \to / \leftrightarrow$。 </li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>对于某一命题公式 $A$，对于其中的命题变项，指定它们的一组真值，称为 $A$ 的一个<strong>赋值 / 解释</strong>。使 $A$ 真值为真的这组值称为<strong>成真赋值</strong>，反之称为<strong>成假赋值</strong>。</p>
+</li>
+<li><p>特殊的，若 $A$ 在所有赋值下均为真，则称为<strong>重言式</strong>或<strong>永真式</strong>；若 $A$ 在所有赋值下均为假，则称为<strong>矛盾式</strong>或<strong>永假式</strong>；若 $A$ 在某一赋值下为真，则称为<strong>可满足式</strong>。</p>
+</li>
+<li><p>$n$ 元真值函数 $F:\{0, 1\}^n \to \{0, 1\}$，对于 $n$ 个命题变项有 $2^{2^n}$ 个真值函数 。</p>
+<blockquote>
+<p>因为 $n$ 个变量可以形成 $2^n$ 个结果，对于每个结果，又有 $0 / 1$ 的选择，故一共 $2^{2^n}$。</p>
+<p><img src="1.1-2.jpg" alt="1.1-2"></p>
+<p>参考 <a href="https://blog.csdn.net/qq_45472866/article/details/108023600">离散数学n元变量的真值函数（或者真值表的种类数）有 2^(2^n)个 详解</a></p>
+</blockquote>
+</li>
+</ul>
+<p>对于 $A$，$B$ 命题，若 $A \leftrightarrow B$ 是重言式，则称 $A$，$B$ 等价，记作$A \Leftrightarrow B$。</p>
+<blockquote>
+<p>注意 $\Leftrightarrow$ 不是联接词。</p>
+</blockquote>
+<h3 id="S-1-3-命题逻辑等值演算"><a href="#S-1-3-命题逻辑等值演算" class="headerlink" title="$\S 1.3$ 命题逻辑等值演算"></a>$\S 1.3$ 命题逻辑等值演算</h3><ul>
+<li><p><strong>等值演算</strong>：由已知的等值式推演出新的等值式；<strong>置换规则</strong>：若 $A \Leftrightarrow B$，则 $\Phi(A) \Leftrightarrow \Phi(B)$。</p>
+<blockquote>
+<p>证明两个公式等值时，可以直接用等值演算来验证，而证明公式不等值时，往往要通过赋值来使两边真值不等来验证。</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="1.3-1.jpg" alt="1.3-1"></p>
+<h3 id="S-1-4-范式"><a href="#S-1-4-范式" class="headerlink" title="$\S 1.4$ 范式"></a>$\S 1.4$ 范式</h3><ul>
+<li><p>仅由有限个命题变项或其否定构成的析取式称为<strong>简单析取式</strong>，仅由有限个命题变项或其否定构成的合取式称为<strong>简单合取式</strong>。</p>
+</li>
+<li><p>由有限个简单析取式<strong>合取</strong>而成的式子称为<strong>合取范式</strong>，由有限个简单合取式<strong>析取</strong>而成的式子称为<strong>析取范式</strong>。析取范式和合取范式总称为<strong>范式</strong>。</p>
+<blockquote>
+<p>单个命题变项或其否定既是简单析取式又是简单合取式。</p>
+</blockquote>
+</li>
+<li><p>任一命题公式都有与之等值的析取范式和合取范式，且不唯一存在。</p>
+</li>
+<li><p><strong>极小项</strong>：在含有若干命题变项的简单合取式中，每个命题变项及其否定有且仅有一个出现一次，这样的简单合取式称为极小项。 <strong>极大项</strong>：在含有若干命题变项的简单析取式中，每个命题变项及其否定有且仅有一个出现一次，这样的简单析取式称为极小项。</p>
+<blockquote>
+<p>$n$ 个命题变项产生 $2^n$ 个极小（大）项。</p>
+<p>用 $m_i(M_i)$ 表示第 $i$ 个极小（大）项，$i$ 是该极小（大）项成真（假）赋值的十进制表示。</p>
+<p>$\neg m_I \Leftrightarrow M_i$，$\neg M_i \Leftrightarrow m_i$。</p>
+</blockquote>
+</li>
+<li><p><strong>主析取范式</strong>：由极小项组成的析取范式，<strong>主合取范式</strong>：由极大项合取组成的合取范式。</p>
+</li>
+<li><p>任何命题公式都有与之等值的主析取范式和主合取范式，并且是唯一的。</p>
+</li>
+<li><p>利用公式的主析（合）取范式可以快速成真（假）赋值。</p>
+</li>
+<li><p>判断公式类型（重要推论）：<br>  设 $A$ 有 $n$ 个命题变项，则</p>
+<ul>
+<li><p>$A$ 为重言式 $\Leftrightarrow$ $A$ 的主析取范式含 $2^n$ 个极小项。</p>
+<p>  ​                    $\Leftrightarrow$ $A$ 的主合取范式为 $1$。</p>
+</li>
+<li><p>$A$ 为矛盾式 $\Leftrightarrow$ $A$ 的主析取范式为 $0$。</p>
+<p>  ​                    $\Leftrightarrow$ $A$ 的主合取范式含 $2^n$ 个极大项。</p>
+</li>
+<li><p>$A$ 为非重言式的可满足式 $\Leftrightarrow$ $A$ 的主析取范式中至少含一个且不含全部极小项。</p>
+<p>  ​                    $\Leftrightarrow$ $A$ 的主合取范式中至少含一个且不含全部极大项。</p>
+<blockquote>
+<p>当 $A$ 的主析取范式含 $2^n$ 个极小项时，说明有 $2^n$ 个成真赋值，也就是说无论怎么赋值结果都是 $1$。</p>
+<p>当 $A$ 的主合取范式含 $2^n$ 个极大项时，说明有 $2^n$ 个成假赋值，也就是说无论怎么赋值结果都是 $0$。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="S-1-5-联结词全功能集"><a href="#S-1-5-联结词全功能集" class="headerlink" title="$\S 1.5$ 联结词全功能集"></a>$\S 1.5$ 联结词全功能集</h3><ul>
+<li>$S$ 是一个联结词集合，若<strong>任何</strong> $n$ 元函数均可以由仅含 $S$ 中联结词构成的公式表示，则称 $S$ 是联结词全功能集（注意：若 $S$ 是全功能集，那么任何命题公式都可以用 $S$ 中联结词表示）。</li>
+</ul>
+<p><img src="1.5-1.png" alt="1.5-1"></p>
+<blockquote>
+<p>实质上是先证明任一命题都是可以化作主析取 / 合取范式，故可用 $\{\neg,\vee,\wedge\}$ 表示，然后证 $\vee,\wedge,\neg$ 三者之间是可以相互推的，故后面三个也都是全功能集。</p>
+</blockquote>
+<ul>
+<li><p>与非式：$p \uparrow q \Leftrightarrow \neg(p\wedge q)$</p>
+<p>  或非式：$p \downarrow q \Leftrightarrow \neg(p \vee q)$</p>
+<p>  <img src="1.5-2.png" alt="1.5-2"></p>
+</li>
+</ul>
+<p><img src="1.5-3.png" alt="1.5-3"></p>
+<blockquote>
+<p>不难发现，$\uparrow$ 和 $\downarrow$ 可以把 $\vee,\wedge,\neg$ 都表示出来，故 $\{\uparrow\},\{\downarrow\}$ 是联结词全功能集。 </p>
+</blockquote>
+<h3 id="S-1-6-组合电路"><a href="#S-1-6-组合电路" class="headerlink" title="$\S 1.6$ 组合电路"></a>$\S 1.6$ 组合电路</h3><p><img src="1.6-1.png" alt="1.6-1"></p>
+]]></content>
+      <tags>
+        <tag>数学</tag>
+        <tag>大学课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CodeForces 补全计划（1851 ~ 1875）</title>
+    <url>/2023/08/27/CF-Instrumentality-Project-II/</url>
+    <content><![CDATA[<p>千里之行，始于足下。</p>
+<span id="more"></span>
+
+<h2 id="1860-Educational-Codeforces-Round-153-Rated-for-Div-2"><a href="#1860-Educational-Codeforces-Round-153-Rated-for-Div-2" class="headerlink" title="1860. Educational Codeforces Round 153 (Rated for Div. 2)"></a>1860. <a href="https://codeforces.com/contest/1860">Educational Codeforces Round 153 (Rated for Div. 2)</a></h2><h3 id="A-Not-a-Substring"><a href="#A-Not-a-Substring" class="headerlink" title="A. Not a Substring"></a><a href="https://codeforces.com/contest/1860/problem/A">A. Not a Substring</a></h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>给定一个长度为 $n$ 的由 <code>(</code> 和 <code>)</code> 组成的序列，问是否存在一个长度为 $2n$ 的序列，使得新序列不包含原序列。</p>
+<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>水题，主要熟悉一下 stl 里 string 用法。看 <code>((()))</code> 和 <code>()()()</code> 这样的谁符合，都不符合就是 <code>NO</code>。</p>
+<p>string 可以直接通过 <code>+</code> 来在尾部插入字符，<code>"()"</code> 也可以表示一个常量数组，也可以用 <code>a.find(s) == string::npos</code> 来判断 s 是否在 a 中出现。</p>
+<p><a href="https://codeforces.com/contest/1860/submission/222003094">Code</a></p>
+<h2 id="1861-Educational-Codeforces-Round-154-Rated-for-Div-2"><a href="#1861-Educational-Codeforces-Round-154-Rated-for-Div-2" class="headerlink" title="1861. Educational Codeforces Round 154 (Rated for Div. 2)"></a>1861. <a href="https://codeforces.com/contest/1861">Educational Codeforces Round 154 (Rated for Div. 2)</a></h2><h3 id="E-Non-Intersecting-Subpermutations"><a href="#E-Non-Intersecting-Subpermutations" class="headerlink" title="E. Non-Intersecting Subpermutations"></a><a href="https://codeforces.com/contest/1861/problem/E">E. Non-Intersecting Subpermutations</a></h3><h4 id="Description-1"><a href="#Description-1" class="headerlink" title="Description"></a>Description</h4><p>对于一个序列，取若干个长度为 $k$ 的子序列，满足这些子序列互不相交且包含 $1 \sim k$ 全部元素，定义这个序列的价值就是子序列个数的最大值。</p>
+<p>给定序列长度 $n$，每个元素都是由 $1 \sim k$ 组成，问所组成序列的价值总和是多少。</p>
+<h4 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h4><p>我们对于一个既定的序列，要求出他的子序列个数的方法是用贪心，使序列的右端点尽可能靠左。</p>
+<p>我们设 $f_i$ 表示最后一个序列右端点在 $i$ 处的方案数<strong>（注意这里是方案数，并不是对答案的贡献数）</strong>，那么当前最后一个序列对答案的贡献是 $f_i \times k^{n - i}$。（这里的想法相当于我们每次只算一个位置 $[i - k + 1, i]$ 上的序列对总答案的影响）</p>
+<p>对于方案转移，我们枚举上一个序列的右端点 $j$，那么这里有 $j \in [0, i - k]$（$j = 0$ 表示没有上一个序列）。</p>
+<p>我们再引入 $g_i$ 表示对于长度是 $i$ 的一段序列，第一个合法子序列出现的位置是 $[i - k + 1, i]$ 的方案数。</p>
+<p>故不难理解 $f_i = \sum f_j \times g_{i - j}$。然后问题转化为如何求 $g_i$ 数组。</p>
+<p>对于 $g_i$ 而言，最后 $k$ 个位置一定是 $1 \sim k$，前 $i - k$ 位置任意选，故有 $k^{i - k} \times k!$ 的方案数。</p>
+<p>但是会有不合法的方案算在内，可能会出现子序列先于 $[i - k + 1, i]$ 位置出现。</p>
+<p>分类讨论，枚举可能先于出现的位置 $[j - k + 1, j]$，若 $i - j &lt;= k$ ，那么不合法的方案数相当于是 $g_j \times (i - j)!$，因为在最后 $i - j$ 个位置上，相当于每个数都只出现了一次。若 $i - j &gt; k$，那么不合法的方案数相当于是 $g_j \times k! \times k^{i - j - k}$。最后 $k$ 个位置上 $k$ 个数各出现一次，$[j + 1, i - k]$ 位置上的数字随便选。最后把不合法的情况都减掉即可。</p>
+<p><a href="https://codeforces.com/contest/1861/submission/221631049">Code</a></p>
+<h2 id="1862-Codeforces-Round-894-Div-3"><a href="#1862-Codeforces-Round-894-Div-3" class="headerlink" title="1862. Codeforces Round 894 (Div. 3)"></a>1862. <a href="https://codeforces.com/contest/1862">Codeforces Round 894 (Div. 3)</a></h2><h3 id="E-Kolya-and-Movie-Theatre"><a href="#E-Kolya-and-Movie-Theatre" class="headerlink" title="E. Kolya and Movie Theatre"></a><a href="https://codeforces.com/contest/1862/problem/E">E. Kolya and Movie Theatre</a></h3><h4 id="Description-2"><a href="#Description-2" class="headerlink" title="Description"></a>Description</h4><p>一段长为 $n$ 的序列 $a$，你从中至多选 $m$ 个数。设你选的数中下标最大的为 $x$，那么你选的答案要减去 $x \times d$。问该怎么选是答案最大。</p>
+<h4 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h4><p>从前往后扫一遍，设下标最大的为 $i$，维护前 $k$ 大的序列以及和，算答案的时候直接减去 $i \times d$ 即可。</p>
+<p>注：万一插入的第 $i$ 号元素排不到前 $k$ 大，算答案时不应该减 $i \times d$ 。但其实不用考虑，因为这种情况一定不是最优，当最大下标值小于 $i$ 的时候一定会有一个答案，前 $k$ 大值和当前一样，但减去的数要小一些，所以不会更新答案。</p>
+<p><a href="https://codeforces.com/contest/1862/submission/220495907">Code</a></p>
+<h3 id="F-Magic-Will-Save-the-World"><a href="#F-Magic-Will-Save-the-World" class="headerlink" title="F. Magic Will Save the World"></a><a href="https://codeforces.com/contest/1862/problem/F">F. Magic Will Save the World</a></h3><h4 id="Description-3"><a href="#Description-3" class="headerlink" title="Description"></a>Description</h4><p>若干小怪，每个小怪血量 $s_i$，你可以用 水 或 火 元素攻击，消耗等量的 水 或 火 元素。你每秒可以增加 $w$ 水元素 和 $f$ 火元素，问最快要几秒消灭全部小怪。</p>
+<h4 id="Solution-3"><a href="#Solution-3" class="headerlink" title="Solution"></a>Solution</h4><p>对于每个小怪，要么被火消灭，要么被水消灭，不难发现小怪总血量比较低，所以可以利用 $01$ 背包思想解决。</p>
+<p><a href="https://codeforces.com/contest/1862/submission/220568374">Code</a></p>
+<h3 id="G-The-Great-Equalizer"><a href="#G-The-Great-Equalizer" class="headerlink" title="G. The Great Equalizer"></a><a href="https://codeforces.com/contest/1862/problem/G">G. The Great Equalizer</a></h3><h4 id="Description-4"><a href="#Description-4" class="headerlink" title="Description"></a>Description</h4><p>初始有一段长度为 $n$ 的序列，记一次操作为将序列按升序排列然后除去相等的元素。然后设新序列元素长度 $n’$，将第一个元素加上 $n’$，第二个加上 $n’ - 1$，第三个加上 $n’ - 2$ 以此类推。</p>
+<p>问最后只剩下一个元素的值。</p>
+<h4 id="Solution-4"><a href="#Solution-4" class="headerlink" title="Solution"></a>Solution</h4><p>我们发现两个性质，第一，每个元素之间的相对大小不会发生变化，第二，设两两相邻元素之间的最大元素为 $max_gap$，则每次操作后 $max_gap$ 都会减一。那么最后剩下的那个元素的值为 原序列中最大的元素加上操作次数（即 $max_gap$）。</p>
+<p><a href="https://codeforces.com/contest/1862/submission/220600516">Code</a></p>
+]]></content>
+      <tags>
+        <tag>算法竞赛</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大学笔记 | 电路原理</title>
+    <url>/2023/06/05/Circuit-Analysis/</url>
+    <content><![CDATA[<p>从入门到进门</p>
+<span id="more"></span>
+
+<h2 id="第一章-电路模型和电路定律"><a href="#第一章-电路模型和电路定律" class="headerlink" title="第一章 电路模型和电路定律"></a>第一章 电路模型和电路定律</h2><h4 id="第一章总结"><a href="#第一章总结" class="headerlink" title="第一章总结"></a>第一章总结</h4><ol>
+<li>研究的电路都满足集总假设条件，默认电路都是集总电路</li>
+<li>激励称为输入，响应称为输出</li>
+<li>关联参考方向：电流与压降方向一致，非关联参考方向：电流与压降方向相反</li>
+<li>支路，节点，回路，网孔，网络</li>
+<li>KCL，KVL</li>
+<li>电阻有负电阻</li>
+<li>受控电压源（?CVS），受控电流源（?CCS）</li>
+</ol>
+<h2 id="第二章-直流电阻电路的等效变换分析"><a href="#第二章-直流电阻电路的等效变换分析" class="headerlink" title="第二章 直流电阻电路的等效变换分析"></a>第二章 直流电阻电路的等效变换分析</h2><h4 id="第二章总结"><a href="#第二章总结" class="headerlink" title="第二章总结"></a>第二章总结</h4><ol>
+<li><p>电流源并联时叠加，串联时要求两个电流源相等且就是这两个电流源大小，电压源串联时叠加，并联要求电压源相等</p>
+</li>
+<li><p>单口网络等效变换</p>
+<p> <img src="%E5%8D%95%E5%8F%A3%E7%BD%91%E7%BB%9C%E7%AD%89%E6%95%88%E5%8F%98%E6%8D%A2.png" alt="单口网络等效变换"></p>
+</li>
+<li><p>Y-Δ变换</p>
+<p> <img src="Y-%CE%94%E5%8F%98%E6%8D%A21.png" alt="Y-Δ变换1"></p>
+<p> <img src="Y-%CE%94%E5%8F%98%E6%8D%A22.png" alt="Y-Δ变换2"></p>
+<p> <img src="Y-%CE%94%E5%8F%98%E6%8D%A23.png" alt="Y-Δ变换3"></p>
+</li>
+</ol>
+<h2 id="第三章-直流电阻电路的一般分析"><a href="#第三章-直流电阻电路的一般分析" class="headerlink" title="第三章 直流电阻电路的一般分析"></a>第三章 直流电阻电路的一般分析</h2><h4 id="第三章总结"><a href="#第三章总结" class="headerlink" title="第三章总结"></a>第三章总结</h4><ol>
+<li><p>网孔分析法 ：每个网孔各设一个电流，利用回路中总电压代数和为 $0$ 列方程，方程左右两边满足 <code>压升 = 压降</code> ，<strong>注意设的电流方向</strong> （本质是 KVL）</p>
+</li>
+<li><p>节点分析法（本质是 KCL）</p>
+<p> <img src="%E8%8A%82%E7%82%B9%E5%88%86%E6%9E%90%E6%B3%95.png" alt="节点分析法"></p>
+<p> 注意右式是以流<strong>进</strong>的电流为正，并且如果某一个支路上要是有电流源了，那么和这个电流源串联的电阻在算自感，互感时都可以忽略不计</p>
+<p> 还要注意的是，如果网络含独立电压源，最好一段接地，另一端直接求出电压</p>
+</li>
+<li><p>回路分析法和网孔分析法本质一样，只是网孔是特殊的回路</p>
+</li>
+</ol>
+<p>例题：</p>
+<p><img src="%E4%BE%8B2.1.png" alt="例2.1"></p>
+<blockquote>
+<p>解：左图可以化简为右图，易得 $I = \frac{2}{3}$</p>
+</blockquote>
+<h2 id="第四章-电路定理"><a href="#第四章-电路定理" class="headerlink" title="第四章 电路定理"></a>第四章 电路定理</h2><h4 id="第四章总结"><a href="#第四章总结" class="headerlink" title="第四章总结"></a>第四章总结</h4><ol>
+<li><p>叠加定理和齐次定理只对线性电路适用</p>
+</li>
+<li><p>注意的是叠加定理每次都是只考虑一个<strong>独立源</strong>，受控源每次都是放在电路中的</p>
+</li>
+<li><p>置换定理：利用电压源 / 电流源替换（例题1， 2）</p>
+</li>
+<li><p>戴维南定理：单口网络可以等效为电压源串电阻，电压源大小为开路电压，电阻为独立源置0后的阻值（注意受控源有阻值） </p>
+</li>
+<li><p>诺顿定理：单口网络等效为电流源（大小为短路电流）并电阻，与戴维南类似（是戴维南定理的对偶形式）</p>
+</li>
+<li><p>求输出电阻常用的方法有：等效电阻法（这里是从端口方向看的），外加电压法（独立源要置0），开短路法（注意后面两个方法适合含受控源的情况）</p>
+</li>
+<li><p>$R_L = R_0$ 时满足最大功率条件，$\eta = \frac{负载产生功率}{总产生功率}$ 注意多个电源存在时有的电源会吸收功率，这个功率不能算在分母里，分母中只能算产生功率，而且算 $\eta$ 时要带回原电路来算，不能盲目认为 $R_L$ 和端口等效电阻相等就认为 $\eta$ 是 $50\%$</p>
+</li>
+</ol>
+<p>例题：</p>
+<p><img src="%E4%BE%8B3.1.png" alt="例3.1"></p>
+<p><img src="%E4%BE%8B3.2.png" alt="例3.2"></p>
+<blockquote>
+<p>当我们知道某支路上的电流 / 电压时，我们可以用<strong>电压源 / 电流源来替换该支路上的其他元件</strong>，这样的话并不改变整个电路结构，研究某一复杂电路时，我们要清楚自己到底想求什么，然后对于<strong>和电流源串联的元件，思考能否舍弃，和电压源并联的元件，思考能否舍弃</strong></p>
+</blockquote>
+<h2 id="第五章-一阶直流动态电路时域分析"><a href="#第五章-一阶直流动态电路时域分析" class="headerlink" title="第五章 一阶直流动态电路时域分析"></a>第五章 一阶直流动态电路时域分析</h2><h4 id="第五章总结"><a href="#第五章总结" class="headerlink" title="第五章总结"></a>第五章总结</h4><ol>
+<li><p>动态元件：元件的伏安关系包含对电流电压的微分 / 积分</p>
+<p> 动态电路：至少含有一个动态元件，含有几个动态元件就称为几阶动态电路</p>
+</li>
+<li><p>电容，电感</p>
+<p> <img src="%E7%94%B5%E5%AE%B9%EF%BC%8C%E7%94%B5%E6%84%9F%E5%85%B3%E7%B3%BB.png" alt="电容，电感关系"></p>
+</li>
+<li><p>完全响应 = 零输入响应 + 零状态响应</p>
+<p> = 固有响应 + 强迫响应</p>
+<p> = 暂态响应 + 稳态响应</p>
+<p> 其实暂态可以粗浅理解为 $e^{-kt}$ 的量</p>
+<p> <img src="%E5%87%A0%E4%B8%AA%E6%A6%82%E5%BF%B5.png" alt="几个概念"></p>
+</li>
+<li><p>$f(t) = f(\infty) + [f(0_+) - f(\infty)]e^{\frac{t}{\tau}}$</p>
+</li>
+</ol>
+<h3 id="S-5-1-一阶电路的零输入响应-amp-零状态响应"><a href="#S-5-1-一阶电路的零输入响应-amp-零状态响应" class="headerlink" title="$\S 5.1$ 一阶电路的零输入响应 &amp; 零状态响应"></a>$\S 5.1$ 一阶电路的零输入响应 &amp; 零状态响应</h3><ul>
+<li>换路定则</li>
+</ul>
+<p>​        换路前后电容电流和电感电压为有限制的情况下， 换路前后瞬间电容电压和电感电流不能跃变。 </p>
+<p>​        该定则常用来判断 $i_L(0_+)与i_L(0_-),u_C(0_+)与u_C(0_-)$ 是否相等</p>
+<ul>
+<li><p>零输入响应公式形式</p>
+<p>  对于电容：$u_c = U_0e^{-\frac{t}{\tau}}, \tau = RC$</p>
+<p>  对于电感：$i_l = I_0e^{-\frac{t}{\tau}}, \tau = \frac{L}{R}$</p>
+</li>
+</ul>
+<p>​        这里电感可以看作是一个电压源，而电容可以看作是一个电流源，<strong>然后这里的 $R$ 是指换路后电路的总电阻值</strong></p>
+<ul>
+<li><p>零状态响应公式</p>
+<p>  对于电容：$u_c = U_{\infty}(1 - e^{-\frac{t}{\tau}}), \tau = RC$</p>
+<p>  对于电感：$i_l = I_{\infty}(1 - e^{-\frac{t}{\tau}}), \tau = \frac{L}{R}$</p>
+</li>
+</ul>
+<h3 id="S-5-2-一阶电路的全响应"><a href="#S-5-2-一阶电路的全响应" class="headerlink" title="$\S 5.2$ 一阶电路的全响应"></a>$\S 5.2$ 一阶电路的全响应</h3><ul>
+<li><p>全响应公式形式</p>
+<p>  对于电容：$u_c = U_0e^{-\frac{t}{\tau}} + U_{\infty}(1 - e^{-\frac{t}{\tau}}), \tau = RC$</p>
+<p>  对于电感：$i_l = I_0e^{-\frac{t}{\tau}} + I_{\infty}(1 - e^{-\frac{t}{\tau}}), \tau = \frac{L}{R}$</p>
+<p>  全响应时的电容电压即零状态时的电容电压加上零响应时的电容电压， 电感电源同理</p>
+<p>  值得注意的是，这里的电阻 $R$ 是<strong>除去储能元件</strong>以及将激励源置零所得到的</p>
+<p>  <strong>可以写作 $f(t) = f(\infty) + [f(0_+) - f(\infty)]e^{\frac{t}{\tau}}$， 这便是三要素法</strong></p>
+<p>  <strong>一阶线性直流电路</strong>中的电感电容<strong>电阻</strong>， 均适用三要素法</p>
+</li>
+</ul>
+<p><img src="%E6%8D%A2%E8%B7%AF%E5%AE%9A%E5%88%99.png" alt="换路定则"></p>
+<p><strong>注意一下换路定理不能盲目用</strong></p>
+<p><img src="%E7%89%B9%E4%BE%8B.png" alt="特例"></p>
+<h3 id="S-5-3-一阶电路的跃阶响应"><a href="#S-5-3-一阶电路的跃阶响应" class="headerlink" title="$\S 5.3$ 一阶电路的跃阶响应"></a>$\S 5.3$ 一阶电路的跃阶响应</h3><ul>
+<li><p>单位跃阶函数时一种奇异函数， 定义 $\varepsilon(t) = \begin{cases} 0 &amp;&amp; t &lt; 0\\ 1 &amp;&amp; t &gt; 0\end{cases}$</p>
+</li>
+<li><p>电路的单位跃阶响应为 $s(t) = (1 - e^{-\frac{t}{\tau}})\varepsilon(t)$ </p>
+</li>
+<li><p>其实可以先求出电压为 $1V$ 时的响应函数，然后用阶跃函数表示电压函数，最后真正响应函数的零状态响应就是阶跃函数 $\times (1 - e^{-\frac{t}{\tau}})$ 然后再加上零输入响应就是完全响应</p>
+</li>
+</ul>
+<p><img src="%E4%BE%8B5.1.jpg" alt="例5.1"></p>
+<p>（有坑）</p>
+<p><img src="%E4%BE%8B5.2.png" alt="例5.2"></p>
+<blockquote>
+<p>首先从状态量入手，算 $0_-$ 时候的<strong>状态量</strong>，研究 $0_+$ 状态时可以把电容变为电压源，电感变为电流源，然后用三要素法分析。但是这题有个坑。无论是状态量还是非状态量，分解成暂态响应和固态响应时都可以直接按 <code>常数</code> + <code>按e指数衰减部分</code> ，但是分解成零输入和零状态时，状态量比较好分解就按照一般方法来，非状态量不可以按照状态量的方法，要列关于 i / u 的方程，然后把 i / u 转化为零输入 / 零状态时的量来求 </p>
+</blockquote>
+<p><img src="%E4%BE%8B5.3.png" alt="例5.3"></p>
+<blockquote>
+<p>分成 $0 &lt; t &lt; 1$ 和 $1 &lt; t$ 区间来处理</p>
+<p>$$t = \begin{cases} 2(1 - e^{-t}) \ , 0 \le t \le 1&amp; \\\ 1 + (1 - 2e^{-1})e^{-2(t - 1)} \ ,t \ge 1 &amp; \end{cases}$$</p>
+</blockquote>
+<p><img src="%E4%BE%8B5.4.png" alt="例5.4"></p>
+<blockquote>
+<p>$$<br>u_s(t) = \varepsilon(t) + 2\varepsilon(t - 1) - 3\varepsilon(t - 3)\<br>t = \begin{cases} 20e^{-\frac{t}{\tau}} + (1 - e^{-\frac{t}{\tau}}) \ , 0 \le t \le 1&amp; \\ 20e^{-\frac{t}{\tau}} + (1 - e^{-\frac{t}{\tau}}) + 2(1 - e^{-\frac{t - 1}{\tau}}) \ ,1 \le t \le 3 &amp; \\ 20e^{-\frac{t}{\tau}} + (1 - e^{-\frac{t}{\tau}}) + 2(1 - e^{-\frac{t - 1}{\tau}}) - 3(1 - e^{-\frac{t - 3}{\tau}}) \ ,t \ge 3\end{cases}<br>$$</p>
+</blockquote>
+<h2 id="第六章-相量法"><a href="#第六章-相量法" class="headerlink" title="第六章 相量法"></a>第六章 相量法</h2><h4 id="第六章总结"><a href="#第六章总结" class="headerlink" title="第六章总结"></a>第六章总结</h4><ol>
+<li><p>我们要建立概念就是复数，三角函数，$e$ 指数之间是可以相互转化的，所以往往可以把他们看作等价的，<strong>都可以表示二维平面上的向量</strong></p>
+</li>
+<li><p>算相量加减法时转化为复数形式，算相量乘除法时转化为 $e$ 指数形式</p>
+</li>
+<li><p>三角函数转化为相量时，除非特殊说明，不然默认相量前面的都是有效值，即峰值的 $\frac{1}{\sqrt 2}$</p>
+</li>
+<li><p>对于相量而言，我们在计算上时可以把它看作和相量相同计算，<strong>但是相量不是向量，向量是真实存在物理量，相量不真实存在，是表示正弦信号的工具</strong></p>
+</li>
+<li><p>当电源电流是三角函数形式，即不断变化时要用相量来表示，$U$ 和 $I$ 上要记得打点，相量是可以用来表征正弦波的，<strong>但不等同</strong></p>
+</li>
+<li><p>对于接下来的正弦稳态电路和之前学的电路<strong>没什么不同</strong>，区别就是电流电压用相量表示，并且电感电容都可以用阻抗来表示，$Z_C= -j\frac{1}{\omega C},Z_L = jL\omega $</p>
+</li>
+</ol>
+<ul>
+<li><p>复数<br>  $$<br>  F = a + jb\<br>  F = |F|(cos\theta + jsin\theta)\<br>  F = |F|e^{j\theta}\<br>  \theta = arg \ F = arctan(\frac{b}{a})\<br>  Re[F] = a\<br>  lm[F] = b\<br>  F^* = a - jb = |F|\angle-\theta<br>  $$<br>  复数加减用代数形式，乘除用指数形式</p>
+</li>
+<li><p>正弦量</p>
+<p>  按正弦规律变化的电流，电压称为正弦量。由振幅（正数），角速度，初相位三要素决定</p>
+<p>  按国家统一标准用cos表示正弦量</p>
+<p>  相量和正弦量不相等，写的时候注意区分</p>
+<p>  峰峰值是振幅的两倍，有效值也称为均方根值</p>
+<p>  化成相量形式时前面的系数是有效值大小，化成正弦量时前面的系数是峰值大小</p>
+</li>
+<li><p>电路定理的相量形式</p>
+<p>  $\omega L$ 感抗  $-\frac{1}{\omega L}$ 感纳   $-\frac{1}{c\omega}$ 容抗  $\omega C$ 容纳   </p>
+<p>  将一般的电路定理全部改成相量形式</p>
+</li>
+</ul>
+<h2 id="第七章-正弦稳态电路的分析"><a href="#第七章-正弦稳态电路的分析" class="headerlink" title="第七章 正弦稳态电路的分析"></a>第七章 正弦稳态电路的分析</h2><h4 id="第七章总结"><a href="#第七章总结" class="headerlink" title="第七章总结"></a>第七章总结</h4><ol>
+<li><p>$|Z| = \frac{U}{I},Z = R + jX,\theta_z = \varphi_u - \varphi_i$ </p>
+<p> $|Z|$ 称为阻抗模，$R$称为等效电阻分量，$X$称为等效电抗分量（$X &gt; 0,\theta_z &gt; 0$ 时称 $Z$ 为感性阻抗，$X&lt;0,\theta_z &lt; 0$ 时称为 $Z$ 容性阻抗）</p>
+</li>
+<li><p>$Y = \frac{I}{U} = G + jB$</p>
+</li>
+<li><p>有功功率 $P$，无功功率 $Q$，视在功率 $S$</p>
+</li>
+<li><p>功率因素 $\lambda = \frac{P}{S}$ 要记得标上电流 超前 / 滞后 电压，往往都是电流 滞后 电压，所以要通过串 / 并联电容来实现</p>
+</li>
+<li><p>最大传递功率：一种是 $R_L$ 任意可调，只需让虚部是 $R_0$ 虚部相反数，实部和 $R_0$ 实部相等。另一种是 $R_L$ 有限制，不能直接满足第一种条件，应该是 $R_L$ 和 $R_0$ 模长相等</p>
+</li>
+</ol>
+<h2 id="第八章-含有耦合电感的电路"><a href="#第八章-含有耦合电感的电路" class="headerlink" title="第八章 含有耦合电感的电路"></a>第八章 含有耦合电感的电路</h2><h4 id="第八章总结"><a href="#第八章总结" class="headerlink" title="第八章总结"></a>第八章总结</h4><ol>
+<li>$u = L\frac{di_1}{dt} + M\frac{di_2}{dt}$ ，并且知道如何判断同名端，如何判断电压电流正负</li>
+<li>$k = \frac{M}{\sqrt {L_1 L_2}}$</li>
+<li>判断等效受控源正负方向：假设电流从一个线圈打点端方向流入，则假设对于另一个线圈支路上的的受控电压源而言，该受控电压源和这条支路上的线圈打点端同向</li>
+<li>遇到复杂，难以处理的电路，优先考虑化为理想线圈加受控源的形式（$\S 8.2$ 方法一）</li>
+<li>记住串联线圈化简的公式和 $T$ 型等效公式</li>
+<li>知道耦合系数是什么并且知道临界状况</li>
+<li>知道反映阻抗法并能灵活运用于戴维南等效电路中</li>
+<li><strong>什么都不知道时一定要会通过理想线圈加受控源的方法转化电路分析</strong></li>
+</ol>
+<h3 id="S-8-1-耦合电感的伏安关系"><a href="#S-8-1-耦合电感的伏安关系" class="headerlink" title="$\S 8.1$ 耦合电感的伏安关系"></a>$\S 8.1$ 耦合电感的伏安关系</h3><ul>
+<li>耦合元件：由一跳以上支路组成，一支路的电压，电流与其他支路的电压，电流直接相关</li>
+<li>在本章学习中，我们大多研究的耦合元件是线圈，线圈在通了电流之后会产生磁，而磁又会生电，从而产生电压，所以对于一个线圈上的电压，往往是由两部分组成，一个是它自身产生的电压，另一个是和它耦合的线圈的电压，自身电流和电磁之间比例系数是自感 $L$，和耦合元件之间是互感 $M$，但是我们有时也能见到 $L_{12}$，这种表示 $2$ 线圈在 $1$ 上的互感系数</li>
+</ul>
+<p><img src="%E8%80%A6%E5%90%88%E7%94%B5%E6%84%9F%E4%BC%8F%E5%AE%89%E5%85%B3%E7%B3%BB.png" alt="耦合电感伏安关系"></p>
+<ul>
+<li>同名端：当电流沿着不同线圈的两个端点流入，若产生的磁通方向相同，则这两个端点称为同名端，往往题目会直接告诉，若两个耦合线圈电流沿着同名端通入，互感 $ML &gt; 0$，反之 $ML &lt; 0$，或者可以理解为 $I_1$ 在线圈 $1$ 打点端通入，那么互感 $M$ 产生的电压 $+$ 极也在线圈 $2$ 打点端</li>
+</ul>
+<h3 id="S-8-2-耦合电感的去耦等效模型"><a href="#S-8-2-耦合电感的去耦等效模型" class="headerlink" title="$\S 8.2$ 耦合电感的去耦等效模型"></a>$\S 8.2$ 耦合电感的去耦等效模型</h3><ul>
+<li>利用受控源来等效：我们可以将线圈 $L$ 转化为纯线圈（不考虑互感）和受控电压源（最本源的方法，当你分析不出来或不太好处理时，都可以这样转化）<ul>
+<li>下图是电流沿着同名端流入时，受控源正负<strong>均</strong>与电流方向一致</li>
+<li>当沿着异名端流入时，受控源正负<strong>均</strong>与电流方向相反</li>
+</ul>
+</li>
+</ul>
+<p><img src="%E5%8E%BB%E8%80%A6%E7%AD%89%E6%95%88%E7%BA%BF%E5%9C%88.png" alt="去耦等效线圈"></p>
+<ul>
+<li><p>耦合电路的串联</p>
+<p>  当两个电感串联且电流沿着同名端流过（此时异名端相连），则可以等效为一个新电感 $L’ = L_1 + L_2 + 2M$</p>
+<p>  <img src="%E7%BA%BF%E5%9C%88%E4%B8%B2%E8%81%94.png" alt="线圈串联"></p>
+<p>  同理若电感串联但电流沿着异名端流过（同名端相连)，那么可以等效为一个新电感 $L’ = L_1 + L_2 - 2M$</p>
+</li>
+<li><p>耦合电路的并联</p>
+<p>  当线圈并联且异名端相连时，可以等效为一个新线圈 $L’ = \frac{L_1L_2 - M^2}{L_1 + L_2 + 2M}$（能记住最好，也可以不记住，用T型等效去推，比较推荐（之后会介绍））</p>
+<p>  当线圈并联且同名端相连时，可以等效为 $L’ = \frac{L_1L_2 - M^2}{L_1 + L_2 - 2M}$</p>
+<p>  <img src="%E7%BA%BF%E5%9C%88%E5%B9%B6%E8%81%94.png" alt="线圈并联"></p>
+</li>
+<li><p>耦合系数</p>
+<p>  我们都知道 $L$ 是大于 $0$ 的，所以在上述串联并联公式中，我们不难发现 $M$ 是要满足一定条件的，这里我们引入耦合系数 $k$ 来表示 $M$ 和 $L$ 之间的关系</p>
+<p>  <img src="%E8%80%A6%E5%90%88%E7%B3%BB%E6%95%B0.png" alt="耦合系数"></p>
+</li>
+<li><p>常见的等效方法</p>
+<ul>
+<li><p>$T$ 型等效</p>
+<p>  <img src="T%E5%9E%8B%E7%AD%89%E6%95%881.png" alt="T型等效1"></p>
+<p>  <img src="T%E5%9E%8B%E7%AD%89%E6%95%882.png" alt="T型等效2"></p>
+<p>  $T$ 型等效在处理并联等问题上十分有效</p>
+<p>  $e.g\ 8.1$</p>
+<p>  <img src="%E4%BE%8B8.1.png" alt="例8.1"></p>
+<blockquote>
+<p> 值得一提的是，这里之所以可以把两个线圈下端相连是因为只连一端不影响回路</p>
+</blockquote>
+<h3 id="S-8-3-空心变压器电路的分析"><a href="#S-8-3-空心变压器电路的分析" class="headerlink" title="$\S 8.3$ 空心变压器电路的分析"></a>$\S 8.3$ 空心变压器电路的分析</h3></li>
+</ul>
+</li>
+<li><p>互感化除法</p>
+<p>  是不是很眼熟，嗯互感化除法其实就是 $T$ 型等效法的一个应用，这两个没什么区别qwq</p>
+<p>  <img src="%E4%BA%92%E6%84%9F%E5%8C%96%E9%99%A4%E6%B3%95.png" alt="互感化除法"></p>
+</li>
+<li><p>回路分析法</p>
+<p>  其实没有用到任何化简，就是我们遇到一个新电路时的常见思路，把线圈变为理想线圈和受控源再分析，这个回路分析法是为接下来的简化方法服务的</p>
+<p>  <img src="%E5%9B%9E%E8%B7%AF%E5%88%86%E6%9E%90%E6%B3%95.png" alt="回路分析法"></p>
+</li>
+<li><p>反映阻抗法</p>
+<p>  仔细观察上一个化简的结果，我们发现初级电路和次级电路可以等效为一个新电路</p>
+<p>  我们设 $Z_{11},Z_{22}$ 为初级电路和次级电路的视在阻值，视在阻值就是不考虑线圈的互感作用，直接计算出的电路的阻值</p>
+<p>  那么初级线圈对新电路的贡献阻值为 $Z_1’ = Z_{11}$ 嗯就是它本身非常好记</p>
+<p>  次级线圈对新电路的贡献阻值为 $Z_2’ = \frac{(\omega M)^2}{Z_{22}}$ 这个结果看起来很真，说明 $M$ 和 $Z_{22}$ 都会对新电路有影响，这个结果也被称为反映阻抗，不难看出其实反映阻抗和同名端位置无关</p>
+<p>  <img src="%E5%8F%8D%E6%98%A0%E9%98%BB%E6%8A%97%E6%B3%95.png" alt="反映阻抗法"></p>
+<p>  <img src="%E5%8F%8D%E6%98%A0%E7%94%B5%E9%98%BB2.png" alt="反映电阻2"></p>
+<p>  所以化简的新电路如上，笔者推荐记住这个结果，比较方便</p>
+<p>  但是记住这种方法要求次级回路中无独立源</p>
+</li>
+<li><p>戴维南等效法</p>
+<p>  有了上述反映阻抗法的铺垫，我们可以利用戴维南等效法，从次级回路的两个端口看去，将其转化为一个新电路，这个新电路的阻值就按反映阻抗法的方法去求，只不过从次级回路来看的话，其实原先的次级回路相当于现在的初级回路，原先的初级回路相当于现在的次级回路</p>
+<p>  但还有一个问题，开路电压 $U_{OC}$ 怎么求，其实也很简单，我们原先不是假设次级线圈是一个理想线圈和受控源吗，这个$U_{OC}$ 就是受控源的电压值，也非常好理解，故 $U_{OC} = j\omega M I_1 = j\omega M \frac{U_s}{Z_{11}}$， $U_{OC}$正负要看具体端口正负以及同名异名情况</p>
+<p>  <img src="%E6%88%B4%E7%BB%B4%E5%8D%97%E7%AD%89%E6%95%88%E6%B3%95.png" alt="戴维南等效法"></p>
+</li>
+</ul>
+<h3 id="S-8-4-理想变压器电路的分析"><a href="#S-8-4-理想变压器电路的分析" class="headerlink" title="$\S 8.4$ 理想变压器电路的分析"></a>$\S 8.4$ 理想变压器电路的分析</h3><p>与先前的耦合线圈不同，理想变压器虽然长得和耦合线圈一样，但是不考虑 $L$ 和 $M$</p>
+<p><img src="%E7%90%86%E6%83%B3%E5%8F%98%E5%8E%8B%E5%99%A8%E7%94%B5%E5%8E%8B%E7%94%B5%E6%B5%81%E5%85%B3%E7%B3%BB.png" alt="理想变压器电压电流关系"></p>
+<p><img src="%E7%90%86%E6%83%B3%E5%8F%98%E5%8E%8B%E5%99%A8%E5%8F%98%E6%8D%A2%E5%85%B3%E7%B3%BB.png" alt="理想变压器变换关系"></p>
+<p><img src="%E4%BE%8B8.2.png" alt="例8.2"></p>
+<p><img src="%E4%BE%8B8.3.png" alt="例8.3"></p>
+<p><img src="%E4%BE%8B8.4.png" alt="例8.4"></p>
+<p><img src="%E4%BE%8B8.5.png" alt="例8.5"></p>
+<h2 id="第九章-三相电路"><a href="#第九章-三相电路" class="headerlink" title="第九章 三相电路"></a>第九章 三相电路</h2><h4 id="第九章总结"><a href="#第九章总结" class="headerlink" title="第九章总结"></a>第九章总结</h4><ol>
+<li><p>$I_a, I_b, I_c$ 是相电流，$I_{ab}, I_{ac}, I_{bc}$ 是线电流</p>
+</li>
+<li><p>$Y$ 型联接中，$U_{ab} = \sqrt 3 U_{a}\angle 30°,I_a = I_{ab}$ </p>
+</li>
+<li><p>$\Delta$ 型联接中，$U_a = U_{ab},I_a = \sqrt 3I_{ab}\angle -30°$ </p>
+</li>
+<li><p>做题时，应将负载和电源都变为 $Y$ 型联接，求出线电流，相电流之后再利用 $2$，$3$ 中的关系来替换</p>
+</li>
+<li><p>$Y$型 和 $\Delta$ 型变换往往利用的是 线电压 / 线电流 不变</p>
+</li>
+<li><p>$Y$ 型电路 $U$ 超前 $I$ 一个$\phi$ 角，这个角是其中一个电阻的辐角</p>
+</li>
+<li><p>$P_总 = 3P_相 = \sqrt 3 P_线$</p>
+</li>
+</ol>
+<h3 id="S-9-1-三相电路"><a href="#S-9-1-三相电路" class="headerlink" title="$\S 9.1$ 三相电路"></a>$\S 9.1$ 三相电路</h3><ul>
+<li><p>三个电压电流分别相差 $120°$ 的相位</p>
+<p>  根据转子转向，三相电路有正负相序之分，一般没说明时默认正序（$B$ 滞后 $A$ $120°$）</p>
+<p>  相比于单相发电机，三相发电机输出功率高，经济好，性能好，易于制造</p>
+</li>
+</ul>
+<p><img src="%E4%B8%89%E7%9B%B8%E4%BA%A4%E6%B5%81%E7%94%B5%E5%8E%8B.png" alt="三相交流电压"></p>
+<ul>
+<li><p>三相电源的联结</p>
+<ul>
+<li><p>$Y$ 型链接</p>
+<p>  $U_a, U_b, U_c$ 是线电压， $U_{ab}, U_{ac}, U_{bc}$ 是项电压</p>
+<p>  利用相量图来理解</p>
+<p>  <img src="Y%E5%9E%8B%E9%93%BE%E6%8E%A5.png" alt="Y型链接"></p>
+</li>
+<li><p>$\Delta$ 形联接</p>
+<p>  电路接反时会很危险，会先接上电压表来判断</p>
+<p>  <img src="%E4%B8%89%E8%A7%92%E9%93%BE%E6%8E%A5.png" alt="三角链接"></p>
+</li>
+</ul>
+</li>
+<li><p>对称三相电路分析</p>
+<ul>
+<li><p>$Y-Y$ 联接</p>
+<p>  通过节点电压法可得 $U_{nn’} = 0$</p>
+<p><img src="YY%E8%81%94%E6%8E%A5.png" alt="YY联接"></p>
+</li>
+<li><p>$\Delta - ?$ 联接</p>
+<p><img src="%E4%B8%89%E8%A7%92-%EF%BC%9F%E8%81%94%E6%8E%A5.png" alt="三角-？联接"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="S-9-2-对称三相电路的计算"><a href="#S-9-2-对称三相电路的计算" class="headerlink" title="$\S 9.2$ 对称三相电路的计算"></a>$\S 9.2$ 对称三相电路的计算</h3><h3 id="S-9-3-三相电路的功率"><a href="#S-9-3-三相电路的功率" class="headerlink" title="$\S 9.3$ 三相电路的功率"></a>$\S 9.3$ 三相电路的功率</h3><p>二表法适合测对称三相负载的功率，表的示数单独拿出来没有意义，要结合在一起看，而且一定要对称时才可以计算</p>
+<p><img src="%E4%BA%8C%E8%A1%A8%E6%B3%95.png" alt="二表法"></p>
+<p><img src="%E5%AF%B9%E7%A7%B0%E4%B8%89%E7%9B%B8%E8%B4%9F%E8%BD%BD%E5%8A%9F%E7%8E%87.png" alt="对称三相负载功率"></p>
+<p><img src="%E6%B3%A8%E6%84%8F.png" alt="注意"></p>
+<p>$e.g\ 9.1$</p>
+<p><img src="%E4%BE%8B9.1.png" alt="例9.1"></p>
+<blockquote>
+<p>$$</p>
+<p>$$</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>大学笔记</tag>
+        <tag>专业课</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大学笔记 | 模拟电子技术基础</title>
+    <url>/2023/08/29/Electronic-Devices-and-Circuit-Theory/</url>
+    <content><![CDATA[<p>本课最大的收获是习得了上课隐身术，只有聪明的人才能看到我。</p>
+<span id="more"></span>
+
+<h2 id="第一章-二极管及二极管电路"><a href="#第一章-二极管及二极管电路" class="headerlink" title="第一章 二极管及二极管电路"></a>第一章 二极管及二极管电路</h2><h3 id="S-1-1-半导体材料及特性"><a href="#S-1-1-半导体材料及特性" class="headerlink" title="$\S 1.1$ 半导体材料及特性"></a>$\S 1.1$ 半导体材料及特性</h3><blockquote>
+<p>这部分了解即可。</p>
+</blockquote>
+<p>物质按导电能力可分为导体，半导体和绝缘体，其中半导体主要材料是硅（Si），锗（Ge）和砷化镓（GaAs）。</p>
+<p>研究半导体原子结构时，为简化起见，把内层电子和原子核视为一个整体，称为惯性核，其周围是价电子。</p>
+<ol>
+<li>本征半导体</li>
+</ol>
+<p><strong>完全纯净的，晶体结构完整的半导体晶体称为本征半导体。</strong>在 $0K$ 温度下，没有自由移动的载流子，不能导电相当于绝缘体。而当温度升高时共价键中的价电子从外界获得能量而激发成自由电子，这种现象称为本征激发。</p>
+<p><strong>可以把激发出的空位视为带正电荷的载流子，并把它称为空穴。</strong>半导体时依靠自由电子和空穴导电的。</p>
+<p>本征激发使两种载流子数量相等。空穴和自由电子相遇抵消的过程称为复合。温度一定时，两种载流子数目保持不变处于热平衡状态。</p>
+<p>设 $n_i$ 为热平衡载流子浓度，$p_0, h_0$ 分别为空穴和载流子浓度，则有 $p_0 = n_0 = n_i$。但是这种半导体导电能力很弱。</p>
+<blockquote>
+<p>本征激发和温度有关，复合和粒子浓度有关。</p>
+</blockquote>
+<p>杂质半导体分为 $N$ 型（电子型）和 $P$ 型（空穴型）</p>
+<ol start="2">
+<li>$N$ 型半导体</li>
+</ol>
+<blockquote>
+<p>N 是 negative，指的是负的电子。</p>
+</blockquote>
+<p>向半导体中加入少量五价元素，称五价元素为<strong>施主元素</strong>，自由电子为多数载流子，简称多子。空穴称为少子。</p>
+<ol start="3">
+<li>$P$ 型半导体</li>
+</ol>
+<blockquote>
+<p>P 是 positive，指的是正的空穴。</p>
+</blockquote>
+<p>向半导体中加入少量三价元素，称三价元素为<strong>受主元素</strong>，空穴为多子。自由电子为少子。</p>
+<p>杂质越多，多子浓度越高，导电性越强。<strong>少子浓度与温度有关。</strong></p>
+<ol start="4">
+<li>漂移电流和扩散电流</li>
+</ol>
+<p>在外加电场作用下，载流子的定向移动称为漂移运动，会产生漂移电流。</p>
+<p>载流子由于浓度不一致会产生扩散运动，并产生扩散电流。</p>
+<h3 id="S-1-2-PN-结的形成及特性"><a href="#S-1-2-PN-结的形成及特性" class="headerlink" title="$\S 1.2$ $PN$ 结的形成及特性"></a>$\S 1.2$ $PN$ 结的形成及特性</h3><ol>
+<li>形成</li>
+</ol>
+<p>利用掺杂的方法，使半导体一半是 $P$ 一半是 $N$，由于扩散运动使两边载流子不断中和之后，$P$ 区的负离子和 $N$ 区的正离子形成内奸电场组织多子扩散。直到两边达到稳态，就形成了 $PN$ 结。</p>
+<p>两边掺杂浓度一样可以形成对称结，反之形成不对称结。</p>
+<p>中间的正负离子界面称为空间电荷区，又称为耗尽区 / 势垒区 / 阻挡区。</p>
+<p>内建电场的电位差 $V_B$ 称为内建电位差，满足<br>$$<br>V_B \approx V_Tln\dfrac{N_aN_d}{n_i^2} \<br>V_T = \dfrac{kT}{q}<br>$$</p>
+<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CElectronic-Devices-and-Circuit-Theory%5C1.2-1.png" alt="1-1"></p>
+<ol start="2">
+<li>特性</li>
+</ol>
+<ul>
+<li><p>正向特性：当电源正极接 P，负极接 N，称 PN 结外加正向电压，也称正向偏置。会使 PN 结减小（刚开始很小的时候，电子难过去，后来不断削弱阻挡区，电流指数级上涨）。</p>
+</li>
+<li><p>反向特性：当电源正极接 N，负极接 P，称 PN 结外加反向电压，也称反向偏置。会使 PN 结增大（阻挡区越来越厚，电子更难过去，不导通）。</p>
+</li>
+<li><p>伏安特性：PN 结的电流与端电压存在关系：</p>
+</li>
+</ul>
+<p>$$<br>i = I_s(e^{v/V_T} - 1)<br>$$</p>
+<blockquote>
+<p>$I_s$ 是反向饱和电流，$V_T$ 是和温度相关的，室温下 $V_T$ 是 26 mv。 </p>
+<p>Ge 作材料的晶体管导通电压是 0.2 ~ 0.3 V，Si 是 0.6 ~ 0.7 V。</p>
+</blockquote>
+<p>​        当 PN 结正偏且 $\left |  v \right |  \gg V_T$ 时，式子可简化为<br>$$<br>i \approx I_se^{v/V_T}<br>$$<br>​        当 PN 结反偏且 $\left |  v \right |  \gg V_T$ 时，式子可简化为<br>$$<br>i \approx -I_s<br>$$</p>
+<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CElectronic-Devices-and-Circuit-Theory%5C1.2-2.png" alt="1-2"></p>
+<blockquote>
+<p>其实反向的时候有一个非常非常小的电流。</p>
+</blockquote>
+<ul>
+<li>击穿特性：当 PN 结的反向电压增大到某一值时，反向电流会突然增大，PN 结被击穿，击穿分为：雪崩击穿（掺杂浓度低的时候，PN 结宽）和齐纳击穿（掺杂浓度高的时候，PN 结窄）。</li>
+</ul>
+<blockquote>
+<p>雪崩击穿：温度越高，所需击穿电压越高。齐纳击穿：温度越高，所需击穿电压越高。</p>
+</blockquote>
+<ol start="3">
+<li>PN 结的电容效应</li>
+</ol>
+<p>PN 结具有电荷随着电压变化而变化的特性，与电容类似。</p>
+<ul>
+<li><p>势垒电容</p>
+<blockquote>
+<p>由空间电荷区的电荷所导致。反向电压越大，空间电荷区越宽，电容越大。</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CElectronic-Devices-and-Circuit-Theory%5C1.2-3.png" alt="1-3"></p>
+<ul>
+<li><p>扩散电容</p>
+<blockquote>
+<p>由 P 区和 N 区粒子浓度差所导致。正向电压越大，N 区扩散来的电子越多，浓度越大，曲线也不断上升。这条曲线反映了从结到边缘处，粒子浓度越来越少。</p>
+</blockquote>
+<p>  <img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CElectronic-Devices-and-Circuit-Theory%5C1.2-4.png" alt="1-4"></p>
+<h3 id="S-1-3-二极管及基本电路"><a href="#S-1-3-二极管及基本电路" class="headerlink" title="$\S 1.3$ 二极管及基本电路"></a>$\S 1.3$ 二极管及基本电路</h3><ol>
+<li><p>结构及特性</p>
+<p> 将 PN 结加上电极引线封装起来，构成了二极管。</p>
+<p> <img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CElectronic-Devices-and-Circuit-Theory%5C1.3-1.png" alt="1.3-1"></p>
+</li>
+</ol>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>大学课程</tag>
+        <tag>专业课</tag>
       </tags>
   </entry>
   <entry>
@@ -1362,8 +1362,8 @@ $\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{
 </ul>
 ]]></content>
       <tags>
-        <tag>大学笔记</tag>
         <tag>数学</tag>
+        <tag>大学笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -1744,8 +1744,8 @@ $\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{
 </ul>
 ]]></content>
       <tags>
-        <tag>大学笔记</tag>
         <tag>数学</tag>
+        <tag>大学笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -1783,16 +1783,22 @@ $\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{
 <p>git 切换分支：<code>git checkout xx</code> （xx为分支名）。</p>
 <p>合并分支：<code>git merge xx</code>（xx为分支名）。</p>
 <p>列出本地分支：<code>git branch</code>。</p>
-<p>删除分支:<code>git branch -d xx</code> (xx为分支名，-D强制删除)。</p>
+<p>删除分支：<code>git branch -d xx</code> (xx为分支名，-D强制删除)。</p>
 <blockquote>
 <p>若 xx 分支有内容未被保存，git 会提醒你，不让你进行操作。</p>
 </blockquote>
 <h3 id="3-与别人共享代码-——-github-上线"><a href="#3-与别人共享代码-——-github-上线" class="headerlink" title="3. 与别人共享代码 —— github 上线"></a>3. 与别人共享代码 —— github 上线</h3><p>首先确保你在 github 上新建了一个仓库，使你本地的文件有仓库可以存放。</p>
-<p>添加远程仓库：<code>git remote add origin xxx</code> （xxx为远程地址）。</p>
-<p>首次将本地分支提交到远程仓库：<code>git push --set-upstrwam origin xx</code>（<code>xx</code> 为分支名称）。</p>
+<p>添加远程仓库：<code>git remote add origin git@server-name:path/repo-name.git</code> 。</p>
+<p>查看远程仓库信息可以用：<code>git remote -v</code>。</p>
+<p>当远程仓库不小心添加错了，也可以删除这个远程仓库：<code>git remote rm orgin</code></p>
+<p>首次将本地分支提交到远程仓库：<code>git push -u origin xx</code>（<code>xx</code> 为分支名称）。</p>
 <blockquote>
 <p>之后会让你输入用户名和密码，若你想输入一次之后就不用再输入，则只用在 <code>git push</code> 之前加上一句 <code>git config credential.helper store</code>。</p>
 <p>在次之后再提交这个分支只用 <code>git push</code> 即可。</p>
+</blockquote>
+<p>此后，每次本地提交后，只要有必要，就可以使用命令 <code>git push origin master</code> 推送最新修改。</p>
+<blockquote>
+<p>当 <code>git push</code> 失败的时候，常见情况是远程仓库和本地不一致导致冲突，可以先 <code>git pull origin main --allow-unrelated-histories</code>，强行拉去远程仓库信息然后合并，之后再 <code>git push</code> 就不冲突了。</p>
 </blockquote>
 <p>克隆仓库：<code>git clone xxx</code>（xxx为远程地址）。</p>
 <p>若和别人合作之后，再次想把代码拉去下来只需要：<code>git pull</code> 即可。 </p>
@@ -1805,121 +1811,6 @@ $\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{
     <title>Linux学习笔记：vim专题</title>
     <url>/2023/08/27/Linux-Vim/</url>
     <content><![CDATA[<span id="more"></span>
-]]></content>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux 学习笔记</title>
-    <url>/2023/07/22/Linux/</url>
-    <content><![CDATA[<p>Linux 基础配置，包括 pacman 包管理，ranger 文件管理。</p>
-<span id="more"></span>
-
-<h3 id="更改字体大小"><a href="#更改字体大小" class="headerlink" title="更改字体大小"></a>更改字体大小</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">nvim ~/.Xresources</span><br></pre></td></tr></tbody></table></figure>
-
-<p>进去之后输入</p>
-<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">Xft.dpi: 120</span><br></pre></td></tr></tbody></table></figure>
-
-<p>即可将字体调整到合适的大小了。</p>
-<h3 id="联网"><a href="#联网" class="headerlink" title="联网"></a>联网</h3><p>刚开始的时候需要输入一下命令:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">wpa_passphrase Wifi_name Wifi_password &gt; internet.conf</span><br></pre></td></tr></tbody></table></figure>
-
-<p>之后每次启动都要输入以下命令：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">ip link set wlo1 up</span><br><span class="line">sudo wpa_supplicant -c internet.conf -i wlo1 &amp;</span><br><span class="line">sudo dhcpcd</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="配置-VPN"><a href="#配置-VPN" class="headerlink" title="配置 VPN"></a>配置 VPN</h3><p>xfce 桌面环境下的 manjaro 没有图形化界面可以设置代理，只能用终端环境去编辑。</p>
-<p>更改 proxy 配置，首先打开终端并输入:</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">sudo vim /etc/environment</span><br></pre></td></tr></tbody></table></figure>
-
-<p>然后找到以 “http_proxy” 开头的设置，如果没有就自己新建。</p>
-<p>添加如下：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http_proxy="http://your_proxy_server:proxy_port"</span><br><span class="line">https_proxy="http://your_proxy_server:proxy_port"</span><br><span class="line">socks_proxy="http://your_proxy_server:proxy_port"</span><br></pre></td></tr></tbody></table></figure>
-
-<p><strong>参考：</strong> <a href="https://www.zhihu.com/question/586110918/answer/2910628561">xface如何设置系统代理?</a></p>
-<h3 id="pacman-教程"><a href="#pacman-教程" class="headerlink" title="pacman 教程"></a>pacman 教程</h3><p>pacman 之于 Arch，就好比 App store 之于 IOS。</p>
-<ul>
-<li><p><code>pacman -S xx</code></p>
-<p>  安装 xx 软件。</p>
-</li>
-<li><p><code>pacman -Sy</code></p>
-<p>  查询软件库是否是最新并更新。</p>
-</li>
-<li><p><code>pacman -Syy</code></p>
-<p>  强行刷新并更新至最新软件库。</p>
-</li>
-<li><p><code>pacman -Su</code></p>
-<p>  更新软件。</p>
-</li>
-<li><p><code>pacman -Syu</code></p>
-<p>  更新软件库并更新软件。</p>
-</li>
-<li><p><code>pacman -Syyu</code></p>
-<p>  强行刷新，更新至最新软件库并更新软件。</p>
-</li>
-<li><p><code>pacman -Ss xx</code></p>
-<p>  查询所有名称带 xx 的软件。</p>
-</li>
-<li><p><code>pacman -Sc</code></p>
-<p>  删除一些安装包等缓存。</p>
-</li>
-<li><p><code>pacman -R xx</code></p>
-<p>  删除软件。</p>
-</li>
-<li><p><code>pacman -Rs xx</code></p>
-<p>  删除软件及其相关依赖。</p>
-</li>
-<li><p><code>pacman -Rns xx</code>（推荐）</p>
-<p>  删除软件，相关依赖以及全局配置文件（但不会删除个人配置文件，如.vimrc）。</p>
-</li>
-<li><p><code>pacman -Q</code></p>
-<p>  查询电脑上所有软件。</p>
-</li>
-<li><p><code>pacman -Q | wc -l</code></p>
-<p>  快速知道有多少软件。</p>
-</li>
-<li><p><code>pacman -Qe</code></p>
-<p>  查询自己装的所有软件。</p>
-</li>
-<li><p><code>pacman -Qeq</code></p>
-<p>  查询自己装的所有软件且不显示版本号。</p>
-</li>
-<li><p><code>pacman -Qs xx</code></p>
-<p>  查询所有名字带 xx 的软件。</p>
-</li>
-<li><p><code>pacman -Qdt</code></p>
-<p>  查询所有不再被依赖的软件。</p>
-</li>
-<li><p><code>pacman -Qdtq</code></p>
-<p>  查询所有不再被依赖的软件且不显示版本号。</p>
-</li>
-<li><p><code>pacman -R $(pacman -Qdtq)</code></p>
-<p>  删除所有不再被依赖的软件。</p>
-</li>
-<li><p><code>nvim /etc/pacman.conf</code> </p>
-<p>  编辑 pacman 的配置文件。</p>
-</li>
-</ul>
-<h3 id="Ranger-教程"><a href="#Ranger-教程" class="headerlink" title="Ranger 教程"></a>Ranger 教程</h3><ul>
-<li><p><code>k</code> <code>j</code> 控制同目录下上下文件移动</p>
-</li>
-<li><p><code>[</code> <code>]</code>  控制上级目录的上下文件移动</p>
-</li>
-<li><p><code>&lt;Shift&gt; + H</code> 在历史记录中退回 <code>&lt;Shift&gt; + L</code> 在历史记录中前进</p>
-</li>
-<li><p><code>zh</code> 或 <code>&lt;Ctrl&gt; + h</code> 显示或隐藏系统文件</p>
-</li>
-</ul>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
-<li>查看桌面环境（DE）</li>
-</ul>
-<p>打开终端并复制粘贴此命令：</p>
-<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">echo $XDG_CURRENT_DESKTOP</span><br></pre></td></tr></tbody></table></figure>
-
-<ul>
-<li>查看系统信息</li>
-</ul>
-<p>在终端中输入 <code>screenfetch</code> 即可，显示桌面环境版本以及其他系统信息。</p>
 ]]></content>
       <tags>
         <tag>Linux</tag>
@@ -2000,270 +1891,6 @@ $\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{
       <tags>
         <tag>算法竞赛</tag>
         <tag>数学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大学笔记 | 大学物理BII</title>
-    <url>/2023/08/30/Physics-II/</url>
-    <content><![CDATA[<p>我将以波的形式入门。</p>
-<p>大物笔记彻底变成 PPT clipboard 力（悲</p>
-<span id="more"></span>
-
-<h2 id="第十章-振动"><a href="#第十章-振动" class="headerlink" title="第十章 振动"></a>第十章 振动</h2><h3 id="S-10-1-简谐运动"><a href="#S-10-1-简谐运动" class="headerlink" title="$\S 10.1$ 简谐运动"></a>$\S 10.1$ 简谐运动</h3><ol>
-<li>简谐振动方程</li>
-</ol>
-<p>​    最简单的简谐运动，以弹簧振子来举例，其受力满足，<br>$$<br>F = -kx \<br>F = ma = m \dfrac{d^2x}{dt^2}<br>$$<br>​    然后引入$\omega^2 =\dfrac{k}{m}$，这里 $\omega$ 只与系统自身性质有关，也称为角频率。<br>​    化简得 $\dfrac{d^2x}{dt^2} + \omega^2 x = 0$，这是简谐运动的微分方程，求解可得<br>$$<br>x = A \cos (\omega t +\phi)<br>$$<br>​    便得到了简谐运动的运动方程，<strong>这十分重要</strong>，求一阶导可得速度方程，求二阶导可得加速度方程。</p>
-<blockquote>
-<p> 通常化作余弦形式。</p>
-</blockquote>
-<ol start="2">
-<li>简谐振动的特征量</li>
-</ol>
-<p>​    速度 $v = \omega Acos(\omega t + \phi + \dfrac{\pi}{2})$，$\omega A= v_m$ 表示速度振幅。</p>
-<p>​    加速度 $a = \omega^2 A cos(\omega t + \phi)$，$\omega^2A = a_m$ 表示加速度振幅。</p>
-<p>​    周期满足 $T\omega = 2\pi$。</p>
-<p>​    振幅 $A = \sqrt{x_0^2 + \dfrac{v_0^2}{\omega^2}}$，相位角 $tan \phi = -\dfrac{v_0}{\omega x_0}$。</p>
-<ol start="3">
-<li>简谐运动能量</li>
-</ol>
-<p>$$<br>E = E_p + E_k \<br>Ep = \dfrac{1}{2}kx^2, \ E_k = \dfrac{1}{2}mv^2<br>\\代入得 \ E = \dfrac{1}{2}kA^2<br>$$</p>
-<ol start="4">
-<li>旋转矢量<br>矢量绕 $O$ 点按逆时针旋转，$t$ 时刻，点在 $x$ 轴上的位置为 $A\cos(\omega t + \phi)$。<br>速度与 $x$ 轴上的夹角为 $\omega t + \phi + \dfrac{\pi}{2}$，$v_x = \omega A\cos(\omega t + \phi + \dfrac{\pi}{2}) = -\omega A\sin(\omega t + \phi)$。<br>加速度 $a_x = \omega^2 A \cos(\omega t + \phi + \pi) = -\omega^2 x$。</li>
-</ol>
-<h3 id="S-10-3-简谐运动的合成"><a href="#S-10-3-简谐运动的合成" class="headerlink" title="$\S 10.3$ 简谐运动的合成"></a>$\S 10.3$ 简谐运动的合成</h3><ol>
-<li>同方向，同频率简谐运动的合成</li>
-</ol>
-<p><img src="10.3-1.jpg" alt="10.3-1"></p>
-<ol start="2">
-<li>振动方向垂直，同频率简谐运动的合成</li>
-</ol>
-<p><img src="10.3-2.jpg" alt="10.3-2"></p>
-<ul>
-<li><p>当 $\phi_2 - \phi_1 = k\pi$ 时，质点做直线运动。</p>
-</li>
-<li><p>当 $\phi_2 - \phi_1 = (2k \pm1)\dfrac{\pi}{2}$ 时，质点运动轨迹是圆。</p>
-</li>
-<li><p>当 $\phi_2 - \phi_1$ 为其他值时，质点运动轨迹是椭圆。</p>
-</li>
-</ul>
-<h3 id="S-10-5-阻尼振动-受迫振动-共振"><a href="#S-10-5-阻尼振动-受迫振动-共振" class="headerlink" title="$\S 10.5$ 阻尼振动 受迫振动 共振"></a>$\S 10.5$ 阻尼振动 受迫振动 共振</h3><ol>
-<li><p>阻尼振动<br> 振幅随时间减小的振动叫阻尼振动。<br> 阻尼模型有摩擦阻尼和辐射阻尼。<br> 对于低速运动的物体，引入阻力 $F = -\gamma v $。</p>
-<p>对于高速运动的物体，引入阻力 $F = -\gamma v^2 $（用的较少）。</p>
-<p>以弹簧振子为例，我们可以列出方程<br>$$<br>\begin{gather}<br>m\dfrac{d^2x}{dt^2} = -kx - \gamma v \<br>\omega_0^2 = \dfrac{k}{m}\ \ \ 2\beta = \dfrac{\gamma}{m}\<br>\Rightarrow \dfrac{d^2x}{dt^2} + 2\beta\dfrac{dx}{dt} + \omega_0^2x = 0\<br>\Rightarrow x = c_1e^{-(\beta - \sqrt{\beta^2 - \omega_0^2})t} + c_2e^{-(\beta + \sqrt{\beta^2  -\omega_0^2})t}<br>\end{gather}<br>$$<br>​    当 $\beta$ 和 $\omega_0$ 大小关系不同时，所对应的结果也不同。</p>
-</li>
-</ol>
-<p><img src="10.3-3.jpg" alt="10.3-3"></p>
-<p>​    临界阻尼到达平衡点最快，过阻尼和临界阻尼不能往返运动。</p>
-<ol start="2">
-<li>受迫振动<br>物体在周期性外力下持续发生振动称为受迫振动，这个外力称为驱动力（要考虑弹性力，阻尼力和驱动力）。</li>
-</ol>
-<p>​        这块貌似了解即可，在此贴出 ppt。</p>
-<p>​    <img src="10.3-4.png" alt="10.3-4"></p>
-<p><img src="10.3-5.png" alt="10.3-5"></p>
-<p><img src="10.3-6.png" alt="10.3-6"></p>
-<p><img src="10.3-7.png" alt="10.3-7"></p>
-<ol start="3">
-<li>共振<br>当外界驱动力频率接近或等于系统固有频率时，受迫振动振幅达到最大值的现象称为<strong>共振</strong>，其频率为<strong>共振频率</strong>。</li>
-</ol>
-<p><img src="10.3-8.png" alt="10.3-8"></p>
-<p><img src="10.3-9.png" alt="10.3-9"></p>
-<h2 id="第十一章-机械波"><a href="#第十一章-机械波" class="headerlink" title="第十一章 机械波"></a>第十一章 机械波</h2><h3 id="S-11-1-波动的基本概念"><a href="#S-11-1-波动的基本概念" class="headerlink" title="$\S 11.1$ 波动的基本概念"></a>$\S 11.1$ 波动的基本概念</h3><ol>
-<li>机械波的产生和传播<ul>
-<li>波源：激发波动的振动系统。</li>
-<li>弹性介质：能够传播机械振动的弹性介质。</li>
-<li><strong>振动是质点的个体行为，波动是质点振动的群体行为。</strong>波动是振动相位的传递，注意每个质点依然是在垂直方向上移动，并未左右移动。</li>
-<li><strong>横波</strong>：振动方向与波的传播方向垂直，如绳波。<strong>纵波</strong>：振动方向与波的传播方向平行，是靠介质疏密变化传播的，如声波，弹簧波。纵波可以在固液气中传播，而横波一般只在固体中传播。</li>
-</ul>
-</li>
-<li>波的几何描述<ul>
-<li>波线：表示波的传播方向的射线。</li>
-<li>波面：相位相同的点组成的面。</li>
-<li>波前：某一时刻，最前面的波面。</li>
-<li>平面波：波面是平面的波。球面波：波面是球面的波。</li>
-</ul>
-</li>
-<li>描述波的物理量<ul>
-<li>波长：振动在一个周期内传播的距离为波长 $\lambda$，反映波在空间上的周期性。</li>
-<li>周期和频率：周期 $T$，频率 $\nu$。反映波在时间上的周期。</li>
-<li>波速：用 $u$ 表示。$\lambda = uT$，$u = \lambda \nu$。</li>
-<li>周期由波源决定，波速由介质决定。</li>
-<li>不同频率的同一类型波在同一介质波速相同。</li>
-<li>波在不同介质中频率不变。</li>
-</ul>
-</li>
-</ol>
-<h3 id="S-11-2-平面简谐波-波函数"><a href="#S-11-2-平面简谐波-波函数" class="headerlink" title="$\S 11.2$ 平面简谐波 波函数"></a>$\S 11.2$ 平面简谐波 波函数</h3><ul>
-<li>平面简谐波：波面是平面，各质点做简谐运动的波。</li>
-<li>波函数：描述任意时刻任意位置处质点的<strong>振动位移</strong>。这里往往用某一质点的振动方程代替任意质点的振动方程。</li>
-</ul>
-<ol>
-<li><p>平面简谐波的波函数</p>
-<ul>
-<li><p>波函数未特地说明时，默认在原点处。</p>
-</li>
-<li><p>波形以波速沿波线平移的波称为行波。</p>
-</li>
-<li><p>$y = A\cos [\omega(t - \dfrac{x}{u}) + \phi]$，把对应的时间 $t_0$，$x_0$ 代入公式即可算出某时刻某位置的振动位置。</p>
-</li>
-<li><p>此类常考题型如下：</p>
-<p><img src="11.2-3.png" alt="11-2.3"></p>
-</li>
-</ul>
-</li>
-<li><p>波动方程（考试不考）</p>
-</li>
-</ol>
-<p><img src="11.2-1.png" alt="11-2.1"></p>
-<p><img src="11.2-2.png" alt="11.2-2"></p>
-<h3 id="S-11-3-波的能量-能流密度"><a href="#S-11-3-波的能量-能流密度" class="headerlink" title="$\S 11.3$ 波的能量 能流密度"></a>$\S 11.3$ 波的能量 能流密度</h3><ol>
-<li><p>波的能量</p>
-<ul>
-<li><p>波具有动能和势能</p>
-<p>对于质元而言</p>
-</li>
-<li><p>动能 $dE_k = \dfrac{1}{2}(dm)v^2 = \dfrac{1}{2}(\rho dV)A^2\omega^2\sin^2\omega(t - \dfrac{x}{u})$</p>
-</li>
-<li><p>势能 $dE_P = \dfrac{1}{2}(\rho dV)A^2\omega^2\sin^2\omega(t - \dfrac{x}{u})$（貌似上课也没讲怎么推导的，记住就行吧？.jpg）</p>
-<blockquote>
-<p>注意质元在平衡位置处，动能，势能和总机械能均最大，质元位移最大时，三者均为 $0$。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ol>
-<p>​        $dE = dE_p + dE_k = (\rho dV)A^2\omega^2\sin^2\omega(t - \dfrac{x}{u})$</p>
-<p>​        能量密度 $w = \dfrac{dE}{dV} = \rho A^2\omega^2\sin^2\omega(t - \dfrac{x}u{})$</p>
-<p>​        平均能量密度 $\bar w = \dfrac{1}{T}\int_0^T wdt = \dfrac{1}{2}\rho A^2\omega^2$</p>
-<p>​        不难发现每时每刻，动能和势能总是相同的，质元不与外界能量交换，总能量总是守恒的。</p>
-<p>​        对于所有弹性波，平均能量密度和振幅平方，频率平方，介质密度成正比。</p>
-<ol start="2">
-<li>波的能流 平均能流密度</li>
-</ol>
-<p>​        单位时间内通过垂直于波传播方向的某面积上能量称为能流，方向与速度相同。$P = \dfrac{dE}{dt}$。</p>
-<p><img src="11.3-1.png" alt="11.3-1"></p>
-<p>​        平均能流 $\bar P = \bar wuS = \dfrac{1}{2}\rho A^2\omega^2uS$</p>
-<p>​        平均能流密度：单位面积上的能流。</p>
-<p>​        $I = \dfrac{\bar P}{S} = \dfrac{1}{2}\rho A^2\omega^2u$</p>
-<p>​        矢量式 $\vec I = \dfrac{1}{2}\rho A^2\omega^2\vec u$</p>
-<p>​        能流密度 $I$ 也被称为波的强度。</p>
-<p>​        平面简谐波 $E = IS$。</p>
-<p>​        球面简谐波 $E = 4\pi r^2I$。</p>
-<p>​        设单位半径上的球面振幅是 $a$，半径为 $r$ 的球面上振幅为 $A$，由球心处放出的总能量相等，可以得出 $A(r) = \dfrac{a}{r}$，若球心处 $y_o(t) \propto \cos(\omega t + \phi)$，则 $y_球 = \dfrac{a}{r}\cos(\omega(t - \dfrac{r}{u}) + \phi)$。</p>
-<ol start="3">
-<li>声强 声强级<ul>
-<li>声振动：能够引起人们听觉效应的机械振动。</li>
-<li>声波：在弹性介质中由声振动激发的波叫声波。</li>
-<li>声波范围：20 ~ 20000 Hz 超声波：&gt; 20000 Hz 次声波：&lt; 20 Hz</li>
-<li>声强：声波的平均能流密度叫声强。$I = \dfrac{1}{2}\rho A^2\omega^2u$，单位：$W / m^2$。</li>
-<li>声强级：$I_1 = 10lg\dfrac{I}{I_0}$，单位：$dB$（分贝）。</li>
-</ul>
-</li>
-</ol>
-<h3 id="S-11-4-惠更斯原理"><a href="#S-11-4-惠更斯原理" class="headerlink" title="$\S 11.4$ 惠更斯原理"></a>$\S 11.4$ 惠更斯原理</h3><ul>
-<li><p>惠更斯原理：波在传播过程中，波面上每一点可以看作是发射子波的波源，这些子波源相当于继承原先波的能量，然后再传递给之后的波，后继的包迹决定新的波阵面。</p>
-</li>
-<li><p>波的衍射：波在传播过程中能够绕过障碍物而偏离直线传播的现象。衍射是波的基本特征之一，其强弱由障碍物尺寸和波长的关系决定。惠更斯原理只能定性解释波的衍射现象。</p>
-</li>
-</ul>
-<h3 id="S-11-5-波的叠加原理-波的干涉"><a href="#S-11-5-波的叠加原理-波的干涉" class="headerlink" title="$\S 11.5$ 波的叠加原理 波的干涉"></a>$\S 11.5$ 波的叠加原理 波的干涉</h3><ol>
-<li>波的叠加原理：<ul>
-<li>独立传播原理：波相遇后依然按照各自原来的特性，互不干涉。</li>
-<li>叠加原理：某点的振动为引起该点振动波的矢量和。</li>
-</ul>
-</li>
-<li>波的干涉（这段 ppt 比较完整，直接放 ppt 力）</li>
-</ol>
-<p><img src="11.5-1.png" alt="11.5-1"></p>
-<p><img src="11.5-2.png" alt="11.5-2"></p>
-<blockquote>
-<p>值得一提的是，这里波的干涉和前面第十章第三节的简谐振动的合成是十分类似的。</p>
-</blockquote>
-<p><img src="11.5-3.png" alt="11.5-3"></p>
-<p><img src="11.5-4.png" alt="11.5-4"></p>
-<p>​    练习在精不在多，这里贴一道给出两种方法的练习题，分别用到本节知识和前面波函数的知识。</p>
-<p><img src="11.5-5.png" alt="11.5-5"></p>
-<p><img src="11.5-6.png" alt="11.5-6"></p>
-<p><img src="11.5-7.png" alt="11.5-7"></p>
-<h3 id="S-11-6-驻波"><a href="#S-11-6-驻波" class="headerlink" title="$\S 11.6$ 驻波"></a>$\S 11.6$ 驻波</h3><ul>
-<li>驻波：沿相反方向传播的振幅相同的两列相干波相遇叠加会形成一种波形不向前传播的波。</li>
-</ul>
-<p><img src="11.6-1.png" alt="11.6-1"></p>
-<p><img src="11.6-2.png" alt="11.6-2"></p>
-<p><img src="11.6-3.png" alt="11.6-3"></p>
-<p><img src="11.6-4.png" alt="11.6-4"></p>
-<blockquote>
-<p>值得一提的是，能量在驻波中的分布是不均匀的，振动的能量在波节处分布相对更为集中。</p>
-</blockquote>
-<ul>
-<li><p>半波损失</p>
-<p>  从一个介质到另一个介质，一部分反射形成的波叫反射波，一部分透射形成的波叫透射波。</p>
-<p>  透射波没有相位的损失，总是与入射波同相，但反射波，从光疏到光密会有相位 $\pi$ 的突变，$\phi’ = \phi - \pi$。</p>
-</li>
-<li><p>弦线上的驻波</p>
-<p>  驻波就是行波在弦线上前进过程中受到了阻挡，产生了反射，然后反射波和入射波叠加导致的。</p>
-</li>
-</ul>
-<p><img src="11.6-5.png" alt="11.6-5"></p>
-<p>前面的那道算两振源干涉的题目，也可以当作驻波来算：</p>
-<p><img src="11.6-6.png" alt="11.6-6"></p>
-<p><img src="11.6-7.png" alt="11.6-7"></p>
-<h3 id="S-11-7-多普勒效应"><a href="#S-11-7-多普勒效应" class="headerlink" title="$\S 11.7$ 多普勒效应"></a>$\S 11.7$ 多普勒效应</h3><p><img src="11.7-1.png" alt="11.7-1"></p>
-<p><img src="11.7-2.png" alt="11.7-2"></p>
-<p><img src="11.7-3.png" alt="11.7-3"></p>
-<p><img src="11.7-4.png" alt="11.7-4"></p>
-<p><img src="11.7-5.png" alt="11.7-5"></p>
-<h2 id="第十二章-电磁波"><a href="#第十二章-电磁波" class="headerlink" title="第十二章 电磁波"></a>第十二章 电磁波</h2><blockquote>
-<p>前置知识回顾：</p>
-<ul>
-<li><p>麦克斯韦方程组（部分）：</p>
-<p>  $\oint E \cdot dl = -\dfrac{d\Phi_m}{dt}$（法拉第电磁感应定律）</p>
-<p>  $\oint H \cdot dl = -\dfrac{d\Phi_e}{dt}$（安培定律）</p>
-<p>  其中 $\Phi_m$ 是磁感应强度 $B$ 的通量，$\Phi_e$ 是电位移 $D$ 的通量。</p>
-</li>
-<li><p>$D = \varepsilon_0 E$ ，其中 $D$ 是电位移矢量，$E$ 是电场强度，$\varepsilon_0$ 是真空介电常数。</p>
-</li>
-<li><p>$H = \dfrac{B}{\mu_0}$ ，其中 $H$ 是磁场强度，$B$ 是磁感应强度，$\mu_0$ 是磁导率。</p>
-</li>
-</ul>
-</blockquote>
-<h3 id="S-12-1-电磁波"><a href="#S-12-1-电磁波" class="headerlink" title="$\S 12.1$ 电磁波"></a>$\S 12.1$ 电磁波</h3><ul>
-<li>变化磁场产生涡旋电场，变化电场产生涡旋磁场。电磁振源产生交变电磁场，交变电场和交变磁场相互激发，形成电磁波。</li>
-<li>下面的推导了解即可</li>
-</ul>
-<p><img src="12.1-1.png" alt="12.1-1"></p>
-<p><img src="12.1-2.png" alt="12.1-2"></p>
-<p><img src="12.1-3.png" alt="12.1-3"></p>
-<p><img src="12.1-4.png" alt="12.1-4"></p>
-<ul>
-<li>求解平面电磁波的微分方程，解为 $E_x = E_0\cos\omega(t - \dfrac{z}{u}),H_y = H_0\cos\omega(t - \dfrac{z}{u})$。</li>
-</ul>
-<p><img src="12.1-5.png" alt="12.1-5"></p>
-<ul>
-<li><p>电磁波的能量传播</p>
-<p>  以电磁波形式传播出去的电磁能量称为辐射能。</p>
-<p>  能量密度 $w = w_e + w_m = \dfrac{1}{2}\varepsilon E^2 + \dfrac{1}{2}\mu H^2 = \varepsilon E^2 = \mu H^2$ 。</p>
-<p>  单位时间通过垂直于传播方向的单位面积的电磁能称为能流密度，$S = wu$（其中 $w$ 是能量密度）。</p>
-<p>  将 $w = \dfrac{1}{2}\varepsilon E^2 + \dfrac{1}{2}\mu H^2$ 和 $u = \dfrac{1}{\sqrt{\varepsilon \mu}}$ 代入公式，得 $S = EH$。矢量形式 $\vec S = \vec E \times \vec H$。$\vec S$ 称为 Poynting vector。</p>
-<p>  将 $S$ 对时间取平均值，$I = \bar S = \bar E \bar H$。$I$ 称为电磁波的强度。</p>
-<p>  对于平面电磁波：$I = \dfrac{1}{T}\int_0^TE_0H_0\cos^2\omega(t - \dfrac{z}{u})dt = \dfrac{1}{2}E_0H_0$。</p>
-</li>
-</ul>
-<h3 id="S-12-2-电偶极子辐射电磁波"><a href="#S-12-2-电偶极子辐射电磁波" class="headerlink" title="$\S 12.2$ 电偶极子辐射电磁波"></a>$\S 12.2$ 电偶极子辐射电磁波</h3><ul>
-<li><p>任何 LC 振荡电路都可以作为发射电磁波的振源，要想有效把电路中的电磁发射出去，除了补充能量外，还需要：1. 足够高的频率。2. 必须有开放的电路。</p>
-</li>
-<li><p>电偶极子辐射电磁波</p>
-<p>  <img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CPhysics-II%5C12.2-1.png" alt="12.2-1"></p>
-</li>
-</ul>
-<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CPhysics-II%5C12.2-2.png" alt="12.2-2"></p>
-<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CPhysics-II%5C12.2-3.png" alt="12.2-3"></p>
-<h3 id="S-12-3-电磁波谱"><a href="#S-12-3-电磁波谱" class="headerlink" title="$\S 12.3$ 电磁波谱"></a>$\S 12.3$ 电磁波谱</h3><blockquote>
-<p> 内容不重要，稍作了解即可（略）。</p>
-</blockquote>
-]]></content>
-      <tags>
-        <tag>大学笔记</tag>
-        <tag>物理</tag>
       </tags>
   </entry>
   <entry>
@@ -2633,6 +2260,385 @@ $\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{
       </tags>
   </entry>
   <entry>
+    <title>大学笔记 | 大学物理BII</title>
+    <url>/2023/08/30/Physics-II/</url>
+    <content><![CDATA[<p>我将以波的形式入门。</p>
+<p>大物笔记彻底变成 PPT clipboard 力（悲</p>
+<span id="more"></span>
+
+<h2 id="第十章-振动"><a href="#第十章-振动" class="headerlink" title="第十章 振动"></a>第十章 振动</h2><h3 id="S-10-1-简谐运动"><a href="#S-10-1-简谐运动" class="headerlink" title="$\S 10.1$ 简谐运动"></a>$\S 10.1$ 简谐运动</h3><ol>
+<li>简谐振动方程</li>
+</ol>
+<p>​    最简单的简谐运动，以弹簧振子来举例，其受力满足，<br>$$<br>F = -kx \<br>F = ma = m \dfrac{d^2x}{dt^2}<br>$$<br>​    然后引入$\omega^2 =\dfrac{k}{m}$，这里 $\omega$ 只与系统自身性质有关，也称为角频率。<br>​    化简得 $\dfrac{d^2x}{dt^2} + \omega^2 x = 0$，这是简谐运动的微分方程，求解可得<br>$$<br>x = A \cos (\omega t +\phi)<br>$$<br>​    便得到了简谐运动的运动方程，<strong>这十分重要</strong>，求一阶导可得速度方程，求二阶导可得加速度方程。</p>
+<blockquote>
+<p> 通常化作余弦形式。</p>
+</blockquote>
+<ol start="2">
+<li>简谐振动的特征量</li>
+</ol>
+<p>​    速度 $v = \omega Acos(\omega t + \phi + \dfrac{\pi}{2})$，$\omega A= v_m$ 表示速度振幅。</p>
+<p>​    加速度 $a = \omega^2 A cos(\omega t + \phi)$，$\omega^2A = a_m$ 表示加速度振幅。</p>
+<p>​    周期满足 $T\omega = 2\pi$。</p>
+<p>​    振幅 $A = \sqrt{x_0^2 + \dfrac{v_0^2}{\omega^2}}$，相位角 $tan \phi = -\dfrac{v_0}{\omega x_0}$。</p>
+<ol start="3">
+<li>简谐运动能量</li>
+</ol>
+<p>$$<br>E = E_p + E_k \<br>Ep = \dfrac{1}{2}kx^2, \ E_k = \dfrac{1}{2}mv^2<br>\\代入得 \ E = \dfrac{1}{2}kA^2<br>$$</p>
+<ol start="4">
+<li>旋转矢量<br>矢量绕 $O$ 点按逆时针旋转，$t$ 时刻，点在 $x$ 轴上的位置为 $A\cos(\omega t + \phi)$。<br>速度与 $x$ 轴上的夹角为 $\omega t + \phi + \dfrac{\pi}{2}$，$v_x = \omega A\cos(\omega t + \phi + \dfrac{\pi}{2}) = -\omega A\sin(\omega t + \phi)$。<br>加速度 $a_x = \omega^2 A \cos(\omega t + \phi + \pi) = -\omega^2 x$。</li>
+</ol>
+<h3 id="S-10-3-简谐运动的合成"><a href="#S-10-3-简谐运动的合成" class="headerlink" title="$\S 10.3$ 简谐运动的合成"></a>$\S 10.3$ 简谐运动的合成</h3><ol>
+<li>同方向，同频率简谐运动的合成</li>
+</ol>
+<p><img src="10.3-1.jpg" alt="10.3-1"></p>
+<ol start="2">
+<li>振动方向垂直，同频率简谐运动的合成</li>
+</ol>
+<p><img src="10.3-2.jpg" alt="10.3-2"></p>
+<ul>
+<li><p>当 $\phi_2 - \phi_1 = k\pi$ 时，质点做直线运动。</p>
+</li>
+<li><p>当 $\phi_2 - \phi_1 = (2k \pm1)\dfrac{\pi}{2}$ 时，质点运动轨迹是圆。</p>
+</li>
+<li><p>当 $\phi_2 - \phi_1$ 为其他值时，质点运动轨迹是椭圆。</p>
+</li>
+</ul>
+<h3 id="S-10-5-阻尼振动-受迫振动-共振"><a href="#S-10-5-阻尼振动-受迫振动-共振" class="headerlink" title="$\S 10.5$ 阻尼振动 受迫振动 共振"></a>$\S 10.5$ 阻尼振动 受迫振动 共振</h3><ol>
+<li><p>阻尼振动<br> 振幅随时间减小的振动叫阻尼振动。<br> 阻尼模型有摩擦阻尼和辐射阻尼。<br> 对于低速运动的物体，引入阻力 $F = -\gamma v $。</p>
+<p>对于高速运动的物体，引入阻力 $F = -\gamma v^2 $（用的较少）。</p>
+<p>以弹簧振子为例，我们可以列出方程<br>$$<br>\begin{gather}<br>m\dfrac{d^2x}{dt^2} = -kx - \gamma v \<br>\omega_0^2 = \dfrac{k}{m}\ \ \ 2\beta = \dfrac{\gamma}{m}\<br>\Rightarrow \dfrac{d^2x}{dt^2} + 2\beta\dfrac{dx}{dt} + \omega_0^2x = 0\<br>\Rightarrow x = c_1e^{-(\beta - \sqrt{\beta^2 - \omega_0^2})t} + c_2e^{-(\beta + \sqrt{\beta^2  -\omega_0^2})t}<br>\end{gather}<br>$$<br>​    当 $\beta$ 和 $\omega_0$ 大小关系不同时，所对应的结果也不同。</p>
+</li>
+</ol>
+<p><img src="10.3-3.jpg" alt="10.3-3"></p>
+<p>​    临界阻尼到达平衡点最快，过阻尼和临界阻尼不能往返运动。</p>
+<ol start="2">
+<li>受迫振动<br>物体在周期性外力下持续发生振动称为受迫振动，这个外力称为驱动力（要考虑弹性力，阻尼力和驱动力）。</li>
+</ol>
+<p>​        这块貌似了解即可，在此贴出 ppt。</p>
+<p>​    <img src="10.3-4.png" alt="10.3-4"></p>
+<p><img src="10.3-5.png" alt="10.3-5"></p>
+<p><img src="10.3-6.png" alt="10.3-6"></p>
+<p><img src="10.3-7.png" alt="10.3-7"></p>
+<ol start="3">
+<li>共振<br>当外界驱动力频率接近或等于系统固有频率时，受迫振动振幅达到最大值的现象称为<strong>共振</strong>，其频率为<strong>共振频率</strong>。</li>
+</ol>
+<p><img src="10.3-8.png" alt="10.3-8"></p>
+<p><img src="10.3-9.png" alt="10.3-9"></p>
+<h2 id="第十一章-机械波"><a href="#第十一章-机械波" class="headerlink" title="第十一章 机械波"></a>第十一章 机械波</h2><h3 id="S-11-1-波动的基本概念"><a href="#S-11-1-波动的基本概念" class="headerlink" title="$\S 11.1$ 波动的基本概念"></a>$\S 11.1$ 波动的基本概念</h3><ol>
+<li>机械波的产生和传播<ul>
+<li>波源：激发波动的振动系统。</li>
+<li>弹性介质：能够传播机械振动的弹性介质。</li>
+<li><strong>振动是质点的个体行为，波动是质点振动的群体行为。</strong>波动是振动相位的传递，注意每个质点依然是在垂直方向上移动，并未左右移动。</li>
+<li><strong>横波</strong>：振动方向与波的传播方向垂直，如绳波。<strong>纵波</strong>：振动方向与波的传播方向平行，是靠介质疏密变化传播的，如声波，弹簧波。纵波可以在固液气中传播，而横波一般只在固体中传播。</li>
+</ul>
+</li>
+<li>波的几何描述<ul>
+<li>波线：表示波的传播方向的射线。</li>
+<li>波面：相位相同的点组成的面。</li>
+<li>波前：某一时刻，最前面的波面。</li>
+<li>平面波：波面是平面的波。球面波：波面是球面的波。</li>
+</ul>
+</li>
+<li>描述波的物理量<ul>
+<li>波长：振动在一个周期内传播的距离为波长 $\lambda$，反映波在空间上的周期性。</li>
+<li>周期和频率：周期 $T$，频率 $\nu$。反映波在时间上的周期。</li>
+<li>波速：用 $u$ 表示。$\lambda = uT$，$u = \lambda \nu$。</li>
+<li>周期由波源决定，波速由介质决定。</li>
+<li>不同频率的同一类型波在同一介质波速相同。</li>
+<li>波在不同介质中频率不变。</li>
+</ul>
+</li>
+</ol>
+<h3 id="S-11-2-平面简谐波-波函数"><a href="#S-11-2-平面简谐波-波函数" class="headerlink" title="$\S 11.2$ 平面简谐波 波函数"></a>$\S 11.2$ 平面简谐波 波函数</h3><ul>
+<li>平面简谐波：波面是平面，各质点做简谐运动的波。</li>
+<li>波函数：描述任意时刻任意位置处质点的<strong>振动位移</strong>。这里往往用某一质点的振动方程代替任意质点的振动方程。</li>
+</ul>
+<ol>
+<li><p>平面简谐波的波函数</p>
+<ul>
+<li><p>波函数未特地说明时，默认在原点处。</p>
+</li>
+<li><p>波形以波速沿波线平移的波称为行波。</p>
+</li>
+<li><p>$y = A\cos [\omega(t - \dfrac{x}{u}) + \phi]$，把对应的时间 $t_0$，$x_0$ 代入公式即可算出某时刻某位置的振动位置。</p>
+</li>
+<li><p>此类常考题型如下：</p>
+<p><img src="11.2-3.png" alt="11-2.3"></p>
+</li>
+</ul>
+</li>
+<li><p>波动方程（考试不考）</p>
+</li>
+</ol>
+<p><img src="11.2-1.png" alt="11-2.1"></p>
+<p><img src="11.2-2.png" alt="11.2-2"></p>
+<h3 id="S-11-3-波的能量-能流密度"><a href="#S-11-3-波的能量-能流密度" class="headerlink" title="$\S 11.3$ 波的能量 能流密度"></a>$\S 11.3$ 波的能量 能流密度</h3><ol>
+<li><p>波的能量</p>
+<ul>
+<li><p>波具有动能和势能</p>
+<p>对于质元而言</p>
+</li>
+<li><p>动能 $dE_k = \dfrac{1}{2}(dm)v^2 = \dfrac{1}{2}(\rho dV)A^2\omega^2\sin^2\omega(t - \dfrac{x}{u})$</p>
+</li>
+<li><p>势能 $dE_P = \dfrac{1}{2}(\rho dV)A^2\omega^2\sin^2\omega(t - \dfrac{x}{u})$（貌似上课也没讲怎么推导的，记住就行吧？.jpg）</p>
+<blockquote>
+<p>注意质元在平衡位置处，动能，势能和总机械能均最大，质元位移最大时，三者均为 $0$。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+<p>​        $dE = dE_p + dE_k = (\rho dV)A^2\omega^2\sin^2\omega(t - \dfrac{x}{u})$</p>
+<p>​        能量密度 $w = \dfrac{dE}{dV} = \rho A^2\omega^2\sin^2\omega(t - \dfrac{x}u{})$</p>
+<p>​        平均能量密度 $\bar w = \dfrac{1}{T}\int_0^T wdt = \dfrac{1}{2}\rho A^2\omega^2$</p>
+<p>​        不难发现每时每刻，动能和势能总是相同的，质元不与外界能量交换，总能量总是守恒的。</p>
+<p>​        对于所有弹性波，平均能量密度和振幅平方，频率平方，介质密度成正比。</p>
+<ol start="2">
+<li>波的能流 平均能流密度</li>
+</ol>
+<p>​        单位时间内通过垂直于波传播方向的某面积上能量称为能流，方向与速度相同。$P = \dfrac{dE}{dt}$。</p>
+<p><img src="11.3-1.png" alt="11.3-1"></p>
+<p>​        平均能流 $\bar P = \bar wuS = \dfrac{1}{2}\rho A^2\omega^2uS$</p>
+<p>​        平均能流密度：单位面积上的能流。</p>
+<p>​        $I = \dfrac{\bar P}{S} = \dfrac{1}{2}\rho A^2\omega^2u$</p>
+<p>​        矢量式 $\vec I = \dfrac{1}{2}\rho A^2\omega^2\vec u$</p>
+<p>​        能流密度 $I$ 也被称为波的强度。</p>
+<p>​        平面简谐波 $E = IS$。</p>
+<p>​        球面简谐波 $E = 4\pi r^2I$。</p>
+<p>​        设单位半径上的球面振幅是 $a$，半径为 $r$ 的球面上振幅为 $A$，由球心处放出的总能量相等，可以得出 $A(r) = \dfrac{a}{r}$，若球心处 $y_o(t) \propto \cos(\omega t + \phi)$，则 $y_球 = \dfrac{a}{r}\cos(\omega(t - \dfrac{r}{u}) + \phi)$。</p>
+<ol start="3">
+<li>声强 声强级<ul>
+<li>声振动：能够引起人们听觉效应的机械振动。</li>
+<li>声波：在弹性介质中由声振动激发的波叫声波。</li>
+<li>声波范围：20 ~ 20000 Hz 超声波：&gt; 20000 Hz 次声波：&lt; 20 Hz</li>
+<li>声强：声波的平均能流密度叫声强。$I = \dfrac{1}{2}\rho A^2\omega^2u$，单位：$W / m^2$。</li>
+<li>声强级：$I_1 = 10lg\dfrac{I}{I_0}$，单位：$dB$（分贝）。</li>
+</ul>
+</li>
+</ol>
+<h3 id="S-11-4-惠更斯原理"><a href="#S-11-4-惠更斯原理" class="headerlink" title="$\S 11.4$ 惠更斯原理"></a>$\S 11.4$ 惠更斯原理</h3><ul>
+<li><p>惠更斯原理：波在传播过程中，波面上每一点可以看作是发射子波的波源，这些子波源相当于继承原先波的能量，然后再传递给之后的波，后继的包迹决定新的波阵面。</p>
+</li>
+<li><p>波的衍射：波在传播过程中能够绕过障碍物而偏离直线传播的现象。衍射是波的基本特征之一，其强弱由障碍物尺寸和波长的关系决定。惠更斯原理只能定性解释波的衍射现象。</p>
+</li>
+</ul>
+<h3 id="S-11-5-波的叠加原理-波的干涉"><a href="#S-11-5-波的叠加原理-波的干涉" class="headerlink" title="$\S 11.5$ 波的叠加原理 波的干涉"></a>$\S 11.5$ 波的叠加原理 波的干涉</h3><ol>
+<li>波的叠加原理：<ul>
+<li>独立传播原理：波相遇后依然按照各自原来的特性，互不干涉。</li>
+<li>叠加原理：某点的振动为引起该点振动波的矢量和。</li>
+</ul>
+</li>
+<li>波的干涉（这段 ppt 比较完整，直接放 ppt 力）</li>
+</ol>
+<p><img src="11.5-1.png" alt="11.5-1"></p>
+<p><img src="11.5-2.png" alt="11.5-2"></p>
+<blockquote>
+<p>值得一提的是，这里波的干涉和前面第十章第三节的简谐振动的合成是十分类似的。</p>
+</blockquote>
+<p><img src="11.5-3.png" alt="11.5-3"></p>
+<p><img src="11.5-4.png" alt="11.5-4"></p>
+<p>​    练习在精不在多，这里贴一道给出两种方法的练习题，分别用到本节知识和前面波函数的知识。</p>
+<p><img src="11.5-5.png" alt="11.5-5"></p>
+<p><img src="11.5-6.png" alt="11.5-6"></p>
+<p><img src="11.5-7.png" alt="11.5-7"></p>
+<h3 id="S-11-6-驻波"><a href="#S-11-6-驻波" class="headerlink" title="$\S 11.6$ 驻波"></a>$\S 11.6$ 驻波</h3><ul>
+<li>驻波：沿相反方向传播的振幅相同的两列相干波相遇叠加会形成一种波形不向前传播的波。</li>
+</ul>
+<p><img src="11.6-1.png" alt="11.6-1"></p>
+<p><img src="11.6-2.png" alt="11.6-2"></p>
+<p><img src="11.6-3.png" alt="11.6-3"></p>
+<p><img src="11.6-4.png" alt="11.6-4"></p>
+<blockquote>
+<p>值得一提的是，能量在驻波中的分布是不均匀的，振动的能量在波节处分布相对更为集中。</p>
+</blockquote>
+<ul>
+<li><p>半波损失</p>
+<p>  从一个介质到另一个介质，一部分反射形成的波叫反射波，一部分透射形成的波叫透射波。</p>
+<p>  透射波没有相位的损失，总是与入射波同相，但反射波，从光疏到光密会有相位 $\pi$ 的突变，$\phi’ = \phi - \pi$。</p>
+</li>
+<li><p>弦线上的驻波</p>
+<p>  驻波就是行波在弦线上前进过程中受到了阻挡，产生了反射，然后反射波和入射波叠加导致的。</p>
+</li>
+</ul>
+<p><img src="11.6-5.png" alt="11.6-5"></p>
+<p>前面的那道算两振源干涉的题目，也可以当作驻波来算：</p>
+<p><img src="11.6-6.png" alt="11.6-6"></p>
+<p><img src="11.6-7.png" alt="11.6-7"></p>
+<h3 id="S-11-7-多普勒效应"><a href="#S-11-7-多普勒效应" class="headerlink" title="$\S 11.7$ 多普勒效应"></a>$\S 11.7$ 多普勒效应</h3><p><img src="11.7-1.png" alt="11.7-1"></p>
+<p><img src="11.7-2.png" alt="11.7-2"></p>
+<p><img src="11.7-3.png" alt="11.7-3"></p>
+<p><img src="11.7-4.png" alt="11.7-4"></p>
+<p><img src="11.7-5.png" alt="11.7-5"></p>
+<h2 id="第十二章-电磁波"><a href="#第十二章-电磁波" class="headerlink" title="第十二章 电磁波"></a>第十二章 电磁波</h2><blockquote>
+<p>前置知识回顾：</p>
+<ul>
+<li><p>麦克斯韦方程组（部分）：</p>
+<p>  $\oint E \cdot dl = -\dfrac{d\Phi_m}{dt}$（法拉第电磁感应定律）</p>
+<p>  $\oint H \cdot dl = -\dfrac{d\Phi_e}{dt}$（安培定律）</p>
+<p>  其中 $\Phi_m$ 是磁感应强度 $B$ 的通量，$\Phi_e$ 是电位移 $D$ 的通量。</p>
+</li>
+<li><p>$D = \varepsilon_0 E$ ，其中 $D$ 是电位移矢量，$E$ 是电场强度，$\varepsilon_0$ 是真空介电常数。</p>
+</li>
+<li><p>$H = \dfrac{B}{\mu_0}$ ，其中 $H$ 是磁场强度，$B$ 是磁感应强度，$\mu_0$ 是磁导率。</p>
+</li>
+</ul>
+</blockquote>
+<h3 id="S-12-1-电磁波"><a href="#S-12-1-电磁波" class="headerlink" title="$\S 12.1$ 电磁波"></a>$\S 12.1$ 电磁波</h3><ul>
+<li>变化磁场产生涡旋电场，变化电场产生涡旋磁场。电磁振源产生交变电磁场，交变电场和交变磁场相互激发，形成电磁波。</li>
+<li>下面的推导了解即可</li>
+</ul>
+<p><img src="12.1-1.png" alt="12.1-1"></p>
+<p><img src="12.1-2.png" alt="12.1-2"></p>
+<p><img src="12.1-3.png" alt="12.1-3"></p>
+<p><img src="12.1-4.png" alt="12.1-4"></p>
+<ul>
+<li>求解平面电磁波的微分方程，解为 $E_x = E_0\cos\omega(t - \dfrac{z}{u}),H_y = H_0\cos\omega(t - \dfrac{z}{u})$。</li>
+</ul>
+<p><img src="12.1-5.png" alt="12.1-5"></p>
+<ul>
+<li><p>电磁波的能量传播</p>
+<p>  以电磁波形式传播出去的电磁能量称为辐射能。</p>
+<p>  能量密度 $w = w_e + w_m = \dfrac{1}{2}\varepsilon E^2 + \dfrac{1}{2}\mu H^2 = \varepsilon E^2 = \mu H^2$ 。</p>
+<p>  单位时间通过垂直于传播方向的单位面积的电磁能称为能流密度，$S = wu$（其中 $w$ 是能量密度）。</p>
+<p>  将 $w = \dfrac{1}{2}\varepsilon E^2 + \dfrac{1}{2}\mu H^2$ 和 $u = \dfrac{1}{\sqrt{\varepsilon \mu}}$ 代入公式，得 $S = EH$。矢量形式 $\vec S = \vec E \times \vec H$。$\vec S$ 称为 Poynting vector。</p>
+<p>  将 $S$ 对时间取平均值，$I = \bar S = \bar E \bar H$。$I$ 称为电磁波的强度。</p>
+<p>  对于平面电磁波：$I = \dfrac{1}{T}\int_0^TE_0H_0\cos^2\omega(t - \dfrac{z}{u})dt = \dfrac{1}{2}E_0H_0$。</p>
+</li>
+</ul>
+<h3 id="S-12-2-电偶极子辐射电磁波"><a href="#S-12-2-电偶极子辐射电磁波" class="headerlink" title="$\S 12.2$ 电偶极子辐射电磁波"></a>$\S 12.2$ 电偶极子辐射电磁波</h3><ul>
+<li><p>任何 LC 振荡电路都可以作为发射电磁波的振源，要想有效把电路中的电磁发射出去，除了补充能量外，还需要：1. 足够高的频率。2. 必须有开放的电路。</p>
+</li>
+<li><p>电偶极子辐射电磁波</p>
+<p>  <img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CPhysics-II%5C12.2-1.png" alt="12.2-1"></p>
+</li>
+</ul>
+<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CPhysics-II%5C12.2-2.png" alt="12.2-2"></p>
+<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CPhysics-II%5C12.2-3.png" alt="12.2-3"></p>
+<h3 id="S-12-3-电磁波谱"><a href="#S-12-3-电磁波谱" class="headerlink" title="$\S 12.3$ 电磁波谱"></a>$\S 12.3$ 电磁波谱</h3><blockquote>
+<p> 内容不重要，稍作了解即可（略）。</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>大学笔记</tag>
+        <tag>物理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux 学习笔记</title>
+    <url>/2023/07/22/Linux/</url>
+    <content><![CDATA[<p>Linux 基础配置，包括 pacman 包管理，ranger 文件管理。</p>
+<span id="more"></span>
+
+<h3 id="更改字体大小"><a href="#更改字体大小" class="headerlink" title="更改字体大小"></a>更改字体大小</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">nvim ~/.Xresources</span><br></pre></td></tr></tbody></table></figure>
+
+<p>进去之后输入</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">Xft.dpi: 120</span><br></pre></td></tr></tbody></table></figure>
+
+<p>即可将字体调整到合适的大小了。</p>
+<h3 id="联网"><a href="#联网" class="headerlink" title="联网"></a>联网</h3><p>刚开始的时候需要输入一下命令:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">wpa_passphrase Wifi_name Wifi_password &gt; internet.conf</span><br></pre></td></tr></tbody></table></figure>
+
+<p>之后每次启动都要输入以下命令：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">ip link set wlo1 up</span><br><span class="line">sudo wpa_supplicant -c internet.conf -i wlo1 &amp;</span><br><span class="line">sudo dhcpcd</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="配置-VPN"><a href="#配置-VPN" class="headerlink" title="配置 VPN"></a>配置 VPN</h3><p>xfce 桌面环境下的 manjaro 没有图形化界面可以设置代理，只能用终端环境去编辑。</p>
+<p>更改 proxy 配置，首先打开终端并输入:</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">sudo vim /etc/environment</span><br></pre></td></tr></tbody></table></figure>
+
+<p>然后找到以 “http_proxy” 开头的设置，如果没有就自己新建。</p>
+<p>添加如下：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">http_proxy="http://your_proxy_server:proxy_port"</span><br><span class="line">https_proxy="http://your_proxy_server:proxy_port"</span><br><span class="line">socks_proxy="http://your_proxy_server:proxy_port"</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>参考：</strong> <a href="https://www.zhihu.com/question/586110918/answer/2910628561">xface如何设置系统代理?</a></p>
+<h3 id="pacman-教程"><a href="#pacman-教程" class="headerlink" title="pacman 教程"></a>pacman 教程</h3><p>pacman 之于 Arch，就好比 App store 之于 IOS。</p>
+<ul>
+<li><p><code>pacman -S xx</code></p>
+<p>  安装 xx 软件。</p>
+</li>
+<li><p><code>pacman -Sy</code></p>
+<p>  查询软件库是否是最新并更新。</p>
+</li>
+<li><p><code>pacman -Syy</code></p>
+<p>  强行刷新并更新至最新软件库。</p>
+</li>
+<li><p><code>pacman -Su</code></p>
+<p>  更新软件。</p>
+</li>
+<li><p><code>pacman -Syu</code></p>
+<p>  更新软件库并更新软件。</p>
+</li>
+<li><p><code>pacman -Syyu</code></p>
+<p>  强行刷新，更新至最新软件库并更新软件。</p>
+</li>
+<li><p><code>pacman -Ss xx</code></p>
+<p>  查询所有名称带 xx 的软件。</p>
+</li>
+<li><p><code>pacman -Sc</code></p>
+<p>  删除一些安装包等缓存。</p>
+</li>
+<li><p><code>pacman -R xx</code></p>
+<p>  删除软件。</p>
+</li>
+<li><p><code>pacman -Rs xx</code></p>
+<p>  删除软件及其相关依赖。</p>
+</li>
+<li><p><code>pacman -Rns xx</code>（推荐）</p>
+<p>  删除软件，相关依赖以及全局配置文件（但不会删除个人配置文件，如.vimrc）。</p>
+</li>
+<li><p><code>pacman -Q</code></p>
+<p>  查询电脑上所有软件。</p>
+</li>
+<li><p><code>pacman -Q | wc -l</code></p>
+<p>  快速知道有多少软件。</p>
+</li>
+<li><p><code>pacman -Qe</code></p>
+<p>  查询自己装的所有软件。</p>
+</li>
+<li><p><code>pacman -Qeq</code></p>
+<p>  查询自己装的所有软件且不显示版本号。</p>
+</li>
+<li><p><code>pacman -Qs xx</code></p>
+<p>  查询所有名字带 xx 的软件。</p>
+</li>
+<li><p><code>pacman -Qdt</code></p>
+<p>  查询所有不再被依赖的软件。</p>
+</li>
+<li><p><code>pacman -Qdtq</code></p>
+<p>  查询所有不再被依赖的软件且不显示版本号。</p>
+</li>
+<li><p><code>pacman -R $(pacman -Qdtq)</code></p>
+<p>  删除所有不再被依赖的软件。</p>
+</li>
+<li><p><code>nvim /etc/pacman.conf</code> </p>
+<p>  编辑 pacman 的配置文件。</p>
+</li>
+</ul>
+<h3 id="Ranger-教程"><a href="#Ranger-教程" class="headerlink" title="Ranger 教程"></a>Ranger 教程</h3><ul>
+<li><p><code>k</code> <code>j</code> 控制同目录下上下文件移动</p>
+</li>
+<li><p><code>[</code> <code>]</code>  控制上级目录的上下文件移动</p>
+</li>
+<li><p><code>&lt;Shift&gt; + H</code> 在历史记录中退回 <code>&lt;Shift&gt; + L</code> 在历史记录中前进</p>
+</li>
+<li><p><code>zh</code> 或 <code>&lt;Ctrl&gt; + h</code> 显示或隐藏系统文件</p>
+</li>
+</ul>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
+<li>查看桌面环境（DE）</li>
+</ul>
+<p>打开终端并复制粘贴此命令：</p>
+<figure class="highlight text"><table><tbody><tr><td class="code"><pre><span class="line">echo $XDG_CURRENT_DESKTOP</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>查看系统信息</li>
+</ul>
+<p>在终端中输入 <code>screenfetch</code> 即可，显示桌面环境版本以及其他系统信息。</p>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>大学笔记 | 概率论与数理统计</title>
     <url>/2023/08/29/Probability/</url>
     <content><![CDATA[<p>你能算出你入门的概率吗。</p>
@@ -2764,9 +2770,140 @@ $\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{
 </ul>
 ]]></content>
       <tags>
-        <tag>大学笔记</tag>
         <tag>数学</tag>
+        <tag>大学笔记</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>算法笔记 | 字符串（一）</title>
+    <url>/2023/07/10/String-In-ACM-I/</url>
+    <content><![CDATA[<p>Manacher，KMP。</p>
+<span id="more"></span>
+
+<h2 id="1-Manacher-算法"><a href="#1-Manacher-算法" class="headerlink" title="1. Manacher 算法"></a>1. Manacher 算法</h2><h3 id="1-1-算法介绍"><a href="#1-1-算法介绍" class="headerlink" title="1.1 算法介绍"></a>1.1 算法介绍</h3><p>该算法可以线性求出字符串的以各个位置为轴的回文子串最大长度</p>
+<h3 id="1-2-过程"><a href="#1-2-过程" class="headerlink" title="1.2 过程"></a>1.2 过程</h3><p>本算法求的是以各位置为对称中心的最大对称半径是多少，由于会出现长度为奇数的对称区间（对称中心在两个位置中间），偶数长度的对称区间（对称中心在某一个位置处）。所以我们对原字串进行变换，比如 <code>abcba</code> 变为 <code>##a#b#c#b#a#</code> ，这样的话对称中心就是这个位置本身了。</p>
+<p>我们引入一个数组 $len$ ，$len$ 数组表示这个点能够扩展出的回文长度。</p>
+<p>我们从前向后遍历一遍，循环变量为 $i$，引入辅助变量 $maxr$ 和 $mid$ ，$maxr$ 表示触及到的最右边的字符位置，$mid$ 表示包含 $maxr$ 回文串的中心轴所在位置。对于每次遍历到的新的位置 $i$，不难发现如果 $i &lt; maxr$，那么 $len[i] = min\{len[mid] \}$</p>
+<p>当 $i$ 在 $maxr$ 左边且在 $mid$ 右边时：</p>
+<p>设 $i$ 关于 $mid$ 的对称点为 $j$，显然 $len[i]$ 一定不会小于 $len[j]$（对称）。</p>
+<p>其中 $j$ 为 $(mid&lt;&lt;1)−i$。</p>
+<p>那么我们就设置 $len[i] = min\{len[mid], maxr - i \}$ 然后继续尝试扩展，这样就可以较快地求出 $len[i]$，然后更新 $maxr$ 和 $mid$</p>
+<p>当 $i$ 在 $maxr$ 右边时，我们无法得知关于 $len[i]$ 的信息，只好从 $1$ 开始遍历，然后更新 $maxr$ 和 $mid$。</p>
+<p>本算法时间复杂度和空间复杂度均为线性的。</p>
+<h3 id="1-3-实现"><a href="#1-3-实现" class="headerlink" title="1.3 实现"></a>1.3 实现</h3><figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">update</span><span class="params">()</span> </span>{</span><br><span class="line">  s2[<span class="number">0</span>] = s2[<span class="number">1</span>] = <span class="string">'#'</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) {</span><br><span class="line">    s2[i &lt;&lt; <span class="number">1</span>] = s1[i];</span><br><span class="line">    s2[i &lt;&lt; <span class="number">1</span> | <span class="number">1</span>] = <span class="string">'#'</span>;</span><br><span class="line">  }</span><br><span class="line">  n = <span class="number">2</span> * n + <span class="number">1</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">manacher</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="type">int</span> maxr = <span class="number">0</span>, mid = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) {</span><br><span class="line">    <span class="keyword">if</span>(i &lt; maxr) len[i] = <span class="built_in">min</span>(len[(mid &lt;&lt; <span class="number">1</span>) - i], len[mid] + mid - i);</span><br><span class="line">    <span class="keyword">else</span> len[i] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(i + len[i] &lt;= n &amp;&amp;  i - len[i] &gt; <span class="number">0</span> &amp;&amp; s2[i + len[i]] == s2[i - len[i]]) len[i]++;</span><br><span class="line">    <span class="keyword">if</span>(len[i] + i &gt; maxr) {</span><br><span class="line">      maxr = len[i] + i;</span><br><span class="line">      mid = i; </span><br><span class="line">    } </span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h2 id="2-KMP-算法"><a href="#2-KMP-算法" class="headerlink" title="2. KMP 算法"></a>2. KMP 算法</h2><h3 id="2-1-前缀函数"><a href="#2-1-前缀函数" class="headerlink" title="2.1 前缀函数"></a>2.1 前缀函数</h3><p>给定一个长度为 $n$ 的字符串 $s$，其前缀函数被定义为一个长度为 $n$ 的数组 $\pi$。 其中 $\pi[i]$ 的定义是：最长的相等的正后缀前后缀长度（自身除外），举个例子，字串 $s[0\dots i]$ 有一对相等的真前缀 $s[0\dots k - 1]$ 和真后缀 $s[i - (k - 1) \dots i]$ 它们相等且是这个字串中所能找到最长的前缀后缀，那么 $\pi[i] = k$。</p>
+<h3 id="2-2-优化-amp-过程"><a href="#2-2-优化-amp-过程" class="headerlink" title="2.2 优化 &amp; 过程"></a>2.2 优化 &amp; 过程</h3><p>直接最朴素的计算前缀函数时间复杂度为 $O(n^3)$，故我们可以加入优化。</p>
+<p>优化一：每次新加入一个数时，贡献最多加 $1$，即 $\pi[i + 1] \le \pi[i] + 1$ ，取等当且仅当 $s[\pi[i] + 1] == s[i + 1]$。</p>
+<p>优化二：其实优化一的情况优化了新加入的数依然匹配成功的情况，那么优化二可以优化新加入的数失配的情况。我们假设记录一个数组 $k$，$k[i]$ 表示第 $i + 1$ 位失配之后应该跳到第 $k[i]$ 位上。那么我们每次可以不断向前跳，如果匹配成功就是优化一的情况，匹配不成功就继续回跳。</p>
+<p>我们假设向前回跳一次到达的位置为 $j$。仔细观察，我们发现 $s[0\dots j] = s[i - j \dots i] = s[\pi[i] - j \dots \pi[i]](j &lt; \pi[i])$，那么则有 $j = \pi[\pi[i]]$，故每次向前跳只需让 $j = k[j]$，等找到适配时就按优化一更新，一直适配不成功就按 $0$ 来更新 $k[i]$。这样的话相当于让该串自己匹配自己来求 $k[i]$，然后求该串在其他串中出现的位置就让该串与其他串匹配，等到 $j$ 变为该串的长度时，说明整个串出现了，可以记录下出现的位置了。</p>
+<h3 id="2-3-实现"><a href="#2-3-实现" class="headerlink" title="2.3 实现"></a>2.3 实现</h3><figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">kmp</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="type">int</span> len_a = <span class="built_in">strlen</span>(a + <span class="number">1</span>), len_b = <span class="built_in">strlen</span>(b + <span class="number">1</span>);</span><br><span class="line">  <span class="type">int</span> j = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">2</span>; i &lt;= len_b; i++) { <span class="comment">// i 要从 2 开始，不然的话计算前缀函数会把自身也算上，变为 k[i] = i</span></span><br><span class="line">    <span class="keyword">while</span>(j &amp;&amp; b[j + <span class="number">1</span>] != b[i]) j = k[j];</span><br><span class="line">    <span class="keyword">if</span>(b[j + <span class="number">1</span>] == b[i]) j++;</span><br><span class="line">    k[i] = j;</span><br><span class="line">  }</span><br><span class="line">  j = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= len_a; i++) {</span><br><span class="line">    <span class="keyword">while</span>(j &amp;&amp; b[j + <span class="number">1</span>] != a[i]) j = k[j];</span><br><span class="line">    <span class="keyword">if</span>(b[j + <span class="number">1</span>] == a[i]) j++;</span><br><span class="line">    <span class="keyword">if</span>(j == len_b) cout &lt;&lt; i - j + <span class="number">1</span> &lt;&lt; endl;</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= len_b; i++) cout &lt;&lt; k[i] &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">  cout &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>Study notes | CS61A</title>
+    <url>/2023/08/28/UCB-CS61A/</url>
+    <content><![CDATA[<p>Start!</p>
+<span id="more"></span>
+
+<h1 id="Chapter-1-Building-Abstractions-with-Functions"><a href="#Chapter-1-Building-Abstractions-with-Functions" class="headerlink" title="Chapter 1: Building Abstractions with Functions"></a>Chapter 1: Building Abstractions with Functions</h1><h3 id="1-2-Elements-of-Programing"><a href="#1-2-Elements-of-Programing" class="headerlink" title="1.2 Elements of Programing"></a>1.2 Elements of Programing</h3><h4 id="1-2-3-Importing-Library-Functions"><a href="#1-2-3-Importing-Library-Functions" class="headerlink" title="1.2.3 Importing Library Functions"></a>1.2.3 Importing Library Functions</h4><p>Python defines a very large number of functions, including the operator functions mentioned in the preceding section,so we can import them into our programing.</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> math <span class="keyword">import</span> sqrt</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>sqrt(<span class="number">256</span>)</span><br><span class="line"><span class="number">16.0</span></span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h4 id="1-2-4-Names-and-the-Environment"><a href="#1-2-4-Names-and-the-Environment" class="headerlink" title="1.2.4 Names and the Environment"></a>1.2.4 Names and the Environment</h4><p>Names can be bound via <code>=</code> or <code>import</code>.</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> math <span class="keyword">import</span> pi</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>pi * <span class="number">71</span> / <span class="number">223</span></span><br><span class="line"><span class="number">1.0002380197528042</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>Names can be bound to functions. For instance, the name <code>max</code> is bound to the max function we have been using. </p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">max</span></span><br><span class="line">&lt;built-<span class="keyword">in</span> function <span class="built_in">max</span>&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>f = <span class="built_in">max</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>f</span><br><span class="line">&lt;built-<span class="keyword">in</span> function <span class="built_in">max</span>&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>f(<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>)</span><br><span class="line"><span class="number">4</span></span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">max</span> = <span class="number">5</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">max</span></span><br><span class="line"><span class="number">5</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>Interpreter must maintain some sort of memory which is called <strong>environment</strong> to keep track of the names, values and the bindings.</p>
+<p><code>=</code> can combine multiple values and names.</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>area, circumference = pi * radius * radius, <span class="number">2</span> * pi * radius</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>x, y = <span class="number">3</span>, <span class="number">4.5</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>y, x = x, y</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>x</span><br><span class="line"><span class="number">4.5</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>y</span><br><span class="line"><span class="number">3</span></span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h4 id="1-2-6-The-Non-Pure-Print-Function"><a href="#1-2-6-The-Non-Pure-Print-Function" class="headerlink" title="1.2.6  The Non-Pure Print Function"></a>1.2.6  The Non-Pure Print Function</h4><p><strong>Pure functions.</strong> Functions have some input (their arguments) and return some output (the result of applying them). </p>
+<p><strong>Non-pure functions.</strong> In addition to returning a value, applying a non-pure function can generate <em>side effects</em>, which make some change to the state of the interpreter or computer.</p>
+<p>Take <code>abs</code> and <code>print</code> as an example.</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">abs</span>(-<span class="number">2</span>)</span><br><span class="line"><span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">3</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(<span class="built_in">print</span>(<span class="number">1</span>), <span class="built_in">print</span>(<span class="number">2</span>))</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="literal">None</span> <span class="literal">None</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p><img src="pure_function-1.png" alt="pure_function-1"></p>
+<p><img src="pure_function-2.png" alt="pure_function-2"></p>
+<h3 id="1-3-Defining-New-Functions"><a href="#1-3-Defining-New-Functions" class="headerlink" title="1.3  Defining New Functions"></a>1.3  Defining New Functions</h3><p>The basic fundamental of a function:</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> &lt;name&gt;(&lt;formal parameters&gt;):</span><br><span class="line">    <span class="keyword">return</span> &lt;<span class="keyword">return</span> expression&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>The second line <em>must</em> be indented — most programmers use four spaces to indent.(BTW, python uses indentation to define functions)</p>
+<h4 id="1-3-1-Environments"><a href="#1-3-1-Environments" class="headerlink" title="1.3.1  Environments"></a>1.3.1  Environments</h4><p>An environment in which an expression is evaluated consists of a sequence of <em>frames</em>, depicted as boxes.</p>
+<p>An <em>environment diagram</em> shows the bindings of the current environment, along with the values to which names are bound.</p>
+<p>One function has the intrinsic name and a bound name.(One bound name may refer to different functions, while the intrinsic name can just refer to one only function.)</p>
+<p>A description of the formal parameters of a function is called the <strong>function’s signature</strong>.</p>
+<h4 id="1-3-5-Choosing-Names-amp-Abstract-funtions"><a href="#1-3-5-Choosing-Names-amp-Abstract-funtions" class="headerlink" title="1.3.5  Choosing Names &amp; Abstract funtions"></a>1.3.5  Choosing Names &amp; Abstract funtions</h4><p>Adapted from the <a href="http://www.python.org/dev/peps/pep-0008">style guide for Python code</a>.</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Function names are lowercase, with words separated by underscores. Descriptive names are encouraged.</span><br><span class="line">Function names typically evoke operations applied to arguments by the interpreter (e.g., print, add, square) or the name of the quantity that results (e.g., max, abs, sum).</span><br><span class="line">Parameter names are lowercase, with words separated by underscores. Single-word names are preferred.</span><br><span class="line">Parameter names should evoke the role of the parameter in the function, not just the kind of argument that is allowed.</span><br><span class="line">Single letter parameter names are acceptable when their role is obvious, but avoid "l" (lowercase ell), "O" (capital oh), or "I" (capital i) to avoid confusion with numerals.</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>Aspects of a functional abstraction.</strong>To master the use of a functional abstraction, it is often useful to consider its three core attributes. The <em>domain</em> of a function is the set of arguments it can take. The <em>range</em> of a function is the set of values it can return. The <em>intent</em> of a function is the relationship it computes between inputs and output (as well as any side effects it might generate). </p>
+<h3 id="1-4-Designing-Functions"><a href="#1-4-Designing-Functions" class="headerlink" title="1.4  Designing Functions"></a>1.4  Designing Functions</h3><p>A function definition will often include documentation describing the function, called a <em>docstring</em>, which must be indented along with the function body. Docstrings are conventionally triple quoted. Such as:</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">def</span> <span class="title function_">pressure</span>(<span class="params">v, t, n</span>):</span><br><span class="line">        <span class="string">"""Compute the pressure in pascals of an ideal gas.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        Applies the ideal gas law: http://en.wikipedia.org/wiki/Ideal_gas_law</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        v -- volume of gas, in cubic meters</span></span><br><span class="line"><span class="string">        t -- absolute temperature in degrees kelvin</span></span><br><span class="line"><span class="string">        n -- particles of gas</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        k = <span class="number">1.38e-23</span>  <span class="comment"># Boltzmann's constant</span></span><br><span class="line">        <span class="keyword">return</span> n * k * t / v</span><br></pre></td></tr></tbody></table></figure>
+
+<p>You can see the documenatation using:</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">help</span>(pressure)</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="1-5-Control"><a href="#1-5-Control" class="headerlink" title="1.5  Control"></a>1.5  Control</h3><p><strong>Practical Guidance.</strong> When indenting a suite, all lines must be indented the same amount and in the same way (use spaces, not tabs). Any variation in indentation will cause an error.</p>
+<h4 id="1-5-6-Testing"><a href="#1-5-6-Testing" class="headerlink" title="1.5.6 Testing"></a>1.5.6 Testing</h4><p><strong>Assertions.</strong> Programmers use <code>assert</code> statements to verify expectations, such as the output of a function being tested. An <code>assert</code> statement has an expression in a boolean context, followed by a quoted line of text (single or double quotes are both fine, but be consistent) that will be displayed if the expression evaluates to a false value.</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">assert</span> fib(<span class="number">8</span>) == <span class="number">13</span>, <span class="string">'The 8th Fibonacci number should be 13'</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>When the expression being asserted evaluates to a true value, executing an assert statement has no effect. When it is a false value, <code>assert</code> causes an error that halts execution.</p>
+<p><strong>Doctests.</strong> Python provides a convenient method for placing simple tests directly in the docstring of a function. The first line of a docstring should contain a one-line description of the function, followed by a blank line. A detailed description of arguments and behavior may follow. In addition, the docstring may include a sample interactive session that calls the function:</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">def</span> <span class="title function_">sum_naturals</span>(<span class="params">n</span>):</span><br><span class="line">        <span class="string">"""Return the sum of the first n natural numbers.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        &gt;&gt;&gt; sum_naturals(10)</span></span><br><span class="line"><span class="string">        55</span></span><br><span class="line"><span class="string">        &gt;&gt;&gt; sum_naturals(100)</span></span><br><span class="line"><span class="string">        5050</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        total, k = <span class="number">0</span>, <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> k &lt;= n:</span><br><span class="line">            total, k = total + k, k + <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> total</span><br></pre></td></tr></tbody></table></figure>
+
+<p>You can verify the interaction via the <a href="http://docs.python.org/py3k/library/doctest.html">doctest module</a>.Such as:</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> doctest <span class="keyword">import</span> testmod</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>testmod()</span><br><span class="line">TestResults(failed=<span class="number">0</span>, attempted=<span class="number">2</span>)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>To verify the doctest interactions for only a single function, we use a <code>doctest</code> function called <code>run_docstring_examples</code>. This function is (unfortunately) a bit complicated to call. Its first argument is the function to test. The second should always be the result of the expression <code>globals()</code>, a built-in function that returns the global environment. The third argument is <code>True</code> to indicate that we would like “verbose” output: a catalog of all tests run.</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> doctest <span class="keyword">import</span> run_docstring_examples</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>run_docstring_examples(sum_naturals, <span class="built_in">globals</span>(), <span class="literal">True</span>)</span><br><span class="line">Finding tests <span class="keyword">in</span> NoName</span><br><span class="line">Trying:</span><br><span class="line">    sum_naturals(<span class="number">10</span>)</span><br><span class="line">Expecting:</span><br><span class="line">    <span class="number">55</span></span><br><span class="line">ok</span><br><span class="line">Trying:</span><br><span class="line">    sum_naturals(<span class="number">100</span>)</span><br><span class="line">Expecting:</span><br><span class="line">    <span class="number">5050</span></span><br><span class="line">ok</span><br></pre></td></tr></tbody></table></figure>
+
+<p>When the return value of a function does not match the expected result, the <code>run_docstring_examples</code> function will report this problem as a test failure.</p>
+<p>When writing Python in files, all doctests in a file can be run by starting Python with the doctest command line option:</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line">python3 -m doctest &lt;python_source_file&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="1-6-Higher-Older-Functions"><a href="#1-6-Higher-Older-Functions" class="headerlink" title="1.6 Higher-Older Functions"></a>1.6 Higher-Older Functions</h3><p>Functions that manipulate functions are called higher-order functions. </p>
+<h4 id="1-6-6-Currying"><a href="#1-6-6-Currying" class="headerlink" title="1.6.6 Currying"></a>1.6.6 Currying</h4><p>We can use higher-order functions to convert a function that takes multiple arguments into a chain of functions that each take a single argument.</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">def</span> <span class="title function_">curried_pow</span>(<span class="params">x</span>):</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">h</span>(<span class="params">y</span>):</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">pow</span>(x, y)</span><br><span class="line">        <span class="keyword">return</span> h</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>curried_pow(<span class="number">2</span>)(<span class="number">3</span>)</span><br><span class="line"><span class="number">8</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="1-6-7-Lambda-Expressions"><a href="#1-6-7-Lambda-Expressions" class="headerlink" title="1.6.7  Lambda Expressions"></a>1.6.7  Lambda Expressions</h4><p>In Python, we can create function values on the fly using <code>lambda</code> expressions, which evaluate to unnamed functions. A lambda expression evaluates to a function that has a single return expression as its body. Assignment and control statements are not allowed.</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">def</span> <span class="title function_">compose1</span>(<span class="params">f, g</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">lambda</span> x: f(g(x))</span><br></pre></td></tr></tbody></table></figure>
+
+<p>We can understand the structure of a <code>lambda</code> expression by constructing a corresponding English sentence:</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line">     <span class="keyword">lambda</span>            x            :          f(g(x))</span><br><span class="line"><span class="string">"A function that    takes x    and returns     f(g(x))"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>The following definition is correct, but many programmers have trouble understanding it quickly.</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>compose1 = <span class="keyword">lambda</span> f,g: <span class="keyword">lambda</span> x: f(g(x))</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="1-6-9-Function-Decorators"><a href="#1-6-9-Function-Decorators" class="headerlink" title="1.6.9  Function Decorators"></a>1.6.9  Function Decorators</h4><figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">def</span> <span class="title function_">trace</span>(<span class="params">fn</span>):</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">wrapped</span>(<span class="params">x</span>):</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">'-&gt; '</span>, fn, <span class="string">'('</span>, x, <span class="string">')'</span>)</span><br><span class="line">            <span class="keyword">return</span> fn(x)</span><br><span class="line">        <span class="keyword">return</span> wrapped</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>@trace</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">triple</span>(<span class="params">x</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="number">3</span> * x</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>triple(<span class="number">12</span>)</span><br><span class="line">-&gt;  &lt;function triple at <span class="number">0x102a39848</span>&gt; ( <span class="number">12</span> )</span><br><span class="line"><span class="number">36</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>The name <code>triple</code> is bound to the returned function value of calling <code>trace</code> on the newly defined <code>triple</code> function. In code, this decorator is equivalent to:</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">def</span> <span class="title function_">triple</span>(<span class="params">x</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="number">3</span> * x</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>triple = trace(triple)</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="1-7-Recursive-Functions"><a href="#1-7-Recursive-Functions" class="headerlink" title="1.7  Recursive Functions"></a>1.7  Recursive Functions</h4><p>A function is called <em>recursive</em> if the body of the function calls the function itself, either directly or indirectly.</p>
+<p>Pretty easy to understand, same as recursive functions in c++.</p>
+<h1 id="Chapter-2-Building-Abstractions-with-Data"><a href="#Chapter-2-Building-Abstractions-with-Data" class="headerlink" title="Chapter 2: Building Abstractions with Data"></a>Chapter 2: Building Abstractions with Data</h1>]]></content>
+      <tags>
+        <tag>计算机科学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学习笔记 | UCB-CS61B</title>
+    <url>/2023/07/09/UCB-CS61B/</url>
+    <content><![CDATA[<span id="more"></span>
+
+]]></content>
   </entry>
   <entry>
     <title>大学笔记 | 信号与系统</title>
@@ -2846,126 +2983,14 @@ $\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{
 <p>系统</p>
 ]]></content>
       <tags>
-        <tag>专业课</tag>
         <tag>大学笔记</tag>
+        <tag>专业课</tag>
       </tags>
   </entry>
   <entry>
     <title>UCB-CS70</title>
     <url>/2023/08/28/UCB-CS70/</url>
     <content><![CDATA[<span id="more"></span>
-]]></content>
-  </entry>
-  <entry>
-    <title>Study notes | CS61A</title>
-    <url>/2023/08/28/UCB-CS61A/</url>
-    <content><![CDATA[<p>Start!</p>
-<span id="more"></span>
-
-<h1 id="Chapter-1-Building-Abstractions-with-Functions"><a href="#Chapter-1-Building-Abstractions-with-Functions" class="headerlink" title="Chapter 1: Building Abstractions with Functions"></a>Chapter 1: Building Abstractions with Functions</h1><h3 id="1-2-Elements-of-Programing"><a href="#1-2-Elements-of-Programing" class="headerlink" title="1.2 Elements of Programing"></a>1.2 Elements of Programing</h3><h4 id="1-2-3-Importing-Library-Functions"><a href="#1-2-3-Importing-Library-Functions" class="headerlink" title="1.2.3 Importing Library Functions"></a>1.2.3 Importing Library Functions</h4><p>Python defines a very large number of functions, including the operator functions mentioned in the preceding section,so we can import them into our programing.</p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> math <span class="keyword">import</span> sqrt</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>sqrt(<span class="number">256</span>)</span><br><span class="line"><span class="number">16.0</span></span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<h4 id="1-2-4-Names-and-the-Environment"><a href="#1-2-4-Names-and-the-Environment" class="headerlink" title="1.2.4 Names and the Environment"></a>1.2.4 Names and the Environment</h4><p>Names can be bound via <code>=</code> or <code>import</code>.</p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> math <span class="keyword">import</span> pi</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>pi * <span class="number">71</span> / <span class="number">223</span></span><br><span class="line"><span class="number">1.0002380197528042</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>Names can be bound to functions. For instance, the name <code>max</code> is bound to the max function we have been using. </p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">max</span></span><br><span class="line">&lt;built-<span class="keyword">in</span> function <span class="built_in">max</span>&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>f = <span class="built_in">max</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>f</span><br><span class="line">&lt;built-<span class="keyword">in</span> function <span class="built_in">max</span>&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>f(<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>)</span><br><span class="line"><span class="number">4</span></span><br></pre></td></tr></tbody></table></figure>
-
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">max</span> = <span class="number">5</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">max</span></span><br><span class="line"><span class="number">5</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>Interpreter must maintain some sort of memory which is called <strong>environment</strong> to keep track of the names, values and the bindings.</p>
-<p><code>=</code> can combine multiple values and names.</p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>area, circumference = pi * radius * radius, <span class="number">2</span> * pi * radius</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>x, y = <span class="number">3</span>, <span class="number">4.5</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>y, x = x, y</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>x</span><br><span class="line"><span class="number">4.5</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>y</span><br><span class="line"><span class="number">3</span></span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<h4 id="1-2-6-The-Non-Pure-Print-Function"><a href="#1-2-6-The-Non-Pure-Print-Function" class="headerlink" title="1.2.6  The Non-Pure Print Function"></a>1.2.6  The Non-Pure Print Function</h4><p><strong>Pure functions.</strong> Functions have some input (their arguments) and return some output (the result of applying them). </p>
-<p><strong>Non-pure functions.</strong> In addition to returning a value, applying a non-pure function can generate <em>side effects</em>, which make some change to the state of the interpreter or computer.</p>
-<p>Take <code>abs</code> and <code>print</code> as an example.</p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">abs</span>(-<span class="number">2</span>)</span><br><span class="line"><span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">3</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(<span class="built_in">print</span>(<span class="number">1</span>), <span class="built_in">print</span>(<span class="number">2</span>))</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="literal">None</span> <span class="literal">None</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p><img src="pure_function-1.png" alt="pure_function-1"></p>
-<p><img src="pure_function-2.png" alt="pure_function-2"></p>
-<h3 id="1-3-Defining-New-Functions"><a href="#1-3-Defining-New-Functions" class="headerlink" title="1.3  Defining New Functions"></a>1.3  Defining New Functions</h3><p>The basic fundamental of a function:</p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> &lt;name&gt;(&lt;formal parameters&gt;):</span><br><span class="line">    <span class="keyword">return</span> &lt;<span class="keyword">return</span> expression&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>The second line <em>must</em> be indented — most programmers use four spaces to indent.(BTW, python uses indentation to define functions)</p>
-<h4 id="1-3-1-Environments"><a href="#1-3-1-Environments" class="headerlink" title="1.3.1  Environments"></a>1.3.1  Environments</h4><p>An environment in which an expression is evaluated consists of a sequence of <em>frames</em>, depicted as boxes.</p>
-<p>An <em>environment diagram</em> shows the bindings of the current environment, along with the values to which names are bound.</p>
-<p>One function has the intrinsic name and a bound name.(One bound name may refer to different functions, while the intrinsic name can just refer to one only function.)</p>
-<p>A description of the formal parameters of a function is called the <strong>function’s signature</strong>.</p>
-<h4 id="1-3-5-Choosing-Names-amp-Abstract-funtions"><a href="#1-3-5-Choosing-Names-amp-Abstract-funtions" class="headerlink" title="1.3.5  Choosing Names &amp; Abstract funtions"></a>1.3.5  Choosing Names &amp; Abstract funtions</h4><p>Adapted from the <a href="http://www.python.org/dev/peps/pep-0008">style guide for Python code</a>.</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Function names are lowercase, with words separated by underscores. Descriptive names are encouraged.</span><br><span class="line">Function names typically evoke operations applied to arguments by the interpreter (e.g., print, add, square) or the name of the quantity that results (e.g., max, abs, sum).</span><br><span class="line">Parameter names are lowercase, with words separated by underscores. Single-word names are preferred.</span><br><span class="line">Parameter names should evoke the role of the parameter in the function, not just the kind of argument that is allowed.</span><br><span class="line">Single letter parameter names are acceptable when their role is obvious, but avoid "l" (lowercase ell), "O" (capital oh), or "I" (capital i) to avoid confusion with numerals.</span><br></pre></td></tr></tbody></table></figure>
-
-<p><strong>Aspects of a functional abstraction.</strong>To master the use of a functional abstraction, it is often useful to consider its three core attributes. The <em>domain</em> of a function is the set of arguments it can take. The <em>range</em> of a function is the set of values it can return. The <em>intent</em> of a function is the relationship it computes between inputs and output (as well as any side effects it might generate). </p>
-<h3 id="1-4-Designing-Functions"><a href="#1-4-Designing-Functions" class="headerlink" title="1.4  Designing Functions"></a>1.4  Designing Functions</h3><p>A function definition will often include documentation describing the function, called a <em>docstring</em>, which must be indented along with the function body. Docstrings are conventionally triple quoted. Such as:</p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">def</span> <span class="title function_">pressure</span>(<span class="params">v, t, n</span>):</span><br><span class="line">        <span class="string">"""Compute the pressure in pascals of an ideal gas.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        Applies the ideal gas law: http://en.wikipedia.org/wiki/Ideal_gas_law</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        v -- volume of gas, in cubic meters</span></span><br><span class="line"><span class="string">        t -- absolute temperature in degrees kelvin</span></span><br><span class="line"><span class="string">        n -- particles of gas</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        k = <span class="number">1.38e-23</span>  <span class="comment"># Boltzmann's constant</span></span><br><span class="line">        <span class="keyword">return</span> n * k * t / v</span><br></pre></td></tr></tbody></table></figure>
-
-<p>You can see the documenatation using:</p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">help</span>(pressure)</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="1-5-Control"><a href="#1-5-Control" class="headerlink" title="1.5  Control"></a>1.5  Control</h3><p><strong>Practical Guidance.</strong> When indenting a suite, all lines must be indented the same amount and in the same way (use spaces, not tabs). Any variation in indentation will cause an error.</p>
-<h4 id="1-5-6-Testing"><a href="#1-5-6-Testing" class="headerlink" title="1.5.6 Testing"></a>1.5.6 Testing</h4><p><strong>Assertions.</strong> Programmers use <code>assert</code> statements to verify expectations, such as the output of a function being tested. An <code>assert</code> statement has an expression in a boolean context, followed by a quoted line of text (single or double quotes are both fine, but be consistent) that will be displayed if the expression evaluates to a false value.</p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">assert</span> fib(<span class="number">8</span>) == <span class="number">13</span>, <span class="string">'The 8th Fibonacci number should be 13'</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>When the expression being asserted evaluates to a true value, executing an assert statement has no effect. When it is a false value, <code>assert</code> causes an error that halts execution.</p>
-<p><strong>Doctests.</strong> Python provides a convenient method for placing simple tests directly in the docstring of a function. The first line of a docstring should contain a one-line description of the function, followed by a blank line. A detailed description of arguments and behavior may follow. In addition, the docstring may include a sample interactive session that calls the function:</p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">def</span> <span class="title function_">sum_naturals</span>(<span class="params">n</span>):</span><br><span class="line">        <span class="string">"""Return the sum of the first n natural numbers.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        &gt;&gt;&gt; sum_naturals(10)</span></span><br><span class="line"><span class="string">        55</span></span><br><span class="line"><span class="string">        &gt;&gt;&gt; sum_naturals(100)</span></span><br><span class="line"><span class="string">        5050</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        total, k = <span class="number">0</span>, <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> k &lt;= n:</span><br><span class="line">            total, k = total + k, k + <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> total</span><br></pre></td></tr></tbody></table></figure>
-
-<p>You can verify the interaction via the <a href="http://docs.python.org/py3k/library/doctest.html">doctest module</a>.Such as:</p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> doctest <span class="keyword">import</span> testmod</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>testmod()</span><br><span class="line">TestResults(failed=<span class="number">0</span>, attempted=<span class="number">2</span>)</span><br></pre></td></tr></tbody></table></figure>
-
-<p>To verify the doctest interactions for only a single function, we use a <code>doctest</code> function called <code>run_docstring_examples</code>. This function is (unfortunately) a bit complicated to call. Its first argument is the function to test. The second should always be the result of the expression <code>globals()</code>, a built-in function that returns the global environment. The third argument is <code>True</code> to indicate that we would like “verbose” output: a catalog of all tests run.</p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> doctest <span class="keyword">import</span> run_docstring_examples</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>run_docstring_examples(sum_naturals, <span class="built_in">globals</span>(), <span class="literal">True</span>)</span><br><span class="line">Finding tests <span class="keyword">in</span> NoName</span><br><span class="line">Trying:</span><br><span class="line">    sum_naturals(<span class="number">10</span>)</span><br><span class="line">Expecting:</span><br><span class="line">    <span class="number">55</span></span><br><span class="line">ok</span><br><span class="line">Trying:</span><br><span class="line">    sum_naturals(<span class="number">100</span>)</span><br><span class="line">Expecting:</span><br><span class="line">    <span class="number">5050</span></span><br><span class="line">ok</span><br></pre></td></tr></tbody></table></figure>
-
-<p>When the return value of a function does not match the expected result, the <code>run_docstring_examples</code> function will report this problem as a test failure.</p>
-<p>When writing Python in files, all doctests in a file can be run by starting Python with the doctest command line option:</p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line">python3 -m doctest &lt;python_source_file&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="1-6-Higher-Older-Functions"><a href="#1-6-Higher-Older-Functions" class="headerlink" title="1.6 Higher-Older Functions"></a>1.6 Higher-Older Functions</h3><p>Functions that manipulate functions are called higher-order functions. </p>
-]]></content>
-      <tags>
-        <tag>计算机科学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>算法笔记 | 字符串（一）</title>
-    <url>/2023/07/10/String-In-ACM-I/</url>
-    <content><![CDATA[<p>Manacher，KMP。</p>
-<span id="more"></span>
-
-<h2 id="1-Manacher-算法"><a href="#1-Manacher-算法" class="headerlink" title="1. Manacher 算法"></a>1. Manacher 算法</h2><h3 id="1-1-算法介绍"><a href="#1-1-算法介绍" class="headerlink" title="1.1 算法介绍"></a>1.1 算法介绍</h3><p>该算法可以线性求出字符串的以各个位置为轴的回文子串最大长度</p>
-<h3 id="1-2-过程"><a href="#1-2-过程" class="headerlink" title="1.2 过程"></a>1.2 过程</h3><p>本算法求的是以各位置为对称中心的最大对称半径是多少，由于会出现长度为奇数的对称区间（对称中心在两个位置中间），偶数长度的对称区间（对称中心在某一个位置处）。所以我们对原字串进行变换，比如 <code>abcba</code> 变为 <code>##a#b#c#b#a#</code> ，这样的话对称中心就是这个位置本身了。</p>
-<p>我们引入一个数组 $len$ ，$len$ 数组表示这个点能够扩展出的回文长度。</p>
-<p>我们从前向后遍历一遍，循环变量为 $i$，引入辅助变量 $maxr$ 和 $mid$ ，$maxr$ 表示触及到的最右边的字符位置，$mid$ 表示包含 $maxr$ 回文串的中心轴所在位置。对于每次遍历到的新的位置 $i$，不难发现如果 $i &lt; maxr$，那么 $len[i] = min\{len[mid] \}$</p>
-<p>当 $i$ 在 $maxr$ 左边且在 $mid$ 右边时：</p>
-<p>设 $i$ 关于 $mid$ 的对称点为 $j$，显然 $len[i]$ 一定不会小于 $len[j]$（对称）。</p>
-<p>其中 $j$ 为 $(mid&lt;&lt;1)−i$。</p>
-<p>那么我们就设置 $len[i] = min\{len[mid], maxr - i \}$ 然后继续尝试扩展，这样就可以较快地求出 $len[i]$，然后更新 $maxr$ 和 $mid$</p>
-<p>当 $i$ 在 $maxr$ 右边时，我们无法得知关于 $len[i]$ 的信息，只好从 $1$ 开始遍历，然后更新 $maxr$ 和 $mid$。</p>
-<p>本算法时间复杂度和空间复杂度均为线性的。</p>
-<h3 id="1-3-实现"><a href="#1-3-实现" class="headerlink" title="1.3 实现"></a>1.3 实现</h3><figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">update</span><span class="params">()</span> </span>{</span><br><span class="line">  s2[<span class="number">0</span>] = s2[<span class="number">1</span>] = <span class="string">'#'</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) {</span><br><span class="line">    s2[i &lt;&lt; <span class="number">1</span>] = s1[i];</span><br><span class="line">    s2[i &lt;&lt; <span class="number">1</span> | <span class="number">1</span>] = <span class="string">'#'</span>;</span><br><span class="line">  }</span><br><span class="line">  n = <span class="number">2</span> * n + <span class="number">1</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">manacher</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="type">int</span> maxr = <span class="number">0</span>, mid = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) {</span><br><span class="line">    <span class="keyword">if</span>(i &lt; maxr) len[i] = <span class="built_in">min</span>(len[(mid &lt;&lt; <span class="number">1</span>) - i], len[mid] + mid - i);</span><br><span class="line">    <span class="keyword">else</span> len[i] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(i + len[i] &lt;= n &amp;&amp;  i - len[i] &gt; <span class="number">0</span> &amp;&amp; s2[i + len[i]] == s2[i - len[i]]) len[i]++;</span><br><span class="line">    <span class="keyword">if</span>(len[i] + i &gt; maxr) {</span><br><span class="line">      maxr = len[i] + i;</span><br><span class="line">      mid = i; </span><br><span class="line">    } </span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<h2 id="2-KMP-算法"><a href="#2-KMP-算法" class="headerlink" title="2. KMP 算法"></a>2. KMP 算法</h2><h3 id="2-1-前缀函数"><a href="#2-1-前缀函数" class="headerlink" title="2.1 前缀函数"></a>2.1 前缀函数</h3><p>给定一个长度为 $n$ 的字符串 $s$，其前缀函数被定义为一个长度为 $n$ 的数组 $\pi$。 其中 $\pi[i]$ 的定义是：最长的相等的正后缀前后缀长度（自身除外），举个例子，字串 $s[0\dots i]$ 有一对相等的真前缀 $s[0\dots k - 1]$ 和真后缀 $s[i - (k - 1) \dots i]$ 它们相等且是这个字串中所能找到最长的前缀后缀，那么 $\pi[i] = k$。</p>
-<h3 id="2-2-优化-amp-过程"><a href="#2-2-优化-amp-过程" class="headerlink" title="2.2 优化 &amp; 过程"></a>2.2 优化 &amp; 过程</h3><p>直接最朴素的计算前缀函数时间复杂度为 $O(n^3)$，故我们可以加入优化。</p>
-<p>优化一：每次新加入一个数时，贡献最多加 $1$，即 $\pi[i + 1] \le \pi[i] + 1$ ，取等当且仅当 $s[\pi[i] + 1] == s[i + 1]$。</p>
-<p>优化二：其实优化一的情况优化了新加入的数依然匹配成功的情况，那么优化二可以优化新加入的数失配的情况。我们假设记录一个数组 $k$，$k[i]$ 表示第 $i + 1$ 位失配之后应该跳到第 $k[i]$ 位上。那么我们每次可以不断向前跳，如果匹配成功就是优化一的情况，匹配不成功就继续回跳。</p>
-<p>我们假设向前回跳一次到达的位置为 $j$。仔细观察，我们发现 $s[0\dots j] = s[i - j \dots i] = s[\pi[i] - j \dots \pi[i]](j &lt; \pi[i])$，那么则有 $j = \pi[\pi[i]]$，故每次向前跳只需让 $j = k[j]$，等找到适配时就按优化一更新，一直适配不成功就按 $0$ 来更新 $k[i]$。这样的话相当于让该串自己匹配自己来求 $k[i]$，然后求该串在其他串中出现的位置就让该串与其他串匹配，等到 $j$ 变为该串的长度时，说明整个串出现了，可以记录下出现的位置了。</p>
-<h3 id="2-3-实现"><a href="#2-3-实现" class="headerlink" title="2.3 实现"></a>2.3 实现</h3><figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">kmp</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="type">int</span> len_a = <span class="built_in">strlen</span>(a + <span class="number">1</span>), len_b = <span class="built_in">strlen</span>(b + <span class="number">1</span>);</span><br><span class="line">  <span class="type">int</span> j = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">2</span>; i &lt;= len_b; i++) { <span class="comment">// i 要从 2 开始，不然的话计算前缀函数会把自身也算上，变为 k[i] = i</span></span><br><span class="line">    <span class="keyword">while</span>(j &amp;&amp; b[j + <span class="number">1</span>] != b[i]) j = k[j];</span><br><span class="line">    <span class="keyword">if</span>(b[j + <span class="number">1</span>] == b[i]) j++;</span><br><span class="line">    k[i] = j;</span><br><span class="line">  }</span><br><span class="line">  j = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= len_a; i++) {</span><br><span class="line">    <span class="keyword">while</span>(j &amp;&amp; b[j + <span class="number">1</span>] != a[i]) j = k[j];</span><br><span class="line">    <span class="keyword">if</span>(b[j + <span class="number">1</span>] == a[i]) j++;</span><br><span class="line">    <span class="keyword">if</span>(j == len_b) cout &lt;&lt; i - j + <span class="number">1</span> &lt;&lt; endl;</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= len_b; i++) cout &lt;&lt; k[i] &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">  cout &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
-    <title>学习笔记 | UCB-CS61B</title>
-    <url>/2023/07/09/UCB-CS61B/</url>
-    <content><![CDATA[<span id="more"></span>
-
 ]]></content>
   </entry>
   <entry>
