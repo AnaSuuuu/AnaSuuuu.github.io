@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://anasuuuu.github.io/2023/08/28/UCB-CS61A/pure_function-1.png">
 <meta property="og:image" content="https://anasuuuu.github.io/2023/08/28/UCB-CS61A/pure_function-2.png">
 <meta property="article:published_time" content="2023-08-28T11:49:28.000Z">
-<meta property="article:modified_time" content="2023-09-16T17:56:35.561Z">
+<meta property="article:modified_time" content="2023-09-18T09:07:51.923Z">
 <meta property="article:author" content="Ana Su">
 <meta property="article:tag" content="计算机科学">
 <meta name="twitter:card" content="summary">
@@ -221,7 +221,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-09-17 01:56:35" itemprop="dateModified" datetime="2023-09-17T01:56:35+08:00">2023-09-17</time>
+                <time title="修改时间：2023-09-18 17:07:51" itemprop="dateModified" datetime="2023-09-18T17:07:51+08:00">2023-09-18</time>
               </span>
 
           
@@ -237,14 +237,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>7.4k</span>
+              <span>7.9k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>13 分钟</span>
+              <span>14 分钟</span>
             </span>
 
         </div>
@@ -343,6 +343,11 @@
 
 <h4 id="1-7-Recursive-Functions"><a href="#1-7-Recursive-Functions" class="headerlink" title="1.7  Recursive Functions"></a>1.7  Recursive Functions</h4><p>A function is called <em>recursive</em> if the body of the function calls the function itself, either directly or indirectly.</p>
 <p>Pretty easy to understand, same as recursive functions in c++.</p>
+<p>Instead of listing formal parameters for a function, you can write <code>*args</code>. To call another function using exactly those arguments, you call it again with <code>*args</code>. For example,</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">def</span> <span class="title function_">printed</span>(<span class="params">f</span>):</span><br><span class="line"><span class="meta">... </span>    <span class="keyword">def</span> <span class="title function_">print_and_return</span>(<span class="params">*args</span>):</span><br><span class="line"><span class="meta">... </span>        result = f(*args)</span><br><span class="line"><span class="meta">... </span>        <span class="built_in">print</span>(<span class="string">'Result:'</span>, result)</span><br><span class="line"><span class="meta">... </span>        <span class="keyword">return</span> result</span><br><span class="line"><span class="meta">... </span>    <span class="keyword">return</span> print_and_return</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>printed_pow = printed(<span class="built_in">pow</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>printed_pow(<span class="number">2</span>, <span class="number">8</span>)</span><br><span class="line">Result: <span class="number">256</span></span><br><span class="line"><span class="number">256</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>printed_abs = printed(<span class="built_in">abs</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>printed_abs(-<span class="number">10</span>)</span><br><span class="line">Result: <span class="number">10</span></span><br><span class="line"><span class="number">10</span></span><br></pre></td></tr></tbody></table></figure>
+
+
+
 <h1 id="Chapter-2-Building-Abstractions-with-Data"><a href="#Chapter-2-Building-Abstractions-with-Data" class="headerlink" title="Chapter 2: Building Abstractions with Data"></a>Chapter 2: Building Abstractions with Data</h1>
     </div>
 
@@ -508,12 +513,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">83k</span>
+    <span title="站点总字数">85k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:31</span>
+    <span title="站点阅读时长">2:35</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
