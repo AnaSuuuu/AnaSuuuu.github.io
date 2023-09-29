@@ -33,8 +33,21 @@
 <meta property="og:image" content="https://anasuuuu.github.io/2023/08/31/Functions-of-a-Complex-Variable/2.2-1.png">
 <meta property="og:image" content="https://anasuuuu.github.io/2023/08/31/Functions-of-a-Complex-Variable/2.2-2.png">
 <meta property="og:image" content="https://anasuuuu.github.io/2023/08/31/Functions-of-a-Complex-Variable/2.3-1.png">
+<meta property="og:image" content="https://anasuuuu.github.io/2023/08/31/Functions-of-a-Complex-Variable/3.2-1.png">
+<meta property="og:image" content="https://anasuuuu.github.io/2023/08/31/Functions-of-a-Complex-Variable/3.2-2.png">
+<meta property="og:image" content="https://anasuuuu.github.io/2023/08/31/Functions-of-a-Complex-Variable/3.2-3.png">
+<meta property="og:image" content="https://anasuuuu.github.io/2023/08/31/Functions-of-a-Complex-Variable/3.2-4.png">
+<meta property="og:image" content="https://anasuuuu.github.io/2023/08/31/Functions-of-a-Complex-Variable/3.3-1.png">
+<meta property="og:image" content="https://anasuuuu.github.io/2023/08/31/Functions-of-a-Complex-Variable/3.4-1.png">
+<meta property="og:image" content="https://anasuuuu.github.io/2023/08/31/Functions-of-a-Complex-Variable/3.5-1.png">
+<meta property="og:image" content="https://anasuuuu.github.io/2023/08/31/Functions-of-a-Complex-Variable/3.5-2.png">
+<meta property="og:image" content="https://anasuuuu.github.io/2023/08/31/Functions-of-a-Complex-Variable/3.5-3.png">
+<meta property="og:image" content="https://anasuuuu.github.io/2023/08/31/Functions-of-a-Complex-Variable/3.5-4.png">
+<meta property="og:image" content="e:%5CBlog%5CAna_Su%5Csource_posts%5CFunctions-of-a-Complex-Variable%5C3.6-1.png">
+<meta property="og:image" content="e:%5CBlog%5CAna_Su%5Csource_posts%5CFunctions-of-a-Complex-Variable%5C3.6-2.png">
+<meta property="og:image" content="https://anasuuuu.github.io/2023/08/31/Functions-of-a-Complex-Variable/3.6-3.png">
 <meta property="article:published_time" content="2023-08-31T08:53:17.000Z">
-<meta property="article:modified_time" content="2023-09-15T09:30:31.300Z">
+<meta property="article:modified_time" content="2023-09-29T09:16:28.219Z">
 <meta property="article:author" content="Ana Su">
 <meta property="article:tag" content="数学">
 <meta property="article:tag" content="大学笔记">
@@ -226,7 +239,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-09-15 17:30:31" itemprop="dateModified" datetime="2023-09-15T17:30:31+08:00">2023-09-15</time>
+                <time title="修改时间：2023-09-29 17:16:28" itemprop="dateModified" datetime="2023-09-29T17:16:28+08:00">2023-09-29</time>
               </span>
 
           
@@ -242,14 +255,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.1k</span>
+              <span>5.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>6 分钟</span>
+              <span>9 分钟</span>
             </span>
 
         </div>
@@ -287,7 +300,14 @@
 <h3 id="S-1-2-复变函数"><a href="#S-1-2-复变函数" class="headerlink" title="$\S 1.2$ 复变函数"></a>$\S 1.2$ 复变函数</h3><ul>
 <li><p>复变函数就是变量为复变量的函数（可能一对一，可能一对多）。</p>
 </li>
-<li><p>区域的概念同二元函数中的概念，略。</p>
+<li><p>区域的概念同二元函数中的概念。</p>
+<blockquote>
+<p>开集就是一块点集不算上边界。</p>
+<p>连通的开集称为区域。</p>
+<p>算上边界的开集是闭区域。</p>
+<p>自身无交叉点的曲线称为简单曲线。</p>
+<p>单连通域内部实心，多连通域内部不是实心。</p>
+</blockquote>
 </li>
 <li><p>对于<strong>连续曲线</strong> $C$ 有 $x = x(t), y = y(t)$，则称$z(t) = x(t) + iy(t)$ 为平面曲线的复数表示式。若 $x’(t), y’(t)$ 均连续且不同时为 $0$，则称 $z(t)$ 为光滑曲线。由几段光滑曲线联接而成的曲线称为<strong>按段光滑曲线</strong>。</p>
 </li>
@@ -387,6 +407,118 @@
 <p>  求导和之前相同，且在整个复平面上解析。</p>
 </li>
 </ul>
+<h2 id="第三章-复变函数的积分"><a href="#第三章-复变函数的积分" class="headerlink" title="第三章 复变函数的积分"></a>第三章 复变函数的积分</h2><h3 id="第三章总结"><a href="#第三章总结" class="headerlink" title="第三章总结"></a>第三章总结</h3><ul>
+<li><p>若 $f(z)$ 不解析，$\int f(z)$ 按路径来设变量，分别积分再加起来。</p>
+<blockquote>
+<p><strong>此时不能直接积分！一定要按路径来！</strong></p>
+<p><strong>只有解析函数积分与路径无关，可以直接求解。</strong></p>
+</blockquote>
+</li>
+<li><p>积分与路径无关的条件是 $f(z)$ 在单连通域内解析。</p>
+</li>
+<li><p>柯西积分定理 $f(z)$ 在 $C$ 内处处连续，处处解析，那么 $\oint_C f(z)dz = 0$。</p>
+</li>
+<li><p>复合闭路定理 外面大圈积分等于里面小圈积分和 $\int_C f(z)dz = \sum_{k = 1}^n \oint_{C_k}f(z)dz$。</p>
+</li>
+<li><p>柯西积分公式 $\oint_C \dfrac{f(z)}{z - z_0}dz = 2 \pi i f(z_0)$，$z_0$ 为任一点，要保证闭曲线内只有一个奇点。</p>
+</li>
+<li><p>高阶导数公式 $f^{(n)}(z_0) = \dfrac{n!}{2\pi i}\oint_C \dfrac{f(z)}{(z - z_0)^{n + 1}}dz$，$z_0$ 为任一点，要保证闭曲线内只有一个奇点。</p>
+</li>
+<li><p>对于多个奇点，以这些奇点为圆心做圆周，然后由复合闭路定理：$\int_C f(z)dz = \sum_{k = 1}^n \oint_{C_k}f(z)dz$，就可以化为 $n$ 个单奇点的积分。注意若没有奇点，说明单连通域内处处可解析，此时用柯西 - 古萨特定理直接得出积分为 $0$。</p>
+</li>
+<li><p>调和函数：满足二阶偏导数连续且满足拉普拉斯方程。</p>
+</li>
+<li><p>共轭调和函数：指一对调和函数 $u(x, y),v(x, y)$ 满足 $f(z) = u(x, y) + iv(x, y)$ 是解析函数。 这样的 $u(x, y),v(x, y)$ 是一对共轭调和函数。</p>
+</li>
+<li><p>求解析函数（已知实部或虚部）：全微分法，偏微分法，原函数法（首选）。</p>
+</li>
+</ul>
+<h3 id="S-3-1-复变函数积分的概念"><a href="#S-3-1-复变函数积分的概念" class="headerlink" title="$\S 3.1$ 复变函数积分的概念"></a>$\S 3.1$ 复变函数积分的概念</h3><p>复变函数积分可分解为两个实变函数第二型曲线积分</p>
+<ul>
+<li><p>若 $f(z) = u(x, y) + iv(x, y)$ 沿 $C$ 可积，则 $\int_C f(z)dz = \int_C u(x, y)dx - v(x, y)dy + i\int_C v(x, y)dx + u(x, y)dy$</p>
+<p>若函数不解析，往往根据不同的路径选取积分变换。<strong>此时不能直接积分！一定要按路径来！</strong></p>
+</li>
+<li><p><strong>且基本上第二型曲线积分中的技巧均可以运用在复变函数积分中。</strong></p>
+</li>
+</ul>
+<h3 id="S-3-2-柯西积分定理"><a href="#S-3-2-柯西积分定理" class="headerlink" title="$\S 3.2$ 柯西积分定理"></a>$\S 3.2$ 柯西积分定理</h3><ul>
+<li><p>柯西积分定理（柯西 - 古萨特基本定理）</p>
+<p>若 $f(z)$ 在单连通域 $D$ 内<strong>解析</strong>，则对任意一条简单闭曲线 $C$，有 $\oint_C f(z)dz = 0$。</p>
+<blockquote>
+<p>函数在某一处解析的定义：函数在该点及该点的邻域内处处可导。</p>
+</blockquote>
+</li>
+<li><p>积分与路径无关条件</p>
+<p>若 $f(z)$ 在单连通域 $D$ 内解析，则积分与路径无关。</p>
+</li>
+<li><p>我们将单连通上的柯西定理，同样可以引入到多连通域上。我们定义复合闭路：</p>
+<p><img src="3.2-1.png" alt="3.2-1"></p>
+<p>复合闭路是长这样的</p>
+<p><img src="3.2-2.png" alt="3.2-2"></p>
+</li>
+<li><p>闭路变形原理：</p>
+<p><img src="3.2-3.png" alt="3.2-3"></p>
+<p>这个定理告诉我们，对于解析函数 $f(z)$ 沿闭曲线 $C$ 的积分，当闭曲线 $C$ 在函数 $f(z)$ 的解析区域内<strong>连续变形</strong>时，积分值不变。</p>
+</li>
+<li><p>与单连通域上 积分与路径无关 的情况类似，我们在多连通域上有复合闭路定理、</p>
+<p><img src="3.2-4.png" alt="3.2-4"></p>
+</li>
+<li><p>原函数</p>
+<p>对于解析函数 $f(z)$ 在单连通域内，沿简单曲线的积分与路径无关，只与起点终点有关。当我们把起点固定，终点变动时，我们可以定义一个以 $z$ 为变量的单值函数：$F(z) = \int_{z_0}^{z}f(t)dt$。</p>
+<p>若 $f(z)$ 在单连通域内解析，那么 $F(z)$ 也在单连通域内解析，且 $F’(z) = f(z)$。</p>
+<p>其实和积分上的原函数定义是一样的，原函数的形式是 $F(z) = \int_{z_0}^z f(t)dt + C$。</p>
+</li>
+</ul>
+<h3 id="S-3-3-柯西积分公式"><a href="#S-3-3-柯西积分公式" class="headerlink" title="$\S 3.3$ 柯西积分公式"></a>$\S 3.3$ 柯西积分公式</h3><ul>
+<li><p>柯西积分公式</p>
+<p><img src="3.3-1.png" alt="3.3-1"></p>
+</li>
+</ul>
+<h3 id="S-3-4-解析函数的高阶导数"><a href="#S-3-4-解析函数的高阶导数" class="headerlink" title="$\S 3.4$ 解析函数的高阶导数"></a>$\S 3.4$ 解析函数的高阶导数</h3><ul>
+<li><p>解析函数的高阶导数</p>
+<p>解析函数的导数，还是解析函数，并且 $f^{(n)}(z_0) = \dfrac{n!}{2\pi i}\oint_C \dfrac{f(z)}{(z - z_0)^{n + 1}}dz$</p>
+<blockquote>
+<p>和上一节同理，$z_0$ 一定要是奇点且高阶导数公式只适用于 $C$ 内只有一个奇点的积分。所以解决含多个奇点的情况要以多个奇点为圆心分别进行高阶导数公式。</p>
+</blockquote>
+</li>
+<li><p>例题</p>
+<p>求 $\oint_C \dfrac{e^z}{(z^2 + 1)^2}dz$</p>
+<p><img src="3.4-1.png" alt="3.4-1"></p>
+</li>
+</ul>
+<h3 id="S-3-5-调和函数"><a href="#S-3-5-调和函数" class="headerlink" title="$\S 3.5$ 调和函数"></a>$\S 3.5$ 调和函数</h3><p><img src="3.5-1.png" alt="3.5-1"></p>
+<ul>
+<li><p>解析函数与调和函数的关系</p>
+<p>若 $f(z) = u(x, y) + iv(x, y)$ 在 $D$ 内解析，则 $u(x, y)$ 和 $(v, y)$ 都是 $D$ 内的调和函数。</p>
+<blockquote>
+<p><strong>解析的条件比调和更加严格，它需要 $u(x, y)$ 和 $v(x, y)$ 分别调和的情况下，二中之间也满足 $C-R$ 方程。</strong></p>
+</blockquote>
+</li>
+<li><p><img src="3.5-2.png" alt="3.5-2"></p>
+</li>
+<li><p>由于解析函数实部 $u(x, y)$ 和虚部 $v(x, y)$ 满足 $C-R$ 方程（$\dfrac{\part u}{\part x} = \dfrac{\part v}{\part y},\dfrac{\part u}{\part y} = -\dfrac{\part v}{\part x} $），所以我们知道实部或虚部中一个就能求出另外一个。</p>
+<blockquote>
+<p>具体可用全微分法或偏微分法（先对 $x$ 积分，再对 $y$ 积分）。也可以用原函数法（如下）。</p>
+</blockquote>
+</li>
+<li><p><img src="3.5-3.png" alt="3.5-3"></p>
+<blockquote>
+<p>公式 $f’(z) = u_x - iu_y = v_y + iv_x$ 由第二章中推出。</p>
+</blockquote>
+</li>
+<li><p>例题</p>
+<p><img src="3.5-4.png" alt="3.5-4"></p>
+<blockquote>
+<p>原函数法的应用。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="习题课"><a href="#习题课" class="headerlink" title="习题课"></a>习题课</h3><p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CFunctions-of-a-Complex-Variable%5C3.6-1.png" alt="3.6-1"></p>
+<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CFunctions-of-a-Complex-Variable%5C3.6-2.png" alt="3.6-2"></p>
+<blockquote>
+<p>有前面的高阶导数公式可知，这里的 $r$ 取任一个小于 $1$ 的值都可以。</p>
+</blockquote>
+<p><img src="3.6-3.png" alt="3.6-3"></p>
 
     </div>
 
@@ -482,7 +614,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%A4%8D%E6%95%B0%E4%B8%8E%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0"><span class="nav-text">第一章 复数与复变函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#S-1-1-%E5%A4%8D%E6%95%B0%E5%8F%8A%E5%85%B6%E5%87%A0%E4%BD%95%E8%A1%A8%E7%A4%BA"><span class="nav-text">$\S 1.1$ 复数及其几何表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-1-2-%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0"><span class="nav-text">$\S 1.2$ 复变函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E4%BE%8B%E9%A2%98%E7%B2%BE%E9%80%89"><span class="nav-text">第一章 例题精选</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0"><span class="nav-text">第二章 解析函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#S-2-1-%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-text">$\S 2.1$ 解析函数的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-2-2-%E5%87%BD%E6%95%B0%E8%A7%A3%E6%9E%90%E7%9A%84%E9%87%8D%E8%A6%81%E6%9D%A1%E4%BB%B6"><span class="nav-text">$\S 2.2$ 函数解析的重要条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-2-3-%E5%88%9D%E7%AD%89%E5%87%BD%E6%95%B0"><span class="nav-text">$\S 2.3$ 初等函数</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%A4%8D%E6%95%B0%E4%B8%8E%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0"><span class="nav-text">第一章 复数与复变函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#S-1-1-%E5%A4%8D%E6%95%B0%E5%8F%8A%E5%85%B6%E5%87%A0%E4%BD%95%E8%A1%A8%E7%A4%BA"><span class="nav-text">$\S 1.1$ 复数及其几何表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-1-2-%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0"><span class="nav-text">$\S 1.2$ 复变函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E4%BE%8B%E9%A2%98%E7%B2%BE%E9%80%89"><span class="nav-text">第一章 例题精选</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0"><span class="nav-text">第二章 解析函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#S-2-1-%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-text">$\S 2.1$ 解析函数的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-2-2-%E5%87%BD%E6%95%B0%E8%A7%A3%E6%9E%90%E7%9A%84%E9%87%8D%E8%A6%81%E6%9D%A1%E4%BB%B6"><span class="nav-text">$\S 2.2$ 函数解析的重要条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-2-3-%E5%88%9D%E7%AD%89%E5%87%BD%E6%95%B0"><span class="nav-text">$\S 2.3$ 初等函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E7%9A%84%E7%A7%AF%E5%88%86"><span class="nav-text">第三章 复变函数的积分</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="nav-text">第三章总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-3-1-%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E7%A7%AF%E5%88%86%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-text">$\S 3.1$ 复变函数积分的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-3-2-%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%AE%9A%E7%90%86"><span class="nav-text">$\S 3.2$ 柯西积分定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-3-3-%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F"><span class="nav-text">$\S 3.3$ 柯西积分公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-3-4-%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E9%AB%98%E9%98%B6%E5%AF%BC%E6%95%B0"><span class="nav-text">$\S 3.4$ 解析函数的高阶导数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-3-5-%E8%B0%83%E5%92%8C%E5%87%BD%E6%95%B0"><span class="nav-text">$\S 3.5$ 调和函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B9%A0%E9%A2%98%E8%AF%BE"><span class="nav-text">习题课</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -553,12 +685,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">91k</span>
+    <span title="站点总字数">94k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:46</span>
+    <span title="站点阅读时长">2:51</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
