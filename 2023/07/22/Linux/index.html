@@ -255,27 +255,20 @@
       
         <p>Linux 基础配置，包括 pacman 包管理，ranger 文件管理。</p>
 <span id="more"></span>
-
 <h3 id="更改字体大小"><a href="#更改字体大小" class="headerlink" title="更改字体大小"></a>更改字体大小</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvim ~/.Xresources</span><br></pre></td></tr></tbody></table></figure>
-
 <p>进去之后输入</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Xft.dpi: 120</span><br></pre></td></tr></tbody></table></figure>
-
 <p>即可将字体调整到合适的大小了。</p>
 <h3 id="联网"><a href="#联网" class="headerlink" title="联网"></a>联网</h3><p>刚开始的时候需要输入一下命令:</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wpa_passphrase Wifi_name Wifi_password &gt; internet.conf</span><br></pre></td></tr></tbody></table></figure>
-
 <p>之后每次启动都要输入以下命令：</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ip link set wlo1 up</span><br><span class="line">sudo wpa_supplicant -c internet.conf -i wlo1 &amp;</span><br><span class="line">sudo dhcpcd</span><br></pre></td></tr></tbody></table></figure>
-
 <h3 id="配置-VPN"><a href="#配置-VPN" class="headerlink" title="配置 VPN"></a>配置 VPN</h3><p>xfce 桌面环境下的 manjaro 没有图形化界面可以设置代理，只能用终端环境去编辑。</p>
 <p>更改 proxy 配置，首先打开终端并输入:</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/environment</span><br></pre></td></tr></tbody></table></figure>
-
 <p>然后找到以 “http_proxy” 开头的设置，如果没有就自己新建。</p>
 <p>添加如下：</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">http_proxy="http://your_proxy_server:proxy_port"</span><br><span class="line">https_proxy="http://your_proxy_server:proxy_port"</span><br><span class="line">socks_proxy="http://your_proxy_server:proxy_port"</span><br></pre></td></tr></tbody></table></figure>
-
 <p><strong>参考：</strong> <a target="_blank" rel="noopener" href="https://www.zhihu.com/question/586110918/answer/2910628561">xface如何设置系统代理?</a></p>
 <h3 id="pacman-教程"><a href="#pacman-教程" class="headerlink" title="pacman 教程"></a>pacman 教程</h3><p>pacman 之于 Arch，就好比 App store 之于 IOS。</p>
 <ul>
@@ -345,17 +338,14 @@
 </li>
 <li><p><code>[</code> <code>]</code>  控制上级目录的上下文件移动</p>
 </li>
-<li><p><code>&lt;Shift&gt; + H</code> 在历史记录中退回 <code>&lt;Shift&gt; + L</code> 在历史记录中前进</p>
-</li>
-<li><p><code>zh</code> 或 <code>&lt;Ctrl&gt; + h</code> 显示或隐藏系统文件</p>
-</li>
+<li><code>&lt;Shift&gt; + H</code> 在历史记录中退回 <code>&lt;Shift&gt; + L</code> 在历史记录中前进</li>
+<li><code>zh</code> 或 <code>&lt;Ctrl&gt; + h</code> 显示或隐藏系统文件</li>
 </ul>
 <h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
 <li>查看桌面环境（DE）</li>
 </ul>
 <p>打开终端并复制粘贴此命令：</p>
 <figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $XDG_CURRENT_DESKTOP</span><br></pre></td></tr></tbody></table></figure>
-
 <ul>
 <li>查看系统信息</li>
 </ul>
@@ -525,12 +515,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">98k</span>
+    <span title="站点总字数">102k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:58</span>
+    <span title="站点阅读时长">3:05</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
