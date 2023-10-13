@@ -249,7 +249,6 @@
       
         <p>计算几何学习笔记</p>
 <span id="more"></span>
-
 <h2 id="0-前置知识"><a href="#0-前置知识" class="headerlink" title="0. 前置知识"></a>0. 前置知识</h2><h4 id="凸多边形"><a href="#凸多边形" class="headerlink" title="凸多边形"></a>凸多边形</h4><p>凸多边形是指所有内角大小都在 $[0, \pi]$ 范围内的 <strong>简单多边形</strong>。</p>
 <h4 id="凸包"><a href="#凸包" class="headerlink" title="凸包"></a>凸包</h4><p>在平面上能包含所有给定点的最小凸多边形叫做凸包。</p>
 <h2 id="1-二维凸包"><a href="#1-二维凸包" class="headerlink" title="1. 二维凸包"></a>1. 二维凸包</h2><p>在二维平面上给定若干点，求一个最小的凸包使得能包含全部给定点。</p>
@@ -257,9 +256,6 @@
 <p>升序枚举的时候，我们用栈存储下凸壳中的元素，设 $S_1$，$S_2$ 是栈顶的两个元素，其中 $S_1$ 是栈顶。遇到一个新的点 $P(x, y)$，当 $\vec {S_2S_1} \times \vec {S_1P} \le 0$ 时，说明 $S_1$ 不应该是下凸壳中的点，弹出 $S_1$，继续判断。直到弹不出时，将 $P$ 插入栈中。</p>
 <p>降序枚举时同理，判断依据也是 $\vec {S_2S_1} \times \vec {S_1P} \le 0$，所以就是相当于倒着跑一遍，即可求出上凸壳。</p>
 <h4 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h4><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Node</span> {</span><br><span class="line">  <span class="type">double</span> x, y;</span><br><span class="line">  Node <span class="keyword">operator</span> - (Node a) { <span class="keyword">return</span> {x - a.x, y - a.y}; }</span><br><span class="line">  <span class="type">double</span> <span class="keyword">operator</span> * (Node a) { <span class="keyword">return</span> x * a.y - y * a.x; }</span><br><span class="line">};</span><br><span class="line">Node s[N];</span><br><span class="line"><span class="function"><span class="type">double</span> <span class="title">len</span><span class="params">(<span class="type">double</span> x, <span class="type">double</span> y)</span> </span>{</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">sqrt</span>(x * x + y * y);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(Node a, Node b)</span> </span>{</span><br><span class="line">  <span class="keyword">return</span> (<span class="built_in">fabs</span>(a.x - b.x) &lt; eps ? a.y &lt; b.y : a.x &lt; b.x);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">  std::ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">  std::cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line">  <span class="type">int</span> n;</span><br><span class="line">  cin &gt;&gt; n;</span><br><span class="line">  <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">q</span><span class="params">(n + <span class="number">1</span>)</span></span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) {</span><br><span class="line">    cin &gt;&gt; s[i].x &gt;&gt; s[i].y;</span><br><span class="line">  } </span><br><span class="line">  <span class="built_in">sort</span>(s + <span class="number">1</span>, s + <span class="number">1</span> + n, cmp);</span><br><span class="line">  <span class="type">int</span> tmp = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) {</span><br><span class="line">    <span class="keyword">while</span>(tmp &gt;= <span class="number">2</span> &amp;&amp; (s[q[tmp]] - s[q[tmp - <span class="number">1</span>]]) * (s[i] - s[q[tmp]]) &lt;= <span class="number">0</span>) tmp--;</span><br><span class="line">    q[++tmp] = i;</span><br><span class="line">  }</span><br><span class="line">  <span class="type">int</span> kdl = tmp;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = n - <span class="number">1</span>; i &gt;= <span class="number">1</span>; i--) {</span><br><span class="line">    <span class="keyword">while</span>(kdl &gt; tmp &amp;&amp; (s[q[kdl]] - s[q[kdl - <span class="number">1</span>]]) * (s[i] - s[q[kdl]]) &lt;= <span class="number">0</span>) kdl--;</span><br><span class="line">    q[++kdl] = i;</span><br><span class="line">  }</span><br><span class="line">  <span class="type">double</span> ans = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">2</span>; i &lt;= kdl; i++) {</span><br><span class="line">    ans += <span class="built_in">len</span>(s[q[i]].x - s[q[i - <span class="number">1</span>]].x, s[q[i]].y - s[q[i - <span class="number">1</span>]].y);</span><br><span class="line">  }</span><br><span class="line">  cout &lt;&lt; fixed &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">2</span>) &lt;&lt; ans &lt;&lt; endl; <span class="comment">// 保留两位小数</span></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-
-
 <p>参考文献：</p>
 <p><a target="_blank" rel="noopener" href="https://oi-wiki.org/geometry/">OI Wiki - 计算几何部分简介</a></p>
 
@@ -283,7 +279,10 @@
     <a href="/2023/08/31/Functions-of-a-Complex-Variable/" rel="prev" title="大学笔记 | 复变函数与积分变换">
       <i class="fa fa-chevron-left"></i> 大学笔记 | 复变函数与积分变换
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2023/10/13/CF-Instrumentality-Project-III/" rel="next" title="CF-Instrumentality-Project-III">
+      CF-Instrumentality-Project-III <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -369,7 +368,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-count">28</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -424,12 +423,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">112k</span>
+    <span title="站点总字数">113k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3:24</span>
+    <span title="站点阅读时长">3:25</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
