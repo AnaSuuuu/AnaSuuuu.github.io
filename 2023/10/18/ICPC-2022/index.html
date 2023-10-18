@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"anasuuuu.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"manual"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="黎明将至 春宵苦短 不断前进吧">
+  <meta name="description" content="ICPC 2022 补题合集">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ICPC-2022">
 <meta property="og:url" content="https://anasuuuu.github.io/2023/10/18/ICPC-2022/index.html">
 <meta property="og:site_name" content="Ana_Su&#39;s Blog">
-<meta property="og:description" content="黎明将至 春宵苦短 不断前进吧">
+<meta property="og:description" content="ICPC 2022 补题合集">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-10-18T07:09:57.000Z">
-<meta property="article:modified_time" content="2023-10-18T07:09:57.799Z">
+<meta property="article:modified_time" content="2023-10-18T12:33:13.086Z">
 <meta property="article:author" content="Ana Su">
 <meta name="twitter:card" content="summary">
 
@@ -209,8 +209,9 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2023-10-18 15:09:57" itemprop="dateCreated datePublished" datetime="2023-10-18T15:09:57+08:00">2023-10-18</time>
+              <time title="创建时间：2023-10-18 15:09:57 / 修改时间：20:33:13" itemprop="dateCreated datePublished" datetime="2023-10-18T15:09:57+08:00">2023-10-18</time>
             </span>
 
           
@@ -226,14 +227,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>0</span>
+              <span>1.1k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -245,7 +246,23 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <p>ICPC 2022 补题合集</p>
+<span id="more"></span>
+<h2 id="The-2023-ICPC-Asia-Hong-Kong-Regional-Programming-Contest-The-1st-Universal-Cup-Stage-2-Hong-Kong"><a href="#The-2023-ICPC-Asia-Hong-Kong-Regional-Programming-Contest-The-1st-Universal-Cup-Stage-2-Hong-Kong" class="headerlink" title="The 2023 ICPC Asia Hong Kong Regional Programming Contest (The 1st Universal Cup, Stage 2:Hong Kong)"></a><a target="_blank" rel="noopener" href="https://codeforces.com/gym/104172">The 2023 ICPC Asia Hong Kong Regional Programming Contest (The 1st Universal Cup, Stage 2:Hong Kong)</a></h2><h3 id="B-Big-Picture"><a href="#B-Big-Picture" class="headerlink" title="B. Big Picture"></a><a target="_blank" rel="noopener" href="https://qoj.ac/contest/1099/problem/5456">B. Big Picture</a></h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>给你一个 $(n+1) \times (m+1)$ 的方格矩阵，每个格子一开始是白色。</p>
+<p>你会对每一行和每一列进行染色。将第 $i$ 行的前 $j$ 个格子染为黑色的概率为 $p_{i, j}$，将第 $j$ 列的前 $i$ 个格子染为黑色的概率为 $q_{i, j}$。保证每一行的 $p_{i, j}$、每一列的 $q_{i, j}$ 的和为 1。行与列是独立的，这意味着同一个格子可能会同时被行和列各染一次。</p>
+<p>求同色连通块的期望个数，模 $998244353$。</p>
+<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a><strong>Solution</strong></h4><p>对于每一个染列的操作，我们发现每列第一个（即第一行）一定都会被染色。故所有由染列得到的黑格子都会经由第一行连在一起。</p>
+<p>对于每一个染行的操作，我们发现每行第一个（即第一列）一定都会被染色。故所有由染行得到的黑格子都会经由第一列连在一起。</p>
+<p>又因为第一行第一列的格子一定会被染色，所以所有黑格子一定都是一个大连通块。并且最后一行，最后一列一定都是白色格子，所以我们要算的就是被黑色格子断开所形成的白色区域个数。</p>
+<p>要确定每一个区域的个数，我们只要找一个区域中有标志的格子（含有某个独一无二的特性，只有其中某个格子有，其他格子都没有）。我们自然想到找角落的格子。思考发现由于每次染前缀的特性，左上角，右上角，左下角符合条件的格子均可能不唯一，只有右下角的格子唯一。所以找区域个数变为找区域右下角格子的个数，即计算有多少个格子可能称为右下角格子。这个概率是该格子没被染色并且下面，右边均被染色。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/gym/104172/submission/228641466">Code</a></p>
+<h3 id="E-Goose-Goose-DUCK"><a href="#E-Goose-Goose-DUCK" class="headerlink" title="E. Goose, Goose, DUCK?"></a><a target="_blank" rel="noopener" href="https://codeforces.com/gym/104172/problem/E">E. Goose, Goose, DUCK?</a></h3><h4 id="Description-1"><a href="#Description-1" class="headerlink" title="Description"></a>Description</h4><p>给定一个序列 $\{a_i\}$，对于一个子序列，若其<strong>不合法</strong>，当且仅当子序列中存在某个元素出现了<strong>恰好</strong> $k$ 次。求这个序列中有多少个<strong>合法子序列</strong>。</p>
+<p>$n \le 10^6$</p>
+<h4 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a><strong>Solution</strong></h4><p>我们可以固定左端点，求有多少合法右端点。也可以固定右端点，求有多少合法左端点。</p>
+<p>假设固定一个左端点，我们把右边所有不合法的区域全部标记 $+1$，初始时右边所有区域都是 $0$。题目就变为了求右边有多少个标记为 $0$ 的点。然后每次左端点都可以向右移动一位，移动的时候判断一下，如果这个元素右边区域剩的元素少于 $k$ 个，那么就不用标记 $-1$。反之把这个元素原先不合法的区域都变合法（即标记 $-1$ ），然后再把新的区域标记不合法（标记 $+1$ ）。</p>
+<p>整个过程可以用线段树解决。时间复杂度 $\Theta (n\log n)$。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/gym/104172/submission/228673534">Code</a></p>
+
     </div>
 
     
@@ -333,6 +350,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#The-2023-ICPC-Asia-Hong-Kong-Regional-Programming-Contest-The-1st-Universal-Cup-Stage-2-Hong-Kong"><span class="nav-text">The 2023 ICPC Asia Hong Kong Regional Programming Contest (The 1st Universal Cup, Stage 2:Hong Kong)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#B-Big-Picture"><span class="nav-text">B. Big Picture</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Description"><span class="nav-text">Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution"><span class="nav-text">Solution</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#E-Goose-Goose-DUCK"><span class="nav-text">E. Goose, Goose, DUCK?</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Description-1"><span class="nav-text">Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution-1"><span class="nav-text">Solution</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -403,12 +421,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">114k</span>
+    <span title="站点总字数">115k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3:27</span>
+    <span title="站点阅读时长">3:29</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
