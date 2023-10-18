@@ -120,7 +120,7 @@
 <meta property="og:image" content="https://anasuuuu.github.io/2023/08/31/Functions-of-a-Complex-Variable/8.1-7.png">
 <meta property="og:image" content="https://anasuuuu.github.io/2023/08/31/Functions-of-a-Complex-Variable/8.1-8.png">
 <meta property="article:published_time" content="2023-08-31T08:53:17.000Z">
-<meta property="article:modified_time" content="2023-10-08T07:54:34.270Z">
+<meta property="article:modified_time" content="2023-10-13T07:21:45.290Z">
 <meta property="article:author" content="Ana Su">
 <meta property="article:tag" content="数学">
 <meta property="article:tag" content="大学笔记">
@@ -312,7 +312,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-08 15:54:34" itemprop="dateModified" datetime="2023-10-08T15:54:34+08:00">2023-10-08</time>
+                <time title="修改时间：2023-10-13 15:21:45" itemprop="dateModified" datetime="2023-10-13T15:21:45+08:00">2023-10-13</time>
               </span>
 
           
@@ -328,14 +328,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>12k</span>
+              <span>13k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>22 分钟</span>
+              <span>24 分钟</span>
             </span>
 
         </div>
@@ -349,7 +349,11 @@
       
         <p>隐身术第二课堂。</p>
 <span id="more"></span>
-<h2 id="第一章-复数与复变函数"><a href="#第一章-复数与复变函数" class="headerlink" title="第一章 复数与复变函数"></a>第一章 复数与复变函数</h2><h3 id="S-1-1-复数及其几何表示"><a href="#S-1-1-复数及其几何表示" class="headerlink" title="$\S 1.1$ 复数及其几何表示"></a>$\S 1.1$ 复数及其几何表示</h3><ul>
+<blockquote>
+<p><strong>Attention!</strong></p>
+<p><strong>$u = \Re[z] $ 称为实部，$z = \Im[z]$ 称为虚部。</strong> </p>
+</blockquote>
+<h2 id="第一章-复数与复变函数"><a href="#第一章-复数与复变函数" class="headerlink" title="第一章 复数与复变函数"></a>第一章 复数与复变函数</h2><h3 id="第一章总结"><a href="#第一章总结" class="headerlink" title="第一章总结"></a>第一章总结</h3><h3 id="S-1-1-复数及其几何表示"><a href="#S-1-1-复数及其几何表示" class="headerlink" title="$\S 1.1$ 复数及其几何表示"></a>$\S 1.1$ 复数及其几何表示</h3><ul>
 <li>复数可以用点 / 向量 / 矩阵表示。</li>
 <li>$Argz$ 是复数的辐角，$argz$ 是辐角在 $(-\pi, \pi]$ 中的值，又称为辐角的主值（$\left | z\right | = 0$ 时辐角无意义）。$Argz = argz + 2k\pi$。</li>
 <li>复数 $z = x + iy = r(\cos\theta + i\sin\theta) = re^{i\theta}$。</li>
@@ -383,9 +387,43 @@
 <li><p>复变函数可化为两个实变函数相加，求复变函数的极限 / 连续 / 有界问题也可以化为两个实变函数的极限 / 连续 / 有界问题。</p>
 </li>
 </ul>
-<h3 id="第一章-例题精选"><a href="#第一章-例题精选" class="headerlink" title="第一章 例题精选"></a>第一章 例题精选</h3><p><img src="1.3-1.png" alt="1.3-1"></p>
+<h3 id="习题课"><a href="#习题课" class="headerlink" title="习题课"></a>习题课</h3><p><img src="1.3-1.png" alt="1.3-1"></p>
 <p><img src="1.3-2.png" alt="1.3-2"></p>
-<h2 id="第二章-解析函数"><a href="#第二章-解析函数" class="headerlink" title="第二章 解析函数"></a>第二章 解析函数</h2><h3 id="S-2-1-解析函数的概念"><a href="#S-2-1-解析函数的概念" class="headerlink" title="$\S 2.1$ 解析函数的概念"></a>$\S 2.1$ 解析函数的概念</h3><ul>
+<h2 id="第二章-解析函数"><a href="#第二章-解析函数" class="headerlink" title="第二章 解析函数"></a>第二章 解析函数</h2><h3 id="第二章总结"><a href="#第二章总结" class="headerlink" title="第二章总结"></a>第二章总结</h3><ul>
+<li><p>求导</p>
+<p>形如 $w = f(z)$ 的导数，与一元函数求导方法一样。</p>
+<p>形如 $f(z) = u(x, y) + iv(x, y)$ 的导数，求导公式为 $f’(z) = \dfrac{\part u}{\part x} + i\dfrac{\part v}{\part x} = \dfrac{\part v}{\part y} - i\dfrac{\part u}{\part y}$。</p>
+</li>
+<li><p>相关概念</p>
+<p>在某点解析：指的是在该点及邻域可导。</p>
+<p>奇点：函数不解析的点。</p>
+<p>解析函数：函数在某区域内处处可导。</p>
+<p>函数可导与解析的判定：先求出 $f(z) = u(x, y) + iv(x, y)$ 的偏导数，然后判定偏导数是否满足 $C-R$ 方程：$u_x = v_y, u_y = -v_x$。</p>
+<blockquote>
+<p>如果在某点出成立，则函数在该点可导。如果某区域内成立，则在该区域内解析。</p>
+</blockquote>
+</li>
+<li><p>初等函数</p>
+<p><strong>指数函数</strong></p>
+<p>$w = e^z = e^x(\cos y + i\sin y)$</p>
+<p>基本上和实数情况一样，只是多了周期性。</p>
+<p><strong>对数函数</strong></p>
+<p>$Ln z = \ln |z| + i\arg z + 2k \pi i$</p>
+<p>对数函数是多值函数，其主值是 $\ln z = \ln|z| + 2i\arg z$。</p>
+<p>对数函数在<strong>除去原点与负实轴的复平面</strong>上连续且解析。</p>
+<p>对数函数的积商公式依然成立，但是对数函数的 $n$ 次方公式以及对数函数的开 $n$ 方根公式就不成立了（因为后面加上的 $2\pi i $ 的系数不同）。</p>
+<p><strong>幂函数</strong></p>
+<p>$w = z^{\alpha} = e^{\alpha Ln z} = e^{\alpha(\ln |z| + i\arg z + 2k\pi i)}$</p>
+<p>当 $\alpha$ 是整数时，幂函数是单值函数。而当不是整数时，函数是多值函数。</p>
+<p>当 $\alpha$ 不是整数时，幂函数在<strong>除去原点与负实轴的复平面</strong>上连续且解析。</p>
+<p><strong>三角函数</strong></p>
+<script type="math/tex; mode=display">
+\sin z = \dfrac{e^{iz} - e^{-iz}}{2i}, \\
+\cos z = \dfrac{e^{iz} + e^{-iz}}{2}</script><p>值得注意的是，复数域上三角函数<strong>是无界的！</strong></p>
+<p>不过除了无界外，其他是一样的。</p>
+</li>
+</ul>
+<h3 id="S-2-1-解析函数的概念"><a href="#S-2-1-解析函数的概念" class="headerlink" title="$\S 2.1$ 解析函数的概念"></a>$\S 2.1$ 解析函数的概念</h3><ul>
 <li><p>可导必连续，连续未必可导（同二元函数）</p>
 </li>
 <li><p>复变函数求导与<strong>一元</strong>实变函数相同</p>
@@ -441,17 +479,17 @@
 </li>
 <li><p>对数函数（区别较大）</p>
 <p>  指数函数 $e^w = z$ 的反函数 $w = f(z)$ 称为对数函数，记作 $w = Ln z$。</p>
-<p>  由 $e^{u + iv} = e^ue^{iv} = e^u(\cos v + i\sin v)$，我们有 $u = ln|z|,v = \theta + 2k\pi = Arg z$。故 $Lnz = ln|z| + iArgz = ln|z| + iargz + 2k\pi i$。</p>
-<p>  记 $lnz = ln|z| + iargz$ 为 $Lnz$ 的主值。对于给定不同的 $k$ 所形成的不同 $Lnz$ 称为其中一个分支。$lnz$ 满足原有的求导公式。</p>
+<p>  由 $e^{u + iv} = e^ue^{iv} = e^u(\cos v + i\sin v)$，我们有 $u = \ln|z|,v = \theta + 2k\pi = Arg z$。故 $Lnz = \ln|z| + iArgz = \ln|z| + i\arg z + 2k\pi i$。</p>
+<p>  记 $\ln z = \ln|z| + i\arg z$ 为 $Lnz$ 的主值。对于给定不同的 $k$ 所形成的不同 $Lnz$ 称为其中一个分支。$\ln z$ 满足原有的求导公式。</p>
 <blockquote>
-<p>注意复数 $z$ 的模长只和实部 $u$ 有关。</p>
+<p><strong>注意复数 $z$ 的模长只和实部 $u$ 有关。</strong></p>
 </blockquote>
 <p>  此时对数函数的积商公式仍然成立 $Lnz_1z_2 = Lnz_1 + Lnz_2,Ln\dfrac{z_1}{z_2} = Lnz_1 - Lnz_2$。</p>
 <p>  但是 $n$ 次幂和 $n$ 次方根的对数公式不再成立。</p>
 <blockquote>
-<p>由于 $Lnz^n = nln|z| + inargz + 2k_1\pi i$ 而 $nLnz = nln|z| + inargz + n2k_2\pi i$ 后面的 $2\pi i$ 的系数不同，故不相等。</p>
+<p>由于 $Lnz^n = n\ln|z| + in\arg z + 2k_1\pi i$ 而 $nLnz = n\ln|z| + in\arg z + n2k_2\pi i$ 后面的 $2\pi i$ 的系数不同，故不相等。</p>
 </blockquote>
-<p>  由于$ln|z|$ 除了原点外处处解析，而 $argz$ 在原点和负实轴上不连续，故对数函数的主值 $lnz$ 在除去原点和负实轴的平面上连续，同理 $Ln z$ 的各个分支在除原点和负实轴的复平面上解析。</p>
+<p>  由于 $\ln|z|$ 除了原点外处处解析，而 $\arg z$ 在原点和负实轴上不连续，故对数函数的主值 $\ln z$ 在除去原点和负实轴的平面上连续，同理 $Ln z$ 的各个分支在除原点和负实轴的复平面上解析。</p>
 </li>
 <li><p>幂函数</p>
 <p>  $w = z^n$ 是复平面内的单值解析函数，$w = z^{-n}$ 除原点外是单值解析函数（$n \in \N$）。</p>
@@ -470,7 +508,7 @@
 <p>  求导和之前相同，且在整个复平面上解析。</p>
 </li>
 </ul>
-<h2 id="第三章-复变函数的积分"><a href="#第三章-复变函数的积分" class="headerlink" title="第三章 复变函数的积分"></a>第三章 复变函数的积分</h2><h3 id="第三章总结"><a href="#第三章总结" class="headerlink" title="第三章总结"></a>第三章总结</h3><ul>
+<h3 id="习题课-1"><a href="#习题课-1" class="headerlink" title="习题课"></a>习题课</h3><h2 id="第三章-复变函数的积分"><a href="#第三章-复变函数的积分" class="headerlink" title="第三章 复变函数的积分"></a>第三章 复变函数的积分</h2><h3 id="第三章总结"><a href="#第三章总结" class="headerlink" title="第三章总结"></a>第三章总结</h3><ul>
 <li><p>若 $f(z)$ 不解析，$\int f(z)$ 按路径来设变量，分别积分再加起来。</p>
 <blockquote>
 <p><strong>此时不能直接积分！一定要按路径来！</strong></p>
@@ -576,7 +614,7 @@
 </blockquote>
 </li>
 </ul>
-<h3 id="习题课"><a href="#习题课" class="headerlink" title="习题课"></a>习题课</h3><p><img src="3.6-1.png" alt="3.6-1"></p>
+<h3 id="习题课-2"><a href="#习题课-2" class="headerlink" title="习题课"></a>习题课</h3><p><img src="3.6-1.png" alt="3.6-1"></p>
 <p><img src="3.6-2.png" alt="3.6-2"></p>
 <blockquote>
 <p>有前面的高阶导数公式可知，这里的 $r$ 取任一个小于 $1$ 的值都可以。</p>
@@ -693,7 +731,7 @@
 <p><img src="4.3-5.png" alt="4.3-5"></p>
 </li>
 </ul>
-<h3 id="习题课-1"><a href="#习题课-1" class="headerlink" title="习题课"></a>习题课</h3><ul>
+<h3 id="习题课-3"><a href="#习题课-3" class="headerlink" title="习题课"></a>习题课</h3><ul>
 <li><p>$\dfrac{1}{(z - a)(z - b)}$ 展开成 $z$ 的幂级数，并指出收敛域。</p>
 <p><img src="4.4-1.png" alt="4.4-1"></p>
 <p><img src="4.4-2.png" alt="4.4-2"></p>
@@ -827,7 +865,7 @@
 <p><img src="5.2-6.png" alt="5.2-6"></p>
 </li>
 </ul>
-<h3 id="习题课-2"><a href="#习题课-2" class="headerlink" title="习题课"></a>习题课</h3><ul>
+<h3 id="习题课-4"><a href="#习题课-4" class="headerlink" title="习题课"></a>习题课</h3><ul>
 <li><p>求下列函数奇点，若是极点则确定级数</p>
 <p><img src="5.4-7.png" alt="5.4-7"></p>
 <p><img src="5.4-8.png" alt="5.4-8"></p>
@@ -926,7 +964,7 @@ F_1(\omega) = \mathscr{F}[f_1(t)],F_2(\omega) = \mathscr{F}[f_2(t)] \\
 \Rightarrow \mathscr{F}[f_1(t) * f_2(t)] = F_1(\omega) \cdot F_2(\omega) \\
 推论 \Rightarrow \mathscr{F}[f_1(t) \cdot f_2(t)] = \dfrac{1}{2\pi} F_1(\omega) * F_2(\omega)</script></li>
 </ul>
-<h3 id="习题课-3"><a href="#习题课-3" class="headerlink" title="习题课"></a>习题课</h3><h2 id="第八章-拉普拉斯变换"><a href="#第八章-拉普拉斯变换" class="headerlink" title="第八章 拉普拉斯变换"></a>第八章 拉普拉斯变换</h2><h3 id="S-8-1-拉普拉斯变换的概念"><a href="#S-8-1-拉普拉斯变换的概念" class="headerlink" title="$\S 8.1$ 拉普拉斯变换的概念"></a>$\S 8.1$ 拉普拉斯变换的概念</h3><ul>
+<h3 id="习题课-5"><a href="#习题课-5" class="headerlink" title="习题课"></a>习题课</h3><h2 id="第八章-拉普拉斯变换"><a href="#第八章-拉普拉斯变换" class="headerlink" title="第八章 拉普拉斯变换"></a>第八章 拉普拉斯变换</h2><h3 id="S-8-1-拉普拉斯变换的概念"><a href="#S-8-1-拉普拉斯变换的概念" class="headerlink" title="$\S 8.1$ 拉普拉斯变换的概念"></a>$\S 8.1$ 拉普拉斯变换的概念</h3><ul>
 <li><p>拉普拉斯变换</p>
 <p><img src="8.1-1.png" alt="8.1-1"></p>
 <p><img src="8.1-2.png" alt="8.1-2"></p>
@@ -955,9 +993,8 @@ F_1(\omega) = \mathscr{L}[f_1(t)],F_2(\omega) = \mathscr{L}[f_2(t)] \\
 <li><p>积分性质</p>
 <script type="math/tex; mode=display">
 设 F(s) = \mathscr{L}[f(t)] \Rightarrow 则\ \mathscr{L}[\int_0^t f(t)dt] = \dfrac{1}{s} F(s)</script></li>
-</ul>
-<ul>
-<li>位移性质</li>
+<li><p>位移性质</p>
+</li>
 </ul>
 <ul>
 <li>延迟性质</li>
@@ -968,7 +1005,7 @@ F_1(\omega) = \mathscr{L}[f_1(t)],F_2(\omega) = \mathscr{L}[f_2(t)] \\
 <ul>
 <li>卷积及卷积定理</li>
 </ul>
-<h3 id="S-8-3-拉普拉斯逆变换"><a href="#S-8-3-拉普拉斯逆变换" class="headerlink" title="$\S 8.3$ 拉普拉斯逆变换"></a>$\S 8.3$ 拉普拉斯逆变换</h3><h3 id="S-8-4-用拉氏变换解常微分方程"><a href="#S-8-4-用拉氏变换解常微分方程" class="headerlink" title="$\S 8.4$ 用拉氏变换解常微分方程"></a>$\S 8.4$ 用拉氏变换解常微分方程</h3><h3 id="习题课-4"><a href="#习题课-4" class="headerlink" title="习题课"></a>习题课</h3>
+<h3 id="S-8-3-拉普拉斯逆变换"><a href="#S-8-3-拉普拉斯逆变换" class="headerlink" title="$\S 8.3$ 拉普拉斯逆变换"></a>$\S 8.3$ 拉普拉斯逆变换</h3><h3 id="S-8-4-用拉氏变换解常微分方程"><a href="#S-8-4-用拉氏变换解常微分方程" class="headerlink" title="$\S 8.4$ 用拉氏变换解常微分方程"></a>$\S 8.4$ 用拉氏变换解常微分方程</h3><h3 id="习题课-6"><a href="#习题课-6" class="headerlink" title="习题课"></a>习题课</h3>
     </div>
 
     
@@ -1063,7 +1100,7 @@ F_1(\omega) = \mathscr{L}[f_1(t)],F_2(\omega) = \mathscr{L}[f_2(t)] \\
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%A4%8D%E6%95%B0%E4%B8%8E%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0"><span class="nav-text">第一章 复数与复变函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#S-1-1-%E5%A4%8D%E6%95%B0%E5%8F%8A%E5%85%B6%E5%87%A0%E4%BD%95%E8%A1%A8%E7%A4%BA"><span class="nav-text">$\S 1.1$ 复数及其几何表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-1-2-%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0"><span class="nav-text">$\S 1.2$ 复变函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E4%BE%8B%E9%A2%98%E7%B2%BE%E9%80%89"><span class="nav-text">第一章 例题精选</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0"><span class="nav-text">第二章 解析函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#S-2-1-%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-text">$\S 2.1$ 解析函数的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-2-2-%E5%87%BD%E6%95%B0%E8%A7%A3%E6%9E%90%E7%9A%84%E9%87%8D%E8%A6%81%E6%9D%A1%E4%BB%B6"><span class="nav-text">$\S 2.2$ 函数解析的重要条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-2-3-%E5%88%9D%E7%AD%89%E5%87%BD%E6%95%B0"><span class="nav-text">$\S 2.3$ 初等函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E7%9A%84%E7%A7%AF%E5%88%86"><span class="nav-text">第三章 复变函数的积分</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="nav-text">第三章总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-3-1-%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E7%A7%AF%E5%88%86%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-text">$\S 3.1$ 复变函数积分的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-3-2-%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%AE%9A%E7%90%86"><span class="nav-text">$\S 3.2$ 柯西积分定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-3-3-%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F"><span class="nav-text">$\S 3.3$ 柯西积分公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-3-4-%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E9%AB%98%E9%98%B6%E5%AF%BC%E6%95%B0"><span class="nav-text">$\S 3.4$ 解析函数的高阶导数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-3-5-%E8%B0%83%E5%92%8C%E5%87%BD%E6%95%B0"><span class="nav-text">$\S 3.5$ 调和函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B9%A0%E9%A2%98%E8%AF%BE"><span class="nav-text">习题课</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E7%BA%A7%E6%95%B0"><span class="nav-text">第四章 级数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="nav-text">第四章总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-4-1-%E5%A4%8D%E7%BA%A7%E6%95%B0"><span class="nav-text">$\S 4.1$ 复级数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-4-2-%E6%B3%B0%E5%8B%92%E7%BA%A7%E6%95%B0"><span class="nav-text">$\S 4.2$ 泰勒级数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-4-3-%E6%B4%9B%E6%9C%97%E7%BA%A7%E6%95%B0"><span class="nav-text">$\S 4.3$ 洛朗级数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B9%A0%E9%A2%98%E8%AF%BE-1"><span class="nav-text">习题课</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%95%99%E6%95%B0"><span class="nav-text">第五章 留数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="nav-text">第五章总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-5-1-%E5%AD%A4%E7%AB%8B%E5%A5%87%E7%82%B9"><span class="nav-text">$\S 5.1$ 孤立奇点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-5-2-%E7%95%99%E6%95%B0"><span class="nav-text">$\S 5.2$ 留数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B9%A0%E9%A2%98%E8%AF%BE-2"><span class="nav-text">习题课</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2"><span class="nav-text">第七章 傅里叶变换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#S-7-1-%E5%82%85%E9%87%8C%E5%8F%B6%E7%BA%A7%E6%95%B0"><span class="nav-text">$\S 7.1$ 傅里叶级数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-7-2-%E5%82%85%E9%87%8C%E5%8F%B6%E7%A7%AF%E5%88%86%E4%B8%8E%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2"><span class="nav-text">$\S 7.2$ 傅里叶积分与傅里叶变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-7-3-%E5%8D%95%E4%BD%8D%E8%84%89%E5%86%B2%E5%87%BD%E6%95%B0"><span class="nav-text">$\S 7.3$ 单位脉冲函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-7-4-%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="nav-text">$\S 7.4$ 傅里叶变换的性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B9%A0%E9%A2%98%E8%AF%BE-3"><span class="nav-text">习题课</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0-%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E5%8F%98%E6%8D%A2"><span class="nav-text">第八章 拉普拉斯变换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#S-8-1-%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E5%8F%98%E6%8D%A2%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-text">$\S 8.1$ 拉普拉斯变换的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-8-2-%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E5%8F%98%E6%8D%A2%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="nav-text">$\S 8.2$ 拉普拉斯变换的性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-8-3-%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E9%80%86%E5%8F%98%E6%8D%A2"><span class="nav-text">$\S 8.3$ 拉普拉斯逆变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-8-4-%E7%94%A8%E6%8B%89%E6%B0%8F%E5%8F%98%E6%8D%A2%E8%A7%A3%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="nav-text">$\S 8.4$ 用拉氏变换解常微分方程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B9%A0%E9%A2%98%E8%AF%BE-4"><span class="nav-text">习题课</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%A4%8D%E6%95%B0%E4%B8%8E%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0"><span class="nav-text">第一章 复数与复变函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="nav-text">第一章总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-1-1-%E5%A4%8D%E6%95%B0%E5%8F%8A%E5%85%B6%E5%87%A0%E4%BD%95%E8%A1%A8%E7%A4%BA"><span class="nav-text">$\S 1.1$ 复数及其几何表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-1-2-%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0"><span class="nav-text">$\S 1.2$ 复变函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B9%A0%E9%A2%98%E8%AF%BE"><span class="nav-text">习题课</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0"><span class="nav-text">第二章 解析函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="nav-text">第二章总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-2-1-%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-text">$\S 2.1$ 解析函数的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-2-2-%E5%87%BD%E6%95%B0%E8%A7%A3%E6%9E%90%E7%9A%84%E9%87%8D%E8%A6%81%E6%9D%A1%E4%BB%B6"><span class="nav-text">$\S 2.2$ 函数解析的重要条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-2-3-%E5%88%9D%E7%AD%89%E5%87%BD%E6%95%B0"><span class="nav-text">$\S 2.3$ 初等函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B9%A0%E9%A2%98%E8%AF%BE-1"><span class="nav-text">习题课</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E7%9A%84%E7%A7%AF%E5%88%86"><span class="nav-text">第三章 复变函数的积分</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="nav-text">第三章总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-3-1-%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E7%A7%AF%E5%88%86%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-text">$\S 3.1$ 复变函数积分的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-3-2-%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%AE%9A%E7%90%86"><span class="nav-text">$\S 3.2$ 柯西积分定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-3-3-%E6%9F%AF%E8%A5%BF%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F"><span class="nav-text">$\S 3.3$ 柯西积分公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-3-4-%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E9%AB%98%E9%98%B6%E5%AF%BC%E6%95%B0"><span class="nav-text">$\S 3.4$ 解析函数的高阶导数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-3-5-%E8%B0%83%E5%92%8C%E5%87%BD%E6%95%B0"><span class="nav-text">$\S 3.5$ 调和函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B9%A0%E9%A2%98%E8%AF%BE-2"><span class="nav-text">习题课</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E7%BA%A7%E6%95%B0"><span class="nav-text">第四章 级数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="nav-text">第四章总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-4-1-%E5%A4%8D%E7%BA%A7%E6%95%B0"><span class="nav-text">$\S 4.1$ 复级数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-4-2-%E6%B3%B0%E5%8B%92%E7%BA%A7%E6%95%B0"><span class="nav-text">$\S 4.2$ 泰勒级数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-4-3-%E6%B4%9B%E6%9C%97%E7%BA%A7%E6%95%B0"><span class="nav-text">$\S 4.3$ 洛朗级数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B9%A0%E9%A2%98%E8%AF%BE-3"><span class="nav-text">习题课</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%95%99%E6%95%B0"><span class="nav-text">第五章 留数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="nav-text">第五章总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-5-1-%E5%AD%A4%E7%AB%8B%E5%A5%87%E7%82%B9"><span class="nav-text">$\S 5.1$ 孤立奇点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-5-2-%E7%95%99%E6%95%B0"><span class="nav-text">$\S 5.2$ 留数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B9%A0%E9%A2%98%E8%AF%BE-4"><span class="nav-text">习题课</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2"><span class="nav-text">第七章 傅里叶变换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#S-7-1-%E5%82%85%E9%87%8C%E5%8F%B6%E7%BA%A7%E6%95%B0"><span class="nav-text">$\S 7.1$ 傅里叶级数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-7-2-%E5%82%85%E9%87%8C%E5%8F%B6%E7%A7%AF%E5%88%86%E4%B8%8E%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2"><span class="nav-text">$\S 7.2$ 傅里叶积分与傅里叶变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-7-3-%E5%8D%95%E4%BD%8D%E8%84%89%E5%86%B2%E5%87%BD%E6%95%B0"><span class="nav-text">$\S 7.3$ 单位脉冲函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-7-4-%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="nav-text">$\S 7.4$ 傅里叶变换的性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B9%A0%E9%A2%98%E8%AF%BE-5"><span class="nav-text">习题课</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0-%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E5%8F%98%E6%8D%A2"><span class="nav-text">第八章 拉普拉斯变换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#S-8-1-%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E5%8F%98%E6%8D%A2%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-text">$\S 8.1$ 拉普拉斯变换的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-8-2-%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E5%8F%98%E6%8D%A2%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="nav-text">$\S 8.2$ 拉普拉斯变换的性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-8-3-%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E9%80%86%E5%8F%98%E6%8D%A2"><span class="nav-text">$\S 8.3$ 拉普拉斯逆变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-8-4-%E7%94%A8%E6%8B%89%E6%B0%8F%E5%8F%98%E6%8D%A2%E8%A7%A3%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="nav-text">$\S 8.4$ 用拉氏变换解常微分方程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B9%A0%E9%A2%98%E8%AF%BE-6"><span class="nav-text">习题课</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -1079,7 +1116,7 @@ F_1(\omega) = \mathscr{L}[f_1(t)],F_2(\omega) = \mathscr{L}[f_2(t)] \\
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-count">29</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1134,12 +1171,12 @@ F_1(\omega) = \mathscr{L}[f_1(t)],F_2(\omega) = \mathscr{L}[f_2(t)] \\
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">113k</span>
+    <span title="站点总字数">114k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3:25</span>
+    <span title="站点阅读时长">3:27</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
