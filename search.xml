@@ -60,1005 +60,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>大学笔记 | 大学物理BII</title>
-    <url>/2023/08/30/Physics-II/</url>
-    <content><![CDATA[<p>大物笔记彻底变成 PPT clipboard 力（悲</p>
-<span id="more"></span>
-
-<h2 id="第十章-振动"><a href="#第十章-振动" class="headerlink" title="第十章 振动"></a>第十章 振动</h2><h3 id="第十章总结（待完成）"><a href="#第十章总结（待完成）" class="headerlink" title="第十章总结（待完成）"></a>第十章总结（待完成）</h3><h3 id="S-10-1-简谐运动"><a href="#S-10-1-简谐运动" class="headerlink" title="$\S 10.1$ 简谐运动"></a>$\S 10.1$ 简谐运动</h3><ol>
-<li>简谐振动方程</li>
-</ol>
-<p>​    最简单的简谐运动，以弹簧振子来举例，其受力满足，<br>$$<br>F = -kx \<br>F = ma = m \dfrac{d^2x}{dt^2}<br>$$<br>​    然后引入$\omega^2 =\dfrac{k}{m}$，这里 $\omega$ 只与系统自身性质有关，也称为角频率。<br>​    化简得 $\dfrac{d^2x}{dt^2} + \omega^2 x = 0$，这是简谐运动的微分方程，求解可得<br>$$<br>x = A \cos (\omega t +\phi)<br>$$<br>​    便得到了简谐运动的运动方程，<strong>这十分重要</strong>，求一阶导可得速度方程，求二阶导可得加速度方程。</p>
-<blockquote>
-<p> 通常化作余弦形式。</p>
-</blockquote>
-<ol start="2">
-<li>简谐振动的特征量</li>
-</ol>
-<p>​    速度 $v = \omega Acos(\omega t + \phi + \dfrac{\pi}{2})$，$\omega A= v_m$ 表示速度振幅。</p>
-<p>​    加速度 $a = \omega^2 A cos(\omega t + \phi)$，$\omega^2A = a_m$ 表示加速度振幅。</p>
-<p>​    周期满足 $T\omega = 2\pi$。</p>
-<p>​    振幅 $A = \sqrt{x_0^2 + \dfrac{v_0^2}{\omega^2}}$，相位角 $tan \phi = -\dfrac{v_0}{\omega x_0}$。</p>
-<ol start="3">
-<li>简谐运动能量</li>
-</ol>
-<p>$$<br>E = E_p + E_k \<br>Ep = \dfrac{1}{2}kx^2, \ E_k = \dfrac{1}{2}mv^2<br>\\代入得 \ E = \dfrac{1}{2}kA^2<br>$$</p>
-<ol start="4">
-<li>旋转矢量<br>矢量绕 $O$ 点按逆时针旋转，$t$ 时刻，点在 $x$ 轴上的位置为 $A\cos(\omega t + \phi)$。<br>速度与 $x$ 轴上的夹角为 $\omega t + \phi + \dfrac{\pi}{2}$，$v_x = \omega A\cos(\omega t + \phi + \dfrac{\pi}{2}) = -\omega A\sin(\omega t + \phi)$。<br>加速度 $a_x = \omega^2 A \cos(\omega t + \phi + \pi) = -\omega^2 x$。</li>
-</ol>
-<h3 id="S-10-3-简谐运动的合成"><a href="#S-10-3-简谐运动的合成" class="headerlink" title="$\S 10.3$ 简谐运动的合成"></a>$\S 10.3$ 简谐运动的合成</h3><ol>
-<li>同方向，同频率简谐运动的合成</li>
-</ol>
-<p><img src="10.3-1.jpg" alt="10.3-1"></p>
-<ol start="2">
-<li>振动方向垂直，同频率简谐运动的合成</li>
-</ol>
-<p><img src="10.3-2.jpg" alt="10.3-2"></p>
-<ul>
-<li><p>当 $\phi_2 - \phi_1 = k\pi$ 时，质点做直线运动。</p>
-</li>
-<li><p>当 $\phi_2 - \phi_1 = (2k \pm1)\dfrac{\pi}{2}$ 时，质点运动轨迹是圆。</p>
-</li>
-<li><p>当 $\phi_2 - \phi_1$ 为其他值时，质点运动轨迹是椭圆。</p>
-</li>
-</ul>
-<h3 id="S-10-5-阻尼振动-受迫振动-共振"><a href="#S-10-5-阻尼振动-受迫振动-共振" class="headerlink" title="$\S 10.5$ 阻尼振动 受迫振动 共振"></a>$\S 10.5$ 阻尼振动 受迫振动 共振</h3><ol>
-<li><p>阻尼振动<br> 振幅随时间减小的振动叫阻尼振动。<br> 阻尼模型有摩擦阻尼和辐射阻尼。<br> 对于低速运动的物体，引入阻力 $F = -\gamma v $。</p>
-<p>对于高速运动的物体，引入阻力 $F = -\gamma v^2 $（用的较少）。</p>
-<p>以弹簧振子为例，我们可以列出方程<br>$$<br>\begin{gather}<br>m\dfrac{d^2x}{dt^2} = -kx - \gamma v \<br>\omega_0^2 = \dfrac{k}{m}\ \ \ 2\beta = \dfrac{\gamma}{m}\<br>\Rightarrow \dfrac{d^2x}{dt^2} + 2\beta\dfrac{dx}{dt} + \omega_0^2x = 0\<br>\Rightarrow x = c_1e^{-(\beta - \sqrt{\beta^2 - \omega_0^2})t} + c_2e^{-(\beta + \sqrt{\beta^2  -\omega_0^2})t}<br>\end{gather}<br>$$<br>​    当 $\beta$ 和 $\omega_0$ 大小关系不同时，所对应的结果也不同。</p>
-</li>
-</ol>
-<p><img src="10.3-3.jpg" alt="10.3-3"></p>
-<p>​    临界阻尼到达平衡点最快，过阻尼和临界阻尼不能往返运动。</p>
-<ol start="2">
-<li>受迫振动<br>物体在周期性外力下持续发生振动称为受迫振动，这个外力称为驱动力（要考虑弹性力，阻尼力和驱动力）。</li>
-</ol>
-<p>​        这块貌似了解即可，在此贴出 ppt。</p>
-<p>​    <img src="10.3-4.png" alt="10.3-4"></p>
-<p><img src="10.3-5.png" alt="10.3-5"></p>
-<p><img src="10.3-6.png" alt="10.3-6"></p>
-<p><img src="10.3-7.png" alt="10.3-7"></p>
-<ol start="3">
-<li>共振<br>当外界驱动力频率接近或等于系统固有频率时，受迫振动振幅达到最大值的现象称为<strong>共振</strong>，其频率为<strong>共振频率</strong>。</li>
-</ol>
-<p><img src="10.3-8.png" alt="10.3-8"></p>
-<p><img src="10.3-9.png" alt="10.3-9"></p>
-<h3 id="习题课（待完成）"><a href="#习题课（待完成）" class="headerlink" title="习题课（待完成）"></a>习题课（待完成）</h3><h2 id="第十一章-机械波"><a href="#第十一章-机械波" class="headerlink" title="第十一章 机械波"></a>第十一章 机械波</h2><h3 id="第十一章总结（待完成）"><a href="#第十一章总结（待完成）" class="headerlink" title="第十一章总结（待完成）"></a>第十一章总结（待完成）</h3><h3 id="S-11-1-波动的基本概念"><a href="#S-11-1-波动的基本概念" class="headerlink" title="$\S 11.1$ 波动的基本概念"></a>$\S 11.1$ 波动的基本概念</h3><ol>
-<li>机械波的产生和传播<ul>
-<li>波源：激发波动的振动系统。</li>
-<li>弹性介质：能够传播机械振动的弹性介质。</li>
-<li><strong>振动是质点的个体行为，波动是质点振动的群体行为。</strong>波动是振动相位的传递，注意每个质点依然是在垂直方向上移动，并未左右移动。</li>
-<li><strong>横波</strong>：振动方向与波的传播方向垂直，如绳波。<strong>纵波</strong>：振动方向与波的传播方向平行，是靠介质疏密变化传播的，如声波，弹簧波。纵波可以在固液气中传播，而横波一般只在固体中传播。</li>
-</ul>
-</li>
-<li>波的几何描述<ul>
-<li>波线：表示波的传播方向的射线。</li>
-<li>波面：相位相同的点组成的面。</li>
-<li>波前：某一时刻，最前面的波面。</li>
-<li>平面波：波面是平面的波。球面波：波面是球面的波。</li>
-</ul>
-</li>
-<li>描述波的物理量<ul>
-<li>波长：振动在一个周期内传播的距离为波长 $\lambda$，反映波在空间上的周期性。</li>
-<li>周期和频率：周期 $T$，频率 $\nu$。反映波在时间上的周期。</li>
-<li>波速：用 $u$ 表示。$\lambda = uT$，$u = \lambda \nu$。</li>
-<li>周期由波源决定，波速由介质决定。</li>
-<li>不同频率的同一类型波在同一介质波速相同。</li>
-<li>波在不同介质中频率不变。</li>
-</ul>
-</li>
-</ol>
-<h3 id="S-11-2-平面简谐波-波函数"><a href="#S-11-2-平面简谐波-波函数" class="headerlink" title="$\S 11.2$ 平面简谐波 波函数"></a>$\S 11.2$ 平面简谐波 波函数</h3><ul>
-<li>平面简谐波：波面是平面，各质点做简谐运动的波。</li>
-<li>波函数：描述任意时刻任意位置处质点的<strong>振动位移</strong>。这里往往用某一质点的振动方程代替任意质点的振动方程。</li>
-</ul>
-<ol>
-<li><p>平面简谐波的波函数</p>
-<ul>
-<li><p>波函数未特地说明时，默认在原点处。</p>
-</li>
-<li><p>波形以波速沿波线平移的波称为行波。</p>
-</li>
-<li><p>$y = A\cos [\omega(t - \dfrac{x}{u}) + \phi]$，把对应的时间 $t_0$，$x_0$ 代入公式即可算出某时刻某位置的振动位置。</p>
-</li>
-<li><p>此类常考题型如下：</p>
-<p><img src="11.2-3.png" alt="11-2.3"></p>
-</li>
-</ul>
-</li>
-<li><p>波动方程（考试不考）</p>
-</li>
-</ol>
-<p><img src="11.2-1.png" alt="11-2.1"></p>
-<p><img src="11.2-2.png" alt="11.2-2"></p>
-<h3 id="S-11-3-波的能量-能流密度"><a href="#S-11-3-波的能量-能流密度" class="headerlink" title="$\S 11.3$ 波的能量 能流密度"></a>$\S 11.3$ 波的能量 能流密度</h3><ol>
-<li><p>波的能量</p>
-<ul>
-<li><p>波具有动能和势能</p>
-<p>对于质元而言</p>
-</li>
-<li><p>动能 $dE_k = \dfrac{1}{2}(dm)v^2 = \dfrac{1}{2}(\rho dV)A^2\omega^2\sin^2\omega(t - \dfrac{x}{u})$</p>
-</li>
-<li><p>势能 $dE_P = \dfrac{1}{2}(\rho dV)A^2\omega^2\sin^2\omega(t - \dfrac{x}{u})$（貌似上课也没讲怎么推导的，记住就行吧？.jpg）</p>
-<blockquote>
-<p>注意质元在平衡位置处，动能，势能和总机械能均最大，质元位移最大时，三者均为 $0$。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ol>
-<p>​        $dE = dE_p + dE_k = (\rho dV)A^2\omega^2\sin^2\omega(t - \dfrac{x}{u})$</p>
-<p>​        能量密度 $w = \dfrac{dE}{dV} = \rho A^2\omega^2\sin^2\omega(t - \dfrac{x}u{})$</p>
-<p>​        平均能量密度 $\bar w = \dfrac{1}{T}\int_0^T wdt = \dfrac{1}{2}\rho A^2\omega^2$</p>
-<p>​        不难发现每时每刻，动能和势能总是相同的，质元不与外界能量交换，总能量总是守恒的。</p>
-<p>​        对于所有弹性波，平均能量密度和振幅平方，频率平方，介质密度成正比。</p>
-<ol start="2">
-<li>波的能流 平均能流密度</li>
-</ol>
-<p>​        单位时间内通过垂直于波传播方向的某面积上能量称为能流，方向与速度相同。$P = \dfrac{dE}{dt}$。</p>
-<p><img src="11.3-1.png" alt="11.3-1"></p>
-<p>​        平均能流 $\bar P = \bar wuS = \dfrac{1}{2}\rho A^2\omega^2uS$</p>
-<p>​        平均能流密度：单位面积上的能流。</p>
-<p>​        $I = \dfrac{\bar P}{S} = \dfrac{1}{2}\rho A^2\omega^2u$</p>
-<p>​        矢量式 $\vec I = \dfrac{1}{2}\rho A^2\omega^2\vec u$</p>
-<p>​        能流密度 $I$ 也被称为波的强度。</p>
-<p>​        平面简谐波 $E = IS$。</p>
-<p>​        球面简谐波 $E = 4\pi r^2I$。</p>
-<p>​        设单位半径上的球面振幅是 $a$，半径为 $r$ 的球面上振幅为 $A$，由球心处放出的总能量相等，可以得出 $A(r) = \dfrac{a}{r}$，若球心处 $y_o(t) \propto \cos(\omega t + \phi)$，则 $y_球 = \dfrac{a}{r}\cos(\omega(t - \dfrac{r}{u}) + \phi)$。</p>
-<ol start="3">
-<li>声强 声强级<ul>
-<li>声振动：能够引起人们听觉效应的机械振动。</li>
-<li>声波：在弹性介质中由声振动激发的波叫声波。</li>
-<li>声波范围：20 ~ 20000 Hz 超声波：&gt; 20000 Hz 次声波：&lt; 20 Hz</li>
-<li>声强：声波的平均能流密度叫声强。$I = \dfrac{1}{2}\rho A^2\omega^2u$，单位：$W / m^2$。</li>
-<li>声强级：$I_1 = 10lg\dfrac{I}{I_0}$，单位：$dB$（分贝）。</li>
-</ul>
-</li>
-</ol>
-<h3 id="S-11-4-惠更斯原理"><a href="#S-11-4-惠更斯原理" class="headerlink" title="$\S 11.4$ 惠更斯原理"></a>$\S 11.4$ 惠更斯原理</h3><ul>
-<li><p>惠更斯原理：波在传播过程中，波面上每一点可以看作是发射子波的波源，这些子波源相当于继承原先波的能量，然后再传递给之后的波，后继的包迹决定新的波阵面。</p>
-</li>
-<li><p>波的衍射：波在传播过程中能够绕过障碍物而偏离直线传播的现象。衍射是波的基本特征之一，其强弱由障碍物尺寸和波长的关系决定。惠更斯原理只能定性解释波的衍射现象。</p>
-</li>
-</ul>
-<h3 id="S-11-5-波的叠加原理-波的干涉"><a href="#S-11-5-波的叠加原理-波的干涉" class="headerlink" title="$\S 11.5$ 波的叠加原理 波的干涉"></a>$\S 11.5$ 波的叠加原理 波的干涉</h3><ol>
-<li>波的叠加原理：<ul>
-<li>独立传播原理：波相遇后依然按照各自原来的特性，互不干涉。</li>
-<li>叠加原理：某点的振动为引起该点振动波的矢量和。</li>
-</ul>
-</li>
-<li>波的干涉（这段 ppt 比较完整，直接放 ppt 力）</li>
-</ol>
-<p><img src="11.5-1.png" alt="11.5-1"></p>
-<p><img src="11.5-2.png" alt="11.5-2"></p>
-<blockquote>
-<p>值得一提的是，这里波的干涉和前面第十章第三节的简谐振动的合成是十分类似的。</p>
-</blockquote>
-<p><img src="11.5-3.png" alt="11.5-3"></p>
-<p><img src="11.5-4.png" alt="11.5-4"></p>
-<p>​    练习在精不在多，这里贴一道给出两种方法的练习题，分别用到本节知识和前面波函数的知识。</p>
-<p><img src="11.5-5.png" alt="11.5-5"></p>
-<p><img src="11.5-6.png" alt="11.5-6"></p>
-<p><img src="11.5-7.png" alt="11.5-7"></p>
-<h3 id="S-11-6-驻波"><a href="#S-11-6-驻波" class="headerlink" title="$\S 11.6$ 驻波"></a>$\S 11.6$ 驻波</h3><ul>
-<li>驻波：沿相反方向传播的振幅相同的两列相干波相遇叠加会形成一种波形不向前传播的波。</li>
-</ul>
-<p><img src="11.6-1.png" alt="11.6-1"></p>
-<p><img src="11.6-2.png" alt="11.6-2"></p>
-<p><img src="11.6-3.png" alt="11.6-3"></p>
-<p><img src="11.6-4.png" alt="11.6-4"></p>
-<blockquote>
-<p>值得一提的是，能量在驻波中的分布是不均匀的，振动的能量在波节处分布相对更为集中。</p>
-</blockquote>
-<ul>
-<li><p>半波损失</p>
-<p>  从一个介质到另一个介质，一部分反射形成的波叫反射波，一部分透射形成的波叫透射波。</p>
-<p>  透射波没有相位的损失，总是与入射波同相，但反射波，从光疏到光密会有相位 $\pi$ 的突变，$\phi’ = \phi - \pi$。</p>
-</li>
-<li><p>弦线上的驻波</p>
-<p>  驻波就是行波在弦线上前进过程中受到了阻挡，产生了反射，然后反射波和入射波叠加导致的。</p>
-</li>
-</ul>
-<p><img src="11.6-5.png" alt="11.6-5"></p>
-<p>前面的那道算两振源干涉的题目，也可以当作驻波来算：</p>
-<p><img src="11.6-6.png" alt="11.6-6"></p>
-<p><img src="11.6-7.png" alt="11.6-7"></p>
-<h3 id="S-11-7-多普勒效应"><a href="#S-11-7-多普勒效应" class="headerlink" title="$\S 11.7$ 多普勒效应"></a>$\S 11.7$ 多普勒效应</h3><p><img src="11.7-1.png" alt="11.7-1"></p>
-<p><img src="11.7-2.png" alt="11.7-2"></p>
-<p><img src="11.7-3.png" alt="11.7-3"></p>
-<p><img src="11.7-4.png" alt="11.7-4"></p>
-<p><img src="11.7-5.png" alt="11.7-5"></p>
-<h3 id="习题课（待完成）-1"><a href="#习题课（待完成）-1" class="headerlink" title="习题课（待完成）"></a>习题课（待完成）</h3><h2 id="第十二章-电磁波"><a href="#第十二章-电磁波" class="headerlink" title="第十二章 电磁波"></a>第十二章 电磁波</h2><blockquote>
-<p>前置知识回顾：</p>
-<ul>
-<li><p>麦克斯韦方程组（部分）：</p>
-<p>  $\oint E \cdot dl = -\dfrac{d\Phi_m}{dt}$（法拉第电磁感应定律）</p>
-<p>  $\oint H \cdot dl = -\dfrac{d\Phi_e}{dt}$（安培定律）</p>
-<p>  其中 $\Phi_m$ 是磁感应强度 $B$ 的通量，$\Phi_e$ 是电位移 $D$ 的通量。</p>
-</li>
-<li><p>$D = \varepsilon_0 E$ ，其中 $D$ 是电位移矢量，$E$ 是电场强度，$\varepsilon_0$ 是真空介电常数。</p>
-</li>
-<li><p>$H = \dfrac{B}{\mu_0}$ ，其中 $H$ 是磁场强度，$B$ 是磁感应强度，$\mu_0$ 是磁导率。</p>
-</li>
-</ul>
-</blockquote>
-<h3 id="第十二章总结（待完成）"><a href="#第十二章总结（待完成）" class="headerlink" title="第十二章总结（待完成）"></a>第十二章总结（待完成）</h3><h3 id="S-12-1-电磁波"><a href="#S-12-1-电磁波" class="headerlink" title="$\S 12.1$ 电磁波"></a>$\S 12.1$ 电磁波</h3><ul>
-<li>变化磁场产生涡旋电场，变化电场产生涡旋磁场。电磁振源产生交变电磁场，交变电场和交变磁场相互激发，形成电磁波。</li>
-<li>下面的推导了解即可</li>
-</ul>
-<p><img src="12.1-1.png" alt="12.1-1"></p>
-<p><img src="12.1-2.png" alt="12.1-2"></p>
-<p><img src="12.1-3.png" alt="12.1-3"></p>
-<p><img src="12.1-4.png" alt="12.1-4"></p>
-<ul>
-<li>求解平面电磁波的微分方程，解为 $E_x = E_0\cos\omega(t - \dfrac{z}{u}),H_y = H_0\cos\omega(t - \dfrac{z}{u})$。</li>
-</ul>
-<p><img src="12.1-5.png" alt="12.1-5"></p>
-<ul>
-<li><p>电磁波的能量传播</p>
-<p>  以电磁波形式传播出去的电磁能量称为辐射能。</p>
-<p>  能量密度 $w = w_e + w_m = \dfrac{1}{2}\varepsilon E^2 + \dfrac{1}{2}\mu H^2 = \varepsilon E^2 = \mu H^2$ 。</p>
-<p>  单位时间通过垂直于传播方向的单位面积的电磁能称为能流密度，$S = wu$（其中 $w$ 是能量密度）。</p>
-<p>  将 $w = \dfrac{1}{2}\varepsilon E^2 + \dfrac{1}{2}\mu H^2$ 和 $u = \dfrac{1}{\sqrt{\varepsilon \mu}}$ 代入公式，得 $S = EH$。矢量形式 $\vec S = \vec E \times \vec H$。$\vec S$ 称为 Poynting vector。</p>
-<p>  将 $S$ 对时间取平均值，$I = \bar S = \bar E \bar H$。$I$ 称为电磁波的强度。</p>
-<p>  对于平面电磁波：$I = \dfrac{1}{T}\int_0^TE_0H_0\cos^2\omega(t - \dfrac{z}{u})dt = \dfrac{1}{2}E_0H_0$。</p>
-</li>
-</ul>
-<h3 id="S-12-2-电偶极子辐射电磁波"><a href="#S-12-2-电偶极子辐射电磁波" class="headerlink" title="$\S 12.2$ 电偶极子辐射电磁波"></a>$\S 12.2$ 电偶极子辐射电磁波</h3><ul>
-<li><p>任何 LC 振荡电路都可以作为发射电磁波的振源，要想有效把电路中的电磁发射出去，除了补充能量外，还需要：1. 足够高的频率。2. 必须有开放的电路。</p>
-</li>
-<li><p>电偶极子辐射电磁波</p>
-<p>  <img src="12.2-1.png" alt="12.2-1"></p>
-</li>
-</ul>
-<p><img src="12.2-2.png" alt="12.2-2"></p>
-<p><img src="12.2-3.png" alt="12.2-3"></p>
-<h3 id="S-12-3-电磁波谱"><a href="#S-12-3-电磁波谱" class="headerlink" title="$\S 12.3$ 电磁波谱"></a>$\S 12.3$ 电磁波谱</h3><blockquote>
-<p> 内容不重要，稍作了解即可（略）。</p>
-</blockquote>
-<h3 id="习题课（待完成）-2"><a href="#习题课（待完成）-2" class="headerlink" title="习题课（待完成）"></a>习题课（待完成）</h3><h2 id="第十三章-几何光学成像原理"><a href="#第十三章-几何光学成像原理" class="headerlink" title="第十三章 几何光学成像原理"></a>第十三章 几何光学成像原理</h2><h3 id="第十三章总结"><a href="#第十三章总结" class="headerlink" title="第十三章总结"></a>第十三章总结</h3><ul>
-<li><p>光程 $L = ns$  光在某一介质中的光程对应在真空中走相同时间的位移。</p>
-</li>
-<li><p>折射定律 $n’ \sin I’ = n\sin I$。光密到光疏可能发生全反射。</p>
-</li>
-<li><p>$n_{21} = \dfrac{v_1}{v_2} = \dfrac{n_2}{n_1}$ 称为介质 $2$ 相对于介质 $1$ 的相对折射率，若介质 $1$ 是真空则是绝对折射率。</p>
-</li>
-<li><p><strong>一定要清楚符号规则。</strong></p>
-</li>
-<li><p>高斯光学满足 $u \approx \sin u$。</p>
-</li>
-<li><p>$\dfrac{n’}{l’} - \dfrac{n}{l} = \dfrac{n’ - n}{r}$ 是本章最重要的公式，后续公式都是它的变形。</p>
-<blockquote>
-<p>球面反射镜成像就是 $n’ = -n$ 的情况。</p>
-</blockquote>
-</li>
-<li><p>凸透镜 $r &gt; 0$，凹面镜 $r &lt; 0$。透镜左边的距离都是负的，右边距离都是正的。光轴向上是正的，光轴向下是负的。代入公式时一定要注意。</p>
-</li>
-<li><p>薄透镜成像 </p>
-<p>像方焦距 $f’ = \dfrac{n_2’}{\dfrac{n_2’ - n}{r_2} + \dfrac{n - n_1}{r_1}}$</p>
-<p>物方焦距 $f = \dfrac{-n_1}{\dfrac{n_2’ - n}{r_2} + \dfrac{n - n_1}{r_1}}$</p>
-<p>物像关系满足 $\dfrac{f’}{l’} + \dfrac{f}{l} = 1$，不过大多数都是在空气中传播，故有 $\dfrac{1}{l’} - \dfrac{1}{l} = \dfrac{1}{f’}$</p>
-</li>
-</ul>
-<h3 id="S-13-1-光线及其传播的基本定律"><a href="#S-13-1-光线及其传播的基本定律" class="headerlink" title="$\S 13.1$ 光线及其传播的基本定律"></a>$\S 13.1$ 光线及其传播的基本定律</h3><ul>
-<li><p>光程与光程方程</p>
-<p>  $L = ns$ 光程等于路线距离和折射率的乘积。</p>
-<p>  光在某一介质中的光程对应在真空中走相同时间的位移。</p>
-<p>  <strong>光程方程</strong> $(\dfrac{\partial L}{\partial x})^2 + (\dfrac{\partial L}{\partial y})^2 + (\dfrac{\partial L}{\partial z})^2 = n^2$。</p>
-</li>
-<li><p>光线与光波方程</p>
-<p>  某一时刻，光波相位相同点构成的曲面称为波面，其法线是光线。</p>
-<p>  <strong>光线方程</strong> $\dfrac{d}{ds} (n\dfrac{d \vec r}{ds}) = \nabla n$。</p>
-</li>
-<li><p>几何光学定律</p>
-<p>  <strong>在不考虑光的波动性的情况下</strong>，光沿直线传播，且光束之间互不干扰。</p>
-<p>  反射定律 $I’’ = -I$。</p>
-<p>  折射定律 $n’ \sin I’ = n\sin I$。</p>
-<blockquote>
-<p>特殊的，若 $\sin I’ = \dfrac{n}{n’} \sin I \ge 1$ 是会发生全反射现象。</p>
-</blockquote>
-</li>
-<li><p>折射率</p>
-<p>  $n_{21} = \dfrac{v_1}{v_2} = \dfrac{n_2}{n_1}$ 称为介质 $2$ 相对于介质 $1$ 的相对折射率。</p>
-<p>  若介质 $1$ 为真空，则 $n = \dfrac{c}{v}$ 为介质 $2$ 的绝对折射率。</p>
-</li>
-</ul>
-<h3 id="S-13-2-成像基本概念与光路计算"><a href="#S-13-2-成像基本概念与光路计算" class="headerlink" title="$\S 13.2$ 成像基本概念与光路计算"></a>$\S 13.2$ 成像基本概念与光路计算</h3><ul>
-<li><p>光学系统</p>
-<p>  若干光学零件组成的系统称为<strong>光学系统</strong>，穿过表面曲率中心的公共轴线叫<strong>光轴</strong>。</p>
-</li>
-<li><p>物与像</p>
-<p>  物是入射光线汇聚成的，像是出射光线汇聚成的。</p>
-<p>  物所在一侧称为物空间，但像既可能在物空间也可能在像空间。</p>
-<p>  物与像是成对出现的，而且限定在光学系统中讨论。</p>
-</li>
-</ul>
-<p><img src="13.2-1.png" alt="13.2-1"></p>
-<h3 id="S-13-3-高斯光学"><a href="#S-13-3-高斯光学" class="headerlink" title="$\S 13.3$ 高斯光学"></a>$\S 13.3$ 高斯光学</h3><ul>
-<li><p>近轴光线</p>
-<p>  由于入射角很小，故满足 $u \approx \sin u$，研究近轴光线物象关系的光学称为近轴光学，又称为高斯光学。</p>
-</li>
-<li><p>球面折射物像位置关系</p>
-<p>  <img src="13.3-1.png" alt="13.3-1"></p>
-<p>  通过推导以及高斯光学的特点，我们可以得到折射球面物像位置公式：<br>  $$<br>  \dfrac{n’}{l’} - \dfrac{n}{l} = \dfrac{n’ - n}{r} \<br>  n’(\dfrac{1}{r} - \dfrac{1}{l’}) = n(\dfrac{1}{r} - \dfrac{1}{l}) = Q(阿贝不变量)<br>  $$<br>  成的像称为高斯像。</p>
-<ul>
-<li>横向放大率</li>
-</ul>
-</li>
-</ul>
-<pre><code>![13.3-2](13.3-2.png)
-
-​        $\beta &gt; 0$，$l$ 与 $l'$ 同号，物像位于同一侧，方向相同，虚实性质相反，正立。
-
-​        $\beta &lt; 0$，$l$ 与 $l'$ 异号，物像位于两侧，方向相反，虚实性质相同，倒立。
-
-- 轴向放大率
-
-    $\alpha = \dfrac{dl'}{dl} = \dfrac{n'}{n} \beta^2$</code></pre><p><img src="13.3-3.png" alt="13.3-3"></p>
-<blockquote>
-<p>通过这道例题主要是要知道怎么取值的正负。</p>
-</blockquote>
-<ul>
-<li><p>球面反射镜近轴成像光路</p>
-<p>  可以看作折射的一种特殊情况，把 $n’ = -n$ 即可。</p>
-<p>  物像位置公式 $\dfrac{1}{l’} + \dfrac{1}{l} = \dfrac{2}{r}$。</p>
-<ul>
-<li><p>横向放大率 $\beta = \dfrac{nl’}{n’l} = -\dfrac{l’}{l}$。</p>
-<p>$\beta &lt; 0$，$l$ 与 $l’$ 同号，物像位于同一侧，虚实性质相同，倒立。</p>
-<p>$\beta &gt; 0$，$l$ 与 $l’$ 异号，物像位于两侧，虚实性质相反，正立。    </p>
-</li>
-<li><p>轴向放大率 $\alpha = -\dfrac{l’^2}{l^2} = -\beta^2$。</p>
-<p><img src="13.3-6.png" alt="13.3-6"></p>
-</li>
-</ul>
-</li>
-<li><p>薄透镜近轴成像光路</p>
-<p><img src="13.3-5.png" alt="13.3-5"></p>
-<p>由于薄透镜有前后两个面，利用两次 $\dfrac{n’}{l’} - \dfrac{n}{l} = \dfrac{n’ - n}{r}$ 公式，可以得到 $\dfrac{n_2’}{l_2’} - \dfrac{n_1}{l_1} = \dfrac{n_2’ - n}{r_2} + \dfrac{n - n_1}{r_1}$。</p>
-<blockquote>
-<p>特殊的，由于 $l_1 \to \infty$ 时可以得出像方焦距 $l_2’ = f’$，带入上述公式得到 $f’ = \dfrac{n_2’}{\dfrac{n_2’ - n}{r_2} + \dfrac{n - n_1}{r_1}}$。</p>
-<p>由于 $l_2 \to \infty$ 时可以得出物方焦距 $l_1 = f$，带入上述公式得到 $f = \dfrac{-n_1}{\dfrac{n_2’ - n}{r_2} + \dfrac{n - n_1}{r_1}}$。</p>
-</blockquote>
-<p>对于光焦度的定义是 $\Phi = \dfrac{n_2’}{f’} = \dfrac{n_2’ - n}{r_2} + \dfrac{n - n_1}{r_1}$。</p>
-<p>两个焦距之间关系是 $\dfrac{f’}{f} = -\dfrac{n_2’}{n_1}$。</p>
-<p>物像之间关系满足 $\dfrac{f’}{l’} + \dfrac{f}{l} = 1$。</p>
-<blockquote>
-<p>特殊的，当透镜出于同种介质内，有 $f + f’ = 0$，此时上述公式可以变为 $\dfrac{1}{l’} - \dfrac{1}{l} = \dfrac{1}{f’}$。</p>
-</blockquote>
-<ul>
-<li><p>横向放大率 $\beta = \dfrac{y_2’}{y_1} = \dfrac{y_1’}{y_1} \cdot \dfrac{y_2’}{y_2} = \beta_1 \cdot \beta_2  =\dfrac{n_1l_2’}{n_2’l_1}$。</p>
-<p>$\beta &gt; 0$，$l$ 与 $l’$ 同号，物像位于同一侧，方向相同，虚实性质相反，正立。</p>
-<p>$\beta &lt; 0$，$l$ 与 $l’$ 异号，物像位于两侧，方向相反，虚实性质相同，倒立。</p>
-</li>
-<li><p>轴向放大率 $\alpha = \dfrac{n_2’}{n_1}\beta^2$。</p>
-<blockquote>
-<p>特殊的，空气中 $\beta = \dfrac{l’}{l}, \alpha = \beta^2$。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="习题课（待完成）-3"><a href="#习题课（待完成）-3" class="headerlink" title="习题课（待完成）"></a>习题课（待完成）</h3><h2 id="第十四章-光的干涉"><a href="#第十四章-光的干涉" class="headerlink" title="第十四章 光的干涉"></a>第十四章 光的干涉</h2><h3 id="第十四章总结（待完成）"><a href="#第十四章总结（待完成）" class="headerlink" title="第十四章总结（待完成）"></a>第十四章总结（待完成）</h3><p><img src="14.3-1.png" alt="14.3-1"></p>
-<p><img src="14.3-2.png" alt="14.3-2"></p>
-<p><img src="14.3-3.png" alt="14.3-3"></p>
-<p><img src="14.3-4.png" alt="14.3-4"></p>
-<p><img src="14.3-5.png" alt="14.3-5"></p>
-<p><img src="14.3-6.png" alt="14.3-6"></p>
-<h3 id="S-14-1-光的相干性"><a href="#S-14-1-光的相干性" class="headerlink" title="$\S 14.1$ 光的相干性"></a>$\S 14.1$ 光的相干性</h3><ul>
-<li><p>光的干涉，想干条件</p>
-<p>光是电磁波，感光主要是靠电磁波，所以将电场强度 $\vec E$ 称为光矢量。</p>
-<p>光波相遇可以看作是若干振动的叠加，振动的加强是亮条纹，减弱是暗条纹，这种现象称为光的干涉。</p>
-<p><strong>相干条件</strong></p>
-<ol>
-<li>只有平行振动分量间才能发生干涉。</li>
-<li>频率相同的光波之间才能发生干涉。</li>
-<li>相位差恒定的光波才能发生干涉。</li>
-</ol>
-<p><img src="14.1-1.png" alt="14.1-1"></p>
-<blockquote>
-<p>光强 I 在这里表示某种平方。</p>
-</blockquote>
-</li>
-<li><p>光程差</p>
-<p>在不同介质中，$\delta = n_2r_2 - n_1r_1$ 称为光程差，$\Delta \varphi = \dfrac{2 \pi}{\lambda} \delta$ 是相位差。</p>
-<p><img src="14.1-2.png" alt="14.1-2"></p>
-</li>
-<li><p>获得相干光的方法</p>
-<p>主要分为以下两类</p>
-<p><img src="14.1-3.png" alt="14.1-3"></p>
-<blockquote>
-<p>注：振幅相差不能太大。并且光程差也不能太大。</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="S-14-2-分波阵面干涉"><a href="#S-14-2-分波阵面干涉" class="headerlink" title="$\S 14.2$ 分波阵面干涉"></a>$\S 14.2$ 分波阵面干涉</h3><ul>
-<li><p>杨氏双缝干涉</p>
-<p><img src="14.2-1.png" alt="14.2-1"></p>
-<p><img src="14.2-2.png" alt="14.2-2"></p>
-<p>条纹明暗相间且条纹等间距（单色光情况），对称分布在中央明纹两边。满足 $\Delta x = \dfrac{D}{a}\lambda$。（指的是相邻明纹与明纹 / 暗纹与暗纹的间距）</p>
-<blockquote>
-<p>若将整个装置放在折射率为 $n$ 的介质中，$\Delta x = \dfrac{D}{na}\lambda$。</p>
-</blockquote>
-<p>对于白色光，条纹是彩色条纹。</p>
-</li>
-<li><p>劳埃德镜实验</p>
-<blockquote>
-<p>验证了半波损失。</p>
-</blockquote>
-</li>
-<li><p>空间相干性和时间相干性</p>
-<blockquote>
-<p>光的相干性质会和时间，空间相关。空间会影响光程差，而时间太长会直接导致无法相干。</p>
-</blockquote>
-<p><strong>空间相干性</strong></p>
-<blockquote>
-<p>由于实际中光源的光是由宽度的，所以要考虑空间相干性对光的干涉产生的影响。</p>
-</blockquote>
-<p><img src="14.2-5.png" alt="14.2-5"></p>
-<p><img src="14.2-6.png" alt="14.2-6"></p>
-<p><strong>时间相干性</strong></p>
-<p><img src="14.2-4.png" alt="14.2-4"></p>
-</li>
-<li><p>例题</p>
-<p><img src="14.2-3.png" alt="14.2-3"></p>
-</li>
-</ul>
-<h3 id="S-14-3-分振幅干涉"><a href="#S-14-3-分振幅干涉" class="headerlink" title="$\S 14.3$ 分振幅干涉"></a>$\S 14.3$ 分振幅干涉</h3><blockquote>
-<p>本节中提到了半波损失，半波损失条件：</p>
-<ol>
-<li>反射。</li>
-<li>从光疏介质到光密介质的反射。</li>
-</ol>
-</blockquote>
-<ul>
-<li><p>薄膜干涉</p>
-<p><img src="14.2-7.png" alt="14.2-7"></p>
-<p><img src="14.2-8.png" alt="14.2-8"></p>
-<p><img src="14.2-9.png" alt="14.2-9"></p>
-<p><img src="14.2-10.png" alt="14.2-10"></p>
-<p><img src="14.2-11.png" alt="14.2-11"></p>
-<p><img src="14.2-12.png" alt="14.2-12"></p>
-</li>
-<li><p>劈尖干涉</p>
-<blockquote>
-<p>劈尖干涉要求两个劈尖平面夹角很小。</p>
-</blockquote>
-<p><img src="14.2-13.png" alt="14.2-13"></p>
-<p><img src="14.2-14.png" alt="14.2-14"></p>
-<p><img src="14.2-15.png" alt="14.2-15"></p>
-</li>
-</ul>
-<h2 id="第十五章-光的衍射"><a href="#第十五章-光的衍射" class="headerlink" title="第十五章 光的衍射"></a>第十五章 光的衍射</h2><h3 id="第十六章总结"><a href="#第十六章总结" class="headerlink" title="第十六章总结"></a>第十六章总结</h3><h3 id="S-15-1-光的衍射现象-惠更斯-菲涅尔原理"><a href="#S-15-1-光的衍射现象-惠更斯-菲涅尔原理" class="headerlink" title="$\S 15.1$ 光的衍射现象 惠更斯 - 菲涅尔原理"></a>$\S 15.1$ 光的衍射现象 惠更斯 - 菲涅尔原理</h3><ul>
-<li><p>光的衍射现象</p>
-<p>光在传播过程中绕过障碍物的边缘，偏离直线传播的现象叫光的衍射。</p>
-<p>光的衍射和分为菲涅尔衍射和夫琅禾费衍射。</p>
-<p><img src="15.1-01.png" alt="15.1-01"></p>
-</li>
-<li><p>惠更斯 - 菲涅尔原理</p>
-<p><img src="15.1-02.png" alt="15.1-02"></p>
-</li>
-</ul>
-<h3 id="S-15-2-夫琅禾费单缝衍射"><a href="#S-15-2-夫琅禾费单缝衍射" class="headerlink" title="$\S 15.2$ 夫琅禾费单缝衍射"></a>$\S 15.2$ 夫琅禾费单缝衍射</h3><ul>
-<li><p>衍射现象的讨论</p>
-<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CPhysics-II%5C15.2-01.png" alt="15.2-01"></p>
-<blockquote>
-<p>对于光屏某一个固定的点，$\varphi$ 角度是固定的。</p>
-</blockquote>
-<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CPhysics-II%5C15.2-02.png" alt="15.2-02"></p>
-<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CPhysics-II%5C15.2-03.png" alt="15.2-03"></p>
-<blockquote>
-<p>注意这里 $k$ 取 $0$ 的时候其实被中央明纹包含在内了，所以第一级明纹应从 $k = 1$ 开始，即 $\dfrac{3\lambda}{2}$。</p>
-</blockquote>
-</li>
-<li><p>单缝衍射条纹特点</p>
-<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CPhysics-II%5C15.2-05.png" alt="15.2-05"></p>
-<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CPhysics-II%5C15.2-04.png" alt="15.2-04"></p>
-<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CPhysics-II%5C15.2-06.png" alt="15.2-06"></p>
-<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CPhysics-II%5C15.2-07.png" alt="15.2-07"></p>
-</li>
-</ul>
-<h3 id="S-15-4-光栅衍射"><a href="#S-15-4-光栅衍射" class="headerlink" title="$\S 15.4$ 光栅衍射"></a>$\S 15.4$ 光栅衍射</h3><h3 id="习题课"><a href="#习题课" class="headerlink" title="习题课"></a>习题课</h3><h2 id="第十六章-光的偏振"><a href="#第十六章-光的偏振" class="headerlink" title="第十六章 光的偏振"></a>第十六章 光的偏振</h2><h3 id="第十六章总结-1"><a href="#第十六章总结-1" class="headerlink" title="第十六章总结"></a>第十六章总结</h3><h3 id="习题课-1"><a href="#习题课-1" class="headerlink" title="习题课"></a>习题课</h3>]]></content>
-      <tags>
-        <tag>大学笔记</tag>
-        <tag>物理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ICPC-2022</title>
-    <url>/2023/10/18/ICPC-2022/</url>
-    <content><![CDATA[<p>ICPC 2022 补题合集</p>
-<span id="more"></span>
-
-<h2 id="The-2023-ICPC-Asia-Hong-Kong-Regional-Programming-Contest-The-1st-Universal-Cup-Stage-2-Hong-Kong"><a href="#The-2023-ICPC-Asia-Hong-Kong-Regional-Programming-Contest-The-1st-Universal-Cup-Stage-2-Hong-Kong" class="headerlink" title="The 2023 ICPC Asia Hong Kong Regional Programming Contest (The 1st Universal Cup, Stage 2:Hong Kong)"></a><a href="https://codeforces.com/gym/104172">The 2023 ICPC Asia Hong Kong Regional Programming Contest (The 1st Universal Cup, Stage 2:Hong Kong)</a></h2><h3 id="B-Big-Picture"><a href="#B-Big-Picture" class="headerlink" title="B. Big Picture"></a><a href="https://qoj.ac/contest/1099/problem/5456">B. Big Picture</a></h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>给你一个 $(n+1) \times (m+1)$ 的方格矩阵，每个格子一开始是白色。</p>
-<p>你会对每一行和每一列进行染色。将第 $i$ 行的前 $j$ 个格子染为黑色的概率为 $p_{i, j}$，将第 $j$ 列的前 $i$ 个格子染为黑色的概率为 $q_{i, j}$。保证每一行的 $p_{i, j}$、每一列的 $q_{i, j}$ 的和为 1。行与列是独立的，这意味着同一个格子可能会同时被行和列各染一次。</p>
-<p>求同色连通块的期望个数，模 $998244353$。</p>
-<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a><strong>Solution</strong></h4><p>对于每一个染列的操作，我们发现每列第一个（即第一行）一定都会被染色。故所有由染列得到的黑格子都会经由第一行连在一起。</p>
-<p>对于每一个染行的操作，我们发现每行第一个（即第一列）一定都会被染色。故所有由染行得到的黑格子都会经由第一列连在一起。</p>
-<p>又因为第一行第一列的格子一定会被染色，所以所有黑格子一定都是一个大连通块。并且最后一行，最后一列一定都是白色格子，所以我们要算的就是被黑色格子断开所形成的白色区域个数。</p>
-<p>要确定每一个区域的个数，我们只要找一个区域中有标志的格子（含有某个独一无二的特性，只有其中某个格子有，其他格子都没有）。我们自然想到找角落的格子。思考发现由于每次染前缀的特性，左上角，右上角，左下角符合条件的格子均可能不唯一，只有右下角的格子唯一。所以找区域个数变为找区域右下角格子的个数，即计算有多少个格子可能称为右下角格子。这个概率是该格子没被染色并且下面，右边均被染色。</p>
-<p><a href="https://codeforces.com/gym/104172/submission/228641466">Code</a></p>
-<h3 id="E-Goose-Goose-DUCK"><a href="#E-Goose-Goose-DUCK" class="headerlink" title="E. Goose, Goose, DUCK?"></a><a href="https://codeforces.com/gym/104172/problem/E">E. Goose, Goose, DUCK?</a></h3><h4 id="Description-1"><a href="#Description-1" class="headerlink" title="Description"></a>Description</h4><p>给定一个序列 $\{a_i\}$，对于一个子序列，若其<strong>不合法</strong>，当且仅当子序列中存在某个元素出现了<strong>恰好</strong> $k$ 次。求这个序列中有多少个<strong>合法子序列</strong>。</p>
-<p>$n \le 10^6$</p>
-<h4 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a><strong>Solution</strong></h4><p>我们可以固定左端点，求有多少合法右端点。也可以固定右端点，求有多少合法左端点。</p>
-<p>假设固定一个左端点，我们把右边所有不合法的区域全部标记 $+1$，初始时右边所有区域都是 $0$。题目就变为了求右边有多少个标记为 $0$ 的点。然后每次左端点都可以向右移动一位，移动的时候判断一下，如果这个元素右边区域剩的元素少于 $k$ 个，那么就不用标记 $-1$。反之把这个元素原先不合法的区域都变合法（即标记 $-1$ ），然后再把新的区域标记不合法（标记 $+1$ ）。</p>
-<p>整个过程可以用线段树解决。时间复杂度 $\Theta (n\log n)$。</p>
-<p><a href="https://codeforces.com/gym/104172/submission/228673534">Code</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>CodeForces 补全计划（1826 ~ 1850）</title>
-    <url>/2023/06/26/CF-Instrumentality-Project-I/</url>
-    <content><![CDATA[<p>千里之行，始于足下。</p>
-<span id="more"></span>
-
-<h2 id="1826-Codeforces-Round-870-Div-2"><a href="#1826-Codeforces-Round-870-Div-2" class="headerlink" title="1826. Codeforces Round 870 (Div. 2)"></a>1826. <a href="https://codeforces.com/contest/1826">Codeforces Round 870 (Div. 2)</a></h2><h3 id="E-Walk-the-Runway"><a href="#E-Walk-the-Runway" class="headerlink" title="E. Walk the Runway"></a><a href="https://codeforces.com/contest/1826/problem/E">E. Walk the Runway</a></h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>$n$ 个人每个人都有一个价值 $p_i$，然后这 $n$ 个人有 $m$ 维数值，要求你从中选取若干个人并且可以任意调整选的人的顺序，要求选的人满足 $m$ 维中每一维里选的人的数值都严格递增。</p>
-<p>$n \le 5000,m \le 500$。</p>
-<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>如果我们已知两个人之间的偏序关系，我们可以在两个人之间连一条有向边（或不连），故这 $n$ 个人的关系可以用一个有向无环图来表示，在图上跑 dfs，时间复杂度是 $O(n^2)$，是完全够的，那么我们现在研究如何求任意两个人之间偏序关系。</p>
-<p>直接暴力求偏序关系的时间复杂度是 $O(n^2m)$，显然是会 T 的，那么我们可以用 bitset 来优化。对每一维排完序后前面的肯定不会排在这个数的后面，故每次用 bitset 的 &amp; 运算即可，时间复杂度是 $O(\dfrac{m}{w})$，其中 $w$ 等于 $64$。</p>
-<p><a href="https://codeforces.com/contest/1826/submission/212761847">Code</a></p>
-<h3 id="F-Fading-into-Fog"><a href="#F-Fading-into-Fog" class="headerlink" title="F. Fading into Fog"></a><a href="https://codeforces.com/contest/1826/problem/F">F. Fading into Fog</a></h3><h4 id="Description-1"><a href="#Description-1" class="headerlink" title="Description"></a>Description</h4><p>交互题</p>
-<p>有 $n$ 个隐藏点，每次你可以给出 $a$，$b$，$c$，询问一条形如 $ax+by+c=0$ 的直线，交互库会以<strong>任意顺序</strong>告诉你每个点在直线上的投影（保证每个返回的投影点与真实投影点的距离不超过 $10^{-4}$）。</p>
-<p>请用最少的询问求出这些隐藏点的位置，精度相差 $10^{-3}$ 即可。</p>
-<p>保证每个隐藏点的与其他隐藏点的 $x$ 坐标和 $y$ 坐标都至少相差 $1$，每次询问的 $∣a∣+∣b∣≥0.1$。</p>
-<h4 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h4><p>通过画图观察不难发现，其实最多三次询问就可以确定这 $n$ 个点了，所以题目就变为不超过三次询问求出 $n$ 点，一条平行 $x$ 轴，一条平行 $y$ 轴，一条斜着的边（但是很贴近 $x$ 轴），前两个就可以确定这 $n$ 个点的横纵坐标，第三个完全确定这 $n$ 个点。</p>
-<p>为什么第三条线要贴近 $x$ 轴呢？因为我们的处理方法是对第一，三条线得到的 $n$ 个投影点按横坐标排序，选一条贴近 $x$ 轴的线保证这 $n$ 个点和第一条线的 $n$ 个点顺序一致，这样的话我们就可以算出每个点纵坐标的值，但不准确可能会有误差，但是我们知道每个点的纵坐标，所以我们可以找纵坐标和我们计算的估计值中最贴近的值来替换。</p>
-<p>值得注意的是，本题对精度要求较高，应用 <code>long double</code> 来存储</p>
-<p><a href="https://codeforces.com/contest/1826/submission/212805712">Code</a></p>
-<h2 id="1828-Codeforces-Round-873-Div-2"><a href="#1828-Codeforces-Round-873-Div-2" class="headerlink" title="1828. Codeforces Round 873 (Div. 2)"></a>1828. <a href="https://codeforces.com/contest/1828">Codeforces Round 873 (Div. 2)</a></h2><h3 id="D2-Range-Sorting-Hard-Version"><a href="#D2-Range-Sorting-Hard-Version" class="headerlink" title="D2. Range Sorting (Hard Version)"></a><a href="https://codeforces.com/contest/1828/problem/D2">D2. Range Sorting (Hard Version)</a></h3><h4 id="Description-2"><a href="#Description-2" class="headerlink" title="Description"></a>Description</h4><p>对一个数组 $\{p_i\}$ 的一段区间 $[l,r]$ 排序的代价为 $r−l$ ，对整个数组 $p_i$ 排序的代价为选定若干区间并排序，使得整个数组有序的代价之和。</p>
-<p>求 $\{a_i\}$ 的所有子段排序的代价之和。</p>
-<p>Easy Version $n \le 5 \times 10^3$</p>
-<p>Hard Version $n \le 3 \times 10^5$</p>
-<h4 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h4><p>有点难想。</p>
-<p>仔细观察样例，不难发现一些性质：</p>
-<ul>
-<li>操作区间一定是不重叠的，不然直接对整个区间操作更优。</li>
-<li>尽可能多区间操作会使答案更优。</li>
-<li>更分成两个区间操作则一定满足前一个区间的最大值小于后一个区间的最小值。</li>
-</ul>
-<p>那么基于以上性质，我们很容易搞出 $O(n^3)$ 暴力：枚举区间左右端点，枚举中间间隔点，提前用 st表 预处理出区间最大最小值然后来求，但是这样发现连 Easy Version 都过不了，故我们可以来稍改进一下思路。</p>
-<p>对于 Easy Version，我们可以固定左端点，每次枚举右端点，每次向后加入一个新的数时，我们要重新计算对答案的贡献，我们算 $[l, r]$ 区间的答案就是区间长度减去最多可拆分区间数，假设我们已经知道了 $[l, r - 1]$ 区间的答案以及划分区间，加入 $a_r$ 数后，我们其实就是要把这个数和某个区间合并，满足合并后的区间的最小值依然大于前面区间的最大值。所以我们可以记录之前几个划分区间的最大值，然后不断向前跳，看 $a_r$ 可以和哪几个区间合并，找到第一个可以合并的区间就直接合并，这样一定是最优的。合并完之后更新新的拆分区间，答案也比较好统计，时间复杂度 $O(n^2)$。</p>
-<p>对于 Hard Vesion，我们发现很难从 Easy Version 上再继续优化，我们换另一个思路。能过 $3 \times 10^5$ 的做法应该是 $O(nlogn)$ 或 $O(n)$ 的，所以我们要找到这个复杂度的算法应该是算每个位置所能做出的贡献。我们先算最坏情况下一共的代价为 $\sum_{i = 2}^{n}(i - 1)(n - i + 1)$，然后我们再算每个位置对代价能减少的贡献。若能对答案产生减少的贡献，对于一个大区间，我们一定可以拆分成两个小区间。对于每个位置，我们不妨假设这个位置 $i$ 上的数是后一个区间的最小值。然后我们往后找到第一个小于 $a_i$ 的数的位置 $r_i$（这里求“第一个小于“这样的位置，我们可以用单调栈来求），然后再往前找第一个小于 $a_i$ 的数的位置 $l_i$，那么我们可以确定后一个区间的左端点是 $(l_i + 1)$，右端点是在 $i \sim (r_i - 1)$ 里选。然后前一个区间的右端点是 $l_i$，最后只用确定前一个区间的左端点，这里我们可以用 st表 先求出区间最大值，然后不断跳表来求出左端点 $kdl$。然后这个位置的数对答案减少的贡献为 $(r_i - i)\times(l_i - kdl + 1)$，时间复杂度为 $O(nlogn)$。</p>
-<p><a href="https://codeforces.com/contest/1828/submission/212909151">Code (Easy Version)</a></p>
-<p><a href="https://codeforces.com/contest/1828/submission/213004607">Code (Hard Version)</a></p>
-<h3 id="E-Palindrome-Partition"><a href="#E-Palindrome-Partition" class="headerlink" title="E. Palindrome Partition"></a><a href="https://codeforces.com/contest/1828/problem/E">E. Palindrome Partition</a></h3><h4 id="Description-3"><a href="#Description-3" class="headerlink" title="Description"></a>Description</h4><p>称一个字符串是好的，当且仅当它是一个长度为偶数的回文串或由若干长度为偶数的回文串拼接而成。</p>
-<p>给定一个长度为 $n$ 的字符串 $s$，求有多少 $s$ 的子串是好的。</p>
-<p>$1≤n≤5×10^5$，$s$ 仅包含小写字母。</p>
-<h4 id="Solution-3"><a href="#Solution-3" class="headerlink" title="Solution"></a>Solution</h4><p>根据数据范围可以得出正解的时间复杂度应该是 $O(n)$ 或 $O(nlogn)$ 的。</p>
-<p>本题采用动态规划，可以令 $g[i]$ 表示以 $i$ 结尾的好串个数，那么显然答案就是 $\sum_{i = 1}^n g[i]$ 。那么怎么求 $g[i]$ 呢，我们考虑到对于一个回文串，我们把它尽可能多分为由若干回文字串组成，分到不能分为止。这样分解出来的每一个回文串里一定不会包含回文前缀 / 后缀（因为要是包含的话就又可以分解了）。这样分解之后，对于一个好的字符串，一定是由若干小的不可分解的回文串组成。而且显然这种分解方法是唯一的。说明这样的话，对于每个好的字符串而言我们只算了一次，正是我们想要的。基于这个思路，我们再引入一个新的数组 $f[i]$，$f[i]$ 表示以 $i$ 结尾的回文串的最小长度，因为以 $i$ 结尾的字串一定是包含以 $i$ 结尾的最小回文串的，而且基于之前的分解方法，我们可以得到 $g[i] = g[i - f[i]] + 1(f[i] \ne 0)$，当 $f[i] = 0$ 时，$g[i] = 0$。那么现在我们将问题转化为了如何求 $f[i]$，我们先进行一遍 Manacher 算法，求出以每一位为对称轴的最大回文半径，由于要求是偶回文，所以我们只考虑以两个位置中间为轴。我们发现，若以第 $i$ 位为轴，那么 $[i + 1, i + len[i]]$ 这个范围内是都可以作为回文结尾的，可以被 $i$ 覆盖。而想要让回文最小，就是从后向前扫一遍，如果先被以 $i$ 覆盖的，一定满足以 $i$ 为轴回文最小，我们知道了右端点和回文轴就可以计算出回文长度了，也就可以计算出 $f[i]$ 了，要注意的是，如果区间中一部分点被之前的对称轴覆盖了，那么我们被之后对称轴覆盖时要跳过这几个点，可以用双向链表来维护。</p>
-<p><a href="https://codeforces.com/contest/1828/submission/213452328">Code</a></p>
-<h3 id="F-Two-Centroids"><a href="#F-Two-Centroids" class="headerlink" title="F. Two Centroids"></a><a href="https://codeforces.com/contest/1828/problem/F">F. Two Centroids</a></h3><h4 id="Description-4"><a href="#Description-4" class="headerlink" title="Description"></a>Description</h4><h4 id="Solution-4"><a href="#Solution-4" class="headerlink" title="Solution"></a>Solution</h4><h2 id="1829-Codeforces-Round-871-Div-4"><a href="#1829-Codeforces-Round-871-Div-4" class="headerlink" title="1829. Codeforces Round 871 (Div. 4)"></a>1829. <a href="https://codeforces.com/contest/1829">Codeforces Round 871 (Div. 4)</a></h2><h3 id="G-Hits-Different"><a href="#G-Hits-Different" class="headerlink" title="G. Hits Different"></a><a href="https://codeforces.com/contest/1829/problem/G">G. Hits Different</a></h3><h4 id="Description-5"><a href="#Description-5" class="headerlink" title="Description"></a>Description</h4><p><img src="1829G.png" alt="1829G"></p>
-<p>若干块以金字塔状摆放，用球击倒下方的，上方也会倒下，第 $n$ 块分数 $n^2$，问用球打第 $n$ 块能得多少分</p>
-<h4 id="Solution-5"><a href="#Solution-5" class="headerlink" title="Solution"></a>Solution</h4><p>方法一：</p>
-<p>​    动态规划， $f[i]$ 表示击打第 $i$ 块能得的分数，$f[i] = f[左上] + f[右上] - f[公共]$，因为左上和右上是有公共部分会多算，所以简单容斥一下</p>
-<p>方法二：</p>
-<p>​    还是动态规划，先把图倾斜 $45°$</p>
-<p>​    <img src="1829G-sol1.png" alt="1829G-sol1"></p>
-<p>​    感觉变好看了一点（？）</p>
-<p>​    再转45°</p>
-<p><img src="1829G-sol2.png" alt="1829G-sol2"></p>
-<p>​    嗯，变成一个简单二维DP就能解决的问题了</p>
-<p><a href="https://codeforces.com/contest/1829/submission/211201013">Code (Method I)</a></p>
-<p><a href="https://codeforces.com/contest/1829/submission/211200275">Code (Method II)</a></p>
-<h2 id="1837-Educational-Codeforces-Round-149-Rated-for-Div-2"><a href="#1837-Educational-Codeforces-Round-149-Rated-for-Div-2" class="headerlink" title="1837. Educational Codeforces Round 149 (Rated for Div. 2)"></a>1837. <a href="https://codeforces.com/contest/1837">Educational Codeforces Round 149 (Rated for Div. 2)</a></h2><h3 id="E-Playoff-Fixing"><a href="#E-Playoff-Fixing" class="headerlink" title="E. Playoff Fixing"></a><a href="https://codeforces.com/contest/1837/problem/E">E. Playoff Fixing</a></h3><h4 id="Description-6"><a href="#Description-6" class="headerlink" title="Description"></a>Description</h4><p>给定数 $k$，一共有 $2^k$ 个人参加比赛，序号越小的实力越强。每轮第 $2i$ 和 $2i-1$ 进行比赛，一共进行 $k$ 轮，最后要求序号为 $1$ 的一直留到最后一轮，序号为 $2$ 的留到倒数第二轮，序号为 $3 \sim 4$ 的留到倒数第三轮，以此类推，序号 $2^{k - 1} + 1$ 到 $2^k$ 的人要求第一轮淘汰，给定部分人当前位置，如果这个位置上还没确定选手就用 $-1$ 表示，问一共又有多少种表示合法方案</p>
-<h4 id="Solution-6"><a href="#Solution-6" class="headerlink" title="Solution"></a>Solution</h4><p>第一轮中，我们可以知道序号 $2^{k - 1} + 1$ 到 $2^k$ 的人可以安排在哪里，一定是在 $\{1,2\}$，$\{3,4\},\cdots, \{2^k - 1,2^k\}$ 中各选一个，如果两个都没选则两个位置都可以放，记一下这种情况的个数是 $cnt1$，如果一个位置放了小于 $2^{k-1}$ 的序号，那么只能选另一个位置放，如果两个位置都被选了且不合法，那么就返回 $0$，设一共有 $cnt2$ 个可以放的位置，那么这轮方案数是 $2^{cnt1} \times cnt1 !$ 而且这一轮放置的人下一轮都被淘汰了，所以无后效性，然后下一轮其实就变为规模折半的子问题，不断迭代计算即可</p>
-<p><a href="https://codeforces.com/contest/1837/submission/211143124">Code</a></p>
-<h3 id="F-Editorial-for-Two"><a href="#F-Editorial-for-Two" class="headerlink" title="F. Editorial for Two"></a><a href="https://codeforces.com/contest/1837/problem/F">F. Editorial for Two</a></h3><h4 id="Description-7"><a href="#Description-7" class="headerlink" title="Description"></a>Description</h4><p>$n$ 个数中选 $k$ 个数（不改变在原序列中顺序），要求这 $k$ 个数分为前后两半后，这前后两部分和的最大值尽可能小。</p>
-<h4 id="Solution-7"><a href="#Solution-7" class="headerlink" title="Solution"></a>Solution</h4><p>这道题可以用二分来做，对于二分值 $lim$，先正着扫一遍，再倒着扫一遍，扫到第 $i$ 位置时，我们只要算一下前 $i - 1$ 位置中 和不超过 $lim$ 的最多可以选的数的个数 + 后 $i$ 到 $n$ 位置中 和不超过 $k$ 的最多可以选的数的个数  之和是不是大于 $k$ 即可。</p>
-<p><a href="https://codeforces.com/contest/1837/submission/211151946">Code</a></p>
-<h2 id="1840-Codeforces-Round-878-Div-3"><a href="#1840-Codeforces-Round-878-Div-3" class="headerlink" title="1840. Codeforces Round 878 (Div. 3)"></a>1840. <a href="https://codeforces.com/contest/1840">Codeforces Round 878 (Div. 3)</a></h2><h3 id="F-Railguns"><a href="#F-Railguns" class="headerlink" title="F. Railguns"></a><a href="https://codeforces.com/contest/1840/problem/F">F. Railguns</a></h3><h4 id="Description-8"><a href="#Description-8" class="headerlink" title="Description"></a>Description</h4><p>Tema 在 $n⋅m$ 的网格内要从 $(0,0)$ 走到 $n⋅m$。第 $0$ 秒末 Tema 位于 $(0,0)$。</p>
-<p>每次行动 Tema 可以选择向下走，向右走或不动。</p>
-<p>机器人会发射 $r$ 次激光炮以阻挠他前进，具体为在第 $t$ 秒，向第 $x$ 行或第 $x$ 列发射激光炮，一整列或一整行都会受到炮击。若 Tema 在第 $t$ 秒末还停留在被炮击的单元格内则会被击毁。求 Tema 从 $(0,0)$ 到达 $(n,m)$ 的最短时间，若无法抵达，则输出 $−1$。</p>
-<p>$r$ 次炮击格式为 $t$，$d$，$coord$ ，$t$ 表示炮击发生的时间，$d$ 表示炮击方式 ( $d=1$ 时攻击一整行，$d=2$ 时攻击一整列)，$coord$ 表示攻击的是具体哪一行/列）</p>
-<h4 id="Solution-8"><a href="#Solution-8" class="headerlink" title="Solution"></a>Solution</h4><p>设 $f[i][j][k]$ 表示在 $k$ 时刻到第 $i$ 行第 $j$ 列是否合法，由于我们发现时间 $t$ 的范围是到 $10^9$ 且到达某位置的时间 $t$ 只和 $i$，$j$，和停下躲避了几次有关，而且躲避的次数最多不超过 $100$ 次，所以 $k$ 可以用停下躲避的次数来表示，这样转移方程就很简单了  $f[i][j][k] = f[i - 1][j][k] | f[i][j - 1][k] | f[i][j][k - 1]$ 。</p>
-<p><a href="https://codeforces.com/contest/1840/submission/211968399">Code</a></p>
-<h3 id="G2-In-Search-of-Truth-Hard-Version"><a href="#G2-In-Search-of-Truth-Hard-Version" class="headerlink" title="G2. In Search of Truth (Hard Version)"></a><a href="https://codeforces.com/contest/1840/problem/G2">G2. In Search of Truth (Hard Version)</a></h3><h4 id="Description-9"><a href="#Description-9" class="headerlink" title="Description"></a>Description</h4><p>交互题</p>
-<p>一个转盘共 $n$（ $n$ 未知 ）个格子，格子 $1$ 到 $n$ 乱序编号，你每次可以顺/逆时针旋转 $k$ 个格子，输出顺/逆时针（分别用“+”、“-”表示）和 $k$。需要读取起始格子的编号和每次旋转后格子的编号，求 $n$。</p>
-<p>Easy Version 中旋转次数不大于 $2023$ 。</p>
-<p>Hard Version 中旋转次数不大于 $1000$ 。</p>
-<p>$n≤1×10^6,−10^9≤k≤10^9$ 。</p>
-<h4 id="Solution-9"><a href="#Solution-9" class="headerlink" title="Solution"></a>Solution</h4><p>很不错的一道题</p>
-<p>对于 Easy Version，参考 BSGS 算法，先连续 999 次 +1，然后每次 +1000，这样最多 1000 次就可以循环完一圈，然后走完一圈后必定会落在最初连续的前 1000 个格子上，我们可以通过转了多少正好可以走一圈来推算 n 的大小，最多询问 999 + 1000 次。</p>
-<p>对于 Hard Version，我们在 Easy Version 基础上稍加改进，我们对于一个 $n$，可以先转 $n_0$，然后再按 G1 的方法去转，先连续转 $d$ 个 $+1$，再一直 $+d$ 直到转完一圈为止，但是这个 $n_0$ 和 $d$ 如何确定呢。我们可以先随机 $k$ 次，然后去这 $k$ 次中得到的最大的数选为 $n_0$，因为如果直接选的话，选的数可能过大或过小，若是不随机选 $k$ 个数而是连续选 $k$ 个或间隔选 $k$ 个则容易被卡掉。不过这个算法由于是一定程度上取决于随机数的，所以不一定完全正确，当 $n$ 大于 $n_0 + d^2$ 时，就无法转到一圈，此时不对。所以 $k$ 次算出的数必须有一个要大于 $n - d^2$，出错的概率为 $P(A) = (\frac{n - d^2 - 1}{n})^k,(k + 2d = 1000)$，不难发现通过改变 $n$ 和 $k$ 大小是可以改变出错概率的，当选择 $k = 400, d = 300$ 时，即使是在 $n = 10^6$ 情况下 $P(A)$ 的数量级才是 $10^{-17}$，远远小于 $1$，故可以通过此题。</p>
-<p><a href="https://codeforces.com/contest/1840/submission/212058294">Code (Easy Version)</a></p>
-<p><a href="https://codeforces.com/contest/1840/submission/212063730">Code (Hard Version)</a></p>
-<h2 id="1848-Codeforces-Round-885-Div-2"><a href="#1848-Codeforces-Round-885-Div-2" class="headerlink" title="1848. Codeforces Round 885 (Div. 2)"></a>1848. <a href="https://codeforces.com/contest/1848">Codeforces Round 885 (Div. 2)</a></h2><h3 id="C-Vika-and-Price-Tags"><a href="#C-Vika-and-Price-Tags" class="headerlink" title="C. Vika and Price Tags"></a><a href="https://codeforces.com/contest/1848/problem/C">C. Vika and Price Tags</a></h3><h4 id="Description-10"><a href="#Description-10" class="headerlink" title="Description"></a>Description</h4><p>有 $a$, $b$ 两个长度均为 $n$ 序列， 一次变换记为 $a_i \to b_i, b_i \to \left | a_i - b_i \right | $，问是否可以经过若干次变换使得 $a$ 中所有元素全部变成 $0$。</p>
-<h4 id="Solution-10"><a href="#Solution-10" class="headerlink" title="Solution"></a>Solution</h4><p>不难发现，若 $(a_i, b_i)$ 中有一个元素变为 $0$（不是 $(0, 0)$ 情况），则 $(a_i, b_i)$ 则会经历 $(0, x) \to (x, 0) \to, (x, x) \to(0, x)$ 以 $3$ 为周期的变换。</p>
-<p>所以我们要求的是每个元素变为 $(x, 0)$ 的次数模 $3$ 的余数。</p>
-<p>不妨设 $a &gt;&gt; b$，则变换经历 $(a, b) \to (b, a - b) \to (a - b, a - 2b) \to (a - 2b, b)$ 。不难发现每三次会经历一次周期，每次 $a \to a - 2b$。这样的话我们就可以用辗转相除法来求了。</p>
-<p><a href="https://codeforces.com/contest/1848/submission/220325561">Code</a></p>
-<h3 id="D-Vika-and-Bonuses"><a href="#D-Vika-and-Bonuses" class="headerlink" title="D. Vika and Bonuses"></a><a href="https://codeforces.com/contest/1848/problem/D">D. Vika and Bonuses</a></h3><h4 id="Description-11"><a href="#Description-11" class="headerlink" title="Description"></a>Description</h4><p>初始有一个数 $s$，每次可以进行两种操作，获得价值为 $s$ 的利润或让 $s \to s + (s \mod 10)$，你可以进行 $k$ 次，问 $k$ 次之后的最大价值。</p>
-<h4 id="Solution-11"><a href="#Solution-11" class="headerlink" title="Solution"></a>Solution</h4><p>不难发现，个位是 $5$ / $0$ 的话，最多只能操作一次。</p>
-<p>个位是 $1$ / $3$ / $7$ / $9$ 的话，操作一次后变为 $2$ / $6$ / $4$ / $8$。</p>
-<p>而个位如果是 $2$ / $4$ / $6$ / $8$ 的话，则会有 $2 \to 4 \to 8 \to 6$ 的循环，我们记 $4$ 次操作为一个周期，一个周期可以让 $s \to s + 20$。</p>
-<p>则题目变为求周期数 $x$，使 $(s + 20 \times x) \times (k - 4 \times x)$ 最大，但是注意，这个周期的开头我们还要枚举，因为末尾可能是 $2$ / $4$ / $6$ / $8$ 中任一数。</p>
-<p><a href="https://codeforces.com/contest/1848/submission/220463956">Code</a> </p>
-<h3 id="F-Vika-and-Wiki"><a href="#F-Vika-and-Wiki" class="headerlink" title="F. Vika and Wiki"></a><a href="https://codeforces.com/contest/1848/problem/F">F. Vika and Wiki</a></h3><h4 id="Description-12"><a href="#Description-12" class="headerlink" title="Description"></a>Description</h4><p>给定一个长度为 $n$ 的数组 $a$（其中 $n$ 为 $2$ 的幂次），记一次变换为将整个数组 $a_i \to a_i \oplus a_{(i + 1) \mod n}$。 </p>
-<h4 id="Solution-12"><a href="#Solution-12" class="headerlink" title="Solution"></a>Solution</h4><p>手动模拟若干次后，我们发现当进行 $2^n - 1$ 次后，数组每个元素 $a_i \to \oplus_{j = 0}^{2^n}a_{i + j(\mod n)}$，利用这个性质我们可以先进行 $2 ^n - 1$ 次然后再进行 $1$ 次。这样就进行了 $2^k$ 次，时间复杂度为 $O(nlogn)$。</p>
-<p><a href="https://codeforces.com/contest/1848/submission/220480211">Code</a></p>
-<h2 id="1850-Codeforces-Round-886-Div-4"><a href="#1850-Codeforces-Round-886-Div-4" class="headerlink" title="1850. Codeforces Round 886 (Div. 4)"></a>1850. <a href="https://codeforces.com/contest/1850">Codeforces Round 886 (Div. 4)</a></h2><h3 id="F-We-Were-Both-Children"><a href="#F-We-Were-Both-Children" class="headerlink" title="F. We Were Both Children"></a><a href="https://codeforces.com/contest/1850/problem/F">F. We Were Both Children</a></h3><h4 id="Description-13"><a href="#Description-13" class="headerlink" title="Description"></a>Description</h4><p>$n$ 只青蛙，每次只挑 $a_i$ 的倍数的格子，要你再前 $n$ 格内放置一个陷阱，使尽可能多的青蛙跳进去。</p>
-<p>$n \le 10^5$ 。</p>
-<h4 id="Solution-13"><a href="#Solution-13" class="headerlink" title="Solution"></a>Solution</h4><p>如果知道第 $i$ 个格子能跳 $f_i$ 只青蛙，则可以将所有 $i$ 倍数格子全部加上 $f_i$ 。</p>
-<p>故两层循环枚举即可。时间复杂度 $O(\sum_{i = 1}^n \dfrac{n}{i}) \approx O(nlnn)$ 。</p>
-<p><a href="https://codeforces.com/contest/1850/submission/218473979">Code</a></p>
-<h3 id="H-The-Third-Letter"><a href="#H-The-Third-Letter" class="headerlink" title="H. The Third Letter"></a><a href="https://codeforces.com/contest/1850/problem/H">H. The Third Letter</a></h3><h4 id="Description-14"><a href="#Description-14" class="headerlink" title="Description"></a>Description</h4><p>若干点分布在一系列 $x$ 轴上，告诉你若干点之间的约束条件（在 左 / 右 xx 的位置处）。然后问你这一系列条件是否合理。</p>
-<h4 id="Solution-14"><a href="#Solution-14" class="headerlink" title="Solution"></a>Solution</h4><p>本题的模型可以抽象成一个有向图。但是这 $n$ 个点可能是若干连通块，不一定全是连通的。</p>
-<p>每次从一个点出发，设这个点的位置是 $0$，然后标记出所有和这个点相关的点的坐标。</p>
-<p>最后再把这些约束关系一一查询，看最后是否满足条件。</p>
-<p><a href="https://codeforces.com/contest/1850/submission/219780470">Code</a></p>
-]]></content>
-      <tags>
-        <tag>算法竞赛</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大学笔记 | 模拟电子技术基础</title>
-    <url>/2023/08/29/Electronic-Devices-and-Circuit-Theory/</url>
-    <content><![CDATA[<p>本课最大的收获是习得了上课隐身术，只有聪明的人才能看到我。</p>
-<p>——  updated on 2023/10/10 ———-</p>
-<p>老师上课点名，隐身术失效了呜呜呜 🥲</p>
-<span id="more"></span>
-
-<blockquote>
-<p><strong>写在前面</strong></p>
-<p>本笔记内容排布主要参考于华成英主编的《模拟电子技术基础》。</p>
-<p>同时内容一定程度上参考于华成英的《模拟电子技术基础》和 <a href="https://www.bilibili.com/video/BV1Gt411b7Zq/?spm_id_from=333.1007.top_right_bar_window_custom_collection.content.click&amp;vd_source=0f0f84fd4f7853dba4619576003d75fb">b 站上交郑益慧老师的视频</a>。</p>
-</blockquote>
-<blockquote>
-<p><strong>Attention !!!</strong></p>
-<p><strong>$I_B$，表示直流量（静态值）。</strong></p>
-<p><strong>$\overset{.}{I_b}$，表示正弦交流的向量形式。</strong></p>
-<p><strong>$I_b$，表示正弦交流量的有效值。</strong></p>
-<p><strong>$i_B$，表示交、直流混合量。</strong></p>
-<p><strong>$i_b$，表示纯交流量。</strong></p>
-</blockquote>
-<h2 id="第一章-常用半导体器件"><a href="#第一章-常用半导体器件" class="headerlink" title="第一章 常用半导体器件"></a>第一章 常用半导体器件</h2><h3 id="S-1-1-半导体基础知识"><a href="#S-1-1-半导体基础知识" class="headerlink" title="$\S 1.1$ 半导体基础知识"></a>$\S 1.1$ 半导体基础知识</h3><blockquote>
-<p>这部分了解即可。</p>
-</blockquote>
-<p>物质按导电能力可分为导体，半导体和绝缘体，其中半导体主要材料是硅（Si），锗（Ge）和砷化镓（GaAs）。</p>
-<p>研究半导体原子结构时，为简化起见，把内层电子和原子核视为一个整体，称为惯性核，其周围是价电子。</p>
-<ul>
-<li><strong>本征半导体</strong></li>
-</ul>
-<p><strong>完全纯净的，晶体结构完整的半导体晶体称为本征半导体。</strong>在 $0K$ 温度下，没有自由移动的载流子，不能导电相当于绝缘体。而当温度升高时共价键中的价电子从外界获得能量而激发成自由电子，这种现象称为本征激发。</p>
-<p><strong>可以把激发出的空位视为带正电荷的载流子，并把它称为空穴。</strong>半导体时依靠自由电子和空穴导电的。</p>
-<p>本征激发使两种载流子数量相等。空穴和自由电子相遇抵消的过程称为复合。温度一定时，两种载流子数目保持不变处于热平衡状态。</p>
-<p>设 $n_i$ 为热平衡载流子浓度，$p_0, h_0$ 分别为空穴和载流子浓度，则有 $p_0 = n_0 = n_i$。但是这种半导体导电能力很弱。</p>
-<blockquote>
-<p>本征激发和温度有关，复合和粒子浓度有关。</p>
-</blockquote>
-<p>杂质半导体分为 $N$ 型（电子型）和 $P$ 型（空穴型）</p>
-<ul>
-<li><strong>$N$ 型半导体</strong></li>
-</ul>
-<blockquote>
-<p>N 是 negative，指的是负的电子。</p>
-</blockquote>
-<p>向半导体中加入少量五价元素，称五价元素为<strong>施主元素</strong>，自由电子为多数载流子，简称多子。空穴称为少子。</p>
-<ul>
-<li><strong>$P$ 型半导体</strong></li>
-</ul>
-<blockquote>
-<p>P 是 positive，指的是正的空穴。</p>
-</blockquote>
-<p>向半导体中加入少量三价元素，称三价元素为<strong>受主元素</strong>，空穴为多子。自由电子为少子。</p>
-<p>杂质越多，多子浓度越高，导电性越强。<strong>少子浓度与温度有关。</strong></p>
-<ul>
-<li><strong>漂移电流和扩散电流</strong></li>
-</ul>
-<p>在外加电场作用下，载流子的定向移动称为漂移运动，会产生漂移电流。</p>
-<p>载流子由于浓度不一致会产生扩散运动，并产生扩散电流。</p>
-<ul>
-<li><p><strong>$PN$ 结的形成及特性</strong></p>
-<ol>
-<li><p>形成</p>
-<p>利用掺杂的方法，使半导体一半是 $P$ 一半是 $N$，由于扩散运动使两边载流子不断中和之后，$P$ 区的负离子和 $N$ 区的正离子形成内建电场组织多子扩散。直到两边达到稳态，就形成了 $PN$ 结。</p>
-<p>两边掺杂浓度一样可以形成对称结，反之形成不对称结。</p>
-<p>中间的正负离子界面称为空间电荷区，又称为耗尽区 / 势垒区 / 阻挡区。</p>
-<p>内建电场的电位差 $V_B$ 称为内建电位差，满足<br>$$<br>V_B \approx V_Tln\dfrac{N_aN_d}{n_i^2} \<br>V_T = \dfrac{kT}{q}<br>$$<br><img src="1.1-1.png" alt="1-1"></p>
-</li>
-<li><p>特性</p>
-<ul>
-<li><p>正向特性：当电源正极接 P，负极接 N，称 PN 结外加正向电压，也称正向偏置。会使 PN 结减小（刚开始很小的时候，电子难过去，后来不断削弱阻挡区，电流指数级上涨）。</p>
-</li>
-<li><p>反向特性：当电源正极接 N，负极接 P，称 PN 结外加反向电压，也称反向偏置。会使 PN 结增大（阻挡区越来越厚，电子更难过去，不导通）。</p>
-</li>
-<li><p>伏安特性：PN 结的电流与端电压存在关系：<br>$$<br>i = I_s(e^{v/V_T} - 1)<br>$$</p>
-<blockquote>
-<p>$I_s$ 是反向饱和电流，$V_T$ 是和温度相关的，室温下 $V_T$ 是 26 mv。 </p>
-<p>Ge 作材料的晶体管导通电压是 0.2 ~ 0.3 V，Si 是 0.6 ~ 0.7 V。</p>
-</blockquote>
-<p>​        当 PN 结正偏且 $\left |  v \right |  \gg V_T$ 时，式子可简化为<br>$$<br>i \approx I_se^{v/V_T}<br>$$<br>​        当 PN 结反偏且 $\left |  v \right |  \gg V_T$ 时，式子可简化为<br>$$<br>i \approx -I_s<br>$$<br><img src="1.1-2.png" alt="1-2"></p>
-<blockquote>
-<p> 其实反向的时候有一个非常非常小的电流。</p>
-</blockquote>
-</li>
-<li><p>击穿特性：当 PN 结的反向电压增大到某一值时，反向电流会突然增大，PN 结被击穿，击穿分为：雪崩击穿（掺杂浓度低的时候，PN 结宽）和齐纳击穿（掺杂浓度高的时候，PN 结窄）。</p>
-<blockquote>
-<p>雪崩击穿：温度越高，所需击穿电压越高。齐纳击穿：温度越高，所需击穿电压越低。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>PN 结的电容效应</p>
-<p>PN 结具有电荷随着电压变化而变化的特性，与电容类似。</p>
-<p>PN 结的结电容是由以下两种电容组成的。</p>
-<ul>
-<li><p>势垒电容</p>
-<blockquote>
-<p>由空间电荷区的电荷所导致。反向电压越大，PN 结越宽，空间电荷区越宽，电容越大。</p>
-</blockquote>
-<p>  <img src="1.1-3.png" alt="1-3"></p>
-</li>
-<li><p>扩散电容</p>
-<blockquote>
-<p>由 P 区和 N 区粒子浓度差所导致。正向电压越大，N 区扩散来的电子越多，浓度越大，曲线也不断上升。这条曲线反映了从结到边缘处，粒子浓度越来越少。<strong>这种电容发生在扩散区内，是由靠近耗尽区和远离耗尽区的非平衡少子浓度差所造成的，且这种电荷的积累与释放过程与电容器充放电类似，故有电容效应，称为扩散电容。</strong></p>
-</blockquote>
-<p>  <img src="1.1-4.png" alt="1-4"></p>
-</li>
-</ul>
-</li>
-</ol>
-</li>
-</ul>
-<h3 id="S-1-2-半导体二极管"><a href="#S-1-2-半导体二极管" class="headerlink" title="$\S 1.2$ 半导体二极管"></a>$\S 1.2$ 半导体二极管</h3><p>将 PN 结封装起来引出两根引线，形成二极管。</p>
-<ul>
-<li><p>常见结构</p>
-<p><img src="1.2-1.png" alt="1.2-1"></p>
-</li>
-<li><p>二极管的伏安特性</p>
-<ol>
-<li><p>伏安特性</p>
-<p>和 PN 结几乎一样，只是多了个外壳对电阻的影响。</p>
-<p>由于体电阻的存在，二极管电流比 PN 结小。反向电流比 PN 结大一些。</p>
-</li>
-<li><p>温度对电阻的影响：</p>
-<p><img src="1.2-2.png" alt="1.2-2"></p>
-<blockquote>
-<p>正向：相同电压下，温度越高，电流越大。</p>
-<p>反向：相同电压下，温度越高，少子浓度越高，反向电流越大。 </p>
-</blockquote>
-</li>
-</ol>
-</li>
-<li><p>二极管的主要参数</p>
-<ol>
-<li><p>最大整流电流 $I_F$</p>
-<p>二极管长期运行时所允许的的最大正向平均电流。</p>
-</li>
-<li><p>最高反向工作电压 $U_R$</p>
-<p>工作时允许外加的最大反向电压。一般是反向击穿电压 $U_{(BR)}$ 的一半。</p>
-</li>
-<li><p>反向电流 $I_R$</p>
-<p>二极管未击穿时的反向电流，$I_R$ 越小，二极管单向导电性越好，$I_R$ 对温度很敏感。</p>
-</li>
-<li><p>最高工作频率 $f_M$</p>
-<p>$f_M$ 是二极管的上限截止频率。由于结电容的存在，当二极管工作频率超过上限时，可以看作导通，就没有单向导电性了。</p>
-<blockquote>
-<p>交流电频率很高，不停地给电容进行充放电。而充放电的过程有电流流通，相当于通电。所以二极管变成双向导电，失去单向性。</p>
-</blockquote>
-</li>
-</ol>
-</li>
-<li><p>二极管的等效电路</p>
-<ol>
-<li><p>伏安特性曲线折线化得到的电路</p>
-<blockquote>
-<p> 这是在直流情况下的。</p>
-</blockquote>
-<p>下图是二极管的常见等效模型。</p>
-<p><img src="1.2-3.png" alt="1.2-3"></p>
-</li>
-<li><p>二极管的微变等效电路</p>
-<blockquote>
-<p>这是在交流情况下的。</p>
-</blockquote>
-<p>要求出二极管在交流电路中的等效电阻，我们先求出这个电路的直流电流（或者理解为交流电流的浮动中心），然后利用下图的变换，得出 $r_d \approx \dfrac{U_T}{I_D}$。</p>
-<p><img src="1.2-4.png" alt="1.2-4"></p>
-<p>现在二极管相当于是一个纯电阻 $r_d$，先前我们求出了直流电流 $I_D$，现在可以求出交流电流（此时电路相当于去掉直流电压） $i_d = \dfrac{u_i}{r_d + R}$，整个电路中的总电流为直流和交流电流之和 $i_D = I_D + i_d$。</p>
-<blockquote>
-<p>这里相当于为了让二极管变成电阻，必须要把上图的原点移到 Q 的位置处（因为电阻的伏安曲线是过原点的），而移到 Q 位置处需要的操作就是先把直流部分拿走，最后算总的时候再把直流部分加上。</p>
-</blockquote>
-<p><img src="1.2-5.png" alt="1.2-5"></p>
-</li>
-</ol>
-</li>
-<li><p>稳压二极管</p>
-<p>稳压二极管是利用二极管反向导通时端电压几乎不变而制成。</p>
-</li>
-</ul>
-<ol>
-<li><p>伏安特性</p>
-<p><img src="1.2-6.png" alt="1.2-6"></p>
-<p>左图为稳压管的伏安特性曲线，与二极管几乎一样。主要利用反向的击穿区。右上是稳压二极管的符号。右下是稳压管的等效电路。</p>
-</li>
-<li><p>主要参数</p>
-<p><strong>稳定电压 $U_Z$</strong></p>
-<p>$U_Z$ 是在规定电流下稳压管的反向击穿电压。由于半导体器件参数的分散性，同一型号的稳压管的 $U_z$ 存在一定差别。</p>
-<p><strong>稳定电流 $I_Z$</strong></p>
-<p>$I_Z$ 是稳压管工作在稳压状态时的参考电流，电流低于此值时文雅效果变坏甚至不稳压，故也将 $I_Z$ 记作 $I_{Zmin}$。</p>
-<p><strong>额定功耗 $P_{ZM}$</strong></p>
-<p>$P_{ZM}$ 等于稳压管的稳定电压 $U_Z$ 与最大稳定电流 $I_{ZM}$（或记作 $I_{Zmax}$）的乘积。稳压管的功耗超过此值时，会因结温升过高而损坏。只要不超过稳压管的额定功率，电流愈大，稳压效果愈好。</p>
-<p><strong>动态电阻 $r_z$</strong></p>
-<p>$r_z$ 是稳压管工作在稳压区时，端电压变化量与其电流变化量之比，即 $r_z = \dfrac{\Delta U_Z}{\Delta I_Z}$。$r_z$ 越小，电流变化时 $U_Z$ 变化越小，即稳压管的稳压特性越好。</p>
-<p><strong>温度系数 $\alpha$</strong></p>
-<p>表示每变化 $1^{\circ}$ 稳压值的变化量，即 $\alpha = \dfrac{\Delta U_Z}{\Delta T}$。稳压值小于 $4$ V 的管子有负温度系数（属于齐纳击穿），即温度升高时稳定电压值下降，稳定电压大于 $7$ V 的管子具有正温度系数（属于雪崩击穿），即温度升高时稳定电压值上升；而稳定电压在 $4 \sim 7$ V 之间的管子温度系数非常小近似为 $0$（雪崩击穿和齐纳击穿都有）。</p>
-<blockquote>
-<p>温度低主要发生齐纳击穿，但齐纳击穿随着温度越高越容易发生。温度高主要发生雪崩击穿，但雪崩击穿随着温度越高越难发生。</p>
-</blockquote>
-</li>
-</ol>
-<h3 id="S-1-3-晶体三极管"><a href="#S-1-3-晶体三极管" class="headerlink" title="$\S 1.3$ 晶体三极管"></a>$\S 1.3$ 晶体三极管</h3><blockquote>
-<p>三极管，我们可以控制的是基极电流 $I_B$，然后发射极的电子浓度高，会迁移产生放大的电流 $I_C$，$I_C$ 是我们想要的，$I_C$ 主要是由 $U_{CE}$ 和 $I_B$ 所决定。根据 $I_B$  以及 $U_{CE}$ 的不同，我们将输出特性曲线可以分为截止区，放大区，饱和区。而输入电流 $I_B$ 往往和 $U_{CE}$ 和 $U_{BE}$ 有关（通常研究 $U_{CE}$ 一定时 $U_{BE}$ 对 $I_B$ 的影响），并且当 $U_{CE}$ 大于 $1$ 时，$U_{CE}$ 的变化对 $I_B$ 几乎没有影响 。</p>
-</blockquote>
-<ul>
-<li><p>晶体管的结构及类型</p>
-<p>三个电极，三个区域，两个 PN 结。</p>
-<p>右下两个图箭头方向代表的是发射结导通的方向。</p>
-<p><img src="1.3-1.png" alt="1.3-1"></p>
-</li>
-<li><p>晶体管的电流放大作用</p>
-<p>从电路角度来看，相当于集电区的电流是基区电流的放大。</p>
-<p><img src="1.3-2.png" alt="1.3-2"></p>
-<p>这是从内部结构变化来看，在理想工作状态下，发射极的电子向集电区和基区移动，主要还是向集电区。在这之中有微小的 基区到发射区的空穴 $I_{EP}$（忽略不计） 以及 集电区的电子和基区空穴的复合 $I_{CBO}$（忽略不计）。</p>
-<blockquote>
-<p>下图有两个量要注意一下，$I_{CEO}$ 是穿透电流，指的是基极开路时，集电极和发射极之间的电流。</p>
-<p>$I_{CBO}$ 是发射极开路时，集电极的反向饱和电流。</p>
-</blockquote>
-<p><img src="1.3-3.png" alt="1.3-3"></p>
-<p>从外部总体来看，$I_E = I_C + I_B$。</p>
-<p><strong>共射直流电流放大系数</strong> $\bar \beta = \dfrac{I_{CN}}{I_B’} = \dfrac{I_C - I_{CBO}}{I_B + I_{CBO}}$。</p>
-<p><strong>共射交流电流放大系数</strong> $\beta = \dfrac{\Delta i_{C}}{\Delta i_B}$。并且我们近似可以认为 $\beta \approx \bar \beta$。</p>
-<p><strong>共基直流电流放大系数</strong> $\bar \alpha = \dfrac{I_{CN}}{I_E} = \dfrac{\bar \beta}{1 + \bar \beta}$，</p>
-<p><strong>公基交流电流放大系数</strong> $\alpha = \dfrac{\Delta i_C}{\Delta i_E} = \dfrac{\beta}{1 + \beta}$。</p>
-<p>通常情况下 $\beta \approx \bar \beta \gg 1$，$\alpha \approx \bar \alpha \approx 1$。</p>
-</li>
-<li><p>晶体管的共射特性曲线</p>
-<ol>
-<li><p>输入特性曲线</p>
-<p><img src="1.3-4.png" alt="1.3-4"></p>
-<p>$U_{CE}$ 越大，集电结场强越强，会让更多电子到集电区而不是去基区中和，所以相同 $U_{BE}$ 下 $U_{CE}$ 越大，$i_B$ 越小。而且 $U_{CE}$ 增大到一定程度时，集电结的电场已经足够强，可以让绝大部分电子都到集电极，所以这时候再增大 $U_{CE}$ 对 $i_B$ 影响不大。</p>
-</li>
-<li><p>输出特性曲线</p>
-<p><img src="1.3-5.png" alt="1.3-5"></p>
-<p>根据 $I_B$ 以及 $U_{CE}$ 大小关系可以将输出特性曲线分为三部分。</p>
-<p>截止区相当于基区开路，这时候只有穿透电流 $I_{CEO}$。这时候发射结电压小于开启电压且集电结方向偏置。</p>
-<p>饱和区是发射结正向偏置且集电结正向偏置，相当于一部分本应该到集电区的电流跑到了基区，集电极电流 $i_C$ 仍有上升的可能。这部分区域是由 $U_{CE}$ 过小导致的。</p>
-<p>放大区是理想工作状态（绝大情况下），发射结正向偏置且集电结反向偏置。这时满足 $\bar \beta I_B = I_C$。</p>
-<p>同时，我们把上面图和下面图比较</p>
-<p><img src="1.3-8.png" alt="1.3-8"></p>
-<p>同样是改变 $U_{CE}$，为什么一个是 $I_C$ 变大，一个是 $I_C$ 变小呢？</p>
-<blockquote>
-<p>因为第一张图里是 $I_B$ 固定，只改变 $U_{CE}$，这里想引起 $U_{CE}$ 的变化势必要改变 $U_{CC}$。而在第二张图里，$U_{CC}$ 是固定不动的，只变动 $I_B$，这里 $I_B$ 是通过改变输入电压源引起的。</p>
-</blockquote>
-</li>
-</ol>
-</li>
-<li><p>主要参数</p>
-<ol>
-<li><p>直流参数</p>
-<p><strong>共射直流电流放大系数</strong> $\bar \beta = \dfrac{I_{CN}}{I_B’} = \dfrac{I_C - I_{CBO}}{I_B + I_{CBO}}$。</p>
-<p><strong>共基直流电流放大系数</strong> $\bar \alpha = \dfrac{I_{CN}}{I_E} = \dfrac{\bar \beta}{1 + \bar \beta}$。</p>
-<p>$I_{CEO}$ 是穿透电流，指的是基极开路时，集电极和发射极之间的电流。</p>
-<p>$I_{CBO}$ 是发射极开路时，集电极的反向饱和电流。且有 $I_{CEO} = (1 + \bar \beta)I_{CBO}$。</p>
-</li>
-<li><p>交流参数</p>
-<p><strong>共射交流电流放大系数</strong> $\beta = \dfrac{\Delta i_{C}}{\Delta i_B}$。并且我们近似可以认为 $\beta \approx \bar \beta$。（此时 $U_{CE}$ 是常量）</p>
-<p><strong>公基交流电流放大系数</strong> $\alpha = \dfrac{\Delta i_C}{\Delta i_E} = \dfrac{\beta}{1 + \beta}$。（此时 $U_{CB}$ 是常量）</p>
-<p><strong>特征频率</strong> $f_T$ 由于晶体管的交流电流放大系数是所加信号频率的函数，所以放大系数会随着所加信号频率变化而变化。当信号频率高到一定程度时，集电极电流与基极电流之比不但下降且发生偏移。当频率达到特征频率 $f_T$ 时，放大系数会下降到 $1$ 以下。</p>
-</li>
-<li><p>极限参数</p>
-<p><strong>最大集电极耗散功率 $P_{CM}$</strong></p>
-<p>与温度相关，表示一定温度下晶体管集电极所能产生的最大耗散功率。</p>
-<p><strong>最大集电极电流 $I_{CM}$</strong></p>
-<p>$i_C$ 在相当大的范围内 $\beta$ 值基本不变，但当 $i_C$ 数值大到一定程度时 $\beta$ 将减小，使 $\beta$ 明显减小的 $i_C$ 即为 $I_{CM}$。</p>
-<p><strong>极间反向击穿电压</strong></p>
-<p>晶体管某一电极开路时，另外两个电极间所允许加的最高反向电压称为极间反向击穿电压，超过此值使管子会发生击穿现象。</p>
-<p>$U_{(BR)CBO}$ 是发射极开路时集电极 - 基极间的反向击穿电压，这时集电结所允许加的最高反向电压。</p>
-<p>$U_{(BR)CEO}$ 是基极开路时集电极 - 发射极间的反向击穿电压，这时集电结承受反向电压。</p>
-<p>$U_{(BR)EBO}$ 是集电极开路时发射极 - 基极间的反向击穿电压，这时发射结所允许加的最高反向电压。</p>
-</li>
-</ol>
-</li>
-<li><p>光电三极管</p>
-<p>光电三极管是依靠光照强度来控制集电极电流的大小，可等效为一只光电二极管加上一只晶体管，并仅引出集电极和发射极。光电三极管与普通三极管的输出特性曲线类似，<strong>只是将参变量基极电流 $I_B$ 用入射光强 $E$ 取代。</strong></p>
-<p><img src="1.3-9.png" alt="1.3-9"></p>
-</li>
-<li><p>温度的影响</p>
-<ol>
-<li><p>$I_{CBO}$</p>
-<p>$I_{CBO}$ 是平衡少子漂移运动形成的，温度升高时漂移加剧。故温度升高 $I_{CBO}$ 变大，又因为 $I_{CEO} = (1 + \bar \beta)I_{CBO}$，所以 $I_{CEO}$ 也会变大。</p>
-</li>
-<li><p>输入特性</p>
-<p>与二极管类似，温度升高，图线左移，电流变大。</p>
-<p><img src="1.3-6.png" alt="1.3-6"></p>
-</li>
-<li><p>输出特性</p>
-<p>温度升高，所有电流都变大，且放大系数 $\beta$ 也会变大，导致集电极电流变大。</p>
-<p><img src="1.3-7.png" alt="1.3-7"></p>
-</li>
-</ol>
-</li>
-</ul>
-<h3 id="S-1-4-场效应管"><a href="#S-1-4-场效应管" class="headerlink" title="$\S 1.4$ 场效应管"></a>$\S 1.4$ 场效应管</h3><ul>
-<li><p>结型场效应管</p>
-<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CElectronic-Devices-and-Circuit-Theory%5C1.4-6.png" alt="1.4-6"></p>
-</li>
-</ul>
-<ul>
-<li><p>绝缘栅型场效应管</p>
-<blockquote>
-<p>又叫做 MOS 管。</p>
-</blockquote>
-<ol>
-<li><p>N 沟道增强型 MOS 管</p>
-<p>源极 s，栅极 g，漏极 d。下图 b 中箭头方向代表的是 PN 结的方向。</p>
-<blockquote>
-<p><strong>注意下图包裹两个 $N^+$ 的阴影区不是二氧化硅！（因为剖面线和上面二氧化硅相反）事实上这是 N 和 P 接触所形成的 PN 结。</strong></p>
-</blockquote>
-<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CElectronic-Devices-and-Circuit-Theory%5C1.4-1.png" alt="1.4-1"></p>
-<p><strong>工作原理</strong></p>
-<p>这里衬底 P 和栅极 g 相当于形成了极板的两极，中间是绝缘层形成电容。</p>
-<p>当 $u_{DS} = 0$ 时， 刚一开始加电压的话，靠近栅极的空穴会向下移动，相当于栅极金属层会聚集正电荷，形成耗尽层，就会形成左下图所示的情况。当电压不断增大时，耗尽层不断加宽，并且将衬底 P 那边的自由电子吸引过来，自由电子吸引到耗尽层与绝缘层之间形成反型层，如右下图所示。这个反型层就形成了漏 - 源之间的导电沟道。使沟道刚刚形成的栅 - 源电压称为开启电压 $U_{GS(th)}$。$u_{GS}$ 决定了反型层厚度。$u_{GS}$ 越大，反型层越厚，导电沟道电阻越小。<strong>换言之，这是一个可由电压控制电阻的器件。</strong></p>
-<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CElectronic-Devices-and-Circuit-Theory%5C1.4-2.png" alt="1.4-2"></p>
-<p>当 $u_{GS}$ 一定且大于形成沟道的临界值时，我们外加一个 $u_{DS}$，随着 $u_{DS}$ 的不断增大，我们发现右边通过的反型层不断缩减，这是因为反型层是由于电压差形成的，而最左边反型层电压差是 $u_{GS}$，但是到了最右边就是 $u_{GS} - u_{DS}$（可以这样理解：$u_{DS}$ 电压越大，d 端电势越高，沟道中的电子就会被吸收的更多，故靠近 d 端的沟道变窄，因为 g 端电势也会吸引电子，所以可以理解成两端电势相减是沟道靠近 d 端的宽度），换言之一部分 $u_{DS}$ 会抵消反型层中的电压。当 $u_{DS}$ 大到一定程度时会预夹断反型层（不是真的夹断，因为没有电流以后沟道的电压就和衬底一样了，在 $u_{gs}$ 作用下又会打开沟道，所以不会真的夹断）。在此之后随着 $u_{DS}$ 越来越大，夹断区的缝隙越来越大。</p>
-<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CElectronic-Devices-and-Circuit-Theory%5C1.4-3.png" alt="1.4-3"></p>
-<p>当 $u_{DS}$ 较小时，还没达到夹断的电压，此时 $r_{ds}$ 看作定值电阻，这个电阻值与 $u_{GS}$ 相关，当 $u_{DS}$ 较大时，会发生预夹断，此时电流就会保持恒定不变，此时的恒定电流值与 $u_{GS}$ 有关。也就是说 $u_{GS}$ 在 $u_{DS}$ 较小时决定电阻值，在 $u_{DS}$ 较大时决定电流值。 </p>
-<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CElectronic-Devices-and-Circuit-Theory%5C1.4-4.png" alt="1.4-4"></p>
-</li>
-<li><p>N 沟道耗尽型 MOS 管</p>
-<p>上面的情况是外加一个电压才能出现反型层，但对于N 沟道耗尽型 MOS 管，绝缘层二氧化硅中已经掺入大量正离子，所以初始就会形成反型层。当外加的电压 $u_{GS}$ 为负值时，反型层会变窄，沟道电阻变大。当 $u_{GS}$ 小到一定程度时，反型层消失，此时称为夹断电压。</p>
-<p><img src="1.4-5.png" alt="1.4-5"></p>
-</li>
-<li><p>特性曲线与电流方程</p>
-</li>
-</ol>
-</li>
-</ul>
-<ul>
-<li><p>场效应管的主要参数</p>
-<ol>
-<li><p>直流参数</p>
-<p>开启电压 $U_{GS(th)}$</p>
-<p>夹断电压 $U_{GS(off)}$</p>
-<p>饱和漏极电流 $I_{DSS}$</p>
-<p>直流输入电阻 $R_{GS(DC)}$</p>
-</li>
-<li><p>交流参数</p>
-<p>低频跨导 $g_m$</p>
-<p>极间电容</p>
-</li>
-<li><p>极限参数</p>
-<p>最大漏极电流 $I_{DM}$</p>
-<p>击穿电压</p>
-<p>最大耗散功率 $P_{DM}$</p>
-</li>
-</ol>
-</li>
-</ul>
-<blockquote>
-<p>第9讲后半没完全弄明白。</p>
-</blockquote>
-<h2 id="第二章-基本放大电路"><a href="#第二章-基本放大电路" class="headerlink" title="第二章 基本放大电路"></a>第二章 基本放大电路</h2><h3 id="S-2-1-放大的概念和放大电路的主要性能指标"><a href="#S-2-1-放大的概念和放大电路的主要性能指标" class="headerlink" title="$\S 2.1$ 放大的概念和放大电路的主要性能指标"></a>$\S 2.1$ 放大的概念和放大电路的主要性能指标</h3><ul>
-<li><p>放大的概念</p>
-<p>放大电路的特征是功率的放大。</p>
-<p>放大电路的本质是能量的控制和转换。</p>
-<p>放大电路的必要条件是有源元件，可以控制能量（比如晶体管和场效应管）。</p>
-<p>放大的前提是不失真，只有在不知真的情况下放大才有意义（让晶体管工作在放大区，场效应管工作在恒流区）。</p>
-<p>放大电路的测试信号是正弦波。</p>
-</li>
-<li><p>基本放大电路的构建</p>
-</li>
-</ul>
-<h3 id="S-2-2-基本共射放大电路的工作原理"><a href="#S-2-2-基本共射放大电路的工作原理" class="headerlink" title="$\S 2.2$ 基本共射放大电路的工作原理"></a>$\S 2.2$ 基本共射放大电路的工作原理</h3><h3 id="S-2-3-放大电路的分析方法"><a href="#S-2-3-放大电路的分析方法" class="headerlink" title="$\S 2.3$ 放大电路的分析方法"></a>$\S 2.3$ 放大电路的分析方法</h3><blockquote>
-<p>17 讲没听。</p>
-</blockquote>
-<h2 id="第三章-多极放大电路"><a href="#第三章-多极放大电路" class="headerlink" title="第三章 多极放大电路"></a>第三章 多极放大电路</h2><h3 id="S-3-1-多级放大电路的一般问题"><a href="#S-3-1-多级放大电路的一般问题" class="headerlink" title="$\S 3.1$ 多级放大电路的一般问题"></a>$\S 3.1$ 多级放大电路的一般问题</h3>]]></content>
-      <tags>
-        <tag>专业课</tag>
-        <tag>大学课程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>大学笔记 | 复变函数与积分变换</title>
     <url>/2023/08/31/Functions-of-a-Complex-Variable/</url>
     <content><![CDATA[<p>隐身术第二课堂。</p>
@@ -1598,7 +599,7 @@
 <p><img src="5.4-13.png" alt="5.4-13"></p>
 </li>
 </ul>
-<h2 id="第七章-傅里叶变换"><a href="#第七章-傅里叶变换" class="headerlink" title="第七章 傅里叶变换"></a>第七章 傅里叶变换</h2><h3 id="S-7-1-傅里叶级数"><a href="#S-7-1-傅里叶级数" class="headerlink" title="$\S 7.1$ 傅里叶级数"></a>$\S 7.1$ 傅里叶级数</h3><ul>
+<h2 id="第七章-傅里叶变换"><a href="#第七章-傅里叶变换" class="headerlink" title="第七章 傅里叶变换"></a>第七章 傅里叶变换</h2><h3 id="第七章总结"><a href="#第七章总结" class="headerlink" title="第七章总结"></a>第七章总结</h3><h3 id="S-7-1-傅里叶级数"><a href="#S-7-1-傅里叶级数" class="headerlink" title="$\S 7.1$ 傅里叶级数"></a>$\S 7.1$ 傅里叶级数</h3><ul>
 <li><p>傅里叶级数</p>
 <p><img src="7.1-1.png" alt="7.1-1"></p>
 <p><img src="7.1-2.png" alt="7.1-2"></p>
@@ -1643,15 +644,15 @@
 </li>
 </ul>
 <h3 id="S-7-4-傅里叶变换的性质"><a href="#S-7-4-傅里叶变换的性质" class="headerlink" title="$\S 7.4$ 傅里叶变换的性质"></a>$\S 7.4$ 傅里叶变换的性质</h3><ul>
-<li><p>线性性质<br>$$<br>F_1(\omega) = \mathscr{F}[f_1(t)],F_2(\omega) = \mathscr{F}[f_2(t)] \<br>\Rightarrow \mathscr{F}[\alpha f_a(t) + \beta f_2(t)] = \alpha F_1(\omega) + \beta F_2(\omega)<br>$$<br>逆变换同理成立。</p>
+<li><p>线性性质<br>$$<br>\begin{gather}<br>F_1(\omega) = \mathscr{F}[f_1(t)],F_2(\omega) = \mathscr{F}[f_2(t)] \<br>\Rightarrow \mathscr{F}[\alpha f_a(t) + \beta f_2(t)] = \alpha F_1(\omega) + \beta F_2(\omega)<br>\end{gather}<br>$$<br>逆变换同理成立。</p>
 </li>
-<li><p>平移性质<br>$$<br>F(\omega) = \mathscr{F}[f(t)] \<br>\Rightarrow \mathscr{F}[f(t - t_0)] = e^{-i\omega t_0}F(\omega) ,\<br>\mathscr{F}^{-1}[F(\omega - \omega_0)] = e^{i\omega t_0}f(t)<br>$$</p>
+<li><p>平移性质<br>$$<br>\begin{gather}<br>F(\omega) = \mathscr{F}[f(t)] \<br>\Rightarrow \mathscr{F}[f(t - t_0)] = e^{-i\omega t_0}F(\omega) ,\<br>\mathscr{F}^{-1}[F(\omega - \omega_0)] = e^{i\omega t_0}f(t)<br>\end{gather}<br>$$</p>
 </li>
-<li><p>伸缩性质<br>$$<br>F(\omega) = \mathscr{F}[f(t)] \<br>\Rightarrow \mathscr{F}[f(at)] = \dfrac{1}{|a|}F(\dfrac{\omega}{a})<br>$$</p>
+<li><p>伸缩性质<br>$$<br>\begin{gather}<br>F(\omega) = \mathscr{F}[f(t)] \<br>\Rightarrow \mathscr{F}[f(at)] = \dfrac{1}{|a|}F(\dfrac{\omega}{a})<br>\end{gather}<br>$$</p>
 </li>
-<li><p>微分性质<br>$$<br>若 \lim_{|t| \to +\infty}f(t) = 0, 则 \mathscr{F}[f’(t)] = i\omega \mathscr{F}[f(t)] \<br>若 \lim_{|t| \to +\infty}f^{(k)}(t) = 0, 则 \mathscr{F}[f^{(n)}(t)] = (i\omega)^n \mathscr{F}[f(t)]<br>$$</p>
+<li><p>微分性质<br>$$<br>\begin{gather}<br>若 \lim_{|t| \to +\infty}f(t) = 0, 则 \mathscr{F}[f’(t)] = i\omega \mathscr{F}[f(t)] \<br>若 \lim_{|t| \to +\infty}f^{(k)}(t) = 0, 则 \mathscr{F}[f^{(n)}(t)] = (i\omega)^n \mathscr{F}[f(t)]<br>\end{gather}<br>$$</p>
 </li>
-<li><p>积分性质<br>$$<br>若\ \  g(t) = \int_{-\infty}^t f(\tau)d\tau,\lim_{t \to +\infty} g(t) = 0,则 \<br>\mathscr{F}[g(t)] = \dfrac{1}{i\omega}\mathscr{F}[f(t)]<br>$$</p>
+<li><p>积分性质<br>$$<br>\begin{gather}<br>若\ \  g(t) = \int_{-\infty}^t f(\tau)d\tau,\lim_{t \to +\infty} g(t) = 0,则 \<br>\mathscr{F}[g(t)] = \dfrac{1}{i\omega}\mathscr{F}[f(t)]<br>\end{gather}<br>$$</p>
 <blockquote>
 <p>其实就是求导倒过来的式子。</p>
 </blockquote>
@@ -1659,7 +660,7 @@
 <li><p>卷积与卷积定理</p>
 <p>$f_1(t)$ 与 $f_2(t)$ 的卷积记为 $f_1(t) \ast f_2(t) = \int_{-\infty}^{+\infty}f_1(\tau)f_2(t - \tau)d\tau$。</p>
 <p>且卷积满足交换律，结合律和分配律。</p>
-<p><strong>卷积定理</strong><br>$$<br>F_1(\omega) = \mathscr{F}[f_1(t)],F_2(\omega) = \mathscr{F}[f_2(t)] \<br>\Rightarrow \mathscr{F}[f_1(t) * f_2(t)] = F_1(\omega) \cdot F_2(\omega) \<br>推论 \Rightarrow \mathscr{F}[f_1(t) \cdot f_2(t)] = \dfrac{1}{2\pi} F_1(\omega) * F_2(\omega)<br>$$</p>
+<p><strong>卷积定理</strong><br>$$<br>\begin{gather}<br>F_1(\omega) = \mathscr{F}[f_1(t)],F_2(\omega) = \mathscr{F}[f_2(t)] \<br>\Rightarrow \mathscr{F}[f_1(t) * f_2(t)] = F_1(\omega) \cdot F_2(\omega) \<br>推论 \Rightarrow \mathscr{F}[f_1(t) \cdot f_2(t)] = \dfrac{1}{2\pi} F_1(\omega) * F_2(\omega)<br>\end{gather}<br>$$</p>
 </li>
 </ul>
 <h3 id="习题课-5"><a href="#习题课-5" class="headerlink" title="习题课"></a>习题课</h3><h2 id="第八章-拉普拉斯变换"><a href="#第八章-拉普拉斯变换" class="headerlink" title="第八章 拉普拉斯变换"></a>第八章 拉普拉斯变换</h2><h3 id="S-8-1-拉普拉斯变换的概念"><a href="#S-8-1-拉普拉斯变换的概念" class="headerlink" title="$\S 8.1$ 拉普拉斯变换的概念"></a>$\S 8.1$ 拉普拉斯变换的概念</h3><ul>
@@ -1679,28 +680,1093 @@
 </li>
 </ul>
 <h3 id="S-8-2-拉普拉斯变换的性质"><a href="#S-8-2-拉普拉斯变换的性质" class="headerlink" title="$\S 8.2$ 拉普拉斯变换的性质"></a>$\S 8.2$ 拉普拉斯变换的性质</h3><ul>
-<li><p>线性性质<br>$$<br>F_1(\omega) = \mathscr{L}[f_1(t)],F_2(\omega) = \mathscr{L}[f_2(t)] \<br>\Rightarrow \mathscr{L}[\alpha f_a(t) + \beta f_2(t)] = \alpha F_1(\omega) + \beta F_2(\omega)<br>$$<br>逆变换同理</p>
+<li><p>线性性质<br>$$<br>\begin{gather}<br>F_1(\omega) = \mathscr{L}[f_1(t)],F_2(\omega) = \mathscr{L}[f_2(t)] \<br>\Rightarrow \mathscr{L}[\alpha f_a(t) + \beta f_2(t)] = \alpha F_1(\omega) + \beta F_2(\omega)<br>\end{gather}<br>$$<br>逆变换同理</p>
 </li>
-<li><p>微分性质<br>$$<br>若\ \ F(s) = \mathscr{L}[f(t)] \Rightarrow 则\ \mathscr{L}[f’(t)] = sF(s) - f(0)\<br>一般地，有\ \ \mathscr{L}[f^{(n)}(t)] = s^nF(s) - s^{n - 1}f(0) - s^{n - 2}f’(0) - \dots - sf^{(n - 2)}(0) - f^{(n - 1)}(0)<br>$$</p>
+<li><p>微分性质<br>$$<br>\begin{gather}<br>若\ \ F(s) = \mathscr{L}[f(t)] \Rightarrow 则\ \mathscr{L}[f’(t)] = sF(s) - f(0)\<br>一般地，有\ \ \mathscr{L}[f^{(n)}(t)] = s^nF(s) - s^{n - 1}f(0) - s^{n - 2}f’(0) - \dots - sf^{(n - 2)}(0) - f^{(n - 1)}(0) \<br>若\ \ F(s) = \mathscr{L}[f(t)] \Rightarrow 则\ F’(s) = -\mathscr{L}[tf(t)] \Rightarrow 则\ f(t) = \dfrac{1}{t}\mathscr{L}[-F’(s)] \<br>一般地，有\ \ F^{(n)}(s) = (-1)^n\mathscr{L}[t^nf(t)]<br>\end{gather}<br>$$</p>
 </li>
-<li><p>积分性质<br>$$<br>设 F(s) = \mathscr{L}[f(t)] \Rightarrow 则\ \mathscr{L}[\int_0^t f(t)dt] = \dfrac{1}{s} F(s)<br>$$</p>
+<li><p>积分性质<br>$$<br>\begin{gather}<br>设\ F(s) = \mathscr{L}[f(t)] \Rightarrow 则\ \mathscr{L}[\int_0^t f(t)dt] = \dfrac{1}{s} F(s) \<br>设\ F(s) = \mathscr{L}[f(t)] \Rightarrow 则\ \mathscr{L}[\dfrac{f(t)}{t}] =  \int_{0}^{+\infty} \dfrac{f(t)}{t} e^{-st}dt = \int_{s}^{\infty}F(s)ds \<br>或\ f(t) = t\mathscr{L}^{-1}[\int_s^{+\infty}F(s)ds]<br>\end{gather}<br>$$</p>
 </li>
 <li><p>位移性质</p>
+<p>$$<br>设 F(s) = \mathscr{L}[f(t)]， a 为复常数，则 \mathscr{L}[e^{at}f(t)] = F(s - a)<br>$$</p>
 </li>
 </ul>
 <ul>
-<li>延迟性质</li>
+<li><p>延迟性质</p>
+<p>$$<br>若\ t &lt; 0\ 时\ f(t) = 0，且\ F(s) = \mathscr{L}[f(t)]，则对任意非负实数\ \tau，有\ \mathscr{L}[f(t - \tau)] = e^{-s\tau}F(s)<br>$$<br>值得注意的是，</p>
+<p><img src="8.2-03.png" alt="8.2-03"></p>
+</li>
+<li><p>计算反常积分</p>
+<p><img src="8.2-06.png" alt="8.2-06"></p>
+</li>
+<li><p>卷积及卷积定理</p>
+<p><img src="8.2-09.png" alt="8.2-09"></p>
+<p><img src="8.2-10.png" alt="8.2-10"></p>
+</li>
+<li><p>例题</p>
+<p><img src="8.2-01.png" alt="8.2-01"></p>
+<p><img src="8.2-02.png" alt="8.2-02"></p>
+<p><img src="8.2-04.png" alt="8.2-04"></p>
+<p><img src="8.2-05.png" alt="8.2-05"></p>
+<p><img src="8.2-07.png" alt="8.2-07"></p>
+<p><img src="8.2-08.png" alt="8.2-08"></p>
+<p><img src="8.2-11.png" alt="8.2-11"></p>
+<p><img src="8.2-12.png" alt="8.2-12"></p>
+</li>
 </ul>
+<h3 id="S-8-3-拉普拉斯逆变换"><a href="#S-8-3-拉普拉斯逆变换" class="headerlink" title="$\S 8.3$ 拉普拉斯逆变换"></a>$\S 8.3$ 拉普拉斯逆变换</h3><p>$$<br>\begin{gather}<br>\mathscr{L}^{-1}[F(s)] = f(t) \<br>求解拉普拉斯变换的逆变换，又称为拉氏变换的反演。<br>\end{gather}<br>$$</p>
 <ul>
-<li>计算反常积分</li>
+<li><p>反演积分公式</p>
+<p>$f(t) = \dfrac{1}{2\pi i }\int_{\beta - i\infty}^{\beta + i\infty}F(s)e^{st}ds$ 这个公式是拉式逆变换的一般公式，称为反演积分公式。</p>
+<p><img src="8.3-01.png" alt="8.3-01"></p>
+</li>
+<li><p>利用留数计算反演公式<br><img src="8.3-02.png" alt="8.3-02"></p>
+<p><img src="8.3-03.png" alt="8.3-03"></p>
+</li>
+<li><p>例题</p>
+<blockquote>
+<p>求拉式逆变换既可以用留数来做，也可以拆分成熟悉的函数来做。</p>
+</blockquote>
+<p><img src="8.3-04.png" alt="8.3-04"></p>
+<p><img src="8.3-05.png" alt="8.3-05"></p>
+</li>
 </ul>
-<ul>
-<li>卷积及卷积定理</li>
+<h3 id="S-8-4-用拉氏变换解常微分方程"><a href="#S-8-4-用拉氏变换解常微分方程" class="headerlink" title="$\S 8.4$ 用拉氏变换解常微分方程"></a>$\S 8.4$ 用拉氏变换解常微分方程</h3><ul>
+<li><p>微分方程的拉氏变换解法</p>
+<blockquote>
+<p>由于直接对微分方程运算比较困难，所以我们可以先对两边进行拉普拉斯变换，求出 $F(s)$ 的表达式，然后再可以用留数法求出逆变换。</p>
+</blockquote>
+<p><img src="8.4-01.png" alt="8.4-01"></p>
+</li>
+<li><p>例题</p>
+<p><img src="8.4-02.png" alt="8.4-02"></p>
+<p><img src="8.4-03.png" alt="8.4-03"></p>
+<p><img src="8.4-04.png" alt="8.4-04"></p>
+</li>
 </ul>
-<h3 id="S-8-3-拉普拉斯逆变换"><a href="#S-8-3-拉普拉斯逆变换" class="headerlink" title="$\S 8.3$ 拉普拉斯逆变换"></a>$\S 8.3$ 拉普拉斯逆变换</h3><h3 id="S-8-4-用拉氏变换解常微分方程"><a href="#S-8-4-用拉氏变换解常微分方程" class="headerlink" title="$\S 8.4$ 用拉氏变换解常微分方程"></a>$\S 8.4$ 用拉氏变换解常微分方程</h3><h3 id="习题课-6"><a href="#习题课-6" class="headerlink" title="习题课"></a>习题课</h3>]]></content>
+<h3 id="习题课-6"><a href="#习题课-6" class="headerlink" title="习题课"></a>习题课</h3>]]></content>
       <tags>
         <tag>数学</tag>
         <tag>大学笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大学笔记 | 大学物理BII</title>
+    <url>/2023/08/30/Physics-II/</url>
+    <content><![CDATA[<p>大物笔记彻底变成 PPT clipboard 力（悲</p>
+<span id="more"></span>
+
+<h2 id="第十章-振动"><a href="#第十章-振动" class="headerlink" title="第十章 振动"></a>第十章 振动</h2><h3 id="第十章总结（待完成）"><a href="#第十章总结（待完成）" class="headerlink" title="第十章总结（待完成）"></a>第十章总结（待完成）</h3><h3 id="S-10-1-简谐运动"><a href="#S-10-1-简谐运动" class="headerlink" title="$\S 10.1$ 简谐运动"></a>$\S 10.1$ 简谐运动</h3><ol>
+<li>简谐振动方程</li>
+</ol>
+<p>​    最简单的简谐运动，以弹簧振子来举例，其受力满足，<br>$$<br>F = -kx \<br>F = ma = m \dfrac{d^2x}{dt^2}<br>$$<br>​    然后引入$\omega^2 =\dfrac{k}{m}$，这里 $\omega$ 只与系统自身性质有关，也称为角频率。<br>​    化简得 $\dfrac{d^2x}{dt^2} + \omega^2 x = 0$，这是简谐运动的微分方程，求解可得<br>$$<br>x = A \cos (\omega t +\phi)<br>$$<br>​    便得到了简谐运动的运动方程，<strong>这十分重要</strong>，求一阶导可得速度方程，求二阶导可得加速度方程。</p>
+<blockquote>
+<p> 通常化作余弦形式。</p>
+</blockquote>
+<ol start="2">
+<li>简谐振动的特征量</li>
+</ol>
+<p>​    速度 $v = \omega Acos(\omega t + \phi + \dfrac{\pi}{2})$，$\omega A= v_m$ 表示速度振幅。</p>
+<p>​    加速度 $a = \omega^2 A cos(\omega t + \phi)$，$\omega^2A = a_m$ 表示加速度振幅。</p>
+<p>​    周期满足 $T\omega = 2\pi$。</p>
+<p>​    振幅 $A = \sqrt{x_0^2 + \dfrac{v_0^2}{\omega^2}}$，相位角 $tan \phi = -\dfrac{v_0}{\omega x_0}$。</p>
+<ol start="3">
+<li>简谐运动能量</li>
+</ol>
+<p>$$<br>E = E_p + E_k \<br>Ep = \dfrac{1}{2}kx^2, \ E_k = \dfrac{1}{2}mv^2<br>\\代入得 \ E = \dfrac{1}{2}kA^2<br>$$</p>
+<ol start="4">
+<li>旋转矢量<br>矢量绕 $O$ 点按逆时针旋转，$t$ 时刻，点在 $x$ 轴上的位置为 $A\cos(\omega t + \phi)$。<br>速度与 $x$ 轴上的夹角为 $\omega t + \phi + \dfrac{\pi}{2}$，$v_x = \omega A\cos(\omega t + \phi + \dfrac{\pi}{2}) = -\omega A\sin(\omega t + \phi)$。<br>加速度 $a_x = \omega^2 A \cos(\omega t + \phi + \pi) = -\omega^2 x$。</li>
+</ol>
+<h3 id="S-10-3-简谐运动的合成"><a href="#S-10-3-简谐运动的合成" class="headerlink" title="$\S 10.3$ 简谐运动的合成"></a>$\S 10.3$ 简谐运动的合成</h3><ol>
+<li>同方向，同频率简谐运动的合成</li>
+</ol>
+<p><img src="10.3-1.jpg" alt="10.3-1"></p>
+<ol start="2">
+<li>振动方向垂直，同频率简谐运动的合成</li>
+</ol>
+<p><img src="10.3-2.jpg" alt="10.3-2"></p>
+<ul>
+<li><p>当 $\phi_2 - \phi_1 = k\pi$ 时，质点做直线运动。</p>
+</li>
+<li><p>当 $\phi_2 - \phi_1 = (2k \pm1)\dfrac{\pi}{2}$ 时，质点运动轨迹是圆。</p>
+</li>
+<li><p>当 $\phi_2 - \phi_1$ 为其他值时，质点运动轨迹是椭圆。</p>
+</li>
+</ul>
+<h3 id="S-10-5-阻尼振动-受迫振动-共振"><a href="#S-10-5-阻尼振动-受迫振动-共振" class="headerlink" title="$\S 10.5$ 阻尼振动 受迫振动 共振"></a>$\S 10.5$ 阻尼振动 受迫振动 共振</h3><ol>
+<li><p>阻尼振动<br> 振幅随时间减小的振动叫阻尼振动。<br> 阻尼模型有摩擦阻尼和辐射阻尼。<br> 对于低速运动的物体，引入阻力 $F = -\gamma v $。</p>
+<p>对于高速运动的物体，引入阻力 $F = -\gamma v^2 $（用的较少）。</p>
+<p>以弹簧振子为例，我们可以列出方程<br>$$<br>\begin{gather}<br>m\dfrac{d^2x}{dt^2} = -kx - \gamma v \<br>\omega_0^2 = \dfrac{k}{m}\ \ \ 2\beta = \dfrac{\gamma}{m}\<br>\Rightarrow \dfrac{d^2x}{dt^2} + 2\beta\dfrac{dx}{dt} + \omega_0^2x = 0\<br>\Rightarrow x = c_1e^{-(\beta - \sqrt{\beta^2 - \omega_0^2})t} + c_2e^{-(\beta + \sqrt{\beta^2  -\omega_0^2})t}<br>\end{gather}<br>$$<br>​    当 $\beta$ 和 $\omega_0$ 大小关系不同时，所对应的结果也不同。</p>
+</li>
+</ol>
+<p><img src="10.3-3.jpg" alt="10.3-3"></p>
+<p>​    临界阻尼到达平衡点最快，过阻尼和临界阻尼不能往返运动。</p>
+<ol start="2">
+<li>受迫振动<br>物体在周期性外力下持续发生振动称为受迫振动，这个外力称为驱动力（要考虑弹性力，阻尼力和驱动力）。</li>
+</ol>
+<p>​        这块貌似了解即可，在此贴出 ppt。</p>
+<p>​    <img src="10.3-4.png" alt="10.3-4"></p>
+<p><img src="10.3-5.png" alt="10.3-5"></p>
+<p><img src="10.3-6.png" alt="10.3-6"></p>
+<p><img src="10.3-7.png" alt="10.3-7"></p>
+<ol start="3">
+<li>共振<br>当外界驱动力频率接近或等于系统固有频率时，受迫振动振幅达到最大值的现象称为<strong>共振</strong>，其频率为<strong>共振频率</strong>。</li>
+</ol>
+<p><img src="10.3-8.png" alt="10.3-8"></p>
+<p><img src="10.3-9.png" alt="10.3-9"></p>
+<h3 id="习题课（待完成）"><a href="#习题课（待完成）" class="headerlink" title="习题课（待完成）"></a>习题课（待完成）</h3><h2 id="第十一章-机械波"><a href="#第十一章-机械波" class="headerlink" title="第十一章 机械波"></a>第十一章 机械波</h2><h3 id="第十一章总结（待完成）"><a href="#第十一章总结（待完成）" class="headerlink" title="第十一章总结（待完成）"></a>第十一章总结（待完成）</h3><h3 id="S-11-1-波动的基本概念"><a href="#S-11-1-波动的基本概念" class="headerlink" title="$\S 11.1$ 波动的基本概念"></a>$\S 11.1$ 波动的基本概念</h3><ol>
+<li>机械波的产生和传播<ul>
+<li>波源：激发波动的振动系统。</li>
+<li>弹性介质：能够传播机械振动的弹性介质。</li>
+<li><strong>振动是质点的个体行为，波动是质点振动的群体行为。</strong>波动是振动相位的传递，注意每个质点依然是在垂直方向上移动，并未左右移动。</li>
+<li><strong>横波</strong>：振动方向与波的传播方向垂直，如绳波。<strong>纵波</strong>：振动方向与波的传播方向平行，是靠介质疏密变化传播的，如声波，弹簧波。纵波可以在固液气中传播，而横波一般只在固体中传播。</li>
+</ul>
+</li>
+<li>波的几何描述<ul>
+<li>波线：表示波的传播方向的射线。</li>
+<li>波面：相位相同的点组成的面。</li>
+<li>波前：某一时刻，最前面的波面。</li>
+<li>平面波：波面是平面的波。球面波：波面是球面的波。</li>
+</ul>
+</li>
+<li>描述波的物理量<ul>
+<li>波长：振动在一个周期内传播的距离为波长 $\lambda$，反映波在空间上的周期性。</li>
+<li>周期和频率：周期 $T$，频率 $\nu$。反映波在时间上的周期。</li>
+<li>波速：用 $u$ 表示。$\lambda = uT$，$u = \lambda \nu$。</li>
+<li>周期由波源决定，波速由介质决定。</li>
+<li>不同频率的同一类型波在同一介质波速相同。</li>
+<li>波在不同介质中频率不变。</li>
+</ul>
+</li>
+</ol>
+<h3 id="S-11-2-平面简谐波-波函数"><a href="#S-11-2-平面简谐波-波函数" class="headerlink" title="$\S 11.2$ 平面简谐波 波函数"></a>$\S 11.2$ 平面简谐波 波函数</h3><ul>
+<li>平面简谐波：波面是平面，各质点做简谐运动的波。</li>
+<li>波函数：描述任意时刻任意位置处质点的<strong>振动位移</strong>。这里往往用某一质点的振动方程代替任意质点的振动方程。</li>
+</ul>
+<ol>
+<li><p>平面简谐波的波函数</p>
+<ul>
+<li><p>波函数未特地说明时，默认在原点处。</p>
+</li>
+<li><p>波形以波速沿波线平移的波称为行波。</p>
+</li>
+<li><p>$y = A\cos [\omega(t - \dfrac{x}{u}) + \phi]$，把对应的时间 $t_0$，$x_0$ 代入公式即可算出某时刻某位置的振动位置。</p>
+</li>
+<li><p>此类常考题型如下：</p>
+<p><img src="11.2-3.png" alt="11-2.3"></p>
+</li>
+</ul>
+</li>
+<li><p>波动方程（考试不考）</p>
+</li>
+</ol>
+<p><img src="11.2-1.png" alt="11-2.1"></p>
+<p><img src="11.2-2.png" alt="11.2-2"></p>
+<h3 id="S-11-3-波的能量-能流密度"><a href="#S-11-3-波的能量-能流密度" class="headerlink" title="$\S 11.3$ 波的能量 能流密度"></a>$\S 11.3$ 波的能量 能流密度</h3><ol>
+<li><p>波的能量</p>
+<ul>
+<li><p>波具有动能和势能</p>
+<p>对于质元而言</p>
+</li>
+<li><p>动能 $dE_k = \dfrac{1}{2}(dm)v^2 = \dfrac{1}{2}(\rho dV)A^2\omega^2\sin^2\omega(t - \dfrac{x}{u})$</p>
+</li>
+<li><p>势能 $dE_P = \dfrac{1}{2}(\rho dV)A^2\omega^2\sin^2\omega(t - \dfrac{x}{u})$（貌似上课也没讲怎么推导的，记住就行吧？.jpg）</p>
+<blockquote>
+<p>注意质元在平衡位置处，动能，势能和总机械能均最大，质元位移最大时，三者均为 $0$。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+<p>​        $dE = dE_p + dE_k = (\rho dV)A^2\omega^2\sin^2\omega(t - \dfrac{x}{u})$</p>
+<p>​        能量密度 $w = \dfrac{dE}{dV} = \rho A^2\omega^2\sin^2\omega(t - \dfrac{x}u{})$</p>
+<p>​        平均能量密度 $\bar w = \dfrac{1}{T}\int_0^T wdt = \dfrac{1}{2}\rho A^2\omega^2$</p>
+<p>​        不难发现每时每刻，动能和势能总是相同的，质元不与外界能量交换，总能量总是守恒的。</p>
+<p>​        对于所有弹性波，平均能量密度和振幅平方，频率平方，介质密度成正比。</p>
+<ol start="2">
+<li>波的能流 平均能流密度</li>
+</ol>
+<p>​        单位时间内通过垂直于波传播方向的某面积上能量称为能流，方向与速度相同。$P = \dfrac{dE}{dt}$。</p>
+<p><img src="11.3-1.png" alt="11.3-1"></p>
+<p>​        平均能流 $\bar P = \bar wuS = \dfrac{1}{2}\rho A^2\omega^2uS$</p>
+<p>​        平均能流密度：单位面积上的能流。</p>
+<p>​        $I = \dfrac{\bar P}{S} = \dfrac{1}{2}\rho A^2\omega^2u$</p>
+<p>​        矢量式 $\vec I = \dfrac{1}{2}\rho A^2\omega^2\vec u$</p>
+<p>​        能流密度 $I$ 也被称为波的强度。</p>
+<p>​        平面简谐波 $E = IS$。</p>
+<p>​        球面简谐波 $E = 4\pi r^2I$。</p>
+<p>​        设单位半径上的球面振幅是 $a$，半径为 $r$ 的球面上振幅为 $A$，由球心处放出的总能量相等，可以得出 $A(r) = \dfrac{a}{r}$，若球心处 $y_o(t) \propto \cos(\omega t + \phi)$，则 $y_球 = \dfrac{a}{r}\cos(\omega(t - \dfrac{r}{u}) + \phi)$。</p>
+<ol start="3">
+<li>声强 声强级<ul>
+<li>声振动：能够引起人们听觉效应的机械振动。</li>
+<li>声波：在弹性介质中由声振动激发的波叫声波。</li>
+<li>声波范围：20 ~ 20000 Hz 超声波：&gt; 20000 Hz 次声波：&lt; 20 Hz</li>
+<li>声强：声波的平均能流密度叫声强。$I = \dfrac{1}{2}\rho A^2\omega^2u$，单位：$W / m^2$。</li>
+<li>声强级：$I_1 = 10lg\dfrac{I}{I_0}$，单位：$dB$（分贝）。</li>
+</ul>
+</li>
+</ol>
+<h3 id="S-11-4-惠更斯原理"><a href="#S-11-4-惠更斯原理" class="headerlink" title="$\S 11.4$ 惠更斯原理"></a>$\S 11.4$ 惠更斯原理</h3><ul>
+<li><p>惠更斯原理：波在传播过程中，波面上每一点可以看作是发射子波的波源，这些子波源相当于继承原先波的能量，然后再传递给之后的波，后继的包迹决定新的波阵面。</p>
+</li>
+<li><p>波的衍射：波在传播过程中能够绕过障碍物而偏离直线传播的现象。衍射是波的基本特征之一，其强弱由障碍物尺寸和波长的关系决定。惠更斯原理只能定性解释波的衍射现象。</p>
+</li>
+</ul>
+<h3 id="S-11-5-波的叠加原理-波的干涉"><a href="#S-11-5-波的叠加原理-波的干涉" class="headerlink" title="$\S 11.5$ 波的叠加原理 波的干涉"></a>$\S 11.5$ 波的叠加原理 波的干涉</h3><ol>
+<li>波的叠加原理：<ul>
+<li>独立传播原理：波相遇后依然按照各自原来的特性，互不干涉。</li>
+<li>叠加原理：某点的振动为引起该点振动波的矢量和。</li>
+</ul>
+</li>
+<li>波的干涉（这段 ppt 比较完整，直接放 ppt 力）</li>
+</ol>
+<p><img src="11.5-1.png" alt="11.5-1"></p>
+<p><img src="11.5-2.png" alt="11.5-2"></p>
+<blockquote>
+<p>值得一提的是，这里波的干涉和前面第十章第三节的简谐振动的合成是十分类似的。</p>
+</blockquote>
+<p><img src="11.5-3.png" alt="11.5-3"></p>
+<p><img src="11.5-4.png" alt="11.5-4"></p>
+<p>​    练习在精不在多，这里贴一道给出两种方法的练习题，分别用到本节知识和前面波函数的知识。</p>
+<p><img src="11.5-5.png" alt="11.5-5"></p>
+<p><img src="11.5-6.png" alt="11.5-6"></p>
+<p><img src="11.5-7.png" alt="11.5-7"></p>
+<h3 id="S-11-6-驻波"><a href="#S-11-6-驻波" class="headerlink" title="$\S 11.6$ 驻波"></a>$\S 11.6$ 驻波</h3><ul>
+<li>驻波：沿相反方向传播的振幅相同的两列相干波相遇叠加会形成一种波形不向前传播的波。</li>
+</ul>
+<p><img src="11.6-1.png" alt="11.6-1"></p>
+<p><img src="11.6-2.png" alt="11.6-2"></p>
+<p><img src="11.6-3.png" alt="11.6-3"></p>
+<p><img src="11.6-4.png" alt="11.6-4"></p>
+<blockquote>
+<p>值得一提的是，能量在驻波中的分布是不均匀的，振动的能量在波节处分布相对更为集中。</p>
+</blockquote>
+<ul>
+<li><p>半波损失</p>
+<p>  从一个介质到另一个介质，一部分反射形成的波叫反射波，一部分透射形成的波叫透射波。</p>
+<p>  透射波没有相位的损失，总是与入射波同相，但反射波，从光疏到光密会有相位 $\pi$ 的突变，$\phi’ = \phi - \pi$。</p>
+</li>
+<li><p>弦线上的驻波</p>
+<p>  驻波就是行波在弦线上前进过程中受到了阻挡，产生了反射，然后反射波和入射波叠加导致的。</p>
+</li>
+</ul>
+<p><img src="11.6-5.png" alt="11.6-5"></p>
+<p>前面的那道算两振源干涉的题目，也可以当作驻波来算：</p>
+<p><img src="11.6-6.png" alt="11.6-6"></p>
+<p><img src="11.6-7.png" alt="11.6-7"></p>
+<h3 id="S-11-7-多普勒效应"><a href="#S-11-7-多普勒效应" class="headerlink" title="$\S 11.7$ 多普勒效应"></a>$\S 11.7$ 多普勒效应</h3><p><img src="11.7-1.png" alt="11.7-1"></p>
+<p><img src="11.7-2.png" alt="11.7-2"></p>
+<p><img src="11.7-3.png" alt="11.7-3"></p>
+<p><img src="11.7-4.png" alt="11.7-4"></p>
+<p><img src="11.7-5.png" alt="11.7-5"></p>
+<h3 id="习题课（待完成）-1"><a href="#习题课（待完成）-1" class="headerlink" title="习题课（待完成）"></a>习题课（待完成）</h3><h2 id="第十二章-电磁波"><a href="#第十二章-电磁波" class="headerlink" title="第十二章 电磁波"></a>第十二章 电磁波</h2><blockquote>
+<p>前置知识回顾：</p>
+<ul>
+<li><p>麦克斯韦方程组（部分）：</p>
+<p>  $\oint E \cdot dl = -\dfrac{d\Phi_m}{dt}$（法拉第电磁感应定律）</p>
+<p>  $\oint H \cdot dl = -\dfrac{d\Phi_e}{dt}$（安培定律）</p>
+<p>  其中 $\Phi_m$ 是磁感应强度 $B$ 的通量，$\Phi_e$ 是电位移 $D$ 的通量。</p>
+</li>
+<li><p>$D = \varepsilon_0 E$ ，其中 $D$ 是电位移矢量，$E$ 是电场强度，$\varepsilon_0$ 是真空介电常数。</p>
+</li>
+<li><p>$H = \dfrac{B}{\mu_0}$ ，其中 $H$ 是磁场强度，$B$ 是磁感应强度，$\mu_0$ 是磁导率。</p>
+</li>
+</ul>
+</blockquote>
+<h3 id="第十二章总结（待完成）"><a href="#第十二章总结（待完成）" class="headerlink" title="第十二章总结（待完成）"></a>第十二章总结（待完成）</h3><h3 id="S-12-1-电磁波"><a href="#S-12-1-电磁波" class="headerlink" title="$\S 12.1$ 电磁波"></a>$\S 12.1$ 电磁波</h3><ul>
+<li>变化磁场产生涡旋电场，变化电场产生涡旋磁场。电磁振源产生交变电磁场，交变电场和交变磁场相互激发，形成电磁波。</li>
+<li>下面的推导了解即可</li>
+</ul>
+<p><img src="12.1-1.png" alt="12.1-1"></p>
+<p><img src="12.1-2.png" alt="12.1-2"></p>
+<p><img src="12.1-3.png" alt="12.1-3"></p>
+<p><img src="12.1-4.png" alt="12.1-4"></p>
+<ul>
+<li>求解平面电磁波的微分方程，解为 $E_x = E_0\cos\omega(t - \dfrac{z}{u}),H_y = H_0\cos\omega(t - \dfrac{z}{u})$。</li>
+</ul>
+<p><img src="12.1-5.png" alt="12.1-5"></p>
+<ul>
+<li><p>电磁波的能量传播</p>
+<p>  以电磁波形式传播出去的电磁能量称为辐射能。</p>
+<p>  能量密度 $w = w_e + w_m = \dfrac{1}{2}\varepsilon E^2 + \dfrac{1}{2}\mu H^2 = \varepsilon E^2 = \mu H^2$ 。</p>
+<p>  单位时间通过垂直于传播方向的单位面积的电磁能称为能流密度，$S = wu$（其中 $w$ 是能量密度）。</p>
+<p>  将 $w = \dfrac{1}{2}\varepsilon E^2 + \dfrac{1}{2}\mu H^2$ 和 $u = \dfrac{1}{\sqrt{\varepsilon \mu}}$ 代入公式，得 $S = EH$。矢量形式 $\vec S = \vec E \times \vec H$。$\vec S$ 称为 Poynting vector。</p>
+<p>  将 $S$ 对时间取平均值，$I = \bar S = \bar E \bar H$。$I$ 称为电磁波的强度。</p>
+<p>  对于平面电磁波：$I = \dfrac{1}{T}\int_0^TE_0H_0\cos^2\omega(t - \dfrac{z}{u})dt = \dfrac{1}{2}E_0H_0$。</p>
+</li>
+</ul>
+<h3 id="S-12-2-电偶极子辐射电磁波"><a href="#S-12-2-电偶极子辐射电磁波" class="headerlink" title="$\S 12.2$ 电偶极子辐射电磁波"></a>$\S 12.2$ 电偶极子辐射电磁波</h3><ul>
+<li><p>任何 LC 振荡电路都可以作为发射电磁波的振源，要想有效把电路中的电磁发射出去，除了补充能量外，还需要：1. 足够高的频率。2. 必须有开放的电路。</p>
+</li>
+<li><p>电偶极子辐射电磁波</p>
+<p>  <img src="12.2-1.png" alt="12.2-1"></p>
+</li>
+</ul>
+<p><img src="12.2-2.png" alt="12.2-2"></p>
+<p><img src="12.2-3.png" alt="12.2-3"></p>
+<h3 id="S-12-3-电磁波谱"><a href="#S-12-3-电磁波谱" class="headerlink" title="$\S 12.3$ 电磁波谱"></a>$\S 12.3$ 电磁波谱</h3><blockquote>
+<p> 内容不重要，稍作了解即可（略）。</p>
+</blockquote>
+<h3 id="习题课（待完成）-2"><a href="#习题课（待完成）-2" class="headerlink" title="习题课（待完成）"></a>习题课（待完成）</h3><h2 id="第十三章-几何光学成像原理"><a href="#第十三章-几何光学成像原理" class="headerlink" title="第十三章 几何光学成像原理"></a>第十三章 几何光学成像原理</h2><h3 id="第十三章总结"><a href="#第十三章总结" class="headerlink" title="第十三章总结"></a>第十三章总结</h3><ul>
+<li><p>光程 $L = ns$  光在某一介质中的光程对应在真空中走相同时间的位移。</p>
+</li>
+<li><p>折射定律 $n’ \sin I’ = n\sin I$。光密到光疏可能发生全反射。</p>
+</li>
+<li><p>$n_{21} = \dfrac{v_1}{v_2} = \dfrac{n_2}{n_1}$ 称为介质 $2$ 相对于介质 $1$ 的相对折射率，若介质 $1$ 是真空则是绝对折射率。</p>
+</li>
+<li><p><strong>一定要清楚符号规则。</strong></p>
+</li>
+<li><p>高斯光学满足 $u \approx \sin u$。</p>
+</li>
+<li><p>$\dfrac{n’}{l’} - \dfrac{n}{l} = \dfrac{n’ - n}{r}$ 是本章最重要的公式，后续公式都是它的变形。</p>
+<blockquote>
+<p>球面反射镜成像就是 $n’ = -n$ 的情况。</p>
+</blockquote>
+</li>
+<li><p>凸透镜 $r &gt; 0$，凹面镜 $r &lt; 0$。透镜左边的距离都是负的，右边距离都是正的。光轴向上是正的，光轴向下是负的。代入公式时一定要注意。</p>
+</li>
+<li><p>薄透镜成像 </p>
+<p>像方焦距 $f’ = \dfrac{n_2’}{\dfrac{n_2’ - n}{r_2} + \dfrac{n - n_1}{r_1}}$</p>
+<p>物方焦距 $f = \dfrac{-n_1}{\dfrac{n_2’ - n}{r_2} + \dfrac{n - n_1}{r_1}}$</p>
+<p>物像关系满足 $\dfrac{f’}{l’} + \dfrac{f}{l} = 1$，不过大多数都是在空气中传播，故有 $\dfrac{1}{l’} - \dfrac{1}{l} = \dfrac{1}{f’}$</p>
+</li>
+</ul>
+<h3 id="S-13-1-光线及其传播的基本定律"><a href="#S-13-1-光线及其传播的基本定律" class="headerlink" title="$\S 13.1$ 光线及其传播的基本定律"></a>$\S 13.1$ 光线及其传播的基本定律</h3><ul>
+<li><p>光程与光程方程</p>
+<p>  $L = ns$ 光程等于路线距离和折射率的乘积。</p>
+<p>  光在某一介质中的光程对应在真空中走相同时间的位移。</p>
+<p>  <strong>光程方程</strong> $(\dfrac{\partial L}{\partial x})^2 + (\dfrac{\partial L}{\partial y})^2 + (\dfrac{\partial L}{\partial z})^2 = n^2$。</p>
+</li>
+<li><p>光线与光波方程</p>
+<p>  某一时刻，光波相位相同点构成的曲面称为波面，其法线是光线。</p>
+<p>  <strong>光线方程</strong> $\dfrac{d}{ds} (n\dfrac{d \vec r}{ds}) = \nabla n$。</p>
+</li>
+<li><p>几何光学定律</p>
+<p>  <strong>在不考虑光的波动性的情况下</strong>，光沿直线传播，且光束之间互不干扰。</p>
+<p>  反射定律 $I’’ = -I$。</p>
+<p>  折射定律 $n’ \sin I’ = n\sin I$。</p>
+<blockquote>
+<p>特殊的，若 $\sin I’ = \dfrac{n}{n’} \sin I \ge 1$ 是会发生全反射现象。</p>
+</blockquote>
+</li>
+<li><p>折射率</p>
+<p>  $n_{21} = \dfrac{v_1}{v_2} = \dfrac{n_2}{n_1}$ 称为介质 $2$ 相对于介质 $1$ 的相对折射率。</p>
+<p>  若介质 $1$ 为真空，则 $n = \dfrac{c}{v}$ 为介质 $2$ 的绝对折射率。</p>
+</li>
+</ul>
+<h3 id="S-13-2-成像基本概念与光路计算"><a href="#S-13-2-成像基本概念与光路计算" class="headerlink" title="$\S 13.2$ 成像基本概念与光路计算"></a>$\S 13.2$ 成像基本概念与光路计算</h3><ul>
+<li><p>光学系统</p>
+<p>  若干光学零件组成的系统称为<strong>光学系统</strong>，穿过表面曲率中心的公共轴线叫<strong>光轴</strong>。</p>
+</li>
+<li><p>物与像</p>
+<p>  物是入射光线汇聚成的，像是出射光线汇聚成的。</p>
+<p>  物所在一侧称为物空间，但像既可能在物空间也可能在像空间。</p>
+<p>  物与像是成对出现的，而且限定在光学系统中讨论。</p>
+</li>
+</ul>
+<p><img src="13.2-1.png" alt="13.2-1"></p>
+<h3 id="S-13-3-高斯光学"><a href="#S-13-3-高斯光学" class="headerlink" title="$\S 13.3$ 高斯光学"></a>$\S 13.3$ 高斯光学</h3><ul>
+<li><p>近轴光线</p>
+<p>  由于入射角很小，故满足 $u \approx \sin u$，研究近轴光线物象关系的光学称为近轴光学，又称为高斯光学。</p>
+</li>
+<li><p>球面折射物像位置关系</p>
+<p>  <img src="13.3-1.png" alt="13.3-1"></p>
+<p>  通过推导以及高斯光学的特点，我们可以得到折射球面物像位置公式：<br>  $$<br>  \dfrac{n’}{l’} - \dfrac{n}{l} = \dfrac{n’ - n}{r} \<br>  n’(\dfrac{1}{r} - \dfrac{1}{l’}) = n(\dfrac{1}{r} - \dfrac{1}{l}) = Q(阿贝不变量)<br>  $$<br>  成的像称为高斯像。</p>
+<ul>
+<li>横向放大率</li>
+</ul>
+</li>
+</ul>
+<pre><code>![13.3-2](13.3-2.png)
+
+​        $\beta &gt; 0$，$l$ 与 $l'$ 同号，物像位于同一侧，方向相同，虚实性质相反，正立。
+
+​        $\beta &lt; 0$，$l$ 与 $l'$ 异号，物像位于两侧，方向相反，虚实性质相同，倒立。
+
+- 轴向放大率
+
+    $\alpha = \dfrac{dl'}{dl} = \dfrac{n'}{n} \beta^2$</code></pre><p><img src="13.3-3.png" alt="13.3-3"></p>
+<blockquote>
+<p>通过这道例题主要是要知道怎么取值的正负。</p>
+</blockquote>
+<ul>
+<li><p>球面反射镜近轴成像光路</p>
+<p>  可以看作折射的一种特殊情况，把 $n’ = -n$ 即可。</p>
+<p>  物像位置公式 $\dfrac{1}{l’} + \dfrac{1}{l} = \dfrac{2}{r}$。</p>
+<ul>
+<li><p>横向放大率 $\beta = \dfrac{nl’}{n’l} = -\dfrac{l’}{l}$。</p>
+<p>$\beta &lt; 0$，$l$ 与 $l’$ 同号，物像位于同一侧，虚实性质相同，倒立。</p>
+<p>$\beta &gt; 0$，$l$ 与 $l’$ 异号，物像位于两侧，虚实性质相反，正立。    </p>
+</li>
+<li><p>轴向放大率 $\alpha = -\dfrac{l’^2}{l^2} = -\beta^2$。</p>
+<p><img src="13.3-6.png" alt="13.3-6"></p>
+</li>
+</ul>
+</li>
+<li><p>薄透镜近轴成像光路</p>
+<p><img src="13.3-5.png" alt="13.3-5"></p>
+<p>由于薄透镜有前后两个面，利用两次 $\dfrac{n’}{l’} - \dfrac{n}{l} = \dfrac{n’ - n}{r}$ 公式，可以得到 $\dfrac{n_2’}{l_2’} - \dfrac{n_1}{l_1} = \dfrac{n_2’ - n}{r_2} + \dfrac{n - n_1}{r_1}$。</p>
+<blockquote>
+<p>特殊的，由于 $l_1 \to \infty$ 时可以得出像方焦距 $l_2’ = f’$，带入上述公式得到 $f’ = \dfrac{n_2’}{\dfrac{n_2’ - n}{r_2} + \dfrac{n - n_1}{r_1}}$。</p>
+<p>由于 $l_2 \to \infty$ 时可以得出物方焦距 $l_1 = f$，带入上述公式得到 $f = \dfrac{-n_1}{\dfrac{n_2’ - n}{r_2} + \dfrac{n - n_1}{r_1}}$。</p>
+</blockquote>
+<p>对于光焦度的定义是 $\Phi = \dfrac{n_2’}{f’} = \dfrac{n_2’ - n}{r_2} + \dfrac{n - n_1}{r_1}$。</p>
+<p>两个焦距之间关系是 $\dfrac{f’}{f} = -\dfrac{n_2’}{n_1}$。</p>
+<p>物像之间关系满足 $\dfrac{f’}{l’} + \dfrac{f}{l} = 1$。</p>
+<blockquote>
+<p>特殊的，当透镜出于同种介质内，有 $f + f’ = 0$，此时上述公式可以变为 $\dfrac{1}{l’} - \dfrac{1}{l} = \dfrac{1}{f’}$。</p>
+</blockquote>
+<ul>
+<li><p>横向放大率 $\beta = \dfrac{y_2’}{y_1} = \dfrac{y_1’}{y_1} \cdot \dfrac{y_2’}{y_2} = \beta_1 \cdot \beta_2  =\dfrac{n_1l_2’}{n_2’l_1}$。</p>
+<p>$\beta &gt; 0$，$l$ 与 $l’$ 同号，物像位于同一侧，方向相同，虚实性质相反，正立。</p>
+<p>$\beta &lt; 0$，$l$ 与 $l’$ 异号，物像位于两侧，方向相反，虚实性质相同，倒立。</p>
+</li>
+<li><p>轴向放大率 $\alpha = \dfrac{n_2’}{n_1}\beta^2$。</p>
+<blockquote>
+<p>特殊的，空气中 $\beta = \dfrac{l’}{l}, \alpha = \beta^2$。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="习题课（待完成）-3"><a href="#习题课（待完成）-3" class="headerlink" title="习题课（待完成）"></a>习题课（待完成）</h3><h2 id="第十四章-光的干涉"><a href="#第十四章-光的干涉" class="headerlink" title="第十四章 光的干涉"></a>第十四章 光的干涉</h2><h3 id="第十四章总结（待完成）"><a href="#第十四章总结（待完成）" class="headerlink" title="第十四章总结（待完成）"></a>第十四章总结（待完成）</h3><p><img src="14.3-1.png" alt="14.3-1"></p>
+<p><img src="14.3-2.png" alt="14.3-2"></p>
+<p><img src="14.3-3.png" alt="14.3-3"></p>
+<p><img src="14.3-4.png" alt="14.3-4"></p>
+<p><img src="14.3-5.png" alt="14.3-5"></p>
+<p><img src="14.3-6.png" alt="14.3-6"></p>
+<h3 id="S-14-1-光的相干性"><a href="#S-14-1-光的相干性" class="headerlink" title="$\S 14.1$ 光的相干性"></a>$\S 14.1$ 光的相干性</h3><ul>
+<li><p>光的干涉，想干条件</p>
+<p>光是电磁波，感光主要是靠电磁波，所以将电场强度 $\vec E$ 称为光矢量。</p>
+<p>光波相遇可以看作是若干振动的叠加，振动的加强是亮条纹，减弱是暗条纹，这种现象称为光的干涉。</p>
+<p><strong>相干条件</strong></p>
+<ol>
+<li>只有平行振动分量间才能发生干涉。</li>
+<li>频率相同的光波之间才能发生干涉。</li>
+<li>相位差恒定的光波才能发生干涉。</li>
+</ol>
+<p><img src="14.1-1.png" alt="14.1-1"></p>
+<blockquote>
+<p>光强 I 在这里表示某种平方。</p>
+</blockquote>
+</li>
+<li><p>光程差</p>
+<p>在不同介质中，$\delta = n_2r_2 - n_1r_1$ 称为光程差，$\Delta \varphi = \dfrac{2 \pi}{\lambda} \delta$ 是相位差。</p>
+<p><img src="14.1-2.png" alt="14.1-2"></p>
+</li>
+<li><p>获得相干光的方法</p>
+<p>主要分为以下两类</p>
+<p><img src="14.1-3.png" alt="14.1-3"></p>
+<blockquote>
+<p>注：振幅相差不能太大。并且光程差也不能太大。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="S-14-2-分波阵面干涉"><a href="#S-14-2-分波阵面干涉" class="headerlink" title="$\S 14.2$ 分波阵面干涉"></a>$\S 14.2$ 分波阵面干涉</h3><ul>
+<li><p>杨氏双缝干涉</p>
+<p><img src="14.2-1.png" alt="14.2-1"></p>
+<p><img src="14.2-2.png" alt="14.2-2"></p>
+<p>条纹明暗相间且条纹等间距（单色光情况），对称分布在中央明纹两边。满足 $\Delta x = \dfrac{D}{a}\lambda$。（指的是相邻明纹与明纹 / 暗纹与暗纹的间距）</p>
+<blockquote>
+<p>若将整个装置放在折射率为 $n$ 的介质中，$\Delta x = \dfrac{D}{na}\lambda$。</p>
+</blockquote>
+<p>对于白色光，条纹是彩色条纹。</p>
+</li>
+<li><p>劳埃德镜实验</p>
+<blockquote>
+<p>验证了半波损失。</p>
+</blockquote>
+</li>
+<li><p>空间相干性和时间相干性</p>
+<blockquote>
+<p>光的相干性质会和时间，空间相关。空间会影响光程差，而时间太长会直接导致无法相干。</p>
+</blockquote>
+<p><strong>空间相干性</strong></p>
+<blockquote>
+<p>由于实际中光源的光是由宽度的，所以要考虑空间相干性对光的干涉产生的影响。</p>
+</blockquote>
+<p><img src="14.2-5.png" alt="14.2-5"></p>
+<p><img src="14.2-6.png" alt="14.2-6"></p>
+<p><strong>时间相干性</strong></p>
+<p><img src="14.2-4.png" alt="14.2-4"></p>
+</li>
+<li><p>例题</p>
+<p><img src="14.2-3.png" alt="14.2-3"></p>
+</li>
+</ul>
+<h3 id="S-14-3-分振幅干涉"><a href="#S-14-3-分振幅干涉" class="headerlink" title="$\S 14.3$ 分振幅干涉"></a>$\S 14.3$ 分振幅干涉</h3><blockquote>
+<p>本节中提到了半波损失，半波损失条件：</p>
+<ol>
+<li>反射。</li>
+<li>从光疏介质到光密介质的反射。</li>
+</ol>
+</blockquote>
+<ul>
+<li><p>薄膜干涉</p>
+<p><img src="14.2-7.png" alt="14.2-7"></p>
+<p><img src="14.2-8.png" alt="14.2-8"></p>
+<p><img src="14.2-9.png" alt="14.2-9"></p>
+<p><img src="14.2-10.png" alt="14.2-10"></p>
+<p><img src="14.2-11.png" alt="14.2-11"></p>
+<p><img src="14.2-12.png" alt="14.2-12"></p>
+</li>
+<li><p>劈尖干涉</p>
+<blockquote>
+<p>劈尖干涉要求两个劈尖平面夹角很小。</p>
+</blockquote>
+<p><img src="14.2-13.png" alt="14.2-13"></p>
+<p><img src="14.2-14.png" alt="14.2-14"></p>
+<p><img src="14.2-15.png" alt="14.2-15"></p>
+</li>
+</ul>
+<h2 id="第十五章-光的衍射"><a href="#第十五章-光的衍射" class="headerlink" title="第十五章 光的衍射"></a>第十五章 光的衍射</h2><h3 id="第十六章总结"><a href="#第十六章总结" class="headerlink" title="第十六章总结"></a>第十六章总结</h3><h3 id="S-15-1-光的衍射现象-惠更斯-菲涅尔原理"><a href="#S-15-1-光的衍射现象-惠更斯-菲涅尔原理" class="headerlink" title="$\S 15.1$ 光的衍射现象 惠更斯 - 菲涅尔原理"></a>$\S 15.1$ 光的衍射现象 惠更斯 - 菲涅尔原理</h3><ul>
+<li><p>光的衍射现象</p>
+<p>光在传播过程中绕过障碍物的边缘，偏离直线传播的现象叫光的衍射。</p>
+<p>光的衍射和分为菲涅尔衍射和夫琅禾费衍射。</p>
+<p><img src="15.1-01.png" alt="15.1-01"></p>
+</li>
+<li><p>惠更斯 - 菲涅尔原理</p>
+<p><img src="15.1-02.png" alt="15.1-02"></p>
+</li>
+</ul>
+<h3 id="S-15-2-夫琅禾费单缝衍射"><a href="#S-15-2-夫琅禾费单缝衍射" class="headerlink" title="$\S 15.2$ 夫琅禾费单缝衍射"></a>$\S 15.2$ 夫琅禾费单缝衍射</h3><ul>
+<li><p>衍射现象的讨论</p>
+<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CPhysics-II%5C15.2-01.png" alt="15.2-01"></p>
+<blockquote>
+<p>对于光屏某一个固定的点，$\varphi$ 角度是固定的。即 $\varphi$ 只和选取的 $P$ 点有关。</p>
+</blockquote>
+<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CPhysics-II%5C15.2-02.png" alt="15.2-02"></p>
+<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CPhysics-II%5C15.2-03.png" alt="15.2-03"></p>
+<blockquote>
+<p>注意这里 $k$ 取 $0$ 的时候其实被中央明纹包含在内了，所以第一级明纹应从 $k = 1$ 开始，即 $\dfrac{3\lambda}{2}$。</p>
+</blockquote>
+</li>
+<li><p>单缝衍射条纹特点</p>
+<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CPhysics-II%5C15.2-05.png" alt="15.2-05"></p>
+<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CPhysics-II%5C15.2-04.png" alt="15.2-04"></p>
+<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CPhysics-II%5C15.2-06.png" alt="15.2-06"></p>
+<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CPhysics-II%5C15.2-07.png" alt="15.2-07"></p>
+</li>
+</ul>
+<h3 id="S-15-4-光栅衍射"><a href="#S-15-4-光栅衍射" class="headerlink" title="$\S 15.4$ 光栅衍射"></a>$\S 15.4$ 光栅衍射</h3><ul>
+<li><p>衍射光栅</p>
+<p>光栅：有大量等宽间距平行狭缝组成的光学元件。</p>
+<p>缝宽 $a$，间距 $b$，$d = a + b$ 为结构参量，称为光栅结构。 $d$ 的数量级约为 $10^{-5} \sim 10^{-6}$。</p>
+<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CPhysics-II%5C15.4-01.png" alt="15.4-01"></p>
+</li>
+<li><p>光栅衍射条纹的形成</p>
+<p>光栅的自身衍射和各缝之间的干涉共同决定了光通过光栅后的光强分布，也就是说光栅衍射条纹是单缝衍射和多缝干涉的总效果。</p>
+<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CPhysics-II%5C15.4-02.png" alt="15.4-02"></p>
+<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CPhysics-II%5C15.4-03.png" alt="15.4-03"></p>
+<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CPhysics-II%5C15.4-04.png" alt="15.4-04"></p>
+<blockquote>
+<p>本来是暗纹的一定还是暗纹，本来是明纹的可能因为不同光的干涉变成暗纹。</p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li><p>光栅光谱</p>
+<p>白光入射时，光栅能把不同波长光分散开，称为色散。</p>
+</li>
+</ul>
+<h3 id="习题课"><a href="#习题课" class="headerlink" title="习题课"></a>习题课</h3><h2 id="第十六章-光的偏振"><a href="#第十六章-光的偏振" class="headerlink" title="第十六章 光的偏振"></a>第十六章 光的偏振</h2><h3 id="第十六章总结-1"><a href="#第十六章总结-1" class="headerlink" title="第十六章总结"></a>第十六章总结</h3><h3 id="习题课-1"><a href="#习题课-1" class="headerlink" title="习题课"></a>习题课</h3>]]></content>
+      <tags>
+        <tag>大学笔记</tag>
+        <tag>物理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ICPC-2022</title>
+    <url>/2023/10/18/ICPC-2022/</url>
+    <content><![CDATA[<p>ICPC 2022 补题合集</p>
+<span id="more"></span>
+
+<h2 id="The-2023-ICPC-Asia-Hong-Kong-Regional-Programming-Contest-The-1st-Universal-Cup-Stage-2-Hong-Kong"><a href="#The-2023-ICPC-Asia-Hong-Kong-Regional-Programming-Contest-The-1st-Universal-Cup-Stage-2-Hong-Kong" class="headerlink" title="The 2023 ICPC Asia Hong Kong Regional Programming Contest (The 1st Universal Cup, Stage 2:Hong Kong)"></a><a href="https://codeforces.com/gym/104172">The 2023 ICPC Asia Hong Kong Regional Programming Contest (The 1st Universal Cup, Stage 2:Hong Kong)</a></h2><h3 id="B-Big-Picture"><a href="#B-Big-Picture" class="headerlink" title="B. Big Picture"></a><a href="https://qoj.ac/contest/1099/problem/5456">B. Big Picture</a></h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>给你一个 $(n+1) \times (m+1)$ 的方格矩阵，每个格子一开始是白色。</p>
+<p>你会对每一行和每一列进行染色。将第 $i$ 行的前 $j$ 个格子染为黑色的概率为 $p_{i, j}$，将第 $j$ 列的前 $i$ 个格子染为黑色的概率为 $q_{i, j}$。保证每一行的 $p_{i, j}$、每一列的 $q_{i, j}$ 的和为 1。行与列是独立的，这意味着同一个格子可能会同时被行和列各染一次。</p>
+<p>求同色连通块的期望个数，模 $998244353$。</p>
+<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a><strong>Solution</strong></h4><p>对于每一个染列的操作，我们发现每列第一个（即第一行）一定都会被染色。故所有由染列得到的黑格子都会经由第一行连在一起。</p>
+<p>对于每一个染行的操作，我们发现每行第一个（即第一列）一定都会被染色。故所有由染行得到的黑格子都会经由第一列连在一起。</p>
+<p>又因为第一行第一列的格子一定会被染色，所以所有黑格子一定都是一个大连通块。并且最后一行，最后一列一定都是白色格子，所以我们要算的就是被黑色格子断开所形成的白色区域个数。</p>
+<p>要确定每一个区域的个数，我们只要找一个区域中有标志的格子（含有某个独一无二的特性，只有其中某个格子有，其他格子都没有）。我们自然想到找角落的格子。思考发现由于每次染前缀的特性，左上角，右上角，左下角符合条件的格子均可能不唯一，只有右下角的格子唯一。所以找区域个数变为找区域右下角格子的个数，即计算有多少个格子可能称为右下角格子。这个概率是该格子没被染色并且下面，右边均被染色。</p>
+<p><a href="https://codeforces.com/gym/104172/submission/228641466">Code</a></p>
+<h3 id="E-Goose-Goose-DUCK"><a href="#E-Goose-Goose-DUCK" class="headerlink" title="E. Goose, Goose, DUCK?"></a><a href="https://codeforces.com/gym/104172/problem/E">E. Goose, Goose, DUCK?</a></h3><h4 id="Description-1"><a href="#Description-1" class="headerlink" title="Description"></a>Description</h4><p>给定一个序列 $\{a_i\}$，对于一个子序列，若其<strong>不合法</strong>，当且仅当子序列中存在某个元素出现了<strong>恰好</strong> $k$ 次。求这个序列中有多少个<strong>合法子序列</strong>。</p>
+<p>$n \le 10^6$</p>
+<h4 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a><strong>Solution</strong></h4><p>我们可以固定左端点，求有多少合法右端点。也可以固定右端点，求有多少合法左端点。</p>
+<p>假设固定一个左端点，我们把右边所有不合法的区域全部标记 $+1$，初始时右边所有区域都是 $0$。题目就变为了求右边有多少个标记为 $0$ 的点。然后每次左端点都可以向右移动一位，移动的时候判断一下，如果这个元素右边区域剩的元素少于 $k$ 个，那么就不用标记 $-1$。反之把这个元素原先不合法的区域都变合法（即标记 $-1$ ），然后再把新的区域标记不合法（标记 $+1$ ）。</p>
+<p>整个过程可以用线段树解决。时间复杂度 $\Theta (n\log n)$。</p>
+<p><a href="https://codeforces.com/gym/104172/submission/228673534">Code</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>CodeForces 补全计划（1826 ~ 1850）</title>
+    <url>/2023/06/26/CF-Instrumentality-Project-I/</url>
+    <content><![CDATA[<p>千里之行，始于足下。</p>
+<span id="more"></span>
+
+<h2 id="1826-Codeforces-Round-870-Div-2"><a href="#1826-Codeforces-Round-870-Div-2" class="headerlink" title="1826. Codeforces Round 870 (Div. 2)"></a>1826. <a href="https://codeforces.com/contest/1826">Codeforces Round 870 (Div. 2)</a></h2><h3 id="E-Walk-the-Runway"><a href="#E-Walk-the-Runway" class="headerlink" title="E. Walk the Runway"></a><a href="https://codeforces.com/contest/1826/problem/E">E. Walk the Runway</a></h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>$n$ 个人每个人都有一个价值 $p_i$，然后这 $n$ 个人有 $m$ 维数值，要求你从中选取若干个人并且可以任意调整选的人的顺序，要求选的人满足 $m$ 维中每一维里选的人的数值都严格递增。</p>
+<p>$n \le 5000,m \le 500$。</p>
+<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>如果我们已知两个人之间的偏序关系，我们可以在两个人之间连一条有向边（或不连），故这 $n$ 个人的关系可以用一个有向无环图来表示，在图上跑 dfs，时间复杂度是 $O(n^2)$，是完全够的，那么我们现在研究如何求任意两个人之间偏序关系。</p>
+<p>直接暴力求偏序关系的时间复杂度是 $O(n^2m)$，显然是会 T 的，那么我们可以用 bitset 来优化。对每一维排完序后前面的肯定不会排在这个数的后面，故每次用 bitset 的 &amp; 运算即可，时间复杂度是 $O(\dfrac{m}{w})$，其中 $w$ 等于 $64$。</p>
+<p><a href="https://codeforces.com/contest/1826/submission/212761847">Code</a></p>
+<h3 id="F-Fading-into-Fog"><a href="#F-Fading-into-Fog" class="headerlink" title="F. Fading into Fog"></a><a href="https://codeforces.com/contest/1826/problem/F">F. Fading into Fog</a></h3><h4 id="Description-1"><a href="#Description-1" class="headerlink" title="Description"></a>Description</h4><p>交互题</p>
+<p>有 $n$ 个隐藏点，每次你可以给出 $a$，$b$，$c$，询问一条形如 $ax+by+c=0$ 的直线，交互库会以<strong>任意顺序</strong>告诉你每个点在直线上的投影（保证每个返回的投影点与真实投影点的距离不超过 $10^{-4}$）。</p>
+<p>请用最少的询问求出这些隐藏点的位置，精度相差 $10^{-3}$ 即可。</p>
+<p>保证每个隐藏点的与其他隐藏点的 $x$ 坐标和 $y$ 坐标都至少相差 $1$，每次询问的 $∣a∣+∣b∣≥0.1$。</p>
+<h4 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h4><p>通过画图观察不难发现，其实最多三次询问就可以确定这 $n$ 个点了，所以题目就变为不超过三次询问求出 $n$ 点，一条平行 $x$ 轴，一条平行 $y$ 轴，一条斜着的边（但是很贴近 $x$ 轴），前两个就可以确定这 $n$ 个点的横纵坐标，第三个完全确定这 $n$ 个点。</p>
+<p>为什么第三条线要贴近 $x$ 轴呢？因为我们的处理方法是对第一，三条线得到的 $n$ 个投影点按横坐标排序，选一条贴近 $x$ 轴的线保证这 $n$ 个点和第一条线的 $n$ 个点顺序一致，这样的话我们就可以算出每个点纵坐标的值，但不准确可能会有误差，但是我们知道每个点的纵坐标，所以我们可以找纵坐标和我们计算的估计值中最贴近的值来替换。</p>
+<p>值得注意的是，本题对精度要求较高，应用 <code>long double</code> 来存储</p>
+<p><a href="https://codeforces.com/contest/1826/submission/212805712">Code</a></p>
+<h2 id="1828-Codeforces-Round-873-Div-2"><a href="#1828-Codeforces-Round-873-Div-2" class="headerlink" title="1828. Codeforces Round 873 (Div. 2)"></a>1828. <a href="https://codeforces.com/contest/1828">Codeforces Round 873 (Div. 2)</a></h2><h3 id="D2-Range-Sorting-Hard-Version"><a href="#D2-Range-Sorting-Hard-Version" class="headerlink" title="D2. Range Sorting (Hard Version)"></a><a href="https://codeforces.com/contest/1828/problem/D2">D2. Range Sorting (Hard Version)</a></h3><h4 id="Description-2"><a href="#Description-2" class="headerlink" title="Description"></a>Description</h4><p>对一个数组 $\{p_i\}$ 的一段区间 $[l,r]$ 排序的代价为 $r−l$ ，对整个数组 $p_i$ 排序的代价为选定若干区间并排序，使得整个数组有序的代价之和。</p>
+<p>求 $\{a_i\}$ 的所有子段排序的代价之和。</p>
+<p>Easy Version $n \le 5 \times 10^3$</p>
+<p>Hard Version $n \le 3 \times 10^5$</p>
+<h4 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h4><p>有点难想。</p>
+<p>仔细观察样例，不难发现一些性质：</p>
+<ul>
+<li>操作区间一定是不重叠的，不然直接对整个区间操作更优。</li>
+<li>尽可能多区间操作会使答案更优。</li>
+<li>更分成两个区间操作则一定满足前一个区间的最大值小于后一个区间的最小值。</li>
+</ul>
+<p>那么基于以上性质，我们很容易搞出 $O(n^3)$ 暴力：枚举区间左右端点，枚举中间间隔点，提前用 st表 预处理出区间最大最小值然后来求，但是这样发现连 Easy Version 都过不了，故我们可以来稍改进一下思路。</p>
+<p>对于 Easy Version，我们可以固定左端点，每次枚举右端点，每次向后加入一个新的数时，我们要重新计算对答案的贡献，我们算 $[l, r]$ 区间的答案就是区间长度减去最多可拆分区间数，假设我们已经知道了 $[l, r - 1]$ 区间的答案以及划分区间，加入 $a_r$ 数后，我们其实就是要把这个数和某个区间合并，满足合并后的区间的最小值依然大于前面区间的最大值。所以我们可以记录之前几个划分区间的最大值，然后不断向前跳，看 $a_r$ 可以和哪几个区间合并，找到第一个可以合并的区间就直接合并，这样一定是最优的。合并完之后更新新的拆分区间，答案也比较好统计，时间复杂度 $O(n^2)$。</p>
+<p>对于 Hard Vesion，我们发现很难从 Easy Version 上再继续优化，我们换另一个思路。能过 $3 \times 10^5$ 的做法应该是 $O(nlogn)$ 或 $O(n)$ 的，所以我们要找到这个复杂度的算法应该是算每个位置所能做出的贡献。我们先算最坏情况下一共的代价为 $\sum_{i = 2}^{n}(i - 1)(n - i + 1)$，然后我们再算每个位置对代价能减少的贡献。若能对答案产生减少的贡献，对于一个大区间，我们一定可以拆分成两个小区间。对于每个位置，我们不妨假设这个位置 $i$ 上的数是后一个区间的最小值。然后我们往后找到第一个小于 $a_i$ 的数的位置 $r_i$（这里求“第一个小于“这样的位置，我们可以用单调栈来求），然后再往前找第一个小于 $a_i$ 的数的位置 $l_i$，那么我们可以确定后一个区间的左端点是 $(l_i + 1)$，右端点是在 $i \sim (r_i - 1)$ 里选。然后前一个区间的右端点是 $l_i$，最后只用确定前一个区间的左端点，这里我们可以用 st表 先求出区间最大值，然后不断跳表来求出左端点 $kdl$。然后这个位置的数对答案减少的贡献为 $(r_i - i)\times(l_i - kdl + 1)$，时间复杂度为 $O(nlogn)$。</p>
+<p><a href="https://codeforces.com/contest/1828/submission/212909151">Code (Easy Version)</a></p>
+<p><a href="https://codeforces.com/contest/1828/submission/213004607">Code (Hard Version)</a></p>
+<h3 id="E-Palindrome-Partition"><a href="#E-Palindrome-Partition" class="headerlink" title="E. Palindrome Partition"></a><a href="https://codeforces.com/contest/1828/problem/E">E. Palindrome Partition</a></h3><h4 id="Description-3"><a href="#Description-3" class="headerlink" title="Description"></a>Description</h4><p>称一个字符串是好的，当且仅当它是一个长度为偶数的回文串或由若干长度为偶数的回文串拼接而成。</p>
+<p>给定一个长度为 $n$ 的字符串 $s$，求有多少 $s$ 的子串是好的。</p>
+<p>$1≤n≤5×10^5$，$s$ 仅包含小写字母。</p>
+<h4 id="Solution-3"><a href="#Solution-3" class="headerlink" title="Solution"></a>Solution</h4><p>根据数据范围可以得出正解的时间复杂度应该是 $O(n)$ 或 $O(nlogn)$ 的。</p>
+<p>本题采用动态规划，可以令 $g[i]$ 表示以 $i$ 结尾的好串个数，那么显然答案就是 $\sum_{i = 1}^n g[i]$ 。那么怎么求 $g[i]$ 呢，我们考虑到对于一个回文串，我们把它尽可能多分为由若干回文字串组成，分到不能分为止。这样分解出来的每一个回文串里一定不会包含回文前缀 / 后缀（因为要是包含的话就又可以分解了）。这样分解之后，对于一个好的字符串，一定是由若干小的不可分解的回文串组成。而且显然这种分解方法是唯一的。说明这样的话，对于每个好的字符串而言我们只算了一次，正是我们想要的。基于这个思路，我们再引入一个新的数组 $f[i]$，$f[i]$ 表示以 $i$ 结尾的回文串的最小长度，因为以 $i$ 结尾的字串一定是包含以 $i$ 结尾的最小回文串的，而且基于之前的分解方法，我们可以得到 $g[i] = g[i - f[i]] + 1(f[i] \ne 0)$，当 $f[i] = 0$ 时，$g[i] = 0$。那么现在我们将问题转化为了如何求 $f[i]$，我们先进行一遍 Manacher 算法，求出以每一位为对称轴的最大回文半径，由于要求是偶回文，所以我们只考虑以两个位置中间为轴。我们发现，若以第 $i$ 位为轴，那么 $[i + 1, i + len[i]]$ 这个范围内是都可以作为回文结尾的，可以被 $i$ 覆盖。而想要让回文最小，就是从后向前扫一遍，如果先被以 $i$ 覆盖的，一定满足以 $i$ 为轴回文最小，我们知道了右端点和回文轴就可以计算出回文长度了，也就可以计算出 $f[i]$ 了，要注意的是，如果区间中一部分点被之前的对称轴覆盖了，那么我们被之后对称轴覆盖时要跳过这几个点，可以用双向链表来维护。</p>
+<p><a href="https://codeforces.com/contest/1828/submission/213452328">Code</a></p>
+<h3 id="F-Two-Centroids"><a href="#F-Two-Centroids" class="headerlink" title="F. Two Centroids"></a><a href="https://codeforces.com/contest/1828/problem/F">F. Two Centroids</a></h3><h4 id="Description-4"><a href="#Description-4" class="headerlink" title="Description"></a>Description</h4><h4 id="Solution-4"><a href="#Solution-4" class="headerlink" title="Solution"></a>Solution</h4><h2 id="1829-Codeforces-Round-871-Div-4"><a href="#1829-Codeforces-Round-871-Div-4" class="headerlink" title="1829. Codeforces Round 871 (Div. 4)"></a>1829. <a href="https://codeforces.com/contest/1829">Codeforces Round 871 (Div. 4)</a></h2><h3 id="G-Hits-Different"><a href="#G-Hits-Different" class="headerlink" title="G. Hits Different"></a><a href="https://codeforces.com/contest/1829/problem/G">G. Hits Different</a></h3><h4 id="Description-5"><a href="#Description-5" class="headerlink" title="Description"></a>Description</h4><p><img src="1829G.png" alt="1829G"></p>
+<p>若干块以金字塔状摆放，用球击倒下方的，上方也会倒下，第 $n$ 块分数 $n^2$，问用球打第 $n$ 块能得多少分</p>
+<h4 id="Solution-5"><a href="#Solution-5" class="headerlink" title="Solution"></a>Solution</h4><p>方法一：</p>
+<p>​    动态规划， $f[i]$ 表示击打第 $i$ 块能得的分数，$f[i] = f[左上] + f[右上] - f[公共]$，因为左上和右上是有公共部分会多算，所以简单容斥一下</p>
+<p>方法二：</p>
+<p>​    还是动态规划，先把图倾斜 $45°$</p>
+<p>​    <img src="1829G-sol1.png" alt="1829G-sol1"></p>
+<p>​    感觉变好看了一点（？）</p>
+<p>​    再转45°</p>
+<p><img src="1829G-sol2.png" alt="1829G-sol2"></p>
+<p>​    嗯，变成一个简单二维DP就能解决的问题了</p>
+<p><a href="https://codeforces.com/contest/1829/submission/211201013">Code (Method I)</a></p>
+<p><a href="https://codeforces.com/contest/1829/submission/211200275">Code (Method II)</a></p>
+<h2 id="1837-Educational-Codeforces-Round-149-Rated-for-Div-2"><a href="#1837-Educational-Codeforces-Round-149-Rated-for-Div-2" class="headerlink" title="1837. Educational Codeforces Round 149 (Rated for Div. 2)"></a>1837. <a href="https://codeforces.com/contest/1837">Educational Codeforces Round 149 (Rated for Div. 2)</a></h2><h3 id="E-Playoff-Fixing"><a href="#E-Playoff-Fixing" class="headerlink" title="E. Playoff Fixing"></a><a href="https://codeforces.com/contest/1837/problem/E">E. Playoff Fixing</a></h3><h4 id="Description-6"><a href="#Description-6" class="headerlink" title="Description"></a>Description</h4><p>给定数 $k$，一共有 $2^k$ 个人参加比赛，序号越小的实力越强。每轮第 $2i$ 和 $2i-1$ 进行比赛，一共进行 $k$ 轮，最后要求序号为 $1$ 的一直留到最后一轮，序号为 $2$ 的留到倒数第二轮，序号为 $3 \sim 4$ 的留到倒数第三轮，以此类推，序号 $2^{k - 1} + 1$ 到 $2^k$ 的人要求第一轮淘汰，给定部分人当前位置，如果这个位置上还没确定选手就用 $-1$ 表示，问一共又有多少种表示合法方案</p>
+<h4 id="Solution-6"><a href="#Solution-6" class="headerlink" title="Solution"></a>Solution</h4><p>第一轮中，我们可以知道序号 $2^{k - 1} + 1$ 到 $2^k$ 的人可以安排在哪里，一定是在 $\{1,2\}$，$\{3,4\},\cdots, \{2^k - 1,2^k\}$ 中各选一个，如果两个都没选则两个位置都可以放，记一下这种情况的个数是 $cnt1$，如果一个位置放了小于 $2^{k-1}$ 的序号，那么只能选另一个位置放，如果两个位置都被选了且不合法，那么就返回 $0$，设一共有 $cnt2$ 个可以放的位置，那么这轮方案数是 $2^{cnt1} \times cnt1 !$ 而且这一轮放置的人下一轮都被淘汰了，所以无后效性，然后下一轮其实就变为规模折半的子问题，不断迭代计算即可</p>
+<p><a href="https://codeforces.com/contest/1837/submission/211143124">Code</a></p>
+<h3 id="F-Editorial-for-Two"><a href="#F-Editorial-for-Two" class="headerlink" title="F. Editorial for Two"></a><a href="https://codeforces.com/contest/1837/problem/F">F. Editorial for Two</a></h3><h4 id="Description-7"><a href="#Description-7" class="headerlink" title="Description"></a>Description</h4><p>$n$ 个数中选 $k$ 个数（不改变在原序列中顺序），要求这 $k$ 个数分为前后两半后，这前后两部分和的最大值尽可能小。</p>
+<h4 id="Solution-7"><a href="#Solution-7" class="headerlink" title="Solution"></a>Solution</h4><p>这道题可以用二分来做，对于二分值 $lim$，先正着扫一遍，再倒着扫一遍，扫到第 $i$ 位置时，我们只要算一下前 $i - 1$ 位置中 和不超过 $lim$ 的最多可以选的数的个数 + 后 $i$ 到 $n$ 位置中 和不超过 $k$ 的最多可以选的数的个数  之和是不是大于 $k$ 即可。</p>
+<p><a href="https://codeforces.com/contest/1837/submission/211151946">Code</a></p>
+<h2 id="1840-Codeforces-Round-878-Div-3"><a href="#1840-Codeforces-Round-878-Div-3" class="headerlink" title="1840. Codeforces Round 878 (Div. 3)"></a>1840. <a href="https://codeforces.com/contest/1840">Codeforces Round 878 (Div. 3)</a></h2><h3 id="F-Railguns"><a href="#F-Railguns" class="headerlink" title="F. Railguns"></a><a href="https://codeforces.com/contest/1840/problem/F">F. Railguns</a></h3><h4 id="Description-8"><a href="#Description-8" class="headerlink" title="Description"></a>Description</h4><p>Tema 在 $n⋅m$ 的网格内要从 $(0,0)$ 走到 $n⋅m$。第 $0$ 秒末 Tema 位于 $(0,0)$。</p>
+<p>每次行动 Tema 可以选择向下走，向右走或不动。</p>
+<p>机器人会发射 $r$ 次激光炮以阻挠他前进，具体为在第 $t$ 秒，向第 $x$ 行或第 $x$ 列发射激光炮，一整列或一整行都会受到炮击。若 Tema 在第 $t$ 秒末还停留在被炮击的单元格内则会被击毁。求 Tema 从 $(0,0)$ 到达 $(n,m)$ 的最短时间，若无法抵达，则输出 $−1$。</p>
+<p>$r$ 次炮击格式为 $t$，$d$，$coord$ ，$t$ 表示炮击发生的时间，$d$ 表示炮击方式 ( $d=1$ 时攻击一整行，$d=2$ 时攻击一整列)，$coord$ 表示攻击的是具体哪一行/列）</p>
+<h4 id="Solution-8"><a href="#Solution-8" class="headerlink" title="Solution"></a>Solution</h4><p>设 $f[i][j][k]$ 表示在 $k$ 时刻到第 $i$ 行第 $j$ 列是否合法，由于我们发现时间 $t$ 的范围是到 $10^9$ 且到达某位置的时间 $t$ 只和 $i$，$j$，和停下躲避了几次有关，而且躲避的次数最多不超过 $100$ 次，所以 $k$ 可以用停下躲避的次数来表示，这样转移方程就很简单了  $f[i][j][k] = f[i - 1][j][k] | f[i][j - 1][k] | f[i][j][k - 1]$ 。</p>
+<p><a href="https://codeforces.com/contest/1840/submission/211968399">Code</a></p>
+<h3 id="G2-In-Search-of-Truth-Hard-Version"><a href="#G2-In-Search-of-Truth-Hard-Version" class="headerlink" title="G2. In Search of Truth (Hard Version)"></a><a href="https://codeforces.com/contest/1840/problem/G2">G2. In Search of Truth (Hard Version)</a></h3><h4 id="Description-9"><a href="#Description-9" class="headerlink" title="Description"></a>Description</h4><p>交互题</p>
+<p>一个转盘共 $n$（ $n$ 未知 ）个格子，格子 $1$ 到 $n$ 乱序编号，你每次可以顺/逆时针旋转 $k$ 个格子，输出顺/逆时针（分别用“+”、“-”表示）和 $k$。需要读取起始格子的编号和每次旋转后格子的编号，求 $n$。</p>
+<p>Easy Version 中旋转次数不大于 $2023$ 。</p>
+<p>Hard Version 中旋转次数不大于 $1000$ 。</p>
+<p>$n≤1×10^6,−10^9≤k≤10^9$ 。</p>
+<h4 id="Solution-9"><a href="#Solution-9" class="headerlink" title="Solution"></a>Solution</h4><p>很不错的一道题</p>
+<p>对于 Easy Version，参考 BSGS 算法，先连续 999 次 +1，然后每次 +1000，这样最多 1000 次就可以循环完一圈，然后走完一圈后必定会落在最初连续的前 1000 个格子上，我们可以通过转了多少正好可以走一圈来推算 n 的大小，最多询问 999 + 1000 次。</p>
+<p>对于 Hard Version，我们在 Easy Version 基础上稍加改进，我们对于一个 $n$，可以先转 $n_0$，然后再按 G1 的方法去转，先连续转 $d$ 个 $+1$，再一直 $+d$ 直到转完一圈为止，但是这个 $n_0$ 和 $d$ 如何确定呢。我们可以先随机 $k$ 次，然后去这 $k$ 次中得到的最大的数选为 $n_0$，因为如果直接选的话，选的数可能过大或过小，若是不随机选 $k$ 个数而是连续选 $k$ 个或间隔选 $k$ 个则容易被卡掉。不过这个算法由于是一定程度上取决于随机数的，所以不一定完全正确，当 $n$ 大于 $n_0 + d^2$ 时，就无法转到一圈，此时不对。所以 $k$ 次算出的数必须有一个要大于 $n - d^2$，出错的概率为 $P(A) = (\frac{n - d^2 - 1}{n})^k,(k + 2d = 1000)$，不难发现通过改变 $n$ 和 $k$ 大小是可以改变出错概率的，当选择 $k = 400, d = 300$ 时，即使是在 $n = 10^6$ 情况下 $P(A)$ 的数量级才是 $10^{-17}$，远远小于 $1$，故可以通过此题。</p>
+<p><a href="https://codeforces.com/contest/1840/submission/212058294">Code (Easy Version)</a></p>
+<p><a href="https://codeforces.com/contest/1840/submission/212063730">Code (Hard Version)</a></p>
+<h2 id="1848-Codeforces-Round-885-Div-2"><a href="#1848-Codeforces-Round-885-Div-2" class="headerlink" title="1848. Codeforces Round 885 (Div. 2)"></a>1848. <a href="https://codeforces.com/contest/1848">Codeforces Round 885 (Div. 2)</a></h2><h3 id="C-Vika-and-Price-Tags"><a href="#C-Vika-and-Price-Tags" class="headerlink" title="C. Vika and Price Tags"></a><a href="https://codeforces.com/contest/1848/problem/C">C. Vika and Price Tags</a></h3><h4 id="Description-10"><a href="#Description-10" class="headerlink" title="Description"></a>Description</h4><p>有 $a$, $b$ 两个长度均为 $n$ 序列， 一次变换记为 $a_i \to b_i, b_i \to \left | a_i - b_i \right | $，问是否可以经过若干次变换使得 $a$ 中所有元素全部变成 $0$。</p>
+<h4 id="Solution-10"><a href="#Solution-10" class="headerlink" title="Solution"></a>Solution</h4><p>不难发现，若 $(a_i, b_i)$ 中有一个元素变为 $0$（不是 $(0, 0)$ 情况），则 $(a_i, b_i)$ 则会经历 $(0, x) \to (x, 0) \to, (x, x) \to(0, x)$ 以 $3$ 为周期的变换。</p>
+<p>所以我们要求的是每个元素变为 $(x, 0)$ 的次数模 $3$ 的余数。</p>
+<p>不妨设 $a &gt;&gt; b$，则变换经历 $(a, b) \to (b, a - b) \to (a - b, a - 2b) \to (a - 2b, b)$ 。不难发现每三次会经历一次周期，每次 $a \to a - 2b$。这样的话我们就可以用辗转相除法来求了。</p>
+<p><a href="https://codeforces.com/contest/1848/submission/220325561">Code</a></p>
+<h3 id="D-Vika-and-Bonuses"><a href="#D-Vika-and-Bonuses" class="headerlink" title="D. Vika and Bonuses"></a><a href="https://codeforces.com/contest/1848/problem/D">D. Vika and Bonuses</a></h3><h4 id="Description-11"><a href="#Description-11" class="headerlink" title="Description"></a>Description</h4><p>初始有一个数 $s$，每次可以进行两种操作，获得价值为 $s$ 的利润或让 $s \to s + (s \mod 10)$，你可以进行 $k$ 次，问 $k$ 次之后的最大价值。</p>
+<h4 id="Solution-11"><a href="#Solution-11" class="headerlink" title="Solution"></a>Solution</h4><p>不难发现，个位是 $5$ / $0$ 的话，最多只能操作一次。</p>
+<p>个位是 $1$ / $3$ / $7$ / $9$ 的话，操作一次后变为 $2$ / $6$ / $4$ / $8$。</p>
+<p>而个位如果是 $2$ / $4$ / $6$ / $8$ 的话，则会有 $2 \to 4 \to 8 \to 6$ 的循环，我们记 $4$ 次操作为一个周期，一个周期可以让 $s \to s + 20$。</p>
+<p>则题目变为求周期数 $x$，使 $(s + 20 \times x) \times (k - 4 \times x)$ 最大，但是注意，这个周期的开头我们还要枚举，因为末尾可能是 $2$ / $4$ / $6$ / $8$ 中任一数。</p>
+<p><a href="https://codeforces.com/contest/1848/submission/220463956">Code</a> </p>
+<h3 id="F-Vika-and-Wiki"><a href="#F-Vika-and-Wiki" class="headerlink" title="F. Vika and Wiki"></a><a href="https://codeforces.com/contest/1848/problem/F">F. Vika and Wiki</a></h3><h4 id="Description-12"><a href="#Description-12" class="headerlink" title="Description"></a>Description</h4><p>给定一个长度为 $n$ 的数组 $a$（其中 $n$ 为 $2$ 的幂次），记一次变换为将整个数组 $a_i \to a_i \oplus a_{(i + 1) \mod n}$。 </p>
+<h4 id="Solution-12"><a href="#Solution-12" class="headerlink" title="Solution"></a>Solution</h4><p>手动模拟若干次后，我们发现当进行 $2^n - 1$ 次后，数组每个元素 $a_i \to \oplus_{j = 0}^{2^n}a_{i + j(\mod n)}$，利用这个性质我们可以先进行 $2 ^n - 1$ 次然后再进行 $1$ 次。这样就进行了 $2^k$ 次，时间复杂度为 $O(nlogn)$。</p>
+<p><a href="https://codeforces.com/contest/1848/submission/220480211">Code</a></p>
+<h2 id="1850-Codeforces-Round-886-Div-4"><a href="#1850-Codeforces-Round-886-Div-4" class="headerlink" title="1850. Codeforces Round 886 (Div. 4)"></a>1850. <a href="https://codeforces.com/contest/1850">Codeforces Round 886 (Div. 4)</a></h2><h3 id="F-We-Were-Both-Children"><a href="#F-We-Were-Both-Children" class="headerlink" title="F. We Were Both Children"></a><a href="https://codeforces.com/contest/1850/problem/F">F. We Were Both Children</a></h3><h4 id="Description-13"><a href="#Description-13" class="headerlink" title="Description"></a>Description</h4><p>$n$ 只青蛙，每次只挑 $a_i$ 的倍数的格子，要你再前 $n$ 格内放置一个陷阱，使尽可能多的青蛙跳进去。</p>
+<p>$n \le 10^5$ 。</p>
+<h4 id="Solution-13"><a href="#Solution-13" class="headerlink" title="Solution"></a>Solution</h4><p>如果知道第 $i$ 个格子能跳 $f_i$ 只青蛙，则可以将所有 $i$ 倍数格子全部加上 $f_i$ 。</p>
+<p>故两层循环枚举即可。时间复杂度 $O(\sum_{i = 1}^n \dfrac{n}{i}) \approx O(nlnn)$ 。</p>
+<p><a href="https://codeforces.com/contest/1850/submission/218473979">Code</a></p>
+<h3 id="H-The-Third-Letter"><a href="#H-The-Third-Letter" class="headerlink" title="H. The Third Letter"></a><a href="https://codeforces.com/contest/1850/problem/H">H. The Third Letter</a></h3><h4 id="Description-14"><a href="#Description-14" class="headerlink" title="Description"></a>Description</h4><p>若干点分布在一系列 $x$ 轴上，告诉你若干点之间的约束条件（在 左 / 右 xx 的位置处）。然后问你这一系列条件是否合理。</p>
+<h4 id="Solution-14"><a href="#Solution-14" class="headerlink" title="Solution"></a>Solution</h4><p>本题的模型可以抽象成一个有向图。但是这 $n$ 个点可能是若干连通块，不一定全是连通的。</p>
+<p>每次从一个点出发，设这个点的位置是 $0$，然后标记出所有和这个点相关的点的坐标。</p>
+<p>最后再把这些约束关系一一查询，看最后是否满足条件。</p>
+<p><a href="https://codeforces.com/contest/1850/submission/219780470">Code</a></p>
+]]></content>
+      <tags>
+        <tag>算法竞赛</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大学笔记 | 模拟电子技术基础</title>
+    <url>/2023/08/29/Electronic-Devices-and-Circuit-Theory/</url>
+    <content><![CDATA[<p>本课最大的收获是习得了上课隐身术，只有聪明的人才能看到我。</p>
+<p>——  updated on 2023/10/10 ———-</p>
+<p>老师上课点名，隐身术失效了呜呜呜 🥲</p>
+<span id="more"></span>
+
+<blockquote>
+<p><strong>写在前面</strong></p>
+<p>本笔记内容排布主要参考于华成英主编的《模拟电子技术基础》。</p>
+<p>同时内容一定程度上参考于华成英的《模拟电子技术基础》和 <a href="https://www.bilibili.com/video/BV1Gt411b7Zq/?spm_id_from=333.1007.top_right_bar_window_custom_collection.content.click&amp;vd_source=0f0f84fd4f7853dba4619576003d75fb">b 站上交郑益慧老师的视频</a>。</p>
+</blockquote>
+<blockquote>
+<p><strong>Attention !!!</strong></p>
+<p><strong>$I_B$，表示直流量（静态值）。</strong></p>
+<p><strong>$\overset{.}{I_b}$，表示正弦交流的向量形式。</strong></p>
+<p><strong>$I_b$，表示正弦交流量的有效值。</strong></p>
+<p><strong>$i_B$，表示交、直流混合量。</strong></p>
+<p><strong>$i_b$，表示纯交流量。</strong></p>
+</blockquote>
+<h2 id="第一章-常用半导体器件"><a href="#第一章-常用半导体器件" class="headerlink" title="第一章 常用半导体器件"></a>第一章 常用半导体器件</h2><h3 id="S-1-1-半导体基础知识"><a href="#S-1-1-半导体基础知识" class="headerlink" title="$\S 1.1$ 半导体基础知识"></a>$\S 1.1$ 半导体基础知识</h3><blockquote>
+<p>这部分了解即可。</p>
+</blockquote>
+<p>物质按导电能力可分为导体，半导体和绝缘体，其中半导体主要材料是硅（Si），锗（Ge）和砷化镓（GaAs）。</p>
+<p>研究半导体原子结构时，为简化起见，把内层电子和原子核视为一个整体，称为惯性核，其周围是价电子。</p>
+<ul>
+<li><strong>本征半导体</strong></li>
+</ul>
+<p><strong>完全纯净的，晶体结构完整的半导体晶体称为本征半导体。</strong>在 $0K$ 温度下，没有自由移动的载流子，不能导电相当于绝缘体。而当温度升高时共价键中的价电子从外界获得能量而激发成自由电子，这种现象称为本征激发。</p>
+<p><strong>可以把激发出的空位视为带正电荷的载流子，并把它称为空穴。</strong>半导体时依靠自由电子和空穴导电的。</p>
+<p>本征激发使两种载流子数量相等。空穴和自由电子相遇抵消的过程称为复合。温度一定时，两种载流子数目保持不变处于热平衡状态。</p>
+<p>设 $n_i$ 为热平衡载流子浓度，$p_0, h_0$ 分别为空穴和载流子浓度，则有 $p_0 = n_0 = n_i$。但是这种半导体导电能力很弱。</p>
+<blockquote>
+<p>本征激发和温度有关，复合和粒子浓度有关。</p>
+</blockquote>
+<p>杂质半导体分为 $N$ 型（电子型）和 $P$ 型（空穴型）</p>
+<ul>
+<li><strong>$N$ 型半导体</strong></li>
+</ul>
+<blockquote>
+<p>N 是 negative，指的是负的电子。</p>
+</blockquote>
+<p>向半导体中加入少量五价元素，称五价元素为<strong>施主元素</strong>，自由电子为多数载流子，简称多子。空穴称为少子。</p>
+<ul>
+<li><strong>$P$ 型半导体</strong></li>
+</ul>
+<blockquote>
+<p>P 是 positive，指的是正的空穴。</p>
+</blockquote>
+<p>向半导体中加入少量三价元素，称三价元素为<strong>受主元素</strong>，空穴为多子。自由电子为少子。</p>
+<p>杂质越多，多子浓度越高，导电性越强。<strong>少子浓度与温度有关。</strong></p>
+<ul>
+<li><strong>漂移电流和扩散电流</strong></li>
+</ul>
+<p>在外加电场作用下，载流子的定向移动称为漂移运动，会产生漂移电流。</p>
+<p>载流子由于浓度不一致会产生扩散运动，并产生扩散电流。</p>
+<ul>
+<li><p><strong>$PN$ 结的形成及特性</strong></p>
+<ol>
+<li><p>形成</p>
+<p>利用掺杂的方法，使半导体一半是 $P$ 一半是 $N$，由于扩散运动使两边载流子不断中和之后，$P$ 区的负离子和 $N$ 区的正离子形成内建电场组织多子扩散。直到两边达到稳态，就形成了 $PN$ 结。</p>
+<p>两边掺杂浓度一样可以形成对称结，反之形成不对称结。</p>
+<p>中间的正负离子界面称为空间电荷区，又称为耗尽区 / 势垒区 / 阻挡区。</p>
+<p>内建电场的电位差 $V_B$ 称为内建电位差，满足<br>$$<br>V_B \approx V_Tln\dfrac{N_aN_d}{n_i^2} \<br>V_T = \dfrac{kT}{q}<br>$$<br><img src="1.1-1.png" alt="1-1"></p>
+</li>
+<li><p>特性</p>
+<ul>
+<li><p>正向特性：当电源正极接 P，负极接 N，称 PN 结外加正向电压，也称正向偏置。会使 PN 结减小（刚开始很小的时候，电子难过去，后来不断削弱阻挡区，电流指数级上涨）。</p>
+</li>
+<li><p>反向特性：当电源正极接 N，负极接 P，称 PN 结外加反向电压，也称反向偏置。会使 PN 结增大（阻挡区越来越厚，电子更难过去，不导通）。</p>
+</li>
+<li><p>伏安特性：PN 结的电流与端电压存在关系：<br>$$<br>i = I_s(e^{v/V_T} - 1)<br>$$</p>
+<blockquote>
+<p>$I_s$ 是反向饱和电流，$V_T$ 是和温度相关的，室温下 $V_T$ 是 26 mv。 </p>
+<p>Ge 作材料的晶体管导通电压是 0.2 ~ 0.3 V，Si 是 0.6 ~ 0.7 V。</p>
+</blockquote>
+<p>​        当 PN 结正偏且 $\left |  v \right |  \gg V_T$ 时，式子可简化为<br>$$<br>i \approx I_se^{v/V_T}<br>$$<br>​        当 PN 结反偏且 $\left |  v \right |  \gg V_T$ 时，式子可简化为<br>$$<br>i \approx -I_s<br>$$<br><img src="1.1-2.png" alt="1-2"></p>
+<blockquote>
+<p> 其实反向的时候有一个非常非常小的电流。</p>
+</blockquote>
+</li>
+<li><p>击穿特性：当 PN 结的反向电压增大到某一值时，反向电流会突然增大，PN 结被击穿，击穿分为：雪崩击穿（掺杂浓度低的时候，PN 结宽）和齐纳击穿（掺杂浓度高的时候，PN 结窄）。</p>
+<blockquote>
+<p>雪崩击穿：温度越高，所需击穿电压越高。齐纳击穿：温度越高，所需击穿电压越低。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>PN 结的电容效应</p>
+<p>PN 结具有电荷随着电压变化而变化的特性，与电容类似。</p>
+<p>PN 结的结电容是由以下两种电容组成的。</p>
+<ul>
+<li><p>势垒电容</p>
+<blockquote>
+<p>由空间电荷区的电荷所导致。反向电压越大，PN 结越宽，空间电荷区越宽，电容越大。</p>
+</blockquote>
+<p>  <img src="1.1-3.png" alt="1-3"></p>
+</li>
+<li><p>扩散电容</p>
+<blockquote>
+<p>由 P 区和 N 区粒子浓度差所导致。正向电压越大，N 区扩散来的电子越多，浓度越大，曲线也不断上升。这条曲线反映了从结到边缘处，粒子浓度越来越少。<strong>这种电容发生在扩散区内，是由靠近耗尽区和远离耗尽区的非平衡少子浓度差所造成的，且这种电荷的积累与释放过程与电容器充放电类似，故有电容效应，称为扩散电容。</strong></p>
+</blockquote>
+<p>  <img src="1.1-4.png" alt="1-4"></p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="S-1-2-半导体二极管"><a href="#S-1-2-半导体二极管" class="headerlink" title="$\S 1.2$ 半导体二极管"></a>$\S 1.2$ 半导体二极管</h3><p>将 PN 结封装起来引出两根引线，形成二极管。</p>
+<ul>
+<li><p>常见结构</p>
+<p><img src="1.2-1.png" alt="1.2-1"></p>
+</li>
+<li><p>二极管的伏安特性</p>
+<ol>
+<li><p>伏安特性</p>
+<p>和 PN 结几乎一样，只是多了个外壳对电阻的影响。</p>
+<p>由于体电阻的存在，二极管电流比 PN 结小。反向电流比 PN 结大一些。</p>
+</li>
+<li><p>温度对电阻的影响：</p>
+<p><img src="1.2-2.png" alt="1.2-2"></p>
+<blockquote>
+<p>正向：相同电压下，温度越高，电流越大。</p>
+<p>反向：相同电压下，温度越高，少子浓度越高，反向电流越大。 </p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>二极管的主要参数</p>
+<ol>
+<li><p>最大整流电流 $I_F$</p>
+<p>二极管长期运行时所允许的的最大正向平均电流。</p>
+</li>
+<li><p>最高反向工作电压 $U_R$</p>
+<p>工作时允许外加的最大反向电压。一般是反向击穿电压 $U_{(BR)}$ 的一半。</p>
+</li>
+<li><p>反向电流 $I_R$</p>
+<p>二极管未击穿时的反向电流，$I_R$ 越小，二极管单向导电性越好，$I_R$ 对温度很敏感。</p>
+</li>
+<li><p>最高工作频率 $f_M$</p>
+<p>$f_M$ 是二极管的上限截止频率。由于结电容的存在，当二极管工作频率超过上限时，可以看作导通，就没有单向导电性了。</p>
+<blockquote>
+<p>交流电频率很高，不停地给电容进行充放电。而充放电的过程有电流流通，相当于通电。所以二极管变成双向导电，失去单向性。</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>二极管的等效电路</p>
+<ol>
+<li><p>伏安特性曲线折线化得到的电路</p>
+<blockquote>
+<p> 这是在直流情况下的。</p>
+</blockquote>
+<p>下图是二极管的常见等效模型。</p>
+<p><img src="1.2-3.png" alt="1.2-3"></p>
+</li>
+<li><p>二极管的微变等效电路</p>
+<blockquote>
+<p>这是在交流情况下的。</p>
+</blockquote>
+<p>要求出二极管在交流电路中的等效电阻，我们先求出这个电路的直流电流（或者理解为交流电流的浮动中心），然后利用下图的变换，得出 $r_d \approx \dfrac{U_T}{I_D}$。</p>
+<p><img src="1.2-4.png" alt="1.2-4"></p>
+<p>现在二极管相当于是一个纯电阻 $r_d$，先前我们求出了直流电流 $I_D$，现在可以求出交流电流（此时电路相当于去掉直流电压） $i_d = \dfrac{u_i}{r_d + R}$，整个电路中的总电流为直流和交流电流之和 $i_D = I_D + i_d$。</p>
+<blockquote>
+<p>这里相当于为了让二极管变成电阻，必须要把上图的原点移到 Q 的位置处（因为电阻的伏安曲线是过原点的），而移到 Q 位置处需要的操作就是先把直流部分拿走，最后算总的时候再把直流部分加上。</p>
+</blockquote>
+<p><img src="1.2-5.png" alt="1.2-5"></p>
+</li>
+</ol>
+</li>
+<li><p>稳压二极管</p>
+<p>稳压二极管是利用二极管反向导通时端电压几乎不变而制成。</p>
+</li>
+</ul>
+<ol>
+<li><p>伏安特性</p>
+<p><img src="1.2-6.png" alt="1.2-6"></p>
+<p>左图为稳压管的伏安特性曲线，与二极管几乎一样。主要利用反向的击穿区。右上是稳压二极管的符号。右下是稳压管的等效电路。</p>
+</li>
+<li><p>主要参数</p>
+<p><strong>稳定电压 $U_Z$</strong></p>
+<p>$U_Z$ 是在规定电流下稳压管的反向击穿电压。由于半导体器件参数的分散性，同一型号的稳压管的 $U_z$ 存在一定差别。</p>
+<p><strong>稳定电流 $I_Z$</strong></p>
+<p>$I_Z$ 是稳压管工作在稳压状态时的参考电流，电流低于此值时文雅效果变坏甚至不稳压，故也将 $I_Z$ 记作 $I_{Zmin}$。</p>
+<p><strong>额定功耗 $P_{ZM}$</strong></p>
+<p>$P_{ZM}$ 等于稳压管的稳定电压 $U_Z$ 与最大稳定电流 $I_{ZM}$（或记作 $I_{Zmax}$）的乘积。稳压管的功耗超过此值时，会因结温升过高而损坏。只要不超过稳压管的额定功率，电流愈大，稳压效果愈好。</p>
+<p><strong>动态电阻 $r_z$</strong></p>
+<p>$r_z$ 是稳压管工作在稳压区时，端电压变化量与其电流变化量之比，即 $r_z = \dfrac{\Delta U_Z}{\Delta I_Z}$。$r_z$ 越小，电流变化时 $U_Z$ 变化越小，即稳压管的稳压特性越好。</p>
+<p><strong>温度系数 $\alpha$</strong></p>
+<p>表示每变化 $1^{\circ}$ 稳压值的变化量，即 $\alpha = \dfrac{\Delta U_Z}{\Delta T}$。稳压值小于 $4$ V 的管子有负温度系数（属于齐纳击穿），即温度升高时稳定电压值下降，稳定电压大于 $7$ V 的管子具有正温度系数（属于雪崩击穿），即温度升高时稳定电压值上升；而稳定电压在 $4 \sim 7$ V 之间的管子温度系数非常小近似为 $0$（雪崩击穿和齐纳击穿都有）。</p>
+<blockquote>
+<p>温度低主要发生齐纳击穿，但齐纳击穿随着温度越高越容易发生。温度高主要发生雪崩击穿，但雪崩击穿随着温度越高越难发生。</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="S-1-3-晶体三极管"><a href="#S-1-3-晶体三极管" class="headerlink" title="$\S 1.3$ 晶体三极管"></a>$\S 1.3$ 晶体三极管</h3><blockquote>
+<p>三极管，我们可以控制的是基极电流 $I_B$，然后发射极的电子浓度高，会迁移产生放大的电流 $I_C$，$I_C$ 是我们想要的，$I_C$ 主要是由 $U_{CE}$ 和 $I_B$ 所决定。根据 $I_B$  以及 $U_{CE}$ 的不同，我们将输出特性曲线可以分为截止区，放大区，饱和区。而输入电流 $I_B$ 往往和 $U_{CE}$ 和 $U_{BE}$ 有关（通常研究 $U_{CE}$ 一定时 $U_{BE}$ 对 $I_B$ 的影响），并且当 $U_{CE}$ 大于 $1$ 时，$U_{CE}$ 的变化对 $I_B$ 几乎没有影响 。</p>
+</blockquote>
+<ul>
+<li><p>晶体管的结构及类型</p>
+<p>三个电极，三个区域，两个 PN 结。</p>
+<p>右下两个图箭头方向代表的是发射结导通的方向。</p>
+<p><img src="1.3-1.png" alt="1.3-1"></p>
+</li>
+<li><p>晶体管的电流放大作用</p>
+<p>从电路角度来看，相当于集电区的电流是基区电流的放大。</p>
+<p><img src="1.3-2.png" alt="1.3-2"></p>
+<p>这是从内部结构变化来看，在理想工作状态下，发射极的电子向集电区和基区移动，主要还是向集电区。在这之中有微小的 基区到发射区的空穴 $I_{EP}$（忽略不计） 以及 集电区的电子和基区空穴的复合 $I_{CBO}$（忽略不计）。</p>
+<blockquote>
+<p>下图有两个量要注意一下，$I_{CEO}$ 是穿透电流，指的是基极开路时，集电极和发射极之间的电流。</p>
+<p>$I_{CBO}$ 是发射极开路时，集电极的反向饱和电流。</p>
+</blockquote>
+<p><img src="1.3-3.png" alt="1.3-3"></p>
+<p>从外部总体来看，$I_E = I_C + I_B$。</p>
+<p><strong>共射直流电流放大系数</strong> $\bar \beta = \dfrac{I_{CN}}{I_B’} = \dfrac{I_C - I_{CBO}}{I_B + I_{CBO}}$。</p>
+<p><strong>共射交流电流放大系数</strong> $\beta = \dfrac{\Delta i_{C}}{\Delta i_B}$。并且我们近似可以认为 $\beta \approx \bar \beta$。</p>
+<p><strong>共基直流电流放大系数</strong> $\bar \alpha = \dfrac{I_{CN}}{I_E} = \dfrac{\bar \beta}{1 + \bar \beta}$，</p>
+<p><strong>公基交流电流放大系数</strong> $\alpha = \dfrac{\Delta i_C}{\Delta i_E} = \dfrac{\beta}{1 + \beta}$。</p>
+<p>通常情况下 $\beta \approx \bar \beta \gg 1$，$\alpha \approx \bar \alpha \approx 1$。</p>
+</li>
+<li><p>晶体管的共射特性曲线</p>
+<ol>
+<li><p>输入特性曲线</p>
+<p><img src="1.3-4.png" alt="1.3-4"></p>
+<p>$U_{CE}$ 越大，集电结场强越强，会让更多电子到集电区而不是去基区中和，所以相同 $U_{BE}$ 下 $U_{CE}$ 越大，$i_B$ 越小。而且 $U_{CE}$ 增大到一定程度时，集电结的电场已经足够强，可以让绝大部分电子都到集电极，所以这时候再增大 $U_{CE}$ 对 $i_B$ 影响不大。</p>
+</li>
+<li><p>输出特性曲线</p>
+<p><img src="1.3-5.png" alt="1.3-5"></p>
+<p>根据 $I_B$ 以及 $U_{CE}$ 大小关系可以将输出特性曲线分为三部分。</p>
+<p>截止区相当于基区开路，这时候只有穿透电流 $I_{CEO}$。这时候发射结电压小于开启电压且集电结方向偏置。</p>
+<p>饱和区是发射结正向偏置且集电结正向偏置，相当于一部分本应该到集电区的电流跑到了基区，集电极电流 $i_C$ 仍有上升的可能。这部分区域是由 $U_{CE}$ 过小导致的。</p>
+<p>放大区是理想工作状态（绝大情况下），发射结正向偏置且集电结反向偏置。这时满足 $\bar \beta I_B = I_C$。</p>
+<p>同时，我们把上面图和下面图比较</p>
+<p><img src="1.3-8.png" alt="1.3-8"></p>
+<p>同样是改变 $U_{CE}$，为什么一个是 $I_C$ 变大，一个是 $I_C$ 变小呢？</p>
+<blockquote>
+<p>因为第一张图里是 $I_B$ 固定，只改变 $U_{CE}$，这里想引起 $U_{CE}$ 的变化势必要改变 $U_{CC}$。而在第二张图里，$U_{CC}$ 是固定不动的，只变动 $I_B$，这里 $I_B$ 是通过改变输入电压源引起的。</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>主要参数</p>
+<ol>
+<li><p>直流参数</p>
+<p><strong>共射直流电流放大系数</strong> $\bar \beta = \dfrac{I_{CN}}{I_B’} = \dfrac{I_C - I_{CBO}}{I_B + I_{CBO}}$。</p>
+<p><strong>共基直流电流放大系数</strong> $\bar \alpha = \dfrac{I_{CN}}{I_E} = \dfrac{\bar \beta}{1 + \bar \beta}$。</p>
+<p>$I_{CEO}$ 是穿透电流，指的是基极开路时，集电极和发射极之间的电流。</p>
+<p>$I_{CBO}$ 是发射极开路时，集电极的反向饱和电流。且有 $I_{CEO} = (1 + \bar \beta)I_{CBO}$。</p>
+</li>
+<li><p>交流参数</p>
+<p><strong>共射交流电流放大系数</strong> $\beta = \dfrac{\Delta i_{C}}{\Delta i_B}$。并且我们近似可以认为 $\beta \approx \bar \beta$。（此时 $U_{CE}$ 是常量）</p>
+<p><strong>公基交流电流放大系数</strong> $\alpha = \dfrac{\Delta i_C}{\Delta i_E} = \dfrac{\beta}{1 + \beta}$。（此时 $U_{CB}$ 是常量）</p>
+<p><strong>特征频率</strong> $f_T$ 由于晶体管的交流电流放大系数是所加信号频率的函数，所以放大系数会随着所加信号频率变化而变化。当信号频率高到一定程度时，集电极电流与基极电流之比不但下降且发生偏移。当频率达到特征频率 $f_T$ 时，放大系数会下降到 $1$ 以下。</p>
+</li>
+<li><p>极限参数</p>
+<p><strong>最大集电极耗散功率 $P_{CM}$</strong></p>
+<p>与温度相关，表示一定温度下晶体管集电极所能产生的最大耗散功率。</p>
+<p><strong>最大集电极电流 $I_{CM}$</strong></p>
+<p>$i_C$ 在相当大的范围内 $\beta$ 值基本不变，但当 $i_C$ 数值大到一定程度时 $\beta$ 将减小，使 $\beta$ 明显减小的 $i_C$ 即为 $I_{CM}$。</p>
+<p><strong>极间反向击穿电压</strong></p>
+<p>晶体管某一电极开路时，另外两个电极间所允许加的最高反向电压称为极间反向击穿电压，超过此值使管子会发生击穿现象。</p>
+<p>$U_{(BR)CBO}$ 是发射极开路时集电极 - 基极间的反向击穿电压，这时集电结所允许加的最高反向电压。</p>
+<p>$U_{(BR)CEO}$ 是基极开路时集电极 - 发射极间的反向击穿电压，这时集电结承受反向电压。</p>
+<p>$U_{(BR)EBO}$ 是集电极开路时发射极 - 基极间的反向击穿电压，这时发射结所允许加的最高反向电压。</p>
+</li>
+</ol>
+</li>
+<li><p>光电三极管</p>
+<p>光电三极管是依靠光照强度来控制集电极电流的大小，可等效为一只光电二极管加上一只晶体管，并仅引出集电极和发射极。光电三极管与普通三极管的输出特性曲线类似，<strong>只是将参变量基极电流 $I_B$ 用入射光强 $E$ 取代。</strong></p>
+<p><img src="1.3-9.png" alt="1.3-9"></p>
+</li>
+<li><p>温度的影响</p>
+<ol>
+<li><p>$I_{CBO}$</p>
+<p>$I_{CBO}$ 是平衡少子漂移运动形成的，温度升高时漂移加剧。故温度升高 $I_{CBO}$ 变大，又因为 $I_{CEO} = (1 + \bar \beta)I_{CBO}$，所以 $I_{CEO}$ 也会变大。</p>
+</li>
+<li><p>输入特性</p>
+<p>与二极管类似，温度升高，图线左移，电流变大。</p>
+<p><img src="1.3-6.png" alt="1.3-6"></p>
+</li>
+<li><p>输出特性</p>
+<p>温度升高，所有电流都变大，且放大系数 $\beta$ 也会变大，导致集电极电流变大。</p>
+<p><img src="1.3-7.png" alt="1.3-7"></p>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="S-1-4-场效应管"><a href="#S-1-4-场效应管" class="headerlink" title="$\S 1.4$ 场效应管"></a>$\S 1.4$ 场效应管</h3><ul>
+<li><p>结型场效应管</p>
+<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CElectronic-Devices-and-Circuit-Theory%5C1.4-6.png" alt="1.4-6"></p>
+</li>
+</ul>
+<ul>
+<li><p>绝缘栅型场效应管</p>
+<blockquote>
+<p>又叫做 MOS 管。</p>
+</blockquote>
+<ol>
+<li><p>N 沟道增强型 MOS 管</p>
+<p>源极 s，栅极 g，漏极 d。下图 b 中箭头方向代表的是 PN 结的方向。</p>
+<blockquote>
+<p><strong>注意下图包裹两个 $N^+$ 的阴影区不是二氧化硅！（因为剖面线和上面二氧化硅相反）事实上这是 N 和 P 接触所形成的 PN 结。</strong></p>
+</blockquote>
+<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CElectronic-Devices-and-Circuit-Theory%5C1.4-1.png" alt="1.4-1"></p>
+<p><strong>工作原理</strong></p>
+<p>这里衬底 P 和栅极 g 相当于形成了极板的两极，中间是绝缘层形成电容。</p>
+<p>当 $u_{DS} = 0$ 时， 刚一开始加电压的话，靠近栅极的空穴会向下移动，相当于栅极金属层会聚集正电荷，形成耗尽层，就会形成左下图所示的情况。当电压不断增大时，耗尽层不断加宽，并且将衬底 P 那边的自由电子吸引过来，自由电子吸引到耗尽层与绝缘层之间形成反型层，如右下图所示。这个反型层就形成了漏 - 源之间的导电沟道。使沟道刚刚形成的栅 - 源电压称为开启电压 $U_{GS(th)}$。$u_{GS}$ 决定了反型层厚度。$u_{GS}$ 越大，反型层越厚，导电沟道电阻越小。<strong>换言之，这是一个可由电压控制电阻的器件。</strong></p>
+<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CElectronic-Devices-and-Circuit-Theory%5C1.4-2.png" alt="1.4-2"></p>
+<p>当 $u_{GS}$ 一定且大于形成沟道的临界值时，我们外加一个 $u_{DS}$，随着 $u_{DS}$ 的不断增大，我们发现右边通过的反型层不断缩减，这是因为反型层是由于电压差形成的，而最左边反型层电压差是 $u_{GS}$，但是到了最右边就是 $u_{GS} - u_{DS}$（可以这样理解：$u_{DS}$ 电压越大，d 端电势越高，沟道中的电子就会被吸收的更多，故靠近 d 端的沟道变窄，因为 g 端电势也会吸引电子，所以可以理解成两端电势相减是沟道靠近 d 端的宽度），换言之一部分 $u_{DS}$ 会抵消反型层中的电压。当 $u_{DS}$ 大到一定程度时会预夹断反型层（不是真的夹断，因为没有电流以后沟道的电压就和衬底一样了，在 $u_{gs}$ 作用下又会打开沟道，所以不会真的夹断）。在此之后随着 $u_{DS}$ 越来越大，夹断区的缝隙越来越大。</p>
+<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CElectronic-Devices-and-Circuit-Theory%5C1.4-3.png" alt="1.4-3"></p>
+<p>当 $u_{DS}$ 较小时，还没达到夹断的电压，此时 $r_{ds}$ 看作定值电阻，这个电阻值与 $u_{GS}$ 相关，当 $u_{DS}$ 较大时，会发生预夹断，此时电流就会保持恒定不变，此时的恒定电流值与 $u_{GS}$ 有关。也就是说 $u_{GS}$ 在 $u_{DS}$ 较小时决定电阻值，在 $u_{DS}$ 较大时决定电流值。 </p>
+<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CElectronic-Devices-and-Circuit-Theory%5C1.4-4.png" alt="1.4-4"></p>
+</li>
+<li><p>N 沟道耗尽型 MOS 管</p>
+<p>上面的情况是外加一个电压才能出现反型层，但对于N 沟道耗尽型 MOS 管，绝缘层二氧化硅中已经掺入大量正离子，所以初始就会形成反型层。当外加的电压 $u_{GS}$ 为负值时，反型层会变窄，沟道电阻变大。当 $u_{GS}$ 小到一定程度时，反型层消失，此时称为夹断电压。</p>
+<p><img src="1.4-5.png" alt="1.4-5"></p>
+</li>
+<li><p>特性曲线与电流方程</p>
+</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li><p>场效应管的主要参数</p>
+<ol>
+<li><p>直流参数</p>
+<p>开启电压 $U_{GS(th)}$</p>
+<p>夹断电压 $U_{GS(off)}$</p>
+<p>饱和漏极电流 $I_{DSS}$</p>
+<p>直流输入电阻 $R_{GS(DC)}$</p>
+</li>
+<li><p>交流参数</p>
+<p>低频跨导 $g_m$</p>
+<p>极间电容</p>
+</li>
+<li><p>极限参数</p>
+<p>最大漏极电流 $I_{DM}$</p>
+<p>击穿电压</p>
+<p>最大耗散功率 $P_{DM}$</p>
+</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p>第9讲后半没完全弄明白。</p>
+</blockquote>
+<h2 id="第二章-基本放大电路"><a href="#第二章-基本放大电路" class="headerlink" title="第二章 基本放大电路"></a>第二章 基本放大电路</h2><h3 id="S-2-1-放大的概念和放大电路的主要性能指标"><a href="#S-2-1-放大的概念和放大电路的主要性能指标" class="headerlink" title="$\S 2.1$ 放大的概念和放大电路的主要性能指标"></a>$\S 2.1$ 放大的概念和放大电路的主要性能指标</h3><ul>
+<li><p>放大的概念</p>
+<p>放大电路的特征是功率的放大。</p>
+<p>放大电路的本质是能量的控制和转换。</p>
+<p>放大电路的必要条件是有源元件，可以控制能量（比如晶体管和场效应管）。</p>
+<p>放大的前提是不失真，只有在不知真的情况下放大才有意义（让晶体管工作在放大区，场效应管工作在恒流区）。</p>
+<p>放大电路的测试信号是正弦波。</p>
+</li>
+<li><p>基本放大电路的构建</p>
+</li>
+</ul>
+<h3 id="S-2-2-基本共射放大电路的工作原理"><a href="#S-2-2-基本共射放大电路的工作原理" class="headerlink" title="$\S 2.2$ 基本共射放大电路的工作原理"></a>$\S 2.2$ 基本共射放大电路的工作原理</h3><h3 id="S-2-3-放大电路的分析方法"><a href="#S-2-3-放大电路的分析方法" class="headerlink" title="$\S 2.3$ 放大电路的分析方法"></a>$\S 2.3$ 放大电路的分析方法</h3><blockquote>
+<p>17 讲没听。</p>
+</blockquote>
+<h2 id="第三章-多极放大电路"><a href="#第三章-多极放大电路" class="headerlink" title="第三章 多极放大电路"></a>第三章 多极放大电路</h2><h3 id="S-3-1-多级放大电路的一般问题"><a href="#S-3-1-多级放大电路的一般问题" class="headerlink" title="$\S 3.1$ 多级放大电路的一般问题"></a>$\S 3.1$ 多级放大电路的一般问题</h3>]]></content>
+      <tags>
+        <tag>专业课</tag>
+        <tag>大学课程</tag>
       </tags>
   </entry>
   <entry>
