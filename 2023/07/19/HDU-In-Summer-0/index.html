@@ -28,7 +28,7 @@
 <meta property="og:description" content="浅记录一下暑假 10 次 坐牢 比赛。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://anasuuuu.github.io/2023/07/19/HDU-In-Summer-0/D2-1007.png">
-<meta property="og:image" content="https://anasuuuu.github.io/2023/07/19/HDU-In-Summer-0/D2-1007(1).png">
+<meta property="og:image" content="https://anasuuuu.github.io/2023/07/19/HDU-In-Summer-0/D2-1007(1">
 <meta property="article:published_time" content="2023-07-19T14:28:07.000Z">
 <meta property="article:modified_time" content="2023-09-07T02:42:44.873Z">
 <meta property="article:author" content="Ana Su">
@@ -259,7 +259,6 @@
       
         <p>浅记录一下暑假 10 次 <del>坐牢</del> 比赛。</p>
 <span id="more"></span>
-
 <h2 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h2><h3 id="1001-Hide-And-Seek-Game"><a href="#1001-Hide-And-Seek-Game" class="headerlink" title="1001. Hide-And-Seek Game"></a>1001. <a target="_blank" rel="noopener" href="https://acm.hdu.edu.cn/showproblem.php?pid=7275">Hide-And-Seek Game</a></h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>两个人都在一棵树上，沿着树的边走，一次走一条边，一个人从 $S_a$ 出发，前往 $T_a$，到达 $T_a$ 后就返回向 $S_a$ 走，如此往复。另一个人在 $S_b$ 和  $T_b$ 之间走，问最早在那个点能相遇，若不相遇，则输出 <code>-1</code> 。$t$ 组数据，每组数据 $n$ 个结点，$m$ 次询问。</p>
 <h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>本题 $n$ 和 $m$ 都较小（ $n, m \le 300$），所以可以枚举所有可能相遇的点。判断点 $i$ 是否在 $(S_a, T_a)$ 路线上的方法是判断 $dist(i, S_a) + dist(i, T_a) == dist(S_a, T_a)$。注意，对于每个点 $i$，相遇的时间节点可能是 $2k \times dist(S_a, T_a) + dist(S_a, i)$ 或 $2k \times dist(S_a, T_a) + 2 \times dist(S_a, T_a) - dist(i, S_a)$ 。另一个人的时间同理，所以这就相当于解二元一次方程。（不了解二元一次方程组的可以先做 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5656">P5656 【模板】二元一次不定方程 (exgcd)</a>）</p>
 <p>注意一下，这里算两点间距离利用 LCA 来求，但不能直接用倍增去求（因为这样会超时），要用 dfs 序来求 LCA（时间复杂度要优化很多）。 </p>
@@ -274,7 +273,15 @@
 <h4 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h4><p>一道较为基础的区间 DP，想到 $f$ 数组的状态就比较好转移了。</p>
 <p>$f[l][r][type][level]$ 表示将 $[l, r]$ 区间全部合并完，只剩下一张 $type$ 类型等级 $level$ 的牌所获得的最大价值。</p>
 <p>$g[l][r]$ 表示将 $[l, r]$ 区间内牌全部打出去所获得的最大价值。</p>
-<p>每次枚举 $l, r, type, level$，不难推出：<br>$$<br>\begin{gather}<br>g[l][r] = \max \{g[l][r], g[l][mid] + g[mid + 1][r]\}; \<br>f[l][r][t][1] =\max \{f[l][r][t][1], f[l][mid][t][1] + g[mid + 1][r], f[mid + 1][r][t][1] + g[l][mid]\}; \<br>f[l][r][t][lev] = \max \{f[l][r][t][lev], f[l][mid][t][lev - 1] + f[mid + 1][r][t][lev - 1]\}\ (len &gt; 1)<br>\end{gather}<br>$$<br>更新完 $f$ 数组后再更新 $g$ 数组。<br>$$<br>g[l][r] = \max \{g[l][r], f[l][r][t][lev] + v[t] \times c[lev] \};<br>$$<br><a target="_blank" rel="noopener" href="https://acm.hdu.edu.cn/viewcode.php?rid=38826810">Code</a></p>
+<p>每次枚举 $l, r, type, level$，不难推出：</p>
+<script type="math/tex; mode=display">
+\begin{gather}
+g[l][r] = \max \{g[l][r], g[l][mid] + g[mid + 1][r]\}; \\
+f[l][r][t][1] =\max \{f[l][r][t][1], f[l][mid][t][1] + g[mid + 1][r], f[mid + 1][r][t][1] + g[l][mid]\}; \\
+f[l][r][t][lev] = \max \{f[l][r][t][lev], f[l][mid][t][lev - 1] + f[mid + 1][r][t][lev - 1]\}\ (len > 1)
+\end{gather}</script><p>更新完 $f$ 数组后再更新 $g$ 数组。</p>
+<script type="math/tex; mode=display">
+g[l][r] = \max \{g[l][r], f[l][r][t][lev] + v[t] \times c[lev] \};</script><p><a target="_blank" rel="noopener" href="https://acm.hdu.edu.cn/viewcode.php?rid=38826810">Code</a></p>
 <h3 id="1009-Assertion"><a href="#1009-Assertion" class="headerlink" title="1009. Assertion"></a>1009. <a target="_blank" rel="noopener" href="http://acm.hdu.edu.cn/showproblem.php?pid=7283">Assertion</a></h3><h4 id="Description-3"><a href="#Description-3" class="headerlink" title="Description"></a>Description</h4><p>把 $m$ 个物品放进 $n$ 个柜子，问是否至少有一个里面物品数大于等于 $d$。</p>
 <h4 id="Solution-3"><a href="#Solution-3" class="headerlink" title="Solution"></a>Solution</h4><p>签到题，判断 $d$ 和 $\left \lfloor \dfrac{m - 1}{n} \right \rfloor + 1$ 即可。</p>
 <p><a target="_blank" rel="noopener" href="http://acm.hdu.edu.cn/viewcode.php?rid=38672478">Code</a></p>
@@ -284,7 +291,7 @@
 <h3 id="1007-foreverlasting-and-fried-chicken"><a href="#1007-foreverlasting-and-fried-chicken" class="headerlink" title="1007. foreverlasting and fried-chicken"></a>1007. <a target="_blank" rel="noopener" href="http://acm.hdu.edu.cn/showproblem.php?pid=7293">foreverlasting and fried-chicken</a></h3><h4 id="Description-5"><a href="#Description-5" class="headerlink" title="Description"></a>Description</h4><p>给定一张图，找出图中有多少个子图，构造如下。</p>
 <p><img src="D2-1007.png" alt="D2-1007"></p>
 <h4 id="Solution-5"><a href="#Solution-5" class="headerlink" title="Solution"></a>Solution</h4><p>关键是找到中间的两个蓝色和黄色的点。</p>
-<p><img src="D2-1007(1).png" alt="D2-1007(1)"></p>
+<p><img src="D2-1007(1" alt="D2-1007(1)">.png)</p>
 <p>把点之间的连接关系用 <code>bitset</code> 存储好，枚举蓝点和黄点。中间共有的四个点用 <code>&amp;</code> 操作直接求出，剩下的点的个数也好求出，最后答案是 $\sum C_n^2 \times C_m^4$。</p>
 <p><a target="_blank" rel="noopener" href="http://acm.hdu.edu.cn/viewcode.php?rid=38687319">Code</a></p>
 <h3 id="1009-String-Problem"><a href="#1009-String-Problem" class="headerlink" title="1009. String Problem"></a>1009. <a target="_blank" rel="noopener" href="http://acm.hdu.edu.cn/showproblem.php?pid=7295">String Problem</a></h3><h4 id="Description-6"><a href="#Description-6" class="headerlink" title="Description"></a>Description</h4><p>将字符串拆成尽可能少的段，使得每段只包含一种字母。每段对答案的贡献为长度减一。</p>
@@ -294,7 +301,9 @@
 <h4 id="Solution-12"><a href="#Solution-12" class="headerlink" title="Solution"></a>Solution</h4><p>本题题意较为复杂，但实际比较简单。</p>
 <p>稍微讲解下题意。</p>
 <p>$\pi(x_i)$ 表示的是指向 $x_i$ 的点，即 $x_i$ 所依赖的特征。</p>
-<p>在公式<br>$$<br>P(x_m | x_1, \dots, x_{m - 1}) = \prod_{i = 1}^m P(x_i|\pi(x_i))<br>$$<br>中，对于 $P(x_i | \pi(x_i)) = \dfrac{P(\pi(x_i), x_i)}{P(\pi(x_i))}$，这个公式其实就是条件概率公式。所求的是在 $n$ 组数据中满足 $\pi(x_i)$ 的行中同时满足 $x_i$ 的概率。</p>
+<p>在公式</p>
+<script type="math/tex; mode=display">
+P(x_m | x_1, \dots, x_{m - 1}) = \prod_{i = 1}^m P(x_i|\pi(x_i))</script><p>中，对于 $P(x_i | \pi(x_i)) = \dfrac{P(\pi(x_i), x_i)}{P(\pi(x_i))}$，这个公式其实就是条件概率公式。所求的是在 $n$ 组数据中满足 $\pi(x_i)$ 的行中同时满足 $x_i$ 的概率。</p>
 <p>比如 $P(x_1 = 1)$ 就是求这 $n$ 组中 $x_1 = 1$ 的概率，$P(x_2 = 1 | x_1 = 0)$ 则是表示这 $n$ 组中满足 $x_1 = 0$ 的行里，$x_2 = 1$ 的概率。</p>
 <p>题目最后求的是 $x_m$ 最有可能等于 $1 / 2 / 0$ 中的哪一个数，我们直接把公式套进去比较。题目满足一定会有一个概率比另外两个大，同时，我们观察发现，代入公式时，这三个式子前 $m - 1$ 项都是一样的（因为 $x_m$ 的取值不影响前面的 $P(x_i | \pi(x_i))$），所以只比较第 $m$ 项，所以题目变成了，求满足 $\pi(x_i)$ 的行里，$x_m$ 在 $0 / 1 / 2$ 中哪个数次数出现的最多。 然后题目又说了 $\pi(x) \le 5$，故线性扫一遍即可。时间复杂度 $O(n)$。</p>
 <p><a target="_blank" rel="noopener" href="https://acm.hdu.edu.cn/viewcode.php?rid=38801204">Code</a></p>
@@ -469,7 +478,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3:31</span>
+    <span title="站点阅读时长">3:32</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
