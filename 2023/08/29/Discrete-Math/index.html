@@ -41,8 +41,13 @@
 <meta property="og:image" content="https://anasuuuu.github.io/2023/08/29/Discrete-Math/2.2-1.png">
 <meta property="og:image" content="https://anasuuuu.github.io/2023/08/29/Discrete-Math/2.2-2.png">
 <meta property="og:image" content="https://anasuuuu.github.io/2023/08/29/Discrete-Math/2.2-3.png">
+<meta property="og:image" content="https://anasuuuu.github.io/2023/08/29/Discrete-Math/3.1-01.png">
+<meta property="og:image" content="e:%5CBlog%5CAna_Su%5Csource_posts%5CDiscrete-Math%5C3.2-01.png">
+<meta property="og:image" content="e:%5CBlog%5CAna_Su%5Csource_posts%5CDiscrete-Math%5C3.2-02.png">
+<meta property="og:image" content="e:%5CBlog%5CAna_Su%5Csource_posts%5CDiscrete-Math%5C3.2-03.png">
+<meta property="og:image" content="e:%5CBlog%5CAna_Su%5Csource_posts%5CDiscrete-Math%5C3.2-04.png">
 <meta property="article:published_time" content="2023-08-29T04:59:36.000Z">
-<meta property="article:modified_time" content="2023-10-09T02:05:00.126Z">
+<meta property="article:modified_time" content="2023-10-24T04:18:20.025Z">
 <meta property="article:author" content="Ana Su">
 <meta property="article:tag" content="数学">
 <meta property="article:tag" content="大学课程">
@@ -234,7 +239,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-09 10:05:00" itemprop="dateModified" datetime="2023-10-09T10:05:00+08:00">2023-10-09</time>
+                <time title="修改时间：2023-10-24 12:18:20" itemprop="dateModified" datetime="2023-10-24T12:18:20+08:00">2023-10-24</time>
               </span>
 
           
@@ -250,14 +255,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.8k</span>
+              <span>4.9k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>7 分钟</span>
+              <span>9 分钟</span>
             </span>
 
         </div>
@@ -271,6 +276,7 @@
       
         <p>从入门到出门。</p>
 <span id="more"></span>
+
 <h2 id="第一章-命题逻辑"><a href="#第一章-命题逻辑" class="headerlink" title="第一章 命题逻辑"></a>第一章 命题逻辑</h2><h3 id="S-1-1-命题符号化及联结词"><a href="#S-1-1-命题符号化及联结词" class="headerlink" title="$\S 1.1$ 命题符号化及联结词"></a>$\S 1.1$ 命题符号化及联结词</h3><ul>
 <li><p>命题：能判断真假的陈述句。表示其正确性的值称为真值。</p>
 </li>
@@ -403,8 +409,10 @@
 <ul>
 <li><p>步骤：</p>
 <ul>
-<li>构造输入输出表（问题的真值函数）。</li>
-<li>写出主析取式。</li>
+<li><p>构造输入输出表（问题的真值函数）。</p>
+</li>
+<li><p>写出主析取式。</p>
+</li>
 <li><p>化简。</p>
 <p>最简展开式：包含最少运算的公式。</p>
 </li>
@@ -448,8 +456,8 @@
 <p>  <strong>全称量词 $\exists$</strong> 表示存在，至少一个。</p>
 </li>
 <li><p>一阶逻辑中命题符号化</p>
-<p>  如果当前命题的个体域就是全体个体域，表示形式为 $\exists / \forall x G(x)$。</p>
-<p>  如果当前命题的个体域是全体个体域中满足 $M(x)$ 的个体域（$G(x)$  称为特性谓词），表示为 $\exists / \forall x (M(x) \to G(x))$ 或 $\exists / \forall x (M(x) \wedge G(x))$。</p>
+<p>  如果当前命题的个体域就是全体个体域，表示形式为 $\exists / \forall x\ G(x)$。</p>
+<p>  如果当前命题的个体域是全体个体域中满足 $M(x)$ 的个体域（$G(x)$  称为特性谓词），表示为 $\exists / \forall x\ (M(x) \to G(x))$ 或 $\exists / \forall x\ (M(x) \wedge G(x))$。</p>
 </li>
 </ul>
 <h3 id="S-2-2-一阶逻辑公式及解释"><a href="#S-2-2-一阶逻辑公式及解释" class="headerlink" title="$\S 2.2$ 一阶逻辑公式及解释"></a>$\S 2.2$ 一阶逻辑公式及解释</h3><ul>
@@ -459,7 +467,7 @@
 </li>
 <li><p>换名规则</p>
 <p>  <strong>换名规则</strong>：将一个指导变项及其在辖域中所有约束出现替换为公式中没有出现的个体变项符号。 </p>
-<p>  以 $\exists x F(x) \wedge G(x, y)$ 为例，前面 $x$ 为指导变项和约束出现，后面的 $x$ 为自由出现，为了避免冲突，所以应该将前面的两个 $x$ 替换为没出现的字母（比如 $a$）。</p>
+<p>  以 $\exists x\ F(x) \wedge G(x, y)$ 为例，前面 $x$ 为指导变项和约束出现，后面的 $x$ 为自由出现，为了避免冲突，所以应该将前面的两个 $x$ 替换为没出现的字母（比如 $a$）。</p>
 </li>
 <li><p>解释和赋值</p>
 <p>  <img src="2.2-2.png" alt="2.2-2"></p>
@@ -482,6 +490,62 @@
 <p>  若 $A \leftrightarrow B$ 为逻辑有效式，则称 $A$ 与 $B$ 是等值的，记作 $A \Leftrightarrow B$，并称 $A \Leftrightarrow B$ 为等值式。</p>
 </li>
 </ul>
+<h2 id="第三章-集合的基本概念和运算"><a href="#第三章-集合的基本概念和运算" class="headerlink" title="第三章 集合的基本概念和运算"></a>第三章 集合的基本概念和运算</h2><h3 id="S-3-1-集合的基本概念"><a href="#S-3-1-集合的基本概念" class="headerlink" title="$\S 3.1$ 集合的基本概念"></a>$\S 3.1$ 集合的基本概念</h3><ul>
+<li><p>集合与元素</p>
+<p>集合即离散个体组成的集合。</p>
+<p>集合与元素之间关系有隶属和不隶属。</p>
+</li>
+<li><p>集合之间的关系</p>
+<p>（不）包含，（不）真包含，（不）相等。</p>
+</li>
+<li><p>空集，全集</p>
+</li>
+<li><p>幂集</p>
+<p><img src="3.1-01.png" alt="3.1-01"></p>
+</li>
+</ul>
+<h3 id="S-3-2-集合的基本运算"><a href="#S-3-2-集合的基本运算" class="headerlink" title="$\S 3.2$ 集合的基本运算"></a>$\S 3.2$ 集合的基本运算</h3><ul>
+<li><p>集合基本运算定义</p>
+<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CDiscrete-Math%5C3.2-01.png" alt="3.1-02"></p>
+<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CDiscrete-Math%5C3.2-02.png" alt="3.2-02"></p>
+<blockquote>
+<p>注意运算顺序：$\sim$ 和幂集优先，其他由括号决定。</p>
+</blockquote>
+<p><strong>一些常用运算定律</strong></p>
+<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CDiscrete-Math%5C3.2-03.png" alt="3.2-03"></p>
+<p><img src="E:%5CBlog%5CAna_Su%5Csource_posts%5CDiscrete-Math%5C3.2-04.png" alt="3.2-04"></p>
+<p><strong>证明 $X \subseteq Y$ 的常用方法：</strong></p>
+<ol>
+<li><p>命题演算法，任取 $x \in X$，经推算算出 $x \in Y$。</p>
+</li>
+<li><p>包含传递法，找到集合 $T$ 使得 $X \subseteq T$ 且 $T \subseteq Y$。</p>
+<p>（或利用包含的等价条件，证 $A \cup B = B$ 或 $A \cap B = A$ 或 $A - B = \varnothing$。）</p>
+</li>
+<li><p>反证法，假设存在 $x$ 使得 $x \in X$ 且 $x \notin Y$，然后推出矛盾。</p>
+</li>
+<li><p>集合运算法，如 $X \subseteq Y \Rightarrow X \cap Z \subseteq Y \cap Z, X \cup Z \subseteq Y \cup Z$。</p>
+</li>
+</ol>
+<p><strong>证明 $X = Y$ 的常用方法：</strong></p>
+<ol>
+<li>命题演算法，任取 $x \in X$，经推算算出 $x \in Y$，再任取 $x \in Y$ 经推算算出 $x \in X$。（或者 $x \in X \Leftrightarrow x \in Y$）</li>
+<li>等式替换法，两边不断化简最终使得两边相等。</li>
+<li>反证法，假设存在 $x$ 使得 $x \in X$ 且 $x \notin Y$，或存在 $x$ 使得 $x \in Y$ 且 $x \notin X$，然后推出矛盾。</li>
+<li>集合运算法，如 $X = Y \Rightarrow X \cap Z \subseteq Y \cap Z, X \cup Z \subseteq Y \cup Z, X - Z = Y - Z$。</li>
+</ol>
+</li>
+</ul>
+<h3 id="S-3-3-集合中元素的计数"><a href="#S-3-3-集合中元素的计数" class="headerlink" title="$\S 3.3$ 集合中元素的计数"></a>$\S 3.3$ 集合中元素的计数</h3><ul>
+<li><p>集合的基数与有穷集合</p>
+<p>集合 $A$ 的基数：集合 $A$ 中的元素数，记作 $\mathrm{card}\ A$。</p>
+<p>有穷集 $A$：$\mathrm{card}\ A = |A| = n$，$n$ 为自然数。</p>
+</li>
+<li><p>包含排斥定理（容斥定理）<br>$$<br>|\bar{A_1} \cap \bar{A_2} \cap \dots \cap \bar{A_m}| \<br>= |S| - \sum_{i = 1}^{m}|A_i| + \sum_{1 \le i, j \le m}|A_i \cap A_j| + \dots + (-1)^m|A_1 \cap A_2 \cap \dots \cap A_m|<br>$$<br>推论<br>$$<br>|A_1 \cup A_2 \cup \dots \cup A_m| \<br>= \sum_{i = 1}^{m}|A_i| - \sum_{1 \le i, j \le m}|A_i \cap A_j| + \dots + (-1)^{|A_1 \cap A_2 \cap \dots \cap A_m|<br>$$</p>
+</li>
+<li><p>有穷集的计数</p>
+</li>
+</ul>
+<p>footnote<a href="sss">^1</a></p>
 
     </div>
 
@@ -577,7 +641,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91"><span class="nav-text">第一章 命题逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#S-1-1-%E5%91%BD%E9%A2%98%E7%AC%A6%E5%8F%B7%E5%8C%96%E5%8F%8A%E8%81%94%E7%BB%93%E8%AF%8D"><span class="nav-text">$\S 1.1$ 命题符号化及联结词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-1-2-%E5%91%BD%E9%A2%98%E5%85%AC%E5%BC%8F%E5%8F%8A%E5%88%86%E7%B1%BB"><span class="nav-text">$\S 1.2$ 命题公式及分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-1-3-%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E7%AD%89%E5%80%BC%E6%BC%94%E7%AE%97"><span class="nav-text">$\S 1.3$ 命题逻辑等值演算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-1-4-%E8%8C%83%E5%BC%8F"><span class="nav-text">$\S 1.4$ 范式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-1-5-%E8%81%94%E7%BB%93%E8%AF%8D%E5%85%A8%E5%8A%9F%E8%83%BD%E9%9B%86"><span class="nav-text">$\S 1.5$ 联结词全功能集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-1-6-%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF"><span class="nav-text">$\S 1.6$ 组合电路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-1-7-%E6%8E%A8%E7%90%86%E7%90%86%E8%AE%BA"><span class="nav-text">$\S 1.7$ 推理理论</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91"><span class="nav-text">第二章 一阶逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#S-2-1-%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text">$\S 2.1$ 一阶逻辑基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-2-2-%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91%E5%85%AC%E5%BC%8F%E5%8F%8A%E8%A7%A3%E9%87%8A"><span class="nav-text">$\S 2.2$ 一阶逻辑公式及解释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-2-3-%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91%E7%AD%89%E5%80%BC%E5%BC%8F%E4%B8%8E%E5%89%8D%E6%9D%9F%E8%8C%83%E5%BC%8F"><span class="nav-text">$\S 2.3$ 一阶逻辑等值式与前束范式</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91"><span class="nav-text">第一章 命题逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#S-1-1-%E5%91%BD%E9%A2%98%E7%AC%A6%E5%8F%B7%E5%8C%96%E5%8F%8A%E8%81%94%E7%BB%93%E8%AF%8D"><span class="nav-text">$\S 1.1$ 命题符号化及联结词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-1-2-%E5%91%BD%E9%A2%98%E5%85%AC%E5%BC%8F%E5%8F%8A%E5%88%86%E7%B1%BB"><span class="nav-text">$\S 1.2$ 命题公式及分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-1-3-%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E7%AD%89%E5%80%BC%E6%BC%94%E7%AE%97"><span class="nav-text">$\S 1.3$ 命题逻辑等值演算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-1-4-%E8%8C%83%E5%BC%8F"><span class="nav-text">$\S 1.4$ 范式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-1-5-%E8%81%94%E7%BB%93%E8%AF%8D%E5%85%A8%E5%8A%9F%E8%83%BD%E9%9B%86"><span class="nav-text">$\S 1.5$ 联结词全功能集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-1-6-%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF"><span class="nav-text">$\S 1.6$ 组合电路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-1-7-%E6%8E%A8%E7%90%86%E7%90%86%E8%AE%BA"><span class="nav-text">$\S 1.7$ 推理理论</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91"><span class="nav-text">第二章 一阶逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#S-2-1-%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text">$\S 2.1$ 一阶逻辑基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-2-2-%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91%E5%85%AC%E5%BC%8F%E5%8F%8A%E8%A7%A3%E9%87%8A"><span class="nav-text">$\S 2.2$ 一阶逻辑公式及解释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-2-3-%E4%B8%80%E9%98%B6%E9%80%BB%E8%BE%91%E7%AD%89%E5%80%BC%E5%BC%8F%E4%B8%8E%E5%89%8D%E6%9D%9F%E8%8C%83%E5%BC%8F"><span class="nav-text">$\S 2.3$ 一阶逻辑等值式与前束范式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E9%9B%86%E5%90%88%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E5%92%8C%E8%BF%90%E7%AE%97"><span class="nav-text">第三章 集合的基本概念和运算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#S-3-1-%E9%9B%86%E5%90%88%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text">$\S 3.1$ 集合的基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-3-2-%E9%9B%86%E5%90%88%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97"><span class="nav-text">$\S 3.2$ 集合的基本运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S-3-3-%E9%9B%86%E5%90%88%E4%B8%AD%E5%85%83%E7%B4%A0%E7%9A%84%E8%AE%A1%E6%95%B0"><span class="nav-text">$\S 3.3$ 集合中元素的计数</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -648,12 +712,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">116k</span>
+    <span title="站点总字数">117k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3:32</span>
+    <span title="站点阅读时长">3:33</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
