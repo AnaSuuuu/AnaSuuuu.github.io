@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>博客搭建踩坑指北</title>
+    <url>/2023/06/27/Cross-The-Hole/</url>
+    <content><![CDATA[<p>从踩坑到掉坑里</p>
+<span id="more"></span>
+
+<p>本博客采用 Hexo + GitHub 搭建，具体教程网上很多不再赘述</p>
+<p>不过这里还是推荐两个我主要参考的教程 <a href="https://ouuan.github.io/post/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8C%97/">hexo博客搭建指北</a> 和 <a href="https://venusnero.github.io/2019/01/23/build_hexo_github_blog/">从零搭建 Hexo + Github 博客</a></p>
+<p>下面分享一些自己踩过的坑</p>
+<h3 id="公式块中公式无法正常换行"><a href="#公式块中公式无法正常换行" class="headerlink" title="公式块中公式无法正常换行"></a>公式块中公式无法正常换行</h3><h4 id="问题简述"><a href="#问题简述" class="headerlink" title="问题简述"></a>问题简述</h4><p>用 $$ 插入公式块时，本地上用 typora 显示公式换行，但网页上未显示出来</p>
+<p><code>\\</code> 无法正常换行</p>
+<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>在公式块前面加上 <code>\begin{gather}</code> 末尾加上 <code>\end{gather}</code> 即可</p>
+<h3 id="Majax-渲染"><a href="#Majax-渲染" class="headerlink" title="Majax 渲染"></a>Majax 渲染</h3><h4 id="问题简述-1"><a href="#问题简述-1" class="headerlink" title="问题简述"></a>问题简述</h4><ol>
+<li><p>无法正常渲染二重闭曲面积分</p>
+</li>
+<li><pre><code class="latex">$\iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV = \unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy $
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line"></span><br><span class="line"> 可以正常渲染出来</span><br><span class="line"></span><br><span class="line">$\iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV = \unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy $</span><br><span class="line"></span><br><span class="line">```latex</span><br><span class="line">$\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$</span><br></pre></td></tr></tbody></table></figure>
+
+渲染异常
+
+$\unicode{8751}_{\sum}Pdydz + Qdzdx + Rdxdy = \iiint_{\Omega}(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$
+</code></pre>
+</li>
+</ol>
+<h4 id="解决方案-1"><a href="#解决方案-1" class="headerlink" title="解决方案"></a>解决方案</h4><ol>
+<li><p>用 <code>\unicode{8751}</code> 表示即可</p>
+</li>
+<li><p>很神奇的问题，解决方法也很玄学，将</p>
+ <figure class="highlight latex"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">\unicode</span>{8751}<span class="built_in">_</span>{<span class="keyword">\sum</span>}Pdydz + Qdzdx + Rdxdy = <span class="keyword">\iiint</span><span class="built_in">_</span>{<span class="keyword">\Omega</span>}(<span class="keyword">\frac</span>{<span class="keyword">\partial</span> P}{<span class="keyword">\partial</span> x} + <span class="keyword">\frac</span>{<span class="keyword">\partial</span> Q}{<span class="keyword">\partial</span> y} + <span class="keyword">\frac</span>{<span class="keyword">\partial</span> R}{<span class="keyword">\partial</span> z})dV</span><br></pre></td></tr></tbody></table></figure>
+
+<p> 改为</p>
+ <figure class="highlight latex"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">\unicode</span>{8751}<span class="built_in">_</span>{<span class="keyword">\sum</span>} Pdydz + Qdzdx + Rdxdy = <span class="keyword">\iiint</span><span class="built_in">_</span><span class="keyword">\Omega</span>(<span class="keyword">\frac</span>{<span class="keyword">\partial</span> P}{<span class="keyword">\partial</span> x} + <span class="keyword">\frac</span>{<span class="keyword">\partial</span> Q}{<span class="keyword">\partial</span> y} + <span class="keyword">\frac</span>{<span class="keyword">\partial</span> R}{<span class="keyword">\partial</span> z})dV</span><br></pre></td></tr></tbody></table></figure>
+
+<p> 即可</p>
+<p> $\unicode{8751}_\sum Pdydz + Qdzdx + Rdxdy = \iiint_\Omega(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z})dV$</p>
+<p> 感觉可能是 <code>{}</code> 和 mathjax 渲染有一些冲突，具体原因还不完全清楚（？）</p>
+</li>
+</ol>
+<h3 id="表格中的"><a href="#表格中的" class="headerlink" title="表格中的 |"></a>表格中的 |</h3><h4 id="问题简述-2"><a href="#问题简述-2" class="headerlink" title="问题简述"></a>问题简述</h4><p>由于 markdown 本身的语法，我们无法直接在表格中打出竖线 |</p>
+<h4 id="解决方案-2"><a href="#解决方案-2" class="headerlink" title="解决方案"></a>解决方案</h4><ul>
+<li>当表格内容不用 $\LaTeX$ 时，可通过转义符 <code>\|</code> 或 <code>&amp;#124;</code> 来实现竖杠或绝对值； </li>
+<li>但是用 $\LaTeX$ 时第一个会显示为 “∥”，第二个会报错，故要用 <code>\vert</code> </li>
+</ul>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://blog.csdn.net/skytruine/article/details/105710349">Markdown表格数学公式中使用绝对值“| |”或竖杠”|”</a></p>
+<h3 id="背景-和-透明度"><a href="#背景-和-透明度" class="headerlink" title="背景 和 透明度"></a>背景 和 透明度</h3><h4 id="问题简述-3"><a href="#问题简述-3" class="headerlink" title="问题简述"></a>问题简述</h4><p>在 Hexo 7.x 版本下设置 背景 和 透明度</p>
+<h4 id="解决方案-3"><a href="#解决方案-3" class="headerlink" title="解决方案"></a>解决方案</h4><ul>
+<li><p>新建 _custom.styl 文件，并在 main.styl 中引用该文件</p>
+  <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">//个人添加</span><br><span class="line">@import "_custom.styl"</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><pre><code class="stylus"><span class="comment">//背景图片</span>
+<span class="selector-tag">body</span> {
+    background:url(https://pic.heson10.com/img/image-20200712231958010.png);
+    <span class="attribute">background-repeat</span>: no-repeat;
+    <span class="attribute">background-attachment</span>:fixed;
+    <span class="attribute">background-size</span>: cover;
+    <span class="attribute">background-position</span>:<span class="number">50%</span> <span class="number">50%</span>;
+}
+
+<span class="comment">//博客内容透明化</span>
+<span class="comment">//文章内容的透明度设置</span>
+<span class="selector-class">.content-wrap</span> {
+  <span class="attribute">opacity</span>: <span class="number">0.9</span>;
+}
+
+<span class="comment">//侧边框的透明度设置</span>
+<span class="selector-class">.sidebar</span> {
+  <span class="attribute">opacity</span>: <span class="number">0.9</span>;
+}
+
+<span class="comment">//菜单栏的透明度设置</span>
+<span class="selector-class">.header-inner</span> {
+  <span class="attribute">background</span>: rgba(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0.9</span>);
+}
+
+<span class="comment">//搜索框（local-search）的透明度设置</span>
+<span class="selector-class">.popup</span> {
+  <span class="attribute">opacity</span>: <span class="number">0.9</span>;
+}
+&lt;!--code￼<span class="number">4</span>--&gt;
+</code></pre>
+</li>
+</ul>
+<h4 id="参考-1"><a href="#参考-1" class="headerlink" title="参考"></a>参考</h4><p><a href="https://blog.csdn.net/qq_40790680/article/details/128971322">hexo 自定义文章排序</a></p>
+]]></content>
+      <tags>
+        <tag>博客搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>置顶 | 博客目录</title>
+    <url>/2023/07/22/Index/</url>
+    <content><![CDATA[<p><img src="1.png" alt=""></p>
+<p>What’s up guys!</p>
+<span id="more"></span>
+<p><img src="INDEX_茵蒂克絲.jpg" alt="INDEX_茵蒂克絲"></p>
+<h2 id="算法竞赛"><a href="#算法竞赛" class="headerlink" title="算法竞赛"></a>算法竞赛</h2><p><del>算法竞赛？纯纯网瘾罢！</del></p>
+<p><strong>套题合集：</strong></p>
+<ul>
+<li><p><a href="https://anasuuuu.github.io/2023/07/19/HDU-In-Summer-0/">算法竞赛 | 杭电多校训练</a></p>
+</li>
+<li><p><a href="https://anasuuuu.github.io/2023/06/26/CF-Instrumentality-Project-I/">CodeForces 补全计划（1826 ~ 1850）</a>    </p>
+</li>
+<li><p><a href="https://anasuuuu.github.io/2023/08/27/CF-Instrumentality-Project-II/">CodeForces 补全计划（1851 ~ 1875）</a></p>
+</li>
+</ul>
+<p><strong>数学：</strong></p>
+<ul>
+<li><p><a href="https://anasuuuu.github.io/2023/07/05/Math-In-ACM-I/">算法笔记 | 数论（一）</a>：扩展欧几里得，逆元，欧拉函数，中国剩余定理，卢卡斯定理。</p>
+</li>
+<li><p><a href="https://anasuuuu.github.io/2023/07/20/Game-In-ACM/">算法笔记 | 博弈论</a>：SG 函数。</p>
+</li>
+<li><p><a href="https://anasuuuu.github.io/2023/06/28/Poly/">学习笔记 | 多项式与生成函数</a></p>
+</li>
+</ul>
+<p><strong>字符串：</strong></p>
+<ul>
+<li><a href="https://anasuuuu.github.io/2023/07/10/String-In-ACM-I/">算法笔记 | 字符串（一）</a>：Manacher，KMP。</li>
+</ul>
+<p><strong>杂项：</strong></p>
+<ul>
+<li><a href="https://anasuuuu.github.io/2023/07/07/somethingelse-in-ACM/">算法笔记 | 杂项（一）</a></li>
+</ul>
+<h2 id="大学课程"><a href="#大学课程" class="headerlink" title="大学课程"></a>大学课程</h2><p>摸鱼大专笔记 ⊙﹏⊙∥ 以应付考试为主。</p>
+<p><strong>大一下：</strong></p>
+<ul>
+<li><a href="https://anasuuuu.github.io/2023/06/06/Physics-I/">大学笔记 | 大学物理BI</a></li>
+<li><a href="https://anasuuuu.github.io/2023/06/05/Circuit-Analysis/">大学笔记 | 电路原理</a></li>
+<li><a href="https://anasuuuu.github.io/2023/06/05/Calculus/">大学笔记 | 微积分</a></li>
+<li><a href="https://anasuuuu.github.io/2023/06/06/Linear-Algebra/">大学笔记 | 线性代数</a></li>
+</ul>
+<p><strong>大二上：</strong></p>
+<ul>
+<li><a href="https://anasuuuu.github.io/2023/08/30/Physics-II/">大学笔记 | 大学物理BII</a></li>
+<li><a href="https://anasuuuu.github.io/2023/08/29/Discrete-Math/">大学笔记 | 离散数学</a></li>
+<li><a href="https://anasuuuu.github.io/2023/08/29/Electronic-Devices-and-Circuit-Theory/">大学笔记 | 模拟电子技术基础</a></li>
+<li><a href="https://anasuuuu.github.io/2023/08/29/Probability/#more">大学笔记 | 概率论与数理统计</a></li>
+<li><a href="https://anasuuuu.github.io/2023/08/29/Probability/#more">大学笔记 | 信号与系统</a></li>
+</ul>
+<h2 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h2><p><strong>Linux 系列：</strong></p>
+<ul>
+<li><p><a href="https://anasuuuu.github.io/2023/07/09/UCB-CS61B/">学习笔记 | UCB-CS61B</a></p>
+</li>
+<li><p><a href="https://anasuuuu.github.io/2023/06/27/Cross-The-Hole/">博客搭建踩坑指北</a></p>
+</li>
+</ul>
+]]></content>
+  </entry>
+</search>
