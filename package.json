@@ -23,7 +23,7 @@
     "hexo-generator-tag": "^2.0.0",
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-kramed": "^0.1.4",
-    "hexo-renderer-marked": "^1.0.0",
+    "hexo-renderer-marked": "^6.2.0",
     "hexo-renderer-mathjax": "^0.6.0",
     "hexo-renderer-stylus": "^2.1.0",
     "hexo-renderer-swig": "^2.0.0",
